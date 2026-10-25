@@ -1,0 +1,483 @@
+body {
+	background-color: #e2e0e0  !important;
+}
+
+select#useGroup {
+   padding: 10px;
+   font-size: 14px;
+   font-family: arial;
+}
+
+.categories-table th {
+   padding: 9px;
+   border-left: 1px #e2e0e0 solid;
+   padding: 6px;
+   border-bottom: 1px #e2e0e0 solid;
+}
+
+.categories-table th.th2 {
+   background-color: #9ebad5;
+}
+
+.categories-table td {
+   padding: 5px;
+   border-left: 1px #e2e0e0 solid;
+   padding: 6px;
+	border-bottom: 1px #e2e0e0 solid;
+	cursor: pointer;
+}
+
+tr.hddn {
+   position: absolute;
+   left: -10000px;
+}
+
+/*
+td.lb {
+    background: #cacaca;
+}
+ */
+tr.tr1 td.lb:before {
+   background: #f28385;
+}
+
+tr.tr2 td.lb:before {
+   background: #83bd7f;
+}
+
+tr.tr3 td.lb:before {
+   background: #faf2cc;
+}
+
+td.lb:before {
+   content: "";
+   width: 5px;
+   height: 5px;
+   background: #868686;
+   display: inline-block;
+   border-radius: 10px;
+   margin: 0 5px 0 -3px;
+   vertical-align: middle;
+}
+
+tr.tr0 td.lb {
+   padding-left: 10px !important;
+}
+
+tr.tr1 td.lb {
+   padding-left: 35px !important;
+}
+
+tr.tr2 td.lb {
+   padding-left: 60px !important;
+}
+
+tr.tr3 td.lb {
+   padding-left: 85px !important;
+}
+
+tr.tr0 {
+   background: #fbfbfb;
+}
+
+tr.tr1 {
+   background: #f1f1f1;
+}
+
+tr.tr2 {
+   background: #e6e6e6;
+}
+
+tr.tr3 {
+   background: #d2d2d2;
+}
+
+.fa {
+	font-size: 12px !important;
+	color: #9bb0c1;
+}
+
+.fap {
+	padding-right: 8px;
+}
+
+.fa-plus-square:before {
+   content: "+ ";
+   font: bold 13px sans-serif;
+   width: 16px;
+   height: 16px;
+}
+
+.fa-minus-square:before {
+   content: "- ";
+   font: bold 13px sans-serif;
+   width: 16px;
+   height: 16px;
+}
+
+.categories-table {
+   border: none;
+}
+
+.goods-table {
+   background: white;
+   border: solid 1px #ccc;
+   width: 100%;
+}
+
+.sellers-table {
+   background: #e8eee9;
+   border: solid 1px #ccc;
+	width: 100%;
+}
+.sellers-table td{
+   cursor: text;
+}
+
+.goodid {
+   padding-left: 13px !important;
+   padding-left: 24px !important;
+   box-shadow: inset 4px 0px 0px 0px #e2e0e0;
+}
+
+td.byday_l2 {
+	box-shadow: inset 4px 0px 0px 0px #e2e0e0;
+}
+
+.wmid {
+	padding-left: 26px !important;
+	box-shadow: inset 8px 0px 0px 0px #e2e0e0;
+}
+
+td.byday_l3 {
+	box-shadow: inset 8px 0px 0px 0px #e2e0e0;
+	padding-left: 10px;
+}
+
+
+
+.empty-data {
+   padding: 100px;
+   text-align: center;
+   font-size: 16px;
+}
+
+div#tabs {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 25px;
+   width: 80%;
+   margin: 0 auto;
+}
+
+div#tabs label {
+   margin: 0 !important;
+}
+
+div#tabs [type="date"] {
+   padding: 0 10px;
+}
+
+div#charts {
+   display: flex;
+   justify-content: center;
+}
+
+
+#statex_maintable {
+   display: inline-table;
+   text-align: left;
+	width: 100%;
+	background-color: #f5f5f5;
+}
+
+.statex_viewport {
+   width: 100%;
+   text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+   .statex_viewport {
+      width: 65%;
+   }
+}
+
+#statex_zoom {
+   vertical-align: top;
+   display: inline-block;
+   margin-left: 20px;
+}
+
+#statex_maintable a:hover,
+#statex_maintable a:focus {
+   text-decoration: none;
+   color: #050725;
+}
+
+div#datetabs {
+   margin: 5px auto 25px auto;
+   padding-right: 2px;
+}
+
+div#datetabs .datetab {
+   padding: 12px;
+   border: solid 1px #ccc;
+   background-color: buttonface;
+}
+
+div#datetabs .datetab-active {
+   padding: 12px;
+   border: solid 1px #e7be65;
+   background-color: #f6e8b5;
+}
+
+.statex_subcount {
+   width: 100%;
+   margin-top: 4px;
+}
+
+.statex_subcount td,
+.statex_subcount th {
+   text-shadow: none;
+}
+
+.statex_subcount td.td0 {
+   width: 50px;
+   color: #0003;
+   background-color: #CCCCCC60;
+   border: none;
+   padding: 0px 0px 0px 4px;
+   font-size: 12px;
+   text-align: right;
+}
+
+.statex_subcount th.th0 {
+   width: 20px;
+   font-size: 14px;
+   color: #0003;
+   background-color: inherit;
+   padding: 0px 0px 0px 0px;
+   border: none;
+   text-align: right;
+}
+
+.statex_subcount th.th1 {
+   width: 50px;
+   font-size: 14px;
+   color: #ffffffa3;
+   text-shadow: 1px 1px 1px #00000080;
+   background-color: inherit;
+   padding: 0px 4px 0px 0px;
+   border: none;
+   text-align: right;
+}
+
+.statex_subcount th.th2 {
+   width: 50px;
+   font-size: 14px;
+   color: #444444;
+   background-color: inherit;
+   padding: 0px 4px 0px 0px;
+   border: none;
+   text-align: right;
+}
+
+.statex_subcount td.td1 {
+   width: 50px;
+   color: #00000080;
+   background-color: #CCCCCC60;
+   border: none;
+   padding: 0px 0px 0px 4px;
+   font-size: 12px;
+   text-align: right;
+}
+
+img.spinner {
+   width: 64px;
+   height: 64px;
+}
+
+div#loading {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   margin: 0 auto;
+   text-align: center;
+   z-index: 0;
+   background-color: rgba(255, 255, 255, 0.5);
+   color: #000;
+   display: none;
+}
+
+.statex_rating {
+   font-size: 15px;
+   font-weight: normal;
+   color: #ffffffc4;
+   text-align: center;
+   text-shadow: 1px 1px 1px #00000070;
+}
+
+.statex_message {
+   display: block;
+}
+
+td.statex_byday {
+   /* border: solid 1px #ccc; */
+   font-size: 11px;
+	/* background-color: #f1f4fa;
+	 */
+	background-color: #e2e0e0;
+   color: #333;
+	font-weight: bold;
+	cursor: zoom-in;
+}
+
+table.statex_byday {
+	border-spacing: 1px;
+	cursor: pointer;
+	width: 100%;
+}
+
+table.statex_byday td {
+   border: solid 1px #ccc;
+   padding: 0px 2px 0px 8px;
+	font-size: 12px;
+   color: #ffffffa3;
+	text-shadow: 1px 1px 1px #00000080;
+	text-align: center;
+   min-width: 25px;
+	padding: 2px;
+	cursor: text;
+}
+
+table.statex_byday td.td1 {
+   border: solid 1px #ccc;
+   padding: 0px 2px 0px 8px;
+	font-size: 12px;
+   color: #666666;
+    text-shadow: none;
+	text-align: center;
+   min-width: 25px;
+   padding: 2px;
+}
+
+table.statex_byday th {
+   border: solid 1px #ccc;
+   text-align: center;
+   padding: 2px;
+   font-size: 12px;
+	background-color: #bccbdf;
+   min-width: 50px;
+	padding: 2px;
+	cursor: text;
+}
+
+table.statex_byday th.l2 {
+	background-color: #aeb3c6;
+}
+
+table.statex_byday th.l3 {
+	background-color: #b0c1c2;
+}
+
+
+
+p.statex_byday {
+   font-size: 13px;
+   text-align: center;
+   font-weight: bold;
+   color: #648ab0;
+}
+
+.statex_viewport .btn-success {
+	/* background-repeat: repeat-x;
+	border-color: #3e8f3e;
+	background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%); */
+	text-shadow: none;
+	border: solid 1px #3e8f3e;
+	margin: 4px 4px 4px 0px;
+	padding: 4px 8px 4px 8px;
+}
+.statex_viewport .btn-warning {
+	text-shadow: none;
+	border: solid 1px #e38d13;
+	margin: 4px 4px 4px 0px;
+	padding: 4px 8px 4px 8px;
+
+}
+
+.sx-green {
+	color: #3e8f3e;
+}
+
+.sx-red {
+	color: #e38d13;
+}
+
+.sx-grey {
+	color: #777;
+}
+
+.foldrow {
+	background-color: unset;
+}
+
+.foldrow .unfolded {
+	background-color: #e0e9f6;
+}
+
+td.invis {
+	background-color: #e2e0e0;
+}
+
+div#cache-con,
+div#csv-con,
+div#bprice  {
+	padding: 20px;
+}
+
+div#bprice-table {
+	display: flex;
+}
+
+div#bprice-headings {
+	margin-right: 1px;
+	width: auto;
+	white-space: nowrap;
+}
+
+div#bprice-values {
+	width: 90%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.noborder,
+.noborder td,
+.noborder th {
+	border: none !important;
+}
+
+div#bprice-table th {
+	padding: 4px;
+	text-align: center;
+}
+
+div#bprice-table td {
+	padding: 4px;
+	border: solid 1px #eee!important;
+	height: 32px;
+}
+
+div#bprice-table td.auto{
+	font-size: 11px;
+	color: #999;
+}
+
+div#bprice-table tr:nth-child(2n+1) {
+	background-color: #f7f8f2;
+}
+
+div#bprice-table tr:nth-child(2n) {
+	background-color: #fff;
+}

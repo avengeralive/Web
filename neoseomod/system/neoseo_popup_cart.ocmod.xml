@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Popup Cart</name>
+    <version>10</version>
+    <code>neoseo-popup-cart</code>
+    <author>Alexander Sorokin</author>
+    <link>https://neoseo.com.ua/</link>
+
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search><![CDATA[
+            $this->document->getScripts();
+            ]]></search>
+            <add position="before"><![CDATA[		/* NeoSeo Popup Cart - begin */
+		$this->document->addScript('catalog/view/javascript/neoseo_popup_cart.js');
+		/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/checkout/cart.php">
+        <operation>
+            <search><![CDATA[$this->response->addHeader('Content-Type: application/json');]]></search>
+            <add position="after"><![CDATA[/* NeoSeo Popup Cart - begin */
+		$this->load->model("module/neoseo_popup_cart");
+		$json = $this->model_module_neoseo_popup_cart->getCart($json);
+		/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $this->response->redirect($this->url->link('checkout/cart'));
+            ]]></search>
+            <add position="before"><![CDATA[/* NeoSeo Popup Cart - begin */
+			if( !isset($this->request->post['noredir']) ) {
+			/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $this->response->redirect($this->url->link('checkout/cart'));
+            ]]></search>
+            <add position="after"><![CDATA[/* NeoSeo Popup Cart - begin */
+			}
+			/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+
+        <operation>
+            <search index="1"><![CDATA[
+            $json['total'] =
+            ]]></search>
+            <add position="before" ><![CDATA[			/* NeoSeo Popup Cart - begin */
+			$this->load->model('catalog/product');
+			$this->load->model('catalog/category');
+			$this->load->model('catalog/manufacturer');
+			$manufacturer = '';
+			$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($product_info['manufacturer_id']);
+			if( $manufacturer_info ) {
+				$manufacturer = $manufacturer_info['name'];
+			}
+
+			$categories = $this->model_catalog_product->getCategories($product_info['product_id']);
+			$category_id = 0;
+			foreach( $categories as $category ) {
+				if( !$category_id ) {
+				$category_id = $category['category_id'];
+			 }
+			if( isset($category['main_category']) && $category['main_category'] ) {
+				$category_id = $category['category_id'];
+				break;
+			}
+			}
+			$category = '';
+			if( $category_id ) {
+				$category_info = $this->model_catalog_category->getCategory($category_id);
+				while( $category_info ) {
+					if ( $category ) {
+						$category = $category_info['name'] . " / " . $category;
+					} else {
+						$category = $category_info['name'];
+					}
+					$category_info = $this->model_catalog_category->getCategory($category_info['parent_id']);
+				}
+			}
+			$json['ecommerce'] = array(
+			    "product_id" => $product_info['product_id'],
+			    "sku" => $product_info['sku'],
+			    "name" => $product_info['name'],
+			    "manufacturer" => $manufacturer,
+			    "category" => $category,
+			);
+			/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            if (isset($this->request->post['key'])) {
+            ]]></search>
+            <add position="after"><![CDATA[			/* NeoSeo Popup Cart - begin */
+			$this->load->model('catalog/product');
+			$this->load->model('catalog/category');
+			$this->load->model('catalog/manufacturer');
+			if (isset($this->request->post['key'])) {
+				 $product_id = (int)$this->request->post['key'];
+			} else {
+				$product_id = 0;
+			}
+			$product_info = $this->model_catalog_product->getProduct($this->request->post['key']);
+			if( $product_info ) {
+				$manufacturer = '';
+				$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($product_info['manufacturer_id']);
+				if( $manufacturer_info ) {
+					$manufacturer = $manufacturer_info['name'];
+				}
+
+				$categories = $this->model_catalog_product->getCategories($product_info['product_id']);
+				$category_id = 0;
+				foreach( $categories as $category ) {
+					if( !$category_id ) {
+						$category_id = $category['category_id'];
+					}
+					if( isset($category['main_category']) && $category['main_category'] ) {
+						$category_id = $category['category_id'];
+						break;
+					}
+				}
+				$category = '';
+				if( $category_id ) {
+					$category_info = $this->model_catalog_category->getCategory($category_id);
+					while( $category_info ) {
+					if ( $category ) {
+						$category = $category_info['name'] . " / " . $category;
+					} else {
+						$category = $category_info['name'];
+					}
+					$category_info = $this->model_catalog_category->getCategory($category_info['parent_id']);
+					}
+				}
+
+				$json['ecommerce'] = array(
+					"product_id" => $product_info['product_id'],
+					"sku" => $product_info['sku'],
+					"name" => $product_info['name'],
+					"manufacturer" => $manufacturer,
+					"category" => $category,
+					);
+			}
+			/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+
+    </file>
+
+    <file path="catalog/controller/account/order.php">
+        <operation>
+            <search><![CDATA[
+            $this->response->redirect($this->url->link('account/order/info'
+                ]]></search>
+            <add position="before"><![CDATA[/* NeoSeo Popup Cart - begin */
+		$this->response->addHeader('Content-Type: application/json');
+		$this->load->model("module/neoseo_popup_cart");
+		$json = array();
+		$json['success'] = 1;
+		$json = $this->model_module_neoseo_popup_cart->getCart($json);
+		$this->response->setOutput(json_encode($json));
+		return;
+		/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/product/product.tpl">
+        <operation>
+            <search><![CDATA[
+            $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+            ]]></search>
+            <add position="replace" offset="5"><![CDATA[
+            /* NeoSeo Popup Cart - begin */
+                showCart(json);
+
+                // Need to set timeout otherwise it wont update the total
+                setTimeout(function () {
+                      $('.cart__total-list').html(json['total']);
+                      $('.cart__total-items').html(json['total_items']);
+                      $('.cart').load('index.php?route=common/cart/info .cart > *');
+                }, 100);
+            /* NeoSeo Popup Cart - end */
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/account/order_info.tpl">
+        <operation>
+            <search><![CDATA[<a href="<?php echo $product['reorder']; ?>"]]></search>
+            <add position="replace"><![CDATA[<a onclick="popupCartReorder('<?php echo $product['reorder']; ?>')"]]></add>
+        </operation>
+    </file>
+
+    <file path="system/library/cart.php">
+        <operation>
+            <search><![CDATA[public function add(]]></search>
+            <add position="after" offset="7"><![CDATA[		/* NeoSeo Popup Cart - begin */
+		$query = $this->db->query("SELECT cart_id FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND product_id = '" . (int)$product_id . "' AND recurring_id = '" . (int)$recurring_id . "' AND `option` = '" . $this->db->escape(json_encode($option)) . "'");
+		$this->session->data['last_cart_id'] = $query->num_rows ? $query->row['cart_id']: 0;
+		/* NeoSeo Popup Cart - end */]]></add>
+        </operation>
+    </file>
+
+</modification>

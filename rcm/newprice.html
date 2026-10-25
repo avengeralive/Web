@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="wrapper">
+    	<div class="container">
+        	<div class="breadcrumbs"><a href="#">Главная</a>Каталог</div>
+            <div class="tabs">
+            	<ul class="tabs_list">
+
+                                {% regroup DATA by type as mcats %}
+                {% for mcat in mcats %}
+            		<li><a href="#tab{{ mcat.grouper }}">{{ mcat.grouper }}</a></li>
+                {% endfor %}
+            	</ul>
+                {% for mcat in mcats %}
+            	<div class="tab tab{{ mcat.grouper }}">
+		            <div class="sub_tabs">
+		            	<ul class="sub_tabs_list">
+                            {% for item in mcat.list %}
+		            		<li><a href="#subtab{{ item.slug }}">{{ item.title }}</a></li>
+                            {% endfor %}
+		            	</ul>
+                        {% for metcat in mcat.list %}
+			            <div class="sub_tab subtab{{metcat.slug}}">
+			            	<div class="list_tabs">
+					            <div class="catalog_list_fourcolumn">
+					                <ul>
+                                        {% for cat in metcat.cats %}
+					                    <li><a href="#listtab{{cat.id}}">{{cat.title}}</a></li>
+                                        {% endfor %}
+					                </ul>
+					            </div>
+                                {% for cat in metcat.cats %}
+				                <div class="list_tab listtab{{cat.id}}">
+				                	<div class="size_tabs">
+							            <div class="catalog_list_other">
+							            	<div class="name">{{cat.title}}</div>
+							            	<div class="catalog_list_ninecolumn">
+							            		<ul>
+                                                    {% for subcat in cat.subcats %}
+							            			<li><a href="#sizetab{{subcat.id}}">{{subcat.title}}</a></li>
+                                                    {% endfor %}
+							            		</ul>
+							            	</div>
+							            </div>
+                                        {% for subcat in cat.subcats %}
+							            <div class="size_tab sizetab{{subcat.id}}">
+								            <div class="result">
+								            	<div class="title_inner">{{cat.title}} {{subcat.title}}</div>
+								                <div class="form_price">
+								                	<a href="#" class="gost_link">ГОСТы,ТУ</a>
+								                	<form action="#">
+								                		<label>Калькулятор:</label>
+								                		<div class="ton"><input type="text"><span>Тонны</span></div>
+								                		<div class="meter"><input type="text"><span>Метры</span></div>
+								                		<div class="gost">
+								                        	<select>
+								                            	<option value="01">ГОСТ 8706</option>
+								                            	<option value="02">ГОСТ 8706</option>
+								                            </select>
+								                        </div>
+								                		<button>Пересчитать цены</button>
+								                	</form>
+								                </div>
+								                <table>
+								                	<tr>
+                        	<th>Наименование</th>
+                        	{% if subcat.misc.flags.mark %}
+                        	<th>Марка стали</th>
+                        	{% endif %}
+                        {% if subcat.misc.flags.length %}
+                            <th>Длина</th>
+                        {% endif %}
+
+                        	<th colspan="2">Цена (включая НДС 18%), руб. от 21.06.2017</th>
+                        </tr>
+                    {% for item in subcat.products|dictsort:'price' %}
+                        <tr class="tabledata {{ item.filter }}" data-price="{{ item.price }}" data-price-sub="0.970">
+                        	<td><a>{{ item.title }}</a></td>
+                        	{% if subcat.misc.flags.mark %}
+                            <td>{{ item.mark|default_if_none:"" }}</td>
+                            {% endif %}
+                        	{% if subcat.misc.flags.length %}
+                            <td class="length">{{ item.length|default_if_none:"" }}</td>
+                            {% endif %}
+                        	<td class="price"><b>{{ item.price|default_if_none:'' }}</b><img src="/static/images/rub_table.png" alt=""></td>
+                        	<td class="price2">{{ item.price|default_if_none:"" }}<img src="/static/images/arrows.png" alt=""</td>
+                        </tr>
+                    {% endfor %}
+								                </table>
+								                <div class="padding">
+								                    <h3>ЛИСТ ПРОСЕЧНО-ВЫТЯЖНОЙ (ПВЛ) ОЦИНКОВАННЫЙ 510</h3>
+								                    <p>Лист просечно-вытяжной (ПВЛ) оцинкованный 510 (Листовой прокат) является одним из самых востребованных видов продукции металлопрокатного производства. На сегодняшний день трудно найти хотя бы один объект строительства или промышленного производства, где не использовалась бы Лист просечно-вытяжной (ПВЛ) оцинкованный 510. Именно благодаря Лист просечно-вытяжной (ПВЛ) оцинкованный 510 , строятся высокопрочные и надежные монолитные дома, столь важные и ответственные объекты, как мосты и тоннели и т.д. Широта применения данного строительного материала обеспечивает производство его не только в больших объемах, но и различной классификации.</p>
+								                </div>
+								                <table>
+								                	<tr>
+								                		<th>Характеристики товара</th>
+								                		<th>Лист просечно-вытяжной (ПВЛ) оцинкованный 510</th>
+								                	</tr>
+								                    <tr>
+								                    	<td>Тип:</td>
+								                    	<td>Листовой прокат</td>
+								                    </tr>
+								                    <tr>
+								                    	<td>Наименование:</td>
+								                    	<td>Лист просечно-вытяжной (ПВЛ) оцинкованный</td>
+								                    </tr>
+								                    <tr>
+								                    	<td>Размер:</td>
+								                    	<td>510</td>
+								                    </tr>
+								                    <tr>
+								                    	<td>Марка стали:</td>
+								                    	<td>678764</td>
+								                    </tr>
+								                    <tr>
+								                    	<td>Кол-во м.п в тонне:</td>
+								                    	<td>40.486</td>
+								                    </tr>
+								                    <tr>
+								                    	<td>Вес м.п:</td>
+								                    	<td>0.0247</td>
+								                    </tr>
+								                </table>
+								                <div class="padding">
+								                    <h3>ЛИСТ ПРОСЕЧНО-ВЫТЯЖНОЙ (ПВЛ) ОЦИНКОВАННЫЙ 510</h3>
+								                    <p>Стоимость, описание, картинка и ГОСТ к продукции Лист просечно-вытяжной (ПВЛ) оцинкованный 510 (Листовой прокат) на веб-сайте носят информативный характер и никак не считаются публичной офертой, определенной п.2 ст. 437 Гражданского кодекса Российской федерации.Они могут быть изменены изготовителем без предварительного уведомления и могут отличаться от описаний на веб-сайте производителя и реальных характеристик товара. Для получения подробной информации, о свойствах предоставленного продукта обращайтесь к менеджерам нашего отдела продаж или в Российское представительство данного товара, а также, просьба, внимательно проверяйте ГОСТ при покупке продукции: Лист просечно-вытяжной (ПВЛ) оцинкованный 510 (Листовой прокат).</p>
+								                    <a href="#popup_question" class="question popup">Задать вопрос</a>
+								                </div>
+								            </div>
+								        </div>
+                                        {% endfor %}
+							        </div>
+						        </div>
+                                {% endfor %}
+						    </div>
+				        </div>
+		                {% endfor %}
+                    </div>
+		        </div>
+                 {% endfor %}
+		        </div>
+			</div>
+
+        </div>
+    </div>
+
+{% endblock %}

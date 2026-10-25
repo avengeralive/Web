@@ -1,0 +1,880 @@
+/* =============================================
+
+--------------- Table of Contents --------------
+
+1. General - Theme customization
+  --- 1.1 Theme Text Styles
+  --- 1.2 Top NavBar & Cover
+
+2. Brand & Menu Styles
+  --- 2.1 Active Menu Button
+  --- 2.2 Menu Item Styles
+  --- 2.3 Menu Contact Button Styles
+  --- 2.4 Change Heading Margins
+
+3. Override Owl Carousel Styles
+
+4. Benefits 
+
+5. Esential Vitamins 
+
+6. Call Us 
+
+7. Product 
+
+8. Testimonials
+
+9. Contact 
+  --- 9.1 Form Fields & Button
+
+10. Footer
+
+11. Other Custom Css
+  --- 11.1 Scroll Top Button
+
+-----------------------------------------------
+
+/* ************ Google Font ************ */
+/* @import url('https://fonts.googleapis.com/css?family=Avenir-Next:100,100i,300,300i,400,400i,700,700i,900,900i|Oswald:200,300,400,500,600,700'); */
+
+/* 
+ =========================
+ 1. General - Theme customization
+ =========================
+*/
+
+/* @font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/avenir-next-regular.ttf");
+  font-style: normal;
+  font-weight: 600;
+} */
+
+/* 
+@font-face {
+  font-family: 'Avenir';
+  src: url("../fonts/Avenir.ttc");
+} */
+
+
+/* @font-face {
+  font-family: 'Avenir Next Bold';
+  src: url("../fonts/avenir-next-regular.ttf");
+  font-weight: bold;
+  font-style: bold;
+} */
+
+/* @font-face {
+  font-family: <family-name>;
+  src: <url>;
+  unicode-range: <urange>;
+  font-variant: normal | [ <east-asian-variant-values> || <east-asian-width-values> || ruby ];
+  font-feature-settings: normal | <feature-tag-value>;
+  font-stretch: normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded;
+  font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+  font-style: normal | italic | oblique;
+} */
+
+
+
+html,
+body {
+  height: 100%;
+  font-family: "Avenir";
+  
+}
+
+/* h1, h2, h3, h4, b {
+  font-family: "Avenir Next Bold" !important;
+} */
+
+.text-inverse {
+  color: #ffffff;
+}
+.jumbotron {
+  width: 80%;
+  margin-bottom: 0px !important;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.jumbotron h1.text-primary {
+  color: #40D900 !important;
+  padding-bottom: 20px;
+}
+.jumbotron h1.text-inverse {
+  color: #ffffff !important;
+}
+.jumbotron h1.text-info {
+  color: #00D982 !important;
+}
+.jumbotron h1.text-success {
+  color: #40D900 !important;
+}
+.jumbotron h1.text-warning {
+  color: #f0ad4e !important;
+}
+.jumbotron h1.text-danger {
+  color: #d9534f !important;
+}
+.carousel .item img {
+  min-width: 100%;
+}
+.section {
+  position: relative;
+  padding: 35px 0;
+}
+.section .background-image {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.section .background-image.background-image-fixed {
+  background-attachment: fixed;
+}
+.section-primary {
+  background-color: #5bc0de !important;
+  color: #ffffff;
+}
+.section-info {
+  background-color: #00D982 !important;
+  color: #ffffff;
+}
+.section-success {
+  background-color: #DAA520 !important;
+  color: #ffffff;
+	font-size: 35px !important;
+	font-family: 'President Cyr', normal;
+}
+.section-warning {
+  background-color: #f0ad4e !important;
+  color: #ffffff;
+}
+.section-danger {
+  background-color: #d9534f !important;
+  color: #ffffff;
+}
+
+  /* 
+  1.1 Theme Text Styles 
+  -------------------------
+  */
+.text-primary {
+  color: #404040 !important;
+	font-family: 'President Cyr', arial;
+	font-size:49px !important;
+}
+.text-inverse {
+  color: #ffffff !important;
+	
+	
+	
+}
+.text-info {
+  color: #5bc0de !important;
+}
+.text-success {
+  color: #009999 !important;
+	font-family: 'President Cyr', arial;
+	font-size:49px !important;
+}
+.text-warning {
+  color: #f0ad4e !important;
+}
+.text-danger {
+  color: #d9534f !important;
+}
+
+
+  /* 
+  1.2 Top NavBar & Cover 
+  -------------------------
+  */
+.cover {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+  margin-bottom: 0px !important;
+  padding: 0px 0px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+.cover h1,
+.cover .h1 {
+  color: inherit;
+}
+.cover p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bolder;
+	font-family: 'President Cyr', normal;
+}
+.cover > hr {
+  border-top-color: #d5d5d5;
+}
+.container .cover,
+.container-fluid .cover {
+  border-radius: 5px;
+}
+.cover .container {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .cover .container {
+    width: 100%;
+    position: relative;
+    top: inherit;
+    transform: inherit;
+    background-color: #FFFFFF;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cover {
+    padding: 48px 0;
+  }
+  .container .cover,
+  .container-fluid .cover {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .cover h1,
+  .cover .h1 {
+    font-size: 40px;
+  }
+}
+.cover h1.text-primary {
+  color: #404040 !important;
+	font-family: 'President Cyr', arial;
+	font-weight:bolder;
+	text-align: left;
+}
+.cover h1.text-inverse {
+  color: #ffffff !important;
+}
+.cover h1.text-info {
+  color: #5bc0de !important;
+}
+.cover h1.text-success {
+  color: #40D900 !important;
+}
+.cover h1.text-warning {
+  color: #f0ad4e !important;
+}
+.cover h1.text-danger {
+  color: #d9534f !important;
+}
+@media screen and (min-width: 768px) {
+  .cover {
+    padding: 0px;
+  }
+  .container .cover,
+  .container-fluid .cover {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.cover .navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  border: none;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: #F3F3F3;
+  background-color: rgba(219, 165, 33, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .cover .navbar {
+    height: 0;
+  }
+}  
+
+@media screen and (min-width: 768px) {
+  .cover .navbar .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);  
+  }
+}
+
+.top-nav-collapse {
+  height: 60px !important;
+  background-color: #dba521 !important;
+}
+.cover .navbar .navbar-nav li.active a {
+  background-color: rgba(230, 230, 230, 0);
+  color: #fff;
+}
+.cover .navbar .navbar-toggle {
+  border-color: #FFFFFF;
+}
+.cover .navbar .navbar-toggle:hover,
+.cover .navbar .navbar-toggle:focus {
+  background-color: #FFFFFF;
+}
+.cover .navbar .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+.cover .navbar.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+.cover .navbar.navbar-inverse .navbar-toggle:hover,
+.cover .navbar.navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+.cover .navbar.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.cover .cover-image {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: right; /* center */
+}
+.cover .cover-image.background-image-fixed,
+.cover .cover-image.cover-image-fixed {
+  background-attachment: fixed;
+}   
+
+
+/* 
+ =========================
+ 2. Brand & Menu Styles
+ =========================
+*/
+.navbar-default .navbar-brand {
+  color: #6F6F6F;
+}
+
+  /* 
+  2.1 Active Menu Button 
+  -------------------------
+  */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #404040;
+}
+
+  /* 
+  2.2 Menu Item Styles
+  -------------------------
+  */
+
+.navbar-default .navbar-nav > li > a {
+  color: black;
+font-weight: 900;
+font-family: 'President Cyr', normal;
+	font-size:20px;
+}
+
+  /* 
+  2.3 Menu Contact Button Styles 
+  -------------------------
+  */
+.highlight-item {
+  padding-left: 10px;
+}
+
+.highlight-item > a {
+  height: 36px;
+  padding: 8px 30px 8px 30px !important;
+  margin: 8px 0 0 0; 
+}
+
+.btn-highlight {
+  background-color: #009999 !important;
+}
+
+.btn-primary {
+  color: #ffffff !important;
+  background-color: #009999;
+  border: none;
+  box-shadow: #009999;
+  font-family: 'President Cyr', arial;
+}  
+ 
+.btn-primary:hover {
+  background-color: #009999;
+} 
+
+.btn-primary:focus {
+  
+  border-color: none;
+}
+
+  /* 
+  2.4Change Heading Margins 
+  -------------------------
+  */
+h2, .h2 {
+    font-size: 28px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  /* font-family: "Avenir Next";  */
+}
+
+.remove-margins {
+  margin: 0 !important;
+}
+
+
+
+/* 
+ =========================
+ 3. Override Owl Carousel Styles
+ =========================
+*/
+.owl-carousel .owl-item img {
+  width: 37px;
+} 
+
+.owl-stage-outer {
+  padding: 0 0 10px 0; 
+}
+
+
+/* ------------------------ LP Sections ------------------------ */
+/*
+ =========================
+ 4. Benefits Section 
+ =========================
+*/
+.benefits-section {
+  height: auto;
+  padding: 90px 0 90px 0;
+  background: url(../images/8qSkz_croper_ru.png) #009999;  
+  }
+
+.benefits-section .container {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px 0 rgba(175,175,175,0.50);
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.pr-benefit-items {
+   margin-top: 50px; /* 6% */
+   margin-bottom: 80px;
+}
+
+.pr-benefit-items .img-responsive {
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+	min-height: 230px;
+}
+
+.pr-benefit-item {
+  padding-bottom: 20px;
+}
+
+.pr-benefit-item h4, .pr-benefit-item p {
+  text-align: center;
+	font-family: arial;
+	font-size:16px !important;
+}
+
+.thumb-block {
+  height: 50px;
+}
+
+.thumb-block .img-responsive {
+  padding-bottom: 15px;
+}
+
+
+/*
+ =========================
+ 5. Esential Vitamins Section 
+ =========================
+*/
+
+.pr-vitamins-content {
+  padding: 70px 0 70px 0;
+}
+
+.pr-vitamins-items {
+  padding: 0 0 38px 0;
+}
+
+.pr-vitamins-items .row:first-child {
+  padding-top: 10px;
+}
+
+.pr-vitamins-items .row {
+  width: 100%;
+  padding-bottom: 10px;
+  margin: 0 auto 0 auto;
+}
+
+.pr-vitamins-item {
+  width: 333px;
+  height: 93px;
+  margin: 0 auto 0 auto;
+  color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.30);
+}
+
+.pr-vitamins-item-title {
+  margin-top: 20px;
+}
+
+.pr-vitamins-item img {
+  position: relative;
+  right: 20px;
+}
+
+.pr-vitamins-item h4 {
+  font-size: 15px;
+  display: inline-block;
+}
+
+.pr-vitamins-item p {
+  font-size: 13px;
+}
+
+
+
+
+/*
+ =========================
+ 6. Call Us Section 
+ =========================
+*/
+.call-us-section {
+  min-height: 250px;
+  height: auto;
+  text-align: center;
+}
+
+.call-us-section div.row {
+  padding: 36px 0 36px 0;
+}
+
+.pr-call-us-heading {
+  line-height: 1.4;
+	  font-family: 'President Cyr', arial;
+
+}
+
+.pr-call-us-phone {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .pr-call-us-divider {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+  }
+
+  .pr-call-us-col-2 {
+    text-align: center;
+  }
+}  
+
+
+
+
+/*
+ =========================
+ 7. Product Section 
+ =========================
+*/
+.pr-product-row {
+  padding: 50px 0 55px 0;
+}
+
+.pr-product-content .text-primary {
+  padding-bottom: 30px;
+	font-size:39px !important;
+}
+
+.pr-product-content p {
+	font-family: arial;
+	
+	font-size:16px !important;
+}
+
+
+
+/*
+ =========================
+ 8. Testimonials Section 
+ =========================
+*/
+.testimonials-section {
+  min-height: 620px;
+  height: auto;
+}
+
+.pr-testimonials-items {
+  padding-top: 50px;
+}
+
+.pr-testimonial-item {
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px rgba(140, 140, 140, 0.30);
+  background: #F7F7F7;
+}
+
+.pr-testimonial-content {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.pager {
+  margin-top: 60px;
+}
+
+.pager li a {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 18px;
+  color: #fff;
+  background-color: #009999;
+  cursor: pointer;
+}
+
+.pager li > a:hover, .pager li > a:focus {
+  background-color: #c3c3c3;
+}
+
+
+/*
+ =========================
+ 9. Contact Section 
+ =========================
+*/
+.contact-section {
+  height: auto;
+  padding: 90px 0 90px 0;
+
+  background: rgba(32,236,233,1);
+  background: -moz-linear-gradient(45deg, rgba(32,236,233,1) 0%, rgba(75,238,77,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(32,236,233,1)), color-stop(100%, rgba(75,238,77,1)));
+  background: -webkit-linear-gradient(45deg, rgba(32,236,233,1) 0%, rgba(75,238,77,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(32,236,233,1) 0%, rgba(75,238,77,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(32,236,233,1) 0%, rgba(75,238,77,1) 100%);
+  background: #DAA520;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20ece9', endColorstr='#4bee4d', GradientType=1 );
+}
+
+.contact-section .container {
+  height: 100%;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px 0 rgba(175,175,175,0.50);
+}
+
+.pr-form-column {
+  padding: 0 15% 0 15%;
+}
+
+.pr-form-column form {
+  margin-top: 50px; /* 6% */
+  margin-bottom: 30px;
+}
+
+.contact-section form .form-group input {
+  border: 2px solid #D0D0D0;
+  height: 44px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section form div.form-group > div {
+    padding-bottom: 10px;
+  }
+}
+
+.btn-submit {
+  width: 150px;
+  margin-top: 30px;
+}
+
+
+  /*
+  9.1 Form Fields & Button
+  -------------------------
+  */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+  height: 44px;
+}
+
+.form-group textarea {
+  border: 2px solid #D0D0D0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #40D900 !important;
+}
+
+.btn-success {
+  color: #ffffff;
+  background-color: #009999;
+  border: none;
+	  font-family: 'President Cyr', arial;
+
+}
+
+.btn-success:hover {
+  background-color: #00D982;
+}
+
+
+/* 
+ ========================= 
+ 10. Footer Section
+ =========================
+*/
+.footer-section {
+  background-color: rgba(55, 59, 62, 0.92); 
+  color: #ffffff; 
+  padding-bottom: 10px;
+}
+
+.pr-footer-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-section p {
+  color: #B9B9B9;
+}
+
+.pr-newsletter-form input {
+  border-radius: 22px 0 0 22px;
+}
+
+.pr-footer-social {
+  padding-top: 10px;
+}
+
+.pr-footer-content .pr-footer-social a {
+  padding: 8px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 6px;
+  border-radius: 23px;
+  background-color: #FFFFFF;
+  color: #404040;
+}
+
+
+.pr-footer-copyright {
+  padding-top: 40px;
+}
+
+
+
+/* 
+ ========================= 
+ 11. Other Custom Css
+ =========================
+*/
+
+  /* 
+  11.1 Scroll Top Button
+  -------------------------
+  */
+.button-scroll-top {
+  position: fixed;
+  width: 3.5em;
+  height: 3.5em;
+  line-height: 3.2em;
+  text-align: center;
+  bottom: 3em;
+  right: 3em;
+  background: #009999 !important;
+  border: 2px solid #fff;
+  box-shadow: 1px 1px 10px 0 rgba(37, 140, 11, 0.5);
+  border-radius: 2em;
+  cursor: pointer;
+  z-index: 1029;
+  -webkit-transition: all ease 1.5s;
+  -moz-transition: all ease 1.5s;
+  -ms-transition: all ease 1.5s;
+  -o-transition: all ease 1.5s;
+  transition: all ease 1.5s;
+  filter: alpha(opacity=1);
+  opacity: 1;
+  display: none;
+}
+.button-scroll-top i {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .button-scroll-top {
+    bottom: 2em;
+    right: 2em;
+  }
+}
+
+/* Round Buttons */
+.btn-circle {
+  border-radius: 50px;
+	font-family: arial !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+}
+
+.pr-footer-bg{
+background-image: url(../images/zbBtO_croper_ru-min.jpeg);
+}
+
+#vitamins2 {background: #fcfcfc;
+    box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.09);}
+#product{background: url(../images/hAHoW_croper_ru.png);
+    background-size: 500px;}
+footer h4 { font-size: 14px; }
+.pr-footer-social a { width: 43px; height: 43px; display: inline-block; }
+
+@media (max-width: 767px) {
+	.text-primary, .text-success {
+    font-size: 30px !important;
+	}
+}

@@ -1,0 +1,196 @@
+<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:w="0" w:type="auto"/>
+							<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2093"/>
+							<w:gridCol w:w="2551"/>
+							<w:gridCol w:w="1843"/>
+							<w:gridCol w:w="1843"/>
+							<w:gridCol w:w="1241"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="000E5C68" w:rsidTr="00B70F21">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2093" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidR="000E5C68" w:rsidRDefault="000E5C68" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название группы продукции в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2551" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidR="000E5C68" w:rsidRDefault="000E5C68" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Порядок использования продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1843" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidR="000E5C68" w:rsidRDefault="000E5C68" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Причины обезвреживания</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1843" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidR="000E5C68" w:rsidRDefault="000E5C68" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Снято с реализации</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1241" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidR="00B70F21" w:rsidRDefault="00B70F21" w:rsidP="00B70F21">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Вес (</w:t>
+									</w:r>
+									<w:proofErr w:type="gramStart"/>
+									<w:r>
+										<w:t>кг</w:t>
+									</w:r>
+									<w:proofErr w:type="gramEnd"/>
+									<w:r>
+										<w:t>),</w:t>
+									</w:r>
+								</w:p>
+								<w:p w:rsidR="00B70F21" w:rsidRDefault="00B70F21" w:rsidP="00B70F21">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>объем (л),</w:t>
+									</w:r>
+								</w:p>
+								<w:p w:rsidR="000E5C68" w:rsidRDefault="00B70F21" w:rsidP="00B70F21">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>яйцо (шт.)</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+						<w:tr w:rsidR="00BC2C80" w:rsidTr="00BC2C80">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="7818" w:type="dxa"/>
+									<w:gridSpan w:val="4"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:vAlign w:val="center"/>
+								</w:tcPr>
+								<w:p w:rsidR="00BC2C80" w:rsidRDefault="00BC2C80">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1753" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="00BC2C80" w:rsidRPr="00BC2C80" w:rsidRDefault="00BC2C80">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${total}</w:t>
+									</w:r>
+									<w:bookmarkStart w:id="0" w:name="_GoBack"/>
+									<w:bookmarkEnd w:id="0"/>
+								</w:p>
+							</w:tc>
+						</w:tr>
+					</w:tbl>
+					<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5">
+						<w:pPr>
+							<w:jc w:val="center"/>
+						</w:pPr>
+					</w:p>

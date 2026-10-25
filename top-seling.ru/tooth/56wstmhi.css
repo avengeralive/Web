@@ -1,0 +1,359 @@
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav, output, ruby, section,
+summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0;}
+
+/* HTML5 display-role reset for older browsers */
+/* endzeit_____ */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {display: block;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+img{max-width: 100%; height: auto;}
+a{text-decoration: underline;}
+a:hover{cursor: pointer;}
+/* michael-k90 */
+*::-webkit-input-placeholder {color: #a9a9a9; opacity: 1;}
+*:-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*::-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*:-ms-input-placeholder {color: #a9a9a9; opacity: 1;}
+*{margin: 0; padding: 0;}
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+button,input,a{outline: none;}
+a {
+   -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+/* endzeit_____ */
+.m1-form input.field:focus::-webkit-input-placeholder {opacity:0;}
+.m1-form input.field:focus::-moz-placeholder          {opacity:0;}
+.m1-form input.field:focus:-moz-placeholder           {opacity:0;}
+.m1-form input.field:focus:-ms-input-placeholder      {opacity:0;}
+.m1-form input.field::-webkit-input-placeholder {color: #999999; opacity: 1;}
+.m1-form input.field:-moz-placeholder {color: #999999; opacity: 1;}
+.m1-form input.field::-moz-placeholder {color: #999999; opacity: 1;}
+.m1-form input.field:-ms-input-placeholder {color: #999999; opacity: 1;}
+.hidden{display: none;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.center-justified {
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+.clearfix:after{content: '';display: block;clear: both;}
+.clear{clear: both;height: 0px;}
+
+
+html{
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+h1,h2,h3,h4,h5,h6{font-family: "Proxima Nova", Helvetica, Arial, sans-serif; font-weight: 700; text-transform: uppercase;line-height: 1.2em;}
+b,strong{font-weight: 700;}
+body{
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px auto;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.375em;
+    color: #262626;
+    background: #fafafa;
+}
+section{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.wrap{
+    width: 960px;
+    padding: 0px 10px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.wrap:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/*smile*/
+.bigsmile {
+    background: url(../wesua.info/z40hc2sk.html) no-repeat 0 0 / contain;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+span[class^="smile"] {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 2px;
+}
+.smile1 {
+    background: url(../wesua.info/vr07vfcy.html) no-repeat 0 0; /*лайк*/
+    width: 19px;
+    height: 19px;
+}
+.smile2 {
+    background: url(kj1qntu2.png) no-repeat 0 0; /*улыбка*/
+    width: 18px;
+    height: 18px;
+}
+.smile3 {
+    background: url(../wesua.info/26w2q47v.html) no-repeat 0 0; /*сердечки*/
+    width: 18px;
+    height: 18px;
+}
+.smile4 {
+    background: url(../wesua.info/50p-vf3u.html) no-repeat 0 0; /*подмигивающий*/
+    width: 18px;
+    height: 18px;
+}
+.smile5 {
+    background: url(../wesua.info/8jt8-s05.html) no-repeat 0 0; /*целующий*/
+    width: 18px;
+    height: 18px;
+}
+.m1-form input.field{
+    position: relative;
+    display: block;
+    outline: 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 auto 10px;
+    padding: 0 20px;
+    background:#fafafa;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #333;
+    -webkit-transition: all 0.2s;
+    -moz-transition:    all 0.2s;
+    -o-transition:      all 0.2s;
+    -ms-transition:     all 0.2s;
+    transition:         all 0.2s;
+}
+.button-m{
+    position: relative;
+    display: block;
+    width: 280px;
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-align: center;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background: #3897f0;
+    -webkit-transition: all 0.2s;
+    -moz-transition:    all 0.2s;
+    -o-transition:      all 0.2s;
+    -ms-transition:     all 0.2s;
+    transition:         all 0.2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.button-m:hover{
+    background: #44a3fc;
+}
+.button-m:active{
+}
+.m1-form .button-m{
+    width: 100%;
+    margin: 0 auto !important;
+    font-size: 18px;
+}
+.formbox .m1-form {
+    width: 260px;
+    margin: 0 auto;
+}
+.safe {
+    color:#999999;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+}
+.safe:before {
+    content: '';
+    display: inline-block;
+    background: url('fn-1gmke.png') no-repeat -106px -27px;
+	width: 12px;
+	height: 15px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top:3px;
+}
+h2.title {
+    margin: 0 0 20px 0;
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.price {
+    width: 240px;
+    text-align: center;
+    position: absolute;
+    top: 285px;
+    right: 310px;
+}
+.old-cost {
+    background: #fff;
+}
+.old-cost p {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+.old-cost > span, .new-cost > span {
+    font-size: 16px;
+}
+.new-cost {
+    background: #feda75;
+}
+.new-cost p {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.new-cost, .old-cost  {
+    height: 80px;
+    padding-top: 10px;
+}
+.old-cost p small, .new-cost p small {
+    font-size: .7em;
+}
+
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;    
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background:rgba(0,0,0,.5) url('fn-1gmke.png') no-repeat -5px -110px;
+    z-index: 3;
+    border-radius: 100%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.slick-prev{
+    left: 20px;
+}
+.slick-next{
+    right: 20px;
+    -moz-transform: rotate(180deg) translateY(50%);
+    -webkit-transform: rotate(180deg) translateY(50%);
+    -o-transform: rotate(180deg) translateY(50%);
+    -ms-transform: rotate(180deg) translateY(50%);
+    transform: rotate(180deg) translateY(50%);
+}
+.reviews_1 .slick-prev{
+    left: -50px;
+}
+.reviews_1 .slick-next{
+    right: -50px;
+}
+
+
+.slick-dots{
+    position: absolute;
+    bottom: -30px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li.slick-active button{
+    background: #3897f0;         
+}
+.slick-dots li{
+    position: relative;
+    display: inline-block;
+    margin: 0 2.5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #dbdbdb;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.slick-dots li button:before{    
+    font-family: 'slick';
+    font-size: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    content: '';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (max-width: 976px) {
+    .wrap{
+        width: 640px;
+    }
+}
+@media screen and (max-width: 659px) {
+    .wrap{
+        width: 320px;
+    }
+    
+}

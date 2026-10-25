@@ -1,0 +1,101 @@
+						<w:tr w:rsidR="00B36ECF" w:rsidTr="00EF7BD9">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1951" w:type="dxa"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidR="00B36ECF" w:rsidRPr="00F354CD" w:rsidRDefault="00B36ECF" w:rsidP="00B36ECF">
+									<w:pPr>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:i/>
+											<w:color w:val="A6A6A6" w:themeColor="background1" w:themeShade="A6"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+										</w:rPr>
+									</w:pPr>
+									<w:bookmarkStart w:id="0" w:name="_GoBack" w:colFirst="1" w:colLast="3"/>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2410" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00B36ECF" w:rsidRPr="00F354CD" w:rsidRDefault="00B36ECF" w:rsidP="00B36ECF">
+									<w:pPr>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:i/>
+											<w:color w:val="A6A6A6" w:themeColor="background1" w:themeShade="A6"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+										</w:rPr>
+									</w:pPr>
+									<w:proofErr w:type="spellStart"/>
+									<w:r>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${expertise_num}</w:t>
+									</w:r>
+									<w:proofErr w:type="spellEnd"/>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2268" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00B36ECF" w:rsidRPr="00F354CD" w:rsidRDefault="00B36ECF" w:rsidP="00B36ECF">
+									<w:pPr>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:i/>
+											<w:color w:val="A6A6A6" w:themeColor="background1" w:themeShade="A6"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+										</w:rPr>
+									</w:pPr>
+									<w:proofErr w:type="spellStart"/>
+									<w:r>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_name}</w:t>
+									</w:r>
+									<w:proofErr w:type="spellEnd"/>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2941" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00B36ECF" w:rsidRPr="00F354CD" w:rsidRDefault="00B36ECF" w:rsidP="00B36ECF">
+									<w:pPr>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:i/>
+											<w:color w:val="A6A6A6" w:themeColor="background1" w:themeShade="A6"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+										</w:rPr>
+									</w:pPr>
+									<w:proofErr w:type="spellStart"/>
+									<w:r>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${samples_weight}</w:t>
+									</w:r>
+									<w:proofErr w:type="spellEnd"/>
+								</w:p>
+							</w:tc>
+						</w:tr>

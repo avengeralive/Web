@@ -1,0 +1,15 @@
+{
+    "version": "2.6",
+    "cms_version_min": "3.35",
+    "title": "Sitemap",
+    "title_ru": "Карта сайта",
+    "description": "Widget displaying a sitemap<br><a href='//cetera.ru/cetera_cms/plugins/sitemap/license_en.html' target='_blank'>License agreement</a>",
+    "description_ru": "Виджет отображения карты сайта<br><a href='//cetera.ru/cetera_cms/plugins/sitemap/license.html' target='_blank'>Лицензионное соглашение</a>",
+    "author": "Arthur Garin",
+    "requires": [
+        {
+            "plugin": "plugins_statistic",
+            "version": "1.3"
+        }
+    ]
+}

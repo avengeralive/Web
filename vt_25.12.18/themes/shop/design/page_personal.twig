@@ -1,0 +1,17 @@
+{% extends layout %}
+
+{% block main %}
+
+<div class='row favorites-products'>
+<div class='columns'>
+
+<h4> <b>Избранные изделия</b> </h4>
+</div>
+</div>
+
+
+{% block personal_content %}
+			{% widget 'User.Profile.Edit' with { widgetTitle: "<h2>#{_('Личные данные')}</h2>", 'change_login': 1, 'change_password': 1 } %}
+{% endblock %}
+
+{% endblock %}

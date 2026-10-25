@@ -1,0 +1,16 @@
+{
+  "name": "Project",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.2",
+    "jquery": "~2.1.4",
+    "OwlCarousel2": "~2.0.0-beta.3"
+  }
+}

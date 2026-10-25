@@ -1,0 +1,112 @@
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:w="0" w:type="auto"/>
+							<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2674"/>
+							<w:gridCol w:w="2547"/>
+							<w:gridCol w:w="1888"/>
+							<w:gridCol w:w="2462"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="00E40BCA" w:rsidTr="002032A5">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2660" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00E40BCA" w:rsidRPr="0006783B" w:rsidRDefault="00E40BCA" w:rsidP="00315741">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="0006783B">
+										<w:t>Название группы продукции в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2693" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00E40BCA" w:rsidRDefault="00E40BCA" w:rsidP="00C55183">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название группы болезней в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2268" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00E40BCA" w:rsidRDefault="00E40BCA" w:rsidP="00257896">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название болезни</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1843" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00E40BCA" w:rsidRDefault="00E40BCA" w:rsidP="002032A5">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Количество туш (тушек, партий)</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+						<w:tr w:rsidR="00E40BCA" w:rsidTr="004A6EC6">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="7621" w:type="dxa"/>
+									<w:gridSpan w:val="3"/>
+								</w:tcPr>
+								<w:p w:rsidR="00E40BCA" w:rsidRDefault="00E40BCA" w:rsidP="00E40BCA">
+									<w:pPr>
+										<w:tabs>
+											<w:tab w:val="left" w:pos="600"/>
+											<w:tab w:val="center" w:pos="2372"/>
+										</w:tabs>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1843" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00E40BCA" w:rsidRPr="00860047" w:rsidRDefault="00860047" w:rsidP="00753C41">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+					</w:tbl>
+					<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5">
+						<w:pPr>
+							<w:jc w:val="center"/>
+						</w:pPr>
+					</w:p>

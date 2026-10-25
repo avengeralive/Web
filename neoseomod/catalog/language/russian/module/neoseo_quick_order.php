@@ -1,0 +1,16 @@
+<?php
+
+// Heading
+$_['heading_title'] = 'Быстрый заказ';
+$_['text_quick_order'] = 'Ваш телефон';
+
+// Text
+$_['text_name'] = 'Ваше имя';
+$_['text_phone'] = 'Контактный телефон';
+$_['text_price'] = 'Цена';
+$_['text_no_phone'] = 'Укажите телефон';
+
+// Button
+$_['button_quick_order'] = 'Быстрый заказ';
+$_['button_continue'] = 'Продолжить покупки';
+$_['button_action'] = 'Заказать';

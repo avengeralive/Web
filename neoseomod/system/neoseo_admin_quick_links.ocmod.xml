@@ -1,0 +1,72 @@
+<modification>
+	<code>Admin.Quick.Links</code>
+	<name>Admin Quick Links</name>
+	<version>2.1.</version>
+	<author>SlaSoft</author>
+    
+	<file path="admin/controller/common/header.php">
+		<operation>
+			<search><![CDATA[function index() {]]></search>
+			<add position="before"><![CDATA[
+		private function neoseo_admin_quick_links() {
+			$output = '';
+			$settings = $this->config->get('neoseo_admin_quick_links_' . $this->user->getID());
+			if (!$settings) {
+				$settings = $this->config->get('neoseo_admin_quick_links');
+			}
+
+			if (!$settings) {
+			 return false;
+			}
+
+			$sort_order = array();
+			if (isset($settings['quick_links'])) {
+				foreach ($settings['quick_links'] as $key => $row) 
+					$sort_order[$key] = $row['sort_order'];
+					
+				array_multisort($sort_order, SORT_ASC, $settings['quick_links']);
+
+				if (count($settings['quick_links'])>0) {
+					foreach ($settings['quick_links'] as $key => $item) {
+							$title = $item['title'];
+							$target = (isset($item['new_window']) && $item['new_window'])?'target="_blank"':'';
+							$url = $this->url->link($item['route'], 'token=' . $this->session->data['token'], 'SSL');
+							$icon = $item['icon'];
+							$output .= sprintf('<li id="item-%s"><a data-toggle="tooltip"  title="%s" href="%s" %s><i class="fa fa-%s fa-lg"></i></a></li>',
+											$key,
+											$title,
+											$url,
+											$target,
+											$icon
+											);
+							$output .= (isset($item['color']) && $item['color'])?
+								sprintf('<style>ul#admin-quick-links li#item-%s a{background-color: #%s;}ul#admin-quick-links li#item-%s a:hover{background-color: #eee;color: #%s;}</style>', 
+									$key, 
+									$item['color'], 
+									$key, 
+									$item['color']
+								):
+								'';
+					}
+				}
+			}
+			return $output;
+	}]]></add>
+		</operation>
+
+		<operation>
+			<search><![CDATA[return $this->load->view('common/header]]></search>
+			<add position="before"><![CDATA[
+				if ($this->user->isLogged()) 
+					$data['neoseo_admin_quick_links'] = $this->neoseo_admin_quick_links();
+				]]></add>
+		</operation>
+	</file>
+	
+	<file path="admin/view/template/common/header.tpl">
+		<operation>
+			<search><![CDATA[<ul class="nav pull-right">]]></search>
+			<add position="after"><![CDATA[<?php echo $neoseo_admin_quick_links?>]]></add>
+		</operation>
+		</file>
+</modification>

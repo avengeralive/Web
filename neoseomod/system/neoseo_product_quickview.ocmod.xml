@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Product QuickView</name>
+    <version>13</version>
+    <code>neoseo-product-quickview</code>
+    <author>Alexander Sorokin</author>
+    <link>Ahttp://seomag.com.ua/moduli/neoseo-product-quickview</link>
+
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search><![CDATA[
+            $this->document->getStyles();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo Product QuickView - begin */
+
+        if ( !file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/neoseo_product_quickview.scss') ) {
+            if ( file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/neoseo_product_quickview.css') ) {
+                $this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template')  . '/stylesheet/neoseo_product_quickview.css');
+		    } else {
+                $this->document->addStyle('catalog/view/theme/default/stylesheet/neoseo_product_quickview.css');
+		    }
+		}
+        /* NeoSeo Product QuickView - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+            $this->document->getScripts();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo Product QuickView - begin */
+        $this->document->addScript('catalog/view/javascript/neoseo_product_quickview.js');
+        /* NeoSeo Product QuickView - end */
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[
+            function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+
+        /* NeoSeo Product QuickView - begin */
+        if( isset($this->request->post['quickview']) ) {
+            $this->load->model("module/neoseo_product_quickview");
+            $this->model_module_neoseo_product_quickview->getPopup();
+            return;
+        }
+        /* NeoSeo Product QuickView - end */
+
+            ]]></add>
+        </operation>
+    </file>
+
+
+</modification>

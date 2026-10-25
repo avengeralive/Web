@@ -1,0 +1,30 @@
+
+{# картиночки #}
+<style>.footer { padding-top: 110px !important; }</style>
+{% for m in widget.children.orderBy('tag') %}
+<p>
+    <strong style="font-size: 18px;">{{m.name}}</strong>
+
+<p>
+<p>&nbsp<p>
+{% if m.images|length %}
+
+<div class="row">
+  <div class="large-24 columns large-centered" style="padding: 0px;">
+    <div class="row large-up-4 medium-up-4 small-up-4 text-center columns">
+      {% for i in m.images %}
+      <div class="columns chain" style="width: 220px; padding: 10px 10px;">
+        <div class="chain__img">
+          <p><img alt="Металлы" src="{{i.file}}" style="width: 200px; height: 200px;" /></p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+<p>&nbsp</p>
+
+<p>  {{m.text|raw}} </p>
+<p>&nbsp</p>
+{% endfor %}

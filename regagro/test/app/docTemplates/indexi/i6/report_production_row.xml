@@ -1,0 +1,91 @@
+<w:tr w:rsidR="00C2729A" w:rsidTr="00574D60">
+							<w:trPr>
+								<w:trHeight w:val="276"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00CD4545" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00CD4545" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CD4545" w:rsidR="00C2729A" w:rsidRDefault="0062640D">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="0062640D">
+										<w:t>${report_production_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CD4545" w:rsidR="00C2729A" w:rsidRDefault="0062640D">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="0062640D">
+										<w:t>${production_type_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1787"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CD4545" w:rsidR="00C2729A" w:rsidRDefault="0062640D">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="0062640D">
+										<w:t>${user_displayname}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1744"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CD4545" w:rsidR="00C2729A" w:rsidRDefault="0062640D">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="0062640D">
+										<w:t>${expertise_count}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CD4545" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+						</w:tr>

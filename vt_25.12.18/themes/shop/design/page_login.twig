@@ -1,0 +1,26 @@
+{% extends layout %}
+
+{% block main %}
+
+    <div class="content">
+      <div class="row">
+        <div class="column small-24 medium-12 large-8 medium-centered">
+          <ul id="auth-tabs" data-tabs class="tabs">
+            <li class="tabs-title{% if not register %} is-active{% endif %}"><a href="#login-tab"{% if not register %} aria-selected="true"{% endif %}>{{ _('Вход') }}</a></li>
+            <li class="tabs-title{% if register %} is-active{% endif %}"><a href="#register-tab"{% if register %} aria-selected="true"{% endif %}>{{ _('Регистрация') }}</a></li>
+          </ul>
+          <div data-tabs-content="auth-tabs" class="tabs-content">
+            <div id="login-tab" class="tabs-panel{% if not register %} is-active{% endif %}">
+			  {% widget 'User.Auth' with { recover_password_url: '/recover-password/', register_url: false, 'authorized_redirect': '/' } %}
+            </div>
+          </div>
+          <div data-tabs-content="auth-tabs" class="tabs-content">
+            <div id="register-tab" class="tabs-panel{% if register %} is-active{% endif %}">
+              {% widget 'User.Register' with { unique_email: true } %}
+            </div>
+          </div>
+        </div><br><br>
+      </div>
+    </div>
+	
+{% endblock %}

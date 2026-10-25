@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SMART LIGHT</title>
+	<!-- Подключение фреймфорка Bootstrap-4 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Подключение стилей -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+ <style> 
+ .logo__text-top {
+	font-size: 20px;
+	color: #fca400;
+	font-weight: 800;
+	line-height: 30px;
+}
+ </style> 
+</head>
+<body>
+<style> 
+  .menu {
+    text-align: center;padding: 8px 0;background: #ececec;
+}
+
+.menu__icon {
+   display: none;
+   width: 45px;
+   height: 35px;
+   position: relative;
+   cursor: pointer;
+}
+
+.menu__icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #333333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.menu__icon span:nth-child(1) {
+  top: 0px;
+}
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+  top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+  top: 26px;
+ }
+
+.menu__links-item {
+    display: inline-block;
+    color: #333333;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__links-item:hover {
+    text-decoration: underline;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__links {
+  display: block;  
+}
+
+@media screen and (max-width: 999px) {
+  .menu {
+    text-align: right;
+padding-top: 10px;
+padding-right: 15px;
+}
+  .menu__icon{
+    display: inline-block;
+  }
+  
+  .menu__links {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+  </style> 
+  
+<!-- partial:index.partial.html -->
+<div class="menu">
+    <div class="menu__icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <div class="menu__links">
+        <a class="menu__links-item" href="../">Главная</a>
+        <a class="menu__links-item" href="../tovary_dlya_doma.php">Товары Для Дома</a>
+        <a class="menu__links-item" href="../detskie_tovary.php">Детские Товары</a>
+        <a class="menu__links-item" href="../odezhda_i_aksessuary.php">Одежда и Аксессуары</a>
+        <a class="menu__links-item" href="../podarki_i_razvlecheniya.php">Подарки и Развлечения</a>
+        <a class="menu__links-item" href="../elektronika_i_gadzhety.php">Электроника и Гаджеты</a>
+         
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script>(function($){
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu').toggleClass('menu_state_open');
+    });
+  });
+})(jQuery);</script>
+	<!-- Первый экран -->
+	<header class="header">
+		<div class="cap">
+			<div class="cap-top">
+				<div class="container">
+					<div class="cap__box">
+						<a href="/" class="logo d-flex align-items-center">
+							<img src="img/cropped-wanaka-solar-logo-2_big-2-crop-u385.png" alt="" class="logo">
+							<div class="logo__box">
+								<div class="logo__text-top">
+									SMART LIGHT
+								</div>
+								<div class="logo__text-bottom">
+									Smart Light для дома
+								</div>
+							</div>
+						</a>
+						<nav class="mobile-menu">
+						 	<input id="checkbox" class="mobile-menu__checkbox" type="checkbox">
+						 	<label for="checkbox" class="mobile-menu__btn">
+						 		<div class="mobile-menu__icon"></div>
+						 	</label>
+							 <div class="mobile-menu__container">
+								 <ul class="mobile-menu__list">
+								 	<li class="menu__item">
+									<a href="#video" class="menu__link">
+										СМОТРЕТЬ ВИДЕО
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#order" class="menu__link">
+										ЗАКАЗАТЬ С ПОДАРКОМ!
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#manual" class="menu__link">
+										КАК ПОЛЬЗОВАТЬСЯ?
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#reviews" class="menu__link">
+										ОТЗЫВЫ
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#how" class="menu__link">
+										ДОСТАВКА И ОПЛАТА
+									</a>
+								</li>
+								</ul>    
+							 </div>
+						</nav>
+						<nav class="navigation">
+							<ul class="menu d-flex">
+								<li class="menu__item">
+									<a href="#video" class="menu__link">
+										СМОТРЕТЬ ВИДЕО
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#order" class="menu__link">
+										ЗАКАЗАТЬ С ПОДАРКОМ!
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#manual" class="menu__link">
+										КАК ПОЛЬЗОВАТЬСЯ?
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#reviews" class="menu__link">
+										ОТЗЫВЫ
+									</a>
+								</li>
+								<li class="menu__line"></li>
+								<li class="menu__item">
+									<a href="#how" class="menu__link">
+										ДОСТАВКА И ОПЛАТА
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="call-back">
+							<div class="call-back__text">
+								Есть вопросы? Закажите <br> обратный звонок!
+							</div>
+							<button class="call-back__button" data-toggle="modal" data-target="#exampleModal">
+								ЗАКАЗАТЬ ЗВОНОК
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cap-bottom">
+				<div class="container">
+					<ul class="cap-bottom__list">
+						<li class="cap-bottom__item">
+							КРЕПИТЕ НА ЛЮБОМ МЕСТЕ
+						</li>
+						<li class="cap-bottom__item">
+							РАБОТАЮТ ОТ СОЛНЕЧНОЙ ЭНЕРГИИ
+						</li>
+						<li class="cap-bottom__item">
+							БОЛЬШЕ НИКАКИХ ПРОВОДОВ!
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<section class="first">
+			<div class="container">
+				<div class="first__box">
+					<div class="title__box">
+						<div>
+							<h1 class="main__title">
+								<span>SMART LIGHT </span>- ВКЛЮЧИ СВЕТ ТАМ, ГДЕ ЕГО НЕТ!
+							</h1>
+							<h3 class="main__sub-title">
+								УСТАНОВИТЕ ЗА 5 СЕКУНД ГДЕ УГОДНО - БЕЗ ПРОВОДОВ, БЕЗ ИНСТРУМЕНТОВ
+							</h3>
+						</div>
+						<img class="title__img" src="img/nov.png" alt="Новинка">
+					</div>
+					<div class="first__wrap">
+						<div class="first__left">
+							<div class="first__img"></div>
+							<div class="first__manual">
+								<div class="first__manual__item">
+									<div class="first__manual__icon first__manual__icon--1"></div>
+									<div class="first__manual__text first__manual__text--1">		Просто отклей...
+									</div>
+								</div>
+								<div class="first__manual__item">
+									<div class="first__manual__icon first__manual__icon--2"></div>
+									<div class="first__manual__text">
+										И прикрепи<br>
+										<span>КУДА УГОДНО!</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="first__tight">
+							<div class="firts__properties">
+								<div class="firts__properties_item firts__properties_item--1">
+									ПОЛЬЗУЙТЕСЬ СВЕТИЛЬНИКАМИ SMART LIGHT И ЗИМОЙ И ЛЕТОМ!
+								</div>
+								<div class="firts__properties_item firts__properties_item--2">
+									ВЛАГОЗАЩИЩЕННЫЙ КОРПУС, СТЕПЕНЬ ЗАЩИТЫ - <span>IP65</span>		
+								</div>
+								<div class="firts__properties_item firts__properties_item--3">
+									АНАЛОГ ЛАМПЕ НАКАЛИВАНИЯ ПО ОСВЕЩЕНИЮ - <span>40 ВАТТ</span>
+								</div>
+								<div class="firts__properties_item firts__properties_item--4">
+									ЗАРЯЖАЕТСЯ КАК В СОЛНЕЧНУЮ, ТАК И В ОБЛАЧНУЮ ПОГОДУ
+								</div>
+								<div class="firts__properties_item firts__properties_item--5">
+									НОВИНКА, ВПЕРВЫЕ В РОССИИ! <span>20 LED</span> СВЕТОДИОДОВ
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
+
+	<!-- Инструкция  -->
+	<section class="insruction">
+		<div class="container">
+			<div class="merits">
+				<div class="merits__item wow fadeInUp" data-wow-offset="200" data-wow-delay="0s" data-wow-duration="0.5s">
+					<div class="merits__icon merits__icon--1"></div>
+					<div class="merits__title">
+						ЭКОНОМИЯ ЭЛЕКТРОЭНЕРГИИ
+					</div>
+					<div class="merits__text">
+						Светильник оснащен солнечной панелью и питается исключительно от энергии солнца. Экологически чистая энергия экономит вам деньги!
+					</div>
+				</div>
+				<div class="merits__item wow fadeInUp" data-wow-offset="200" data-wow-delay="0.3s" data-wow-duration="0.5s">
+					<div class="merits__icon merits__icon--2"></div>
+					<div class="merits__title">
+						ДАТЧИК ДВИЖЕНИЯ И СВЕТА
+					</div>
+					<div class="merits__text">
+						Благодаря датчику движения накопленная энергия расходуется очень экономно. Датчик срабатывает только в темное время суток
+					</div>
+				</div>
+				<div class="merits__item wow fadeInUp" data-wow-offset="200" data-wow-delay="0.6s" data-wow-duration="0.5s">
+					<div class="merits__icon merits__icon--3"></div>
+					<div class="merits__title">
+						ЛЕГКАЯ И БЫСТРАЯ УСТАНОВКА
+					</div>
+					<div class="merits__text">
+						Просто закрепите светильник там, где это необходимо.  Больше никакого протягивания проводов и сложных электрических схем!
+					</div>
+				</div>
+			</div>
+			<h2 class="instruction__title" id="video">
+				ПОСМОТРИТЕ КОРОТКОЕ ВИДЕО И УЗНАЙТЕ КАК ВЫ БУДЕТЕ
+				<br><span>ИСПОЛЬЗОВАТЬ SMART LIGHT У СЕБЯ ДОМА</span>
+			</h2>
+			<div class="instruction__box text-center">
+				<div class="instruction__item">
+					<div class="instruction__num">
+						5
+					</div>
+					<div class="instruction__time">
+						СЕКУНД
+					</div>
+					<div class="instruction__text">
+						НА УСТАНОВКУ
+					</div>
+				</div>
+				<div class="video">
+					<iframe src="https://player.vimeo.com/video/336325940" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="640" height="360" frameborder="0"></iframe>
+				</div>
+				<div class="instruction__item">
+					<div class="instruction__num">
+						0
+					</div>
+					<div class="instruction__time">
+						РУБЛЕЙ
+					</div>
+					<div class="instruction__text">
+						ЗА ЭЛЕКТРИЧЕСТВО
+					</div>
+				</div>
+			</div>
+			<div class="instruction__order text-center">
+				<div class="instruction__order_title">
+					СВЕТИЛЬНИК <span>SMART LIGHT 20 LED</span>
+				</div>
+				<div class="instruction__order_price">
+					<span>Цена: <s>3900 руб.</s></span> 1990
+				</div>
+				<button class="call-back__button instruction__button" data-toggle="modal" data-target="#Modal2">
+					ОФОРМИТЬ ЗАКАЗ
+				</button>
+			</div>
+		</div>
+	</section>
+	<!-- Примеры использования -->
+	<section class="using">
+		<div class="container">
+			<h2 class="using__title">
+				ИСПОЛЬЗУЙТЕ ГДЕ ЗАХОТИТЕ! ДАЖЕ ТАМ, ГДЕ НЕ ПРОВЕДЕНО ЭЛЕКТРИЧЕСТВО
+			</h2>
+			<div class="using__box">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--1"></div>
+							<div class="using__text">
+								✓ ГАРАЖ
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--2"></div>
+							<div class="using__text">
+								✓ КРЫЛЬЦО
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--3"></div>
+							<div class="using__text">
+								✓ ВХОДНАЯ ДВЕРЬ
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--4"></div>
+							<div class="using__text">
+								✓ ЛЕСТНИЦЫ, ЗАБОР
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--5"></div>
+							<div class="using__text">
+								✓ ТЕРРАСА
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--6"></div>
+							<div class="using__text">
+								✓ ДОРОЖКИ
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--7"></div>
+							<div class="using__text">
+								✓ УЧАСТОК
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="using__item">
+							<div class="using__icon using__icon--8"></div>
+							<div class="using__text">
+								✓ САРАЙ, БАНЯ
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Оставьте заявку -->
+	<section class="order" id="order">
+		<div class="container">
+			<h2 class="order__title">
+				ОСТАВЬТЕ ЗАЯВКУ НА САЙТЕ <span>СЕГОДНЯ 
+				<script>(function(d){d.setDate(d.getDate());document.write(d.getDate()+' '+['ЯНВАРЯ','ФЕВРАЛЯ','МАРТА','АПРЕЛЯ','МАЯ','ИЮНЯ', 'ИЮЛЯ','АВГУСТА','СЕНТЯБРЯ','ОКТЯБРЯ','НОЯБРЯ','ДЕКАБРЯ'][d.getMonth()])})(new Date())
+				</script> </span>
+				И ПОЛУЧИТЕ ВТОРОЙ СВЕТИЛЬНИК SMART LIGHT <span> АБСОЛЮТНО БЕСПЛАТНО!</span>
+			</h2>
+			<div class="order__box d-flex">
+				<div class="order__left">
+					<div class="order__left__img">
+						<img src="img/three.jpg" alt="">
+					</div>
+				</div>
+				<div class="order__right">
+					<h4 class="order__caption">
+						Закажите SMART LIGHT сегодня <span>
+				<script>(function(d){d.setDate(d.getDate());document.write(d.getDate()+' '+['января','февраля','марта','апреля','мая','июня', 'ИЮЛЯ','АВГУСТА','СЕНТЯБРЯ','ОКТЯБРЯ','НОЯБРЯ','ДЕКАБРЯ'][d.getMonth()])})(new Date())
+				</script> </span><br>
+						и получите <span>ВТОРОЙ СВЕТИЛЬНИК В ПОДАРОК!</span>
+					</h4>
+					<div class="order__right-box">
+						<div class="order__right_mult">
+							×2
+						</div>
+						<div class="order__right_imgs text-right">
+							<img src="img/2-crop-u2388.png" alt="" class="order__right_img order__right_img--1">
+							<img src="img/2-crop-u2388.png" alt="" class="order__right_img">
+						</div>
+					</div>
+					<div class="instruction__order_price">
+					<span>Цена: <s>3900 руб.</s></span> 1990
+				</div>
+				<div class="order__button-box text-center">
+					<button class="call-back__button instruction__button order__button" data-toggle="modal" data-target="#Modal2">
+						ЗАКАЗАТЬ С ПОДАРКОМ
+					</button>
+					<div class="order__sub-text">
+						Спешите заказать по акции! Осталось подарков: 26
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Как работает -->
+	<section class="manual" id="manual">
+		<div class="container">
+			<h2 class="manual__title">
+				ПОСМОТРИТЕ ЕЩЕ РАЗ, КАК ЭТО РАБОТАЕТ!
+			</h2>
+			<div class="manual__gifes">
+				<div class="manual__gif wow fadeInLeft" data-wow-offset="200" data-wow-delay="0s" data-wow-duration="0.5s">
+					<div class="manual__gif_num">
+						1
+					</div>
+					<div class="manual__gif_img">
+						<img src="img/3_1.gif">
+					</div>
+					<div class="manual__gif_text">
+						УСТАНОВИТЕ ГДЕ УГОДНО ЗА 5 СЕКУНД
+					</div>
+				</div>
+				<div class="manual__gif wow fadeInUp" data-wow-offset="200" data-wow-delay="0.3s" data-wow-duration="0.5s">
+					<div class="manual__gif_num">
+						2
+					</div>
+					<div class="manual__gif_img">
+						<img src="img/1.gif">
+					</div>
+					<div class="manual__gif_text">
+						ЗАРЯЖАЕТСЯ ОТ СОЛНЕЧНОЙ ЭНЕРГИИ
+					</div>
+				</div>
+				<div class="manual__gif wow fadeInRight" data-wow-offset="200" data-wow-delay="0.6s" data-wow-duration="0.5s">
+					<div class="manual__gif_num">
+						3
+					</div>
+					<div class="manual__gif_img">
+						<img src="img/2.gif">
+					</div>
+					<div class="manual__gif_text">
+						СОВРЕМЕННЫЙ ДАТЧИК ДВИЖЕНИЯ
+					</div>
+				</div>
+			</div>
+			<div class="manual__box">
+				<div class="manual__video">
+					<h4 class="manual__video_title">
+						ПОСМОТРИТЕ ИНТЕРЕСНЫЙ И ПОЛЕЗНЫЙ ВИДЕООБЗОР!
+					</h4>
+					<div class="manual__video_box">
+						<iframe src="https://player.vimeo.com/video/336326821" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="512" height="288" frameborder="0"></iframe>
+					</div>
+				</div>
+				<div class="manual__text">
+					<ul class="manual__list">
+				        <li>
+				         	Модель: Smart Light 20 LED
+				        </li>
+				        <li>
+				         	Источник питания: солнечная батарея
+				        </li>
+				        <li>
+				         	Эл. напряжение: 6V; Яркость: ~ лампочка 40вт
+				        </li>
+				        <li>
+				         	Цвет освещения: белый 6000-6500K
+				        </li>
+				        <li>
+				         	Батарея: 3.7V-1200mAh
+				        </li>
+				        <li>
+				         	LED: 20х 0,2 Вт;Световой поток: ~ 250 люменов
+				        </li>
+				        <li>
+				         	Датчик движения: 2 ~ 3 метра, 120 градусов
+				        </li>
+				        <li>
+				         	Датчик света: современный датчик света, Smart Light включается с наступлением темноты, экономя заряд
+				        </li>
+				        <li>
+				         	Солнечная панель: 200mAh 6В 0.49W
+				        </li>
+				        <li>
+				         	Освещение на расстоянии:&3-5 метров
+				        </li>
+				        <li>
+				         	Время заряда: 3-8 часов (в зависимости от погоды) хватает на 3-4 дня работы светильника
+				        </li>
+				        <li>
+				         	Крепится к любым поверхностям: кирпич, сайдинг, пластик, дерево, стекло и др.
+				        </li>
+				        <li>
+				         	Комплектация: светильник, держатель, саморезы
+				        </li>
+			        </ul>
+				</div>
+			</div>
+
+			<!-- Преимущества -->
+			<div class="advantages" id="reviews">
+				<div class="advantages__item">
+					<div class="advantages__icon advantages__icon--1"></div>
+					<div class="advantages__title">
+						✓ ЭКОНОМИЯ НА ЭЛЕКТРИЧЕСТВЕ
+					</div>
+					<p class="advantages__text">
+						Солнечная батарея позволяет не только экономить деньги на электроэнергии, но и получить освещение в случае отсутствия электричества. Одного заряда батареи (3-8 часов) хватает на несколько дней работы!
+					</p>
+				</div>
+				<div class="advantages__item">
+					<div class="advantages__icon advantages__icon--2"></div>
+					<div class="advantages__title">
+						✓ ВЛАГОЗАЩИЩЕННЫЙ КОРПУС
+					</div>
+					<p class="advantages__text">
+						-Пыле и влагозащищенный корпус. Степень защиты - IP65. Высококачественные светодиоды служат до 100 тысяч часов, что во много раз превосходит обычные лампы. Smart Light будет светить вам долгие годы!
+					</p>
+				</div>
+				<div class="advantages__item">
+					<div class="advantages__icon advantages__icon--3"></div>
+					<div class="advantages__title">
+						✓  ПОЛЬЗУЙТЕСЬ ЗИМОЙ И ЛЕТОМ
+					</div>
+					<p class="advantages__text">
+						Smart Light эффективно работает как в жару, так и в холод. Заряжается при дневном свете, даже в облачную погоду, попадание прямых солнечных лучей не обязательно. Используйте и зимой и летом!
+					</p>
+				</div>
+			</div>
+
+			<!-- Отзывы -->
+			<div class="reviews">
+				<h2 class="reviews__caption">
+					ОТЗЫВЫ НАШИХ ПОКУПАТЕЛЕЙ
+				</h2>
+				<div class="reviws__items">
+					<div class="reviews__item wow fadeInUp" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="0.5s">
+						<div class="reviews__box">
+							<img src="img/ebd44d47-b3cb-4e63-85c9-1f7f6c0451d0_1e156fa1168d32408969a6d1693c3a849-crop-u1549.jpg" alt="" class="reviews__img">
+							<div class="reviews__content">
+								<div class="reviews__title">
+									"Просто отличное приобретение!"
+								</div>
+								<img src="img/5stars.png" alt="5 Звёзд" class="reviews__stars">
+								<p class="reviews__text">
+									Просто отличное приобретение - беспроводной светодиодный светильник с датчиком движения! Поставила на входе, у лестница и в беседке, очень удобно. Включается сам, при чем только в темноте. Рекомендую всем, у кого есть участок!
+								</p>
+								<div class="reviews__name">
+									Елена г. Москва
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__item wow fadeInUp" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="0.5s">
+						<div class="reviews__box">
+							<img src="img/c2336-clip-38kb-crop-u1957.jpg" alt="" class="reviews__img">
+							<div class="reviews__content">
+								<div class="reviews__title">
+									"Нужная вещь для  участка!"
+								</div>
+								<img src="img/5stars.png" alt="5 Звёзд" class="reviews__stars">
+								<p class="reviews__text">
+									Ходить с фонариком по двору надоело и я решила приобрести светильник с датчиком движения. Купила сразу 4 шт, в разные места и не пожалела. Маленький, легкий, яркий. Установка - пара движений и все! Не нужны провода. Супер!
+								</p>
+								<div class="reviews__name">
+									Мария г. Екатеринбург
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__item wow fadeInUp" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="0.5s">
+						<div class="reviews__box">
+							<img src="img/8-16-20-led-solar-light-powered-panel-waterproof-pir-motion-sensor-wall-lamp-yard-fence-crop-u1522.jpg" alt="" class="reviews__img">
+							<div class="reviews__content">
+								<div class="reviews__title">
+									"Хороший светильник для улицы"
+								</div>
+								<img src="img/5stars.png" alt="5 Звёзд" class="reviews__stars">
+								<p class="reviews__text">
+									Очень прост в установке и в использовании и необходим, по моему мнению в каждом доме и дворе. Невозможно тянуть провода к каждому месту где нужен свет, а тут все просто! Приклеил и забыл! Ни проводов, ни батареек. Советую всем!
+								</p>
+								<div class="reviews__name">
+									Евгения г. Киров
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__item wow fadeInUp" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="0.5s">
+						<div class="reviews__box">
+							<img src="img/c5afa-clip-27kb-crop-u1927.jpg" alt="" class="reviews__img">
+							<div class="reviews__content">
+								<div class="reviews__title">
+									"Для темных углов двора"
+								</div>
+								<img src="img/5stars.png" alt="5 Звёзд" class="reviews__stars">
+								<p class="reviews__text">
+									Покупкой доволен! Заказал два сначала, потом еще 4 штуки. Крайне удобно - не нужно в темноте искать включатель или ходить с фонариком, а просто идешь себе спокойно, а свет сам загорается и через секунд 10 потухает!
+								</p>
+								<div class="reviews__name">
+									Василий г. Воронеж
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__item wow fadeInUp" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="0.5s">
+						<div class="reviews__box">
+							<img src="img/fc0f4-clip-39kb-crop-u1947.jpg" alt="" class="reviews__img">
+							<div class="reviews__content">
+								<div class="reviews__title">
+									"Это то, что нужно"
+								</div>
+								<img src="img/5stars.png" alt="5 Звёзд" class="reviews__stars">
+								<p class="reviews__text">
+									Установка  потребует минимум усилий, а подключение не потребуется вовсе. Всё что нужно - закрепить светильник на стене, абсолютно в любом месте! Включается когда видит движение человека, и выключаются, когда движения нет.
+								</p>
+								<div class="reviews__name">
+									Анна г. Солнечногорск
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__item wow fadeInUp" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="0.5s">
+						<div class="reviews__box">
+							<img src="img/htb1qrwqspxxxxbqxvxxq6xxfxxx8-crop-u1529.jpg" class="reviews__img">
+							<div class="reviews__content">
+								<div class="reviews__title">
+									"Доволен на все 100!"
+								</div>
+								<img src="img/5stars.png" alt="5 Звёзд" class="reviews__stars">
+								<p class="reviews__text">
+									Создает хорошую подсветку дома!  Очень просто установить на любую поверхность  и питается исключительно от энергии солнца! Установил около всех дверей дома, у гаража и ворот. Абсолютно нужная покупка, доволен на все 100!
+								</p>
+								<div class="reviews__name">
+									Георгий г. Омск
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			 
+		</div>
+	</section>
+
+	<!-- Как заказать -->
+	<section class="how" id="how">
+		<div class="container">
+			<h2 class="how__title">
+				КАК ЗАКАЗАТЬ SMART LIGHT?
+			</h2>
+			<div class="how__manual">
+				<div class="how__manual_box">
+					<div class="how__manual_item text-center wow rotateIn" data-wow-offset="0" data-wow-delay="0s" data-wow-duration="0.5s">
+						<div class="how__manual_icon">
+							<img src="img/kak1.png" alt="">
+						</div>
+						<div class="how__manual_text">
+							Нажмите на кнопку<br> "ЗАКАЗАТЬ"
+						</div>
+					</div>
+					<div class="how__manual_item text-center wow rotateIn" data-wow-offset="0" data-wow-delay="0.3s" data-wow-duration="0.5s">
+						<div class="how__manual_icon">
+							<img src="img/kak2.png" alt="">
+						</div>
+						<div class="how__manual_text">
+							Оставьте заявку на<br> сайте
+						</div>
+					</div>
+					<div class="how__manual_item text-center wow rotateIn" data-wow-offset="0" data-wow-delay="0.6s" data-wow-duration="0.5s">
+						<div class="how__manual_icon">
+							<img src="img/kak3.png" alt="">
+						</div>
+						<div class="how__manual_text">
+							Менеджер уточнит детали <br> заказа и отправки
+						</div>
+					</div>
+					<div class="how__manual_item text-center wow rotateIn" data-wow-offset="0" data-wow-delay="0.9s" data-wow-duration="0.5s">
+						<div class="how__manual_icon">
+							<img src="img/kak4.png" alt="">
+						</div>
+						<div class="how__manual_text">
+							 Доставка курьером <br> на следующий день.
+						</div>
+					</div>
+					<div class="how__manual_item text-center wow rotateIn" data-wow-offset="0" data-wow-delay="1.2s" data-wow-duration="0.5s">
+						<div class="how__manual_icon">
+							<img src="img/kak5.png" alt="">
+						</div>
+						<div class="how__manual_text">
+							Оплачиваете при<br> получении
+						</div>
+					</div>
+				</div>
+				<div class="how__manual_box how__manual_box--2">
+					<div class="how__manual_item2">
+						<div class="how__manual_caption">
+							ДОСТАВКА
+						</div>
+						<div class="how__manual_text">
+							 Доставка курьером <br>на следующий день.
+						</div>
+					</div>
+					<div class="how__manual_item2">
+						<div class="how__manual_caption">
+							ОПЛАТА
+						</div>
+						<div class="how__manual_text">
+							Без предоплаты, оплата при получении <br> заказа, курьеру или в почтовом отделении
+						</div>
+					</div>
+					<div class="how__manual_item2">
+						<div class="how__manual_caption">
+							ГАРАНТИИ
+						</div>
+						<div class="how__manual_text">
+							Обмен и возврат в течение 14 дней, со<br> дня получения заказа. Гарантия 1 год
+						</div>
+					</div>
+				</div>
+				<div class="how__bottom-text" data-toggle="modal" data-target="#exampleModal">
+					ОСТАЛИСЬ ВОПРОСЫ? <span>ЗАКАЖИТЕ БЕСПЛАТНЫЙ ОБРАТНЫЙ ЗВОНОК</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Оставьте заявку -->
+	<section class="order">
+		<div class="container">
+			<h2 class="order__title order__title--2">
+				АКЦИЯ! ЗАКАЖИТЕ SMART LIGHT НА САЙТЕ И ПОЛУЧИТЕ ВТОРОЙ АБСОЛЮТНО БЕСПЛАТНО
+			</h2>
+			<div class="order__box d-flex">
+				<div class="order__left">
+					<div class="order__left__img">
+						<img src="img/three.jpg" alt="">
+					</div>
+				</div>
+				<div class="order__right">
+					<h4 class="order__caption">
+						Закажите SMART LIGHT сегодня <span>
+				<script>(function(d){d.setDate(d.getDate());document.write(d.getDate()+' '+['ЯНВАРЯ','ФЕВРАЛЯ','МАРТА','АПРЕЛЯ','МАЯ','ИЮНЯ', 'ИЮЛЯ','АВГУСТА','СЕНТЯБРЯ','ОКТЯБРЯ','НОЯБРЯ','ДЕКАБРЯ'][d.getMonth()])})(new Date())
+				</script> </span><br>
+						и получите <span>ВТОРОЙ СВЕТИЛЬНИК В ПОДАРОК!</span>
+					</h4>
+					<div class="order__right-box">
+						<div class="order__right_mult">
+							×2
+						</div>
+						<div class="order__right_imgs text-right">
+							<img src="img/2-crop-u2388.png" alt="" class="order__right_img order__right_img--1">
+							<img src="img/2-crop-u2388.png" alt="" class="order__right_img">
+						</div>
+					</div>
+					<div class="instruction__order_price">
+					<span>Цена: <s>3900 руб.</s></span> 1990
+				</div>
+				<div class="order__button-box text-center">
+					<button class="call-back__button instruction__button order__button" data-toggle="modal" data-target="#Modal2">
+						ЗАКАЗАТЬ С ПОДАРКОМ
+					</button>
+					<div class="order__sub-text">
+						Спешите заказать по акции! Осталось подарков: 26
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Футер/подвал -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__merits">
+				<div class="footer__merit footer__merit--1">
+					Быстрая доставка <br>
+					по РФ и миру
+				</div>
+				<div class="footer__merit footer__merit--2">
+					Оплата при <br> получении заказа
+				</div>
+				<div class="footer__merit footer__merit--3">
+					14 дней на возврат<br> и обмен
+				</div>
+			</div>
+			  <style>
+   ul.footer__menu {
+padding: 5px;
+max-width: 855px;
+margin: 30px auto 0px;
+   }
+   ul.footer__menu li {
+    display: inline; 
+    margin-right: 5px; 
+ 
+    padding: 3px;  
+   }
+  </style>
+					<ul class="footer__menu">
+						<li class="footer__item">
+							<a href="#order" class="footer__link">
+								Оформить заказ
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#manual" class="footer__link">
+								Как пользоваться?
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#video" class="footer__link">
+								Смотреть видео
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#reviews" class="footer__link">
+								Читать отзывы
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#how" class="footer__link">
+								Обмен и возврат
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#how" class="footer__link">
+								Доставка и оплата
+							</a>
+						</li>
+					</ul>
+			 
+				 
+				 
+				 
+			 
+			<div class="text-center" style="background: #ccc;padding: 15px 0;">
+				<div style="text-align: center;margin: 10px auto;display: block;font-size: 14px;line-height: 26px;">
+MustHaveOffers - Интернет Магазин Популярных товаров.<br> 
+ИНН 330640485495 ОГРНИП 315332600000462<br> 
+"Официальный Дистрибьютор на территории РФ"<br> 
+Для связи - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b667f647c6a79647d4b726a656f6e7325797e">[email&#160;protected]</a><br> 
+<a href="polit.html" target="_blank" style="cursor: pointer;color: initial;">Политика конфиденциальности</a><br> 
+*На данном сайте действует <br> <a href="https://www.facebook.com/about/privacy/update"  target="_blank" style="cursor: pointer;color: initial;">'Политика использования данных Facebook'</a><br> 
+ВСЕ ПРАВА ЗАЩИЩЕНЫ © <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script>
+</div>			</div>
+		</div>
+	</footer>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      	 	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	    <h4 class="modal__title">
+	    	ОСТАЛИСЬ ВОПРОСЫ?<br> ЗАКАЖИТЕ ОБРАТНЫЙ ЗВОНОК 
+	    </h4>
+		<form  action="" method="post">
+		<input type="hidden" name="task" value="process" />
+<input type="hidden" name="country" value="ru" />
+		<input class="input" name="name" required="" placeholder="Введите Ваше имя*">
+		<input class="input" name="phone" required="" placeholder="Введите Ваш телефон*">
+		<input type="submit" value="ЗАКАЗАТЬ ЗВОНОК" class="submit">
+		<p class="form__sub-text">
+			Менеджеры магазина перезвонят вам в <br>ближайшее время и ответят на ваши вопросы!
+		</p>
+		 
+		</form>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      	 	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	    <h4 class="modal__title">
+		   	SMART LIGHT 20 LED + В ПОДАРОК 
+			<br>ВТОРОЙ СВЕТИЛЬНИК
+	    </h4>
+		<form  action="" method="post">
+		<input type="hidden" name="task" value="process" />
+<input type="hidden" name="country" value="ru" />
+		<input class="input" name="name" required="" placeholder="Введите Ваше имя*">
+		<input class="input" name="phone" required="" placeholder="Введите Ваш телефон*">
+		<textarea name="address" class="input textarea" placeholder="Введите адрес доставки"></textarea>
+		<input type="submit" value="ОФОРМИТЬ ЗАКАЗ" class="submit">
+		<p class="form__sub-text">
+			Менеджеры магазина перезвонят вам в <br>ближайшее время и ответят на ваши вопросы!
+		</p>
+ 
+	 
+		</form>
+      </div>
+  </div>
+</div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/wow.min.js"></script> -->
+	<script src="js/main.js"></script>
+
+	<!-- Шрифт -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!-- Анимация -->
+	<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+	
+	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter54735790 = new Ya.Metrika({ id:54735790, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54735790" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- BEgin roistat -->
+<script>
+    (function(w, d, s, h, id) {
+        w.roistatProjectId = id; w.roistatHost = h;
+        var p = d.location.protocol == "https:" ? "https://" : "http://";
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+        var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+    })(window, document, 'script', 'cloud.roistat.com', '90bf639ac39c25be70323934c940ed7d');
+</script>
+<!-- End roistat --></body>
+</html>

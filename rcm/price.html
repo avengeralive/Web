@@ -1,0 +1,340 @@
+{% extends "base.html" %}
+
+{% load mathfilters %}
+
+{% block head %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/static/js/script.js"></script>
+
+    <title>{{ subcat.parent }} {{ subcat }}  – купить в Санкт-Петербурге. Цена за тонну в Санкт-Петербурге.</title>
+    <meta name="keywords" content="{{ subcat.parent.parent }} {{ subcat.parent }}, {{ subcat }}, {% for item in filters %} {{ item.text }}  {% endfor %}, купить, цена, прайс-лист, стоимость, в Санкт-Петербурге">
+    <meta name="description" content=" {{ subcat.parent }} {{ subcat }} в Санкт-Петербурге – актуальный прайс-лист с ценами: +7 (812) 777-53-71. В наличии:{% for item in filters %} {{ item.text }}  {% endfor %}">
+{% endblock %}
+{% block content %}
+    <!--<div class="select_buy">-->
+    	<!--<div class="container">-->
+    		<!--<div class="first_line">-->
+    			<!--<a href="/price/M" class="item {% if ACTIVE_GLOBALCAT == 'M' %} active {% endif %}">-->
+    				<!--<span class="name">Металлопрокат</span>-->
+    				<!--<span class="buy">Выбрать</span>-->
+    				<!--<img src="/static/images/item01.png" alt="">-->
+    			<!--</a>-->
+    			<!--<a href="/price/N" class="item {% if ACTIVE_GLOBALCAT == 'N' %} active {% endif %}">-->
+    				<!--<span class="name">Нержавейка</span>-->
+    				<!--<span class="buy">Выбрать</span>-->
+    				<!--<img src="/static/images/item02.png" alt="">-->
+    			<!--</a>-->
+    			<!--<a href="/price/C" class="item {% if ACTIVE_GLOBALCAT == 'C' %} active {% endif %}">-->
+    				<!--<span class="name">Цвет.Мет</span>-->
+    				<!--<span class="buy">Выбрать</span>-->
+    				<!--<img src="/static/images/item03.png" alt="">-->
+    			<!--</a>-->
+    		<!--</div>-->
+            <!--<div class="second_line">-->
+            	<!--<div class="icon">-->
+                    <!--{% for item in Meta_cats %}-->
+            		<!--<a href="/price/{{ item.type }}/{{item.slug}}/"{% if item.slug == ACTIVE_MCAT %} class="active" {% endif %}><span class="img"><img src="{{ item.image.url }}" alt=""></span><span class="text">{{ item.title }}</span></a>-->
+            	    <!--{% endfor %}-->
+                <!--</div>-->
+ 					  <!--<h3 style="text-align: center">Выберите тип</h3>-->
+                      <!--<div class="column">-->
+                	<!--<ul>-->
+                                                <!--{% for item in cats|NatSort %}-->
+                		<!--<li{% if item.slug == ACTIVE_CAT %} class="active" {% endif %}><a href="/price/{{ item.type }}/{{ item.parent.slug }}/{{ item.slug }}/">{{ item.title }}</a></li>-->
+                        <!--{% endfor %}-->
+                	<!--</ul>-->
+                <!--</div>-->
+                <!--<h3 style="text-align: center">Выберите размер</h3>-->
+                <!--<div class="column" >-->
+                	<!--<ul>-->
+                        <!--{% for item in subcats|NatSort %}-->
+                		<!--<li{% if item.slug == ACTIVE_SUBCAT %} class="active" {% endif %}><a href="/price/{{ item.parent.type }}/{{ item.parent.parent.slug }}/{{ item.parent.slug }}/{{ item.slug }}">{{ item.title }}</a></li>-->
+                        <!--{% endfor %}-->
+                	<!--</ul>-->
+                <!--</div>-->
+                <!--<div class="result">-->
+                	<!--<div class="title">{{ subcat.parent }} {{ subcat }}</div>-->
+                	<!--<div class="filter">-->
+                		<!--<div class="left"><a href="http://снабмет.рф/gost/">ГОСТы,ТУ</a></div>-->
+                		<!--{% if not subcat.parent.nocalc %}-->
+                        <!--{% if calc %}-->
+                        <!--<form class="calc" id="calc" data-price="{{ calc.data_price }}">-->
+                			<!--<span>Калькулятор:</span>-->
+                			<!--<input type="text" placeholder="Тонны" id="weight">-->
+                			<!--<input type="text" placeholder="Метры" id="length">-->
+                        <!--{% if flags.length %}-->
+                			<!--<input type="text" placeholder="Длина 1шт" id="itemLength">-->
+                			<!--<input type="text" placeholder="Колл. штук" id="count">-->
+                                                        <!--{% endif %}-->
+                			<!--<select id="material">-->
+                                <!--{% for item in calc.materials %}-->
+                            	<!--<option value="{{ item.value }}">{{ item.title }}</option>-->
+                                <!--{% endfor %}-->
+                            <!--</select>-->
+                			<!--<input type="submit" value="Пересчитать цены">-->
+                		<!--</form>-->
+                        <!--{% endif %}-->
+                    <!--{% endif %}-->
+                	<!--</div>-->
+                    <!--<table>-->
+                    	<!--<tr>-->
+                    		<!--<td colspan="5">-->
+                            	<!--<div class="select">-->
+                            		<!--<a onclick="filter(this,'tabledata')" class="all active">Все</a>-->
+                            		<!--{% for item in filters %}-->
+                                    <!--<a onclick="filter(this,'{{item.filter}}')">{{ item.text }}</a>-->
+                                    <!--{% endfor %}-->
+                            	<!--</div>-->
+                            <!--</td>-->
+                    	<!--</tr>-->
+                        <!--<tr>-->
+                        	<!--<th>Наименование</th>-->
+                        	<!--{% if flags.mark %}-->
+                        	<!--<th>Марка стали</th>-->
+                        	<!--{% endif %}-->
+                        <!--{% if flags.length %}-->
+                            <!--<th>Длина</th>-->
+                        <!--{% endif %}-->
+
+                        	<!--<th colspan="2">Цена (включая НДС 18%), руб. от 21.06.2017</th>-->
+                        <!--</tr>-->
+                    <!--{% for item in products|dictsort:'price' %}-->
+                        <!--<tr class="tabledata {{ item.filter }}" data-price="{{ item.price }}" data-price-sub="0.970">-->
+                        	<!--<td><a>{{ item.title }}</a></td>-->
+                        	<!--{% if flags.mark %}-->
+                            <!--<td>{{ item.mark|default_if_none:"" }}</td>-->
+                            <!--{% endif %}-->
+                        	<!--{% if flags.length %}-->
+                            <!--<td class="length">{{ item.length|default_if_none:"" }}</td>-->
+                            <!--{% endif %}-->
+                        	<!--<td class="price"><b>{{ item.price|mul:0.970|floatformat:1|default_if_none:'' }}</b><img src="/static/images/rub_table.png" alt=""></td>-->
+                        	<!--<td class="price2">{{ item.price|mul:0.970|mul:0.970|floatformat:1|default_if_none:"" }}<img src="/static/images/arrows.png" alt=""</td>-->
+                        <!--</tr>-->
+                    <!--{% endfor %}-->
+                    <!--</table>-->
+<!--<div class="banner_tel">-->
+                    	<!--<div class="left">По всем вопросам<br><span>звоните</span></div>-->
+                    	<!--<div class="right">+7 (812) 408-0-777<br>+7 (812) 648-53-71</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+    	<!--</div>-->
+    <!--</div>-->
+    <div class="wrapper">
+    	<div class="container">
+        	<div class="breadcrumbs"><a href="#">Главная</a>Каталог</div>
+            <div class="tabs">
+            	<ul class="tabs_list">
+            		<li class="{% if ACTIVE_GLOBALCAT == 'M' %} current {% endif %}"><a href="/price/M" >Металлопрокат</a></li>
+            		<li class="{% if ACTIVE_GLOBALCAT == 'N' %} current {% endif %}"><a href="/price/N">Нержавейка</a></li>
+            		<li class="{% if ACTIVE_GLOBALCAT == 'C' %} current {% endif %}"><a href="/price/C">Цветные металлы</a></li>
+            	</ul>
+            </div>
+            <div class="sub_tabs">
+            	<ul class="sub_tabs_list">
+					                    {% for item in Meta_cats %}
+
+            		<li class="current"><a href="/price/{{ item.type }}/{{item.slug}}/">{{ item.title }}</a></li>
+					            	    {% endfor %}
+            	</ul>
+            </div>
+            <div class="catalog_list_fourcolumn">
+                <ul>
+					                                                {% for item in cats|NatSort %}
+                    <li {% if item.slug == ACTIVE_CAT %} class="current" {% endif %}><a href="/price/{{ item.type }}/{{ item.parent.slug }}/{{ item.slug }}/">{{ item.title }}</a></li>
+					{% endfor %}
+                </ul>
+            </div>
+			            <div class="catalog_list_other">
+            	<div class="catalog_list_ninecolumn">
+            		<ul>
+						                        {% for item in subcats|NatSort %}
+                        <li {% if item.slug == ACTIVE_SUBCAT %} class="current" {% endif %}><a href="/price/{{ item.parent.type }}/{{ item.parent.parent.slug }}/{{ item.parent.slug }}/{{ item.slug }}">{{ item.title }}</a></li>
+						                        {% endfor %}
+            		</ul>
+            	</div>
+	   <div class="result">
+            	<div class="title_inner">{{ subcat.parent }} {{ subcat }}</div>
+                <div class="form_price">
+                	<a href="http://rcm.spb.ru/gost/" class="gost_link">ГОСТы,ТУ</a>
+                	                		{% if not subcat.parent.nocalc %}
+                        {% if calc %}
+                        <form class="calc" id="calc" data-price="{{ calc.data_price }}">
+                		<label>Калькулятор:</label>
+                		<div class="item1"><input type="text" id="weight"><span>Тонны</span></div>
+                		<div class="item2"><input type="text" id="length"><span>Метры</span></div>
+                        {% if flags.length %}
+                                <div class="item3"><input type="text" id="itemLength"><span>Длина</span></div>
+                		<div class="item4"><input type="text" id="count"><span>Кол-во</span></div>
+                        {% endif %}
+                		<div class="gost">
+                        	<select id="material">
+				{% for item in calc.materials %}
+                            	<option value="{{ item.value }}">{{ item.title }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                		<button>Пересчитать цены</button>
+                	</form>
+					{% endif %}
+					{% endif %}
+                </div>
+                <table>
+                    	<tr>
+                    		<td colspan="5">
+                            	<div class="select">
+                            	<a onclick="filter(this,'tabledata')" class="all active">Все</a>
+                            	{% for item in filters %}
+                                <a onclick="filter(this,'{{item.filter}}')">{{ item.text }}</a>
+                                {% endfor %}
+                            	</div>
+                            </td>
+                    	</tr>
+                            <tr>
+                        	<th>Наименование</th>
+                        	{% if flags.mark %}
+                        	<th>Марка стали</th>
+                        	{% endif %}
+                                {% if flags.length %}
+                                <th>Длина</th>
+                                {% endif %}
+                        	<th>{{subcat.parent.price_one_title}}</th>
+				{% if not subcat.parent.nocalc %}
+                                {% if calc %}
+				<th>{{subcat.parent.price_two_title}} от {% now "d.m" %}.2018</th>
+				{% endif %}
+			        {% endif %}
+                            </tr>
+                    {% for item in products|dictsort:'price' %}
+                        <tr class="tabledata {{ item.filter }}" data-price="{{ item.price }}"
+							data-price-sub="{{subcat.parent.data_price_sub}}">
+                        	<td><a>{{ item.title }}</a></td>
+                        	{% if flags.mark %}
+                            <td>{{ item.mark|default_if_none:"" }}</td>
+                            {% endif %}
+                        	{% if flags.length %}
+                            <td class="length">{{ item.length|default_if_none:"" }}</td>
+                            {% endif %}
+                                {% with dp=subcat.parent.data_price_sub %}
+                        	<td class="price"><b>{{ item.price|mul:dp|floatformat:1|default_if_none:'' }} </b><img src="/static/images/rub_table.png" alt="руб"></td>
+			{% endwith %}
+                		{% if not subcat.parent.nocalc %}
+                        {% if calc %}
+							{% with k1=calc.data_price s1=calc.stal_koef1 dp=subcat.parent.data_price_sub %}
+                        	<td class="price2"><b>{{ item.price|mul:k1|mul:s1|mul:dp|div:1000|floatformat:2|default_if_none:'' }} </b><img src="/static/images/rub_table.png" alt="руб"</td>
+                        {% endwith %}
+							{% endif %}
+							{% endif %}
+
+						</tr>
+                    {% endfor %}
+                
+</table>
+                <div class="padding">
+                    <h3>{{ subcat.parent }} {{ subcat }}</h3>
+                    <p>{{ subcat.parent }} {{ subcat }} {{ subcat.parent.parent }} является одним из самых востребованных видов продукции металлопрокатного производства. На сегодняшний день трудно найти хотя бы один объект строительства или промышленного производства, где не использовалась бы Лист просечно-вытяжной (ПВЛ) оцинкованный 510. Именно благодаря Лист просечно-вытяжной (ПВЛ) оцинкованный 510 , строятся высокопрочные и надежные монолитные дома, столь важные и ответственные объекты, как мосты и тоннели и т.д. Широта применения данного строительного материала обеспечивает производство его не только в больших объемах, но и различной классификации.</p>
+                </div>
+                	<table>
+<tr>
+                		<th>Характеристики товара</th>
+                		<th>{{ subcat.parent }} {{ subcat }}</th>
+</tr>
+                        <tr>
+                        	<td>Тип:</td>
+                		<td>{{ subcat.parent.parent }}</td>
+</tr>
+                        <tr>
+                        	<td>Наименование:</td>
+                		<td>{{ subcat.parent }}</td>
+</tr>
+                        <tr>
+                        	<td>Размер:</td>
+                		<td>{{ subcat }}</td>
+</tr>
+						{% if table.gosts != ""%}
+                        <tr>
+                        	<td>ГОСТ:</td>
+                		<td> {{table.gosts}} </td>
+</tr>
+						{% endif %}
+						{% if flags.mark %}
+                        <tr>
+                        	<td>
+								Марка стали:
+</td>
+                		<td>
+							{{table.mark}}
+								</td>
+</tr>
+						{% endif %}
+                        {% if flags.length %}
+						<tr>
+							<td>Длина:</td>
+                		<td>
+							{{table.length}}
+
+							</td>
+</tr>
+						{% endif %}
+						{% if not subcat.parent.nocalc %}
+                                                {% if calc %}
+						<tr>
+                        	<td>Кол-во м.п в тонне:</td>
+                		<td>{{calc.amount_per_m|floatformat:3}}</td>
+</tr>
+                        <tr>
+                        	<td>Вес м.п: </td>
+                		<td>{{calc.weight_mp|floatformat:4}}</td>
+</tr>
+						{% endif %}
+						{% endif %}
+                    </table>
+                <div class="padding">
+                    <h3>{{ subcat.parent }} {{ subcat }}</h3>
+                    <p>{% get_meta_text %}</p>
+                    <a href="#popup_question" class="question popup">Задать вопрос</a>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+<div style='display:none'>
+    <div id='popup_call_back'>
+	    <a href="#" class="close"></a>
+        <div class="parent_popup">
+            <div class="title">Обратный звонок</div>
+            <div class="sub_title">Уважаемый клиент!<br>
+            Укажите ваши имя и телефон, и наш менеджер<br>
+            перезвонит Вам в ближайшее время.</div>
+            <form action="#">
+              <div class="line_form"><input type="text" placeholder="Ваше имя"><div class="asterisk"></div></div>
+              <div class="line_form"><input type="text" placeholder="Ваш телефон"><div class="asterisk"></div></div>
+              <div class="line_form"><label class="label_name">Удобное время для звонка</label></div>
+              <div class="line_form column">
+              	<label><input type="radio" /> <div class="text">с 9:00<br>до 12:00</div></label>
+                <label><input type="radio" /> <div class="text">с 13:00<br>до 14:00</div></label>
+                <label><input type="radio" /> <div class="text">с 13:00<br>до 14:00</div></label>
+              </div>
+              <div class="line_btn"><input type="submit" value="Отправить"></div>
+            </form>
+        </div>
+        
+
+    </div>
+</div>
+<div style="display:none">
+    <div id="popup_question">
+	    <a href="#" class="close"></a>
+        <div class="parent_popup">
+            <div class="title">Задать вопрос</div>
+            <form action="#">
+              <div class="line_form"><input type="text" placeholder="Ваше имя"><div class="asterisk"></div></div>
+              <div class="line_form"><input type="text" placeholder="Ваш email"><div class="asterisk"></div></div>
+              <div class="line_form"><textarea cols="30" rows="10" placeholder="Ваше сообщение"></textarea></div>
+              <div class="line_btn"><input type="submit" value="Отправить"></div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

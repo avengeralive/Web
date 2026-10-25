@@ -1,0 +1,198 @@
+# Copyright (C) 2018 Augusta
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Augusta 1.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/augusta\n"
+"POT-Creation-Date: 2018-08-07 06:22:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:29
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:33
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:45
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: 1: title.
+
+#: comments.php:28
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+
+#: comments.php:34
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:40
+msgid "Primary"
+msgstr ""
+
+#: functions.php:88
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:90
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:97
+msgid "Header Right"
+msgstr ""
+
+#: functions.php:99
+msgid "Add widgets to display in header right."
+msgstr ""
+
+#. translators: %s: post date.
+
+#: inc/template-tags.php:29
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author.
+
+#: inc/template-tags.php:45
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+
+#: inc/template-tags.php:62
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+
+#: inc/template-tags.php:65
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+
+#: inc/template-tags.php:69
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of tags.
+
+#: inc/template-tags.php:72
+msgid "Tagged %1$s"
+msgstr ""
+
+#. translators: %s: post title
+
+#: inc/template-tags.php:82
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+
+#: inc/template-tags.php:99 template-parts/content-page.php:37
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/woocommerce.php:227
+msgid "View your shopping cart"
+msgstr ""
+
+#. translators: number of items in the mini cart.
+
+#: inc/woocommerce.php:231
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: search query.
+
+#: search.php:33
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:2
+msgid "Search Here&hellip;"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+
+#: template-parts/content-none.php:24
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:43
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:24 template-parts/content.php:52
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:11
+msgid "Sticky Post"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+
+#: template-parts/content.php:41
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content.php:60
+msgid "More Details"
+msgstr ""
+
+#. translators: 1: Theme name, 2: Theme author.
+
+#: template-parts/others/footer.php:8
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Augusta"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://templatic.com/wordpress-corporate-business-themes/augusta/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "General purpose WordPress theme for building any type of website. Augusta is light-weight and loads quickly. It is fully responsive and works well on all type of devices. It is translation ready and supports even RTL languages."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Augusta"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://templatic.com/"
+msgstr ""

@@ -1,0 +1,65 @@
+<w:tr w:rsidR="00243139" w:rsidTr="00AA06F3">
+	<w:trPr>
+		<w:trHeight w:val="237"/>
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="3936"/>
+			<w:vMerge w:val="restart"/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="00243139" w:rsidR="00243139" w:rsidRDefault="00243139">
+			<w:pPr>
+				<w:jc w:val="right"/>
+			</w:pPr>
+			<w:r>
+				<w:t>ВСЕГО (${units})</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="3260"/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="00297A37" w:rsidR="00243139" w:rsidRDefault="00243139">
+			<w:pPr>
+				<w:jc w:val="both"/>
+			</w:pPr>
+			<w:r>
+				<w:t>${use_order}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="2410"/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="003B584E" w:rsidR="00243139" w:rsidRDefault="00637324">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${expertise_weight}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr>

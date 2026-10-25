@@ -1,0 +1,111 @@
+<w:tr w:rsidR="00E35C91" w:rsidRPr="00E35C91" w:rsidTr="006C0E52">
+							<w:trPr>
+								<w:trHeight w:val="276"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00E35C91" w:rsidR="00E35C91" w:rsidRDefault="00E35C91" w:rsidRPr="00E35C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00E35C91" w:rsidR="00E35C91" w:rsidRDefault="00E35C91" w:rsidRPr="00E35C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00E35C91" w:rsidR="00E35C91" w:rsidRDefault="00E35C91" w:rsidRPr="00E35C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3299"/>
+									<w:gridSpan w:val="2"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E35C91" w:rsidR="00E35C91" w:rsidRDefault="00E35C91">
+									<w:pPr>
+										<w:tabs>
+											<w:tab w:pos="551" w:val="left"/>
+											<w:tab w:pos="1735" w:val="center"/>
+										</w:tabs>
+									</w:pPr>
+									<w:r w:rsidRPr="00E35C91">
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:tab/>
+									</w:r>
+									<w:r w:rsidRPr="00E35C91">
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:tab/>
+									</w:r>
+									<w:r>
+										<w:t>Итого</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1744"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E35C91" w:rsidR="00E35C91" w:rsidRDefault="00E35C91" w:rsidRPr="00E35C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r w:rsidRPr="00E35C91">
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${report_production_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1512"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E35C91" w:rsidR="00E35C91" w:rsidRDefault="00E35C91" w:rsidRPr="00E35C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r w:rsidRPr="00E35C91">
+										<w:t>${report_production_percent_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

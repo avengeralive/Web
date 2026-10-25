@@ -1,0 +1,101 @@
+<w:p w:rsidP="008A7FF5" w:rsidR="004A1F7F" w:rsidRDefault="004A1F7F">
+						<w:pPr>
+							<w:spacing w:after="0"/>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:type="auto" w:w="0"/>
+							<w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2181"/>
+							<w:gridCol w:w="2047"/>
+							<w:gridCol w:w="2281"/>
+							<w:gridCol w:w="2034"/>
+							<w:gridCol w:w="2601"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="001118F7" w:rsidTr="00564E36">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1603"/>
+								</w:tcPr>
+								<w:p w:rsidP="000E2BCA" w:rsidR="00652682" w:rsidRDefault="00652682" w:rsidRPr="001118F7">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="0006783B">
+										<w:t>Название группы продукции в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2047"/>
+								</w:tcPr>
+								<w:p w:rsidP="00652682" w:rsidR="00652682" w:rsidRDefault="00652682">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Вид продукции</w:t>
+									</w:r>
+								</w:p>
+								<w:p w:rsidP="000E2BCA" w:rsidR="001118F7" w:rsidRDefault="001118F7" w:rsidRPr="0006783B">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2281"/>
+								</w:tcPr>
+								<w:p w:rsidP="000E2BCA" w:rsidR="001118F7" w:rsidRDefault="001118F7">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название группы болезней (выявленных несоответствий) в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2034"/>
+								</w:tcPr>
+								<w:p w:rsidP="000E2BCA" w:rsidR="001118F7" w:rsidRDefault="001118F7">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название болезни (выявленного несоответствия)</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1606"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E02CEC" w:rsidR="001118F7" w:rsidRDefault="001118F7">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Количество партий</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>
+					<w:p w:rsidP="008A7FF5" w:rsidR="002900BD" w:rsidRDefault="002900BD">
+						<w:pPr>
+							<w:jc w:val="center"/>
+						</w:pPr>
+					</w:p>

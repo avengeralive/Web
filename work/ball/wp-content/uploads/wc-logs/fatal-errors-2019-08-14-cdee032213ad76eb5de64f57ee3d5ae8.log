@@ -1,0 +1,38 @@
+2019-08-14T10:25:40+00:00 CRITICAL syntax error, unexpected ':', expecting ')' в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 50
+
+2019-08-14T10:28:39+00:00 CRITICAL syntax error, unexpected ':', expecting ')' в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 51
+
+2019-08-14T10:29:37+00:00 CRITICAL syntax error, unexpected ':', expecting ')' в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 51
+
+2019-08-14T11:02:18+00:00 CRITICAL syntax error, unexpected end of file в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 228
+
+2019-08-14T11:02:24+00:00 CRITICAL syntax error, unexpected end of file в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 228
+
+2019-08-14T11:02:26+00:00 CRITICAL syntax error, unexpected end of file в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 228
+
+2019-08-14T11:02:47+00:00 CRITICAL syntax error, unexpected end of file в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 228
+
+2019-08-14T11:06:00+00:00 CRITICAL Uncaught Error: Function name must be a string in /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php:121
+Stack trace:
+#0 /usr/www/users/alivel/ball/wp-includes/template-loader.php(78): include()
+#1 /usr/www/users/alivel/ball/wp-blog-header.php(19): require_once('/usr/www/users/...')
+#2 /usr/www/users/alivel/ball/index.php(17): require('/usr/www/users/...')
+#3 {main}
+  thrown в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 121
+
+2019-08-14T11:06:26+00:00 CRITICAL Uncaught Error: Function name must be a string in /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php:122
+Stack trace:
+#0 /usr/www/users/alivel/ball/wp-includes/template-loader.php(78): include()
+#1 /usr/www/users/alivel/ball/wp-blog-header.php(19): require_once('/usr/www/users/...')
+#2 /usr/www/users/alivel/ball/index.php(17): require('/usr/www/users/...')
+#3 {main}
+  thrown в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 122
+
+2019-08-14T11:07:07+00:00 CRITICAL Uncaught Error: Function name must be a string in /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php:122
+Stack trace:
+#0 /usr/www/users/alivel/ball/wp-includes/template-loader.php(78): include()
+#1 /usr/www/users/alivel/ball/wp-blog-header.php(19): require_once('/usr/www/users/...')
+#2 /usr/www/users/alivel/ball/index.php(17): require('/usr/www/users/...')
+#3 {main}
+  thrown в /usr/www/users/alivel/ball/wp-content/themes/ball/src-templ.php на строке 122
+

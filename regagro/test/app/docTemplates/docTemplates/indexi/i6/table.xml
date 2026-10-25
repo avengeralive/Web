@@ -1,0 +1,138 @@
+<w:p w:rsidP="00864C01" w:rsidR="00022B15" w:rsidRDefault="00022B15">
+						<w:pPr>
+							<w:spacing w:after="0"/>
+							<w:jc w:val="center"/>
+						</w:pPr>
+					</w:p>
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:type="dxa" w:w="16602"/>
+							<w:tblInd w:type="dxa" w:w="856"/>
+							<w:tblLayout w:type="fixed"/>
+							<w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="1857"/>
+							<w:gridCol w:w="2042"/>
+							<w:gridCol w:w="2176"/>
+							<w:gridCol w:w="1991"/>
+							<w:gridCol w:w="1204"/>
+							<w:gridCol w:w="3984"/>
+							<w:gridCol w:w="3532"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="00C2729A" w:rsidTr="00F55535">
+							<w:trPr>
+								<w:trHeight w:val="1353"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1857"/>
+								</w:tcPr>
+								<w:p w:rsidP="003740CB" w:rsidR="00C2729A" w:rsidRDefault="00C2729A" w:rsidRPr="005D0088">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Вид выявления</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2042"/>
+								</w:tcPr>
+								<w:p w:rsidP="003740CB" w:rsidR="00C2729A" w:rsidRDefault="00C2729A" w:rsidRPr="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:t>Кол-во экспертиз</w:t>
+									</w:r>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t xml:space="preserve"/>
+									</w:r>
+									<w:r>
+										<w:t>всего</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2176"/>
+								</w:tcPr>
+								<w:p w:rsidP="003740CB" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название группы продукции в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1991"/>
+								</w:tcPr>
+								<w:p w:rsidP="000030F4" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Вид продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1204"/>
+								</w:tcPr>
+								<w:p w:rsidP="00A906AD" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Сотрудник ЛВСЭ</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3984"/>
+								</w:tcPr>
+								<w:p w:rsidP="00EA101A" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Кол-во экспертиз положит.</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3348"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E5765C" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>% выявлений</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>
+					<w:p w:rsidP="008A7FF5" w:rsidR="00F90B8D" w:rsidRDefault="00F90B8D">
+						<w:pPr>
+							<w:jc w:val="center"/>
+						</w:pPr>
+					</w:p>

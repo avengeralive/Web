@@ -1,0 +1,100 @@
+<w:tr w:rsidR="00F55535" w:rsidRPr="00F55535" w:rsidTr="00F55535">
+							<w:trPr>
+								<w:trHeight w:val="276"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1857"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00F55535" w:rsidR="00F55535" w:rsidRDefault="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2042"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00F55535" w:rsidR="00F55535" w:rsidRDefault="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2176"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00F55535" w:rsidR="00F55535" w:rsidRDefault="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1991"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00F55535" w:rsidR="00F55535" w:rsidRDefault="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1204"/>
+								</w:tcPr>
+								<w:p w:rsidP="00F55535" w:rsidR="00F55535" w:rsidRDefault="00F55535" w:rsidRPr="00CE7025">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Итого</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3984"/>
+								</w:tcPr>
+								<w:p w:rsidP="00F55535" w:rsidR="00F55535" w:rsidRDefault="00F55535" w:rsidRPr="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3348"/>
+								</w:tcPr>
+								<w:p w:rsidP="00F55535" w:rsidR="00F55535" w:rsidRDefault="00F55535" w:rsidRPr="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_percent_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

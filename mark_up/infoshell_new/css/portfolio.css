@@ -1,0 +1,145 @@
+.logo {
+	background-image: url(/wp-content/uploads/2017/07/logo.svg);
+}
+.nav-content {
+	color: rgba(255,255,255,.6);
+}
+.call-us-btn {
+	color: #edb933;
+	border-color: #edb933;
+}
+
+
+#main {
+	color: #525252;
+}
+#main header {
+	position: initial;
+	background: initial;
+	border: initial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #282828;
+	padding-bottom: initial;
+	margin-bottom: 12px;
+}
+
+#main h2 {
+	padding-bottom: initial;
+}
+
+#main p {
+	margin-bottom: 20px;
+	color: #525252;
+}
+
+#main section {
+	padding-top: initial;
+	padding-bottom: initial;
+}
+#main>section {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+#main>section header {
+	margin-bottom: 40px;
+}
+
+#main h3,
+#main .h3 {
+	padding-bottom: initial;
+}
+
+.dl-inline dd {
+	display: inline-block;
+}
+dl dt {
+	font-weight: 500;
+}
+
+.bg-light {
+	background-color: #f6f6f6;
+}
+
+#bg-section {
+	background-size: cover;
+	padding-top: 80px;
+	display: flex;
+	align-items: flex-end;
+}
+#bg-section__image {
+	margin-bottom: -36px;
+}
+
+ol {
+    list-style: decimal; 
+    padding-left: 15px;
+}
+
+
+.slider-wrapper {
+	position: relative;
+	text-align: center;
+}
+.slider-wrapper figure {
+	text-align: center;
+}
+.slide-to_prev,
+.slide-to_next {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 24px;
+	height: 40px;
+	margin: auto;
+	z-index: 1;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.slide-to_prev { 
+	left: 0;
+	background-image: url(/wp-content/uploads/2018/02/arrow-prew-black.svg); 
+}
+.slide-to_next { 
+	right: 0;
+	background-image: url(/wp-content/uploads/2018/02/arrow-next-black.svg); 
+}
+.slider img {
+	margin: auto;
+}
+
+@media (min-width: 1200px) {
+	#bg-section {
+		min-height: calc(100vh - 50px);
+	}
+
+	#main>section {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	#main>section header {
+		margin-bottom: 60px;
+	}
+
+	#main h2 {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 768px) {	
+	#main h3,
+	#main .h3 {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 768px) {
+	h1 { font-size: 24px; }
+	h2 { font-size: 20px; }
+	h3 { font-size: 16px; }
+	h4 { font-size: 14px; }
+	h5 { font-size: 12px; }
+}

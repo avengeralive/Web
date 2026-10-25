@@ -1,0 +1,73 @@
+<w:tr w:rsidR="00EB201E" w:rsidRPr="00FB149B" w:rsidTr="00574A2C">
+							<w:trPr>
+								<w:trHeight w:val="283"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2000"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="003C1C65" w:rsidR="00EB201E" w:rsidRDefault="00EB201E" w:rsidRPr="00574A2C">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1500"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00CA3729" w:rsidR="00EB201E" w:rsidRDefault="00EB201E" w:rsidRPr="00574A2C">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1500"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00CA3729" w:rsidR="00EB201E" w:rsidRDefault="00EB201E" w:rsidRPr="00574A2C">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3500"/>
+								</w:tcPr>
+								<w:p w:rsidP="008624F5" w:rsidR="00EB201E" w:rsidRDefault="00EB201E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Итого</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1250"/>
+								</w:tcPr>
+								<w:p w:rsidP="008A7FF5" w:rsidR="00EB201E" w:rsidRDefault="00FB149B">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00FB149B">
+										<w:t>${production_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

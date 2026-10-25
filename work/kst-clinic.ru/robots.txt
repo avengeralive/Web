@@ -1,0 +1,93 @@
+User-agent: *               
+                            
+Disallow: /cgi-bin          
+Disallow: /?                
+Disallow: /wp-              
+Disallow: /wp/              
+                            
+Disallow: *?s=              
+Disallow: *&s=              
+Disallow: /search/          
+Disallow: /author/          
+Disallow: /users/          
+Disallow: */trackback    
+
+   
+                            
+Disallow: */feed            
+Disallow: */rss             
+Disallow: */embed           
+Disallow: */wlwmanifest.xml 
+                            
+Disallow: /xmlrpc.php       
+Disallow: *utm=             
+Disallow: *openstat=        
+Allow: */uploads     
+Disallow: /category/patients/questions/
+Disallow: /category/coupon/
+Disallow: /category/uslugi/
+Disallow: /uslugi/page/2/       
+Disallow: /nashi-partneru/
+
+User-agent: GoogleBot       
+Disallow: /cgi-bin
+Disallow: /?
+Disallow: /wp-
+Disallow: /wp/
+Disallow: *?s=
+Disallow: *&s=
+Disallow: /search/
+Disallow: /author/
+Disallow: /users/
+Disallow: */trackback
+Disallow: */feed
+Disallow: */rss
+Disallow: */embed
+Disallow: */wlwmanifest.xml
+Disallow: /xmlrpc.php
+Disallow: *utm=
+Disallow: *openstat=
+Disallow: /nashi-partneru/
+Allow: */uploads
+Allow: /*/*.js              
+Allow: /*/*.css             
+Allow: /wp-*.png            
+Allow: /wp-*.jpg            
+Allow: /wp-*.jpeg           
+Allow: /wp-*.gif            
+Allow: /wp-admin/admin-ajax.php 
+
+User-agent: Yandex          
+Disallow: /cgi-bin
+Disallow: /?
+Disallow: /wp-
+Disallow: /wp/
+Disallow: *?s=
+Disallow: *&s=
+Disallow: /search/
+Disallow: /author/
+Disallow: /users/
+Disallow: */trackback
+Disallow: */feed
+Disallow: */rss
+Disallow: */embed
+Disallow: */wlwmanifest.xml
+Disallow: /xmlrpc.php
+Disallow: /category/patients/questions/
+Disallow: /category/coupon/
+Disallow: /category/uslugi/
+Disallow: /uslugi/page/2/   
+Disallow: /nashi-partneru/
+Allow: */uploads
+Allow: /*/*.js
+Allow: /*/*.css
+Allow: /wp-*.png
+Allow: /wp-*.jpg
+Allow: /wp-*.jpeg
+Allow: /wp-*.gif
+Allow: /wp-admin/admin-ajax.php
+Clean-Param: utm_source&utm_medium&utm_campaign 
+Clean-Param: openstat       
+
+Host: https://kst-clinic.ru/
+Sitemap: https://kst-clinic.ru/sitemap.xml

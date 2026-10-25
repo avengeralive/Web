@@ -1,0 +1,165 @@
+
+{% block items %}
+<link rel="stylesheet" href="/themes/shop/css/drift-basic.css">
+<script src="/themes/shop/js/Drift.js"></script>
+ {% for m in widget.children %}
+ {% if loop.first %}
+                <div class="row medium-up-6" data-equalizer data-equalize-by-row="true">{% endif %}
+                    <div class="columns">
+                        <div class="bracelet bracelete-pop" id="{{ m.id }}" data-equalizer-watch>
+                            <p class="bracelet__img"> <a class="view" data-toggle="drop-prod"><img src="/imagetransform/width_400_height_260_fit_2{{ m.pic }}" alt="{{ m.name }}"> </a> </p>
+                        </div>
+                    </div>
+
+                    {% set d = 0 %}
+                    {% if loop.index % 6 == 0 %}
+                        {% set d = 6 %}
+                    {% else %}
+                        {% set d = (loop.index % 6) %}
+                    {% endif %}
+
+                    {% if loop.index % 6 == 0 or loop.index+1==loop.last or loop.last %}
+
+                </div>
+                <div class="row">
+                    {% for i in loop.index-d..loop.index0 %}
+                        <div class="columns x-product">
+                <div class="filter filter_product text-left hide">
+                    <div class="filter__triangle"></div>
+                    <button class="close-button close-desc" aria-label="Dismiss alert" type="button" data-close=""><img
+                                src="{{ basePath }}images/cross.svg" alt=""></button>
+                    <div class="mb15"></div>
+                    <div class="row">
+                        <div class="large-16 columns large-offset-4">
+                            <div class="row" data-equalizer>
+                                <div class="columns medium-15 large-16 xlarge-18" data-equalizer-watch>
+
+                                    <img class="drift-demo-trigger{{ widget.children[i].id }}" data-zoom="{{ widget.children[i].pic }}"  src="/imagetransform/width_840_height_550_fit_2{{ widget.children[i].pic }}" alt="">
+                                </div>
+                                <div class="columns medium-9 large-8 xlarge-6 filter__col filter__col{{ widget.children[i].id }}" data-equalizer-watch>
+                                <div class="hide" id="defprice{{ widget.children[i].id }}">{{ widget.children[i].displayFullPrice|raw }}</div>
+                                    <p>
+
+                                     <a href="/about/calculation/"></a>
+
+                                               {% if widget.children[i].bIsHidden %}
+                                                 {% if widget.children[i].hasOffers %}
+                                                   {% if not widget.children[i].offers.orderBy('tag','DESC')|first.bIsHidden %}
+                                                     <span data-id="{{ widget.children[i].id }}">{{ widget.children[i].offers.orderBy('tag','ASC')|first.displayFullPrice|raw }}</span> <span>{% if not widget.children[i].no_engraving %}<br>цена с гравировкой{% endif %}</span>
+                                                    {% else %}
+                                                     <span data-id="{{ widget.children[i].id }}">{{widget.children[i].strHiddenPrice}}</span> <span>{% if not widget.children[i].no_engraving %}<br>цена с гравировкой{% endif %}</span>
+                                                   {% endif %}
+                                                 {% else %}
+                                                <span data-id="{{ widget.children[i].id }}">{{widget.children[i].strHiddenPrice}}</span> <span>{% if not widget.children[i].no_engraving %}<br>цена с гравировкой{% endif %}</span>
+                                                 {% endif %}
+                                               {% else %}
+                                               {% if widget.children[i].hasOffers %}
+                                               <span data-id="{{ widget.children[i].id }}"><!--{{ widget.children[i].displayFullPrice|raw }}-->{{ widget.children[i].offers.orderBy('tag','ASC')|first.displayFullPrice|raw }}</span> <span>{% if not widget.children[i].no_engraving %}<br>цена с гравировкой{% endif %}</span>
+                                               {% else %}
+                                               {{ widget.children[i].displayFullPrice|raw }}</span> <span>{% if not widget.children[i].no_engraving %}<br>цена с гравировкой{% endif %}</span>
+                                               {% endif %}
+                                               {% endif %}
+
+                                    <br>
+
+
+                                    <p class="filter__art">Aрт.
+                                        {{ widget.children[i].code }}<!--br>{{ widget.children[i].short|raw }}<br-->
+                                        <br>{{ widget.children[i].name }}
+                                    </p>
+                                    <script>
+  new Drift(document.querySelector('.drift-demo-trigger{{ widget.children[i].id }}'), {
+      paneContainer: document.querySelector('.filter__col{{ widget.children[i].id }}'),
+      inlinePane: 900,
+      inlineOffsetY: -85,
+      containInline: true,
+      hoverBoundingBox: true
+    });
+    
+  </script>
+                                    <div class='filter__col-footer'>
+                                    <p class='filter__col-footer-desc'>{% if not widget.children[i].isInWishList() %}<a class="filter__heart x-add-to-wishlist" data-id="{{ widget.children[i].id }}">
+                                    <i class="fa fa-heart-o"></i>Добавить в избранное</a>{% else %}
+                                    <a class="filter__heart x-remove-from-wishlist" data-id="{{ widget.children[i].id }}">
+                                    <i class="fa fa-heart"></i>В избранном</a>{% endif %}</p>
+
+                                    {% if (widget.children[i].bIsHidden) %}
+                                      {% if widget.children[i].hasOffers %}
+                                        {% if not widget.children[i].offers.orderBy('tag','DESC')|first.bIsHidden %}
+                                          <a class="button inner x-add-to-cart expanded" data-id="{{ widget.children[i].id }}">В корзину</a>
+                                          {% else %}
+                                          <form action="/about/calculation/" method="post">
+                                          <input type="hidden" name="art" value="{{ widget.children[i].code }}">
+                                          <input type="hidden" name="pr_name" value="{{ widget.children[i].name }}">
+                                          <button class="button inner expanded">Рассчитать цену</button></form>
+                                        {% endif %}
+                                      {% else %}
+                                          <form action="/about/calculation/" method="post">
+                                          <input type="hidden" name="art" value="{{ widget.children[i].code }}">
+                                          <input type="hidden" name="pr_name" value="{{ widget.children[i].name }}">
+                                          <button class="button inner expanded">Рассчитать цену</button></form>
+                                      {% endif %}
+                                    {% else %}
+                                    <a class="button inner x-add-to-cart expanded" data-id="{{ widget.children[i].id }}">В корзину</a>
+                                    {% endif %}
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="mb15"></div>
+                                    {% if widget.children[i].hasOffers %}
+                                        {% if widget.children[i].no_engraving %}
+                                            <p class="filter__desc">Стоимость других вариантов исполнения данного изделия. Цены указаны в рублях.</p>
+                                        {% else %}
+                                            <p class="filter__desc">Стоимость других вариантов исполнения данного изделия. Цены указаны в рублях с учетом гравировки.</p>
+                                        {% endif %}
+
+                                        <div class="table-scroll">
+                                            <table class="gold" id="{{ widget.children[i].id }}">
+                                                <tr style="background: white;">
+                                                    <td class="gold__th">Металл и камни</td>
+                                                    <td class="gold__th">Цена</td>
+                                                </tr>
+
+                                                {% for of in widget.children[i].offers.orderBy('tag','ASC') %}
+                                                    <tr>
+                                                        <td>
+                                                            <span class="g_name">{{ of.name|raw }}</span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="saphire">
+                                                                {% if (of.bIsHidden == 0) %}
+                                                                <input class="x-offer saphire__input" type="radio"
+                                                                       name="offer{{ widget.children[i].id }}"
+                                                                       value="{{ of.id }}"
+                                                                       id="offer{{ of.id }}"
+                                                                       {% if loop.first %}checked{% endif %}>
+                                                                <label class="saphire__label g_price" for="offer{{ of.id }}">
+                                                                {% endif %}
+                                                             {% if (of.bIsHidden == 1) %}
+                                 <a href="/about/calculation/">{{of.strPriceHidden}}</a>
+                                 {% else %}
+
+                                                                    {{ of.displayPrice|raw }}{% endif %}
+                                                                    {% if of.discount > 0 %}
+                                                                        <del class="text-dark-gray">{{ of.displayFullPrice|raw }}</del>{% endif %}
+                                                                </label>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </table>
+                                        </div>
+
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    {% endfor %}
+                </div>
+                <div class="row medium-up-3" data-equalizer data-equalize-by-row="true">{% endif %}
+                    {% endfor %}
+{% endblock %}

@@ -1,0 +1,144 @@
+<div id="modal-contact" class="modal modal-service">
+  <div class="modal-dialog modal-lg  modal-width" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <button onclick="closeModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="form_title" id="exampleModalLabel">Выберите нужные пункты и отправьте заявку</div>
+    </div>
+
+    <div class="modal-body">
+
+      <form id="contact_form" method="POST" class="flex-container contact_form">
+        <div class="input_type_radio-1">
+        <span class="radio_group_title">ПЛАТФОРМА</span>
+          <div>
+            <label for="" class="radio-label">
+              <input type="radio" class="option-input radio" name="platform" value="Мобильное приложение" />
+              <span for="radio-1" class="radio_label">Мобильное приложение</span>
+            </label>
+          </div>
+
+          <div>
+            <label for="" class="radio-label">
+              <input type="radio" class="option-input radio" name="platform" value="Веб-сервис" />
+              <span class="radio_label">Веб-сервис</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="input_type_radio-2">
+
+          <span class="radio_group_title">СТАДИЯ ПРОЕКТА</span>
+          <div>
+          <label for="" class="radio-label">
+              <input id="" type="radio" class="option-input radio" name="project_stage" value="Новый проект" />
+              <span class="radio_label">Новый проект</span>
+            </label>
+          </div>
+
+          <div>
+            <label for="" class="radio-label">
+              <input id="" type="radio" class="option-input radio" name="project_stage" value="Существующий проект"/>
+              <span class="radio_label">Существующий проект</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="input_type_radio-3">
+          <span class="radio_group_title">ОТРАСЛЬ КОМПАНИИ</span>
+          <div>
+          <label for="" class="radio-label">
+              <input id="" type="radio" class="option-input radio" name="field_company" value="Финтех"/>
+              <span class="radio_label">Финтех</span>
+            </label>
+          </div>
+
+          <div>
+            <label for="" class="radio-label">
+              <input id="" type="radio" class="option-input radio" name="field_company" value="Банк"/>
+              <span class="radio_label">Банк</span>
+            </label>
+          </div>
+          <div>
+          <label for="" class="radio-label">
+              <input id="" type="radio" class="option-input radio" name="field_company" value="Электронная коммерция"/>
+              <span class="radio_label">Электронная коммерция</span>
+            </label>
+          </div>
+
+          <div>
+            <label for="" class="radio-label">
+              <input id="" type="radio" class="option-input radio" name="field_company" value="Другое"/>
+              <span class="radio_label">Другое</span>
+            </label>
+          </div>
+        </div>
+        <div class="input_type_radio-4">
+          <div>
+          <span class="radio_group_title">БЮДЖЕТ (РУБ.)</span>
+          <label class="radio-label">
+              <input type="radio" class="option-input radio" name="budget" value="500 000-1 500 000" />
+              <span for="radio-1" class="radio_label">500 000-1 500 000</span>
+            </label>
+          </div>
+
+          <div>
+            <label class="radio-label">
+              <input type="radio" class="option-input radio" name="budget" value="1 500 000-3 000 000" />
+              <span for="radio-1" class="radio_label">1 500 000-3 000 000</span>
+            </label>
+          </div>
+          <div>
+          <label class="radio-label">
+              <input type="radio" class="option-input radio" name="budget" value="3 000 000-6 000 000"/>
+              <span for="radio-1" class="radio_label">3 000 000-6 000 000</span>
+            </label>
+          </div>
+
+          <div>
+            <label class="radio-label">
+              <input type="radio" class="option-input radio" name="budget" value="6 000 000 и выше"/>
+              <span for="radio-1" class="radio_label">6 000 000 и выше</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="input_type_input">
+          <div>
+            <input type="text" class="input_group" name="name" placeholder="Как к вам обращаться?" required />
+          </div>
+
+          <div>
+            <input type="text" class="input_group" name="email" placeholder="Введите ваш e-mail адрес" required />
+          </div>
+
+          <div>
+            <input type="text" class="input_group" name="post" placeholder="Ваша должность (необязательно)" />
+          </div>
+        </div>
+
+        <div class="input_type_textarea">
+            <textarea class="input_textarea" name="comment" placeholder="Комментарий к заказчику" required></textarea>
+        </div>
+
+        <div class="input_type_file">
+          <div class="button_file">
+            <i class="fas fa-paperclip custom-clip"></i>
+            <div><span>Прикрепить файл</span><br> не больше  2 MB (xls, doc, pdf, jpg)</div>
+          </div>
+          <input type="file" name="attachment" />
+        </div>
+        <div class="send_request_button">
+          <input type="submit" value="Отправить">
+        </div>
+      </form>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+    </div>
+  </div>
+</div>

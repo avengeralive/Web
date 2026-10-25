@@ -1,0 +1,100 @@
+						<w:tr w:rsidR="00A07F13" w:rsidTr="0037034A">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2093" w:type="dxa"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRPr="00A07F13" w:rsidRDefault="00A07F13" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${report_production_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2410" w:type="dxa"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRPr="00A07F13" w:rsidRDefault="00A07F13" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${report_research_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1842" w:type="dxa"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRPr="00A07F13" w:rsidRDefault="00A07F13" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${research_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1678" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRPr="00A07F13" w:rsidRDefault="00A07F13" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${research_result_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1548" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRPr="00A07F13" w:rsidRDefault="00A07F13" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${research_count}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

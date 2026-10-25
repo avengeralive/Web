@@ -1,0 +1,7 @@
+mixin mainMenu(list)
+	ul.menu
+		each item in list
+			li
+				// add "active" class to <a> if necessary
+				a.menu-item(href=item[1])= item[0]
+	// /ul.menu

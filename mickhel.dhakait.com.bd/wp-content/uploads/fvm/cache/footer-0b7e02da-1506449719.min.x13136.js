@@ -1,0 +1,3 @@
+function MickhelGmapInit(){"use strict";document.querySelectorAll('.map-area').forEach(function($elem){var $lat=parseFloat($elem.getAttribute('data-lat')),$lng=parseFloat($elem.getAttribute('data-lng'));var mapOptions={zoom:parseInt($elem.getAttribute('data-zoom')),scrollwheel:!1,center:new google.maps.LatLng($lat,$lng)};var map=new google.maps.Map($elem,mapOptions);var marker=new google.maps.Marker({position:map.getCenter(),animation:google.maps.Animation.BOUNCE,icon:$elem.getAttribute('data-marker'),map:map});$elem.style.height=$elem.getAttribute('data-height')+'px'})}
+if(typeof google!='undefined'){google.maps.event.addDomListener(window,'load',MickhelGmapInit)}
+;

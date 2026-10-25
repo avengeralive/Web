@@ -1,0 +1,213 @@
+/*!CalcIcons*/
+
+@font-face {
+    font-family: 'calc';
+    src: url(../fonts/calc.eot?201812);
+    src: url(../fonts/calc.eot?201812#iefix) format("embedded-opentype"), url(../fonts/calc.ttf?201812) format("truetype"), url(../fonts/calc.woff2?201812) format("woff2"), url(../fonts/calc.woff?201812) format("woff"), url(../fonts/calc.svg?201812#calc) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+.icn {
+    font-family: 'calc'!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icn-apple:before {
+    content: '\e900'
+}
+
+.icn-android:before {
+    content: '\e901'
+}
+
+.icn-laptop:before {
+    content: '\e902'
+}
+
+.icn-mobile:before {
+    content: '\e903'
+}
+
+.icn-tablet:before {
+    content: '\e904'
+}
+
+.icn-watch:before {
+    content: '\e905'
+}
+
+.icn-tv:before {
+    content: '\e906'
+}
+
+.icn-layout1:before {
+    content: '\e907'
+}
+
+.icn-layout2:before {
+    content: '\e908'
+}
+
+.icn-layout3:before {
+    content: '\e909'
+}
+
+.icn-at:before {
+    content: '\e90a'
+}
+
+.icn-tel:before {
+    content: '\e90b'
+}
+
+.icn-people:before {
+    content: '\e90c'
+}
+
+.icn-news:before {
+    content: '\e90d'
+}
+
+.icn-profile:before {
+    content: '\e90e'
+}
+
+.icn-catalog:before {
+    content: '\e90f'
+}
+
+.icn-sms:before {
+    content: '\e910'
+}
+
+.icn-message:before {
+    content: '\e911'
+}
+
+.icn-talk:before {
+    content: '\e912'
+}
+
+.icn-letter:before {
+    content: '\e913'
+}
+
+.icn-cart:before {
+    content: '\e914'
+}
+
+.icn-bag:before {
+    content: '\e915'
+}
+
+.icn-rss:before {
+    content: '\e916'
+}
+
+.icn-paycard:before {
+    content: '\e917'
+}
+
+.icn-vr:before {
+    content: '\e918'
+}
+
+.icn-ar:before {
+    content: '\e919'
+}
+
+.icn-video:before {
+    content: '\e91a'
+}
+
+.icn-smartwatch:before {
+    content: '\e91b'
+}
+
+.icn-qrcode:before {
+    content: '\e91c'
+}
+
+.icn-cloud:before {
+    content: '\e91d'
+}
+
+.icn-integration:before {
+    content: '\e91e'
+}
+
+.icn-secure:before {
+    content: '\e91f'
+}
+
+.icn-invoice:before {
+    content: '\e920'
+}
+
+.icn-analytic:before {
+    content: '\e921'
+}
+
+.icn-manage:before {
+    content: '\e922'
+}
+
+.icn-users:before {
+    content: '\e923'
+}
+
+.icn-moderate:before {
+    content: '\e924'
+}
+
+.icn-feedback:before {
+    content: '\e925'
+}
+
+.icn-statistic:before {
+    content: '\e926'
+}
+
+.icn-check:before {
+    content: '\e927'
+}
+
+.icn-film:before {
+    content: '\e928'
+}
+
+.icn-location:before {
+    content: '\e948'
+}
+
+.icn-calendar:before {
+    content: '\e953'
+}
+
+.icn-tablet2:before {
+    content: '\e95a'
+}
+
+.icn-check2:before {
+    content: '\ea10'
+}
+
+.icn-mail:before {
+    content: '\ea86'
+}
+
+.icn-fb:before {
+    content: '\ea91'
+}
+
+.icn-vk:before {
+    content: '\ea98'
+}

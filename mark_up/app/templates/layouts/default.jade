@@ -1,0 +1,15 @@
+include ../helpers/variables
+include ../helpers/mixins
+
+doctype html
+html(lang='ru')
+	include ../blocks/head
+	body
+		.page-surround
+			include ../blocks/header
+			block showcase
+			block content
+			include ../blocks/footer
+		include ../blocks/side-menu
+		include ../blocks/modals
+		include ../blocks/scripts

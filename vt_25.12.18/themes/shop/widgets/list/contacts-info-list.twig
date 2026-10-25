@@ -1,0 +1,30 @@
+<div class="large-16 columns large-centered">
+  {#  <h5 class="individual">Контактная информация компании Velvetin Jewellery</h5> #}
+  <h5 class="individual">{{widget.catalog.name}}</h5>
+</div>
+<div class="columns">
+    <hr class="individual-hr" style="margin-top: 0px;">
+</div>
+<div class="column contacts large-16 large-centered">
+
+  {% if widget.children|length %}
+  {% for m in widget.children.orderBy('tag') %}
+
+  <div class="row">
+  <div class="columns large-6" style="padding-left: 0px;">
+    <p>{{m.name|raw}}</p>
+  </div>
+
+  <div class="columns large-18">
+    {{m.short|raw}}
+  </div>
+  </div>
+
+  {% if not loop.last %}
+  
+  {% endif %}
+
+  {% endfor %}
+  {% endif %}
+
+</div>

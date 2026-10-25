@@ -1,0 +1,92 @@
+<w:tr w:rsidR="007B31C0" w:rsidRPr="007B31C0" w:rsidTr="007B31C0">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2181"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:tabs>
+											<w:tab w:pos="551" w:val="left"/>
+											<w:tab w:pos="1735" w:val="center"/>
+										</w:tabs>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2712"/>
+									<w:gridSpan w:val="2"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:tabs>
+											<w:tab w:pos="551" w:val="left"/>
+											<w:tab w:pos="1735" w:val="center"/>
+										</w:tabs>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3786"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${report_production_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3126"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0" w:rsidRPr="007B31C0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${report_production_ban_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2856"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${report_production_percent_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

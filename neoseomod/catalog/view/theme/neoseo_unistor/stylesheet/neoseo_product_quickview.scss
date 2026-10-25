@@ -1,0 +1,73 @@
+.product-thumb .image a {
+    display: block;
+}
+.product-thumb .image a:hover {
+    opacity: 0.8;
+}
+
+.image .quickview {
+    visibility: hidden;
+    font-size: 24px;
+    cursor:pointer;
+}
+
+.image:hover .quickview {
+    visibility: visible;
+}
+
+.product-layout .image .quickview.glyphicon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 7;
+    transition: 0.3s ease-in-out;
+    color: $product-thumb-icon-color;
+    font-size: 32px;
+    height: 1px;
+}
+
+.image .quickview:before {
+    content: "\f00e";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position:absolute;
+
+}
+
+
+.thumbnail-quickview {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail-quickview > img, .thumbnail a > img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.thumbnail-quickview > img, .thumbnail-quickview a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#popup-quickview {
+
+    .rating {
+        .fa-star-o {
+            margin-top: 0;
+        }
+    }
+
+    #button-cart {
+         height: 33px;
+    }
+
+}

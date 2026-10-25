@@ -1,0 +1,428 @@
+.point-map{
+    display: none;
+}
+.custom-top-1{
+    position: relative;
+    top:-20px !important;
+}
+.min-form-contacts .address-height-fix-1{
+    height:unset;
+}
+.min-form-contacts .address-height-fix-2{
+    height: 85px;
+}
+.pointer-map-infoshell{
+    display: none;
+}
+.pointer-map-lg-infoshell {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -102px;
+    margin-top: -3px;
+    z-index: 100;
+}
+.content-mob-width{
+    position: relative;
+    top: -21px;
+}
+.point-map-lg{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -103px;
+    margin-top: 41px;
+}
+.text-us-sort-icon{
+    padding: 0px 15px 0px 0px;
+    float: right;
+}
+.policy-min{
+    font-family: 'Open Sans';
+    color: #9d9b93;
+    font-size: 12.5px;
+    text-align: center;
+    letter-spacing: 0px;
+    line-height: 1.1;
+    padding: 9px 14px 20px 14px;
+}
+.policy-min a {
+    color:#5d5b56;
+}
+.send_request_input_min{
+    width: 335px !important;
+    height: 50px !important;
+    letter-spacing: -0.8px;
+}
+.send_request_button_min{
+    position: relative;
+    top: -8px;
+}
+.button-file-text-min{
+    padding:12px 0 0 5px !important;
+    letter-spacing: -0.11px;
+    font-size: 12px !important;
+}
+.button-file-text-min span{
+    letter-spacing: -0.11px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+.button_file_min{
+    margin: 15px 0 0 0;
+}
+.file_img_min{
+    width: 34px;
+    height: 34px;
+    position: relative;
+    top: -3px;
+}
+.radio-check-icon{
+    margin: 20px 18px 0 0px;
+    float: right;
+    font-size: 11px;
+    font-weight: 600;
+    display: none !important;
+}
+.radio-input{
+    margin: 1px 0 12px 17px;
+}
+.radio-head-title {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #414141;
+}
+.radio-block input:checked + .radio-check-icon {
+    display:block !important;
+}
+.radio-input-checked{
+    color:#303337 !important;
+}
+.radio-block input {
+    visibility: hidden;
+}
+.radio-block label{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #97999b;
+    margin: 12px 0px 0px 10px;
+}
+.min-form-content{
+    color: #2e2e2e;
+}
+.d-none{
+    display: none;
+}
+.text-us form .inp-name{
+    margin-top: -31px;
+}
+.text-us form .inp-email{
+    margin-top: 10px;
+}
+.text-us form .inp-message{
+    margin-top: 10px;
+}
+.text-us form inp-attach{
+    height: 34px;
+}
+.text-us form input[type="text"]{
+    width: 334px;
+    height: 44px;
+    display: block;
+    margin-top:10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    background-color: #f9f9f9;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 1px 0 0 16px;
+    border:none;
+}
+.text-us form textarea{
+    width: 334px;
+    height: 74px;
+    display: block;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 12px 0 0 16px;
+    background-color: #f9f9f9;
+    border:none;
+    margin-bottom: -15px;
+}
+.text-us form {
+    margin:0 24px 0 25px;
+}
+.choose-element span{
+    margin-top: 20px;
+    width: 334px;
+    height: 44px;
+    display: block;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    background-color: #f9f9f9;
+    padding: 13px 0 14px 17px;
+}
+.padding-down-icon{
+    padding-right: 14px;
+}
+.min-form-contacts .address{
+    padding-top:10px;
+}
+.min-form-contacts .email,
+.min-form-contacts .phone,
+.min-form-contacts .address,
+.min-form-contacts .email{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    color: #707070;
+    padding-left:15px;
+    padding-bottom:10px;
+}
+.address .title, .phone .title .email .title{
+    flex-shrink:0;
+}
+.address .min-form-content {
+    line-height: 1.71;
+    position: relative;
+    top: -2px;
+}
+.email .title{
+    line-height: 2.1;
+}
+.email .min-form-content{
+    line-height: 2;
+    padding-left:1px;
+}
+.padding-custom-1{
+    padding-top:27px !important;
+}
+.padding-custom-2{
+    padding-top:26px !important;
+}
+.address .min-form-content, .phone .min-form-content, .email .min-form-content{
+    flex-shrink:1;
+    flex-grow:1;
+    font-stretch: normal;
+    letter-spacing: -0.12px;
+}
+.min-form-contacts .email span,
+.min-form-contacts .phone span,
+.min-form-contacts .address span,
+.min-form-contacts .email span{
+    float: right;
+    color: #2e2e2e;
+    max-width:254px;
+    text-align: right;
+    padding-bottom:10px;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: -0.12px;
+}
+.min-form-contacts{
+    padding:0;
+}
+.contact-us .icons svg{
+    margin: 38px 8px 40px 0;
+}
+.contact-us .icons{
+    position: relative;
+    padding-left: 23px;
+}
+.contact .fa-sort-down{
+    float: right;
+}
+.contact .fa-sort-up{
+    float: right;
+}
+.contact{
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    color: #303337;
+    padding:32px 24px 0px 26px;
+}
+.contact-us-title{
+    margin-bottom:0;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e2e2e;
+    padding:35px 0 5px 25px;
+    letter-spacing: -0.35px;
+    margin:0;
+}
+.radio-inputs{
+    box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.07);
+    margin-bottom: 11px;
+    display: none;
+    margin-top: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.text-us {
+    margin: 50px 119px 0 0px;
+    position: absolute;
+    right:0px;
+    top:0px;
+    height: auto;
+    width: 384px;
+    background-color: #fff;
+    /*overflow: auto;*/
+    max-height: 497px;
+}
+.address-block-1, .address-block-2, .address-block-3, .address-block-4 {
+    display: none;
+}
+.contact-us{
+    border-radius: 2px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.09);
+    margin: 50px 0 0 120px;
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 382px;
+    background-color: #fff;
+}
+.min-contacts-container{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    background: url('/wp-content/themes/mark_up/images/infoshell-map.png') center no-repeat;
+    background-size: cover;
+    min-height:600px;
+}
+.min-contacts-container-fix{
+    height: calc(100vh - 43px);
+}
+.contact-us-margin-fix{
+    margin: 100px 0 0 120px;
+}
+.text-us-margin-fix{
+    margin: 100px 119px 0 0px;
+}
+@media screen and (max-width: 767px) {
+    .custom-top-1{
+        position: relative;
+        top:0px;
+    }
+    .pointer-map-lg-infoshell{
+        display: none;
+    }
+    .point-map-lg{
+        display: none;
+    }
+    .text-us{
+        margin:0;
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+    }
+    .contact-us{
+        margin:0;
+        position: relative;
+        width: 100%;
+    }
+    .pointer-map-infoshell{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -32px;
+        margin-top: -15px;
+        z-index: 100;
+    }
+    .point-map{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -32px;
+        margin-top: 27px;
+    }
+    .map-image{
+        background: url('/wp-content/themes/mark_up/images/infoshell-map.png') center no-repeat;
+        background-size: cover;
+        height:291px;
+        width:100%;
+        position: relative;
+    }
+    .min-contacts-container{
+        position:unset;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        min-height:unset;
+    }
+    .choose-element span {
+        width: 100%;
+    }
+    .text-us form input[type="text"]{
+        width: 100%;
+    }
+    .text-us form textarea{
+        width:100%;
+    }
+    .send_request_input_min{
+        width:100% !important;
+    }
+    .contact{
+        padding:32px 48px 0px 26px;
+    }
+    .policy-min{
+
+    }
+    .address .content-mob-width {
+        position: relative;
+        top: -21px;
+    }
+    .min-form-contacts .address-height-fix-1{
+        height:67px !important;
+    }
+    .min-form-contacts .address-height-fix-2{
+        height:85px !important;
+    }
+    .min-form-contacts .email,
+    .min-form-contacts .phone,
+    .min-form-contacts .address,
+    .min-form-contacts .email{
+        padding-bottom:11px;
+    }
+    .padding-down-icon{
+        padding-right: 0;
+        position: relative;
+        left: 12px;
+    }
+}
+

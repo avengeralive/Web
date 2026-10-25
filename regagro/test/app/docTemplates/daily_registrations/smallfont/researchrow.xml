@@ -1,0 +1,153 @@
+<w:tr w:rsidR="001553F8" w:rsidRPr="007D7BC0" w:rsidTr="004B5FE1">
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2222"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+					<w:t>${production_name}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="3324"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+					<w:t>${research_type_name}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2172"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+					<w:t>${research_count}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2767"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+					<w:t>${research_result_name}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2747"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+					<w:t>${research_confirmed}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2611"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+					<w:t>${research_indicators}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+	</w:tr>

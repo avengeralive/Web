@@ -1,0 +1,10 @@
+<jobs>
+    <job>
+        <id>1</id>
+        <name>Threshold Check</name>
+        <description> Send notification by mail if cashdesk reach 90% of threshold summ </description>
+        <statement></statement>
+        <mail_to>eakhundov@azercell.com</mail_to>
+        <if_active>YES</if_active>
+    </job>
+</jobs>

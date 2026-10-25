@@ -1,0 +1,565 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Главная';
+
+block showcase
+	section.showcase.owl-carousel
+		.section-block.bg.text-center.valigner(style="background-image:url('img/bg_slider_1.jpg');")
+			.valigner-content
+				h1.showcase--title РАЗРАБОТКА #[br]МОБИЛЬНЫХ ПРИЛОЖЕНИЙ, #[br]web-сервисов и игр
+				a.btn.btn-black(href="" data-toggle="modal" data-target="#modal-2") оставить заявку
+		// /section-block
+		.section-block.bg.text-center.valigner(style="background-image:url('img/award_bg.jpg');")
+			.valigner-content
+				img.showcase--image(src="img/award_1.png", alt="")
+		// /section-block
+		.section-block.bg.text-center.valigner(style="background-image:url('img/award_bg.jpg');")
+			.valigner-content
+				img.showcase--image(src="img/award_2.png", alt="")
+		.section-block.bg.text-center.valigner(style="background-image:url('img/award_bg.jpg');")
+			.valigner-content
+				img.showcase--image(src="img/award_3.png", alt="")
+		// /section-block
+		.section-block.bg(style="background-image:url('img/bg_slider_5.jpg');")
+			.container__full-height.valigner
+				.valigner-content
+					h1.showcase--title__white ПРИЛОЖЕНИЕ #[br]&laquo;ПАСПОРТ КОЖИ&raquo;
+					p.showcase--subtext__white Онлайн-консультация; #[br]Ослеживание изменений; #[br]База знаний
+			// /container
+		// /section-block
+		.section-block.bg(style="background-image:url('img/bg_slider_6.jpg');")
+			.container__full-height.valigner
+				.valigner-content
+					h1.showcase--title__white ОФИЦИАЛЬНОЕ #[br]ПРИЛОЖЕНИЕ #[br]ФК «ЗЕНИТ»
+					p.showcase--subtext__white 2840 положительных отзывов, #[br]5 место в TOP Overall Free App (iOs)
+			// /container
+		// /section-block
+		.section-block.bg(style="background-image:url('img/bg_slider_7.jpg');")
+			.container__full-height.valigner
+				.valigner-content
+					h1.showcase--title__white ПЛАТЕЖНЫЙ #[br]СЕРВИС &laquo;PAYBER&raquo;
+					p.showcase--subtext__white Система банковских платежей; #[br]Совместные покупки; #[br]Разработано за 4 месяца
+			// /container
+		// /section-block
+		.section-block.bg(style="background-image:url('img/bg_slider_8.jpg');")
+			.container__full-height.valigner
+				.valigner-content
+					h1.showcase--title__white ПУТЕВОДИТЕЛЬ #[br]ПО ГОРОДАМ #[br]AUDIO TOUR AZBO
+					p.showcase--subtext__white 3 — TOP Free app Travel, #[br]49 — Top Overall Free App (iOs), #[br]Разработано за 4 месяца
+			// /container
+		// /section-block
+		.section-block.bg(style="background-image:url('img/bg_slider_9.jpg');")
+			.container__full-height.valigner
+				.valigner-content
+					h1.showcase--title__white ПРИЛОЖЕНИЕ #[br]&laquo;РАДИО RECORD&raquo;
+					p.showcase--subtext__white 821 323 установок за 6 месяцев; #[br]5248 положительных отзывов; #[br]5 TOP Overall Free App (iOS); #[br] 8 Top Music &amp; Audio (Android); #[br]Разработано за 5 месяцев
+			// /container
+		// /section-block
+		.section-block.bg(style="background-image:url('img/bg_slider_10.jpg');")
+			.container__full-height.valigner
+				.valigner-content
+					h1.showcase--title__white ОФЦИАЛЬНОЕ #[br]ПРИЛОЖЕНИЕ #[br]FABERLIC
+					p.showcase--subtext__white Повышение лояльности; #[br]Online-заказ
+			// /container
+		// /section-block
+	// /showcase
+
+block content
+	section.section-block.bg-black
+		.container-big
+			.col-item-4.what-we-do
+				.what-we-do--icon: .icon.Services_1
+				.what-we-do--header МОбильные #[br]приложения
+				.what-we-do--text InfoShell предлагает услуги по разработке программного обеспечения под iOS, Android OS, Windows Phone и Sumsung Tizen в соответствии с индивидуальными требованиями заказчика.
+				a.btn.btn-outlined(href="#") подробнее
+			// /col
+			.col-item-4.what-we-do
+				.what-we-do--icon: .icon.Services_2
+				.what-we-do--header Web-сервисы
+				.what-we-do--text Еще одно наше приоритетное направление – разработка web-продуктов любого уровня сложности, способных выдерживать высокие нагрузки.
+				a.btn.btn-outlined(href="#") подробнее
+			// /col
+			.col-item-4.what-we-do
+				.what-we-do--icon: .icon.Services_3
+				.what-we-do--header Игры
+				.what-we-do--text Помимо разработки приложений и веб-сервисов мы занимаемся созданием качественных мобильных и браузерных игр, а также игровых приложений для социальных сетей.
+				a.btn.btn-outlined(href="#") подробнее
+			// /col
+			.col-item-4.what-we-do
+				.what-we-do--icon: .icon.Services_4
+				.what-we-do--header Дизайн, #[br]UX
+				.what-we-do--text Мы проектируем user-friendly интерфейсы и создаем для них красивый и стильный дизайн, как в рамках разработки программного продукта, так и в качестве отдельных услуг по дизайну и ux-аналитике.
+				a.btn.btn-outlined(href="#") подробнее
+			// /col
+		// /container
+	// /section-block
+
+	section.section-block
+		.container
+			h1.section-header-dark последние разработанные проекты
+			.custom-owl-dots
+				.icon.Platf_ios: span Iphone
+				.icon.Platf_andr: span Android
+				.icon.Platf_web: span Web
+			// /custom-owl-dots
+		// /container
+		.container-full
+			.portfolio-preview.owl-carousel
+				.slide
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/1.jpg", alt="")
+						.portfolio-preview--name V-Lounge от Insignia
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/2.jpg", alt="")
+						.portfolio-preview--name Концепт дизайна для Tutu.ru
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/3.jpg", alt="")
+						.portfolio-preview--name Паспорт кожи
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/4.jpg", alt="")
+						.portfolio-preview--name Официальное приложение Faberlic
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/5.jpg", alt="")
+						.portfolio-preview--name Приложение “Женская академия”
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/6.jpg", alt="")
+						.portfolio-preview--name Официальное приложение ФК “Зенит”
+				// /slide
+				.slide
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/1.jpg", alt="")
+						.portfolio-preview--name V-Lounge от Insignia
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/2.jpg", alt="")
+						.portfolio-preview--name Концепт дизайна для Tutu.ru
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/3.jpg", alt="")
+						.portfolio-preview--name Паспорт кожи
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/4.jpg", alt="")
+						.portfolio-preview--name Официальное приложение Faberlic
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/5.jpg", alt="")
+						.portfolio-preview--name Приложение “Женская академия”
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/6.jpg", alt="")
+						.portfolio-preview--name Официальное приложение ФК “Зенит”
+				// /slide
+				.slide
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/1.jpg", alt="")
+						.portfolio-preview--name V-Lounge от Insignia
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/2.jpg", alt="")
+						.portfolio-preview--name Концепт дизайна для Tutu.ru
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/3.jpg", alt="")
+						.portfolio-preview--name Паспорт кожи
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/4.jpg", alt="")
+						.portfolio-preview--name Официальное приложение Faberlic
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/5.jpg", alt="")
+						.portfolio-preview--name Приложение “Женская академия”
+					a(href="").portfolio-preview--item.col-item-3
+						img(src="img/portfolio/6.jpg", alt="")
+						.portfolio-preview--name Официальное приложение ФК “Зенит”
+				// /slide
+			// /portfolio-preview
+		// /container
+	// /section-block
+	section.section-block.bg-black.why-block
+		.container
+			h1.section-header Зачем нужно мобильное приложение?
+			p.section-text Конечная цель мобилизации – увеличение прибыли бизнеса за счет основных #[br]преимуществ использования мобильного приложения
+		// /container
+		.container-mobile-full
+			.col-item-5.why
+				.why--icon: .icon.Icon_1
+				.why-header Повышение #[br]лояльности #[br]клиентов
+			// /col
+			.col-item-5.why
+				.why--icon: .icon.Icon_2
+				.why-header Рост эффективности #[br]труда работников
+			// /col
+			.col-item-5.why
+				.why--icon: .icon.Icon_3
+				.why-header Привлечение #[br]новых клиентов
+			// /col
+			.col-item-5.why
+				.why--icon: .icon.Icon_4
+				.why-header Автоматизация #[br]бизнес-процессов
+			// /col
+			.col-item-5.why
+				.why--icon: .icon.Icon_5
+				.why-header Ускорение принятия #[br]управленческих #[br]решений
+			// /col
+		// /container
+	// /section-block
+	section.section-block.bg-slider-1
+		.container
+			h1.section-header-dark Сколько может стоить ваше приложение?
+			p.section-text-dark Каждый проект рассчитывается индивидуально. Стоимость зависит от сложности, #[br]объема и сроков работы. Вы можете оставить краткую информацию #[br]и наш менеджер вам перезвонит.
+		// /container
+		.container
+			.question-face
+				img(src="img/faces/kirill-popov.png" alt="" width="160" height="160")
+				div 
+					b Кирилл Попов
+					br
+					span Менеджер по работе с клиентами
+			// /question-face
+			form.question-form(action="" method="")
+				.control-group
+					.col-item-3: input.inputbox.full(type="text" placeholder="Ваше имя..")
+					.col-item-3: input.inputbox.full(type="text" placeholder="Ваш телефон..*")
+					.col-item-3: input.inputbox.full(type="text" placeholder="Ваш e-mail..")
+				// /control-group
+				.control-group
+					textarea.inputbox.full.clear(rows="10" placeholder="Опишите, пожалуйста, проект..")
+				// /control-group
+				.control-group
+					.attachment
+						.attach-container
+							.attach-file
+								.icon.Attach
+								span.attach-file-name Добавить файл
+							// /attach-file-dummy
+							input(type="file").attach-file-input
+							// /hidden file input
+						// /attach-container
+						a(href="").attach-reset &times;
+					// /attachment
+					.submit-btn: input.btn.btn-black(type="submit" value="Узнать стоимость")
+				// /control-group
+			// /form
+		// /container
+	// /section-block
+	section.section-block.development-stages-block
+		.container
+			h1.section-header-dark этапы разработки приложения
+			ol.development-stages
+				li.development-stages--stage
+					.development-stages--stage-image: img(src="img/stages/1.png" alt="")
+					.development-stages--stage-content
+						h2.development-stages--stage-head 1. Идея проекта и консультация
+						p.development-stages--stage-text Люди приходят к нам в компанию, чтобы воплотить в жизнь свои идеи или автоматизировать бизнес-процессы. Мы предоставляем бесплатную консультацию у аналитика InfoShell и доработку идейной составляющей проекта.
+					img.idea(src="img/stages/idea.png" width="107" height="112")
+				li.development-stages--stage
+					.development-stages--stage-image: img(src="img/stages/2.png" alt="")
+					.development-stages--stage-content
+						h2.development-stages--stage-head 2. Оценка проекта и предложение
+						p.development-stages--stage-text Оценку проекта произодит команда разработчиков. После чего клиент получает предварительное коммерческое предложение на разработку продукта.
+				li.development-stages--stage
+					.development-stages--stage-image: img(src="img/stages/3.png" alt="")
+					.development-stages--stage-content
+						.relative
+							h2.development-stages--stage-head 3. Бэклог и договор
+							.tooltip
+								span ?
+								.tooltip-content.
+									#[b Продукт-оунер] — руководитель проекта.#[br]
+									#[b Бэклог] — список задач для команды разработки, которые полностью описывают проект.
+						p.development-stages--stage-text Встреча с продукт-оунером, обсуждение деталей проекта. Команда разрабатывает бэклог на весь проект совместно с заказчиком. После утверждения бэклога, с заказчиком подписывается договор.
+				li.development-stages--stage-preinner
+					.development-stages--stage-image: img(src="img/stages/4.png" alt="")
+					.development-stages--stage-content
+						.relative
+							h2.development-stages--stage-head 4. Планирование спринта
+							.tooltip
+								span ?
+								.tooltip-content.
+									#[b Спринт] — этап в рамках которого реализуется определенная часть проекта
+						p.development-stages--stage-text Договоренность с заказчиком о том какие задачи будут выполнены на ближайшем спринте.
+				li.development-stages--stage-inner
+					.development-stages--stage-arrow-up проект пока #[br]не завершен
+					.development-stages--stage-arrow-down
+					.development-stages--stage-image: img(src="img/stages/5.png" alt="")
+					.development-stages--stage-content
+						h2.development-stages--stage-head 5. ретроспектива
+						p.development-stages--stage-text Демонстрация заказчику результатов за неделю. Команда анализирует риски и проблемы, завершает спринт, оптимизирует дальнейший процесс разработки.
+					.clock
+						img(src="img/stages/clock.png", alt="", width="99" height="78")
+						b 24 часа
+						span Каждый день команда отчитывается продукт-оунеру о выполненных задачах.
+				li.development-stages--stage-last
+					.development-stages--stage-last-arrow-down проект завершен
+					.development-stages--stage-image: img(src="img/stages/6.png" alt="")
+					.development-stages--stage-content
+						h2.development-stages--stage-head 6. Завершение
+						p.development-stages--stage-text Клиент получачет отменный готовый продукт, который можно использовать по назначению.
+			// /development-stages
+		// /container
+	// /section-block
+	section.section-block.bg-adv
+		.container
+			h1.section-header преимущества infoShell
+		// /container
+		.container-big
+			.col-item-4.benefits
+				.benefits--icon: .icon.Astr_1
+				.benefits--header за 6 лет #[br]более 100 проектов
+				.benefits--text Наша компания существует с 2008 года. За это время помимо России мы выстроили сотрудничество с рынком Америки и Европы.
+			// /col
+			.col-item-4.benefits
+				.benefits--icon: .icon.Astr_2
+				.benefits--header топовые позиции #[br]в рейтингах
+				.benefits--text Список рейтингов и пр. Вообще по клику все блоки ведут на страницу о компании
+			// /col
+			.col-item-4.benefits
+				.benefits--icon: .icon.Astr_3
+				.benefits--header Прокаченные #[br]специалисты
+				.benefits--text Краткий перечень о том, что у разрабов есть такие-то сертификаты, что Пашка делает обзоры для банки.ру, я пишу статьи и леции в школе и пр.
+			// /col
+			.col-item-4.benefits
+				.benefits--icon: .icon.Astr_4
+				.benefits--header Клиенты видят #[br]процесс разрабоки
+				.benefits--text Каждую неделю наша команда предоставляет заказчику отчет о проделанной работе над проектом. Что позволяет быть всегда в курсе, того как создается продукт.
+			// /col
+		// /container
+	// /section-block
+	section.presentation-block.bg-download
+		.container-mobile-full
+			.presentation-block--booklet: img(src="img/booklet.png" alt="" width="390" height="220")
+			.presentation-block--content
+				span.presentation-block--text
+					a(href="").icon.Download Скачать
+					| 
+					span презентацию о компании
+		// /container
+	// /section-block
+	section.section-block
+		.container-full
+			h1.section-header-dark отзывы заказчиков
+			.testimonials.owl-carousel
+				.testimonials--item
+					.testimonials--text
+						p «Отдельно хотим отметить профессионализм команды Infoshell — проект был выполнен в отведенные сроки и на самом высоком уровне.»
+						a(href="") ФК «Зенит»
+					// /testimonials--text
+					.testimonials--author
+						.face: img(src="img/faces/viktor-lunnov.png" width="80" height="80")
+						span Виктор Луннов, руководитель отдела внедрения ФК «Зенит»
+					// /testimonials--author
+				// /testimonials--item
+				.testimonials--item
+					.testimonials--text
+						p «Отдельное спасибо команде за то, что ответственно подошли к выполнению поставленных задач. Мы довольны выполненной работой и будем рекомендовать Infoshell как надежного партнера для реализации совместных проектов.»
+						a(href="") «Четки»
+					// /testimonials--text
+					.testimonials--author
+						.face: img(src="img/faces/igor.png" width="80" height="80")
+						span Игорь Целищев, идеолог проекта
+					// /testimonials--author
+				// /testimonials--item
+				.testimonials--item
+					.testimonials--text
+						p «Мы подтверждаем высокое качество услуг Infoshell по разработке приложений и верим, что нашли постоянного партнера для наших дальнейших креативных разработок.»
+						a(href="") Радио «Record»
+					// /testimonials--text
+					.testimonials--author
+						.face: img(src="img/faces/ludmila.png" width="80" height="80")
+						span Людмила Резникова, генеральный директор радио «Рекорд»
+					// /testimonials--author
+				// /testimonials--item
+				.testimonials--item
+					.testimonials--text
+						p «Отдельно хотим отметить профессионализм команды Infoshell — проект был выполнен в отведенные сроки и на самом высоком уровне.»
+						a(href="") ФК «Зенит»
+					// /testimonials--text
+					.testimonials--author
+						.face: img(src="img/faces/viktor-lunnov.png" width="80" height="80")
+						span Виктор Луннов, руководитель отдела внедрения ФК «Зенит»
+					// /testimonials--author
+				// /testimonials--item
+				.testimonials--item
+					.testimonials--text
+						p «Отдельное спасибо команде за то, что ответственно подошли к выполнению поставленных задач. Мы довольны выполненной работой и будем рекомендовать Infoshell как надежного партнера для реализации совместных проектов.»
+						a(href="") «Четки»
+					// /testimonials--text
+					.testimonials--author
+						.face: img(src="img/faces/igor.png" width="80" height="80")
+						span Игорь Целищев, идеолог проекта
+					// /testimonials--author
+				// /testimonials--item
+				.testimonials--item
+					.testimonials--text
+						p «Мы подтверждаем высокое качество услуг Infoshell по разработке приложений и верим, что нашли постоянного партнера для наших дальнейших креативных разработок.»
+						a(href="") Радио «Record»
+					// /testimonials--text
+					.testimonials--author
+						.face: img(src="img/faces/ludmila.png" width="80" height="80")
+						span Людмила Резникова, генеральный директор радио «Рекорд»
+					// /testimonials--author
+				// /testimonials--item
+			// /testimonials
+			.testimonials--button: a.btn.btn-outlined(href="") Все отзывы и письма
+		// /container
+	// /section-block
+	section.section-block.container-mobile-full.with-dashed-border-top
+		h1.section-header-dark С нами работают
+		.companies-list
+			// / ! JADE DONT PRETTIFY INLINE HTML ELEMENTS, SORRY
+			a.company(href="")
+				img.hidden(src="img/companies-color/azbo.png" alt="")
+				img.visible(src="img/companies/azbo.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/zenit.png" alt="")
+				img.visible(src="img/companies/zenit.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/record.png" alt="")
+				img.visible(src="img/companies/record.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/step.png" alt="")
+				img.visible(src="img/companies/step.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/permenergo.png" alt="")
+				img.visible(src="img/companies/permenergo.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/and.png" alt="")
+				img.visible(src="img/companies/and.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/loko.png" alt="")
+				img.visible(src="img/companies/loko.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/mgu.png" alt="")
+				img.visible(src="img/companies/mgu.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/pek.png" alt="")
+				img.visible(src="img/companies/pek.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/loveradio.png" alt="")
+				img.visible(src="img/companies/loveradio.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/captainmorgan.png" alt="")
+				img.visible(src="img/companies/captainmorgan.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/pm.png" alt="")
+				img.visible(src="img/companies/pm.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/faberlic.png" alt="")
+				img.visible(src="img/companies/faberlic.png" alt="")
+			// /a.company
+			a.company(href="")
+				img.hidden(src="img/companies-color/artdesign.png" alt="")
+				img.visible(src="img/companies/artdesign.png" alt="")
+			// /a.company
+		// /companies-list
+	// /section-block
+	section.section-block.bg-black
+		.container
+			h1.section-header Блог
+			.blog
+				.blog-entry
+					.blog-entry--image(style="background-image: url('img/blog/1.jpg');")
+						a(href="")
+					.blog-entry--body 
+						.blog-entry--icon News
+						h2.blog-entry--head: a(href="") Релиз Microsoft Office для iPad не за горами
+						p.blog-entry--text Автомобильная компания Volvo всегда славилась надежностью и технической оснащенностью своих автомобилей. Так недавно шведская компания анонсировала. 
+						p.blog-entry--date 30 сентября 2014
+				// /blog-entry
+				.blog-entry
+					.blog-entry--image(style="background-image: url('img/blog/2.jpg');")
+						a(href="")
+					.blog-entry--body 
+						.blog-entry--icon News
+						h2.blog-entry--head: a(href="") Релиз Microsoft Office для iPad не за горами
+						p.blog-entry--text Автомобильная компания Volvo всегда славилась надежностью и технической оснащенностью своих автомобилей. Так недавно шведская компания анонсировала. 
+						p.blog-entry--date 30 сентября 2014
+				// /blog-entry
+				.blog-entry
+					.blog-entry--image(style="background-image: url('img/blog/1.jpg');")
+						a(href="")
+					.blog-entry--body 
+						.blog-entry--icon News
+						h2.blog-entry--head: a(href="") Релиз Microsoft Office для iPad не за горами
+						p.blog-entry--text Автомобильная компания Volvo всегда славилась надежностью и технической оснащенностью своих автомобилей. Так недавно шведская компания анонсировала. 
+						p.blog-entry--date 30 сентября 2014
+				// /blog-entry
+			// /blog
+		// /container
+	// /section-block
+	section.with-full-map
+		#map-canvas.contacts-map
+		// / map
+
+		.container-mobile-full.contacts
+			.contacts-list
+				.contacts-list--item 
+					a(href).contacts-list--item-head Россия, г. Москва:
+					// /contacts-list--item-head
+					.contacts-list--item-content
+						p Адрес: ст. метро Маяковская, 1-я Тверская-Ямская улица, 16/23, оф. 8
+						p.icon-tel Телефон/факс: (495) 215-51-82
+						p.icon-email E-mail: info@infoshell.ru
+					// /contacts-list--item-content
+				// /contacts-list--item
+				.contacts-list--item 
+					a(href).contacts-list--item-head Россия, г. Санкт-Петербург:
+					// /contacts-list--item-head
+					.contacts-list--item-content
+						p Адрес: ст. метро Петроградская, Каменноостровский пр., д. 26-28, офис 39 (Дом Бенуа)
+						p.icon-tel Телефон/факс: (812) 242-80-58
+						p.icon-email E-mail: info@infoshell.ru
+					// /contacts-list--item-content
+				// /contacts-list--item
+				.contacts-list--item 
+					a(href).contacts-list--item-head Россия, г. Астрахань:
+					// /contacts-list--item-head
+					.contacts-list--item-content
+						p Адрес: ул. Савушкина, 6 к. 6
+						p.icon-tel Телефон/факс: (495) 215-51-82
+						p.icon-email E-mail: info@infoshell.ru
+					// /contacts-list--item-content
+				// /contacts-list--item
+				.contacts-list--item 
+					a(href).contacts-list--item-head Россия, г. Улан-Удэ:
+					// /contacts-list--item-head
+					.contacts-list--item-content
+						p Адрес: ул. Ключевская. 76А, оф.32
+						p.icon-tel Телефон/факс: (495) 215-51-82
+						p.icon-email E-mail: info@infoshell.ru
+					// /contacts-list--item-content
+				// /contacts-list--item
+				.soc
+					a(href="").icon.Soc_vk
+					a(href="").icon.Soc_facebook
+					a(href="").icon.Soc_dribbble
+					a(href="").icon.Soc_behance
+				// /social btns
+			// /contacts-list
+			form.contacts-form(action="" method="")
+				.control-group
+					input.inputbox.full(type="text" placeholder="Ваше имя..")
+				// /control-group
+				.control-group
+					input.inputbox.full(type="text" placeholder="Ваш e-mail..")
+				// /control-group
+				.control-group
+					textarea.inputbox.full.clear(rows="10" placeholder="Сообщение..")
+				// /control-group
+				.control-group
+					a(href="").btn.btn-outlined__white Отправить
+				// /control-group
+			// /contacts-form
+		// /container
+	// /section-block
+
+
+
+
+

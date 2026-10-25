@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<schema>
+
+<object name="sale_products">
+    <field name="meta_title" type="1" pseudo_type="0" description="Meta title" length="1000" show="1" required="0" fixed="0" editor="1" editor_user="" default_value="" page="SEO" />
+    <field name="meta_keywords" type="1" pseudo_type="0" description="Meta keywords" length="1000" show="1" required="0" fixed="0" editor="16" editor_user="" default_value="" page="SEO" />
+    <field name="meta_description" type="1" pseudo_type="0" description="Meta description" length="1000" show="1" required="0" fixed="0" editor="16" editor_user="" default_value="" page="SEO" />
+</object>
+
+<object name="materials">
+    <field name="meta_title" type="1" pseudo_type="0" description="Meta title" length="1000" show="1" required="0" fixed="0" editor="1" editor_user="" default_value="" page="SEO" />
+    <field name="meta_keywords" type="1" pseudo_type="0" description="Meta keywords" length="1000" show="1" required="0" fixed="0" editor="16" editor_user="" default_value="" page="SEO" />
+    <field name="meta_description" type="1" pseudo_type="0" description="Meta description" length="1000" show="1" required="0" fixed="0" editor="16" editor_user="" default_value="" page="SEO" />
+</object>
+
+<object name="dir_data">
+    <field name="meta_title" type="1" pseudo_type="0" description="Meta title" length="1000" show="1" required="0" fixed="0" editor="1" editor_user="" default_value="" page="SEO" />
+    <field name="meta_keywords" type="1" pseudo_type="0" description="Meta keywords" length="1000" show="1" required="0" fixed="0" editor="16" editor_user="" default_value="" page="SEO" />
+    <field name="meta_description" type="1" pseudo_type="0" description="Meta description" length="1000" show="1" required="0" fixed="0" editor="16" editor_user="" default_value="" page="SEO" />
+</object>
+
+</schema>

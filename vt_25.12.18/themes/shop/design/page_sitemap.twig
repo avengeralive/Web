@@ -1,0 +1,25 @@
+{% extends layout %}
+
+{% block main %}
+
+
+
+	    <div class="row">
+        <div class="large-16 columns large-centered">
+            <h5 style="margin-bottom: 0px;"><b>{{catalog.name}}</b></h5>
+        </div>
+		<div class="columns">
+			<hr class="individual-hr">
+			<p></p>
+		</div>
+
+
+		<div class="large-16 columns large-centered">
+
+			{% widget 'Menu' with { catalog: server, css_class: 'emerald', css_class_submenu: 'emerald', template: 'sitemap.twig', depth: 3 } %}
+
+		</div>
+
+	</div>
+
+{% endblock %}

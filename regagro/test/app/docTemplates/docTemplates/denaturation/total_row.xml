@@ -1,0 +1,71 @@
+						<w:tr w:rsidR="00E57A5F" w:rsidTr="00EF7BD9">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="6629" w:type="dxa"/>
+									<w:gridSpan w:val="3"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="nil"/>
+										<w:bottom w:val="nil"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="00E57A5F" w:rsidRPr="00F354CD" w:rsidRDefault="00E57A5F" w:rsidP="00E57A5F">
+									<w:pPr>
+										<w:jc w:val="right"/>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+										</w:rPr>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+									<w:r w:rsidRPr="00F354CD">
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+										</w:rPr>
+										<w:t>:</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2941" w:type="dxa"/>
+									<w:tcBorders>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="00E57A5F" w:rsidRPr="00C341BA" w:rsidRDefault="00E57A5F" w:rsidP="00E57A5F">
+									<w:pPr>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:i/>
+											<w:color w:val="A6A6A6" w:themeColor="background1" w:themeShade="A6"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:proofErr w:type="spellStart"/>
+									<w:r w:rsidRPr="00C341BA">
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+											<w:sz w:val="28"/>
+											<w:szCs w:val="28"/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${total_weight}</w:t>
+									</w:r>
+									<w:proofErr w:type="spellEnd"/>
+								</w:p>
+							</w:tc>
+						</w:tr>

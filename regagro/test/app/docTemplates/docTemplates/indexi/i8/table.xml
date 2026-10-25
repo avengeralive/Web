@@ -1,0 +1,183 @@
+<w:p w:rsidP="00864C01" w:rsidR="00022B15" w:rsidRDefault="00022B15">
+						<w:pPr>
+							<w:spacing w:after="0"/>
+							<w:jc w:val="center"/>
+						</w:pPr>
+					</w:p>
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:type="dxa" w:w="14661"/>
+							<w:tblInd w:type="dxa" w:w="1457"/>
+							<w:tblLayout w:type="fixed"/>
+							<w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2181"/>
+							<w:gridCol w:w="1476"/>
+							<w:gridCol w:w="1236"/>
+							<w:gridCol w:w="4491"/>
+							<w:gridCol w:w="3831"/>
+							<w:gridCol w:w="3561"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="00491C91" w:rsidTr="007B31C0">
+							<w:trPr>
+								<w:trHeight w:val="213"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2181"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="008778D0" w:rsidR="00491C91" w:rsidRDefault="00635946" w:rsidRPr="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название группы продукции в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1476"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="008778D0" w:rsidR="00491C91" w:rsidRDefault="00635946">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Вид продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1236"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CF20D7" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Сотрудник ЛВСЭ</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="6912"/>
+									<w:gridSpan w:val="2"/>
+								</w:tcPr>
+								<w:p w:rsidP="00C80FEF" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Кол-во продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2856"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="00C80FEF" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>% снятой продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						<w:tr w:rsidR="00491C91" w:rsidTr="007B31C0">
+							<w:trPr>
+								<w:trHeight w:val="313"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2181"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00483AA0" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1476"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00483AA0" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1236"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00483AA0" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3786"/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>поступило</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3126"/>
+								</w:tcPr>
+								<w:p w:rsidP="00EA101A" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>снято</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2856"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00491C91" w:rsidRDefault="00491C91">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>
+					<w:p w:rsidP="00864C01" w:rsidR="00AF21D7" w:rsidRDefault="00AF21D7" w:rsidRPr="007B31C0">
+						<w:pPr>
+							<w:spacing w:after="0"/>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:lang w:val="en-US"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>

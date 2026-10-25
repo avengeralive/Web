@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Popup Wishlist</name>
+    <version>4</version>
+    <code>neoseo-popup-wishlist</code>
+    <author>Alexander Sorokin</author>
+    <link>http://neoseo.com.ua/</link>
+
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search><![CDATA[
+            $this->document->getScripts();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+                /* NeoSeo Popup Wishlist - begin */
+                $this->document->addScript('catalog/view/javascript/neoseo_popup_wishlist.js');
+                /* NeoSeo Popup Wishlist - end */
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/account/wishlist.php">
+        <operation>
+            <search><![CDATA[
+    $this->response->setOutput(json_encode($json));
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo Popup Wishlist - begin */
+        $this->load->model("module/neoseo_popup_wishlist");
+        $json = $this->model_module_neoseo_popup_wishlist->getPopup($product_info,$json);
+        /* NeoSeo Popup Wishlist - end */
+
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>

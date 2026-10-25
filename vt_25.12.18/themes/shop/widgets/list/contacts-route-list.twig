@@ -1,0 +1,15 @@
+
+    <div class="column contacts large-16 large-centered">
+		<div class="row column">
+          <h4 class="contacts__scheme-travel-title"><strong>{{widget.catalog.name}}</strong></h4>
+        <div class='contacts__scheme-travel-decs'>
+          {{widget.children[0].text|raw}}
+        </div>
+		</div>
+  </div>
+
+  <div class="row column contacts_map show-for-large" style="width: 860px; margin: 0 auto;"><script type="text/javascript" charset="utf-8" async src="{{widget.children[0].map_large}}"></script></div>
+
+	<div class="row column contacts_map show-for-medium-only"><script type="text/javascript" charset="utf-8" async src="{{widget.children[0].map_medium}}"></script></div>
+
+	<div class="row column contacts_map show-for-small-only"><script type="text/javascript" charset="utf-8" async src="{{widget.children[0].map_small}}"></script></div>

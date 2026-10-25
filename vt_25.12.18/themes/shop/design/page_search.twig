@@ -1,0 +1,27 @@
+{% extends layout %}
+
+{% block title %}{{ _('Поиск') }}{% endblock %}
+
+{% block main %}
+
+<div class="row column">
+      <ul class="breadcrumbs">
+        <li><a href="/">{{ _('Главная') }}</a></li>
+        <li class="current">{{ block('title') }}</li>
+      </ul>
+</div>
+
+<div class="row column">
+      <h1>{{ block('title') }}</h1>
+</div>
+
+
+    <div class="content">
+      <div class="row column">
+		{% widget 'VjcSearch' with {template:'vjc_search.twig', morphology: 1, min_length: 2, fields: 'code', type: [products_type,1]} %}
+
+      </div>
+    </div>
+
+
+{% endblock %}

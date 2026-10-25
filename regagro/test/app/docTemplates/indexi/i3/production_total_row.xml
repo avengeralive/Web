@@ -1,0 +1,113 @@
+						<w:tr w:rsidR="00F319FB" w:rsidTr="00BC2C80">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="0" w:type="auto"/>
+									<w:vMerge/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:vAlign w:val="center"/>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidR="00584AAE" w:rsidRDefault="00584AAE"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="5466" w:type="dxa"/>
+									<w:gridSpan w:val="3"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidR="00584AAE" w:rsidRPr="00BC2C80" w:rsidRDefault="00BC2C80">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Итого</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1052"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00F322DB" w:rsidR="00FF5C00" w:rsidRDefault="00CB0AD1" w:rsidRPr="00CB0AD1">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_total_weight}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1052"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00F322DB" w:rsidR="00FF5C00" w:rsidRDefault="00CB0AD1" w:rsidRPr="00CB0AD1">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_total_volume}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1052"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00F322DB" w:rsidR="00FF5C00" w:rsidRDefault="00CB0AD1" w:rsidRPr="00CB0AD1">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_total_count}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

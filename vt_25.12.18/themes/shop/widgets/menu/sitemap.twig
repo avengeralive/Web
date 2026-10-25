@@ -1,0 +1,25 @@
+{% if widget.children|length > 0 or widget.getMaterials()|length > 0 %}
+<ul class="emerald" style="padding-left: 0px;">
+	{% for c in widget.children %}
+
+		<li class="emerald__item">
+		
+			<a href="{{ c.prototype.url }}" {% if c.id==4 %} style="pointer-events: none;" {% endif %} class="">{{ c.name|raw }}</a>
+
+			{{ widget.showSubmenu(c)|raw }}
+
+			{% if c.id==487 %}
+				<ul class="emerald">
+					<li class="emerald__item">
+						<a class="" href="/jewellry/star_collections/anastasiya-tsvetaeva">Звездная коллекция Анастасии Цветаевой</a>
+					</li>
+				</ul>		
+			{% endif %}
+			
+		</li>
+    
+    {% endfor %}
+
+
+</ul>
+{% endif %}

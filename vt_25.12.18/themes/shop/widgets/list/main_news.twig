@@ -1,0 +1,15 @@
+<div class="row columns">
+      <h4 class="individual" style="margin-left: 0px;"><a href="/about/stocks/">Акции</a></h4>
+    </div>
+    <div class="row large-up-3 medium-up-3 small-up-1" data-equalizer data-equalize-by-row="true">
+	{% for m in widget.children %}
+      <div class="columns news">
+        <div data-equalizer-watch style="padding-bottom: 10px;">
+          <p style="margin-bottom: 10px;">{{ m.dat|date('d.m.Y') }}</p>
+          <p class="news__title"><a href="/about/stocks/#act{{ m.id }}">{{ m.name}}</a></p>
+        </div>
+        <a class="news__more" href="/about/stocks/#act{{ m.id }}">Подробнее</a>
+        <hr>
+      </div>
+     {% endfor %}
+    </div>

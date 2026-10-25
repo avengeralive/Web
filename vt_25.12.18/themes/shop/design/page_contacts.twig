@@ -1,0 +1,51 @@
+{% extends layout %}
+
+{% block main %}
+<style>
+@media (min-width: 1280px) {
+.contacts__contact-us-title {
+  padding-left: 20px !important;
+  }
+}
+@media (min-width: 900px) {
+  #form2, .contcc {
+    width: 900px !important;
+  }
+  .contcc {
+    padding: 0px !important;
+  }
+
+  .conts { width: 760px !important; margin-top: 25px !important; }
+  .contacts {
+    margin-bottom: 25px;
+  }
+  .contacts__schedule {
+    display: none;
+  }
+  .thumbnail img {
+    border-radius: 50px;
+  }
+  .end img {
+    margin-top: 10px !important; 
+    margin-bottom: 10px !important;
+  }
+}
+.contacts_map { max-width: 100% !important; }
+</style>
+    <div class="row">
+        {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'contacts-info-list.twig', catalog: 513} %}
+        {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'contacts-route-list.twig', catalog: 512} %}
+      <div class="row column contacts">
+        <div class="column large-16 large-centered">
+          {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'contacts-worktime-list.twig', catalog: 511} %}
+          {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'contacts-list.twig', catalog: 510} %}
+        </div>
+      </div>
+    </div>
+    <div class="row column">
+        <div class="large-16 large-centered columns contcc">
+        {% widget 'forms' with { form: 3 } %}
+        </div>
+    </div>
+
+{% endblock %}

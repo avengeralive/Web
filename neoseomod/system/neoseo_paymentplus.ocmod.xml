@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>NeoSeo Payment</name>
+	<code>neoseo_payment</code>
+	<version>8</version>
+	<author>NeoSeo</author>
+
+	<file path="admin/model/sale/order.php">
+		<operation>
+			<search><![CDATA[$this->load->model('localisation/language');]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Payment - begin */
+		$payment_code = explode(".",$order_query->row['payment_code']);
+		/* NeoSeo Payment - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA['payment_code'            => $order_query->row['payment_code'],]]></search>
+			<add position="replace"><![CDATA[				'payment_code'            => $payment_code['0'],]]></add>
+		</operation>
+	</file>
+</modification>
+

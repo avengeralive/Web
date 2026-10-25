@@ -1,0 +1,33 @@
+{% extends layout %}
+
+
+{% block main %}
+
+<!--
+
+    <div class="row large-up-2 medium-up-2 small-up-1">
+        <div class="column">
+          <div class="product"><a class="product__title" href="/jewellry/bracelets/gold_silver_bracelets/"><b>Браслеты из золота и серебра</b></a>
+            <div class="product__img"><a href="/jewellry/bracelets/gold_silver_bracelets/"><img src="/themes/shop/i/gs_bracelet.png" alt=""></a></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product"><a class="product__title" href="/jewellry/bracelets/bracelets-threads/"><b>Браслеты-нити</b></a>
+            <div class="product__img"><a href="/jewellry/bracelets/bracelets-threads/"><img src="/themes/shop/i/st_bracelet.png" alt=""></a></div>
+          </div>
+        </div>
+    </div>
+
+  -->
+<div class="row large-up-2 medium-up-2 small-up-1">
+  {% for cat in catalog.children %}
+
+  <div class="column">
+    <div class="product"><a class="product__title" href="{{ cat.url }}"><b>{{cat.name}}</b></a>
+      <div class="product__img"><a href="{{cat.url}}"><img src="{{cat.pic}}" alt=""></a></div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+<w:tr w:rsidR="007B31C0" w:rsidTr="007B31C0">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2181"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="right"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1476"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="right"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1236"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Итого</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3786"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3126"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_ban_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2856"/>
+								</w:tcPr>
+								<w:p w:rsidP="007B31C0" w:rsidR="007B31C0" w:rsidRDefault="007B31C0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_percent_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

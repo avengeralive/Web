@@ -1,0 +1,29 @@
+						<w:tr w:rsidR="00372A01" w:rsidTr="009953B9">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="8188" w:type="dxa"/>
+									<w:gridSpan w:val="4"/>
+								</w:tcPr>
+								<w:p w:rsidR="00372A01" w:rsidRPr="00372A01" w:rsidRDefault="00372A01" w:rsidP="00372A01">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1418" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00372A01" w:rsidRDefault="00372A01" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>${total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

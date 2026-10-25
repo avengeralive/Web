@@ -1,0 +1,57 @@
+						<w:tr w:rsidR="00A07F13" w:rsidTr="0037034A">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2093" w:type="dxa"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2410" w:type="dxa"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="3520" w:type="dxa"/>
+									<w:gridSpan w:val="2"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Итого</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1548" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRPr="00A07F13" w:rsidRDefault="00A07F13" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${report_research_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

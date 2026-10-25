@@ -1,0 +1,12 @@
+
+<div class="row column contacts__schedule"><br>
+<h4 class="contacts__schedule-title"><strong>{{widget.catalog.name}}</strong></h4>
+<p class="contacts__schedule-desc">
+{% for m in widget.getChildren.orderBy('tag') %}
+
+    {{m.day}}<br>
+    {{m.time}}<br>
+
+{% endfor %}
+</p>
+</div>

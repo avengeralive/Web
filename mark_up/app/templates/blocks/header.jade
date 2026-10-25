@@ -1,0 +1,27 @@
+block header
+
+// ! JADE DONT PRETTIFY INLINE HTML ELEMENTS
+
+header.header
+	.container-mobile-full
+		a#menu-toggle(href=""): span
+		// /menu-toggle
+		a.logo(href=""): img(src="img/logo.svg" width="80" height="80" alt="")
+		nav.main-nav
+			+mainMenu([
+				['Услуги', 'index.html'],
+				['Портфолио', 'index.html'],
+				['Компания', 'index.html'],
+				['Контакты', 'index.html']
+			])
+		// /nav.main-nav
+		.contact-info
+			.tels Мск:  (495) 215 51 82 #[br] СПб: (812) 242 80 58 
+			.request-call
+				a.request-call-btn(href="" data-toggle="modal" data-target="#modal-1")
+					.icon.Phone_head
+					span Заказать #[br] звонок
+			// /request-call
+		// /contact-info
+	// /container-mobile-full
+// /header

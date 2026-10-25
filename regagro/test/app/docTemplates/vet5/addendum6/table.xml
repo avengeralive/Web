@@ -1,0 +1,83 @@
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:w="0" w:type="auto"/>
+							<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2137"/>
+							<w:gridCol w:w="1973"/>
+							<w:gridCol w:w="1459"/>
+							<w:gridCol w:w="1931"/>
+							<w:gridCol w:w="2071"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="00A07F13" w:rsidTr="0037034A">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2093" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRPr="0006783B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="0006783B">
+										<w:t>Название группы продукции в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2410" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название группы исследований в отчете</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1842" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название исследований</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1678" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Результат исследований</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1548" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Количество исследований</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>
+					<w:p w:rsidR="00AB532B" w:rsidRDefault="00AB532B"/>

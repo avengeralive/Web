@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-02-14 10:56+0300\n"
+"PO-Revision-Date: 2017-03-02 10:06+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;gettext\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: layout\n"
+
+#: ext/Config.js:26
+msgid "Настройки магазина"
+msgstr "Shop setup"
+
+#: ext/Config.js:34
+msgid "Язык"
+msgstr "Language"
+
+#: ext/Config.js:40
+msgid "Раздел каталога товаров"
+msgstr "Goods section"
+
+#: ext/Config.js:46
+msgid "Логотип"
+msgstr "Logo"
+
+#: ext/Config.js:55
+msgid "Телефон"
+msgstr "Phone"
+
+#: ext/Config.js:61
+msgid "Адрес"
+msgstr "Address"
+
+#: ext/Config.js:64
+msgid "Дополнительный CSS"
+msgstr "Additional CSS"
+
+#: ext/Config.js:71
+msgid "Дополнительный JS"
+msgstr "Additional JS"
+
+#: ext/Config.js:78
+msgid "Файлы"
+msgstr "Files"
+
+#: ext/Config.js:89
+msgid "Главный шаблон"
+msgstr "Main template"
+
+#: ext/Config.js:94
+msgid "Главный CSS"
+msgstr "Main CSS"
+
+#: ext/Config.js:102
+msgid "Левая колонка каталога"
+msgstr "Left catalog column"
+
+#: ext/Config.js:111
+msgid "Шаблоны страниц"
+msgstr "Page templates"
+
+#: ext/Config.js:124
+msgid "Главная страница"
+msgstr "Home page"
+
+#: ext/Config.js:129
+msgid "Страница каталога"
+msgstr "Catalog page"
+
+#: ext/Config.js:134
+msgid "Страница корзины"
+msgstr "Basket page"
+
+#: ext/Config.js:139
+msgid "Страница заказа"
+msgstr "Order status page"
+
+#: ext/Config.js:144
+msgid "Страница раздела"
+msgstr "Section page"
+
+#: ext/Config.js:149
+msgid "Страница поиска"
+msgstr "Search page"
+
+#: ext/Config.js:154
+msgid "Страница новостей"
+msgstr "News page"
+
+#: ext/Config.js:165
+msgid "Коды и счетчики"
+msgstr "Codes and counters"
+
+#: ext/Config.js:177
+msgid "Код в HEAD"
+msgstr "HEAD code"
+
+#: ext/Config.js:185
+msgid "Код будет добавлен внутри тега"
+msgstr "This code will be inserted inside"
+
+#: ext/Config.js:187
+msgid "Код счетчиков"
+msgstr "Counters code"
+
+#: install.php:49 install.php:56
+msgid "Установка плагина"
+msgstr "Plugin installation"
+
+#: design/block_left_column.twig:2
+msgid "Всего товаров"
+msgstr "Total"
+
+#: design/block_left_column.twig:6
+msgid "Отзывы о нас на"
+msgstr "Reviews about us on"
+
+#: design/layout.twig:38 design/page_personal.twig:21
+msgid "Любимые товары"
+msgstr "Favorite products"
+
+#: design/layout.twig:120
+msgid "Принимаем к оплате"
+msgstr "Accept payment"
+
+#: design/layout.twig:129
+msgid "Создание сайта"
+msgstr "Site created by"
+
+#: design/page_catalog.twig:20
+msgid "Характеристики"
+msgstr "Characteristics"
+
+#: design/page_login.twig:9
+msgid "Вход"
+msgstr "Sign in"
+
+#: design/page_login.twig:10
+msgid "Регистрация"
+msgstr "Registration"
+
+#: design/page_personal.twig:10
+msgid "Личный кабинет"
+msgstr "Personal account"
+
+#: design/page_personal.twig:18
+msgid "Личные данные"
+msgstr "Personal data"
+
+#: design/page_personal.twig:19
+msgid "Список заказов"
+msgstr "Order list"
+
+#: design/page_recover-password.twig:8
+msgid "Восстановить пароль"
+msgstr "Restore password"
+
+#: design/page_recover-password.twig:9
+msgid ""
+"Введите адрес электронной почты (email), указанный при регистрации. Вы "
+"получите новый пароль."
+msgstr "Enter your registration email, and we'll send you new password."
+
+#: design/page_recover-password.twig:11
+msgid "Вернуться"
+msgstr "Back"
+
+#: design/page_search.twig:3
+msgid "Поиск"
+msgstr "Search"
+
+#: design/page_search.twig:9
+msgid "Главная"
+msgstr "Home"
+
+#: widgets/_common/page404.twig:2
+msgid "Ошибка 404: страница не найдена"
+msgstr "Error 404: Page Not Found"
+
+#: widgets/_common/page404.twig:7
+msgid "К сожалению, запрашиваемый Вами документ не найден на этом сервере."
+msgstr ""
+"Unfortunately, the requested вщсгьуте was not found on this server."
+
+#: widgets/_common/page404.twig:8
+msgid "Наиболее частые причины, приводящие к данной ошибке, следующие:"
+msgstr "The most common cause leading to this error the following:"
+
+#: widgets/_common/page404.twig:10
+msgid "переход по ошибочной ссылке;"
+msgstr "wrong link;"
+
+#: widgets/_common/page404.twig:11
+msgid "неправильный ввод адреса."
+msgstr "wrong address entered."
+
+#: widgets/_common/page404.twig:13
+msgid "Решения:"
+msgstr "Solutions:"
+
+#: widgets/_common/page404.twig:15
+msgid "исправьте адрес, ошибочно набранный в адресной строке браузера;"
+msgstr "check address, mistakenly typed in the browser address bar;"
+
+#: widgets/_common/page404.twig:16
+msgid ""
+"попробуйте начать поиск необходимого материала с <a href=\"/\">главной "
+"страницы нашего сайта</a>."
+msgstr ""
+"try to start the search of necessary material from <a href=\"/\"> the "
+"homepage of our website </a>."
+
+#~ msgid "Настройки шаблона"
+#~ msgstr "Template setup"
+
+#~ msgid "Страница 404"
+#~ msgstr "Page 404"
+
+#~ msgid "Мы на связи"
+#~ msgstr "Contact us"
+
+#~ msgid "Алена Петрова"
+#~ msgstr "Alena Petrova"
+
+#~ msgid "Менеджер по продажам"
+#~ msgstr "Sales manager"
+
+#~ msgid "Мария Иванова"
+#~ msgstr "Marya Ivamoto"
+
+#~ msgid "Менеджер по маркетингу"
+#~ msgstr "Marketing director"
+
+#~ msgid "Наш адрес"
+#~ msgstr "Address"
+
+#~ msgid "График работы"
+#~ msgstr "Work time"
+
+#~ msgid "Понедельник-пятница"
+#~ msgstr "Mon-Fri"
+
+#~ msgid "Календарь событий"
+#~ msgstr "Calendar"

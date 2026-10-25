@@ -1,0 +1,2758 @@
+/* Product Labels */
+.tag span {
+  &.hit {
+    background: #F12717;
+  }
+  &.sale {
+    background: #6ECA49;
+  }
+}
+
+.module .product-layout .product-thumb .tag span {
+  display: block;
+  color: white;
+  font-size: $product-label-font-size;
+  font-weight: $product-label-font-weight;
+  text-transform: uppercase;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  right: auto; // do not remove
+}
+.product-layout .product-thumb .tag span {
+  display: block;
+  color: white;
+  font-size: $product-label-font-size;
+  font-weight: $product-label-font-weight;
+  text-transform: uppercase;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  right: auto; // do not remove
+}
+
+.product-thumb_top {
+  position: relative;
+}
+
+//------------------- YK -----------------------//
+
+//---------------- THUMBNAIL ------------------//
+
+
+.thumbnail {
+
+  .tag {
+
+    &.label-top-left,
+    &.label-bottom-left {
+
+      &.b-ribbon span:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        right: -9px;
+        background: inherit;
+        width: 28px;
+        height: 30px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(-35deg);
+      }
+
+      &.b-ribbon span:after {
+        content: '';
+        position: absolute;
+        top: 13px;
+        right: -9px;
+        background: inherit;
+        width: 28px;
+        height: 30px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(35deg);
+      }
+
+    }
+
+    &.label-top-right,
+    &.label-bottom-right {
+      &.b-ribbon span:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -8px;
+        background: inherit;
+        width: 20px;
+        height: 25px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(35deg);
+      }
+
+      &.b-ribbon span:after {
+        content: '';
+        position: absolute;
+        top: 26px;
+        left: -9px;
+        background: inherit;
+        width: 28px;
+        height: 18px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(-35deg);
+
+      }
+
+    }
+  }
+
+  .tag {
+    font-size: 11px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 9;
+    transition: 0.1s ease-in-out;
+
+    &.stripes {
+      width: 85px;
+      height: 85px;
+    }
+
+    &.corner {
+      span {
+        padding: 0 0 30px 0;
+      }
+    }
+
+    &.label-top-left {
+      left: 0;
+      top: 0;
+
+      span {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+        right: auto;
+      }
+
+      &.stripes {
+        width: 115px !important;
+        height: 115px !important;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 12;
+
+        span {
+          font-size: 10px;
+          left: -42px;
+          top: 20px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(-45deg);
+        }
+
+      }
+
+      &.corner {
+        left: 0;
+        top: 0;
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          font-size: 18px;
+          display: inline-block;
+          padding: 50px 5px 10px;
+          transform: rotate(-45deg);
+          width: 150px;
+          height: 76px;
+          left: -59px;
+          top: -24px;
+        }
+      }
+
+      &.b-ribbon {
+        left: 0;
+        top: 55px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 25px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+
+    }
+
+    &.label-top-right {
+
+      span {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+        right: auto;
+      }
+
+      &.stripes {
+        width: 115px !important;
+        height: 115px !important;
+        left: auto;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 12;
+
+        span {
+          font-size: 10px;
+          left: 9px;
+          top: 18px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(45deg);
+        }
+
+      }
+
+      &.corner {
+        left: auto;
+        top: 0;
+        right: 0;
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          left: auto;
+          top: -25px;
+          right: -60px;
+          font-size: 18px;
+          display: inline-block;
+          padding: 50px 5px 10px;
+          transform: rotate(45deg);
+          width: 150px;
+          height: 76px;
+        }
+      }
+
+      &.b-ribbon {
+        left: auto;
+        top: 55px;
+        right: 0;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: auto;
+          top: 0;
+          right: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 30px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+    }
+
+    &.label-bottom-left {
+      left: 0;
+      top: auto;
+      right: auto;
+      bottom: 0;
+
+
+      span {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+        right: auto;
+      }
+
+      /*---- ЛЕНТОЧКА ----*/
+
+      &.stripes {
+        z-index: 10;
+
+        span {
+          font-size: 10px;
+          left: -42px;
+          top: 40px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(45deg);
+        }
+
+      }
+      /*---- УГОЛОК ----*/
+      &.corner {
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          top: 30px;
+          left: -64px;
+          font-size: 18px;
+          display: inline-block;
+          width: 150px;
+          padding: 10px 0 65px;
+          transform: rotate(45deg);
+        }
+      }
+
+      /*---- ФЛАЖОК ----*/
+
+      &.b-ribbon {
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 30px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+    }
+
+    &.label-bottom-right {
+      left: auto;
+      top: auto;
+      right: 0;
+      bottom: 0;
+
+      span {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+      }
+
+      &.b-ribbon {
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: auto;
+          top: 0;
+          right: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 30px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+      }
+
+      &.stripes {
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+
+        span {
+          font-size: 10px;
+          left: -22px;
+          top: 38px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(-45deg);
+        }
+
+      }
+
+      &.corner {
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          left: auto;
+          top: 35px;
+          right: -54px;
+          font-size: 18px;
+          display: inline-block;
+          width: 150px;
+          padding: 10px 0 36px;
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+//--------------------------------------------//
+
+/*---- ХВОСТИКИ ----*/
+/*------------------*/
+
+.product-list .product-thumb {
+
+  /*---- ХВОСТИКИ ----*/
+
+  .tag {
+
+    &.label-top-left,
+    &.label-bottom-left {
+
+      &.b-ribbon span:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        right: -8px;
+        background: inherit;
+        width: 20px;
+        height: 25px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(-35deg);
+      }
+
+      &.b-ribbon span:after {
+        content: '';
+        position: absolute;
+        top: 26px;
+        right: -9px;
+        background: inherit;
+        width: 28px;
+        height: 18px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(35deg);
+      }
+
+    }
+
+    &.label-top-right,
+    &.label-bottom-right {
+      &.b-ribbon span:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -8px;
+        background: inherit;
+        width: 20px;
+        height: 25px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(35deg);
+      }
+
+      &.b-ribbon span:after {
+        content: '';
+        position: absolute;
+        top: 26px;
+        left: -9px;
+        background: inherit;
+        width: 28px;
+        height: 18px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(-35deg);
+
+      }
+
+    }
+  }
+
+  /*------------------*/
+
+  .tag {
+    font-size: 11px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    transition: 0.1s ease-in-out;
+
+    &.stripes {
+      width: 85px;
+      height: 85px;
+    }
+
+    &.corner {
+      span {
+        padding: 0 0 30px 0;
+      }
+    }
+
+    &.label-top-left {
+      left: 0;
+      top: 0;
+
+      span {
+        padding: 30px 0 1px 0;
+        transform: rotate(-45deg);
+      }
+
+      &.stripes {
+        width: 115px !important;
+        height: 115px !important;
+        left: -1px;
+        top: -1px;
+        overflow: hidden;
+        z-index: 12;
+
+        span {
+          font-size: 10px;
+          left: -45px;
+          top: 17px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(-45deg);
+        }
+
+      }
+
+      &.corner {
+        left: -1px;
+        top: -1px;
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          font-size: 18px;
+          display: inline-block;
+          padding: 50px 5px 10px;
+          transform: rotate(-45deg);
+          width: 150px;
+          height: 76px;
+          left: -62px;
+          top: -27px;
+        }
+      }
+
+      &.b-ribbon {
+        left: -1px;
+        top: 30px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+
+    }
+
+    &.label-top-right {
+      right: 0;
+      top: -1px;
+      left: auto;
+      overflow: hidden;
+      z-index: 12;
+
+      span {
+        padding: 30px 0 1px 0;
+        transform: rotate(45deg);
+
+      }
+
+      &.stripes {
+        width: 115px ;
+        height: 115px;
+
+        span {
+          font-size: 10px;
+          left: 9px;
+          top: 18px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(45deg);
+        }
+
+      }
+
+      &.corner {
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          left: auto;
+          top: -26px;
+          right: -64px;
+          font-size: 18px;
+          display: inline-block;
+          padding: 50px 5px 10px;
+          transform: rotate(45deg);
+          width: 150px;
+          height: 76px;
+        }
+      }
+
+      &.b-ribbon {
+        left: auto;
+        right: 0;
+        top: 30px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: auto;
+          top: 0;
+          right: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+    }
+
+    &.label-bottom-left {
+
+      /*---- ЛЕНТОЧКА ----*/
+      &.stripes {
+        top: auto;
+        left: -1px;
+        bottom: -1px;
+        z-index: 10;
+
+        span {
+          font-size: 10px;
+          left: -42px;
+          top: 40px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(45deg);
+        }
+
+      }
+
+      /*---- УГОЛОК ----*/
+      &.corner {
+        top:auto;
+        left: -1px;
+        bottom: -1px;
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          top: 34px;
+          left: -67px;
+          font-size: 18px;
+          display: inline-block;
+          width: 150px;
+          padding: 10px 0 65px;
+          transform: rotate(45deg);
+        }
+      }
+
+      /*---- ФЛАЖОК ----*/
+      &.b-ribbon {
+        top: auto;
+        left: -1px;
+        bottom: -6px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+    }
+
+    &.label-bottom-right {
+
+
+      span {
+        bottom: auto;
+        padding: 30px 0 1px 0;
+      }
+
+      &.b-ribbon {
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: -6px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: auto;
+          right: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+      }
+
+      &.stripes {
+        left: auto;
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        z-index: 10;
+
+
+        span {
+          font-size: 10px;
+          left: -22px;
+          top: 42px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(-45deg);
+        }
+
+      }
+
+      &.corner {
+        left: auto;
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          left: auto;
+          top: 39px;
+          right: -56px;
+          font-size: 18px;
+          display: inline-block;
+          width: 150px;
+          padding: 10px 0 36px;
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+  }
+
+}
+
+.product-grid .product-thumb {
+
+
+  /*---- ХВОСТИКИ ----*/
+
+  .tag {
+
+    &.label-top-left,
+    &.label-bottom-left {
+
+      &.b-ribbon span:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        right: -8px;
+        background: inherit;
+        width: 20px;
+        height: 25px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(-35deg);
+      }
+
+      &.b-ribbon span:after {
+        content: '';
+        position: absolute;
+        top: 26px;
+        right: -9px;
+        background: inherit;
+        width: 28px;
+        height: 18px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(35deg);
+      }
+
+    }
+
+    &.label-top-right,
+    &.label-bottom-right {
+      &.b-ribbon span:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -8px;
+        background: inherit;
+        width: 20px;
+        height: 25px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(35deg);
+      }
+
+      &.b-ribbon span:after {
+        content: '';
+        position: absolute;
+        top: 26px;
+        left: -9px;
+        background: inherit;
+        width: 28px;
+        height: 18px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(-35deg);
+
+      }
+
+    }
+  }
+
+  /*------------------*/
+
+  .tag {
+    font-size: 11px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    transition: 0.1s ease-in-out;
+
+    &.stripes {
+      width: 85px;
+      height: 85px;
+    }
+
+    &.corner {
+      span {
+        padding: 0 0 30px 0;
+      }
+    }
+
+    &.label-top-left {
+
+
+      span {
+        padding: 30px 0 1px 0;
+        transform: rotate(-45deg);
+      }
+
+      &.stripes {
+        width: 115px !important;
+        height: 115px !important;
+        left: -15px;
+        top: -10px;
+        @media (max-width: 991px) {
+          left: 0;
+          top: 0;
+        }
+        overflow: hidden;
+        z-index: 12;
+
+        span {
+          font-size: 10px;
+          left: -45px;
+          top: 17px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(-45deg);
+        }
+
+      }
+
+      &.corner {
+        left: -15px;
+        top: -10px;
+        @media (max-width: 991px) {
+          left: 0;
+          top: 0;
+        }
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          font-size: 18px;
+          display: inline-block;
+          padding: 50px 5px 10px;
+          transform: rotate(-45deg);
+          width: 150px;
+          height: 76px;
+          left: -62px;
+          top: -27px;
+        }
+      }
+
+      &.b-ribbon {
+        left: -15px;
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 0;
+
+        }
+        top: 5px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+
+    }
+
+    &.label-top-right {
+
+      span {
+        padding: 30px 0 1px 0;
+        transform: rotate(45deg);
+
+      }
+
+      &.stripes {
+        width: 115px !important;
+        height: 115px !important;
+        right: -15px;
+        top: -10px;
+        @media (max-width: 991px) {
+          right: 0;
+          top: 0;
+        }
+        overflow: hidden;
+        z-index: 12;
+
+        span {
+          font-size: 10px;
+          left: 9px;
+          top: 18px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(45deg);
+        }
+
+      }
+
+      &.corner {
+        left: auto;
+        top: -10px;
+        right: -15px;
+        @media (max-width: 991px) {
+          top: 0;
+          right: 0;
+        }
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 94;
+
+        span {
+          left: auto;
+          top: -26px;
+          right: -64px;
+          font-size: 18px;
+          display: inline-block;
+          padding: 50px 5px 10px;
+          transform: rotate(45deg);
+          width: 150px;
+          height: 76px;
+        }
+      }
+
+      &.b-ribbon {
+        left: auto;
+        top: 5px;
+        right: -15px;
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 0;
+
+        }
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: auto;
+          top: 0;
+          right: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+    }
+
+    &.label-bottom-left {
+
+      /*---- ЛЕНТОЧКА ----*/
+
+      &.stripes {
+        left: -15px;
+        bottom: 0;
+        @media (max-width: 991px) {
+          left: 0;
+          bottom: 0;
+        }
+        z-index: 10;
+
+        span {
+          font-size: 10px;
+          left: -42px;
+          top: 40px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(45deg);
+        }
+
+      }
+      /*---- УГОЛОК ----*/
+      &.corner {
+        left: -15px;
+        bottom: 0;
+        @media (max-width: 991px) {
+          left: 0;
+        }
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          top: 34px;
+          left: -67px;
+          font-size: 18px;
+          display: inline-block;
+          width: 150px;
+          padding: 10px 0 65px;
+          transform: rotate(45deg);
+        }
+      }
+
+      /*---- ФЛАЖОК ----*/
+
+      &.b-ribbon {
+        left: -15px;
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 0;
+
+        }
+        top: 150px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+
+      }
+
+    }
+
+    &.label-bottom-right {
+
+
+      span {
+        bottom: auto;
+        padding: 30px 0 1px 0;
+      }
+
+      &.b-ribbon {
+        right: -15px;
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 0;
+
+        }
+        top: 150px;
+        width: 130px;
+        height: 70px;
+        overflow: visible;
+        z-index: 15;
+
+        span {
+          left: auto;
+          top: 0;
+          right: 0;
+          z-index: 9;
+          display: inline-block;
+          width: auto;
+          padding: 13px 20px;
+          transform: rotate(0deg);
+          font-size: 10px;
+
+        }
+      }
+
+      &.stripes {
+        right: -15px;
+        bottom: 0;
+        @media (max-width: 991px) {
+          right: 0;
+          bottom: 0;
+        }
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+
+        span {
+          font-size: 10px;
+          left: -22px;
+          top: 42px;
+          padding: 6px;
+          display: inline-block;
+          width: 150px;
+          transform: rotate(-45deg);
+        }
+
+      }
+
+      &.corner {
+        right: -15px;
+        bottom: 0;
+        @media (max-width: 991px) {
+          right: 0;
+        }
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        z-index: 9;
+
+        span {
+          left: auto;
+          top: 39px;
+          right: -56px;
+          font-size: 18px;
+          display: inline-block;
+          width: 150px;
+          padding: 10px 0 36px;
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+  }
+
+}
+
+.product-table .product-thumb {
+
+  /*---- ХВОСТИКИ ----*/
+
+  .tag {
+
+    &.label-top-left,
+    &.label-bottom-left,
+    &.label-top-right,
+    &.label-bottom-right {
+
+      &.corner span:before,
+      &.stripes span:before,
+      &.b-ribbon span:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -9px;
+        background: inherit;
+        width: 16px;
+        height: 20px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(-35deg);
+      }
+
+      &.corner span:after,
+      &.stripes span:after,
+      &.b-ribbon span:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -9px;
+        background: inherit;
+        width: 16px;
+        height: 20px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        transform: skew(35deg);
+      }
+
+    }
+
+  }
+
+  /*------------------*/
+
+  .tag {
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    transition: 0.1s ease-in-out;
+
+    &.label-top-left {
+      left: 70px;
+      top: auto;
+      bottom: -1px;
+
+      span {
+        top: auto;
+        bottom: 0;
+        width: 83px;
+      }
+
+      &.stripes {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 6px 6px;
+          transform: rotate(0deg);
+        }
+
+      }
+
+      &.corner {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 19px 6px;
+          transform: rotate(0deg);
+
+        }
+      }
+
+      &.b-ribbon {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 6px 15px 5px;
+          transform: rotate(0deg);
+
+        }
+      }
+
+    }
+
+    &.label-top-right {
+      left: 185px;
+      top: auto;
+      bottom: -1px;
+
+      span {
+        top: auto;
+        bottom: 0;
+        width: 83px;
+      }
+
+      &.stripes {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 6px 6px;
+          transform: rotate(0deg);
+        }
+
+      }
+
+      &.corner {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 19px 6px;
+          transform: rotate(0deg);
+
+        }
+      }
+
+      &.b-ribbon {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 6px 15px 5px;
+          transform: rotate(0deg);
+
+        }
+      }
+    }
+
+    &.label-bottom-left {
+      left: 414px;
+      top: auto;
+      bottom: -1px;
+
+      span {
+        top: auto;
+        bottom: 0;
+        width: 83px;
+      }
+
+      &.stripes {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 6px 6px;
+          transform: rotate(0deg);
+        }
+
+      }
+
+      &.corner {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 19px 6px;
+          transform: rotate(0deg);
+
+        }
+      }
+
+      &.b-ribbon {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 6px 15px 5px;
+          transform: rotate(0deg);
+
+        }
+      }
+
+    }
+
+    &.label-bottom-right {
+      left: 299px;
+      top: auto;
+      bottom: -1px;
+
+      span {
+        top: auto;
+        bottom: 0;
+        width: 83px;
+      }
+
+      &.stripes {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 6px 6px;
+          transform: rotate(0deg);
+        }
+
+      }
+
+      &.corner {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 5px 19px 6px;
+          transform: rotate(0deg);
+
+        }
+      }
+
+      &.b-ribbon {
+        width: 80px;
+        height: 27px;
+        overflow: visible;
+        z-index: 9;
+
+        span {
+          font-size: 8px;
+          display: inline-block;
+          padding: 6px 15px 5px;
+          transform: rotate(0deg);
+
+        }
+      }
+
+    }
+
+  }
+}
+
+@media screen and  (max-width: 767px) and (min-width: 300px) {
+
+  .product-layout.product-table .product-thumb {
+    min-height: 90px !important;
+    max-height: 150px !important;
+    height: auto !important;
+
+  }
+
+
+  .product-list .product-thumb {
+
+    /*---- ХВОСТИКИ ----*/
+
+    .tag {
+
+      &.label-top-left,
+      &.label-bottom-left {
+
+        &.b-ribbon span:before {
+          content: '';
+          position: absolute;
+          top: 4px;
+          right: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(-35deg);
+        }
+
+        &.b-ribbon span:after {
+          content: '';
+          position: absolute;
+          top: 13px;
+          right: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(35deg);
+        }
+
+      }
+
+      &.label-top-right,
+      &.label-bottom-right {
+        &.b-ribbon span:before {
+          content: '';
+          position: absolute;
+          top: 4px;
+          left: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(35deg);
+        }
+
+        &.b-ribbon span:after {
+          content: '';
+          position: absolute;
+          top: 13px;
+          left: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(-35deg);
+
+        }
+
+      }
+    }
+
+    /*------------------*/
+
+    .tag {
+      font-size: 11px;
+      position: absolute;
+      overflow: hidden;
+      z-index: 10;
+      transition: 0.1s ease-in-out;
+
+      &.stripes {
+        width: 85px;
+        height: 85px;
+      }
+
+      &.corner {
+        span {
+          padding: 0 0 30px 0;
+        }
+      }
+
+      &.label-top-left {
+        left: 0;
+        top: 0;
+
+        span {
+          padding: 30px 0 1px 0;
+          transform: rotate(-45deg);
+        }
+
+        &.stripes {
+          width: 115px !important;
+          height: 115px !important;
+          left: 0;
+          top: 0;
+          overflow: hidden;
+          z-index: 12;
+
+          span {
+            font-size: 10px;
+            left: -45px;
+            top: 17px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(-45deg);
+          }
+
+        }
+
+        &.corner {
+          left: 0;
+          top: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            font-size: 18px;
+            display: inline-block;
+            padding: 50px 5px 10px;
+            transform: rotate(-45deg);
+            width: 150px;
+            height: 76px;
+            left: -62px;
+            top: -27px;
+          }
+        }
+
+        &.b-ribbon {
+          left: 0;
+          top: 55px;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            z-index: 9;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+
+        }
+
+
+      }
+
+      &.label-top-right {
+
+        span {
+          padding: 30px 0 1px 0;
+          transform: rotate(45deg);
+
+        }
+
+        &.stripes {
+          width: 115px !important;
+          height: 115px !important;
+          left: auto;
+          top: 0;
+          right: 0;
+          overflow: hidden;
+          z-index: 12;
+
+          span {
+            font-size: 10px;
+            left: 9px;
+            top: 18px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(45deg);
+          }
+
+        }
+
+        &.corner {
+          left: auto;
+          top: 0;
+          right: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            left: auto;
+            top: -26px;
+            right: -64px;
+            font-size: 18px;
+            display: inline-block;
+            padding: 50px 5px 10px;
+            transform: rotate(45deg);
+            width: 150px;
+            height: 76px;
+          }
+        }
+
+        &.b-ribbon {
+          left: auto;
+          top: 55px;
+          right: 0;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            left: auto;
+            top: 0;
+            right: 0;
+            z-index: 9;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+
+        }
+
+      }
+
+      &.label-bottom-left {
+
+        /*---- ЛЕНТОЧКА ----*/
+
+        &.stripes {
+          left: 0;
+          right: auto;
+          bottom: 0;
+          z-index: 10;
+
+          span {
+            font-size: 10px;
+            left: -42px;
+            top: 40px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(45deg);
+          }
+
+        }
+        /*---- УГОЛОК ----*/
+        &.corner {
+          left: 0;
+          right: auto;
+          bottom: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            top: 34px;
+            left: -67px;
+            font-size: 10px;
+            display: inline-block;
+            width: 150px;
+            padding: 10px 0 65px;
+            transform: rotate(45deg);
+          }
+        }
+
+        /*---- ФЛАЖОК ----*/
+
+        &.b-ribbon {
+          left: 0;
+          top: 150px;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            z-index: 9;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+
+        }
+
+      }
+
+      &.label-bottom-right {
+
+
+        span {
+          bottom: auto;
+          padding: 30px 0 1px 0;
+        }
+
+        &.b-ribbon {
+          left: auto;
+          right: 0;
+          top: 150px;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            left: auto;
+            top: 0;
+            right: 0;
+            z-index: 94;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+        }
+
+        &.stripes {
+          left: auto;
+          right: 0;
+          bottom: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+
+          span {
+            font-size: 10px;
+            left: -22px;
+            top: 42px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(-45deg);
+          }
+
+        }
+
+        &.corner {
+          left: auto;
+          right: 0;
+          bottom: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            left: auto;
+            top: 39px;
+            right: -56px;
+            font-size: 10px;
+            display: inline-block;
+            width: 150px;
+            padding: 10px 0 36px;
+            transform: rotate(-45deg);
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .product-grid .product-thumb {
+
+
+    /*---- ХВОСТИКИ ----*/
+
+    .tag {
+
+      &.label-top-left,
+      &.label-bottom-left {
+
+        &.b-ribbon span:before {
+          content: '';
+          position: absolute;
+          top: 4px;
+          right: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(-35deg);
+        }
+
+        &.b-ribbon span:after {
+          content: '';
+          position: absolute;
+          top: 13px;
+          right: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(35deg);
+        }
+
+      }
+
+      &.label-top-right,
+      &.label-bottom-right {
+        &.b-ribbon span:before {
+          content: '';
+          position: absolute;
+          top: 4px;
+          left: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(35deg);
+        }
+
+        &.b-ribbon span:after {
+          content: '';
+          position: absolute;
+          top: 13px;
+          left: -9px;
+          background: inherit;
+          width: 28px;
+          height: 30px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(-35deg);
+
+        }
+
+      }
+    }
+
+    /*------------------*/
+
+    .tag {
+      font-size: 11px;
+      position: absolute;
+      overflow: hidden;
+      z-index: 10;
+      transition: 0.1s ease-in-out;
+
+      &.stripes {
+        width: 85px;
+        height: 85px;
+      }
+
+      &.corner {
+        span {
+          padding: 0 0 30px 0;
+        }
+      }
+
+      &.label-top-left {
+        left: 0;
+        top: 0;
+
+        span {
+          padding: 30px 0 1px 0;
+          transform: rotate(-45deg);
+        }
+
+        &.stripes {
+          width: 115px !important;
+          height: 115px !important;
+          left: 0;
+          top: 0;
+          overflow: hidden;
+          z-index: 12;
+
+          span {
+            font-size: 10px;
+            left: -45px;
+            top: 17px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(-45deg);
+          }
+
+        }
+
+        &.corner {
+          left: 0;
+          top: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            font-size: 18px;
+            display: inline-block;
+            padding: 50px 5px 10px;
+            transform: rotate(-45deg);
+            width: 150px;
+            height: 76px;
+            left: -62px;
+            top: -27px;
+          }
+        }
+
+        &.b-ribbon {
+          left: 0;
+          top: 55px;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            z-index: 9;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+
+        }
+
+
+      }
+
+      &.label-top-right {
+
+        span {
+          padding: 30px 0 1px 0;
+          transform: rotate(45deg);
+
+        }
+
+        &.stripes {
+          width: 115px !important;
+          height: 115px !important;
+          left: auto;
+          top: 0;
+          right: 0;
+          overflow: hidden;
+          z-index: 12;
+
+          span {
+            font-size: 10px;
+            left: 9px;
+            top: 18px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(45deg);
+          }
+
+        }
+
+        &.corner {
+          left: auto;
+          top: 0;
+          right: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            left: auto;
+            top: -26px;
+            right: -64px;
+            font-size: 18px;
+            display: inline-block;
+            padding: 50px 5px 10px;
+            transform: rotate(45deg);
+            width: 150px;
+            height: 76px;
+          }
+        }
+
+        &.b-ribbon {
+          left: auto;
+          top: 55px;
+          right: 0;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            left: auto;
+            top: 0;
+            right: 0;
+            z-index: 9;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+
+        }
+
+      }
+
+      &.label-bottom-left {
+
+        /*---- ЛЕНТОЧКА ----*/
+
+        &.stripes {
+          left: 0;
+          right: auto;
+          bottom: 0;
+          z-index: 10;
+
+          span {
+            font-size: 10px;
+            left: -42px;
+            top: 40px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(45deg);
+          }
+
+        }
+        /*---- УГОЛОК ----*/
+        &.corner {
+          left: 0;
+          right: auto;
+          bottom: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            top: 34px;
+            left: -67px;
+            font-size: 10px;
+            display: inline-block;
+            width: 150px;
+            padding: 10px 0 65px;
+            transform: rotate(45deg);
+          }
+        }
+
+        /*---- ФЛАЖОК ----*/
+
+        &.b-ribbon {
+          left: 0;
+          top: 150px;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            z-index: 9;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+
+        }
+
+      }
+
+      &.label-bottom-right {
+
+
+        span {
+          bottom: auto;
+          padding: 30px 0 1px 0;
+        }
+
+        &.b-ribbon {
+          right: 0;
+          top: 150px;
+          width: 130px;
+          height: 70px;
+          overflow: visible;
+          z-index: 15;
+
+          span {
+            left: auto;
+            top: 0;
+            right: 0;
+            z-index: 9;
+            display: inline-block;
+            width: auto;
+            padding: 13px 30px;
+            transform: rotate(0deg);
+            font-size: 10px;
+
+          }
+        }
+
+        &.stripes {
+          left: auto;
+          right: 0;
+          bottom: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+
+          span {
+            font-size: 10px;
+            left: -22px;
+            top: 42px;
+            padding: 6px;
+            display: inline-block;
+            width: 150px;
+            transform: rotate(-45deg);
+          }
+
+        }
+
+        &.corner {
+          left: auto;
+          right: 0;
+          bottom: 0;
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+          z-index: 9;
+
+          span {
+            left: auto;
+            top: 39px;
+            right: -56px;
+            font-size: 10px;
+            display: inline-block;
+            width: 150px;
+            padding: 10px 0 36px;
+            transform: rotate(-45deg);
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .product-table .product-thumb {
+
+    /*---- ХВОСТИКИ ----*/
+
+    .tag {
+
+      &.label-top-left,
+      &.label-bottom-left,
+      &.label-top-right,
+      &.label-bottom-right {
+
+        &.b-ribbon span:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -9px;
+          background: inherit;
+          width: 18px;
+          height: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(-35deg);
+        }
+
+        &.b-ribbon span:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -9px;
+          background: inherit;
+          width: 18px;
+          height: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(35deg);
+        }
+
+        &.corner span:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -9px;
+          background: inherit;
+          width: 18px;
+          height: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(-35deg);
+        }
+
+        &.corner span:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -9px;
+          background: inherit;
+          width: 18px;
+          height: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(35deg);
+        }
+
+        &.stripes span:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -9px;
+          background: inherit;
+          width: 18px;
+          height: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(-35deg);
+        }
+
+        &.stripes span:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -9px;
+          background: inherit;
+          width: 18px;
+          height: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          transform: skew(35deg);
+
+        }
+      }
+
+    }
+
+    /*------------------*/
+
+    .tag {
+      position: absolute;
+      overflow: hidden;
+      z-index: 10;
+      transition: 0.1s ease-in-out;
+
+      &.label-top-left {
+        left: 70px;
+        top: auto;
+        bottom: -1px;
+
+        span {
+          top: auto;
+          bottom: 0;
+          width: 83px;
+        }
+
+        &.stripes {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 6px 6px;
+            transform: rotate(0deg);
+          }
+
+        }
+
+        &.corner {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 19px 6px;
+            transform: rotate(0deg);
+
+          }
+        }
+
+        &.b-ribbon {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 6px 15px 5px;
+            transform: rotate(0deg);
+
+          }
+        }
+
+      }
+
+      &.label-top-right {
+        left: 178px;
+        top: auto;
+        bottom: -1px;
+
+        span {
+          top: auto;
+          bottom: 0;
+          width: 83px;
+        }
+
+        &.stripes {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 6px 6px;
+            transform: rotate(0deg);
+          }
+
+        }
+
+        &.corner {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 19px 6px;
+            transform: rotate(0deg);
+
+          }
+        }
+
+        &.b-ribbon {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 6px 15px 5px;
+            transform: rotate(0deg);
+
+          }
+        }
+      }
+
+      &.label-bottom-left {
+        left: 399px;
+        top: auto;
+        bottom: -1px;
+
+        span {
+          top: auto;
+          bottom: 0;
+          width: 83px;
+        }
+
+        &.stripes {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 6px 6px;
+            transform: rotate(0deg);
+          }
+
+        }
+
+        &.corner {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 19px 6px;
+            transform: rotate(0deg);
+
+          }
+        }
+
+        &.b-ribbon {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 6px 15px 5px;
+            transform: rotate(0deg);
+
+          }
+        }
+
+      }
+
+      &.label-bottom-right {
+        left: 289px;
+        top: auto;
+        bottom: -1px;
+
+        span {
+          top: auto;
+          bottom: 0;
+          width: 83px;
+        }
+
+        &.stripes {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 6px 6px;
+            transform: rotate(0deg);
+          }
+
+        }
+
+        &.corner {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 5px 19px 6px;
+            transform: rotate(0deg);
+
+          }
+        }
+
+        &.b-ribbon {
+          width: 80px;
+          height: 27px;
+          overflow: visible;
+          z-index: 9;
+
+          span {
+            font-size: 8px;
+            display: inline-block;
+            padding: 6px 15px 5px;
+            transform: rotate(0deg);
+
+          }
+        }
+
+      }
+
+    }
+  }
+
+
+}
+
+
+/// product Table Labels
+.product-table .product-thumb {
+  .tag.stripes, .tag.b-ribbon, .tag.corner {
+    width: 105px;
+    height: auto;
+    span {
+      font-size: 11px;
+    }
+  }
+
+  .tag.b-ribbon span {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  .tag.b-ribbon span:before, .tag.b-ribbon span:after {
+    width: 10px;
+    height: 13px;
+    right: -5px;
+  }
+
+  .tag.corner {
+    width: 38px;
+    height: 38px;
+  }
+  .tag.corner span {
+    font-size: 11px;
+  }
+
+}
+@media (max-width: 1399px) and (min-width: 768px) {
+
+  .product-thumb .tag.b-ribbon span, .thumbnail .tag.b-ribbon span,
+  .product-thumb .tag.b-ribbon.label-top-right span, .thumbnail .tag.b-ribbon.label-top-right span {
+    font-size: 10px;
+  }
+
+
+  .product-thumb .tag.b-ribbon span:before, .thumbnail .tag.b-ribbon span:before,
+  .product-thumb .tag.b-ribbon span:after, .thumbnail .tag.b-ribbon span:after {
+    width: 13px;
+    height: 18px;
+  }
+
+  .tag.b-ribbon.label-top-left span:before, .tag.b-ribbon.label-top-left span:after,
+  .tag.b-ribbon.label-bottom-left span:before, .tag.b-ribbon.label-bottom-left span:after {
+    right: -6px;
+  }
+
+
+  .thumbnail .tag.b-ribbon span {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .thumbnail .tag.b-ribbon.label-bottom-right,
+  .thumbnail .tag.b-ribbon.label-bottom-left {
+    bottom: 105px;
+  }
+
+  .thumbnails.no-img .tag.b-ribbon.label-bottom-right,
+  .thumbnails.no-img .tag.b-ribbon.label-bottom-left {
+    bottom: 50px;
+  }
+
+}
+.product-list .label-top-left-wrap + .b-ribbon-wrap.label-top-left-wrap .b-ribbon,
+.product-grid .label-top-left-wrap + .b-ribbon-wrap.label-top-left-wrap .b-ribbon,
+.product-grid .label-top-right-wrap + .b-ribbon-wrap.label-top-right-wrap .b-ribbon {
+  top: 55px;
+  display: block
+}
+.thumbnail .label-top-left-wrap + .b-ribbon-wrap.label-top-left-wrap .b-ribbon,
+.thumbnail .label-top-right-wrap + .b-ribbon-wrap.label-top-right-wrap .b-ribbon {
+  top: 70px;
+  display: block
+}
+
+@media (max-width: 767px) {
+  .product-list .tag.b-ribbon {
+    &.label-top-left, &.label-top-right {
+      top: 20px;
+    }
+    &.label-bottom-left, &.label-bottom-right {
+      bottom: inherit;
+      top: 155px;
+    }
+  }
+}
+
+
+//---------------------- NV ----------------//
+
+
+@media (min-width: 768px) {
+  .product-table .product-thumb .stripes.label-top-right,
+  .product-table .product-thumb .stripes.label_top-left,
+  .product-table .product-thumb .stripes.label-bottom-left,
+  .product-table .product-thumb .stripes.label-bottom-right {
+    display: block;
+  }
+
+}
+
+
+
+@media screen and (max-width: 320px) and (min-width: 120px) {
+
+  .product-table .product-thumb .stripes.label-top-right, .product-table .product-thumb .stripes.label_top-left, .product-table .product-thumb .stripes.label-bottom-left, .product-table .product-thumb .stripes.label-bottom-right {
+    left: 108px !important;
+  }
+}
+//---------------------------------------//
+
+/* Prod Labels END */

@@ -1,0 +1,527 @@
+.modal-display-none{
+    display: none !important;
+}
+.icon-button-fix{
+    top:-3px;
+    background-image: url("/wp-content/themes/mark_up/images/sprite.png");
+}
+.modal{
+    display: none;
+}
+.modal-header button{
+    outline: none;
+}
+@media screen and (max-width: 772px){
+    .modal-width{
+        width: 470px;
+        position: relative;
+        margin: 30px auto;
+    }
+    .top_text{
+      font-size: 28px;
+    }
+    .middle_text{
+      font-size: 21px;
+    }
+    .top_text_before{
+      font-size: 21px;
+    }
+    .email_form_red{
+      font-size: 21px;
+    }
+    .whiteSquare{
+        display: none;
+    }
+    .blueSquare{
+        display: none;
+    }
+    .greenSquare{
+        display: none;
+    }
+}
+
+/* email form */
+.social-links{
+  position: relative;
+   left: -600px;
+   text-align:center;
+   padding-top:30px;
+   margin: 40px 0 20px 0;
+}
+.email-form-input input{
+    position: relative;
+    left:100px;
+}
+.email-form-input button{
+    position: relative;
+    right:100px;
+}
+.agreement{
+    text-align: center;
+    padding: 0 0 32px 0;
+    font-size: 13px;
+    letter-spacing: -0.1px;
+    top: -5px;
+    position: relative;
+}
+.email-form-input{
+    padding: 21px 0 21px 0;
+}
+.policy-link{
+    text-align: center;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+.policy-link:hover{
+    color: #fff;
+}
+.top_text_before{
+  padding:22px 0 22px 0;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 900;
+}
+.top_text{
+    font-size: 36px;
+    font-weight: 900;
+    left: -600px;
+    letter-spacing: -0.3px !important;
+    line-height: 43.9px !important;
+}
+.middle_text{
+  left:-600px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.bottom_text{
+    left: -600px;
+    font-size: 16px;
+    padding-top: 22px !important;
+    padding-right: 24px !important;
+    padding-bottom: 0px !important;
+    font-weight: 600;
+    letter-spacing: -0.01px !important;
+}
+.email_form_text_book img {
+   padding: 0px 0 20px 0;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   height: 381px;
+   width: 290px;
+   top: -47px;
+   position: relative;
+}
+.social-icon{
+    width: 48px;
+    height: 48px;
+}
+.email_form_text_book{
+    height: 246px;
+    display: none;
+}
+.form_after_email{
+    display: none;
+}
+.modal-width{
+    width:800px;
+}
+
+.modal-dialog{
+    width: 100%;
+    height:;
+    overflow: hidden;
+}
+.email_form .agreement{
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+.email_form{
+    margin-bottom: 20px;
+    padding: 0px !important;
+    display: inline-block;
+    text-align: center;
+}
+.email_form img{
+    z-index: 1000;
+    position: relative;
+    left:-600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom:12px;
+    top: -5px;
+}
+.email_form input{
+    display: inline-block;
+    width: 300px;
+    height:55px;
+    border:none;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    padding-left:21px;
+    letter-spacing: 0.74px;
+}
+.download_button{
+    border:none;
+    text-align:center;
+    display: inline-block;
+    padding:15px;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #01c56b;
+    width: 212px;
+    height: 55px;
+    color: white;
+    margin-left: 6px;
+}
+.email_form_text {
+    position: relative;
+    top:50px;
+    padding: 0px 20px 13px 20px;
+    color:#141218;
+    line-height: 1.29;
+    font-family: Montserrat;
+    text-align:center;
+    letter-spacing: -0.2px;
+}
+.email_form_red {
+    top:-50px;
+    position: relative;
+    padding: 10px 0 14px 0;
+    color: #fd4949;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-weight: bold;
+    text-align:center;
+    letter-spacing: -0.35px;
+}
+.whiteSquare{
+    position: absolute;
+    /* top:50px; */
+    left:-206px;
+    width: 91px;
+    height: 91px;
+    background-color: #ffffff ;
+    z-index:1000;
+
+}
+.blueSquare{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #097aff;
+    top:593px;
+    left:-215px;
+    z-index: 1000;
+}
+.greenSquare{
+    top:360px;
+    left:735px;
+    z-index: 1000;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #0ebc79;
+}
+.close span {
+    color:black !important;
+}
+.yellow-bg{
+    border:none !important;
+    overflow:hidden;
+    background-color: #ffda3f !important;
+}
+/* contact_form */
+.modal-header{
+    border-bottom:none !important;
+	display: block;
+}
+.modal-footer{
+    opacity: 0;
+}
+.send_request_button input{
+    margin-top:15px;
+    width:286px;
+    height:46px;
+    background-color: #ffd94f;
+    color:#282828;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: bold;
+    border:none;
+}
+.button_file div span {
+    font-size:18px;
+    font-weight: bold;
+}
+.button_file div{
+    font-size: 15px;
+    font-weight: normal;
+    position: relative;
+    font-family: 'Open Sans';
+    top:5px;
+}
+.button_file div, .button_file i {
+    padding:5px;
+    display: inline-block;
+}
+.button_file{
+    cursor: pointer;
+    display: inline-block;
+}
+.input_type_file{
+    height: 75px;
+}
+.input_type_file input[type=file] {
+    #font-size: 100px;
+    position: relative;
+    width:300px;
+    height:60px;
+    bottom:25px;
+    left: 10px;
+    opacity: 0;
+  }
+
+.custom-clip{
+    width: 46px;
+    height: 46px;
+    background-color: #01c56b;
+    color:white;
+    font-size: 35px;
+    padding:9px
+}
+.input_textarea{
+    margin-top:15px;
+    border:none;
+    color:#737680;
+    font-size: 15px;
+    font-family: 'Open Sans';
+    width:250px;
+    height:200px
+}
+.input_group{
+    border:none;
+    color:#737680;
+    font-size: 15px;
+    font-family: 'Open Sans';
+    margin:8px;
+    height:44px;
+    width:250px;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  transition: all 0.15s ease-out 0s;
+  background: #ffffff;
+  border: 2px solid lightgray;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  z-index: 1000;
+}
+
+.option-input:checked {
+  background: #ffd94f;
+  border: none;
+}
+.option-input:checked::before {
+    color: #000000;
+    padding-top:6px;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    font-weight: 900;
+    font-family: Font Awesome\ 5 Free !important;
+    content: "\f00c" !important;
+    display: inline-block;
+    font-size: 13px;
+    text-align: center;
+    line-height: 15px;
+}
+
+.option-input:checked + .radio_label{
+    color:#000;
+}
+
+.option-input.radio {
+  position: relative;
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+.unchecked-radio{
+    width:22px;
+    height:22px;
+    background-color: #fff;
+    border: 1px solid grey;
+    border-radius: 50%;
+    position: absolute;
+    margin: 6px 8px 6px 0;
+}
+.input_type_radio-2, .input_type_radio-4, .input_type_textarea, .input_type_file, .send_request_button{
+    flex-grow: 1;
+    flex-basis: 30%;
+}
+.input_type_radio-1, .input_type_radio-2, .input_type_radio-3, .input_type_radio-4, .input_type_input, .input_type_textarea{
+    margin:30px;
+}
+.flex-container{
+    margin-left:50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.radio-label{
+    display: inline-block;
+}
+.radio-label span, .radio-label input {
+    display: inline-block;
+}
+
+.radio_group_title{
+    padding: 10px 10px 10px 1px;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.29px;
+    color: #2e2e2e;
+    display:block;
+}
+
+.radio_label{
+    padding-left:8px;
+    bottom:5px;
+    position: relative;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    color:#737680;
+}
+
+.form_title{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin:70px 116px 0 116px;
+}
+.email-us-btn{
+    border: none !important;
+    border-radius: 0px !important;
+    color: #fff !important;
+    padding: 12px 15px 12px 15px !important;
+    max-width: 270px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+@media screen and (max-width: 480px) {
+    .send_request_button input{
+        width: 100%;
+        margin-right: 100px;
+    }
+    .custom-clip{
+        font-size: 25px;
+        width: 34px;
+        height: 34px;
+    }
+    .modal-width{
+        width:100%;
+        position: relative;
+        margin: 30px auto;
+    }
+    .button_file div span {
+        font-size: 12px;
+    }
+    .button_file div{
+        font-size: 12px;
+    }
+    .flex-container{
+        margin-left:0;
+    }
+    .form_title{
+        margin: 8px 38px 0 39px;
+        font-size: 15px;
+        line-height: 1.63;
+        letter-spacing: 0.2px;
+        font-weight: 500;
+    }
+    .input_group{
+        width:100%;
+        margin: 8px 8px 8px 0;
+        padding-left:15px;
+        background-color: #f9f9f9;
+        font-size:14px;
+    }
+    .input_type_file input[type=file]{
+        width: 250px;
+    }
+    .send_request_button{
+        text-align: center;
+    }
+    .radio_label{
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        padding: 3px 0 0 10px;
+        height:18px !important;
+    }
+    .radio_group_title{
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;      
+    }
+    .option-input{
+        position: relative;
+    }
+    .input_textarea{
+        background-color: #f9f9f9;
+        padding: 0px 0 0 15px;
+    }
+    .input_type_textarea{
+        margin-top: 10px !important;
+        background-color: #f9f9f9;
+    }
+    .input_type_file{
+        margin: 10px 10px 10px 10px;
+    }
+    .input_type_radio-1, 
+    .input_type_radio-2, 
+    .input_type_radio-3, 
+    .input_type_radio-4, 
+    .input_type_input, 
+    .input_type_textarea{
+        margin: 0 1px 0 11px;
+        width: 100%;
+    }
+}

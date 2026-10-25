@@ -1,0 +1,81 @@
+{% block html %} 
+	{% if not widget.order %}
+	<p>{{ _('Заказ не найден') }}</p>
+	{% else %}
+	{% set o = widget.order %}
+	<div class="x-order-{{ o.id }}">
+	{#
+    <div class="callout medium-float-right">
+			{% if widget.order.isCancelable %}
+			<a href="#" title="" class="text-alert x-order-cancel" data-oid="{{ o.id }}">&times; {{ _('Отменить заказ') }}</a>
+			{% endif %}
+		</div>
+        <p><span class="x-order-status success label">{{ o.statusText }}</span></p>
+		
+		{% if o.paymentGateway %}
+		<p>
+			<span class="label">{{ o.payText }}</span>
+			{% if o.canBePaid() %} <a href="{{ o.payUrl }}">Оплатить</a>{% endif %}
+		</p>
+		{% endif %}		
+		#}
+        <h2>Заказ #{{ o.id }} от {{ o.date|date('d.m.Y') }} на сумму {{ o.getTotal(1)|raw }}</h2>
+		
+		<h3>{{ _('Информация о покупателе') }}</h3>
+		<p>
+			{% for p in o.props %}
+			{{ p.name }}: {{ p.value }}<br>
+			{% endfor %}
+		</p>
+		
+		<h3>{{ _('Способ доставки') }}</h3>
+		<p>{{ widget.order.deliveryData.name }}</p>
+		
+		<h3>{{ _('Способ оплаты') }}</h3>
+		<p>{{ widget.order.paymentData.name }}</p>
+
+		<h3>{{ _('Cостав заказа') }}</h3>
+		{% for c in widget.order.getProducts() %}
+		<div class="row">
+		  <div class="column small-6 medium-4 large-2">
+		    {% if c.product %}
+			<p><img src="/imagetransform/width_420_height_275_fit_2{{ c.product.pic }}" alt="{{ c.product.name }}" class="product-tile-thumbnail"></p>
+			{% endif %}
+		  </div>
+		  <div class="column small-18 medium-10 large-12">
+		  	<h5>
+		  		{% if c.product %}
+		  			{%if c.product.linked_product %}
+      				<a class="text-dark" href="{{ c.product.linked_product.catalog.url }}?id={{ c.product.linked_product.id}}">{{ c.product.linked_product.name }}<br/>{{ c.product.name }}</a>
+      			{%else%}
+      				<a class="text-dark" href="{%if c.product.catalog%}{{ c.product.catalog.url }}?id={{ c.product.id}}{%endif%}">{{ c.product.name }}</a>
+      			{%endif%}
+					{% else %}
+						{%if c.product.linked_product %}
+							{{ c.product.linked_product.name }}<br/>{{ c.product.name }}
+						{%else%}
+							{{ c.name }}
+						{%endif%}
+					{% endif %}
+				</h5>
+      </div>
+      <div class="column small-24 medium-10 large-10">
+        <div class="row">
+          <div class="column small-12 medium-14 large-8">
+          	<p><strong>{{ c.displayPrice|raw }}</strong></p>
+          </div>
+          <div class="column small-12 medium-10 large-6">{{ c.quantity }}&nbsp;{{ _('шт.') }}</div>
+          <div class="column small-24 large-10">
+          	<p><span class="stat">{{ c.displaySum|raw }}</span></p>
+          </div>
+        </div>
+      </div>	  
+		</div>
+		{%if not loop.last%}
+		<hr><br>
+		{%endif%}
+		{% endfor %}
+		<p class="lead">ИТОГО: &nbsp;<strong>{{ widget.order.getProductsCost(1)|raw }}</strong></p>
+	</div>
+	{% endif %}
+{% endblock %}

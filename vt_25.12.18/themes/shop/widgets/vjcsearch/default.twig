@@ -1,0 +1,127 @@
+<style>
+.search-result-desc a:hover {
+	text-decoration: none;
+}
+</style>
+<div class='row'>
+	<div class='large-16 columns large-centered'>
+			<h5 class="individual">Результаты поиска</h5>
+	</div>
+
+	<div class='row'>
+		<hr>
+		<p></p>
+	</div>
+
+	<div class="large-16 columns large-centered">
+
+{% if widget.querySubmitted() %}
+
+	{% set list = widget.getResults() %}
+	{% if not list or not list.getCountAll() %}
+
+		{% set list = null %}
+
+	{% else %}
+
+		{% set first = (list.getCurrentPageNumber()-1) * widget.getParam('items_per_page') + 1 %}
+		{% set last = (list.getCurrentPageNumber() == list.getPageCount())?list.getCountAll():list.getCurrentPageNumber()*list.count() %}
+
+	{% endif %}
+
+	{% if not list %}
+		<div class="search-result-block" style="margin: 20px 0px;">
+			<p>{{ _('Поиск не дал результатов') }}</p>
+		</div>
+		
+
+	{% else %}
+	{#	<p>Результаты поиска {{ first }} - {{ last }} из {{ list.getCountAll() }}</p> #}
+		{% for m in list %}
+
+			<div class='search-result-block' style="margin: 20px 0px;">
+			<p class='search-result-desc'><a href="{% if (m.catalog.materialsType == 5) %}
+{% set itrProducts = m.catalog.materials.orderBy('tag') %}
+		{% set isNotFound = true %}
+		{% set productsPerPage = 12 %}
+		{% set productPosition = 1 %}
+
+		{# Ищем позицию товара на страницах #}
+		{% for Prod in itrProducts if (isNotFound) %}
+			{% if Prod.id == m.id %}
+				{% set isNotFound = false %}
+			{% else %}
+				{% set productPosition = productPosition + 1 %}
+			{% endif %}
+		{% endfor %}
+
+		{# Вычисляем номер страницы, на который находится карточка товара #}
+		{% if productPosition > productsPerPage %}
+			{% set pageNum = productPosition // 12 %}
+				{% if (pageNum * productsPerPage) < productPosition %}
+					{% set pageNum = pageNum + 1 %}
+				{% endif %}
+		{% else %}
+			{% set pageNum = 1 %}
+		{% endif %}
+			{{m.catalog.url}}?page={{pageNum}}&id={{ m.id}}{% else %}{{m.url}}{% endif %}">
+
+			{{ widget.markupTextAndCut(
+			widget.getMorphs(widget.queryValue),
+			m.name|striptags|raw,
+			m.short|striptags|raw,
+			m.text|striptags|raw
+			)|raw
+			}}</a>
+			</p>
+
+
+
+		{% if (m.catalog.materialsType == 5) %}
+
+		{# Генерируем ссылку для товара #}
+		{% set itrProducts = m.catalog.materials.orderBy('tag') %}
+		{% set isNotFound = true %}
+		{% set productsPerPage = 12 %}
+		{% set productPosition = 1 %}
+
+		{# Ищем позицию товара на страницах #}
+		{% for Prod in itrProducts if (isNotFound) %}
+			{% if Prod.id == m.id %}
+				{% set isNotFound = false %}
+			{% else %}
+				{% set productPosition = productPosition + 1 %}
+			{% endif %}
+		{% endfor %}
+
+		{# Вычисляем номер страницы, на который находится карточка товара #}
+		{% if productPosition > productsPerPage %}
+			{% set pageNum = productPosition // 12 %}
+				{% if (pageNum * productsPerPage) < productPosition %}
+					{% set pageNum = pageNum + 1 %}
+				{% endif %}
+		{% else %}
+			{% set pageNum = 1 %}
+		{% endif %}
+		{# конец генерации ссылки #}
+		<a href='{{m.catalog.url}}?page={{pageNum}}&id={{ m.id}}' class="search-result-link">Подробнее</a>
+		{% else %}
+			<a href='{{m.url}}' class="search-result-link">Подробнее</a>
+		{% endif %}
+
+
+		</div>
+		{% endfor %}
+		<hr>
+	</div>
+</div>
+		<div class="mb40"></div>
+
+		<div class=row>
+		<div class='large-8 columns large-centered'>
+		{{ widget.getPaginator()|raw }}
+	
+	{% endif %}
+{% endif %}
+</div>
+</div>

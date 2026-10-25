@@ -1,0 +1,129 @@
+<w:tr w:rsidR="00D96648" w:rsidTr="00D96648">
+	<w:trPr>
+		<w:cantSplit/>
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="2748"/>
+			<w:vMerge/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+			<w:vAlign w:val="center"/>
+			<w:hideMark/>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B"/>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1965"/>
+			<w:vMerge/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+			<w:vAlign w:val="center"/>
+			<w:hideMark/>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B"/>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1039"/>
+			<w:vMerge w:val="restart"/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${region_name}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1087"/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B" w:rsidRPr="008C1B9E">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${district_name}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="3283"/>
+			<w:tcBorders>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B" w:rsidRPr="008C1B9E">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${expertise_count}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="5544"/>
+			<w:tcBorders>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B" w:rsidRPr="008C1B9E">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${expertise_weight}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr>

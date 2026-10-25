@@ -1,0 +1,38 @@
+<modification>
+	<name>NeoSeo Email Notify</name>
+	<version>9</version>
+	<code>neoseo-email-notify</code>
+	<author>Alexander Sorokin</author>
+	<link>http://neoseo.com.ua/email-notify</link>
+
+	<file path="catalog/model/checkout/order.php">
+		<operation>
+			<search><![CDATA[$mail->send();]]></search>
+			<add position="replace"><![CDATA[/* NeoSeo Email Notify - begin */ /* $mail->send(  ); */ /* NeoSeo Email Notify - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[function addOrderHistory]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Email Notify - begin */
+        $this->load->controller('module/neoseo_email_notify/handler_order_history_add',array(
+            'order_id' => $order_id,
+            'order_status_id' => $order_status_id,
+            'comment' => $comment,
+            'notify' => $notify,
+        ));
+		/* NeoSeo Email Notify - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[->addOrderHistory]]></search>
+			<add position="before"><![CDATA[		/* NeoSeo Email Notify - begin */
+		$this->config->set("neoseo_email_notify_status",0); // Disables stupid notification
+		/* NeoSeo Email Notify - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA['date_added'              => $order_query->row['date_added'],]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Email Notify - begin */
+			'tracking'				=> $order_query->row['tracking']
+		/* NeoSeo Email Notify - end */]]></add>
+		</operation>
+	</file>
+
+</modification>

@@ -1,0 +1,287 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../img/svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 9.7098em 221.6em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+.icon.Arrow_next:before {
+    background-position: 0em 0em;
+    width: 2.5002em;
+    height: 4.0998em;
+}
+
+.icon.Arrow_prev:before {
+    background-position: 0em -4.1em;
+    width: 2.5002em;
+    height: 4.0998em;
+}
+
+.icon.Astr_1:before {
+    background-position: 0em -8.2em;
+    width: 6.8357em;
+    height: 9.9795em;
+}
+
+.icon.Astr_1_hover:before {
+    background-position: 0em -18.2em;
+    width: 6.8357em;
+    height: 9.9795em;
+}
+
+.icon.Astr_2:before {
+    background-position: 0em -28.2em;
+    width: 6.08em;
+    height: 10.019400000000001em;
+}
+
+.icon.Astr_2_hover:before {
+    background-position: 0em -38.3em;
+    width: 6.08em;
+    height: 10.019400000000001em;
+}
+
+.icon.Astr_3:before {
+    background-position: 0em -48.4em;
+    width: 9.7098em;
+    height: 10.0288em;
+}
+
+.icon.Astr_3_hover:before {
+    background-position: 0em -58.5em;
+    width: 9.7098em;
+    height: 10.0288em;
+}
+
+.icon.Astr_4:before {
+    background-position: 0em -68.6em;
+    width: 5.1613999999999995em;
+    height: 9.8914em;
+}
+
+.icon.Astr_4_hover:before {
+    background-position: 0em -78.5em;
+    width: 5.1613999999999995em;
+    height: 9.8914em;
+}
+
+.icon.Attach:before {
+    background-position: 0em -88.4em;
+    width: 2.8997em;
+    height: 2.7001em;
+}
+
+.icon.Attach_white:before {
+    background-position: 0em -91.2em;
+    width: 2.9em;
+    height: 2.7em;
+}
+
+.icon.Download:before {
+    background-position: 0em -93.9em;
+    width: 7.4539em;
+    height: 6.559399999999999em;
+}
+
+.icon.Download_foot:before {
+    background-position: 0em -100.5em;
+    width: 4em;
+    height: 3.5em;
+}
+
+.icon.Download_hover:before {
+    background-position: 0em -104em;
+    width: 7.4539em;
+    height: 6.559399999999999em;
+}
+
+.icon.Help:before {
+    background-position: 0em -110.6em;
+    width: 3em;
+    height: 3em;
+}
+
+.icon.Help_hover:before {
+    background-position: 0em -113.6em;
+    width: 3em;
+    height: 3em;
+}
+
+.icon.Icon_1:before {
+    background-position: 0em -116.6em;
+    width: 4.8724em;
+    height: 4.989800000000001em;
+}
+
+.icon.Icon_2:before {
+    background-position: 0em -121.6em;
+    width: 4.5975em;
+    height: 5.0097000000000005em;
+}
+
+.icon.Icon_3:before {
+    background-position: 0em -126.7em;
+    width: 4.7404em;
+    height: 4.9396em;
+}
+
+.icon.Icon_4:before {
+    background-position: 0em -131.7em;
+    width: 5.1024em;
+    height: 4.9947em;
+}
+
+.icon.Icon_5:before {
+    background-position: 0em -136.7em;
+    width: 3.5100000000000002em;
+    height: 4.9946em;
+}
+
+.icon.Mail:before {
+    background-position: 0em -141.7em;
+    width: 2.4071000000000002em;
+    height: 2.2004em;
+}
+
+.icon.Phone_call_modal:before {
+    background-position: 0em -144em;
+    width: 3em;
+    height: 3em;
+}
+
+.icon.Phone_foot:before {
+    background-position: 0em -147em;
+    width: 1.2969em;
+    height: 1.3003em;
+}
+
+.icon.Phone_head:before {
+    background-position: 0em -148.4em;
+    width: 1.8010000000000002em;
+    height: 1.8001999999999998em;
+}
+
+.icon.Phone_head_hover:before {
+    background-position: 0em -150.3em;
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.icon.Platf_andr:before {
+    background-position: 0em -152.1em;
+    width: 1.9988em;
+    height: 2.2992em;
+}
+
+.icon.Platf_andr_hover:before {
+    background-position: 0em -154.4em;
+    width: 1.9988em;
+    height: 2.2992em;
+}
+
+.icon.Platf_ios:before {
+    background-position: 0em -156.7em;
+    width: 1.8008em;
+    height: 2.2em;
+}
+
+.icon.Platf_ios_hover:before {
+    background-position: 0em -158.9em;
+    width: 1.8008em;
+    height: 2.2em;
+}
+
+.icon.Platf_web:before {
+    background-position: 0em -161.1em;
+    width: 2.2em;
+    height: 2.1945em;
+}
+
+.icon.Platf_web_hover:before {
+    background-position: 0em -163.3em;
+    width: 2.2em;
+    height: 2.1945em;
+}
+
+.icon.Services_1:before {
+    background-position: 0em -165.5em;
+    width: 3.95em;
+    height: 5.0029em;
+}
+
+.icon.Services_2:before {
+    background-position: 0em -170.6em;
+    width: 5.0035em;
+    height: 4.9913em;
+}
+
+.icon.Services_3:before {
+    background-position: 0em -175.6em;
+    width: 5.0001em;
+    height: 5em;
+}
+
+.icon.Services_4:before {
+    background-position: 0em -180.6em;
+    width: 5.2131em;
+    height: 4.9977em;
+}
+
+.icon.Soc_behance:before {
+    background-position: 0em -185.6em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+
+.icon.Soc_behance_hover:before {
+    background-position: 0em -190.1em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+
+.icon.Soc_dribbble:before {
+    background-position: 0em -194.6em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+
+.icon.Soc_dribbble_hover:before {
+    background-position: 0em -199.1em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+
+.icon.Soc_facebook:before {
+    background-position: 0em -203.6em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+
+.icon.Soc_facebook_hover:before {
+    background-position: 0em -208.1em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+
+.icon.Soc_vk:before {
+    background-position: 0em -212.6em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+
+.icon.Soc_vk_hover:before {
+    background-position: 0em -217.1em;
+    width: 4.4001em;
+    height: 4.4001em;
+}
+

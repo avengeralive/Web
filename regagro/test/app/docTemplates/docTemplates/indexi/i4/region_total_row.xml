@@ -1,0 +1,60 @@
+<w:tr w:rsidR="00022B15" w:rsidTr="0042353B">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1809"/>
+									<w:vMerge/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+									<w:vAlign w:val="center"/>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidP="00F322DB" w:rsidR="00022B15" w:rsidRDefault="00022B15"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="6521"/>
+									<w:gridSpan w:val="3"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidP="00F322DB" w:rsidR="00022B15" w:rsidRDefault="00022B15">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1241"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00F322DB" w:rsidR="00022B15" w:rsidRDefault="0042353B">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${region_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

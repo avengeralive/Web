@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<schema>
+    <table name="plugins_statistic_info" engine="MyISAM">
+        <field name="id" type="int(11)" null="0" auto_increment="1"/>
+        <field name="plugin" type="varchar(128)" null="0"/>
+        <field name="timestamp_x" type="int(11)" null="0"/>
+        <key name="PRIMARY" unique="1">
+            <column name="id"/>
+        </key>
+    </table>
+</schema>

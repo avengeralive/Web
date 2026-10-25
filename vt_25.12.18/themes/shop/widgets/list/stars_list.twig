@@ -1,0 +1,8 @@
+{% for m in widget.children %}
+    <div class="column text-center">
+		<a class="" href="{{ m.url }}">
+            <div class=""><img src="{{m.star_logo}}" alt="{{ m.name }}"></div><br>
+            <div class=""> {{ m.name }}</div><br>
+        </a>
+	</div>
+{% endfor %}

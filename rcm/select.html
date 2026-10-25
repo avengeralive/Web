@@ -1,0 +1,42 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {% for s in selects %}
+        <div class="swiper-slide">
+            <table class="advantageous_offer">
+            {% for item in s %}
+                <tr>
+                    <td><a href="#"><img src="{{ item.image.url }}" alt=""><span>{{ item.title }}</span></a></td>
+                    <td><span class="price">{{ item.price }} руб</span><a href="#popup_buy{{ forloop.counter }}" class="buy popup"><span>Купить</span></a></td>
+                </tr>
+            {% endfor %}
+            </table>
+            {% for item in s %}    
+                <div style='display:none'>
+                    <div id='popup_buy{{ forloop.counter }}'>
+                	    <a href="#" class="close"></a>
+                        <div class="parent_popup">
+                            <div class="title">Заказать товар</div>
+                            <div class="name">
+                            	{{item.title}}
+                                <span>{{ item.price }} руб - 1т.</span>
+                            </div>
+                            <form action="#">
+                              <div class="line_form"><input type="text" placeholder="Ваше имя"><div class="asterisk"></div></div>
+                              <div class="line_form"><input type="text" placeholder="Ваш телефон"><div class="asterisk"></div></div>
+                              <div class="line_form"><input type="text" placeholder="Ваш Email"><div class="asterisk"></div></div>
+                              <div class="line_form"><textarea placeholder="Ваш коментарий" cols="30" rows="10"></textarea></div>
+                              <div class="line_btn"><input type="submit" value="Отправить"></div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+</div>
+</div>

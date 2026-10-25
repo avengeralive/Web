@@ -1,0 +1,114 @@
+﻿Таблица пересчёта
+
+<tr class="tabledata" data-price="143000" data-price-sub="500">
+    <td><a href="#">Круг 13</a></td>
+    <td>Х12М</td>
+    <td class="length"></td>
+    <td class="price"><b>143 000</b><img src="images/rub_table.png" alt=""></td>
+    <td class="price2"></td>
+</tr>
+
+класс tabledata - общий класс для элементов таблицы
+аттрибут data-price - цена товара
+аттрибут data-price-sub - разница на вторую цену
+класс length - длина
+класс price - цена1
+класс price2 - цена2
+
+В функции recalc надо задать соответственно все эти дела
+var allItemsClass = 'tabledata';
+var lengthId = 'length';
+var weightId = 'weight';
+var price1Class = 'price1';
+var price2Class = 'price2';
+
+Фильтр
+
+<div class="select">
+    <a onclick="filter(this,'tabledata')" class="all active">Все</a>
+    <a onclick="filter(this,'a12')">А12</a>
+    <a onclick="filter(this,'ct10')">СТ10</a>
+</div>
+
+класс select - класс родителя списка фильтров
+класс all - класс идентификатор всех фильтров
+класс active - активный фильтр
+Второй параметр фильтра - это соответствующий класс который хотим отобразить.
+
+<tr class="tabledata a12" data-price="72690" data-price-sub="500">
+    <td><a href="#">Круг 13 х/т калиброванная</a></td>
+    <td>А12</td>
+    <td class="length"></td>
+    <td class="price"><b>72 690</b><img src="images/rub_table.png" alt="">>5т.</td>
+    <td class="price2"><b>73 290</b><img src="images/rub_table.png" alt="">>5т.</td>
+</tr>
+
+Калькулятор одиночный
+
+Форма
+
+<form class="calc" id="calc" data-price="0.222">
+    <span>Калькулятор:</span>
+    <input type="text" placeholder="Тонны" id="weight">
+    <input type="text" placeholder="Метры" id="length">
+    <input type="text" placeholder="Длина 1шт" id="itemLength">
+    <input type="text" placeholder="Колл. штук" id="count">
+    <select id="material">
+        <option value="1">Сталь</option>
+        <option value="0.7">Цинк</option>
+    </select>
+    <input type="submit" value="Пересчитать цены">
+</form>
+
+Значения value в material это коэффициент
+В data-price цена с коэф 1
+
+Параметры в функции calculator
+
+var calcId = 'calc';
+var weightId = 'weight';
+var lengthId = 'length';
+var itemLengthId = 'itemLength';
+var countId = 'count';
+var materialId = 'material';
+
+Объяснять особо думаю не нужно, соответствующие id, классы и атрибуты в названиях говорят сами за себя
+
+
+
+Калькулятор таблица
+
+<table id="calcTable" data-count="7">
+
+id таблицы, а также атрибут - число элементов
+
+<tr id="item_1" data-price="0.222">
+    <td><a href="#"><img src="images/arrow.png" alt=""></a></td>
+    <td><a href="#" class="number">6</a></td>
+    <td>
+		<form action="#">
+			<div class="item1"><input type="text" placeholder="1" class="weight"></div>
+			<div class="item2"><input type="text" placeholder="4 207,540" class="length"></div>
+			<div class="item3"><input type="text" placeholder="1шт" class="itemLength"></div>
+			<div class="item4"><input type="text" placeholder="1" class="count"></div>
+			<div class="item5"><select class="material"><option value="1">Сталь</option><option value="0.7">Цинк</option></select></div>
+			<div class="item6"><input type="submit" value="Цены"></div>
+		</form>
+    </td>
+</tr>
+
+id - порядковый идентификатор строки (будет от item_1 до item_ЧИСЛО_СТРОК)
+data-price цена с коэф 1
+классы как в одиночном калькуляторе, только здесь они не id а классы, что важно.
+
+Параметры в функции weightcalculator
+
+var weightClass = 'weight';
+var lengthClass = 'length';
+var itemLengthClass = 'itemLength';
+var countClass = 'count';
+var materialClass = 'material';
+var itemId = 'item';
+
+Чтобы задать своё значение в начале скажем для веса надо написать к примеру
+<input type="text" placeholder="1" class="weight" value="1">

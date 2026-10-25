@@ -1,0 +1,61 @@
+{% include "@widget/_common/favorite.twig" %}
+
+{% block html %}
+
+  	{% if widget.children|length %}
+
+		{% block items %}
+
+			{% for m in widget.children.orderBy('tag') %}
+			{% if loop.first %}<div class="row" data-equalizer data-equalize-by-row="true">{% endif %}
+    <div class="columns medium-8">
+        <div class="bracelet bracelet_star" id='{{m.id}}' data-equalizer-watch>
+          <p><a href="#"><img src="{{m.star_logo}}" alt="{{m.name}}"></a></p>
+          <p><a class="bracelet__price" href="#">{{m.name}}</a></p>
+
+        </div>
+    </div>
+    {% set d = 0 %}
+				  {% if loop.index % 3 == 0 %}
+                      {% set d = 3 %}
+                  {% else %}
+                      {% set d = (loop.index % 3) %}
+                  {% endif %}
+
+				  {% if loop.index % 3 == 0 or loop.index+1==loop.last or loop.last %}
+    </div>
+    <div class="row">
+        {% for i in loop.index-d..loop.index0 %}
+        <div class="columns medium-16 starcard">
+          <div class="filter filter_product filter_star text-left hide">
+            <div class="filter__triangle"></div>
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><img src="/themes/shop/images/cross.svg" alt="" style="width: 14px; height: 14px;"></button>
+            <!--<div class="mb15"></div>-->
+            <div class="row">
+              <div class="column" style="padding: 0px; height: 38px;">
+                <p style="margin-bottom: 20px; line-height: 18px;"><a href="{{widget.children[i].instagram}}" target="_blank" style="font-family: 'FedraSansAltPro-Bold',sans-serif;">{% if widget.children[i].instsign == true %}<img src="/uploads/images/insta-star.svg" alt="" style="width: 18px;"> {% endif %}{{widget.children[i].nicknameinst}}</a></p>
+              </div>
+            </div>
+            <div class="row">
+
+              {% if widget.children[i].image|length %}
+                <div class="filter__img columns medium-24 large-24 xlarge-24" data-equalizer-watch><img src="{{widget.children[i].image }}" alt="" style="width: 100%; height: auto;"></div>
+              {% endif %}
+
+            </div>
+            <div class="row">
+              <div class="columns filter__text">
+                {{widget.children[i].text|raw}}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row medium-up-3" data-equalizer data-equalize-by-row="true">{% endif %}
+    {% endfor %}
+    {% endblock %}
+
+</div>
+    {% endif %}
+    {% endblock %}

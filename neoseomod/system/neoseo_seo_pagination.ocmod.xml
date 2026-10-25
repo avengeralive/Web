@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo SEO Pagination</name>
+    <version>10</version>
+    <code>neoseo-seo-pagination</code>
+    <author>Alexander Sorokin</author>
+    <link>http://neoseo.com.ua/</link>
+
+    <file path="catalog/controller/product/category.php">
+        <operation>
+            <search><![CDATA[
+        $this->load->language('product/category');
+            ]]></search>
+            <add position="after"><![CDATA[		/* NeoSeo SEO Pagination - begin */
+		$this->language->load('module/neoseo_seo_pagination');
+		/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+				$this->document->setTitle($category_info['meta_title']);
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$meta_title = sprintf($this->language->get("category_meta_title"),
+						$category_info['meta_title'], $page );
+					$this->document->setTitle($meta_title);
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+				$this->document->setTitle($category_info['name']);
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$meta_title = sprintf($this->language->get("category_meta_title"),
+						$category_info['name'], $page );
+					$this->document->setTitle($meta_title);
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+				$data['heading_title'] = $category_info['meta_h1'];
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$data['heading_title'] = sprintf($this->language->get("category_meta_h1"),
+						$category_info['meta_h1'], $page );
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+				$data['heading_title'] = $category_info['name'];
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$data['heading_title'] = sprintf($this->language->get("category_meta_h1"),
+					$category_info['name'], $page );
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $this->document->setDescription
+            ]]></search>
+            <add position="after"><![CDATA[			/* NeoSeo SEO Pagination - begin */
+			if( $page > 1 && trim($category_info['meta_description']) ) {
+				$meta_description = sprintf($this->language->get("category_meta_description"),
+					$category_info['meta_description'], $page );
+				$this->document->setDescription($meta_description);
+			}
+			/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $this->document->setKeywords
+            ]]></search>
+            <add position="after"><![CDATA[			/* NeoSeo SEO Pagination - begin */
+			if( $page > 1 && trim($category_info['meta_keyword']) ) {
+				$meta_keywords = sprintf($this->language->get("category_meta_keywords"),
+					$category_info['meta_keyword'], $page );
+				$this->document->setKeywords($meta_keywords);
+			}
+			/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $data['description'] =
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 && trim($data['description']) ) {
+					$description = sprintf($this->language->get("category_description"),
+						$data['description'], $page );
+					$data['description'] = $description;
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[$results = $this->model_catalog_product->getProducts($filter_data);]]></search>
+            <add position="after"><![CDATA[
+			/* NeoSeo Bad Pages - begin */
+			if((count($results) == 0) && isset($this->request->get['page']) ){
+				$this->response->redirect($this->url->link('product/category', 'path=' . $this->request->get['path']));
+			}
+			/* NeoSeo Bad Pages - end */
+				]]></add>
+        </operation>
+
+    </file>
+
+    <file path="catalog/controller/product/manufacturer.php">
+        <operation>
+            <search><![CDATA[
+        $this->load->language('product/manufacturer');
+            ]]></search>
+            <add position="after"><![CDATA[		/* NeoSeo SEO Pagination - begin */
+		$this->language->load('module/neoseo_seo_pagination');
+		/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+				$this->document->setTitle($manufacturer_info['meta_title']);
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$meta_title = sprintf($this->language->get("manufacturer_meta_title"),
+						$manufacturer_info['meta_title'], $page );
+					$this->document->setTitle($meta_title);
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+				$this->document->setTitle($category_info['name']);
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$meta_title = sprintf($this->language->get("manufacturer_meta_title"),
+						$manufacturer_info['name'], $page );
+					$this->document->setTitle($meta_title);
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+				$data['heading_title'] = $manufacturer_info['meta_h1'];
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$data['heading_title'] = sprintf($this->language->get("manufacturer_meta_h1"),
+						$manufacturer_info['meta_h1'], $page );
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+				$data['heading_title'] = $manufacturer_info['name'];
+            ]]></search>
+            <add position="after"><![CDATA[				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 ) {
+					$data['heading_title'] = sprintf($this->language->get("manufacturer_meta_h1"),
+						$manufacturer_info['name'], $page );
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $this->document->setDescription
+            ]]></search>
+            <add position="after"><![CDATA[			/* NeoSeo SEO Pagination - begin */
+			if( $page > 1 && trim($manufacturer_info['meta_description']) ) {
+				$meta_description = sprintf($this->language->get("manufacturer_meta_description"),
+					$manufacturer_info['meta_description'], $page );
+				$this->document->setDescription($meta_description);
+			}
+			/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $this->document->setKeywords
+            ]]></search>
+            <add position="after"><![CDATA[			/* NeoSeo SEO Pagination - begin */
+			if( $page > 1 && trim($manufacturer_info['meta_keyword']) ) {
+				$meta_keywords = sprintf($this->language->get("manufacturer_meta_keywords"),
+					$manufacturer_info['meta_keyword'], $page );
+				$this->document->setKeywords($meta_keywords);
+			}
+			/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $data['description'] =
+            ]]></search>
+            <add position="after"><![CDATA[
+				/* NeoSeo SEO Pagination - begin */
+				if( $page > 1 && trim($data['description']) ) {
+					$description = sprintf($this->language->get("manufacturer_description"),
+						$data['description'], $page );
+					$data['description'] = $description;
+				}
+				/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$results = $this->model_catalog_product->getProducts($filter_data);]]></search>
+            <add position="after"><![CDATA[
+			/* NeoSeo Bad Pages - begin */
+			if((count($results) == 0) && isset($this->request->get['page']) ){
+				$this->response->redirect($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id']),301);
+			}
+			/* NeoSeo Bad Pages - end */
+				]]></add>
+        </operation>
+
+    </file>
+
+    <file path="catalog/controller/common/seo_pro.php">
+        <operation>
+            <search><![CDATA[
+            return $seo_url;
+            ]]></search>
+            <add position="before"><![CDATA[		/* NeoSeo SEO Pagination - begin */
+		$this->load->model("module/neoseo_seo_pagination");
+		$seo_url = $this->model_module_neoseo_seo_pagination->replacePage($seo_url);
+		/* NeoSeo SEO Pagination - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+           list($last_part) = explode('.', array_pop($parts));
+            ]]></search>
+            <add position="after"><![CDATA[
+            /* NeoSeo SEO Pagination - begin */
+			if( strpos($last_part,"page-") !== false ) {
+				$page = (int)substr($last_part,5);
+				if( $page > 1 ) {
+					$this->request->get['page'] = $page;
+				}
+				list($last_part) = explode('.', array_pop($parts));
+			}
+            /* NeoSeo SEO Pagination - end */
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            if (rawurldecode($url) != rawurldecode($seo))
+            ]]></search>
+            <add position="before"><![CDATA[
+		/* NeoSeo SEO Pagination - begin */
+		if( strpos($url,"index.php") === false ) {
+			$this->load->model("module/neoseo_seo_pagination");
+			if (isset($this->request->get['page'])) {
+				if(strpos($seo,"?") !== false ) {
+					$seo .= "&page=" . $this->request->get['page'];
+				} else {
+					$seo .= "?page=" . $this->request->get['page'];
+				}
+			}
+			$seo = $this->model_module_neoseo_seo_pagination->replacePage($seo);
+			$seo = str_replace("&amp;","&",$seo);
+			if (strpos($url, "page=")) {
+				header($this->request->server['SERVER_PROTOCOL'] . ' 301 Moved Permanently');
+				$this->response->redirect($seo);
+			}
+		}
+		/* NeoSeo SEO Pagination - begin */
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>

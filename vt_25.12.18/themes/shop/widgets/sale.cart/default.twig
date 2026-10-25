@@ -1,0 +1,263 @@
+<style>
+.cart__img img:hover {
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.cart__img img {
+    transition: 0.3s all;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+</style>
+{% if widget.param('cart_is_empty') %}
+
+<div id="{{ widget.uniqueId }}">
+	<div class="row">
+      <div class="large-16 columns large-centered">
+	  <div class="row column">
+        <h5 class="individual">Готовые к заказу</h5>
+      </div>
+	  </div>
+    </div>
+    <div class="row columns">
+      <div class="cart">
+
+        <div class='row'>
+          <div class="large-16 columns large-centered">
+
+
+					<div class="row discount__bar__empty">
+						<div class="column small-24 medium-15 large-18">
+							<p class='cart__basket-empty text-left'>Ваша корзина пуста</p>
+						</div>
+						<div class="column small-24 medium-9 large-6 text-center medium-text-right ">
+							<p class="cart__money cart__money_empty text-center medium-text-right large-text-left">Итого:<br><span class="x-total-sum">{{ widget.cart.getDisplayTotal()|raw }}</span></p>
+						</div>
+					</div>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+{% else %}
+
+<div id="{{ widget.uniqueId }}">
+	<div class="row">
+      <div class="large-16 columns large-centered">
+	  <div class="row column">
+        <h5 class="individual">Готовые к заказу</h5>
+      </div>
+	  </div>
+    </div>
+    <div class="row columns">
+      <div class="cart">
+        <div class="row">
+          <div class="large-16 columns large-centered">
+	{% for c in widget.cart.getProducts() %}
+    <div class="row" id="x-cart-item-{{ c.id }}" data-equalizer data-equalize-by-row="true">
+
+		{# Генерируем ссылку для товара #}
+		{% set itrProducts = c.product.catalog.materials.orderBy('tag') %}
+		{% set isNotFound = true %}
+		{% set productsPerPage = 12 %}
+		{% set productPosition = 1 %}
+
+		{# Ищем позицию товара на страницах #}
+		{% for Prod in itrProducts if (isNotFound) %}
+			{% if Prod.id == c.product.id %}
+				{% set isNotFound = false %}
+			{% else %}
+				{% set productPosition = productPosition + 1 %}
+			{% endif %}
+		{% endfor %}
+
+		{# Вычисляем номер страницы, на который находится карточка товара #}
+		{% if productPosition > productsPerPage %}
+			{% set pageNum = productPosition // 12 %}
+				{% if (pageNum * productsPerPage) < productPosition %}
+					{% set pageNum = pageNum + 1 %}
+				{% endif %}
+		{% else %}
+			{% set pageNum = 1 %}
+		{% endif %}
+		{# конец генерации ссылки #}
+
+
+
+
+
+      <div class="column small-8 medium-6 large-6 cart__img" data-equalizer-watch>
+      	<p><a href="{%if c.product.catalog%}{{ c.product.catalog.url }}?page={{pageNum}}&id={{ c.product.id}}{%endif%}"><img src="/imagetransform/width_400_height_260_fit_2{{ c.product.pic }}" alt="{{ c.product.name }}" title="{{c.product.name}}"></a></p>
+      </div>
+      <div class="column small-16 medium-6 large-6 cart__p_title" data-equalizer-watch>
+      	<p>
+      		<a class="cart_product_title" href="{%if c.product.catalog%}{{ c.product.catalog.url }}?page={{pageNum}}&id={{ c.product.id}}{%endif%}">Aрт. {{ c.product.code }}<br>{{ c.product.name }}{% if c.offer %},<br>{{ c.offer.name }}{% endif %}</a>
+      	</p>
+      </div>
+
+    	<div class="column small-15 medium-6 large-6">
+    		<div class="row">
+    			<div class="column small-5">
+    				<input class="cart__input x-quantity text-center" type="text" value="{{ c.quantity }}" data-id="{{ c.id }}">
+    			</div>
+    			<div class="column small-19 text-right">
+    				<div class="cart__price x-sum">{{ c.displaySum|raw }}</div>
+    			</div>
+    		</div>
+    	</div>
+
+            <!--div class="small-24 medium-24 large-6 column">
+            <p>
+				<span class="x-price">{{ c.product.displayDiscountPrice|raw }}</span>
+				{% if c.product.discount > 0 %}
+				<span class="text-dark-gray"><del style="white-space: nowrap">{{ c.product.displayFullPrice|raw }}</del></span>
+				{% endif %}
+			</p>
+          </div-->
+
+          <div class="large-6 medium-6 columns small-9 text-right">
+          	<p><a class="cart__del x-delete" href="#" data-id="{{ c.id }}">Удалить    <img src="/themes/shop/images/cross.svg" alt=""></a></p>
+          </div>
+          <div class="columns">
+            <hr class="cart__hr">
+          </div>
+    </div>
+	{% endfor %}
+    <div class="hide x-total-quantity">{{ widget.cart.getProductsCount() }} шт.</div>
+    <div class="row discount__bar">
+    	<div class="column small-24 medium-15 large-17 cart__discount">
+        <input class="input-group-field cart__bonus text-center" type="text" placeholder="Промо-код">
+        <button class="button medium-gray cart__calc" type="button">Пересчитать</button>
+      </div>
+      <div class="column small-24 medium-9 large-7 text-center medium-text-right cart__info">
+      	{% set tax = widget.cart.getTotal()*0.18//1.18 %}
+      	<p class="cart__money text-center medium-text-right large-text-left">Итого:<br><span class="x-total-sum">{{ widget.cart.getDisplayTotal()|raw }}</span></p>
+      	<a class="button medium-gray cart__calc_order" href="{{ widget.param('order_url') }}">{{ _('Оформить заказ') }}</a>
+      </div>
+    </div>
+
+		<div class="row discount__bar__empty hide">
+    	<div class="column small-24 medium-15 large-18">
+      	<p class='cart__basket-empty text-left'>Ваша корзина пуста</p>
+      </div>
+      <div class="column small-24 medium-9 large-6 text-center medium-text-right ">
+      	<p class="cart__money cart__money_empty text-center medium-text-right large-text-left">Итого:<br><span class="x-total-sum">0 руб.</span></p>
+      </div>
+    </div>
+
+</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% set script %}
+		document.addEventListener('DOMContentLoaded', function () {
+
+			/*var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-more");
+			for (var i = 0; i  < c.length; i++)
+				c[i].addEventListener("click", function(){
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					var v = parseInt(document.querySelector(itemId + ".x-quantity").value);
+					if (isNaN(v)) v = 0;
+					v = v+1;
+					if (v<1) v = 1;
+					{{ widget.uniqueId }}_change(itemId,v,id);
+				});
+
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-less");
+			for (var i = 0; i  < c.length; i++)
+				c[i].addEventListener("click", function(){
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					var v = parseInt(document.querySelector(itemId + ".x-quantity").value);
+					if (isNaN(v)) v = 0;
+					v = v-1;
+					if (v<1) v = 1;
+					{{ widget.uniqueId }}_change(itemId,v,id);
+				});
+
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-quantity");
+			for (var i = 0; i  < c.length; i++)
+				c[i].addEventListener("blur", function(){
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					var v = parseInt(document.querySelector(itemId + ".x-quantity").value);
+					if (isNaN(v)) v = 1;
+					if (v<1) v = 1;
+					{{ widget.uniqueId }}_change(itemId,v,id);
+				});	*/
+
+
+			//console.log('total: ', );
+
+
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-delete");
+			for (var i = 0; i  < c.length; i++)
+				c[i].addEventListener("click", function(e){
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					{{ widget.uniqueId }}_change(itemId,0,id);
+					e.preventDefault?e.preventDefault():(e.returnValue=false);
+				});
+
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-quantity");
+			for (var i = 0; i  < c.length; i++)
+				c[i].addEventListener("change", function(e){
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					var v = parseInt(document.querySelector(itemId + ".x-quantity").value);
+					if (isNaN(v)) v = 0;
+					if (v<1) v = 1;
+					{{ widget.uniqueId }}_change(itemId,v,id);
+				});
+
+
+		});
+
+		function {{ widget.uniqueId }}_change(itemId,v,id)
+		{
+			document.querySelector(itemId + ".x-quantity").value = v;
+			var s = document.querySelector(itemId + ".x-sum");
+			var sum = document.querySelector("#{{ widget.uniqueId }} .x-total-sum");
+			sum.innerHTML = '{{ _('Подождите...') }}';
+			s.innerHTML = '{{ _('Подождите...') }}';
+
+			jQuery.ajax({
+				url : '/plugins/sale/ajax.php?action=set_cart_quantity&id='+id+'&quantity='+v,
+				dataType: 'json',
+				success: function(data) {
+					jQuery(document).trigger( 'cetera.sale.basket.add', [ data ] );
+					sum.innerHTML = data.total_sum;
+					s.innerHTML = data.sum;
+					document.querySelector("#{{ widget.uniqueId }} .x-total-quantity").innerHTML = data.count + ' {{ _('шт.') }}';
+					if (v == 0)
+					{
+						var row = document.querySelector(itemId);
+						if (row) row.parentNode.removeChild(row);
+					}
+					checkCart(data.count);
+				}
+			});
+		}
+
+		function checkCart(total)
+		{
+			if (total == 0)
+			{
+			$('.discount__bar').remove();
+			$('.discount__bar__empty').removeClass('hide');
+			}
+
+		}
+
+
+{% endset %}
+{% do widget.application.addHeadString( "<script>#{script}</script>" ) %}
+
+{% endif %}

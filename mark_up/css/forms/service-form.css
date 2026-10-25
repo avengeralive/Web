@@ -1,0 +1,66 @@
+.icon-fix-before:before{
+    display: inline-block;
+    margin:2px 10px 5px 0px;
+    content: ' ';
+    vertical-align: middle;
+    background-image: url('/wp-content/themes/mark_up/img1/svg/sprite.svg');
+    background-repeat: no-repeat;
+    background-size: 9.7098em 221.6em;
+    width: 1.2969em;
+    height: 1.3003em;
+    background-position: 0 -147em;
+    position: relative;
+}
+.footer-request-call-fix{
+    margin-left: 20px;
+    font-weight: 500;
+    padding: 5px 10px 5px 10px;
+    color: #2e2e2e;
+    border-radius: 30px;
+    background-color: grey;
+}
+.footer-tel-fix{
+    margin-left: 30px;
+}
+.footer-info-fix{
+    float: right;
+    margin:10px 14px 14px 14px;
+    font-size:14px;
+}
+.footer-info-fix:hover a{
+    text-decoration: none;
+}
+.fade:not(.show){
+    opacity: 1;
+}
+.option-input{
+    position: relative;
+}
+.modal-service{
+    display: none;
+    top:auto !important;
+    padding-top: 80px
+}
+.modal-header .close{
+    margin-top:5px;
+    right: 25px;
+    position: absolute;
+}
+.form_title{
+    padding-top:20px;
+}
+.input_type_textarea{
+    width:100%;
+}
+.contact-info {
+    display: inline-flex;
+}
+.modal {
+    overflow: auto;
+}
+
+@media (max-width: 767px){
+    .service-title {
+        font-size: 25px;
+    }
+}

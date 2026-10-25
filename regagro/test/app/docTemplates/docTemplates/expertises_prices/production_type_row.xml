@@ -1,0 +1,68 @@
+						<w:tr w:rsidR="00760B6E" w:rsidTr="00760B6E">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2943" w:type="dxa"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRPr="00E43F6A" w:rsidRDefault="00760B6E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="both"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00E43F6A">
+										<w:t>${production_type_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2835" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRPr="00E43F6A" w:rsidRDefault="00D877F6" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00E43F6A">
+										<w:t>${production_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1276" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRPr="00E43F6A" w:rsidRDefault="00760B6E" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00E43F6A">
+										<w:t>${measure_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1134" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRPr="00E43F6A" w:rsidRDefault="00760B6E" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00E43F6A">
+										<w:t>${expertise_count}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1418" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRPr="00E43F6A" w:rsidRDefault="00760B6E" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00E43F6A">
+										<w:t>${expertise_price}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

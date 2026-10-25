@@ -1,0 +1,109 @@
+{% include "@widget/_common/favorite.twig" %}
+<style>
+.pht:hover { cursor: zoom-in; }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+{% block html %}
+  {% for m in widget.children %}
+  <div class="row stocksitem" id="act{{ m.id }}">
+      <div class="columns">
+        <div class="date">
+          {{ m.dat|date('d.m.Y') }}
+        </div>
+        <div class="content">
+          <a class="news__more" href="{{ m.url}}" onclick="$(this).parent().parent().parent().toggleClass('active'); return false;"><h4>{{ m.name}}</h4></a>
+          {% if m.pic != '' %}
+          <div class="imager" style="width: 100%; float: left; position: relative; margin-bottom: 6px;">
+            <div class="imagerinner">
+          <a class="left-button" style="cursor: pointer; position: absolute; left: 7px; top: calc(50% - 18px);" onclick="$('.rows{{ m.id }} img').each(function(i, v){ 
+          if ($(v).attr('src') == $('.photo{{ m.id }}').attr('data-zoom')) {
+            if (i == 0) {
+              $('.photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[$('.rows{{ m.id }} img').length - 1]).attr('data-zoom')); 
+              $('.photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[$('.rows{{ m.id }} img').length - 1]).attr('src')); 
+            } else { 
+              $('.photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[i - 1]).attr('data-zoom'));
+              $('.photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[i - 1]).attr('src')); 
+            }
+            return false;
+          } });"><i class="fa fa-angle-left fa-2x"></i></a>
+          <a class="right-button" style="cursor: pointer; position: absolute; right: 7px; top: calc(50% - 18px);" onclick="$('.rows{{ m.id }} img').each(function(i, v){ 
+          if ($(v).attr('src') == $('.photo{{ m.id }}').attr('data-zoom')) { 
+            if (i == $('.rows{{ m.id }} img').length - 1) { 
+              $('.photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[0]).attr('data-zoom')); 
+              $('.photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[0]).attr('src')); 
+            } else { 
+              $('.photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[i + 1]).attr('data-zoom'));
+              $('.photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[i + 1]).attr('src')); 
+            }
+            return false;
+          } });"><i class="fa fa-angle-right fa-2x"></i></a>
+          <script>
+            $(document).keyup(function(e) {
+              if (e.keyCode === 27)  {
+                $('.imager').removeClass('modals'); $('body').css('overflow', 'scroll'); x = $('.photo{{ m.id }}').attr('src'); $('.photo{{ m.id }}').attr('src', $('.photo{{ m.id }}').attr('data-zoom')); $('.photo{{ m.id }}').attr('data-zoom', x);
+              }
+              if (e.keyCode === 37)  {
+                $('.rows{{ m.id }} img').each(function(i, v){ 
+                if ($(v).attr('src') == $('.photo{{ m.id }}').attr('data-zoom')) { 
+                  if (i == 0) { 
+                    $('.modals .photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[$('.rows{{ m.id }} img').length - 1]).attr('data-zoom')); 
+                    $('.modals .photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[$('.rows{{ m.id }} img').length - 1]).attr('src')); 
+                  } else { 
+                    $('.modals .photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[i - 1]).attr('data-zoom'));
+                    $('.modals .photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[i - 1]).attr('src')); 
+                  }
+                } });
+              }
+              if (e.keyCode === 39)  {
+                $('.rows{{ m.id }} img').each(function(i, v){
+                console.log($(v).attr('src'));
+                if ($(v).attr('src') == $('.photo{{ m.id }}').attr('data-zoom')) { 
+                  if (i == $('.rows{{ m.id }} img').length - 1) { 
+                    $('.modals .photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[0]).attr('data-zoom')); 
+                    $('.modals .photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[0]).attr('src')); 
+                  } else { 
+                    $('.modals .photo{{ m.id }}').attr('src', $($('.rows{{ m.id }} img')[i + 1]).attr('data-zoom'));
+                    $('.modals .photo{{ m.id }}').attr('data-zoom', $($('.rows{{ m.id }} img')[i + 1]).attr('src')); 
+                  }
+                  return false;
+                } });
+              }
+            });
+          </script>
+          <button onclick="$('.imager').removeClass('modals'); $('body').css('overflow', 'scroll'); x = $('.photo{{ m.id }}').attr('src'); $('.photo{{ m.id }}').attr('src', $('.photo{{ m.id }}').attr('data-zoom')); $('.photo{{ m.id }}').attr('data-zoom', x);" class="close-button" type="button" style="right: 8px !important; top: 8px !important;">
+          <img src="/themes/shop/images/cross.svg" alt="" style="width: 14px; height: 14px;"></button><img src="/imagetransform/width_840_height_560_fit_2{{ m.pic }}" class="pht photo{{ m.id }}" data-zoom="{{ m.pic }}" style="float: left; margin-top: 0px;">
+            </div>
+          </div>
+          <p style="margin-top: 0px; margin-left:0px; margin-right: 0px; width: 420px; float: left; max-width: 100%;" class="imagesrow rows{{ m.id }}">
+          {% if m.slider_img is not empty %}
+          <img src="/imagetransform/width_840_height_560_fit_2{{ m.pic }}" style="width: 65px !important; height: 43px; margin: 1px; cursor: pointer;" data-zoom="{{ m.pic }}" onclick="$('.photo{{ m.id }}').attr('src', $(this).attr('src')); $('.photo{{ m.id }}').attr('data-zoom', $(this).attr('data-zoom'));">
+          {% endif %}
+          {% for im in m.slider_img %}
+          <img src="/imagetransform/width_840_height_560_fit_2{{ im.file }}" style="width: 65px !important; height: 43px; margin: 1px; cursor: pointer;" data-zoom="{{ im.file }}" onclick="$('.photo{{ m.id }}').attr('src', $(this).attr('src')); $('.photo{{ m.id }}').attr('data-zoom', $(this).attr('data-zoom'));">
+          {% endfor %}
+          </p>
+          {% if m.slider_img is not empty %}
+          <img src="{{ m.pic }}" style="display: none;">
+          {% endif %}
+          {% for im in m.slider_img %}
+          <img src="{{ im.file }}" style="display: none;">
+          {% endfor %}
+          {% endif %}
+          {% if m.video != '' %}
+          <iframe style="width: 420px; max-width: 100%; height: 280px; margin-top: 25px;" class="yt-player" src="https://www.youtube.com/embed/{{ m.video }}?controls=1&rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          {% endif %}
+          <div class="materialshort">{{ m.short|raw }}</div>
+          <div class="materialall">{{ m.text|raw }}</div>
+          {% if m.readmore %}<div class="more"><a href="javascript:void(0)" onclick="$(this).parent().parent().parent().parent().toggleClass('active');">Читать далее</a></div>
+          <div class="skip"><a href="javascript:void(0)" onclick="$(this).parent().parent().parent().parent().toggleClass('active');">Свернуть</a></div>{% endif %}
+        </div>
+      </div>
+  </div>
+  {% endfor %}
+  {% if widget.getParam('paginator') %}
+    <div class="row column x-pages" style="margin-top: 20px; float: left;">
+      {{ widget.getPaginator()|raw }}
+    </div>
+  {% endif %}
+  	
+{% endblock %}

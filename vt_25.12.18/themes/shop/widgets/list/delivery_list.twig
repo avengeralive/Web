@@ -1,0 +1,19 @@
+
+{% for m in widget.getChildren %}
+
+<div class="row">
+		<div class="large-16 columns large-centered">
+				<h5 class="individual" style="margin-bottom: 0px !important;">{{m.name}}</h5>
+		</div>
+<div class="columns">
+	<hr class="individual-hr">
+</div>
+
+<div class="large-16 columns large-centered">
+
+{{m.text | raw}}
+
+</div>
+</div>
+
+{% endfor %}

@@ -1,0 +1,12 @@
+    <div class="row large-up-2 medium-up-2 small-up-1">
+		{% for m in widget.children %}
+			  <div class="column">
+				<div class="product">
+				  <div class="chain chain_collection">
+				  </div><a class="product__title" href="{{ m.url }}">
+          <strong>{{ m.name }}</strong></a>
+				  <div class="product__img"><a href="{{ m.url }}"><img src="{{ m.pic }}" alt=""></a></div>
+				</div>
+			  </div>
+		{% endfor %}
+	</div>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Social Auth</name>
+    <version>1.0</version>
+    <code>neoseo-social-auth</code>
+    <author>Alexander Sorokin</author>
+    <link></link>
+
+    <file path="catalog/controller/account/neoseo_login.php">
+        <operation>
+            <search><![CDATA[if (isset($this->error['warning']]]></search>
+            <add position="before"><![CDATA[		/* NeoSeo Social Auth - begin */
+		$this->language->load('account/neoseo_account');
+		$language_id = $this->config->get('config_language_id');
+		$domain = $this->config->get('config_use_ssl') ? HTTPS_SERVER : HTTP_SERVER;
+		$data['neoseo_social_auth_status'] = $this->config->get('neoseo_account_social_status');
+		$neoseo_social_auth_title = $this->config->get('neoseo_account_social_title');
+		$data['social_auth_title'] = isset($neoseo_social_auth_title[$language_id]) ? $neoseo_social_auth_title[$language_id] : '';
+		$social_networks = $this->config->get('neoseo_account_social_networks');
+		$data['social_networks'] = $social_networks ? implode(',', $social_networks) : '';
+		$data['social_auth_sort'] = $this->config->get('neoseo_account_social_sort');
+		$data['domain'] = urlencode($domain . "index.php?route=account/neoseo_social_auth");
+		/* NeoSeo Social Auth - end */]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/neoseo_unistor/template/account/neoseo_account_login.tpl">
+        <operation>
+            <search><![CDATA[<?php echo $forgotten; ?>]]></search>
+            <add position='after' offset='3'><![CDATA[                        <!-- NeoSeo Social Auth - begin -->
+                        <?php if($neoseo_social_auth_status){ ?>
+<?php if (isset($social_error)) { echo $social_error; } ?>
+                        <div class="socialLogin"><p><strong><?php echo $social_auth_title; ?></strong></p>
+                            <script src="https://ulogin.ru/js/ulogin.js"></script>
+                            <div id="uLogin"  data-ulogin="display=panel;theme=flat;fields=first_name,last_name,email,phone,city,country;mobilebuttons=0;sort=<?php echo $social_auth_sort; ?>;providers=<?php echo $social_networks;?>;hidden=;redirect_uri=<?php echo $domain; ?>"></div>
+                        </div>
+                        <?php } ?> 
+                        <!-- NeoSeo Social Auth - end -->]]></add>
+        </operation>
+    </file>
+
+</modification>

@@ -1,0 +1,18 @@
+{% extends layout %}
+
+{% block main %}
+
+<div class="row">
+	<div class="large-16 columns large-centered">
+        <h5 class="individual" style="margin-bottom: 0px !important;">{{catalog.name}}</h5>
+    </div>
+      <div class="columns">
+  <hr class="individual-hr" style="margin-bottom: 0px !important;">
+</div>
+
+
+      <div class="large-16 columns large-centered text-center stocks">
+        {% widget 'List' with {order: 'tag',sort: 'ASC', template: 'mass_media.twig', catalog: 478, limit: 4, paginator: 1, paginator_template: 'default.twig' } %}
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+.valigner {
+	// need content height
+	&:before {
+		display: inline-block;
+		height: 100%;
+		content: "";
+		width: 0;
+		vertical-align: middle;
+	}
+}
+.valigner-content {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.generate-columns(6);
+
+input,
+select,
+textarea {
+	outline: none;
+}

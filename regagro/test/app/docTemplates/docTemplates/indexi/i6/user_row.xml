@@ -1,0 +1,97 @@
+<w:tr w:rsidR="00C2729A" w:rsidTr="00F55535">
+							<w:trPr>
+								<w:trHeight w:val="276"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1857"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2042"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2176"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1991"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00C2729A" w:rsidRDefault="00C2729A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1204"/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00C2729A" w:rsidRDefault="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${user_displayname}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3984"/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00C2729A" w:rsidRDefault="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${expertise_count}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3348"/>
+								</w:tcPr>
+								<w:p w:rsidP="00864C01" w:rsidR="00C2729A" w:rsidRDefault="00F55535">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${percent}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

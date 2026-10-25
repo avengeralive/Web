@@ -1,0 +1,591 @@
+		.header-crm {
+			min-height: 850px;
+		    width: 100%;
+		    background-image: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/crm/img-header-crm.jpg);
+		    background-position: center center;
+		    -webkit-background-size: cover;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    position: relative;
+		}
+
+		.header-crm .nav-corporate {
+			width: 100%;
+		    background-color: rgba(0,0,0,0.6);
+		    height: 65px;
+		    /*border-top: 5px solid #2e2e2e;*/
+		    position: fixed;
+		    z-index: 10;
+		}
+
+		.nav-corporate nav{
+			float: left;
+		}
+
+		.nav-corporate nav ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+		}
+
+		.nav-corporate nav ul li{
+			display: inline-block;
+
+			font-size: 18px;
+		}
+
+		.nav-corporate nav ul li:first-child{
+			margin-left: 38px;	
+		}
+
+		.nav-corporate nav ul li a{
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			padding: 0 22px;
+			line-height: 60px;	
+			position: relative;
+		}
+
+		.nav-corporate nav ul li a:after{
+			content:"";
+			display: block;
+			position: absolute;
+			left:22px;
+			right: 22px;	
+			-webkit-transition: all 0.25s;
+			-o-transition: all 0.25s;
+			transition: all 0.25s;
+			border-bottom:5px solid transparent;
+			bottom: -4px;
+		}
+
+		.nav-corporate nav ul li a:hover:after{
+			border-bottom:5px solid #fff;
+		}
+
+		body.body-crm {
+			font-family: "RobotoRegular", sans-serif;
+		    font-size: 16px;
+		    line-height: 1.2;
+		    margin: 0;
+		    padding: 0;
+		    color: #2e2e2e;
+		    text-rendering: optimizeLegibility !important;
+	    	-webkit-font-smoothing: antialiased !important;
+	    	-moz-osx-font-smoothing: grayscale !important; 
+
+		}
+
+		.contacts-corporate .tel {
+	    	display: inline-block;
+	    	vertical-align: middle;
+  			opacity: 0.6;
+  			color: #ffffff;
+	    	font-size: 14px;
+	    	line-height: 1.5;
+		}
+
+		.contacts-corporate {
+	    	float: right;
+	    	padding-top: 9px;
+		}
+
+		.head-container {
+		    margin: 0 auto;
+		    padding: 1px 10px;
+		    max-width: 960px;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    position: relative;
+		}
+
+		.head-container .title-corporate {
+			margin-top: 371px; /* 371 = half */
+		}
+
+		.corporate-btn {
+	    	font-size: 18px;
+	  		font-weight: 600;
+	  		letter-spacing: -0.1px;
+	  		border-radius: 5px;
+	  		padding: 12px 22px;
+		}
+
+		.btn-yellow {
+	  		background-color: #edb933;
+	  		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+	    	color: #282828;
+		}
+
+		.btn-black-white {
+			border: solid 2px #282828;
+			color: #282828;
+		}
+
+		.btn-black-white:hover {
+			color: #f36b5f;
+			border: solid 2px #f36b5f;
+		}
+
+		.request-button {
+			width: 220px;
+	  		height: 50px;
+	  		margin: 0 auto;
+		}
+
+		.head-container .title-corporate h1 {
+			font-size: 48px;
+	  		font-weight: bold;
+	  		line-height: 1.13;
+	  		letter-spacing: -1.1px;
+	  		text-align: center;
+	  		color: #ffffff;
+	  		text-transform: uppercase;
+		}
+
+		.contacts-corporate .btn-call-me {
+			display: inline-block;
+		    padding: 4px 10px 4px 40px;
+		    color: #edb933;
+		    border: 2px solid #edb933;
+		    border-radius: 20px;
+		    font-size: 14px;
+		    text-align: center;
+		    text-decoration: none;
+		    font-weight: 700;
+		    line-height: 1;
+		    background-image: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/ic-call.svg);
+		    background-repeat: no-repeat;
+		    background-position: 15px 8px;
+		    -webkit-background-size: 18px 18px;
+		    background-size: 18px 18px;
+		    -webkit-transition: all 0.25s;
+		    -o-transition: all 0.25s;
+		    transition: all 0.25s;
+		    vertical-align: middle;
+		    margin-left: 15px;
+		}
+
+		section.introduction {
+			width: 100%;
+			min-height: 402px;
+	  		object-fit: contain;
+	  		background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/bg-2.jpg) no-repeat center center; 
+	  		-webkit-background-size: cover;
+	  		-moz-background-size: cover;
+	  		-o-background-size: cover;
+	  		background-size: cover;
+		}
+
+		section.introduction .first-title {
+			max-width: 1047px;
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 100px;
+		}
+
+		section.introduction .first-title span {
+			font-family: Roboto;
+  			font-size: 22px;
+  			font-weight: 500;
+  			line-height: 1.18;
+  			letter-spacing: -0.6px;
+  			text-align: center;
+  			color: #282828;
+		}
+
+		section.introduction .second-title {
+			max-width: 827px;
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 24px;
+		}
+
+		section.introduction .second-title span {
+			font-size: 16px;
+	  		line-height: 1.25;
+	  		letter-spacing: -0.3px;
+	  		text-align: center;
+	  		color: #525252;
+		}
+
+		section.what-we-do-section {
+			width: 100%;
+			min-height: 535px;
+			background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/crm/bg-05.jpg);
+			-webkit-background-size: cover;
+	  		-moz-background-size: cover;
+	  		-o-background-size: cover;
+	  		background-size: cover;
+		}
+
+		section.what-we-do-section .what-we-do-block {
+			max-width: 1047px;
+			margin: 0 auto;
+			margin-top: 86px;
+		}
+
+		section.what-we-do-section h2 {
+			font-size: 36px;
+			text-transform: uppercase;
+  			font-weight: bold;
+  			line-height: 1;
+  			letter-spacing: -0.5px;
+  			text-align: center;
+  			color: #ffffff;
+  			margin-top: 0;
+  			padding-top: 97px;
+  			margin-bottom: 0;
+		}
+
+		section.what-we-do-section .what-we-do--text p {
+			text-align: center;
+			font-size: 16px;
+  			font-weight: 500;
+  			line-height: 1.13;
+  			letter-spacing: -0.3px;
+  			text-align: center;
+  			color: #fafafa;
+  			margin-top: 0px;
+		}
+
+		.what-we-do--text {
+			margin-top: 40px;
+		}
+
+		.what-we-do {
+			width: 255px;
+			display: inline-block !important;
+    		float: inherit !important;
+    		vertical-align: top;
+		}
+
+		.what-we-do:hover {
+ 			color: #fafafa !important;
+		}
+
+		.what-we-do--icon:before, .what-we-do:hover .what-we-do--icon:before {
+			background-color: #fff;
+			transform: rotate(45deg);
+		}
+
+		.what-we-do-items {
+			text-align: center;
+		}
+
+		.col-item-4:nth-child(n+2) {
+			margin-left: 100px;
+		}
+
+		.what-we-do--icon:before {
+			background-color: inherit !important;
+    		transform: inherit !important;
+    		transition: inherit !important;
+    		background-repeat: no-repeat !important;
+		}
+
+		.what-we-do--icon {
+    		width: 134px !important;
+    		height: 134px !important;
+		}
+
+		.what-we-do--icon-one:before {
+			background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/crm/ic-work-01.svg);
+		}
+
+		.what-we-do--icon-two:before {
+			background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/crm/ic-work-02.svg);
+		}
+
+		.what-we-do--icon-three:before {
+			background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/crm/ic-work-03.svg);
+		}
+
+		section.dev-stages {
+			width: 100%;
+		}
+
+		section.dev-stages p {
+			margin: 0 !important;
+    		padding: 0 !important;
+    		font-size: 16px;
+  			line-height: 1.25;
+  			letter-spacing: -0.3px;
+  			text-align: left;
+  			color: #525252;
+		}
+
+		section.dev-stages h2 {
+  			font-size: 36px;
+  			font-weight: bold;
+  			line-height: 1;
+  			letter-spacing: -0.5px;
+  			text-align: left;
+  			color: #282828;
+  			text-transform: uppercase;
+  			text-align: center;
+  			margin: 0;
+  			margin-top: 98px;
+			padding-bottom: 10px;
+		}
+
+		section.dev-stages h3 {
+  			font-size: 20px;
+  			font-weight: 900;
+  			line-height: 1.1;
+  			letter-spacing: -0.1px;
+  			text-align: left;
+  			color: #282828;
+  			text-transform: uppercase;
+		}
+
+		section.dev-stages .h-24-ouner p.title {
+  			font-size: 20px;
+  			font-weight: 900;
+  			line-height: 1.1;
+  			letter-spacing: -0.1px;
+  			text-align: left;
+  			color: #4d9fc0;
+  			margin-bottom: 10px !important;
+  			text-transform: uppercase;
+		}
+
+		section.dev-stages .h-24-ouner p.desc {
+  			font-size: 16px;
+  			line-height: 1.25;
+  			letter-spacing: -0.3px;
+  			text-align: left;
+  			color: #4d9fc0;
+		}
+
+		.img-schem-1,.img-schem-2,.img-schem-3,.img-schem-4,.img-schem-5,.img-schem-6 {
+			width: 206px;
+			height: inherit;
+    		image-rendering: -moz-crisp-edges;         /* Firefox */
+    		image-rendering:   -o-crisp-edges;         /* Opera */
+    		image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    		image-rendering: crisp-edges;
+    		-ms-interpolation-mode: nearest-neighbor; 
+		}
+
+		.h-24-ouner {
+			right: 70px !important;
+		}
+
+		.container-modified {
+			max-width: 1047px !important;
+		}
+
+		.section-3-ios .tables {
+			max-width: 915px !important;
+			margin-bottom: 84px !important;
+		}
+
+		.section-3-ios .text-cell {
+			padding-left: 50px !important;
+		}
+
+		section.projects-done {
+			width: 100%;
+			min-height: 944px;
+			background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/bg-2.jpg);
+    		-webkit-background-size: cover;
+    		-moz-background-size: cover;
+    		-o-background-size: cover;
+    		background-size: cover;
+		}
+
+		section.projects-done .projects-done-block {
+			padding-top: 92px;
+    		max-width: 950px;
+    		margin: 0 auto;
+		}
+
+		section.projects-done .projects-done-block h2 {
+			font-size: 36px;
+  			font-weight: bold;
+  			line-height: 1;
+  			letter-spacing: -0.5px;
+  			text-align: center;
+  			color: #282828;
+  			margin-bottom: 24px;
+    		margin-top: 0;
+    		text-transform: uppercase;
+		}
+
+		section.projects-done .projects-done-require-btn {
+		    text-align: center;
+		    margin-top: 22px;
+		}
+
+		section.projects-done .proj-content span.title {
+			display: block;
+			font-size: 20px;
+  			font-weight: 900;
+  			line-height: 1.1;
+  			letter-spacing: -0.1px;
+  			text-align: left;
+  			color: #282828;
+  			padding-bottom: 19px;
+  			text-transform: uppercase;
+		}
+
+		section.projects-done .proj-content span.title:before {
+			content: '';
+    		position: absolute;
+    		left: -27px;
+    		top: 3px;
+    		width: 16px;
+    		height: 16px;
+    		transform: rotate(-45deg);
+    		border-radius: 3px;
+    		background-color: #edb933;
+		}
+
+		section.projects-done .proj-content span.text {
+			display: block;
+			font-size: 16px;
+  			line-height: 1.25;
+  			letter-spacing: -0.3px;
+  			text-align: left;
+  			color: #525252;
+		}
+
+		section.projects-done .proj-content .proj-item {
+			margin-bottom: 32px;
+			position: relative;
+		}
+
+		section.projects-done .proj-content {
+			margin-top: 63px;
+		}
+
+		section.our-advantages {
+			width: 100%;
+			min-height: 745px;
+    		background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/bg-03.jpg);
+		}
+
+		section.our-advantages .advantages-block {
+			padding-top: 102px;
+		}
+
+		section.our-advantages .advantages-block h2 {
+			font-size: 36px;
+  			font-weight: bold;
+  			line-height: 0.67;
+  			letter-spacing: -0.5px;
+  			text-align: center;
+  			color: #282828;
+    		margin: 0;
+    		text-transform: uppercase;
+		}
+
+		section.our-advantages .advantages-list {
+    		text-align: center;
+    		padding-top: 62px;
+    		max-width: 1047px;
+    		margin: 0 auto;
+		}
+
+		section.our-advantages .advantage {
+			display: inline-block;
+			width: 250px;
+			vertical-align: top;
+			text-align: center;
+		}
+
+		section.our-advantages .advantage:nth-child(n+4) {
+			margin-top: 51px;
+		}
+
+		section.our-advantages .advantage:not(:nth-child(3n)) {
+			margin-right: 100px;
+		}
+
+		section.our-advantages .advantage span.title {
+			font-size: 18px;
+  			font-weight: bold;
+  			letter-spacing: -0.1px;
+  			text-align: center;
+  			text-transform: uppercase;
+  			color: #282828;
+  			display: block;
+  			height: 42px;
+  			margin-top: 15px;
+		}
+
+		section.our-advantages .advantage span.text {
+			font-size: 16px;
+  			line-height: 1.25;
+  			letter-spacing: -0.3px;
+  			text-align: center;
+  			color: #525252;
+  			display: block;
+  			margin-top: 20px;
+		}
+
+		section.tech-stack {
+			width: 100%;
+			min-height: 615px;
+		}
+
+		section.tech-stack div.the-stack {
+			padding-top: 100px;
+		}
+
+		section.tech-stack div.the-stack h2 {
+			font-size: 36px;
+	  		font-weight: bold;
+	  		line-height: 0.67;
+	  		letter-spacing: -0.5px;
+	  		text-align: center;
+	  		color: #282828;
+	  		text-transform: uppercase;
+	  		margin-bottom: 18px;
+	    	margin-top: 0px;
+		}
+
+		section.tech-stack div.the-stack div.techlist {
+			max-width: 1047px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		section.tech-stack div.the-stack img.iconTech.addTopMargin {
+			margin-top: 16px;
+		}
+
+		.center-aligned {
+			margin: 0 auto;
+    		max-width: 688px;
+		}
+
+		.section-3-ios .question-table {
+			background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/crm/ic-help.svg);
+    		width: 30px;
+    		height: 30px;
+    		background-repeat: no-repeat;
+		}
+
+		section.tech-stack span.stack-text {
+			display: block;
+    		font-size: 16px;
+    		line-height: 1.25;
+    		letter-spacing: -0.3px;
+    		color: #282828;
+		    text-align: center;
+		}
+
+		section.tech-stack .stack-text-block {
+    		max-width: 630px;
+    		margin: 0 auto;
+    		padding-bottom: 62px;
+		}
+
+		.block-request input, .block-request textarea {
+    		border-radius: 4px;
+		}

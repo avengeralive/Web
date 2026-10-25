@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Last Viewed Products</name>
+    <version>11</version>
+    <code>neoseo-last-viewed-products</code>
+    <author>Alexander Sorokin</author>
+    <link>http://neoseo.com.ua/</link>
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[if ($product_info) {]]></search>
+            <add position="after"><![CDATA[
+           /* NeoSeo Last viewed products - begin */
+			$this->load->model("module/neoseo_last_viewed_products");
+			$this->model_module_neoseo_last_viewed_products->saveWatch($product_id);
+			/* NeoSeo Last viewed products - end */
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>

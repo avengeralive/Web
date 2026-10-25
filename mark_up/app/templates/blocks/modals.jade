@@ -1,0 +1,61 @@
+.modal#modal-1
+	.modal-content
+		.modal-header-icon
+			.icon.Phone_call_modal
+		.modal-header-text Оставьте свой номер телефона, #[br]и мы вам обязательно перезвоним!
+		form.question-form(action="" method="")
+			.control-group
+				input.inputbox.full(type="text" placeholder="Ваше имя..")
+			// /control-group
+			.control-group
+				input.inputbox.full(type="text" placeholder="Ваш телефон..*")
+			// /control-group
+			.control-group
+				input.inputbox.full(type="text" placeholder="Ваш e-mail..")
+			// /control-group
+			.control-group.text-center
+				input.btn.btn-yellow(type="submit" value="Отправить")
+			// /control-group
+		// /form
+		.modal-close
+			a(href="" data-dismiss="modal")
+				span &times;
+				| Закрыть
+
+.modal#modal-2
+	.modal-content
+		.modal-header-text Вы можете оставить онлайн-заявку, #[br]и мы вам обязательно ответим!
+		form.question-form(action="" method="")
+			.control-group
+				input.inputbox.full(type="text" placeholder="Ваше имя..")
+			// /control-group
+			.control-group
+				input.inputbox.full(type="text" placeholder="Ваш телефон..*")
+			// /control-group
+			.control-group
+				input.inputbox.full(type="text" placeholder="Ваш e-mail..")
+			// /control-group
+			.control-group
+				textarea.inputbox.full.clear(rows="10" placeholder="Опишите, пожалуйста, проект..")
+			// /control-group
+			.control-group
+				.attachment__white
+					.attach-container
+						.attach-file
+							.icon.Attach_white
+							span.attach-file-name Добавить файл
+						// /attach-file-dummy
+						input(type="file").attach-file-input
+						// /hidden file input
+					// /attach-container
+					a(href="").attach-reset &times;
+				// /attachment
+			// /control-group
+			.control-group.text-center
+				input.btn.btn-yellow(type="submit" value="Отправить")
+			// /control-group
+		// /form
+		.modal-close
+			a(href="" data-dismiss="modal")
+				span &times;
+				| Закрыть

@@ -1,0 +1,37 @@
+{% extends layout %}
+
+{% block main %}
+    <style>.contacts__contact-us-title { display: none; }
+    @media (min-width: 900px) { #form2, .contcc { width: 900px; } 
+        .end img {
+            margin-top: 10px !important; 
+            margin-bottom: 10px !important;
+        }
+    }
+    </style>
+
+    <div class="row">
+        <div class="large-16 columns large-centered">
+            <h5 class="individual">{{catalog.name}}</h5>
+        </div>
+        <div class="columns">
+            <hr class="individual-hr" style="margin-top: 0px;">
+        </div>
+
+        {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'faq.twig', catalog: 474} %}
+
+        <div class="columns">
+            <hr class="individual-hr"/>
+        </div>
+    </div>
+
+    <div class="row column">
+        <div class="large-16 large-centered columns contcc" style="padding: 15px 20px;">
+            <h5><strong>Нет нужного ответа?&nbsp;</strong>Задайте свой вопрос</h5>
+        </div>
+
+        <div class="large-16 large-centered columns contcc" style="padding: 0px;">
+            {% widget 'forms' with { form: 2 } %}
+        </div>
+    </div>
+{% endblock %}

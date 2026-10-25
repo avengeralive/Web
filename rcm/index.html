@@ -1,0 +1,295 @@
+{#<!DOCTYPE HTML>#}
+{% extends "base.html" %}
+		{% block scripts %}
+<title>Компания РЦМ в Санкт-Петербурге – актуальный прайс-лист с ценами.</title>
+<meta name="description" content="Производство и продажа изделий из металла: арматура, лист, уголок, полоса, швеллер. Доставка по всей России.">
+<meta name="keywords" content="РЦМ, купить, цена, прайс-лист, стоимость, арматура, лист, уголок, полоса, швеллер, в Санкт-Петербурге">	
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="slider_first_page">
+    	<div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background:url(/static/images/slider.jpg) no-repeat top center">
+                	<div class="container">
+                        <div class="text_box">
+                            <div class="title">Компания РЦМ занимаеться реализацией металло проката в пределах Санкт-Петербурга</div>
+                            <span>Основное направление нашей работу - оптовые поставки металлопроката и крепежа</span>
+                        </div>
+                        <a href="#" class="more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background:url(/static/images/slider.jpg) no-repeat top center">
+                	<div class="container">
+                        <div class="text_box">
+                            <div class="title">Компания РЦМ занимаеться реализацией металлопроката в пределах Санкт-Петербурга</div>
+                            <span>Основное направление нашей работу - оптовые поставки металлопроката и крепежа</span>
+                        </div>
+                        <a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background:url(/static/images/slider.jpg) no-repeat top center">
+                	<div class="container">
+                        <div class="text_box">
+                            <div class="title">Компания РЦМ занимаеться реализациейметаллопроката в пределах Санкт-Петербурга</div>
+                            <span>Основное направление нашей работу - оптовые поставки металлопроката и крепежа</span>
+                        </div>
+                        <a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background:url(/static/images/slider.jpg) no-repeat top center">
+                	<div class="container">
+                        <div class="text_box">
+                            <div class="title">Компания РЦМ занимаеться реализациейметаллопроката в пределах Санкт-Петербурга</div>
+                            <span>Основное направление нашей работу - оптовые поставки металлопроката и крепежа</span>
+                        </div>
+                        <a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background:url(/static/images/slider.jpg) no-repeat top center">
+                	<div class="container">
+                        <div class="text_box">
+                            <div class="title">Компания РЦМ занимаеться реализацией металлопроката в пределах Санкт-Петербурга</div>
+                            <span>Основное направление нашей работу - оптовые поставки металлопроката и крепежа</span>
+                        </div>
+                        <a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="wrapper">
+    	<div class="container">
+            <div class="catalog_line">
+                {% regroup Meta_cats by get_type_display as mcats %}
+                {% for mcat in mcats %}
+                <div class="section item{{ forloop.counter }}">
+                    <div class="name">{{ mcat.grouper }}</div>
+                    <ul>
+                        {% for item in mcat.list %}
+                        <li><a href="/price/{{ item.type }}/{{item.slug}}/">{{ item.title }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="table_info_box">
+            	<div class="left">
+                	<div class="title">Выгодные предложения</div>
+                	{% select_buy %}
+                
+            	<div class="right">
+                	<div class="title">Мониторинг РМЦ <span class="date">{% now "d.m" %}</span></div>
+                    <table class="monitoring">
+						{% for item in prices %}
+                    	<tr>
+                    		<td><span class="name">{{ item.title }}</span></td>
+                    		<td><span class="course">{{ item.price }}руб</span></td>
+                    		<td><span class="difference {% if item.delta < 0 %} minus{% endif %} {% if item.delta > 0 %} plus {% endif %} {% if item.delta == 0 %}zero {% endif %}">{{ item.delta }}%</span></td>
+                    	</tr>
+                    	{% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <div class="wrapper">
+    	<div class="container">
+    		<div class="about_box">
+    			<div class="title">
+                	О компании
+                </div>
+                <p>Компания <strong>«РЦМ»</strong> - крупный поставщик металлопрокатной продукции. Торговля металлопрокатом ведется оптом и в розницу, по конкурентоспособным ценам. Мы предлагаем широкий спектр изделий из металла для любых строительных задач, с которыми встречается бизнес, включая строительство мостов, изготовление армированных железобетонных или подвесных металлических конструкций, возведение несущих стен и перекрытий.</p>
+                <p>Металлопрокат используется в самых различных отраслях строительства. Одни металлические изделия обеспечивают высокую прочность конструкций и длительный срок эксплуатации построек. Другие идеально справится с повышенными поперечными нагрузками, другой окажется незаменимым в работе с риском воздействия скручивающих факторов. Также специальный металлопрокат активно применяется для декоративного оформления фасадов, возведения металлоконструкций и сооружений на их основе.<p>
+                <p>Компания «РЦМ» обладает собственным автопарком, который постоянно модернизируется и пополняется.</p>
+                <p>Если вам нужно купить прокатную продукцию в Санкт-Петербурге, обращайтесь в «РЦМ» по номеру +7 (812) 648-53-71. Наши специалисты помогут подобрать наиболее подходящий металлопрокат в розницу или крупной партией, а также организуют его продажу по лучшей на рынке цене и доставку в любую точку города Санкт-Петербург и Ленинградской области.</p>
+    		</div>
+            <div class="other_info_box">
+            	<div class="webcam">
+                	<div class="title">Онлайн камеры</div>
+                    <div class="slider_webcam">
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(/static/images/webcam.jpg)"><a href="http://cameraszmetall.oml.ru/camera1/image.jpg?1488893169173" rel="colorbox"></a></div>
+                                <div class="swiper-slide" style="background-image:url(/static/images/webcam.jpg)"><a href="http://cameraszmetall.oml.ru/camera1/image.jpg?1488893169173" rel="colorbox"></a></div>
+                                <div class="swiper-slide" style="background-image:url(/static/images/webcam.jpg)"><a href="http://cameraszmetall.oml.ru/camera1/image.jpg?1488893169173" rel="colorbox"></a></div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-white"></div>
+                            <div class="swiper-button-prev swiper-button-white"></div>
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(/static/images/webcam.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(/static/images/webcam.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(/static/images/webcam.jpg)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            	
+                        <div class="other_info_box_right">
+                	<div class="download">
+                		<div class="title">Договор и информация</div>
+                        <div class="parent_download">
+                            <a href="#" class="doc">Скачать договор поставки</a>
+                            <a href="#" class="map">Скачать схему проезда на завод</a>
+                        </div>
+                	</div>
+                    <div class="advantage">
+                    	<div class="title">Наши преимущества</div>
+                        <div class="parent">
+                        	<div class="section"><img src="/static/images/icon_advantage01.png" alt=""><span>Доставка<br>в день заказа</span></div>
+                        	<div class="section"><img src="/static/images/icon_advantage02.png" alt=""><span>Скидки<br>на объем</span></div>
+                        	<div class="section"><img src="/static/images/icon_advantage03.png" alt=""><span>Работаем<br>круглосуточно</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news_box">
+            	<div class="title">Наши новости <a href="#" class="more">Все новости</a></div>
+            	<div class="parent">
+                    {% for item in news %}
+            		<div class="section">
+            			<a href="http://metalinfo.ru{{ item.url }}" class="img"><img src="/static/images/img02.jpg" alt=""></a>
+            			<div class="text">
+            				<div class="name"><a href="http://metalinfo.ru{{ item.url }}">{{ item.title }}</a></div>
+            				<p>{{ item.text }}</p>
+            			</div>
+            		</div>
+                    {% endfor %}
+            	</div>
+            </div>
+    	</div>
+    </div>
+        <div class="slider_vertical">
+    	<div class="container">
+        	<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    	<div class="text">
+                        	<div class="name">Специальное предложение</div>
+                        	<div class="sub_name">на доставку позиций 10м.<br>в один адрес</div>
+                        	<p>менее 1 т. - 30%</p>
+                        	<a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                        </div>
+                    	<div class="img"><img src="/static/images/img03.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                    	<div class="text">
+                        	<div class="name">Специальное предложение</div>
+                        	<div class="sub_name">на доставку позиций 10м.<br>в один адрес</div>
+                        	<p>менее 1 т. - 30%</p>
+                        	<a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                        </div>
+                    	<div class="img"><img src="/static/images/img03.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                    	<div class="text">
+                        	<div class="name">Специальное предложение</div>
+                        	<div class="sub_name">на доставку позиций 10м.<br>в один адрес</div>
+                        	<p>менее 1 т. - 30%</p>
+                        	<a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                        </div>
+                    	<div class="img"><img src="/static/images/img03.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                    	<div class="text">
+                        	<div class="name">Специальное предложение</div>
+                        	<div class="sub_name">на доставку позиций 10м.<br>в один адрес</div>
+                        	<p>менее 1 т. - 30%</p>
+                        	<a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                        </div>
+                    	<div class="img"><img src="/static/images/img03.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                    	<div class="text">
+                        	<div class="name">Специальное предложение</div>
+                        	<div class="sub_name">на доставку позиций 10м.<br>в один адрес</div>
+                        	<p>менее 1 т. - 30%</p>
+                        	<a href="http://rcm.spb.ru" class="more">Подробнее</a>
+                        </div>
+                    	<div class="img"><img src="/static/images/img03.jpg" alt=""></div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+    	<div class="container">
+    		<div class="partners_box">
+            	<div class="section"><img src="/static/images/partner01.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner02.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner03.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner04.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner05.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner06.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner07.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner08.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner01.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner02.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner03.jpg" alt=""></div>
+            	<div class="section"><img src="/static/images/partner04.jpg" alt=""></div>
+            </div>
+    	</div>
+    </div>
+
+</div>
+
+
+
+<div style='display:none'>
+    <div id='popup_buy'>
+	    <a href="#" class="close"></a>
+        <div class="parent_popup">
+            <div class="title">Заказать товар</div>
+            <div class="name">
+            	Арматура А3 10 11,7м ГОСТ Р 52544
+                <span>36 860 руб - 1т.</span>
+            </div>
+            <form action="#">
+              <div class="line_form"><input type="text" placeholder="Ваше имя"><div class="asterisk"></div></div>
+              <div class="line_form"><input type="text" placeholder="Ваш телефон"><div class="asterisk"></div></div>
+              <div class="line_form"><input type="text" placeholder="Ваш Email"><div class="asterisk"></div></div>
+              <div class="line_form"><textarea placeholder="Ваш коментарий" cols="30" rows="10"></textarea></div>
+              <div class="line_btn"><input type="submit" value="Отправить"></div>
+            </form>
+        </div>
+        
+
+    </div>
+</div>
+
+<div style='display:none'>
+    <div id='popup_call_back'>
+	    <a href="#" class="close"></a>
+        <div class="parent_popup">
+            <div class="title">Обратный звонок</div>
+            <div class="sub_title">Уважаемый клиент!<br>
+            Укажите ваши имя и телефон, и наш менеджер<br>
+            перезвонит Вам в ближайшее время.</div>
+            <form action="#">
+              <div class="line_form"><input type="text" placeholder="Ваше имя"><div class="asterisk"></div></div>
+              <div class="line_form"><input type="text" placeholder="Ваш телефон"><div class="asterisk"></div></div>
+              <div class="line_form"><label class="label_name">Удобное время для звонка</label></div>
+              <div class="line_form column">
+              	<label><input type="radio" /> <div class="text">с 9:00<br>до 12:00</div></label>
+                <label><input type="radio" /> <div class="text">с 13:00<br>до 14:00</div></label>
+                <label><input type="radio" /> <div class="text">с 13:00<br>до 14:00</div></label>
+              </div>
+              <div class="line_btn"><input type="submit" value="Отправить"></div>
+            </form>
+        </div>
+        
+
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

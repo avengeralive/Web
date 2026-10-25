@@ -1,0 +1,26 @@
+{% extends 'layout_server1.twig' %}
+
+
+{% block main %}
+<style>footer { padding-top: 100px !important; } .individual-hr, .news hr { margin-top: 25px; margin-bottom: 25px; } footer .individual-hr { margin-top: 0px; margin-bottom: 20px; }</style>
+	
+	<div class="row dptc">
+	{% widget 'Sale.Catalog' with { 
+		product_catalog: product_catalog,
+		filter: 1,
+	
+	   list_limit: 12,
+		item_show_properties: 'code,brand',
+		item_show_tabs: [
+			{
+				field: 'text'
+			},		
+			{
+				page: _('Характеристики')
+			}
+		],
+
+	} %}
+	</div>
+	
+{% endblock %}

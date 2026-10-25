@@ -1,0 +1,30 @@
+		{% for m in widget.getChildren %}
+			{% if  m.name %}
+ 
+
+        <div class="large-16 columns large-centered">
+				<h5 class="individual">{{ m.name }}</h5>
+		</div>		
+			
+			{% endif %}			
+		{% endfor %}
+<div class="row">
+<div class="small-24 medium-centered column">		
+<div class="carousel-about carousel-main">
+	{% for m in widget.getChildren %}		  
+		  <div class="carousel-main__item">
+			<img src="{{ m.pic }}" alt="">
+		  </div>
+	{% endfor %}	  
+</div></div>
+</div>
+<div class="row">
+	<div class="column small-24 medium-18 large-16 medium-centered">
+		<div class="text-about">
+			{% for m in widget.getChildren %}
+				{{ m.text|raw }}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+

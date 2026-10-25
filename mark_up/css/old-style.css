@@ -1,0 +1,185 @@
+.old-vr-page.isolation-old section div.container-960 div.tables div.cell.text-cell h3 {
+    text-align: left;
+}
+.old-vr-page.isolation-old div.work-stage-image img.left-image {
+    top: 10px;
+}
+.old-vr-page.isolation-old .d-flex {
+    display: flex;
+}
+.old-vr-page.isolation-old .d-flex > div {
+    flex: 1;
+}
+.old-vr-page.isolation-old .logo-header-ios {
+    background-image: url(/wp-content/uploads/2017/07/logo.svg);
+    background-size: cover;
+}
+.old-vr-page.isolation-old .logo-header-ios > img {
+    opacity: 0;
+}
+.old-vr-page.isolation-old .contacts-ios .btn-call-me {
+    border: solid 2px #edb933;
+    color: #edb933;
+    background-image: url(https://infoshell.ru/wp-content/uploads/2018/01/ic-call.svg);
+}
+.old-vr-page.isolation-old .contacts-ios .tel {
+    color: #fff;
+}
+.old-vr-page.isolation-old .d-flex img {
+    max-width: 100%;
+}
+.old-vr-page.isolation-old .mb-24 {
+    margin-bottom: 24px !important;
+}
+.old-vr-page.isolation-old #vr-with-mobile {
+    background-image: url(/wp-content/uploads/2018/01/bg-blur-04.jpg);
+    background-size: cover;
+}
+.old-vr-page.isolation-old #vr-with-mobile .d-flex > div {
+    flex: 1 auto;
+}
+.old-vr-page.isolation-old section.tech-stack {
+    min-height: auto;
+}
+.old-vr-page.isolation-old section.tech-stack div.the-stack {
+    padding-top: 0;
+}
+.old-vr-page.isolation-old #developed-projects {
+    background-color: #f9c747;
+}
+.old-vr-page.isolation-old #our-services {
+    background-color: rgba(249, 199, 71, 0.1);
+}
+.old-vr-page.isolation-old #our-services h2 {
+    text-transform: initial;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+.old-vr-page.isolation-old .head-container .title-corporate {
+    margin-top: 0;
+}
+.old-vr-page.isolation-old .header-ios {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://infoshell.ru/wp-content/uploads/2017/12/img-header-vr.jpg);
+}
+.old-vr-page.isolation-old .header-ios .nav-ios {
+    top: 0;
+}
+.old-vr-page.isolation-old .head-container .title-corporate h1 {
+    font-size: 32px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+.old-vr-page.isolation-old section.tasks-we-solve {
+    min-height: initial;
+}
+.old-vr-page.isolation-old section.tasks-we-solve div.tasks {
+    padding-top: 0;
+}
+.old-vr-page.isolation-old .work-stages {
+    margin-bottom: 0;
+}
+.old-vr-page.isolation-old ol.work-stages > li.work-stage:last-child {
+    padding-bottom: 0;
+}
+.old-vr-page.isolation-old section.tasks-we-solve div.tasks .subtitle {
+    color: #aaa;
+}
+.old-vr-page.isolation-old section h2 {
+    font-size: 36px;
+    line-height: 1.2 !important;
+    margin-bottom: 24px !important;
+}
+.old-vr-page.isolation-old .body-ios h3 {
+    margin-bottom: 16px;
+}
+.old-vr-page.isolation-old .list-of-brands {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.old-vr-page.isolation-old .body-ios h3.text-left {
+    text-align: left;
+}
+.old-vr-page.isolation-old #tech-systems .btn {
+    border: solid 2px #282828;
+}
+.old-vr-page.isolation-old .fullsize {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.old-vr-page.isolation-old .with-dashed-border-top {
+    border-top: none;
+}
+.old-vr-page.isolation-old #tech-systems img {
+    max-width: 100%;
+}
+.old-vr-page.isolation-old .bg-slider-1 {
+    background-image: url(https://infoshell.ru/wp-content/uploads/2018/01/bg_slider_1.jpg);
+}
+.old-vr-page.isolation-old .external-link {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+.old-vr-page.isolation-old .external-link img {
+    transition: all 0.4s ease;
+}
+.old-vr-page.isolation-old .external-link:hover img {
+    filter: brightness(60%);
+}
+.old-vr-page.isolation-old .external-link:before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url(https://infoshell.ru/wp-content/uploads/2018/01/ic-view-more.svg);
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    margin: auto;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.old-vr-page.isolation-old .external-link:hover:before {
+    opacity: 1;
+}
+@media (max-width: 767px) {
+    .old-vr-page.isolation-old .head-container .title-corporate h1 {
+        font-size: 24px;
+    }
+    .old-vr-page.isolation-old section h2 {
+        font-size: 24px !important;
+    }
+    .old-vr-page.isolation-old .d-flex {
+        flex-direction: column;
+    }
+    .old-vr-page.isolation-old .work-stage, .old-vr-page.isolation-old .work-stage-last {
+        display: flex;
+        flex-direction: column;
+    }
+    .old-vr-page.isolation-old div.work-stage-image img.left-image {
+        position: relative;
+        margin-bottom: 24px;
+    }
+    .old-vr-page.isolation-old .work-stage-content, .old-vr-page.isolation-old .work-stage-image {
+        display: block;
+        text-align: center;
+        width: initial;
+    }
+    .old-vr-page.isolation-old .work-stage-content {
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,647 @@
+{% block html %}
+<div id="{{ widget.uniqueId }}" class="{{ widget.getParam('css_class') }}">
+
+    {% block responsive_toggle %}
+    <!--<p class="show-for-small-only" data-responsive-toggle="filter-{{ widget.uniqueId }}" data-hide-for="medium">
+        <span class="button light-gray expanded" data-toggle><i
+                class="fa fa-lg fa-filter"></i>&nbsp;{{ _('Фильтр') }}</span>
+    </p>-->
+    {% endblock %}
+
+    <div id="filter-{{ widget.uniqueId }}">
+
+        <div class="row">
+            <div class="large-17 columns large-centered">
+
+                <form action="{{ widget.getParam('action') }}" id="filterform">
+
+                    {% for f in widget.filter.getInfo() %}
+                    <p></p>
+                    <hr class="filter__hr">
+                    <div class="row filter__name">
+                        {#название фильтра отображаемое#}
+                        <div class="columns medium-6">{{ f.describ }}</div>
+                        <div class="columns medium-18">
+                        	<div class="row">
+                            {% if f.filter_type == constant('\\Sale\\Filter::TYPE_CHECKBOX') %}
+
+                            {% block checkbox %}
+                            {% if f.iterator %}
+                            {% for m in f.iterator %}
+
+                            <div
+                                class="saphire {% if f.iterator|length > 0 %}large-8 columns {%if loop.last %}end{% endif %}{% endif %}">
+                                <input id="{{ f.name }}_{{ m.id }}" class="saphire__input"
+                                       name="{{ widget.filter.name }}[{{ f.name }}][{{ m.id }}]" {% if f.value[m.id] is
+                                defined and f.value[m.id] %}checked{% endif %} value="1" type="checkbox">
+                                <label class="saphire__label" for="{{ f.name }}_{{ m.id }}">{{ m.name }}</label>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            <div class="saphire {% if f.iterator|length > 0 %}large-8 columns end{% endif %}">
+                                <input id="{{ f.name }}_{{ m.id }}" class="saphire__input"
+                                       name="{{ widget.filter.name }}[{{ f.name }}]" {% if f.value[m.id] is defined and
+                                f.value[m.id] %}checked{% endif %} value="1" type="checkbox">
+                                <label class="saphire__label" for="{{ f.name }}_{{ m.id }}">{{ m.name }}</label>
+                            </div>
+                            {% endif %}
+                            {% endblock %}
+
+                            {% endif %}
+                            {% if f.filter_type == constant('\\Sale\\Filter::TYPE_NUMERIC_SLIDER') %}
+
+                            {% block numeric_slider %}
+                            <div class="x-sale-slider-range" data-control-start="sliderOutputStart"
+                                 data-control-end="sliderOutputEnd" data-start="{{ f.min }}" data-end="{{ f.max }}"
+                                 data-initial-start="{{ f.value_min }}" data-initial-end="{{ f.value_max }}"></div>
+
+                            <div class="row collapse">
+                                <div class="small-6 column">
+                                    <input name="{{ widget.filter.name }}[{{ f.name }}_min]" id="sliderOutputStart"
+                                           data-default="{{ f.min }}" value="{{ f.value_min }}" type="text">
+                                </div>
+                                <div class="small-6 column">
+                                    <input name="{{ widget.filter.name }}[{{ f.name }}_max]" id="sliderOutputEnd"
+                                           data-default="{{ f.max }}" value="{{ f.value_max }}" type="text">
+                                </div>
+                            </div>
+                            {% endblock %}
+
+                            {% endif %}
+
+                            {% if f.filter_type == constant('\\Sale\\Filter::TYPE_NUMERIC') %}
+
+                            {% block numeric %}
+                            <div class="row collapse">
+                                <div class="small-6 column">
+                                    <input name="{{ widget.filter.name }}[{{ f.name }}_min]" id="sliderOutputStart"
+                                           data-default="{{ f.min }}" value="{{ f.value_min }}" type="text">
+                                </div>
+                                <div class="small-6 column">
+                                    <input name="{{ widget.filter.name }}[{{ f.name }}_max]" id="sliderOutputEnd"
+                                           data-default="{{ f.max }}" value="{{ f.value_max }}" type="text">
+                                </div>
+                            </div>
+                            {% endblock %}
+
+                            {% endif %}
+
+                            {% if f.filter_type == constant('\\Sale\\Filter::TYPE_RADIO') %}
+                            {% block radio %}
+                            {% for m in f.iterator %}
+                            <label><input name="{{ widget.filter.name }}[{{ f.name }}]" {% if m.id==f.value %}checked{%
+                                endif %} value="{{ m.id }}" type="radio">{{ m.name }}</label>
+                            {% endfor %}
+                            {% endblock %}
+                            {% endif %}
+
+                            {% if f.filter_type == constant('\\Sale\\Filter::TYPE_DROPDOWN') %}
+                            {% block dropdown %}
+                            <select name="{{ widget.filter.name }}[{{ f.name }}]">
+                                <option value=""></option>
+                                {% for m in f.iterator %}
+                                <option value="{{ m.id }}"
+                                {% if m.id==f.value %}selected{% endif %}>{{ m.name }}</option>
+                                {% endfor %}
+                            </select>
+                            {% endblock %}
+                            {% endif %}
+                        </div>
+                    	</div>
+                    </div>
+                    {% endfor %}
+
+                    <p></p>
+                    <hr class="filter__hr">
+                    {% block buttons %}
+                    <p></p>
+                    <div class="{{ widget.getParam('css_class') }}__buttons row medium-up-2">
+                        <div class="columns">
+                            <button class="button reset expanded x-clear-all {{ widget.getParam('css_class') }}__clear">
+                                Сбросить
+                            </button>
+                        </div>
+                        <div class="columns">
+                            <button class="button apply expanded {{ widget.getParam('css_class') }}__submit"
+                                    type="submit">Применить
+                            </button>
+                        </div>
+                    </div>
+                    {% endblock %}
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% set script %}
+{% block script %}
+
+var ColorsBlockList = new Object();
+ColorsBlockList = {};
+var MetalBlockList = new Object()
+MetalBlockList = {};
+var StoneBlockList = new Object();
+StoneBlockList = {};
+var PendentSizeBlockList = new Object();
+PendentSizeBlockList = {};
+var PendentTypeBlockList = new Object();
+PendentTypeBlockList = {};
+
+
+
+var brilliantColors = ['stone_color_46','stone_color_47','stone_color_48','stone_color_49','stone_color_51'];
+var turmalineColors = ['stone_color_55'];
+var saphireColors = ['stone_color_47','stone_color_50','stone_color_49','stone_color_51','stone_color_53'];
+var rubineColors = ['stone_color_54'];
+var izumrudColors = ['stone_color_56'];
+var fianitColors = ['stone_color_46', 'stone_color_47', 'stone_color_48','stone_color_50','stone_color_51',
+'stone_color_52','stone_color_53','stone_color_54','stone_color_55','stone_color_56'];
+var shpinelColors = ['stone_color_47','stone_color_49'];
+var serebroRule = ['stone_38','stone_44'];
+
+var kulBoyRule = ['pendent_size_88','pendent_size_89','pendent_size_90','pendent_size_91','pendent_size_92',
+'pendent_size_93','pendent_size_94','pendent_size_95','pendent_size_100'];
+var kulGirlRule = ['pendent_size_88','pendent_size_89','pendent_size_90','pendent_size_91','pendent_size_92',
+'pendent_size_93','pendent_size_94','pendent_size_95','pendent_size_100'];
+var kulCoronaRule = ['pendent_size_90','pendent_size_92','pendent_size_94','pendent_size_95'];
+var kulLegsRule = ['pendent_size_88','pendent_size_90'];
+var kulMomRule = ['pendent_size_91','pendent_size_95','pendent_size_97','pendent_size_98','pendent_size_99',
+'pendent_size_100','pendent_size_105'];
+var kulHeartRule = ['pendent_size_84','pendent_size_85','pendent_size_86','pendent_size_90','pendent_size_97',
+'pendent_size_98','pendent_size_101'];
+var kulStarRule = ['pendent_size_84','pendent_size_90','pendent_size_95'];
+var kulEyeRule = ['pendent_size_86','pendent_size_90'];
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+jQuery('#{{ widget.uniqueId }} .x-clear').click(function(){
+saleClearFilter( jQuery(this).parents('.x-filter') );
+return false;
+});
+
+jQuery('#{{ widget.uniqueId }} .x-clear-all').click(function(){
+saleClearFilter( jQuery('#{{ widget.uniqueId }}') );
+jQuery('#filterform').submit();
+return false;
+});
+
+jQuery('#{{ widget.uniqueId }}').find('.x-filter').each(function(){
+saleCheckFilter( jQuery(this) );
+});
+
+jQuery('#{{ widget.uniqueId }} input, #{{ widget.uniqueId }} select').on('change', function(){
+saleCheckFilter( jQuery(this).parents('.x-filter') );
+});
+
+
+//
+jQuery('#{{ widget.uniqueId }} input, #{{ widget.uniqueId }} select').on('change', function()
+{
+  inputsSwitcher($(this).prop('id'), $(this).prop('checked'));
+  console.log('click on ' + $(this).prop('id') + '; checked:' + $(this).prop('checked') + "; disabled: " + $(this).prop('disabled'));
+});
+
+//Восстанавливаем блокировку чекбоксов после обновления страницы
+jQuery(document).ready(function()
+{
+  var listInputsMetal = document.querySelectorAll("input[name*='filter[metal]']:checked");
+  listInputsMetal.forEach(function(Input)
+  {
+    inputsSwitcher(Input.id,true);
+  });
+
+  var listInputsStones = document.querySelectorAll("input[name*='filter[stone]']:checked");
+  listInputsStones.forEach(function(Input)
+  {
+    inputsSwitcher(Input.id,true);
+  });
+
+  var listPendentTypes = document.querySelectorAll("input[name*='filter[pendent_type]']:checked");
+  listPendentTypes.forEach(function(Input)
+  {
+    inputsSwitcher(Input.id,true);
+  });
+
+});
+
+
+//
+
+});
+
+
+function inputsSwitcher(inputID,checkState)
+{
+  switch (inputID)
+  {
+    //Бриллианты
+    case 'stone_39':
+    {
+      if (checkState)
+      {
+        ColorsBlockList['stone_39'] = (brilliantColors);
+      }
+      else
+      {
+        delete ColorsBlockList['stone_39'];
+      }
+      break;
+    }
+    //Турмалины какието
+    case 'stone_40':
+    {
+      if (checkState)
+      {
+        ColorsBlockList['stone_40'] = (turmalineColors);
+      }
+      else
+      {
+        delete ColorsBlockList['stone_40'];
+      }
+      break;
+    }
+    //Сапфиры
+    case 'stone_41':
+    {
+      if (checkState)
+      {
+        ColorsBlockList['stone_41'] = (saphireColors);
+      }
+      else
+      {
+        delete ColorsBlockList['stone_41'];
+      }
+      break;
+    }
+    //Рубины
+    case 'stone_42':
+    {
+      if (checkState)
+      {
+        ColorsBlockList['stone_42'] = (rubineColors);
+      }
+      else
+      {
+        delete ColorsBlockList['stone_42'];
+      }
+      break;
+    }
+    //Изумруды
+    case 'stone_43':
+    {
+      if (checkState)
+      {
+        ColorsBlockList['stone_43'] = (izumrudColors);
+      }
+      else
+      {
+        delete ColorsBlockList['stone_43'];
+      }
+      break;
+    }
+    //Фианиты
+    case 'stone_44':
+    {
+      if (checkState)
+      {
+        ColorsBlockList['stone_44'] = (fianitColors);
+      }
+      else
+      {
+        delete ColorsBlockList['stone_44'];
+      }
+      break;
+    }
+    //Шпинель
+    case 'stone_45':
+    {
+      if (checkState)
+      {
+        ColorsBlockList['stone_45'] = (shpinelColors);
+      }
+      else
+      {
+        delete ColorsBlockList['stone_45'];
+      }
+      break;
+    }
+    //Без камней
+    case 'stone_38':
+    {
+      if (checkState)
+      {
+          var stoneRule = ['stone_38'];
+          if (document.getElementById('metal_79').checked)
+          {
+            delete StoneBlockList['metal_79'];
+          }
+          StoneBlockList['stone_38'] = (stoneRule);
+          ColorsBlockList = {};
+          ColorsBlockList['stone_38'] = 'BLOCK_ALL_INPUTS';
+      }
+      else
+      {
+        if (document.getElementById('metal_79').checked)
+        {
+          StoneBlockList['metal_79'] = (serebroRule);
+        }
+        delete StoneBlockList['stone_38'];
+        delete ColorsBlockList['stone_38'];
+      }
+      break;
+    }
+    //металл серебро
+    case 'metal_79':
+    {
+      if (checkState)
+      {
+        StoneBlockList['metal_79'] = (serebroRule);
+      }
+      else
+      {
+        delete StoneBlockList['metal_79'];
+      }
+      break;
+    }
+    case 'pendent_type_57':
+    {
+      if (checkState)
+      {
+        PendentSizeBlockList['pendent_type_57'] = (kulBoyRule);
+      }
+      else
+      {
+        delete PendentSizeBlockList['pendent_type_57'];
+      }
+      break;
+    }
+    case 'pendent_type_58':
+    {
+      if (checkState)
+      {
+          PendentSizeBlockList['pendent_type_58'] = (kulGirlRule);
+      }
+      else
+      {
+          delete PendentSizeBlockList['pendent_type_58'];
+      }
+      break;
+    }
+
+    case 'pendent_type_59':
+    {
+      if (checkState)
+      {
+          PendentSizeBlockList['pendent_type_59'] = (kulCoronaRule);
+          PendentTypeBlockList['pendent_type_59'] = ['pendent_type_57','pendent_type_58','pendent_type_59'];
+      }
+      else
+      {
+          delete PendentSizeBlockList['pendent_type_59'];
+          delete PendentTypeBlockList['pendent_type_59'];
+      }
+      break;
+    }
+
+    case 'pendent_type_60':
+    {
+      if (checkState)
+      {
+          PendentSizeBlockList['pendent_type_60'] = (kulLegsRule);
+      }
+      else
+      {
+          delete PendentSizeBlockList['pendent_type_60'];
+      }
+      break;
+    }
+
+    case 'pendent_type_61':
+    {
+      if (checkState)
+      {
+          PendentSizeBlockList['pendent_type_61'] = (kulMomRule);
+      }
+      else
+      {
+          delete PendentSizeBlockList['pendent_type_61'];
+      }
+      break;
+    }
+    case 'pendent_type_62':
+    {
+      if (checkState)
+      {
+          PendentSizeBlockList['pendent_type_62'] = (kulHeartRule);
+      }
+      else
+      {
+          delete PendentSizeBlockList['pendent_type_62'];
+      }
+      break;
+    }
+
+    case 'pendent_type_64':
+    {
+      if (checkState)
+      {
+          PendentSizeBlockList['pendent_type_64'] = (kulStarRule);
+      }
+      else
+      {
+          delete PendentSizeBlockList['pendent_type_64'];
+      }
+      break;
+    }
+
+    case 'pendent_type_71':
+    {
+      if (checkState)
+      {
+          PendentSizeBlockList['pendent_type_71'] = (kulEyeRule);
+      }
+      else
+      {
+          delete PendentSizeBlockList['pendent_type_71'];
+      }
+      break;
+    }
+    default:
+    {
+      return 0;
+    }
+
+
+
+  }
+
+//  console.log('Switch: ',inputID + " Checked: " + checkState);
+  experementalBlocker();
+}
+
+function experementalBlocker()
+{
+  if (jQuery.isEmptyObject(StoneBlockList))
+  {
+      filterUnblockThisInputs("input[name*='filter[stone]']");
+  }
+  else
+  {
+    filterBlockThisInputs("input[name*='filter[stone]']");
+    $.each(StoneBlockList, function(index, value)
+    {
+      value.forEach(function(elem)
+      {
+        $(document.getElementById(elem)).prop('disabled', false);
+      });
+
+    filterUncheckBlockedInputs("input[name*='filter[stone]']");
+  });
+  }
+
+
+  if (jQuery.isEmptyObject(ColorsBlockList))
+  {
+    filterUnblockThisInputs("input[name*='filter[stone_color]']")
+  }
+  else
+  {
+    filterBlockThisInputs("input[name*='filter[stone_color]']");
+    $.each(ColorsBlockList, function(index, value)
+    {
+      if (value != ('BLOCK_ALL_INPUTS'))
+      {
+        value.forEach(function(elem)
+        {
+            //document.getElementById(elem).disabled = false;
+            $(document.getElementById(elem)).prop('disabled', false);
+        //    console.log('unblock: ',elem);
+        });
+      }
+      filterUncheckBlockedInputs("input[name*='filter[stone_color]']");
+  });
+  }
+
+  if (jQuery.isEmptyObject(PendentSizeBlockList))
+  {
+    filterUnblockThisInputs("input[name*='filter[pendent_size]']")
+  }
+  else
+  {
+    filterBlockThisInputs("input[name*='filter[pendent_size]']");
+    $.each(PendentSizeBlockList, function(index, value)
+    {
+      value.forEach(function(elem)
+      {
+          //document.getElementById(elem).disabled = false;
+          $(document.getElementById(elem)).prop('disabled', false);
+      });
+
+    filterUncheckBlockedInputs("input[name*='filter[pendent_size]']");
+  });
+  }
+
+  if (jQuery.isEmptyObject(PendentTypeBlockList))
+  {
+    filterUnblockThisInputs("input[name*='filter[pendent_type]']")
+  }
+  else
+  {
+    filterBlockThisInputs("input[name*='filter[pendent_type]']");
+    $.each(PendentTypeBlockList, function(index, value)
+    {
+      value.forEach(function(elem)
+      {
+          //document.getElementById(elem).disabled = false;
+          $(document.getElementById(elem)).prop('disabled', false);
+      });
+
+    filterUncheckBlockedInputs("input[name*='filter[pendent_type]']");
+  });
+  }
+
+}
+
+//блокирует все инпуты с принятого селектора
+function filterBlockThisInputs(inputsSelector)
+{
+  var listInputs = document.querySelectorAll(inputsSelector);
+  listInputs.forEach(function(element)
+  {
+    //  console.log('Block ' + element.id);
+    //  element.disabled = true;
+      $(document.getElementById(element.id)).prop('disabled', true);
+  });
+}
+//Разблокировывает все инпуты с принятого селектора
+function filterUnblockThisInputs(inputsSelector)
+{
+  var listInputs = document.querySelectorAll(inputsSelector);
+  listInputs.forEach(function(input)
+  {
+  //  console.log('Unblock ' + input.id)
+  //  input.disabled = false;
+
+    $(document.getElementById(input.id)).prop('disabled', false);
+  //  $(input).prop('disabled', false);
+  });
+}
+//Принимает селектор, и снимает чек со всех хаблокирвоанных инпутов
+function filterUncheckBlockedInputs(inputsSelector)
+{
+  //inputsSelector = inputsSelector + ':disabled';
+  var blockedinputs = document.querySelectorAll(inputsSelector)
+  {
+    blockedinputs.forEach(function(element)
+    {
+      var elem = document.getElementById(element.id);
+      if($(elem).prop('checked') && $(elem).prop('disabled'))
+      {
+        //  console.log('Unchek on ',elem.id + ' Disabled: ' + elem.disabled);
+          $(elem).prop('checked', false).trigger('change');
+      }
+    });
+
+  }
+}
+
+
+function saleClearFilter(elm) {
+elm.find('input[type="text"]').each(function(){
+jQuery(this).val( jQuery(this).attr('data-default') ).trigger('change');
+});
+elm.find('input:checked').prop('checked', false);
+elm.find('select').val('');
+saleCheckFilter(elm);
+}
+function saleCheckFilter(elm) {
+var c = elm.find('.x-clear');
+if (elm.find('input[type="checkbox"], input[type="radio"]').length>0)
+{
+c.toggle(  elm.find(':checked').length > 0 );
+}
+if (elm.find('select').length>0)
+{
+c.toggle( elm.find('select').val() != '' );
+}
+if (elm.find('input[type="text"]').length>0)
+{
+var f = false;
+elm.find('input[type="text"]').each(function(){
+if (jQuery(this).val() != jQuery(this).attr('data-default')) f = true;
+});
+c.toggle( f );
+}
+}
+{% endblock %}
+{% endset %}
+{% do widget.application.addHeadString( "
+<script>#{script}</script>" ) %}

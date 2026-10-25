@@ -1,0 +1,136 @@
+******************************************************************
+
+qBit v3.3.0 2016-01-13 All rights reserved by BITEP LLC
+
+******************************************************************
+
+Modifications:
+
+1. qbit3-clean.sql was moved under the "install" directory.
+
+2. Format html tags in the returned values in CRUDs. New function formatFields.
+Affected files:
+	libs/crud.php
+	modules/views/crud/crudTable.php
+	modules/controllers/admin/admin.php
+	
+2. New module was added: Subscribers.
+Affected files:
+	modules/controllers/subscribers/subscribers.php
+	modules/models/subscribers/subscribers.php
+	modules/controllers/admin/admin.php
+	modules/views/admin/subscribers.php
+	modules/views/admin/navigation.php
+	modules/views/subscribers/mailingForm.php
+	materials/temp/uploadify.php
+
+3. Ability to upload files of any type.
+		
+-----------------------------------------------------------------
+
+Bugfixes:
+
+1. Fixed installation issues.
+Affected files:
+	install/install.php
+	install/qbit3-clean.sql
+	install/data/master/structure.html
+	install/translations/*.php
+
+2. Some unnecessary inserts were removed from qbit3-clear.sql
+
+3. Some missing translations was added.
+
+4. Language cookie bugfix.
+Affected files:
+	libs/core.php
+
+5. Link href fix for non-active pages.
+Affected files:
+	modules/controllers/pages/pages.php
+
+6. Auth cookies bugfix.
+Affected files:
+	modules/controllers/auth/auth.php	
+	modules/views/auth/loginform.php	
+	modules/views/auth/publicLoginform.php	
+	modules/views/admin/navigation.php	
+	modules/views/cms/navigation.php	
+
+7. Writing of errors to cookies bugfix.
+Affected files:
+	libs/responser.php
+	
+8. Fixed bugs with CMS
+Affected files:
+	modules/controllers/cms/cms.php
+	modules/views/cms/navigation.php
+	modules/views/cms/header.php
+	libs/filterChain.php
+
+	
+	
+******************************************************************
+
+qBit v3.2.2 2015-12-21 All rights reserved by BITEP LLC
+
+******************************************************************
+
+Modifications:
+
+1. To process the URL in the RESTful manner a new Router class was added
+Affected files:
+	libs/router.php
+	libs/routs.inc.php
+
+2. Function parseURL was minified.
+Affected files:
+	libs/core.php
+
+3. New function 
+	
+	
+	
+******************************************************************
+
+qBit v3.2.1 2015-12-09 All rights reserved by BITEP LLC
+
+******************************************************************
+
+Modifications:
+
+1. Modified the way of parsing the URLs.
+Affected files:
+	libs/core.php
+
+2. Added multiURLs support.
+Affected files:
+	config/config.php
+	libs/core.php
+	
+3. Modified the auth cookie path.
+Affected files:
+	modules/views/auth/loginForm.php
+	modules/views/auth/publicLoginForm.php
+	modules/views/admin/navigation.php
+
+4. Added the language bar to the admin panel.
+Affected files:
+	modules/controllers/pages/pages.php
+	modules/views/admin/navigation.php
+	
+-----------------------------------------------------------------
+	
+Bugfixes:
+	
+1. Added default values to the hidden_fields variable
+Affected files:
+	libs/crud.php
+	modules/views/crud/crudTable.php
+
+
+2. Fixed the bug with inserting the values for Grants from the admin panel.
+
+ALTER TABLE `translations`
+MODIFY COLUMN `table_name`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' AFTER `id`,
+MODIFY COLUMN `row_id`  int(10) NOT NULL DEFAULT 0 AFTER `table_name`;

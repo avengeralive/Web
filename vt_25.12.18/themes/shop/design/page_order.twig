@@ -1,0 +1,9 @@
+{% extends layout %}
+
+{% block main %}
+
+	<div class="content">
+	{% widget 'Sale.Order' with { catalog_url: '/catalog/' } %}
+	</div>
+	
+{% endblock %}

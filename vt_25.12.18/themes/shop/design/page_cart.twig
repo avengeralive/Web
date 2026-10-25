@@ -1,0 +1,12 @@
+{% extends personal %}
+
+{#% block personal_content %}
+	{% widget 'Sale.Cart' with { catalog_url: '/catalog/', widgetTitle: "<h2>#{_('Корзина')}</h2>" } %}	
+{% endblock %#}
+
+
+{% block main %}
+
+		{% widget 'Sale.Cart' with { catalog_url: '/catalog/'} %}	
+
+{% endblock %}

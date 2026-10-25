@@ -1,0 +1,24 @@
+{% extends 'layout_server1.twig' %}
+
+{% block main %}
+<br>
+
+	
+	<div class="row column">
+	{% widget 'Sale.Catalog' with { 
+		product_catalog: product_catalog,
+		filter: 1,
+		item_show_properties: 'code,brand',
+		item_show_tabs: [
+			{
+				field: 'text'
+			},		
+			{
+				page: _('Характеристики')
+			}
+		],
+
+	} %}
+	</div>
+	
+{% endblock %}

@@ -1,0 +1,10 @@
+RewriteEngine on 
+Options +FollowSymlinks
+
+
+RewriteRule ^(external/reportico-4.2)($|/) - [L]
+#RewriteRule ^(external)($|/) - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA,NC]
+

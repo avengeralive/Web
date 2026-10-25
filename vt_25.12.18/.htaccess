@@ -1,0 +1,30 @@
+<Files ~ "^\.cache">
+  Order Allow,Deny
+  Allow from All
+</Files>
+<Files ~ "^\..*">
+  Order Allow,Deny
+  Deny from All
+</Files>
+
+AddDefaultCharset Off
+
+RewriteEngine on
+
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www.velvetin.ru
+RewriteRule (.*) http://velvetin.ru/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d [OR]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{REQUEST_URI} !^/cms
+RewriteRule  ^.*$ cms/fo.php
+RewriteCond %{REQUEST_URI} ^/plugins/(.+)\.php$
+RewriteRule  ^.*$ cms/include/plugin_call.php
+
+
+DirectoryIndex index.html index.php
+
+php_flag always_populate_raw_post_data on
+php_flag suhosin.cookie.encrypt off

@@ -1,0 +1,21 @@
+{% extends 'layout_server1.twig' %}
+
+{% block main %}
+<style>footer { padding-top: 100px !important; } .individual-hr, .news hr { margin-top: 40px; margin-bottom: 40px; } footer .individual-hr { margin-top: 0px; margin-bottom: 20px; } .row+p{ margin-bottom: 15px !important; }</style>
+{% widget 'List' with { limit:6, template: 'main_sect.twig', iterator: catalog.getById(465).getChildren()} %}
+{{ application.getWidget('area').getHtml()|raw }}
+
+ {#{% widget 'List' with { limit:6, template: 'main_sect_bottom.twig', iterator: catalog.getById(465).getChildren().setOffset(6)} %}   #}
+
+{% widget 'List' with {template: 'slider-gallery-star-clients.twig', iterator: catalog.getById(498).getMaterials()} %}
+
+
+    <div class="row columns">
+      <hr class="individual-hr">
+    </div>
+
+     {% widget 'List' with { limit:3, template: 'main_news.twig', order: 'dat',
+    sort: 'DESC', catalog: 477 } %}
+
+
+{% endblock %}

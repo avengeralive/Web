@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Callback</name>
+    <version>12</version>
+    <code>neoseo-callback</code>
+    <author>Alexander Sorokin</author>
+    <link>Ahttp://seomag.com.ua/soforp-callback</link>
+
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search><![CDATA[
+            $this->document->getStyles();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo Callback - begin */
+        if (!file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/neoseo_callback.scss')) {
+            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/neoseo_callback.css')) {
+                $this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/neoseo_callback.css');
+            } else {
+                $this->document->addStyle('catalog/view/theme/default/stylesheet/neoseo_callback.css');
+            }
+        }
+        $data['neoseo_callback_status'] = $this->config->get('neoseo_callback_status');
+        /* NeoSeo Callback - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+            $this->document->getScripts();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo Callback - begin */
+        $this->document->addScript('catalog/view/javascript/neoseo_callback.js');
+        $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/jquery.validate.js');
+        $this->document->addScript('catalog/view/javascript/jquery/jquery.maskedinput.js');
+        $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/additional-methods.js');
+        if($this->config->get('config_language') === 'ua' || $this->config->get('config_language') === 'uk') {
+            $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/localization/messages_uk.js');
+        } else {
+            $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/localization/messages_ru.js');
+        }
+        /* NeoSeo Callback - end */
+
+            ]]></add>
+        </operation>
+    </file>
+<file path="admin/controller/common/menu.php">
+        <operation>
+            <search><![CDATA[$data['order']]]></search>
+            <add position="before"><![CDATA[
+                /* NeoSeo Callback - begin */
+                $data['neoseo_callback'] = false;
+                if( isset($this->session->data['token']) ) {
+                    if( $this->user->hasPermission('access','sale/neoseo_callback') && $this->config->get("neoseo_callback_status") ){
+                        $this->language->load("sale/neoseo_callback");
+                        $data['text_neoseo_callback'] = $this->language->get("text_neoseo_callback");
+                        $data['neoseo_callback'] = $this->url->link('sale/neoseo_callback', 'token=' .$this->session->data['token'], 'SSL');
+                    }
+                }
+                /* NeoSeo Callback  - end */
+                ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/common/menu.tpl">
+        <operation>
+            <search><![CDATA[<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>]]></search>
+            <add position="after"><![CDATA[
+                <?php if ($neoseo_callback) { ?><li><a href="<?php echo $neoseo_callback; ?>"><?php echo $text_neoseo_callback; ?></a></li><?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+
+</modification>

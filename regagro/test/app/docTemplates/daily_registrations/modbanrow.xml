@@ -1,0 +1,224 @@
+<w:tr w:rsidR="0067015A" w:rsidTr="0067015A">
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1668"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A" w:rsidRPr="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${registration_date}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="2045"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A" w:rsidRPr="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${registration_code}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="4444"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A" w:rsidRPr="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${production_name}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1225"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="0067015A">
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+				<w:t>${ban_type_name}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1056"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="0067015A">
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+				<w:t>${ban_weight}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1767"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="0067015A">
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+				<w:t>${ban_reason_name}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1936"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="0067015A">
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+				<w:t>${use_order_name}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1779"/>
+		</w:tcPr>
+		<w:p w:rsidP="0067015A" w:rsidR="0067015A" w:rsidRDefault="0067015A">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="0067015A">
+				<w:rPr>
+					<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+					<w:b/>
+					<w:i/>
+					<w:sz w:val="20"/>
+					<w:szCs w:val="20"/>
+				</w:rPr>
+				<w:t>${ban_note}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr>

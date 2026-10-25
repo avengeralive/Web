@@ -1,0 +1,21 @@
+#bg-section {
+	background-image: url(/wp-content/uploads/2018/02/nedvex-bg@2x.jpg);
+}
+#realization img {
+	max-width: 80%;
+}
+#realization h2 {
+	margin-bottom: 20px;
+}
+#what-the-customer-wanted img {
+	margin-bottom: 60px;
+}
+#texts {
+	margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+	#realization h2 {
+		margin-bottom: 60px;
+	}
+}

@@ -1,0 +1,83 @@
+<w:tbl>
+	<w:tblPr>
+		<w:tblStyle w:val="a3"/>
+		<w:tblW w:type="dxa" w:w="9606"/>
+		<w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+	</w:tblPr>
+	<w:tblGrid>
+		<w:gridCol w:w="3936"/>
+		<w:gridCol w:w="3260"/>
+		<w:gridCol w:w="2410"/>
+	</w:tblGrid>
+	<w:tr w:rsidR="00243139" w:rsidTr="00243139">
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="3936"/>
+				<w:tcBorders>
+					<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				</w:tcBorders>
+				<w:hideMark/>
+			</w:tcPr>
+			<w:p w:rsidP="003B584E" w:rsidR="00243139" w:rsidRDefault="00243139">
+				<w:pPr>
+					<w:jc w:val="center"/>
+				</w:pPr>
+				<w:r>
+					<w:t>Название группы продукции в отчете</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="3260"/>
+				<w:tcBorders>
+					<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				</w:tcBorders>
+				<w:hideMark/>
+			</w:tcPr>
+			<w:p w:rsidP="003B584E" w:rsidR="00243139" w:rsidRDefault="00243139">
+				<w:pPr>
+					<w:jc w:val="center"/>
+				</w:pPr>
+				<w:r>
+					<w:t>Порядок использования продукции</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2410"/>
+				<w:tcBorders>
+					<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+					<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				</w:tcBorders>
+				<w:hideMark/>
+			</w:tcPr>
+			<w:p w:rsidP="00243139" w:rsidR="00243139" w:rsidRDefault="00243139">
+				<w:pPr>
+					<w:jc w:val="center"/>
+				</w:pPr>
+				<w:r>
+					<w:t xml:space="preserve">Вес (кг), объем (л), </w:t>
+				</w:r>
+			</w:p>
+			<w:p w:rsidP="00243139" w:rsidR="00243139" w:rsidRDefault="00243139">
+				<w:pPr>
+					<w:jc w:val="center"/>
+				</w:pPr>
+				<w:r>
+					<w:t>яйцо (шт.)</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+	</w:tr>
+	${iteration}
+</w:tbl>

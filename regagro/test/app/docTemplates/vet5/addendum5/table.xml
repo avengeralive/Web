@@ -1,0 +1,61 @@
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:w="9606" w:type="dxa"/>
+							<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="4077"/>
+							<w:gridCol w:w="3402"/>
+							<w:gridCol w:w="2127"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="00BB668E" w:rsidTr="00BB668E">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="4077" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00BB668E" w:rsidRDefault="00BB668E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название группы продукции по отчету</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="3402" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00BB668E" w:rsidRDefault="00BB668E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Продукция</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2127" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00BB668E" w:rsidRDefault="00BB668E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Количество партий</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>
+					<w:p w:rsidR="002900BD" w:rsidRDefault="002900BD" w:rsidP="008A7FF5">
+						<w:pPr>
+							<w:jc w:val="center"/>
+						</w:pPr>
+						<w:bookmarkStart w:id="0" w:name="_GoBack"/>
+						<w:bookmarkEnd w:id="0"/>
+					</w:p>

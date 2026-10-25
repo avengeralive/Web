@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Yandex Analytics</name>
+    <version>4</version>
+    <code>neoseo-yandex-analytics</code>
+    <author>Alexander Sorokin</author>
+
+    <file path="catalog/controller/checkout/success.php">
+        <operation>
+            <search><![CDATA[if (isset($this->session->data['order_id'])) {]]></search>
+            <add position="after"><![CDATA[			/* NeoSeo Yandex Analytics E-Commerce - begin */
+			$order_id = $this->session->data['order_id'];
+
+
+			$json = array();
+
+			$order_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE order_id = '" . (int)$order_id . "'");
+			$json['order_id'] = $order_query->row['order_id'];
+			$json['total'] = $order_query->row['total'];
+			$json['store_name'] = $order_query->row['store_name'];
+
+			$json['shipping'] = 0;
+			$order_shipping_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_total WHERE order_id = '" . (int)$order_id . "' and code='shipping'");
+			if( $order_shipping_query->num_rows ) {
+				$json['shipping'] = $order_shipping_query->row['value'];
+			}
+
+			$json['tax'] = 0;
+			$order_tax_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_total WHERE order_id = '" . (int)$order_id . "' and code='tax'");
+			if( $order_tax_query->num_rows ) {
+				$json['tax'] = $order_tax_query->row['value'];
+			}
+
+			$json['products'] = array();
+			$order_product_query = $this->db->query("SELECT op.*, p.sku FROM " . DB_PREFIX . "order_product op left join " . DB_PREFIX . "product p on ( op.product_id = p.product_id)  WHERE order_id = '" . (int)$order_id . "'");
+			foreach( $order_product_query->rows as $product ) {
+
+				$json['products'][] = array(
+					'name' => $product["name"],         // Product name. Required.
+					'sku' => $product["sku"],           // SKU/code.
+					'category' => '',                   // Category or variation.
+					'price' => $product["price"],       // Unit price.
+					'quantity' => $product["quantity"]  // Quantity.
+				);
+			}
+
+			$data['yandex_ecommerce'] = "<script>sendYandexECommerceTransaction(" . json_encode($json) . ");</script>";
+			//$this->log->write('yandex_ecommerce:' . $data['yandex_ecommerce']);
+
+			/* NeoSeo Yandex Analytics E-Commerce - end */
+]]></add>
+        </operation>
+    </file>
+
+
+    <file path="catalog/view/theme/*/template/common/success.tpl">
+        <operation>
+            <search><![CDATA[<?php echo $footer; ?>]]></search>
+            <add position="before"><![CDATA[
+
+<!-- NeoSeo Yandex Ecommerce Func -->
+<?php
+    if(isset($yandex_ecommerce)){
+     echo $yandex_ecommerce;
+    }
+ ?>
+<!-- End of NeoSeo Yandex Ecommerce Func -->
+
+                ]]></add>
+        </operation>
+    </file>
+
+</modification>

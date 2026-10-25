@@ -1,0 +1,347 @@
+﻿<html>
+<head>
+    <title>QuickR-Отчет по НИИ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!-- style -->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="fi/flaticon.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body class="pc">
+	<header class="only-color">
+		<div class="sticky-wrapper">
+			<div class="sticky-menu">
+				<div class="grid-row clear-fix">
+					<a href="index.html" class="logo">
+						<img src="img/logo.png">
+						<h1>QuickR</h1>
+					</a>
+					<nav class="main-nav">
+						<i class="mobile_menu_switcher"></i>
+						<ul class="clear-fix">
+							<li id="menu-item-0">
+								<a href="index.html" class="active">Поиск</a>
+							</li>
+							<li id="menu-item-1">
+								<a href="news.html">Новости</a>
+							</li>
+							<li id="menu-item-2">
+								<a>Войти</a>
+								<div class="login-block">
+
+									<h2>Авторизация</h2>
+									<form class="login-form">
+										<div class="form-group">
+											<input type="text" class="login-input" placeholder="E-mail">
+											<span class="input-icon">
+												<i class="fa fa-user"></i>
+											</span>
+										</div>
+										<div class="form-group">
+											<input type="password" class="login-input" onblur="if(this.value=='')this.value='Пароль'" onfocus="if(this.value=='Пароль')this.value='' " placeholder="Пароль">
+											<span class="input-icon">
+												<i class="fa fa-lock"></i>
+											</span>
+										</div>
+										<p class="small">
+											<a href="">Забыли пароль?</a>
+										</p>
+										<button class="btn_log cws-button bt-color-5 border-radius ">Войти</button>
+									</form>
+								</div>
+							</li>
+							<li id="menu-item-3">
+								<a href="login.html">Зарегистрироваться</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="intro container_search">
+		<div class="current color-2 frm_search">
+			<form name="frm_search">
+				<i class="fa fa-search fa-3x icon"></i>
+				<div class="input_search">
+					<br><h3>Наименование публикации</h3>
+					<input type="text" placeholder="Что ищем ...">
+				</div>
+				<div class="input_search">
+					<h3>Автор публикации</h3>
+					<input type="text" placeholder="Кого ищем ...">
+				</div>
+				<div class="input_search">
+					<h3>Тип публикации</h3>
+					<div>
+						<div class="checkbox_search">
+							<input type="checkbox" id="checkbox1" name="type_article" />
+							<label for="checkbox1">&nbsp; - научная статья</label>
+						</div>
+						<div class="checkbox_search">
+							<input type="checkbox" id="checkbox2" name="type_article" />
+							<label for="checkbox2">&nbsp; - монография</label>
+						</div>
+						<div class="checkbox_search">
+							<input type="checkbox" id="checkbox3" name="type_article" />
+							<label for="checkbox3">&nbsp; - диссертации</label>
+						</div>
+						<div class="checkbox_search">
+							<input type="checkbox" id="checkbox4" name="type_article" />
+							<label for="checkbox4">&nbsp; - дипломы, награды, премии</label>
+						</div>
+						<div class="checkbox_search">
+							<input type="checkbox" id="checkbox5" />
+							<label for="checkbox5">&nbsp; - учебное пособие</label>
+						</div>
+
+						<div class="checkbox_search">
+							<input type="checkbox" id="checkbox6" />
+							<label for="checkbox6">&nbsp; - научно-исследовательская работа</label>
+						</div>
+						<div class="checkbox_search">
+							<input type="checkbox" id="checkbox7" />
+							<label for="checkbox7">&nbsp; - патент</label>
+						</div>
+
+					</div>
+				</div>
+				<div class="clear"> </div>
+				<table>
+					<tr>
+						<td><h3>Год публикации</h3></td>
+						<td>
+							<div class="input_search course_year select-arrow">
+								<select name="select_year" id="select_year" class="select_year" >
+									<option value=""></option>
+									<option value="">2000</option>
+									<option value="">2001</option>
+									<option value="">2002</option>
+									<option value="">2003</option>
+									<option value="">2004</option>
+									<option value="">2005</option>
+									<option value="">2006</option>
+									<option value="">2007</option>
+									<option value="">2008</option>
+									<option value="">2009</option>
+									<option value="">2010</option>
+									<option value="">2011</option>
+									<option value="">2012</option>
+									<option value="">2013</option>
+									<option value="">2014</option>
+									<option value="">2015</option>
+									<option value="">2016</option>
+									<option value="">2017</option>
+									<option value="">2018</option>
+								</select>
+								-
+								<select name="select_year" class="select_year" >
+									<option value=""></option>
+									<option value="">2018</option>
+									<option value="">2017</option>
+									<option value="">2016</option>
+									<option value="">2015</option>
+									<option value="">2014</option>
+									<option value="">2013</option>
+									<option value="">2012</option>
+									<option value="">2011</option>
+									<option value="">2010</option>
+									<option value="">2009</option>
+									<option value="">2008</option>
+									<option value="">2007</option>
+									<option value="">2006</option>
+									<option value="">2005</option>
+									<option value="">2004</option>
+									<option value="">2003</option>
+									<option value="">2002</option>
+									<option value="">2001</option>
+									<option value="">2000</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<br><button type="reset" class="small button_reset">Очистить</button>
+				<button href="" class="cws-button bt-color-3 border-radius button_search">Найти &nbsp;<i class="fa fa-angle-right"></i></button>
+			</form>
+		</div>
+	</div>
+
+
+
+	<hr class="divider-color">
+	<section>
+		<div align="center" class="clear-fix">
+			<div class="grid-col-6">
+				<div class="banner-offer icon-right bg-color-1">
+					<div class="banner-text">Результаты поискового запроса</div>
+					<div class="banner-icon">
+						<i class="fa fa-graduation-cap"></i>
+					</div>
+				</div>
+			</div>
+			<table class="result_search">
+				<tr>
+					<th>№</th>
+					<th>Название научного труда</th>
+					<th>Год публикации</th>
+					<th>Тип публикации</th>
+					<th>Количество страниц</th>
+					<th>Автор</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>"Металлургия для новичков"</td>
+					<td>2013</td>
+					<td>научная статья</td>
+					<td>7</td>
+					<td>Иванов А.В., Сидоров И.К., Попов К.Н.</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>"Информатизация в металлургии"</td>
+					<td>2012</td>
+					<td>научная статья</td>
+					<td>3</td>
+					<td>Петрова А.Д.</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>"Сложное просто"</td>
+					<td>2011</td>
+					<td>научная статья</td>
+					<td>10</td>
+					<td>Иванова К.К.</td>
+				</tr>
+			</table>
+		</div>
+		<div class="page_pagination clear-fix">
+			<a href="#"><i class="fa fa-angle-double-left"></i></a>
+			<!--
+			-->
+			<a href="#" class="active">1</a>
+			<!--
+			-->
+			<a href="#">2</a>
+			<!--
+			-->
+			<a href="#">3</a>
+			<!--
+			-->
+			<a href="#"><i class="fa fa-angle-double-right"></i></a>
+		</div>
+	</section>
+
+	<hr class="divider-color">
+	<section class="padding-section">
+		<div class="grid-row clear-fix">
+			<div class="grid-col-row">
+				<div class="grid-col grid-col-4">
+					<div class="current color-1">
+						<h4>Создай свой отчет</h4>
+						<div class="current-logo">
+							<i class="flaticon-award1"></i>
+						</div>
+						<div class="info-block">
+							<p><i class="fa fa-search fa-2x" aria-hidden="true"></i>&nbsp; Находи научные работы  </p>
+							<p><i class="fa fa-user fa-2x" aria-hidden="true"></i>&nbsp; Регистрируйся на сайте </p>
+							<p><i class="fa fa-book fa-2x" aria-hidden="true"></i>&nbsp; Публикуй свои работы   </p>
+							<p><i class="fa fa-globe fa-2x" aria-hidden="true"></i>&nbsp; Будь в курсе новостей </p>
+							<a href="login.html" class="cws-button bt-color-1 border-radius button_report">Начать</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid-col grid-col-4">
+					<div class="current">
+						<h5>Новости</h5>
+						<div class="current-logo">
+							<i class="flaticon-calendar"></i>
+						</div>
+						<div class="info-block">
+							<p>Добавлена новая публикация "Отчет по НИР"</p>
+							<p>Добавлена новая публикация "Паутина из металла"</p>
+							<p>Добавлен новый пользователь</p>
+							<a href="news.html" class="cws-button bt-color-2 border-radius button_news">Другие новости</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid-col grid-col-4">
+					<div class="current color-2">
+						<h6>Публикации в числах</h6>
+						<div class="current-logo">
+							<i class="flaticon-pie"></i>
+						</div>
+						<div class="info-block">
+							<table class="table_news">
+								<tr>
+									<td>Общее число научных статей:</td>
+									<td>164</td>
+								</tr>
+								<tr>
+									<td>Общее число учебный пособий:</td>
+									<td>354</td>
+								</tr>
+								<tr>
+									<td>Общее число монографий:</td>
+									<td>253</td>
+								</tr>
+								<tr>
+									<td>Общее число патентов:</td>
+									<td>80</td>
+								</tr>
+								<tr>
+									<td>Общее число диссертаций:</td>
+									<td>164</td>
+								</tr>
+								<tr>
+									<td>Общее число публикаций:</td>
+									<td>1172</td>
+								</tr>
+								<tr>
+									<td>Число зарегистрированных пользователей:</td>
+									<td>1500</td>
+								</tr>
+								<tr>
+									<td>Общее число авторов:</td>
+									<td>1200</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<hr class="divider-color">
+	<footer>
+		<div class="footer-bottom">
+			<div class="grid-row clear-fix">
+				<div class="copyright">QuickR<span></span> 2017 г. Разработчик: Декун Надежда, НМТ-443907.</div>
+				<nav class="footer-nav">
+					<ul class="clear-fix">
+						<li>
+							<a href="index.html">Поиск</a>
+						</li>
+						<li>
+							<a href="news.html">Новости</a>
+						</li>
+						<li>
+							<a href="login.html">Зарегистрироваться</a>
+						</li>
+						<li>
+							<a href="login.html">Войти</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

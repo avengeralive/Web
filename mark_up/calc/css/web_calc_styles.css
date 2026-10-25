@@ -1,0 +1,46 @@
+.filter_white{
+    filter: non;
+}
+.filter_black{
+   filter: invert(1) sepia(1) saturate(5) hue-rotate(189deg);
+}
+#calc .btn-default::before{
+    content:'' !important;
+    background-origin: content-box !important;
+    padding:7px;
+    background-image: url(../icons/check-done-black.svg)!important;
+    content:'' !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 40px !important;
+    height:40px !important;
+}
+.link_tablist{
+    pointer-events: none;
+    cursor: default;
+}
+
+#calc .nav-tabs > li.active > .link_tablist::before{
+    font-size:22px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display:block;
+    position:absolute;
+    top: -30px;
+    left:50px;
+    background-image: url(../icons/check-done.svg);
+    background-position: center;
+    width:20px;
+    height: 20px;
+    content:'';
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.checkbox-label{
+    padding:15px 15px 20px 15px;
+}
+.btn-prev {
+    background-color:transparent !important;
+    color: #fc0 !important;
+}

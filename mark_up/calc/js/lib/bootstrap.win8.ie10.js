@@ -1,0 +1,2 @@
+//Twitter Win8 IE10 viewport
+(function(){'use strict';if(navigator.userAgent.match(/IEMobile\/10\.0/)){var ms=document.createElement('style');ms.appendChild(document.createTextNode('@-ms-viewport{width:auto!important}'));document.querySelector('head').appendChild(ms);}})();

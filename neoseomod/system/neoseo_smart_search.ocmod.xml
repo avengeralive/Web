@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Smart Search</name>
+    <version>10</version>
+    <code>neoseo-smart-search</code>
+    <author>Alexander Sorokin</author>
+
+    <file path="catalog/controller/common/search.php">
+        <operation>
+            <search><![CDATA[
+                $data['text_search'] = $this->language->get('text_search');
+                ]]></search>
+            <add position="after"><![CDATA[
+
+		/* NeoSeo Ajax Search - begin */
+		$data['hide_categories'] = !$this->config->get("neoseo_smart_search_show_categories");
+		/* NeoSeo Ajax Search - end */
+
+                ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/footer.php">
+        <operation>
+            <search><![CDATA[
+                $data['text_information'] = $this->language->get('text_information');
+                ]]></search>
+            <add position="before"><![CDATA[
+                /* NeoSeo Ajax Search - begin */
+                $data['neoseo_smart_search_status'] = $this->config->get("neoseo_smart_search_status");
+                $data['neoseo_smart_search_selector'] = $this->config->get("neoseo_smart_search_selector");
+                if (!file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/neoseo_smart_search.scss')) {
+                    if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/neoseo_smart_search.css')) {
+                        $this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/neoseo_smart_search.css');
+                    } else {
+                        $this->document->addStyle('catalog/view/theme/default/stylesheet/neoseo_smart_search.css');
+                    }
+                }
+                /* NeoSeo Ajax Search - end */
+                ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/default/template/common/footer.tpl">
+        <operation>
+            <search><![CDATA[</body>]]></search>
+            <add position="before"><![CDATA[
+<?php if ($neoseo_smart_search_status) { ?>
+<!-- NeoSeo Ajax Search - begin -->
+<script type="text/javascript">
+    $('<?php echo $neoseo_smart_search_selector; ?>')
+        .after('<div id="search_main" style="display:none"></div>')
+        .keyup(function () {
+            var language = "";
+            if( window.current_language ) {
+                language = window.current_language;
+            }
+            $.ajax({
+                url: language + 'index.php?route=module/neoseo_smart_search',
+                type: 'get',
+                dataType: 'json',
+                data: 'filter_name=' + encodeURIComponent($(this).val()),
+                success: function (data) {
+                    if (data['content']) {
+                        $('#search_main').html(data['content']);
+                        $('#search_main').show();
+                    } else {
+                        $('#search_main').hide();
+                    }
+                }
+            });
+        });
+</script>
+<!-- NeoSeo Ajax Search - end -->
+<?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+
+</modification>

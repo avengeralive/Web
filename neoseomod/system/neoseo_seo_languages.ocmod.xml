@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo SEO Languages</name>
+    <version>13</version>
+    <code>neoseo-seo-languages</code>
+    <author>Alexander Sorokin</author>
+    <link>http://neoseo.com.ua/</link>
+
+    <file path="catalog/controller/common/language.php">
+        <operation>
+            <search><![CDATA[
+if (file_exists(DIR_TEMPLATE
+            ]]></search>
+            <add position="before"><![CDATA[
+		/* NeoSeo SEO Languages - begin */
+		if( !$this->model_module_neoseo_seo_languages ) {
+			$this->load->model("module/neoseo_seo_languages");
+		}
+		$data = $this->model_module_neoseo_seo_languages->processCommonLanguage($data);
+		/* NeoSeo SEO Languages - end */
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/seo_pro.php">
+        <operation>
+            <search><![CDATA[
+            // Decode URL
+            ]]></search>
+            <add position="before"><![CDATA[
+		/* NeoSeo SEO Languages - begin */
+		if( !$this->model_module_neoseo_seo_languages ) {
+			$this->load->model("module/neoseo_seo_languages");
+		}
+
+		if(isset($this->request->get['_route_'])) {
+
+			$urllanguage = explode('/', trim(utf8_strtolower($this->request->get['_route_']), '/'));
+
+			$languageCode = $urllanguage[0];
+			$lang = $this->model_module_neoseo_seo_languages->getActiveLanguages();
+
+			if( isset($languageCode) && in_array($languageCode, $lang) ) {
+				$this->model_module_neoseo_seo_languages->initLanguage($languageCode);
+
+				$replace_lang = $languageCode;
+				if(count($urllanguage) > 1){
+					$replace_lang .= "/";
+				}
+
+				$this->request->get['_route_'] = str_replace($replace_lang, '', $this->request->get['_route_']);
+
+				if($this->request->get['_route_'] == '' || $this->request->get['_route_'] == '/' || $this->request->get['_route_'] == 'index.php'){
+					unset($this->request->get['_route_']);
+				}
+			} else {
+				$code = $this->model_module_neoseo_seo_languages->getDefaultLanguage();
+				if( $this->config->get("config_language") != $code ) {
+					// Real switch to default language
+					$this->model_module_neoseo_seo_languages->initLanguage($code);
+				}
+			}
+		} else {
+			$code = $this->model_module_neoseo_seo_languages->getDefaultLanguage();
+			$this->model_module_neoseo_seo_languages->initLanguage($code);
+		}
+		/* NeoSeo SEO Languages - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            if ($seo_url == '')
+            ]]></search>
+            <add position="before"><![CDATA[		/* NeoSeo SEO Languages - begin */
+		$this->load->model("module/neoseo_seo_languages");
+		$link = $this->model_module_neoseo_seo_languages->insertLanguage($link,$this->session->data['language']);
+		/* NeoSeo SEO Languages - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            return $seo_url;
+            ]]></search>
+            <add position="before"><![CDATA[		/* NeoSeo SEO Languages - begin */
+		$this->load->model("module/neoseo_seo_languages");
+		$seo_url = $this->model_module_neoseo_seo_languages->insertLanguage($seo_url,$this->session->data['language']);
+		/* NeoSeo SEO Languages - end */]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            if (rawurldecode($url) != rawurldecode($seo))
+            ]]></search>
+            <add position="before"><![CDATA[		/* NeoSeo SEO Languages - begin */
+		$this->load->model("module/neoseo_seo_languages");
+		$seo = $this->model_module_neoseo_seo_languages->insertLanguage($seo,$this->session->data['language']);
+        /* NeoSeo SEO Languages - begin */]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search><![CDATA[$data['title']]]></search>
+            <add position="before"><![CDATA[
+
+		/* NeoSeo SEO Languages - begin */
+		if( !$this->model_module_neoseo_seo_languages ) {
+			$this->load->model("module/neoseo_seo_languages");
+		}
+		$data = $this->model_module_neoseo_seo_languages->processCommonHeader($data);
+		/* NeoSeo SEO Languages - end */
+
+        ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/home.php">
+        <operation>
+            <search><![CDATA[setKeywords]]></search>
+            <add position="after"><![CDATA[
+
+		/* NeoSeo SEO Languages - begin */
+		if( !$this->model_module_neoseo_seo_languages ) {
+			$this->load->model("module/neoseo_seo_languages");
+		}
+		$data = $this->model_module_neoseo_seo_languages->processCommonHome($data);
+		/* NeoSeo SEO Languages - end */
+
+
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/common/header.tpl">
+        <operation>
+            <search><![CDATA[$scripts]]></search>
+            <add position="before"><![CDATA[	<!-- NeoSeo SEO Languages - begin -->
+	<script>window.current_language = '<?php echo $current_language; ?>';</script>
+	<!-- NeoSeo SEO Languages - begin -->]]></add>
+        </operation>
+    </file>
+
+</modification>

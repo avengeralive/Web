@@ -1,0 +1,588 @@
+.work-stage-last:after, .work-stage:after {
+		content: '';
+	}
+
+	.work-stage-head {
+		text-transform: uppercase;
+	}
+
+	.work-stage {
+		padding-bottom: 40px;
+	}
+
+	ol.work-stages,ul.work-stages {
+		padding-left: 0;
+		list-style: none;
+	}
+
+	.work-stage,.work-stage-last {
+		position: relative;
+		display: table;
+		width: 100%;
+	}
+
+	.work-stage:after {
+    	position: absolute;
+    	top: 74px;
+    	left: 39px;
+    	height: calc(100% - 95px);
+	}
+
+	.work-stage-last {
+		margin-top: 50px;
+	}
+
+	.work-stage-last:after {
+		position: absolute;
+		top: -50px;
+		left: 176px;
+		width: 38px;
+		height: 45%;
+		border-right: 4px dashed #feca2e;
+		border-bottom: 4px dashed #feca2e;
+	}
+
+	.work-stage-image {
+		width: 80px;
+	}
+
+	.work-stage-content,.work-stage-image {
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	.work-stage-content {
+		padding-left: 30px;
+	}
+
+	span.work-stage-head {
+		font-size: 20px;
+  		font-weight: 900;
+  		line-height: 1.3;
+  		letter-spacing: -0.1px;
+  		text-align: left;
+  		color: #fafafa;
+	}
+
+	span.work-stage-text {
+		margin-top: 2px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.25;
+		letter-spacing: -0.3px;
+		text-align: left;
+		color: #fafafa;
+		display: block;
+	}
+
+	span.work-stage-solution {
+		margin-top: 10px;
+		font-size: 16px;
+  		font-weight: 500;
+  		line-height: 1.25;
+  		letter-spacing: -0.3px;
+  		text-align: left;
+  		color: #4d9fc0;
+  		display: block;
+	}
+
+	span.work-stage-solution-text {
+		margin-top: 12px;
+		font-size: 16px;
+  		line-height: 1.25;
+  		letter-spacing: -0.3px;
+  		text-align: left;
+  		color: #aaaaaa;
+  		display: block;	
+	}
+
+	div.work-stage-image img.left-image {
+		top: -13px;
+    	position: absolute;
+	}
+
+	.work-stage-first:after {
+		border-right: dashed 2px #edb933;
+	}
+
+	.work-stage-second:after {
+		border-right: dashed 2px #e1795d;
+	}
+
+	.work-stage-third:after {
+		border-right: dashed 2px #4eb0a8;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	.nav-corporate nav{
+		float: left;
+	}
+
+	.nav-corporate nav ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	}
+
+	.nav-corporate nav ul li{
+		display: inline-block;
+
+		font-size: 18px;
+	}
+
+	.nav-corporate nav ul li:first-child{
+		margin-left: 38px;	
+	}
+
+	.nav-corporate nav ul li a{
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		padding: 0 22px;
+		line-height: 60px;	
+		position: relative;
+	}
+
+	.nav-corporate nav ul li a:after{
+		content:"";
+		display: block;
+		position: absolute;
+		left:22px;
+		right: 22px;	
+		-webkit-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		transition: all 0.25s;
+		border-bottom:5px solid transparent;
+		bottom: -4px;
+	}
+
+	.nav-corporate nav ul li a:hover:after{
+		border-bottom:5px solid #fff;
+	}
+
+
+
+
+
+
+	.header-corporate {
+		min-height: 850px;
+	    width: 100%;
+	    background-image: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/img-header.jpg);
+	    background-position: center center;
+	    -webkit-background-size: cover;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    position: relative;
+	}
+
+	.header-corporate .nav-corporate {
+		width: 100%;
+	    background-color: rgba(0,0,0,0.6);
+	    height: 65px;
+	    /*border-top: 5px solid #2e2e2e;*/
+	    position: fixed;
+	    z-index: 10;
+	}
+
+	body.body-corporate {
+		font-family: "RobotoRegular", sans-serif;
+	    font-size: 16px;
+	    line-height: 1.2;
+	    margin: 0;
+	    padding: 0;
+	    color: #2e2e2e;
+	    text-rendering: optimizeLegibility !important;
+    	-webkit-font-smoothing: antialiased !important;
+    	-moz-osx-font-smoothing: grayscale !important; 
+
+	}
+
+	.contacts-corporate .tel {
+	    display: inline-block;
+	    vertical-align: middle;
+  		opacity: 0.6;
+  		color: #ffffff;
+	    font-size: 14px;
+	    line-height: 1.5;
+	}
+
+	.contacts-corporate {
+    	float: right;
+    	padding-top: 9px;
+	}
+
+	.head-container {
+	    margin: 0 auto;
+	    padding: 1px 10px;
+	    max-width: 960px;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    position: relative;
+	}
+
+	.head-container .title-corporate {
+		margin-top: 371px; /* 371 = half */
+	}
+
+	.corporate-btn {
+    	font-size: 18px;
+  		font-weight: 600;
+  		letter-spacing: -0.1px;
+  		border-radius: 5px;
+  		padding: 12px 22px;
+	}
+
+	.btn-yellow {
+  		background-color: #edb933;
+  		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    	color: #282828;
+	}
+
+	.btn-black-white {
+		border: solid 2px #282828;
+		color: #282828;
+	}
+
+	.btn-black-white:hover {
+		color: #f36b5f;
+		border: solid 2px #f36b5f;
+	}
+
+	.request-button {
+		width: 220px;
+  		height: 50px;
+  		margin: 0 auto;
+	}
+
+	.head-container .title-corporate h1 {
+		font-size: 48px;
+  		font-weight: bold;
+  		line-height: 1.13;
+  		letter-spacing: -1.1px;
+  		text-align: center;
+  		color: #ffffff;
+  		text-transform: uppercase;
+	}
+
+	.contacts-corporate .btn-call-me {
+		display: inline-block;
+	    padding: 4px 10px 4px 40px;
+	    color: #edb933;
+	    border: 2px solid #edb933;
+	    border-radius: 20px;
+	    font-size: 14px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-weight: 700;
+	    line-height: 1;
+	    background-image: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/ic-call.svg);
+	    background-repeat: no-repeat;
+	    background-position: 15px 8px;
+	    -webkit-background-size: 18px 18px;
+	    background-size: 18px 18px;
+	    -webkit-transition: all 0.25s;
+	    -o-transition: all 0.25s;
+	    transition: all 0.25s;
+	    vertical-align: middle;
+	    margin-left: 15px;
+	}
+
+	section.introduction {
+		width: 100%;
+		min-height: 402px;
+  		object-fit: contain;
+  		background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/bg-2.jpg) no-repeat center center; 
+  		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+	}
+
+	section.introduction .first-title {
+		max-width: 1047px;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 100px;
+	}
+
+	section.introduction .first-title span {
+		font-family: Roboto;
+	  	font-size: 22px;
+	  	font-weight: bold;
+	  	line-height: 1.18;
+	  	letter-spacing: -0.1px;
+	  	text-transform: uppercase;
+	  	color: #282828;
+	}
+
+	section.introduction .second-title {
+		max-width: 827px;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 24px;
+	}
+
+	section.introduction .second-title span {
+		font-size: 16px;
+  		line-height: 1.25;
+  		letter-spacing: -0.3px;
+  		text-align: center;
+  		color: #525252;
+	}
+
+	section.tech-stack {
+		width: 100%;
+		min-height: 615px;
+	}
+
+	section.tech-stack div.the-stack {
+		padding-top: 100px;
+	}
+
+	section.tech-stack div.the-stack h2 {
+		font-size: 36px;
+  		font-weight: bold;
+  		line-height: 0.67;
+  		letter-spacing: -0.5px;
+  		text-align: center;
+  		color: #282828;
+  		text-transform: uppercase;
+  		margin-bottom: 63px;
+    	margin-top: 0px;
+	}
+
+	section.tech-stack div.the-stack div.techlist {
+		max-width: 1047px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	section.tech-stack div.the-stack img.iconTech.addTopMargin {
+		margin-top: 16px;
+	}
+
+	section.tasks-we-solve {
+		width: 100%;
+		min-height: 1121px;
+		background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/bg-task.jpg);
+	}
+
+	section.tasks-we-solve div.tasks {
+		padding-top: 100px;
+	}
+
+	section.tasks-we-solve div.tasks h2 {
+		font-size: 36px;
+  		font-weight: bold;
+  		line-height: 0.67;
+  		letter-spacing: -0.5px;
+  		text-align: center;
+  		color: #ffffff;
+  		text-transform: uppercase;
+  		margin-bottom: : 24px;
+  		margin-top: 0px;
+	}
+
+	section.tasks-we-solve div.tasks .subtitle {
+		max-width: 573px;
+    	text-align: center;
+    	margin: 0 auto;
+	}
+
+	section.tasks-we-solve div.tasks .work-process {
+		padding-top: 56px;
+		max-width: 950px;
+		margin: 0 auto;
+	}
+
+	section.tasks-we-solve div.tasks .subtitle span {
+  		font-size: 16px;
+  		line-height: 1.25;
+  		letter-spacing: -0.3px;
+  		text-align: center;
+  		color: #ffffff;
+	}
+
+	section.solutions {
+		width: 100%;
+		min-height: 835px;
+		background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/bg-03.jpg);
+	}
+
+	section.solutions .solutions-block {
+		padding-top: 102px;
+		max-width: 950px;
+    	margin: 0 auto;
+	}
+
+	section.solutions .solutions-block h2 {
+  		font-size: 36px;
+  		text-transform: uppercase;
+  		font-weight: bold;
+  		line-height: 0.67;
+  		letter-spacing: -0.5px;
+  		text-align: center;
+  		color: #282828;
+  		margin-bottom: 18px;
+  		margin-top: 0;
+	}
+
+	section.solutions .solutions-block span.solutions-subtitle {
+		margin-top: 18px;
+		font-size: 16px;
+  		line-height: 1.25;
+  		letter-spacing: -0.3px;
+  		text-align: center;
+  		display: block;
+  		color: #282828;
+	}
+
+	section.solutions .solution-require-btn {
+		text-align: center;
+		margin-top: 22px;
+	}
+
+	section.solutions .solutions-list {
+		text-align: center;
+		margin-top: 38px;
+	}
+
+	section.solutions .solution-list-block {
+		display: inline-block;
+		width: 250px;
+		vertical-align: top;
+	}
+
+	section.solutions .solution-list-block:nth-child(n+4) {
+		margin-top: 89px;
+	}
+
+	section.solutions .solution-list-block:not(:nth-child(3n)) {
+		margin-right: 47px;
+	}
+
+	section.solutions .solution-list-block span.sol-text {
+		display: block;
+		margin-top: 6px;
+		text-transform: uppercase;
+		font-size: 16px;
+  		font-weight: bold;
+  		letter-spacing: -0.1px;
+  		text-align: center;
+  		color: #282828;
+	}
+
+	span.sol-text.double-line {
+		min-height: 38px;
+	}
+
+	section.our-benefits {
+		width: 100%;
+  		min-height: 726px;
+  		background: url(http://infoshell.ru/wp-content/themes/mark_up/infoshell_new/img/corporate/bg-2.jpg);
+  		-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	section.our-benefits .our-benefits-block {
+		max-width: 1047px;
+		margin: 0 auto;
+	}
+
+	section.our-benefits .benefits-list {
+		text-align: center;
+	}
+
+	section.our-benefits .benefits-heading {
+    	text-align: center;
+    	padding-top: 97px;
+    	max-width: 827px;
+    	margin: 0 auto;
+    	margin-bottom: 60px;
+	}
+
+	section.our-benefits .benefits-heading h2 {
+  		font-size: 36px;
+  		font-weight: bold;
+  		line-height: 1;
+  		letter-spacing: -0.5px;
+  		color: #282828;
+  		text-transform: uppercase;
+  		max-width: 827px;
+    	margin-bottom: 0;
+    	margin-top: 0;
+	}
+
+	.benefits-list .benefit-block {
+		display: inline-block;
+		width: 460px;
+		vertical-align: top;
+		text-align: left;
+	}
+
+	.benefits-list .benefit-block .benefit-title {
+		font-size: 20px;
+   		font-weight: 900;
+   		line-height: 1.1;
+   		letter-spacing: -0.1px;
+   		text-align: left;
+   		color: #282828;
+   		text-transform: uppercase;
+   		margin-left: 30px;
+   		display: block;
+   		max-width: 260px;
+   		position: relative;
+	}
+
+	.benefits-list .benefit-block .benefit-text {
+		font-size: 16px;
+	  	line-height: 1.25;
+	  	letter-spacing: -0.3px;
+	  	text-align: left;
+	  	color: #525252;
+	  	margin-bottom: 0;
+	  	margin-top: 19px;
+	}
+
+	.benefits-list .benefit-block:nth-child(n+3) {
+		margin-top: 34px;
+	}
+
+	.benefits-list .benefit-block:not(:nth-child(2n))  {
+		margin-right: 64px;
+	}
+
+	.benefits-list .benefit-block .benefit-title:before {
+		content: '';
+		position: absolute;
+		left: -27px;
+    	top: 3px;
+		width: 16px;
+  		height: 16px;
+  		transform: rotate(-45deg);
+  		border-radius: 3px;
+  		background-color: #edb933;
+	}
+
+	.center-aligned {
+		margin: 0 auto;
+    	max-width: 688px;
+	}
+
+	.block-request input, .block-request textarea {
+    	border-radius: 4px;
+	}

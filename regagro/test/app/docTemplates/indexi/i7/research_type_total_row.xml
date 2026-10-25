@@ -1,0 +1,108 @@
+<w:tr w:rsidR="00E338E3" w:rsidTr="00E338E3">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1561"/>
+									<w:vMerge/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+									<w:vAlign w:val="center"/>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidP="00E338E3" w:rsidR="00E338E3" w:rsidRDefault="00E338E3"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="4685"/>
+									<w:gridSpan w:val="3"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+									<w:hideMark/>
+								</w:tcPr>
+								<w:p w:rsidP="00E338E3" w:rsidR="00E338E3" w:rsidRDefault="00E338E3">
+									<w:pPr>
+										<w:tabs>
+											<w:tab w:pos="551" w:val="left"/>
+											<w:tab w:pos="1735" w:val="center"/>
+										</w:tabs>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3667"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00E338E3" w:rsidR="00E338E3" w:rsidRDefault="00E338E3">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${research_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3613"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00E338E3" w:rsidR="00E338E3" w:rsidRDefault="00E338E3">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${research_positive_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3599"/>
+									<w:tcBorders>
+										<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+										<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00E338E3" w:rsidR="00E338E3" w:rsidRDefault="00E338E3">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${research_percent_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

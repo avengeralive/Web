@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<code>neoseo_clear_cache</code>
+	<name>NeoSeo Clear Cache</name>
+	<version>1</version>
+	<author>Alexander Sorokin</author>
+	<link>http://neoseo.com.ua</link>
+	<file path="admin/controller/common/header.php">
+		<operation>
+			<search><![CDATA[
+$data['logged'] = true;
+			]]></search>
+			<add position="after"><![CDATA[
+			/* NeoSeo Clear Cache - begin */
+			$this->load->language('tool/neoseo_clear_cache');
+			$data['text_logout'] = $this->language->get('text_logout');
+			$data['text_clear'] = $this->language->get('text_clear');
+			$data['text_refresh'] = $this->language->get('text_refresh');
+			$data['text_cache'] = $this->language->get('text_cache');
+			$data['text_cache_system'] = $this->language->get('text_cache_system');
+			$data['text_cache_image'] = $this->language->get('text_cache_image');
+			/* NeoSeo Clear Cache - end */
+			]]></add>
+		</operation>
+	</file>
+	<file path="admin/view/template/common/header.tpl">
+		<operation>
+			<search><![CDATA[
+<ul class="nav pull-right">
+			]]></search>
+			<add position="before"><![CDATA[
+
+<script type="text/javascript"><!--
+$(document).ready(function() {
+	$('.clear-dropdown li').on('click', function(e) {
+		e.stopPropagation();
+	});
+});
+
+function getToken() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		vars[key] = value;
+	});
+	return vars['token'];
+}
+
+function clearCache(key) {
+
+	$.ajax({
+		url: 'index.php?route=tool/neoseo_clear_cache&token=' + getToken(),
+		type: 'post',
+		data: 'key=' + key,
+		dataType: 'json',
+		beforeSend: function() {
+			$('#button-cache-' + key).button('loading');
+			$('.clear-dropdown').prev('a').children('span').html('<i class=\'fa fa-spinner\'></i>');
+		},
+		error: function(xhr, ajaxOptions, thrownError) {
+			alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+		},
+		success: function(json) {
+			$('.clear-dropdown > .alert-success, .clear-dropdown > .alert-danger').remove();
+
+			if (json['success']) {
+				$('#button-cache-' + key).closest('li').addClass('bg-success');
+				$('.clear-dropdown').append('<div class="alert alert-success" style="margin: 15px 20px 15px 20px; padding: 5px; font-size: 11px;"><i class="fa fa-check-circle"></i> ' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+				$('.clear-dropdown').prev('a').children('span').html(json['size']);
+			}
+
+			if (json['error']) {
+				$('#button-cache-' + key).closest('li').addClass('bg-danger');
+				$('.clear-dropdown').append('<div class="alert alert-danger" style="margin: 15px 20px 15px 20px; padding: 5px; font-size: 11px;"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+			}
+		},
+		complete: function() {
+			$('#button-cache-' + key).button('reset');
+		}
+	});
+}
+//--></script>
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+<ul class="nav pull-right">
+			]]></search>
+			<add position="after"><![CDATA[
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-eraser fa-lg"></i></a>
+	  <ul class="dropdown-menu dropdown-menu-right clear-dropdown">
+		<li class="dropdown-header"><?php echo $text_cache; ?></li>
+		<li><a><?php echo $text_cache_system; ?><button onclick="clearCache('system');" type="button" data-loading-text="<i class='fa fa-spinner'></i>" data-toggle="tooltip" title="<?php echo $text_clear; ?>" class="btn btn-danger btn-xs pull-right" id="button-cache-system"><i class="fa fa-trash-o"></i></button></a></li>
+		<li><a><?php echo $text_cache_image; ?><button onclick="clearCache('image');" type="button" data-loading-text="<i class='fa fa-spinner'></i>" data-toggle="tooltip" title="<?php echo $text_clear; ?>" class="btn btn-danger btn-xs pull-right" id="button-cache-image"><i class="fa fa-trash-o"></i></button></a></li>
+	  </ul>
+	</li>
+			]]></add>
+		</operation>
+	</file>
+</modification>

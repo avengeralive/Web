@@ -1,0 +1,45 @@
+<w:tr w:rsidR="008B12B6" w:rsidTr="008B12B6">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3085"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="008B12B6" w:rsidR="008B12B6" w:rsidRDefault="008B12B6">
+									<w:pPr>
+										<w:jc w:val="both"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2693"/>
+								</w:tcPr>
+								<w:p w:rsidP="008B12B6" w:rsidR="008B12B6" w:rsidRDefault="008B12B6">
+									<w:pPr>
+										<w:jc w:val="both"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Итого</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1843"/>
+								</w:tcPr>
+								<w:p w:rsidP="008B12B6" w:rsidR="008B12B6" w:rsidRDefault="008B12B6" w:rsidRPr="008B12B6">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

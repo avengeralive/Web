@@ -1,0 +1,29 @@
+
+<div class="large-16 columns large-centered">
+    <ul class="accordion amber" data-accordion="" data-allow-all-closed="true" data-multi-expand="true">
+
+{% for q in widget.getChildren %}
+<!-- ВОПРОС! -->
+<li class="accordion-item" data-accordion-item="">
+<a class="accordion-title" href="#">
+  {# TITLE #}
+  {{q.name}}
+
+</a>
+    <div class="accordion-content" data-tab-content="" style="padding: 20px;">
+        <div class="row" style="margin: 0px;">
+            <div class="large-18 large-offset-6 columns" style="padding: 0px; margin-left: 200px;">
+              {# CONTENT #}
+              {{q.text | raw}}
+
+            </div>
+        </div>
+    </div>
+</li>
+<!-- ВОПРОС! -->
+
+{% endfor %}
+
+
+    </ul>
+</div>

@@ -1,0 +1,71 @@
+<w:tr w:rsidR="00FB149B" w:rsidRPr="00FB149B" w:rsidTr="00574A2C">
+							<w:trPr>
+								<w:trHeight w:val="283"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2000"/>
+								</w:tcPr>
+								<w:p w:rsidP="00FB149B" w:rsidR="00FB149B" w:rsidRDefault="00FB149B" w:rsidRPr="00FB149B">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:b/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="6500"/>
+									<w:gridSpan w:val="3"/>
+								</w:tcPr>
+								<w:p w:rsidP="00FB149B" w:rsidR="00FB149B" w:rsidRDefault="00FB149B" w:rsidRPr="008624F5">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:b/>
+										</w:rPr>
+									</w:pPr>
+									<w:r w:rsidRPr="008624F5">
+										<w:rPr>
+											<w:b/>
+										</w:rPr>
+										<w:t>ВСЕГО</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1250"/>
+								</w:tcPr>
+								<w:p w:rsidP="00FB149B" w:rsidR="00FB149B" w:rsidRDefault="00FB149B">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00FB149B">
+										<w:t>${lab_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1250"/>
+								</w:tcPr>
+								<w:p w:rsidP="00FB149B" w:rsidR="00FB149B" w:rsidRDefault="00FB149B" w:rsidRPr="00FB149B">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r w:rsidRPr="00FB149B">
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${lab_positives_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

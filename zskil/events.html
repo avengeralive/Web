@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/calendar.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				if ($(".menu" ).offset().top > 100) $("header" ).addClass('bs-scroll');
+				else $("header" ).removeClass('bs-scroll');
+				$(window).on('scroll', function(){
+					if ($(".menu" ).offset().top > 100) $("header" ).addClass('bs-scroll');
+					else $("header" ).removeClass('bs-scroll');
+				});
+				$("#calendar").calendar({'31-01-2018': ['b'], '09-09-2018': ['b', 'p', 'l']});
+				$('.burger').on('click', function(){ $('.mobile_menu').toggleClass('active');  return false; });
+			});
+		</script>
+	</head>
+	<body class="events">
+		<header>
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-md-2">
+						<img src="./images/qub.png" class="logoimg">
+						<a href="#" class="burger"><i class="fas fa-bars fa-3x"></i></a>
+						<div class="mobile_menu">
+							<ul>
+								<li><a href="#" class="bordered">О проекте</a></li>
+								<li><a href="#">Мероприятия</a></li>
+								<li><a href="#" class="bordered">Контакты</a></li>
+							</ul>
+							<a href="#" class="login-btn">Вход / Регистрация</a>
+						</div>
+					</div>
+					<div class="col-md-7 col-lg-8">
+						<div class="row menu">
+							<div class="col-md-8 col-lg-7">
+								<div class="row">
+									<div class="col-md-6">
+										<a href="#" class="bordered">О проекте</a>
+									</div>
+									<div class="col-md-6">
+										<a href="#">Мероприятия</a>
+									</div>
+								</div>
+							</div>
+							<!--<div class="col-md-3 col-lg-2">
+								<img src="./images/glass.png" class="glass">
+							</div>-->
+							<div class="col-md-4 col-lg-5">
+								<div class="row">
+									<div class="col-md-6">
+										<a href="#" class="bordered">Контакты</a>
+									</div>
+									<div class="col-md-6">
+										<a href="#" class="search"><i class="fas fa-search fa-2x"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-2">
+						<a href="#" class="login-btn">Вход / Регистрация</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="main_slider">
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-12 heading">
+						<h2>Предстоящие</h2>
+						<hr>	
+					</div>
+					<div class="col-lg-12 event_box">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>		
+					</div>
+					<div class="col-lg-12 heading">
+						<h2>Прошедшие</h2>
+						<hr>
+					</div>
+					<div class="col-lg-12 event_box">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>		
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="row">
+							<div class="col-sm-3">
+								<ul class="social">
+									<li><i class="fab fa-facebook fa-2x"></i></li>
+									<li><i class="fab fa-instagram fa-2x"></i></li>
+									<li><i class="fab fa-vk fa-2x"></i></li>
+									<li><i class="fab fa-youtube fa-2x"></i></li>
+								</ul>
+							</div>
+							<div class="col-sm-9 copy">
+								&copy; Все права защищены
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<p><span class="predl">Есть предложения/жалоба?</span> <a href="#" class="btncs">Обращение</a></p>
+						<p>Подписаться на события</p>
+						<form>
+							<input type="text">
+							<button type="submit" class="btncs">Подписаться</button>
+						</form>
+						<p class="text-center"><a href="#" class="polite">Политика конфиденциальности</a></p>
+					</div>
+					<div class="col-lg-4">
+						<div class="row">
+							<div class="col-sm-6 text-center">
+								<img src="./images/zskills-logo.png">
+							</div>
+							<div class="col-sm-6">
+								<ul class="footer_pages">
+									<li>О проекте</li>
+									<li>Новости</li>
+									<li>Мероприятия</li>
+									<li>Контакты</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

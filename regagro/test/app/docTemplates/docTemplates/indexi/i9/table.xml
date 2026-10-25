@@ -1,0 +1,67 @@
+<w:p w:rsidP="00E62DE8" w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidRPr="007667D2">
+						<w:pPr>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:b/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:type="dxa" w:w="7621"/>
+							<w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="3085"/>
+							<w:gridCol w:w="2693"/>
+							<w:gridCol w:w="1843"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="007043CF" w:rsidTr="008B12B6">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3085"/>
+								</w:tcPr>
+								<w:p w:rsidP="002900BD" w:rsidR="007043CF" w:rsidRDefault="007043CF">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Виды продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2693"/>
+								</w:tcPr>
+								<w:p w:rsidP="008A7FF5" w:rsidR="007043CF" w:rsidRDefault="007043CF">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1843"/>
+								</w:tcPr>
+								<w:p w:rsidP="00321CC8" w:rsidR="007043CF" w:rsidRDefault="007043CF">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Общий вес продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>
+					<w:p w:rsidP="008A7FF5" w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5">
+						<w:pPr>
+							<w:jc w:val="center"/>
+						</w:pPr>
+					</w:p>

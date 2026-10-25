@@ -1,0 +1,57 @@
+						<w:tr w:rsidR="00372A01" w:rsidTr="00AA3007">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2943" w:type="dxa"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidR="00372A01" w:rsidRPr="00A41E6D" w:rsidRDefault="00372A01" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:i/>
+											<w:color w:val="A6A6A6" w:themeColor="background1" w:themeShade="A6"/>
+										</w:rPr>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="5245" w:type="dxa"/>
+									<w:gridSpan w:val="2"/>
+								</w:tcPr>
+								<w:p w:rsidR="00372A01" w:rsidRPr="00372A01" w:rsidRDefault="00372A01" w:rsidP="00372A01">
+									<w:pPr>
+										<w:jc w:val="right"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00372A01">
+										<w:t>ИТОГО:</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1418" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00372A01" w:rsidRDefault="00372A01" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>${production_type_count}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1418" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00372A01" w:rsidRDefault="00372A01" w:rsidP="0037034A">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>${production_type_total}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

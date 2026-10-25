@@ -1,0 +1,95 @@
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:type="dxa" w:w="11000"/>
+							<w:tblInd w:type="dxa" w:w="-1336"/>
+							<w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2000"/>
+							<w:gridCol w:w="1500"/>
+							<w:gridCol w:w="1500"/>
+							<w:gridCol w:w="3500"/>
+							<w:gridCol w:w="1250"/>
+							<w:gridCol w:w="1250"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="00EB201E" w:rsidTr="00574A2C">
+							<w:trPr>
+								<w:trHeight w:val="1092"/>
+							</w:trPr>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2000"/>
+								</w:tcPr>
+								<w:p w:rsidP="00A369AA" w:rsidR="00EB201E" w:rsidRDefault="00EB201E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название ветеринарной лаборатории</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1500"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CA3729" w:rsidR="00EB201E" w:rsidRDefault="00EB201E" w:rsidRPr="00EB201E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Вид продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1500"/>
+								</w:tcPr>
+								<w:p w:rsidP="00CA3729" w:rsidR="00EB201E" w:rsidRDefault="00EB201E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Название продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3500"/>
+								</w:tcPr>
+								<w:p w:rsidP="00402285" w:rsidR="00EB201E" w:rsidRDefault="00EB201E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t xml:space="preserve">Цель исследований, </w:t>
+									</w:r>
+								</w:p>
+								<w:p w:rsidP="00402285" w:rsidR="00EB201E" w:rsidRDefault="00EB201E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>дата номер распоряжения</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1250"/>
+								</w:tcPr>
+								<w:p w:rsidP="00402285" w:rsidR="00EB201E" w:rsidRDefault="00EB201E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t xml:space="preserve">Повторные исследования</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>

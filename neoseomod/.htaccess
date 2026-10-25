@@ -1,0 +1,35 @@
+Options +FollowSymlinks
+
+# Чтоб врагам не досталось содержимое каталогов
+Options -Indexes
+
+# Запрет на чтение секретных файлов
+<FilesMatch "(?i)((\.tpl|\.ini|\.log|(?<!robots)\.txt))">
+ Order deny,allow
+ Deny from all
+</FilesMatch>
+
+# Шаманство с урлами
+RewriteEngine On
+
+# Редирект c www на без www
+RewriteCond %{HTTP_HOST} ^www.indianshop.kz
+RewriteRule ^(.*)$ http://indianshop.kz/$1 [R=301,L]
+
+# Редирект для главной (с /index.php на /)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [R=301,L]
+
+RewriteBase /
+RewriteRule ^sitemap.xml$ index.php?route=feed/neoseo_fast_sitemap [L]
+RewriteRule ^sitemap([^\.]+).xml$ index.php?route=feed/neoseo_fast_sitemap&path=$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
+
+php_value max_input_vars 10000
+php_value suhosin.post.max_vars 10000
+php_value suhosin.request.max_vars 10000

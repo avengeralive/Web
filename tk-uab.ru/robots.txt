@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /itexcms/
+Disallow: *utm*
+Disallow: /bak
+Disallow: /*action.redirect*
+Disallow: /public
+Disallow: /assets
+Disallow: /*.pdf
+
+User-agent: Yandex
+Disallow: /itexcms/
+Disallow: *utm*
+Disallow: /bak
+Disallow: /*action.redirect*
+Disallow: /public
+Disallow: /assets
+Disallow: /*.pdf
+
+User-agent: Googlebot
+Disallow: /itexcms/
+Disallow: *utm*
+Disallow: /bak
+Disallow: /*action.redirect*
+Disallow: /public
+Disallow: /assets
+Disallow: /*.pdf
+
+Host: tk-uab.ru
+Sitemap: http://tk-uab.ru/sitemap.xml

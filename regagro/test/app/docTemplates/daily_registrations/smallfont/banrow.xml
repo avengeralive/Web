@@ -1,0 +1,158 @@
+<w:tr w:rsidR="001553F8" w:rsidRPr="007D7BC0" w:rsidTr="004B5FE1">
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2285"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+					<w:t>${production_name}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2330"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+					<w:t>${ban_type_name}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="1648"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+					<w:t>${ban_weight}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="3642"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+					</w:rPr>
+					<w:t>${ban_reason_name}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2971"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+					<w:t>${use_order_name}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+		<w:tc>
+			<w:tcPr>
+				<w:tcW w:type="dxa" w:w="2967"/>
+			</w:tcPr>
+			<w:p w:rsidP="007D7BC0" w:rsidR="001553F8" w:rsidRDefault="004B5FE1" w:rsidRPr="007D7BC0">
+				<w:pPr>
+					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+				</w:pPr>
+				<w:r w:rsidRPr="007D7BC0">
+					<w:rPr>
+						<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+						<w:i/>
+						<w:sz w:val="14"/>
+						<w:szCs w:val="14"/>
+						<w:lang w:val="en-US"/>
+					</w:rPr>
+					<w:t>${ban_note}</w:t>
+				</w:r>
+			</w:p>
+		</w:tc>
+	</w:tr>

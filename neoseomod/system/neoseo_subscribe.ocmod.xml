@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Subscribe</name>
+    <version>8</version>
+    <code>neoseo-subscribe</code>
+    <author>Alexander Sorokin</author>
+    <link>https://neoseo.com.ua/</link>
+
+	
+	 <file path="admin/controller/common/menu.php">
+        <operation>
+            <search><![CDATA[$data['customer']]]></search>
+            <add position="after"><![CDATA[                /* NeoSeo Subscribe - begin */
+                $data['neoseo_subscribe'] = false;
+                if( isset($this->session->data['token']) ) {
+                    if( $this->user->hasPermission('access','customer/neoseo_subscribe') && $this->config->get("neoseo_subscribe_status")){
+                        $this->language->load("customer/neoseo_subscribe");
+                        $data['neoseo_subscribe_status'] = $this->config->get("neoseo_subscribe_status");
+                        $data['text_neoseo_subscribe'] = $this->language->get("text_neoseo_subscribe");
+                        $data['neoseo_subscribe'] = $this->url->link('customer/neoseo_subscribe', 'token=' .$this->session->data['token'], 'SSL');
+                    }
+                }
+                /* NeoSeo Subscribe  - end */]]></add>
+        </operation>
+    </file>
+	
+	<file path="admin/view/template/common/menu.tpl">
+        <operation>
+            <search><![CDATA[<a href="<?php echo $customer; ?>"><?php echo $text_customer; ?></a>]]></search>
+            <add position="after"><![CDATA[       <!-- NeoSeo Subscribe - begin -->
+      <?php if( isset($neoseo_subscribe_status) && $neoseo_subscribe_status == 1) { ?>
+            <li><a href="<?php echo $neoseo_subscribe; ?>"><?php echo $text_neoseo_subscribe; ?></a></li>
+      <?php } ?>
+      <!-- NeoSeo Subscribe - end -->]]></add>
+        </operation>
+    </file>
+
+	<file path="admin/controller/customer/customer.php">
+        <operation>
+            <search><![CDATA[$data['order'] = $order;]]></search>
+            <add position="after"><![CDATA[                /* NeoSeo Subscribe - begin */
+                $data['neoseo_subscribe'] = false;
+                if( isset($this->session->data['token']) ) {
+                    if( $this->user->hasPermission('access','customer/neoseo_subscribe') && $this->config->get("neoseo_subscribe_status")){
+                        $this->language->load("customer/neoseo_subscribe");
+                        $data['neoseo_subscribe_status'] = $this->config->get("neoseo_subscribe_status");
+                        $data['button_export_neoseo_subscribe'] = $this->language->get("button_export");
+                        $data['action_export_neoseo_subscribe'] = $this->url->link('customer/neoseo_subscribe/exportCustomerData', 'token=' .$this->session->data['token'], 'SSL');
+                    }
+                }
+                /* NeoSeo Subscribe - end  */]]></add>
+        </operation>
+    </file>
+		
+	<file path="admin/view/template/customer/customer_list.tpl">
+        <operation>
+             <search><![CDATA[<h1><?php echo $heading_title; ?></h1>]]></search>
+            <add position="before"><![CDATA[      <!-- NeoSeo Subscribe - begin -->
+      <div class="pull-right">
+      <?php if( isset($neoseo_subscribe_status) && $neoseo_subscribe_status == 1) { ?>
+      <a href="<?php echo $action_export_neoseo_subscribe; ?>" class="btn btn-primary"><i class="fa fa-file-excel-o"></i><span> <?php echo $button_export_neoseo_subscribe; ?></span></a>&nbsp;
+      <?php } ?>
+      </div>
+      <!-- NeoSeo Subscribe - end -->]]></add>
+        </operation>
+    </file>
+	
+</modification>

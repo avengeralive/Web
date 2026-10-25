@@ -1,0 +1,7 @@
+{% extends personal %}
+
+{% block personal_content %}
+
+	{% widget 'Sale.Order.List' with { widgetTitle: "<h2>#{_('Заказы')}</h2>" } %}
+	
+{% endblock %}

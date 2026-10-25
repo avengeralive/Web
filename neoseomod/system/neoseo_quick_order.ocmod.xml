@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Quick Order</name>
+    <version>17</version>
+    <code>neoseo-quick-order</code>
+    <author>Alexander Sorokin</author>
+    <link>Ahttp://seomag.com.ua/soforp-quick-order</link>
+
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search><![CDATA[
+            $this->document->getStyles();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        if (!file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/neoseo_quick_order.scss')) {
+            $this->document->addStyle('catalog/view/theme/default/stylesheet/neoseo_quick_order.css');
+        }
+        /* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+            $this->document->getScripts();
+            ]]></search>
+            <add position="before"><![CDATA[
+        /* NeoSeo QuickOrder - begin */
+        $this->document->addScript('catalog/view/javascript/neoseo_quick_order.js');
+        $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/jquery.validate.js');
+        $this->document->addScript('catalog/view/javascript/jquery/jquery.maskedinput.js');
+        $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/additional-methods.js');
+        if($this->config->get('config_language') === 'ua' || $this->config->get('config_language') === 'uk') {
+            $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/localization/messages_uk.js');
+        } else {
+            $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/localization/messages_ru.js');
+        }
+        /* NeoSeo QuickOrder - end */]]></add>
+        </operation>
+    </file>
+
+
+
+    <file path="catalog/controller/product/product.php">
+
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="before"><![CDATA[
+	/* NeoSeo QuickOrder - begin */
+	protected function renderTemplate($template, $data)
+	{
+		extract($data);
+
+		ob_start();
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/' . $template)) {
+			$template_file = $this->config->get('config_template') . '/template/' . $template;
+		} else {
+			$template_file = 'default/template/' . $template;
+		}
+		require(DIR_TEMPLATE . $template_file);
+		$result = ob_get_contents();
+		ob_end_clean();
+
+		return $result;
+	}
+	/* NeoSeo QuickOrder - end */
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+           $data['breadcrumbs'] = array();
+            ]]></search>
+            <add position="after"><![CDATA[
+        /* NeoSeo QuickOrder - begin */
+        $this->language->load("module/neoseo_quick_order");
+		$data['neoseo_quick_order_status']				= $data_quick_order['neoseo_quick_order_status']			= $this->config->get('neoseo_quick_order_status');
+		$data['neoseo_quick_order_status_popup_cart']	= $data_quick_order['neoseo_quick_order_status_popup_cart'] = $this->config->get('neoseo_quick_order_status_popup_cart');
+		$data['neoseo_quick_order_status_popup_form']	= $data_quick_order['neoseo_quick_order_status_popup_form'] = $this->config->get('neoseo_quick_order_status_popup_form');
+		$data['neoseo_quick_order_status_cart']			= $data_quick_order['neoseo_quick_order_status_cart']		= $this->config->get('neoseo_quick_order_status_cart');
+
+		$data_quick_order['neoseo_quick_order_status_product'] = $this->config->get('neoseo_quick_order_status_product');
+		$data_quick_order['button_quick_order'] = $this->language->get('button_quick_order');
+		$data_quick_order['text_quick_order'] = $this->language->get('text_quick_order');
+		$data_quick_order['text_no_phone'] = $this->language->get('text_no_phone');
+		$data['text_no_phone'] = $this->language->get('text_no_phone');
+		$data_quick_order['quick_order_phone_mask'] = $this->config->get("neoseo_quick_order_phone_mask");
+		$quick_products[$this->request->get['product_id']] = 1 ;
+		$data_quick_order['products'] =  serialize($quick_products);
+		$data_quick_order['products'] = urlencode($data_quick_order['products']);
+		$template = $this->config->get('neoseo_quick_order_product_template');
+		$data['neoseo_quick_order_product_template'] = $template;
+		$data['quick_order_code'] = $this->renderTemplate('module/neoseo_quick_order_temp_'.$template. '.tpl', $data_quick_order);
+        /* NeoSeo QuickOrder - end */
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/neoseo_unistor/template/product/product.tpl">
+        <operation>
+            <search><![CDATA[<span><?php echo $button_cart; ?></span>]]></search>
+            <add position="after" offset="2"><![CDATA[
+
+                <!-- NeoSeo QuickOrder - begin -->
+               <?php if(isset($quick_order_code)) echo $quick_order_code; ?>
+                <!-- NeoSeo QuickOrder - end -->
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/default/template/product/product.tpl">
+        <operation>
+            <search><![CDATA[<button type="button" id="button-cart"]]></search>
+            <add position="after"><![CDATA[
+
+                <!-- NeoSeo QuickOrder - begin -->
+               <?php if(isset($quick_order_code)) echo $quick_order_code; ?>
+                <!-- NeoSeo QuickOrder - end -->
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/{category,manufacturer}.php">
+        <operation>
+            <search><![CDATA[
+            $data['breadcrumbs'] = array();
+            ]]></search>
+            <add position="after"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        $this->language->load("module/neoseo_quick_order");
+        $data['neoseo_quick_order_status'] = $this->config->get('neoseo_quick_order_status');
+        $data['button_quick_order'] = $this->language->get('button_quick_order');
+        /* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+    </file>
+    <file path="catalog/controller/product/{special,search}.php">
+        <operation>
+            <search><![CDATA[
+           $data['text_empty'] = $this->language->get('text_empty');
+            ]]></search>
+            <add position="after"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        $this->language->load("module/neoseo_quick_order");
+        $data['neoseo_quick_order_status'] = $this->config->get('neoseo_quick_order_status');
+        $data['button_quick_order'] = $this->language->get('button_quick_order');
+        /* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/default/template/product/category.tpl">
+        <operation>
+            <search><![CDATA[
+            <button type="button" onclick="cart.add(
+            ]]></search>
+            <add position="after"><![CDATA[
+                <?php if($neoseo_quick_order_status) { ?>
+                <!-- NeoSeo QuickOrder - begin -->
+                <button type="button" class="quick_order" onclick="showQuickOrder('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_quick_order; ?></span></button>
+                <!-- NeoSeo QuickOrder - end -->
+                <?php } ?>
+            ]]></add>
+        </operation>
+    </file>
+
+
+    <file path="catalog/controller/common/cart.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+            protected function renderTemplate($template, $data)
+        {
+            extract($data);
+
+            ob_start();
+            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/' . $template)) {
+                $template_file = $this->config->get('config_template') . '/template/' . $template;
+            } else {
+                $template_file = 'default/template/' . $template;
+            }
+            require(DIR_TEMPLATE . $template_file);
+            $result = ob_get_contents();
+            ob_end_clean();
+
+            return $result;
+        }
+        /* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+           foreach ($this->cart->getProducts() as $product) {
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        $this->language->load("module/neoseo_quick_order");
+		$data_quick_order['neoseo_quick_order_status'] = $this->config->get('neoseo_quick_order_status');
+		$data_quick_order['neoseo_quick_order_status_popup_cart'] = $this->config->get('neoseo_quick_order_status_popup_cart');
+		$data_quick_order['button_quick_order'] = $this->language->get('button_quick_order');
+		$data_quick_order['text_quick_order'] = $this->language->get('text_quick_order');
+		$data_quick_order['text_no_phone'] = $this->language->get('text_no_phone');
+		$data_quick_order['quick_order_phone_mask'] = $this->config->get("neoseo_quick_order_phone_mask");
+		$template = $this->config->get('neoseo_quick_order_popup_cart_template');
+		$data['neoseo_quick_order_popup_cart_template'] = $template;
+		$sum_quantity = 0;
+		$quick_products = array();
+		/* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+           $data['products'][] = array(
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        if($data_quick_order['neoseo_quick_order_status_popup_cart'] ){
+        $sum_quantity = $sum_quantity + $product['quantity'];
+         $quick_products[$product['product_id']] = $product['quantity'] ;
+        }
+        /* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+           $data['vouchers'] = array();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        if($data_quick_order['neoseo_quick_order_status_popup_cart'] ){
+           $data_quick_order['sum_quantity'] = $sum_quantity;
+           $data_quick_order['products'] =  serialize($quick_products);
+			$data_quick_order['products'] = urlencode($data_quick_order['products']);
+           $data['quick_order_code'] = $this->renderTemplate('module/neoseo_quick_order_temp_'.$template. '.tpl', $data_quick_order);
+       }
+        /* NeoSeo QuickOrder - end */
+
+
+            ]]></add>
+        </operation>
+    </file>
+
+
+    <file path="catalog/view/theme/default/template/common/cart.tpl">
+        <operation>
+            <search><![CDATA[
+           <a href="<?php echo $cart; ?>">
+            ]]></search>
+            <add position="before" offset="-2"><![CDATA[
+
+                <!-- NeoSeo QuickOrder - begin -->
+                 <?php if(isset($quick_order_code)) echo $quick_order_code; ?>
+                <!-- NeoSeo QuickOrder - end -->
+
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/neoseo_unistor/template/common/cart.tpl">
+        <operation>
+            <search><![CDATA[
+           <a href="<?php echo $cart; ?>">
+            ]]></search>
+            <add position="before" offset="-2"><![CDATA[
+
+                <!-- NeoSeo QuickOrder - begin -->
+                 <?php if(isset($quick_order_code)) echo $quick_order_code; ?>
+                <!-- NeoSeo QuickOrder - end -->
+
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/checkout/cart.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+            protected function renderTemplate($template, $data)
+        {
+            extract($data);
+
+            ob_start();
+            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/' . $template)) {
+                $template_file = $this->config->get('config_template') . '/template/' . $template;
+            } else {
+                $template_file = 'default/template/' . $template;
+            }
+            require(DIR_TEMPLATE . $template_file);
+            $result = ob_get_contents();
+            ob_end_clean();
+
+            return $result;
+        }
+        /* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+          foreach ($products as $product) {
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        $this->language->load("module/neoseo_quick_order");
+		$data_quick_order['neoseo_quick_order_status'] = $this->config->get('neoseo_quick_order_status');
+		$data_quick_order['neoseo_quick_order_status_cart'] = $this->config->get('neoseo_quick_order_status_cart');
+		$data_quick_order['button_quick_order'] = $this->language->get('button_quick_order');
+		$data_quick_order['text_quick_order'] = $this->language->get('text_quick_order');
+		$data_quick_order['text_no_phone'] = $this->language->get('text_no_phone');
+		$data_quick_order['quick_order_phone_mask'] = $this->config->get("neoseo_quick_order_phone_mask");
+		$template = $this->config->get('neoseo_quick_order_cart_template');
+		$data['neoseo_quick_order_cart_template'] = $template;
+		$sum_quantity = 0;
+		$quick_products = array();
+		/* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+           $data['products'][] = array(
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        if($data_quick_order['neoseo_quick_order_status_cart'] ){
+        $sum_quantity = $sum_quantity + $product['quantity'];
+        $quick_products[$product['product_id']] = $product['quantity'] ;
+        }
+        /* NeoSeo QuickOrder - end */
+
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+           $data['vouchers'] = array();
+            ]]></search>
+            <add position="before"><![CDATA[
+
+        /* NeoSeo QuickOrder - begin */
+        if($data_quick_order['neoseo_quick_order_status_cart'] ){
+           $data_quick_order['sum_quantity'] = $sum_quantity;
+           $data_quick_order['products'] =  serialize($quick_products);
+			$data_quick_order['products'] = urlencode($data_quick_order['products']);
+           $data['quick_order_code'] = $this->renderTemplate('module/neoseo_quick_order_temp_'.$template. '.tpl', $data_quick_order);
+       }
+        /* NeoSeo QuickOrder - end */
+
+
+            ]]></add>
+        </operation>
+    </file>
+
+
+    <file path="catalog/view/theme/neoseo_unistor/template/checkout/cart.tpl">
+        <operation>
+            <search><![CDATA[
+            <div class="pull-right"><a href="<?php echo $checkout; ?>"
+            ]]></search>
+            <add position="after" ><![CDATA[
+
+                <!-- NeoSeo QuickOrder - begin -->
+                 <?php if(isset($quick_order_code)) echo $quick_order_code; ?>
+                <!-- NeoSeo QuickOrder - end -->
+
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/default/template/checkout/cart.tpl">
+        <operation>
+            <search><![CDATA[
+            <div class="pull-right"><a href="<?php echo $checkout; ?>"
+            ]]></search>
+            <add position="after" ><![CDATA[
+
+                <!-- NeoSeo QuickOrder - begin -->
+                 <?php if(isset($quick_order_code)) echo $quick_order_code; ?>
+                <!-- NeoSeo QuickOrder - end -->
+
+
+            ]]></add>
+        </operation>
+    </file>
+
+
+</modification>

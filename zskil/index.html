@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/calendar.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				if ($(".menu" ).offset().top > 100) $("header" ).addClass('bs-scroll');
+				else $("header" ).removeClass('bs-scroll');
+				$(window).on('scroll', function(){
+					if ($(".menu" ).offset().top > 100) $("header" ).addClass('bs-scroll');
+					else $("header" ).removeClass('bs-scroll');
+				});
+				$("#calendar").calendar({'31-01-2018': ['b'], '09-09-2018': ['b', 'p', 'l']});
+				$('.burger').on('click', function(){ $('.mobile_menu').toggleClass('active');  return false; });
+			});
+		</script>
+	</head>
+	<body class="index">
+		<header>
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-md-2">
+						<img src="./images/qub.png" class="logoimg">
+						<a href="#" class="burger"><i class="fas fa-bars fa-3x"></i></a>
+						<div class="mobile_menu">
+							<ul>
+								<li><a href="#" class="bordered">О проекте</a></li>
+								<li><a href="#">Мероприятия</a></li>
+								<li><a href="#" class="bordered">Контакты</a></li>
+							</ul>
+							<a href="#" class="login-btn">Вход / Регистрация</a>
+						</div>
+					</div>
+					<div class="col-md-7 col-lg-8">
+						<div class="row menu">
+							<div class="col-md-8 col-lg-7">
+								<div class="row">
+									<div class="col-md-6">
+										<a href="#" class="bordered">О проекте</a>
+									</div>
+									<div class="col-md-6">
+										<a href="#">Мероприятия</a>
+									</div>
+								</div>
+							</div>
+							<!--<div class="col-md-3 col-lg-2">
+								<img src="./images/glass.png" class="glass">
+							</div>-->
+							<div class="col-md-4 col-lg-5">
+								<div class="row">
+									<div class="col-md-6">
+										<a href="#" class="bordered">Контакты</a>
+									</div>
+									<div class="col-md-6">
+										<a href="#" class="search"><i class="fas fa-search fa-2x"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-2">
+						<a href="#" class="login-btn">Вход / Регистрация</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="main_slider">
+			<div class="layer">
+				<div class="container-custom">
+					<div class="row">
+						<div class="col-lg-4 img-cont">
+							<img src="./images/lo.png">
+							<h2>Карьерный<br>конструктор</h2>
+						</div>
+						<div class="col-lg-8">
+							<div class="ev-slider">
+								<div class="row">
+									<div id="events" class="carousel slide" data-ride="carousel">
+									  	<ol class="carousel-indicators">
+									    	<li data-target="#events" data-slide-to="0" class="active"></li>
+										   	<li data-target="#events" data-slide-to="1"></li>
+									  	</ol>
+									  	<div class="carousel-inner">
+									    	<div class="carousel-item active">
+									      		<div class="row">
+									      			<div class="col-12">
+														<h3>Геологоразведка морских зон</h3>
+														<h4>Виктор Степанов</h4>
+														<h4 class="ev-type business">Бизнес</h4>
+													</div>
+													<div class="col-12">
+														<a href="#" class="more">Подробнее</a>
+													</div>
+									      		</div>
+									    	</div>
+										    <div class="carousel-item">
+										      	<div class="row">
+									      			<div class="col-12">
+														<h3>Геологоразведка морских зон</h3>
+														<h4>Виктор Степанов</h4>
+														<h4 class="ev-type business">Бизнес</h4>
+													</div>
+													<div class="col-12">
+														<a href="#" class="more">Подробнее</a>
+													</div>
+									      		</div>
+										    </div>
+									  	</div>
+										<a class="carousel-control-prev" href="#events" role="button" data-slide="prev">
+										    <span class="carousel-control-prev-icon" aria-hidden="true"><img src="./images/arrow-left.png"></span>
+										    <span class="sr-only">Previous</span>
+										</a>
+										<a class="carousel-control-next" href="#events" role="button" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"><img src="./images/arrow-right.png"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-6 text">
+						<h1>О проекте</h1>
+						<p>Формирование творческой среды, развивающей<br>лидерские и творческиеспособности обучающихся<br>в новом формате, направленном на взаимодействие<br>студентов и аспирантов, преподавателей, тренеров,<br>представителей бизнес сообщества и органов<br>государственной власти в рамках разработки и<br>внедрения социально-значимых проектов на стыке<br>областей знания.</p>
+						<a href="#">Подробнее</a>
+					</div>
+					<div class="col-lg-6">
+						<img src="./images/about.png" style="width: 100%;">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="advantages">
+			<div class="layer">
+				<div class="container-custom">
+					<div class="row">
+						<div class="col-lg-12">
+							<h2 class="text-center">Преимущества</h2>
+						</div>
+						<div class="col-md-6 col-lg-3 icons">
+							<img src="./images/clock.png">
+							<h3>Сконструируй карьеру и создай<br>бизнес</h3>
+						</div>
+						<div class="col-md-6 col-lg-3 icons">
+							<img src="./images/open-book.png">
+							<h3>Получи знания<br>экспертов-практиков</h3>
+						</div>
+						<div class="col-md-6 col-lg-3 icons">
+							<img src="./images/network.png">
+							<h3>Решай кейсы в составе<br>сильной команды</h3>
+						</div>
+						<div class="col-md-6 col-lg-3 icons">
+							<img src="./images/art.png">
+							<h3>Выйди на новый<br>компетентностный уровень</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="calendar">
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-4 col-md-8">
+						<div class="calendar_box">
+							<h2>Календарь мероприятий</h2>
+							<hr>
+							<div id="calendar"></div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4">
+						<div class="program_box">
+							<h2>Блоки программы</h2>
+							<label class="personal"><input name="personal" type="checkbox"><i class="fas fa-check"></i> Личность</label>
+
+							<label class="businnes"><input type="checkbox"><i class="fas fa-check"></i> Бизнес</label>
+							<label class="prof"><input type="checkbox"><i class="fas fa-check"></i> Профессия</label>
+							<h2>Участие</h2>
+							<label><input type="checkbox"><i class="fas fa-check"></i> Очно</label>
+							<label><input type="checkbox"><i class="fas fa-check"></i> Дистанционно</label>
+							<h2>Циклы обучения</h2>
+							<label><input type="checkbox"><i class="fas fa-check"></i> Первый</label>
+							<label><input type="checkbox"><i class="fas fa-check"></i> Второй</label>
+							<label><input type="checkbox"><i class="fas fa-check"></i> Третий</label>
+							<label><input type="checkbox"><i class="fas fa-check"></i> Четвертый</label>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="row">
+							<div class="col-lg-12 arrows">
+								<a href="#"><img src="./images/arrow-top.png"></a>	
+							</div>
+							<div class="col-lg-12">
+								<div class="program_slide">
+									<h3>Социум и его будущее</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16-19 августа</li>
+										<li><img src="./images/clock-circular-outline.png"> 12 00 - 18 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. ЦА - 04</li>
+									</ul>
+									<ul class="info">
+										<li>Попов Иван</li>
+										<li>ПАО "Газпром"</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="businnes">Бизнес</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+								<div class="program_slide">
+									<h3>Разведка Арктики</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 12 сентября</li>
+										<li><img src="./images/clock-circular-outline.png"> 14 00 - 16 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. 2324</li>
+									</ul>
+									<ul class="info">
+										<li>Ставров Максим</li>
+										<li>ПАО "Транснефть"</li>
+									</ul>
+									<ul class="info last">
+										<li class="businnes">Бизнес</li>
+										<li class="prof">Профессия</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+								<div class="program_slide">
+									<h3>Технологии</h3>
+									<ul class="info">
+										<li><img src="./images/calendar.png"> 16 сентября</li>
+										<li><img src="./images/clock-circular-outline.png"> 18 00 - 21 00</li>
+										<li><img src="./images/location-pointer.png"> ауд. 725</li>
+									</ul>
+									<ul class="info block2">
+										<li>Морозов Виталий</li>
+										<li>РГУ нефти и газа (НИУ) имени<br>И. М. Губкина</li>
+									</ul>
+									<ul class="info last">
+										<li class="personal">Личность</li>
+										<li class="prof">Профессия</li>
+										<li><a href="#">Подробнее</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-12 arrows">
+								<a href="#"><img src="./images/arrow-bottom.png"></a>	
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="model">
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2>Модель обучения</h2>
+					</div>
+					<div class="col-lg-4 model_block">
+						<div class="block_inner">
+							<img src="./images/model1.png">
+							<hr>
+							<h3>Регистрация на портале</h3>
+						</div>
+					</div>
+					<div class="col-lg-4 model_block">
+						<div class="block_inner">
+							<img src="./images/model2.png">
+							<hr>
+							<h3>Приобретение компетенций</h3>
+						</div>
+					</div>
+					<div class="col-lg-4 model_block">
+						<div class="block_inner">
+							<img src="./images/model3.png">
+							<hr>                                                    
+							<h3>Получение сертификата</h3>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						
+					</div>
+					<div class="col-lg-12">
+						<a href="#" class="btncs">Проверить сертификат</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="news">
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2>Новости</h2>
+					</div>
+					<div class="col-lg-12">
+						<div id="news" class="carousel slide" data-ride="carousel">
+						  	<ol class="carousel-indicators">
+						    	<li data-target="#news" data-slide-to="0" class="active"></li>
+						    	<li data-target="#news" data-slide-to="1"></li>
+						  	</ol>
+						  	<div class="carousel-inner">
+						    	<div class="carousel-item active">
+						      		<div class="row">
+						      			<div class="col-lg-4">
+						      				<div class="newsitem">
+						      					<span class="date">12 августа, 2018</span>
+						      					<img src="./images/news.png">
+						      					<h3>День России</h3>
+						      					<p>Уважаемые участники, 12 июня - это государственный праздник Российской федерации. Отмечается ежегодно с 1992 г.</p>
+						      				</div>	
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="newsitem">
+						      					<span class="date">12 августа, 2018</span>
+						      					<img src="./images/news.png">
+						      					<h3>День России</h3>
+						      					<p>Уважаемые участники, 12 июня - это государственный праздник Российской федерации. Отмечается ежегодно с 1992 г.</p>
+						      				</div>
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="newsitem">
+						      					<span class="date">12 августа, 2018</span>
+						      					<img src="./images/news.png">
+						      					<h3>День России</h3>
+						      					<p>Уважаемые участники, 12 июня - это государственный праздник Российской федерации. Отмечается ежегодно с 1992 г.</p>
+						      				</div>
+						      			</div>
+						      		</div>
+						    	</div>
+							    <div class="carousel-item">
+							      	<div class="row">
+						      			<div class="col-lg-4">
+						      				<div class="newsitem">
+						      					<span class="date">12 августа, 2018</span>
+						      					<img src="./images/news.png">
+						      					<h3>День России</h3>
+						      					<p>Уважаемые участники, 12 июня - это государственный праздник Российской федерации. Отмечается ежегодно с 1992 г.</p>
+						      				</div>
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="newsitem">
+						      					<span class="date">12 августа, 2018</span>
+						      					<img src="./images/news.png">
+						      					<h3>День России</h3>
+						      					<p>Уважаемые участники, 12 июня - это государственный праздник Российской федерации. Отмечается ежегодно с 1992 г.</p>
+						      				</div>
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="newsitem">
+						      					<span class="date">12 августа, 2018</span>
+						      					<img src="./images/news.png">
+						      					<h3>День России</h3>
+						      					<p>Уважаемые участники, 12 июня - это государственный праздник Российской федерации. Отмечается ежегодно с 1992 г.</p>
+						      				</div>
+						      			</div>
+						      		</div>
+							    </div>
+						  	</div>
+						</div>
+						<a href="#" class="allnews">Все новости</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="partners">
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2>Наши партнеры</h2>
+					</div>
+					<div class="col-lg-12">
+						<div id="partners" class="carousel slide" data-ride="carousel">
+						  	<ol class="carousel-indicators">
+						    	<li data-target="#partners" data-slide-to="0" class="active"></li>
+						    	<li data-target="#partners" data-slide-to="1"></li>
+						  	</ol>
+						  	<div class="carousel-inner">
+						    	<div class="carousel-item active">
+						      		<div class="row">
+						      			<div class="col-lg-4">
+						      				<div class="block_inner">
+						      					<img src="./images/gazprom.png">
+						      				</div>
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="block_inner">
+						      					<img src="./images/gazprom.png">
+						      				</div>
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="block_inner">
+						      					<img src="./images/gazprom.png">
+						      				</div>
+						      			</div>
+						      		</div>
+						    	</div>
+							    <div class="carousel-item">
+							      	<div class="row">
+						      			<div class="col-lg-4">
+						      				<div class="block_inner">
+						      					<img src="./images/gazprom.png">
+						      				</div>
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="block_inner">
+						      					<img src="./images/gazprom.png">
+						      				</div>
+						      			</div>
+						      			<div class="col-lg-4">
+						      				<div class="block_inner">
+						      					<img src="./images/gazprom.png">
+						      				</div>
+						      			</div>
+						      		</div>
+							    </div>
+						  	</div>
+							<a class="carousel-control-prev" href="#partners" role="button" data-slide="prev">
+							    <span class="carousel-control-prev-icon" aria-hidden="true"><img src="./images/arrow-left.png"></span>
+							    <span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#partners" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"><img src="./images/arrow-right.png"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--<section class="reviews">
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2>Отзывы</h2>
+					</div>
+					<div class="col-lg-12">
+						
+					</div>
+				</div>
+			</div>
+		</section>-->
+		<footer>
+			<div class="container-custom">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="row">
+							<div class="col-sm-3">
+								<ul class="social">
+									<li><i class="fab fa-facebook fa-2x"></i></li>
+									<li><i class="fab fa-instagram fa-2x"></i></li>
+									<li><i class="fab fa-vk fa-2x"></i></li>
+									<li><i class="fab fa-youtube fa-2x"></i></li>
+								</ul>
+							</div>
+							<div class="col-sm-9 copy">
+								&copy; Все права защищены
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<p><span class="predl">Есть предложения/жалоба?</span> <a href="#" class="btncs">Обращение</a></p>
+						<p>Подписаться на события</p>
+						<form>
+							<input type="text">
+							<button type="submit" class="btncs">Подписаться</button>
+						</form>
+						<p class="text-center"><a href="#" class="polite">Политика конфиденциальности</a></p>
+					</div>
+					<div class="col-lg-4">
+						<div class="row">
+							<div class="col-sm-6 text-center">
+								<img src="./images/zskills-logo.png">
+							</div>
+							<div class="col-sm-6">
+								<ul class="footer_pages">
+									<li>О проекте</li>
+									<li>Новости</li>
+									<li>Мероприятия</li>
+									<li>Контакты</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

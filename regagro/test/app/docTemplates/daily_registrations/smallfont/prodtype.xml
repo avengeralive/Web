@@ -1,0 +1,74 @@
+<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:type="pct" w:w="3500"/>
+							<w:tblBorders>
+								<w:top w:color="auto" w:space="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" w:sz="0" w:val="none"/>
+								<w:insideH w:color="auto" w:space="0" w:sz="0" w:val="none"/>
+								<w:insideV w:color="auto" w:space="0" w:sz="0" w:val="none"/>
+							</w:tblBorders>
+							<w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2756"/>
+							<w:gridCol w:w="8388"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="004E761A" w:rsidRPr="00473FAF" w:rsidTr="008D7C8B">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2376"/>
+								</w:tcPr>
+								<w:p w:rsidP="00473FAF" w:rsidR="004E761A" w:rsidRDefault="004E761A" w:rsidRPr="00473FAF">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+											<w:b/>
+											<w:sz w:val="14"/>
+											<w:szCs w:val="14"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r w:rsidRPr="00473FAF">
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+											<w:b/>
+											<w:sz w:val="14"/>
+											<w:szCs w:val="14"/>
+										</w:rPr>
+										<w:t>Вид продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="7230"/>
+									<w:tcBorders>
+										<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidP="00473FAF" w:rsidR="004E761A" w:rsidRDefault="007403D1" w:rsidRPr="00473FAF">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+											<w:i/>
+											<w:color w:themeColor="background1" w:themeShade="BF" w:val="BFBFBF"/>
+											<w:sz w:val="14"/>
+											<w:szCs w:val="14"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r w:rsidRPr="00473FAF">
+										<w:rPr>
+											<w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+											<w:sz w:val="14"/>
+											<w:szCs w:val="14"/>
+										</w:rPr>
+										<w:t>${production_type}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+					</w:tbl>

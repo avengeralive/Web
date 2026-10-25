@@ -1,0 +1,30 @@
+2019-07-23T07:50:36+00:00 CRITICAL Uncaught Error: Call to undefined method acf_updates::get_plugin_update() in /usr/www/users/alivel/ball/wp-content/plugins/advanced-custom-fields-pro/pro/admin/admin-settings-updates.php:232
+Stack trace:
+#0 /usr/www/users/alivel/ball/wp-includes/class-wp-hook.php(286): acf_admin_settings_updates->load('')
+#1 /usr/www/users/alivel/ball/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /usr/www/users/alivel/ball/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /usr/www/users/alivel/ball/wp-admin/admin.php(231): do_action('load-gruppy-pol...')
+#4 /usr/www/users/alivel/ball/wp-admin/edit.php(10): require_once('/usr/www/users/...')
+#5 {main}
+  thrown в /usr/www/users/alivel/ball/wp-content/plugins/advanced-custom-fields-pro/pro/admin/admin-settings-updates.php на строке 232
+
+2019-07-23T08:17:09+00:00 CRITICAL Cannot use [] for reading в /usr/www/users/alivel/ball/wp-content/themes/ball/woocommerce.product.php на строке 203
+
+2019-07-23T08:17:13+00:00 CRITICAL Cannot use [] for reading в /usr/www/users/alivel/ball/wp-content/themes/ball/woocommerce.product.php на строке 203
+
+2019-07-23T15:13:56+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /usr/www/users/alivel/ball/wp-content/themes/ball/woocommerce.product.php:245
+Stack trace:
+#0 /usr/www/users/alivel/ball/wp-includes/template-loader.php(78): include()
+#1 /usr/www/users/alivel/ball/wp-blog-header.php(19): require_once('/usr/www/users/...')
+#2 /usr/www/users/alivel/ball/index.php(17): require('/usr/www/users/...')
+#3 {main}
+  thrown в /usr/www/users/alivel/ball/wp-content/themes/ball/woocommerce.product.php на строке 245
+
+2019-07-23T15:13:58+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /usr/www/users/alivel/ball/wp-content/themes/ball/woocommerce.product.php:245
+Stack trace:
+#0 /usr/www/users/alivel/ball/wp-includes/template-loader.php(78): include()
+#1 /usr/www/users/alivel/ball/wp-blog-header.php(19): require_once('/usr/www/users/...')
+#2 /usr/www/users/alivel/ball/index.php(17): require('/usr/www/users/...')
+#3 {main}
+  thrown в /usr/www/users/alivel/ball/wp-content/themes/ball/woocommerce.product.php на строке 245
+

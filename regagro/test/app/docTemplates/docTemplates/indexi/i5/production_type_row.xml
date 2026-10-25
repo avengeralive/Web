@@ -1,0 +1,122 @@
+<w:tr w:rsidR="00E63EA2" w:rsidTr="00E63EA2">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2016"/>
+									<w:vMerge/>
+								</w:tcPr>
+								<w:p w:rsidP="00E63EA2" w:rsidR="00E63EA2" w:rsidRDefault="00E63EA2">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2016"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E63EA2" w:rsidR="00E63EA2" w:rsidRDefault="00E63EA2">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2061"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E63EA2" w:rsidR="00E63EA2" w:rsidRDefault="00E63EA2" w:rsidRPr="008D3926">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${sample_act_date}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2061"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E63EA2" w:rsidR="00E63EA2" w:rsidRDefault="00E63EA2">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${sample_act_code}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1476"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E63EA2" w:rsidR="00E63EA2" w:rsidRDefault="00E63EA2" w:rsidRPr="008D3926">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1401"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E63EA2" w:rsidR="00E63EA2" w:rsidRDefault="00E63EA2" w:rsidRPr="008D3926">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${registration_owner}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1866"/>
+								</w:tcPr>
+								<w:p w:rsidP="00E63EA2" w:rsidR="00E63EA2" w:rsidRDefault="00E63EA2" w:rsidRPr="008D3926">
+									<w:pPr>
+										<w:jc w:val="center"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${sample_count}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

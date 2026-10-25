@@ -1,0 +1,53 @@
+2019-03-27 12:18:32 Notice: Notice (8): Undefined index: Lab in [/var/www/test/app/Controller/RegistrationsController.php, line 692]
+Trace:
+RegistrationsController::_setReportCommonData() - APP/Controller/RegistrationsController.php, line 692
+RegistrationsController::expertises_prices() - APP/Controller/RegistrationsController.php, line 571
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 191
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 165
+[main] - APP/webroot/index.php, line 108
+
+2019-03-27 12:18:32 Notice: Notice (8): Undefined index: Institution in [/var/www/test/app/Controller/RegistrationsController.php, line 693]
+Trace:
+RegistrationsController::_setReportCommonData() - APP/Controller/RegistrationsController.php, line 693
+RegistrationsController::expertises_prices() - APP/Controller/RegistrationsController.php, line 571
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 191
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 165
+[main] - APP/webroot/index.php, line 108
+
+2019-03-31 23:12:35 Notice: Notice (8): Undefined index: conclusion_date in [/var/www/test/app/View/Registrations/ban_doc.ctp, line 23]
+Trace:
+include - APP/View/Registrations/ban_doc.ctp, line 23
+View::_evaluate() - CORE/Cake/View/View.php, line 948
+View::_render() - CORE/Cake/View/View.php, line 910
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 954
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 198
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 165
+[main] - APP/webroot/index.php, line 108
+
+2019-03-31 23:12:36 Notice: Notice (8): Undefined index: conclusion_date in [/var/www/test/app/View/Registrations/ban_doc.ctp, line 23]
+Trace:
+include - APP/View/Registrations/ban_doc.ctp, line 23
+View::_evaluate() - CORE/Cake/View/View.php, line 948
+View::_render() - CORE/Cake/View/View.php, line 910
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 954
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 198
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 165
+[main] - APP/webroot/index.php, line 108
+
+2019-03-31 23:12:48 Notice: Notice (8): Undefined index: conclusion_date in [/var/www/test/app/View/Registrations/ban_doc.ctp, line 23]
+Trace:
+include - APP/View/Registrations/ban_doc.ctp, line 23
+View::_evaluate() - CORE/Cake/View/View.php, line 948
+View::_render() - CORE/Cake/View/View.php, line 910
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 954
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 198
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 165
+[main] - APP/webroot/index.php, line 108
+

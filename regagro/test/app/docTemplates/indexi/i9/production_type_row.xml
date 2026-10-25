@@ -1,0 +1,57 @@
+<w:tr w:rsidR="007043CF" w:rsidTr="008B12B6">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="3085"/>
+									<w:vMerge w:val="restart"/>
+								</w:tcPr>
+								<w:p w:rsidP="003C1C65" w:rsidR="007043CF" w:rsidRDefault="008B12B6" w:rsidRPr="008B12B6">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_type_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="2693"/>
+								</w:tcPr>
+								<w:p w:rsidP="003C1C65" w:rsidR="007043CF" w:rsidRDefault="008B12B6" w:rsidRPr="008B12B6">
+									<w:pPr>
+										<w:jc w:val="both"/>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${production_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:type="dxa" w:w="1843"/>
+								</w:tcPr>
+								<w:p w:rsidP="008B12B6" w:rsidR="007043CF" w:rsidRDefault="008B12B6">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:rPr>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${weight}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>

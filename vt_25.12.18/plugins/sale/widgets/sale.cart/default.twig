@@ -1,0 +1,213 @@
+{% if widget.param('cart_is_empty') %}
+
+	<div class="row column">
+		{{ widget.widgetTitle|raw }}
+		<div class="callout secondary">
+			<p>{{ _('Ваша корзина пуста') }}</p>
+		</div>
+		{% if widget.param('catalog_url') %}		
+        <p><a href="{{ widget.param('catalog_url') }}" title="{{ _('В каталог') }}">{{ _('Вернуться в каталог') }}</a></p>
+		{% endif %}		
+	</div>
+
+{% else %}
+
+<div id="{{ widget.uniqueId }}">
+
+	{{ widget.widgetTitle|raw }}
+	
+	{% for c in widget.cart.getProducts() %}
+    <div class="row" id="x-cart-item-{{ c.id }}">
+      <div class="small-8 medium-2 column"><img src="/imagetransform/width_200_height_200_fit_2{{ c.product.pic }}" alt="{{ c.product.name }}" class="product-tile-thumbnail"></div>
+      <div class="small-3 small-offset-1 medium-offset-0 medium-2 medium-push-8 column">
+        <div class="row">
+          <div class="small-12 medium-6 medium-push-6 column text-center">
+            <p><a href="#" title="Удалить" class="x-delete" data-id="{{ c.id }}"><img src="/plugins/sale/images/delete-circle.svg" style="width: 28px;"></a></p>
+            <p class="hide-for-medium">&#160;</p>
+          </div>
+          <div class="small-12 medium-6 medium-pull-6 column text-center"></div>
+        </div>
+      </div>
+      <div class="small-12 medium-5 large-3 medium-pull-2 column">
+        <p><a href="{{ c.product.url }}">{{ c.product.name }}{% if c.offer %}, {{ c.offer.name }}{% endif %}</a><br></p>
+		{% if c.options %}
+			{% for o in c.options %}
+			<div class="row column">
+				<label>{{ o.name }}</label>
+				<input class="x-cart-option" data-id="{{ c.id }}" type="text" name="{{ o.name }}" value="{{ o.value }}">
+			</div>
+			{% endfor %}
+		{% endif %}
+      </div>
+      <div class="small-12 medium-3 large-5 medium-pull-2 column">
+        <div class="row">
+          <div class="small-12 medium-12 large-4 column">
+            <p>
+			{% if c.offer %}
+				<span class="x-price">{{ c.offer.displayDiscountPrice|raw }}</span>
+				{% if c.offer.discount > 0 %}<span class="text-dark-gray"><del style="white-space: nowrap">{{ c.offer.displayFullPrice|raw }}</del></span>{% endif %}			
+			{% else %}
+				<span class="x-price">{{ c.product.displayDiscountPrice|raw }}</span>
+				{% if c.product.discount > 0 %}<span class="text-dark-gray"><del style="white-space: nowrap">{{ c.product.displayFullPrice|raw }}</del></span>{% endif %}		
+			{% endif %}
+			</p>
+          </div>
+          <div class="small-6 medium-12 large-4 column">
+            <div class="row">
+              <div class="small-12 medium-11 large-12 column">
+                <div class="input-group">
+                  <div class="input-group-button">
+                    <button class="button x-less" data-id="{{ c.id }}">–</button>
+                  </div>
+                  <input type="text" value="{{ c.quantity }}" data-backup="{{ c.quantity }}" data-id="{{ c.id }}" class="input-group-field x-quantity" data-product-id="{{ c.product.id }}" {% if c.offer %}data-offer-id="{{ c.offer.id }}"{% endif %}>
+                  <div class="input-group-button">
+                    <button class="button x-more" data-id="{{ c.id }}">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-6 medium-12 large-4 column">
+            <p class="lead no-wrap x-sum">{{ c.displaySum|raw }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="column hide-for-large"><br class="hide-for-large">
+        <hr><br><br class="hide-for-medium">
+      </div>
+    </div> 
+	{% endfor %}
+    <div class="row">
+      <div class="column show-for-medium"><br></div>
+      <div class="column small-12 medium-6 large-4">
+        <table>
+          <tr>
+            <td class="text-dark-gray">{{ _('Количество товаров') }}:</td>
+            <td class="x-total-quantity">{{ widget.cart.getProductsCount() }} шт.</td>
+          </tr>
+        </table><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column small-12 medium-6 large-4 medium-offset-6 large-offset-8 text-center">
+        <p class="lead">СУММА: &#160;<span class="stat x-total-sum">{{ widget.cart.getDisplayTotal()|raw }}</span></p>
+        <p><a href="{{ widget.param('order_url') }}" title="" class="button expanded">{{ _('Оформить заказ') }}</a></p>
+      </div>
+    </div>	
+
+</div>	
+	
+{% set script %}
+		document.addEventListener('DOMContentLoaded', function () {
+
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-more");
+			for (var i = 0; i  < c.length; i++) 
+				c[i].addEventListener("click", function(){	
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';		
+					var v = parseInt(document.querySelector(itemId + ".x-quantity").value);
+					if (isNaN(v)) v = 0;
+					v = v+1;
+					if (v<1) v = 1;	
+					{{ widget.uniqueId }}_change(id,v);
+				});
+			
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-less");
+			for (var i = 0; i  < c.length; i++) 			
+				c[i].addEventListener("click", function(){	
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					var v = parseInt(document.querySelector(itemId + ".x-quantity").value);
+					if (isNaN(v)) v = 0;
+					v = v-1;
+					if (v<1) v = 1;				
+					{{ widget.uniqueId }}_change(id,v);
+				});	
+
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-quantity");
+			for (var i = 0; i  < c.length; i++) 			
+				c[i].addEventListener("blur", function(){	
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					var v = parseInt(document.querySelector(itemId + ".x-quantity").value);
+					if (isNaN(v)) v = 1;	
+					if (v<1) v = 1;	
+					{{ widget.uniqueId }}_change(id,v);
+				});	
+
+			var c = document.querySelectorAll("#{{ widget.uniqueId }} .x-delete");
+			for (var i = 0; i  < c.length; i++) 			
+				c[i].addEventListener("click", function(e){	
+					var id = this.getAttribute('data-id');
+					var itemId = '#x-cart-item-' + id + ' ';
+					{{ widget.uniqueId }}_change(id,0);
+					e.preventDefault?e.preventDefault():(e.returnValue=false);
+				});	
+
+			$("#{{ widget.uniqueId }} .x-cart-option").on('change', function(){
+				
+				jQuery.ajax({
+					url : '/plugins/sale/ajax.php',
+					data: {
+						action: 'set_cart_option',
+						id    : $(this).attr('data-id'),
+						option_name: $(this).attr('name'),
+						option_value: $(this).val()
+					},
+					dataType: 'json',
+					success: function (data) {                                
+
+					},
+					error: function (xhr) {
+						
+					}
+					
+				});	
+		
+			});			
+		
+		});
+		
+		function {{ widget.uniqueId }}_change(id,v)
+		{
+			var itemId = '#x-cart-item-' + id + ' ';
+			var q = document.querySelector(itemId + ".x-quantity");
+					
+			q.value = v;
+			var s = document.querySelector(itemId + ".x-sum");
+			var sum = document.querySelector("#{{ widget.uniqueId }} .x-total-sum");
+			var sum_backup = sum.innerHTML;
+			sum.innerHTML = '{{ _('Подождите...') }}';
+			var s_backup = s.innerHTML;
+			s.innerHTML = '{{ _('Подождите...') }}';
+			
+			jQuery.ajax({
+				url : '/plugins/sale/ajax.php?action=set_cart_quantity&id='+id+'&quantity='+v,
+				dataType: 'json',
+				success: function(data) {
+					jQuery(document).trigger( 'cetera.sale.basket.add', [ data ] );	
+					sum.innerHTML = data.total_sum;
+					s.innerHTML = data.sum;
+					document.querySelector("#{{ widget.uniqueId }} .x-total-quantity").innerHTML = data.count + ' {{ _('шт.') }}';
+					if (v == 0)
+					{
+						var row = document.querySelector(itemId);
+						if (row) row.parentNode.removeChild(row);											
+					}					
+				},
+				error: function(data) {
+					jQuery(itemId + ".x-quantity").val( jQuery(itemId + ".x-quantity").attr('data-backup') );
+					sum.innerHTML = sum_backup;
+					s.innerHTML = s_backup;
+					var o = jQuery.parseJSON(data.responseText);
+					if (o.message) alert(o.message);
+				}
+			});
+						
+		}
+		
+
+{% endset %}
+{% do widget.application.addHeadString( "<script>#{script}</script>" ) %}	
+
+{% endif %}

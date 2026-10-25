@@ -1,0 +1,17 @@
+{% extends layout %}
+
+{% block title %}{{ _('Поиск') }}{% endblock %}
+
+{% block main %}
+<style>
+.large-centered { padding-left: 0px; padding-right: 0px; }
+.pagination { text-align: center; }
+@media (min-width: 1280px) {
+	.large-16.columns.large-centered+.row { margin: 0 10px; }
+}
+</style>
+<div class="row column">
+        {% widget 'VjcSearch' with { morphology: 1, min_length: 2, fields:'code, name, text, short', type: [products_type,1,15,16,12,17,13]} %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,266 @@
+<modification>
+    <name>NeoSeo Product Link</name>
+    <version>10</version>
+    <author>Alexander Sorokin</author>
+    <code>neoseo-product-link</code>
+    <link>http://neoseo.com.ua/neoseo-product-link</link>
+
+    <file path="admin/controller/catalog/product.php">
+        <operation>
+            <search><![CDATA[if (isset($this->request->post['product_description'])) {]]></search>
+            <add position="before"><![CDATA[
+                if( isset( $this->request->get['product_id'] ) ) {
+                    $data['product_id'] = $this->request->get['product_id'];
+                } else {
+                    $data['product_id'] = "";
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/catalog/product_form.tpl">
+        <operation>
+            <search><![CDATA[<button type="submit"]]></search>
+            <add position="before"><![CDATA[
+                <?php if( $product_id ) { ?>
+                <a href="<?php echo HTTP_CATALOG; ?>index.php?route=product/product&product_id=<?php echo $product_id; ?>" target="_new" data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к товару на витрине"><i class="fa fa-eye"></i></a>
+                <?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/catalog/product_list.tpl">
+        <operation>
+            <search><![CDATA[<a href="<?php echo $product['edit']; ?>"]]></search>
+            <add position="replace"><![CDATA[
+                <a href="<?php echo HTTP_CATALOG; ?>index.php?route=product/product&product_id=<?php echo $product['product_id']; ?>" target="_new" data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к товару на витрине"><i class="fa fa-eye"></i></a>
+                <a href="<?php echo $product['edit']; ?>"]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[$data['header'] = ]]></search>
+            <add position="after"><![CDATA[
+            /* NeoSeo Product Link - begin */
+            $this->user = new User($this->registry);
+            if ( $this->user->isLogged() ) {
+                $data['edit_link'] = '/admin/index.php?route=catalog/product/edit&token=' . $this->session->data['token'] . '&product_id=' . $product_id;
+            }
+            /* NeoSeo Product Link - end */
+            ]]></add>
+        </operation>
+    </file>
+
+
+    <file path="catalog/view/theme/*/template/product/product.tpl">
+        <operation>
+            <search><![CDATA[<?php echo $header; ?>]]></search>
+            <add position="after"><![CDATA[
+<!-- NeoSeo Product Link - begin -->
+<?php if (isset( $edit_link ) ) { ?>
+<script>
+    $(document).ready(function(){
+        $("h1").after('<div class="edit"><a target="_blank" href="<?php echo $edit_link; ?>">Редактировать ( видит только админ )</a></div>');
+    });
+</script>
+<?php } ?>
+<!-- NeoSeo Product Link - end -->
+                    ]]></add>
+        </operation>
+    </file>
+
+
+    <file path="admin/controller/catalog/category.php">
+        <operation>
+            <search><![CDATA[if (!isset($this->request->get['category_id'])) {]]></search>
+            <add position="before"><![CDATA[
+                if( isset( $this->request->get['category_id'] ) ) {
+                    $data['category_id'] = $this->request->get['category_id'];
+                } else {
+                    $data['category_id'] = "";
+                }
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/catalog/category_form.tpl">
+        <operation>
+            <search><![CDATA[<button type="submit"]]></search>
+            <add position="before"><![CDATA[
+                <?php if( $category_id ) { ?>
+                <a href="<?php echo HTTP_CATALOG; ?>index.php?route=product/category&path=<?php echo $category_id; ?>" target="_new"  data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к категории на витрине"><i class="fa fa-eye"></i></a>
+                <?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+ 
+    <file path="admin/view/template/catalog/category_list.tpl">
+        <operation>
+            <search><![CDATA[<a href="<?php echo $category['edit']; ?>"]]></search>
+            <add position="replace"><![CDATA[
+                <a href="<?php echo HTTP_CATALOG; ?>index.php?route=product/category&path=<?php echo $category['category_id']; ?>" target="_new" data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к товару на витрине"><i class="fa fa-eye"></i></a>
+                <a href="<?php echo $category['edit']; ?>"]]></add>
+        </operation>
+    </file>
+ 
+    <file path="catalog/controller/product/category.php">
+        <operation>
+            <search><![CDATA[$this->model_catalog_category->getCategory($category_id);]]></search>
+            <add position="after"><![CDATA[
+                /* NeoSeo Product Link - begin */
+                $this->user = new User($this->registry);
+                if ( $this->user->isLogged() ) {
+                    $data['edit_link'] = '/admin/index.php?route=catalog/category/edit&token=' . $this->session->data['token'] . '&category_id=' . $category_id;
+                }
+                /* NeoSeo Product Link - end */
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/product/category.tpl">
+        <operation>
+            <search><![CDATA[<?php echo $header; ?>]]></search>
+            <add position="after"><![CDATA[
+<!-- NeoSeo Product Link - begin -->
+<?php if (isset( $edit_link ) ) { ?>
+<script>
+    $(document).ready(function(){
+        $("h1").after('<div class="edit"><a target="_blank" href="<?php echo $edit_link; ?>">Редактировать ( видит только админ )</a></div>');
+    });
+</script>
+<?php } ?>
+<!-- NeoSeo Product Link - end -->
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/controller/catalog/manufacturer.php">
+        <operation>
+            <search><![CDATA[if (!isset($this->request->get['manufacturer_id'])) {]]></search>
+            <add position="before"><![CDATA[
+                if( isset( $this->request->get['manufacturer_id'] ) ) {
+                    $data['manufacturer_id'] = $this->request->get['manufacturer_id'];
+                } else {
+                    $data['manufacturer_id'] = "";
+                }
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/catalog/manufacturer_form.tpl">
+        <operation>
+            <search><![CDATA[<button type="submit"]]></search>
+            <add position="before"><![CDATA[
+                <?php if( $manufacturer_id ) { ?>
+                <a href="<?php echo HTTP_CATALOG; ?>index.php?route=product/manufacturer&manufacturer_id=<?php echo $manufacturer_id; ?>" target="_new" data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к производителю на витрине"><i class="fa fa-eye"></i></a>
+                <?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/catalog/manufacturer_list.tpl">
+        <operation>
+            <search><![CDATA[<a href="<?php echo $manufacturer['edit']; ?>"]]></search>
+            <add position="replace"><![CDATA[
+                <a href="<?php echo HTTP_CATALOG; ?>index.php?route=product/manufacturer&manufacturer_id=<?php echo $manufacturer['manufacturer_id']; ?>" target="_new" data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к товару на витрине"><i class="fa fa-eye"></i></a>
+                <a href="<?php echo $manufacturer['edit']; ?>"]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/manufacturer.php">
+        <operation>
+            <search><![CDATA[$this->model_catalog_manufacturer->getManufacturer($manufacturer_id);]]></search>
+            <add position="after"><![CDATA[
+                /* NeoSeo Product Link - begin */
+                $this->user = new User($this->registry);
+                if ( $this->user->isLogged() ) {
+                    $data['edit_link'] = '/admin/index.php?route=catalog/manufacturer/edit&token=' . $this->session->data['token'] . '&manufacturer_id=' . $manufacturer_id;
+                }
+                /* NeoSeo Product Link - end */
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/product/manufacturer_info.tpl">
+        <operation>
+            <search><![CDATA[<?php echo $header; ?>]]></search>
+            <add position="after"><![CDATA[
+<!-- NeoSeo Product Link - begin -->
+<?php if (isset( $edit_link ) ) { ?>
+<script>
+    $(document).ready(function(){
+        $("h1").after('<div class="edit"><a target="_blank" href="<?php echo $edit_link; ?>">Редактировать ( видит только админ )</a></div>');
+    });
+</script>
+<?php } ?>
+<!-- NeoSeo Product Link - end -->
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/controller/catalog/information.php">
+        <operation>
+            <search><![CDATA[if (!isset($this->request->get['information_id'])) {]]></search>
+            <add position="before"><![CDATA[
+                if( isset( $this->request->get['information_id'] ) ) {
+                    $data['information_id'] = $this->request->get['information_id'];
+                } else {
+                    $data['information_id'] = "";
+                }
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/catalog/information_form.tpl">
+        <operation>
+            <search><![CDATA[<button type="submit"]]></search>
+            <add position="before"><![CDATA[
+                <?php if( $information_id ) { ?>
+                <a href="<?php echo HTTP_CATALOG;?>index.php?route=information/information&information_id=<?php echo $information_id; ?>" target="_new"  data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к информации на витрине"><i class="fa fa-eye"></i></a>
+                <?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/catalog/information_list.tpl">
+        <operation>
+            <search><![CDATA[<a href="<?php echo $information['edit']; ?>"]]></search>
+            <add position="replace"><![CDATA[
+                <a href="<?php echo HTTP_CATALOG; ?>index.php?route=information/information&information_id=<?php echo $information['information_id']; ?>" target="_new" data-toggle="tooltip" title="" class="btn btn-success" data-original-title="Перейти к товару на витрине"><i class="fa fa-eye"></i></a>
+                <a href="<?php echo $information['edit']; ?>"]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/information/information.php">
+        <operation>
+            <search><![CDATA[$this->model_catalog_information->getInformation($information_id);]]></search>
+            <add position="after"><![CDATA[
+                /* NeoSeo Product Link - begin */
+                $this->user = new User($this->registry);
+                if ( $this->user->isLogged() ) {
+                    $data['edit_link'] = '/admin/index.php?route=catalog/information/edit&token=' . $this->session->data['token'] . '&information_id=' . $information_id;
+                }
+                /* NeoSeo Product Link - end */
+                    ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/information/information.tpl">
+        <operation>
+            <search><![CDATA[<?php echo $header; ?>]]></search>
+            <add position="after"><![CDATA[
+<!-- NeoSeo Product Link - begin -->
+<?php if (isset( $edit_link ) ) { ?>
+<script>
+    $(document).ready(function(){
+        $("h1").after('<div class="edit"><a target="_blank" href="<?php echo $edit_link; ?>">Редактировать ( видит только админ )</a></div>');
+    });
+</script>
+<?php } ?>
+<!-- NeoSeo Product Link - end -->
+                    ]]></add>
+        </operation>
+    </file>
+
+</modification>

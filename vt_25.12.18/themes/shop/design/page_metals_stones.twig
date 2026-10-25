@@ -1,0 +1,23 @@
+{% extends layout %}
+{% block main %}
+<style>
+@media (min-width: 900px) {
+	.text-center>.columns {
+		padding-left: 0px !important;
+		padding-right: 20px !important;
+	}
+}
+@media (max-width: 1280px) {
+  .text-about {
+    padding: 0 10px !important;
+  }
+}
+</style>
+  <div class="row">
+    <div class='column small-24 medium-18 large-16 medium-centered' style="padding: 0px;">
+      <div class='text-about'>
+      {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'metals_stones_list.twig', catalog: 488} %}
+      </div>
+    </div>
+</div>
+{% endblock %}

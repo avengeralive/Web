@@ -1,0 +1,47 @@
+
+{% block html %}
+{% if widget.getMaterial %}
+
+		<div class="row">
+			<div class="large-16 large-centered columns">
+				<h4 class="individual">{{ widget.material.name|raw }}</h4>
+			</div>
+		</div>
+
+		<div class="row">
+			{% if widget.material.slider|length %}
+			<div class="columns">
+				<div class="princess">
+				{% if widget.material.video != '' %}
+					<div>
+						<iframe width="100%" height="850" class="yt-player" src="https://www.youtube.com/embed/{{ widget.material.video }}?controls=1&rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				{% endif %}
+				{% for slider in widget.material.slider %}
+					<div>
+						<img alt="" src="{{slider.file}}" />
+					</div>
+				{% endfor %}
+				</div>
+			</div>
+			{% endif %}
+
+			<div class="large-16 large-centered columns celebrity">
+			{{widget.material.text|raw}}
+			</div>
+		</div>
+
+			{% if widget.material.products|length %}
+
+			{% set prods = [] %}
+			{% for m in widget.material.products  %}
+			{% set prods = prods|merge({(m.name):(product_catalog.getMaterialById(m.name))}) %}
+			{% endfor %}
+			{% block products %}
+			{% widget 'Sale.Goods.List' with {template: 'stars_collection_goods_list.twig', products_list: prods} %}
+			{% endblock %}
+		{% endif %}
+
+		{# товары #}
+{% endif %}
+{% endblock %}

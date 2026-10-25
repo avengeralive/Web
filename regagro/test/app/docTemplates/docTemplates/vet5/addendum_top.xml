@@ -1,0 +1,190 @@
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:w="0" w:type="auto"/>
+							<w:tblBorders>
+								<w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+								<w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+								<w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+								<w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+								<w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+								<w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+							</w:tblBorders>
+							<w:tblLayout w:type="fixed"/>
+							<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="4503"/>
+							<w:gridCol w:w="1417"/>
+							<w:gridCol w:w="1559"/>
+							<w:gridCol w:w="567"/>
+							<w:gridCol w:w="1525"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="008A7FF5" w:rsidTr="008A7FF5">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="4503" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="5068" w:type="dxa"/>
+									<w:gridSpan w:val="4"/>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRPr="002032A5" w:rsidRDefault="008A7FF5" w:rsidP="002032A5">
+									<w:pPr>
+										<w:rPr>
+											<w:b/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+									</w:pPr>
+									<w:r w:rsidRPr="008A7FF5">
+										<w:rPr>
+											<w:b/>
+										</w:rPr>
+										<w:t xml:space="preserve">Приложение </w:t>
+									</w:r>
+									<w:r w:rsidR="002032A5">
+										<w:rPr>
+											<w:b/>
+											<w:lang w:val="en-US"/>
+										</w:rPr>
+										<w:t>${addendum_num}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						<w:tr w:rsidR="008A7FF5" w:rsidTr="008A7FF5">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="4503" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="5068" w:type="dxa"/>
+									<w:gridSpan w:val="4"/>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5">
+									<w:r>
+										<w:t>к пояснительной записке отчета № 5-вет</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						<w:tr w:rsidR="008A7FF5" w:rsidTr="008A7FF5">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="4503" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="5068" w:type="dxa"/>
+									<w:gridSpan w:val="4"/>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5">
+									<w:r>
+										<w:t>${org_type}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						<w:tr w:rsidR="008A7FF5" w:rsidTr="008A7FF5">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="4503" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRDefault="008A7FF5" w:rsidP="008A7FF5"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="5068" w:type="dxa"/>
+									<w:gridSpan w:val="4"/>
+									<w:tcBorders>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="008A7FF5" w:rsidRPr="00223A54" w:rsidRDefault="00223A54" w:rsidP="00223A54">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00CE75AB">
+										<w:t>${org_name}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						<w:tr w:rsidR="00223A54" w:rsidTr="008A7FF5">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="4503" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00223A54" w:rsidRDefault="00223A54" w:rsidP="008A7FF5"/>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1417" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="00223A54" w:rsidRDefault="00223A54" w:rsidP="008A7FF5">
+									<w:r>
+										<w:t>за период с</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1559" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="00223A54" w:rsidRPr="00CE75AB" w:rsidRDefault="00223A54" w:rsidP="00BC3BB0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00CE75AB">
+										<w:t>${date_from}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="567" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="00223A54" w:rsidRDefault="00223A54" w:rsidP="00BC3BB0">
+									<w:r>
+										<w:t>по</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1525" w:type="dxa"/>
+									<w:tcBorders>
+										<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+										<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+									</w:tcBorders>
+								</w:tcPr>
+								<w:p w:rsidR="00223A54" w:rsidRPr="00CE75AB" w:rsidRDefault="00223A54" w:rsidP="00BC3BB0">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r w:rsidRPr="00CE75AB">
+										<w:t>${date_to}</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+					</w:tbl>
+					<w:p w:rsidR="00442848" w:rsidRDefault="00442848" w:rsidP="008A7FF5"/>

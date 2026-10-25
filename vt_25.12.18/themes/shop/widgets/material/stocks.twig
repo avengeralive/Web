@@ -1,0 +1,22 @@
+{% include "@widget/_common/favorite.twig" %}
+
+{% block html %}
+  <div class="row stocks">
+  {% for m in widget.children %}
+      <div class="columns news">
+        <div class="date">
+          {{ m.dat|date('d.m.Y') }}
+        </div>
+        <div class="content">
+          {{ m.name}}<br>{{ m.short|raw }}
+        </div>
+        <div data-equalizer-watch>
+          <p></p>
+          <p></p>
+        </div>
+        <a class="news__more" href="{{ m.url}}">Подробнее</a>
+      </div>
+     {% endfor %}
+  </div>
+  	
+{% endblock %}

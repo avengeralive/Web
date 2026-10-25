@@ -1,0 +1,70 @@
+<?php
+include_once('common.php');
+$app = \Cetera\Application::getInstance();
+$app->connectDb();
+$app->initSession();
+
+$width = 150;                  //Ширина изображения
+$height = 60;                  //Высота изображения
+$font_size = 17.5;   			//Размер шрифта
+$let_amount = 6;               //Количество символов, которые нужно набрать
+$fon_let_amount = 30;          //Количество символов, которые находятся на фоне
+$path_fonts = 'fonts/';        //Путь к шрифтам
+$cod = array();
+
+$letters = array('a','b','c','d','e','f','g','h','j','k','m','n','p','q','r','s','t','u','v','w','x','y','z','2','3','4','5','6','7','9');
+$colors = array('10','30','50','70','90','110','130','150','170','190','210');
+
+$src = imagecreatetruecolor($width,$height);
+$fon = imagecolorallocate($src,239,236,235);
+imagefill($src,0,0,$fon);
+
+$fonts = array();
+chdir(dirname(__FILE__));
+$dir=opendir( $path_fonts);
+
+while($fontName = readdir($dir))
+{
+    if($fontName != "." && $fontName != "..")
+    {
+        $fonts[] = $fontName;
+    }
+}
+closedir($dir);
+
+for($i=0;$i<$fon_let_amount;$i++)
+{
+    $color = imagecolorallocatealpha($src,255,255,255,100);
+    $font = $path_fonts.$fonts[rand(0,sizeof($fonts)-1)];
+    $letter = $letters[rand(0,sizeof($letters)-1)];
+    $size = rand($font_size-2,$font_size+2);
+
+    imagettftext($src,$size,rand(0,45),rand($width*0.1,$width-$width*0.1),rand($height*0.2,$height),$color,$font,$letter);
+}
+
+for($i=0;$i<$let_amount;$i++)
+{
+    $color = imagecolorallocatealpha($src,86,72,58,0);
+    $font = $path_fonts.$fonts[rand(0,sizeof($fonts)-1)];
+    $letter = $letters[rand(0,sizeof($letters)-1)];
+    $size = rand($font_size*2.1-2,$font_size*2.1+2);
+    $x = ($i)*$font_size + rand(4,7);
+    if ($i==0) $x=0; 
+    $y = (($height*2)/3) + rand(0,5);
+    $cod[] = $letter;
+    imagettftext($src,$size,rand(0,15),$x,$y,$color,$font,$letter);
+}
+
+$app->getSession()->{'captcha_code_' . $_REQUEST['f']} = implode('',$cod);
+$_SESSION['captcha'] = implode('',$cod);
+unlink('/home/velvetin/velvetin.ru/docs/plugins/forms/captcha_data/'.$_SERVER['REMOTE_ADDR'].'.txt');
+file_put_contents('/home/velvetin/velvetin.ru/docs/plugins/forms/captcha_data/'.$_SERVER['REMOTE_ADDR'].'.txt', implode('',$cod));
+
+
+header('Last-Modified: '. gmdate('D, d M Y H:i:s', time()) . ' GMT');
+header('Expires: '. gmdate('D, d M Y H:i:s', time()) . ' GMT');
+header("Cache-Control: no-cache, must-revalidate");
+header("Pragma: no-cache");
+header ("Content-type: image/gif");
+imagegif($src);
+?>

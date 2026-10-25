@@ -1,0 +1,43 @@
+{% if widget.error404 %}
+
+	{% if widget.getParam('page404_template') %}
+		{% include widget.getParam('page404_template') %}
+	{% else %}
+		<div class="content">
+			{% include "@widget/_common/page404.twig" %}
+		</div>
+	{% endif %}	
+
+{% elseif widget.material %}
+
+	{% widget 'Material' with {
+		catalog:       widget.catalog.id, 
+		template:      'stars_material.twig', 
+		material_id:   widget.material.id,
+		share_buttons: widget.getParam('material_share_buttons'),
+		show_pic:      widget.getParam('material_show_pic'),
+		show_meta:     widget.getParam('show_meta')
+	} %}	
+
+{% else %}
+	<div class="row columns">
+      <p class="bow"><strong>{{ widget.catalog.name }}</strong></p>
+    </div>
+<div class="row large-up-3 medium-up-3 small-up-2">
+
+	{% widget 'List' with { 
+		catalog:   widget.catalog.id, 
+		template:  'stars_list.twig', 
+		where:     widget.getParam('list_where'), 
+		page:      widget.getParam('list_page'), 
+		page_param:widget.getParam('list_page_param'), 
+		limit:     widget.getParam('list_limit'), 
+		order:     widget.getParam('list_order'), 
+		sort:      widget.getParam('list_sort'), 
+		paginator: widget.getParam('list_paginator'),
+		css_class: widget.getParam('list_css_class'), 		
+		paginator_template:  widget.getParam('paginator_template')
+	} %}
+	
+</div> 	
+{% endif %}

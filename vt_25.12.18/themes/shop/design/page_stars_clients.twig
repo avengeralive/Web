@@ -1,0 +1,21 @@
+{% extends layout %}
+
+{% block main %}
+<style>footer { padding-top: 60px !important; }</style>
+<div class="row">
+
+    <div class="large-16 columns large-centered">
+        <h5 class="individual" style="margin-bottom: 0px !important;">{{catalog.name}}</h5>
+    </div>
+    <div class="columns">
+  <hr class="individual-hr">
+</div>
+  </div>  
+
+    <div class='row'>
+      <div class="large-19 columns large-centered text-center sclients">
+        {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'stars_clients_list.twig', catalog: 498} %}
+      </div>
+    </div>
+
+{% endblock %}

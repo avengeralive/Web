@@ -1,0 +1,14 @@
+{
+    "version": "0.72",
+    "cms_version_min": "3.36.4",
+    "title": "E-commerce",
+	"title_ru": "Торговля",
+    "description": "",
+    "author": "<a href='http://www.cetera.ru'>Roman Romanov</a>",
+    "requires": [
+        {
+			"plugin": "gallery",
+			"version": "2.1"
+        }
+    ]
+}

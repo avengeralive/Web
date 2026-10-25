@@ -1,0 +1,328 @@
+@font-face{
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSansRegular/OpenSans-Regular.ttf');
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: 'ns-icons';
+  src: url('../fonts/nsicons/nsicons.eot');
+  src: url('../fonts/nsicons/nsicons.svg');
+  src: url('../fonts/nsicons/nsicons.ttf');
+  src: url('../fonts/nsicons/nsicons.woff');
+}
+
+[class^="ns-"], [class*=" ns-"] {
+  font-size: 16px;
+  font-family: 'ns-icons';
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ns-arrow-right:before {
+  font-weight: bold;
+  content: "\e900";
+}
+
+.ns-mouse:before {
+  content: "\e901";
+}
+
+
+.ns-kyivstar:before {
+  font-weight: bold;
+  content: "\e902";
+  color: #126dff;
+}
+
+.ns-lifecell:before {
+  font-weight: bold;
+  content: "\e903";
+  color: #ffd600;
+}
+
+.ns-vodafone:before {
+  font-weight: bold;
+  content: "\e904";
+  color: #eb2d21;
+}
+
+.ns-cityphone:before {
+  font-weight: bold;
+  content: "\e905";
+  color: #3c3c3c;
+}
+
+.ns-headphones:before {
+  font-weight: bold;
+  content: "\e906";
+}
+
+///////////////////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext');
+
+$f-roboto: 'Roboto', sans-serif;
+$f-open: 'Open Sans', sans-serif;
+
+$type: flat; //  flat , gradient , 3d  //  -> style
+// VARS
+// Start variables SET
+
+// Параметры
+// colors
+$body-color: #474849;         // main body color
+$body-background-color: #f5f5f5; // main body bg-color
+$main-shadow-background-color: #e0928d; // Shadow BG-color
+$added-background-color: #c46662;      // Added BGColor
+$added-shadow-background-color: #5080a6; // Added Shadow BGColor
+$header-color: #444;        // H1-H6 color
+$a-color: #66ba33;      // link colors
+$a-hover-color: #66ba33;
+$required-color: #c00;  // required *  color
+$checkbox-color: #4484f4;  // checkbox/radio color
+$gradient-bottom-color:#ccc; //  color
+$outside-text-color: #07f072;
+$product_thumb_icon_color:#c92161;
+$background_image: '';
+$top-personal-area: #ececec;
+
+/*-- Module settings START --*/
+
+// Заголовок модуля
+$module-title-color: #000000;
+
+// Фон модуля
+$module-background-color: #ffffff;
+
+// Цвет border'а модуля
+$module-border-color: #66ba33;
+
+// Прозрачность фона модуля
+$module-background-opacity: 0.95;
+
+//Цвет заголовков ( h1-h6, служебная информация и т.д. )
+$title-color: #000000;
+
+//Цвет текста ( применяется ко всему тексту )
+$text-color: #595959;
+
+//Цвет кнопок ( кнопка купить, кнопка поиска )
+$button-color: #66ba33;
+//Цвет кнопок при наведении ( кнопка купить, кнопка поиска )
+$button-color-hover: #5aa62e;
+//Цвет текста кнопки ( кнопка купить, кнопка поиска )
+$button-color-text: #ffffff;
+//Цвет текста кнопки при наведении ( кнопка купить, кнопка поиска )
+$button-color-text-hover: #ffffff;
+/*-- Module settings END --*/
+
+/*--------- Product Tabs ----------*/
+
+
+//Цвет таба
+$tab-color: #ffffff;
+
+//Цвет текста таба
+$tab-text-color: #66ba33;
+
+// Цвет активного таба
+$tab-color-active: #66ba33;
+
+//Цвет текста активного таба
+$tab-text-color-active: #ffffff;
+
+// Цвет неактивного таба при наведении
+$tab-color-hover: #66ba33;
+
+// Цвет текста неактивного таба при наведении
+$tab-text-color-hover: #ffffff;
+
+/*--------------------------------*/
+//icons
+$sticky-icon-color: #000000;
+$header-icon-color: #66ba33;
+// fonts
+$body-font: Helvetica, sans-serif; // main Font
+$body-font-size: 14px;      // main Body - fontSize
+$h1-font-size: 32px;        // H! font-size
+$h2-font-size: 27px;
+$h3-font-size: 21px;
+$h4-font-size: 18px;
+$h5-font-size: 16px;
+$h6-font-size: 15px;
+$input-text-font-size: 13px;// input, select, textarea font-size
+
+// Шапка
+// верхний баннер
+$top_banner_height: 115px;
+$top-banner-color: #ffffff;
+// header
+$top-header-height: 115px;
+$top-header-text-color: #000;
+
+// верхнее меню
+$top-menu-background-color: #2b292b;    // Top BGColor
+$top-menu-border-color: #41c957;       // Top Border-Bottom-Color
+$top-menu-height: 50px;
+$top-menu-color: #999999;
+$top-menu-hover-color: #66ba33;
+$top-menu-font-size: 14px;
+
+//ВАЛЮТА
+$currency-background: #000000;// фон валюты +
+
+$currency-hover-background: #ef532b;// фон валюты при наведении -
+
+$currency-color: #999999; //цвет валюты +
+
+$currency-hover-color: #ffffff; //цвет валюты при наведении -
+
+$currency-active-color: #999999; //цвет активной валюты +
+
+$currency-active-background: #66ba33; //фон активной валюты -
+
+$currency-active-hover-background: #ef532b; //фон активной валюты при наведении -
+
+$currency-active-hover-color: #ffffff; //цвет активной валюты при наведении -
+
+
+$language-active-background: #66ba33;
+
+$header_background_color: #ffffff;
+$header_background_image: '';
+
+//Липкое меню sticky_box
+$stiky-box-height: 90px;
+$sticky-box-font-color: #000000;
+$sticky_menu_background: #ffffff;
+$sticky_menu_image: '';
+
+// основное меню
+$menu_height: 52px;      // MENU Height
+$main-background-color: #66ba33;       // Main BG-color
+$menu_border_color: #66ba33;// MENU Border Color
+$menu-nav-color: #ffffff;        //  MenuNav Color
+
+$menu-nav-background-hover-color: #66ba33; // Цвет фона главного меню при наведении +
+$menu-nav-hover-color: #ffffff; //  Цвет текста главного меню при наведении +
+
+//Подменю
+$menu-sub-background-color: #ffffff; // Цвет фона подменю +
+$menu-sub-nav-color: #000000; // Цвет текста подменю -
+$menu-sub-background-hover-color: #66ba33; // Цвет фона подменю при наведении -
+$menu-sub-nav-hover-color: #ffffff; // Цвет текста подменю при наведении -
+
+
+$menu-main-font-family: 'Open Sans',Helvetica,sans-serif;
+$menu-sub-font-family: 'Open Sans',Helvetica,sans-serif;
+$menu-main-font-size: 15px;
+$menu-sub-font-size: 14px;
+$menu-main-icon-height: 34px;
+$menu-sub-icon-height: 15px;
+
+// content color
+$content-fonts-color: #fff;
+
+// хлебные крошки
+$breadcrumbs-font-size: 13px; // BreadCrumbs FSz
+$breadcrumbs-font-style: normal;
+
+// Left Vertical Menu
+$left-menu-root-font-size: 15px; // main li fsize
+$left-menu-background-color:#f0f0f0;
+$left-menu-links-color:#444;
+$left-menu-links-hover-color:#629e2c;
+
+// Tab & Stars & Order
+$tab-background-color:#4484f4; // Tab & Stars & Order BTNs BGcolor
+$tab-border-color:#2968d7;     // Tab Border-color
+
+// Mini banners Rights
+$mini-baners-number: 2;    // Cols min Banners (2 or 3)
+
+// Grid-List View
+$product-border-color: #eceeef; // цвет рамки в grid/list
+$product-grid-title: 16px; // .product-grid h4 - fontsize
+$product-title-font-weight: 400;
+$product-grid-title-text-align: center;
+$product-list-title: 18px;
+$product-list-description-size: 13px;   // List description size
+$product-list-image-width: 200px; // product-list .image Width !
+
+// OCFilter Vall SET
+$ocfilter-start-opacity: 0.25;      // OCF Start Opacity
+$ocfilter-label-font-size: 13px;     // OCF Label Font Size
+$ocfilter-optname-font-size: 14px;   // OCF OptionName FSz
+$ocfilter-optname-color: #404040;    // OCF OptionName Color
+$ocfilter-select-options-color: #777;// Selected Options Color
+$ocfilter-head-color: #444;          // OCF H3 options
+$ocfilter-head-font-size: 21px;      //
+
+// BLOG  - variables Set
+$read-more-color: #5e8ee4;        //  .read-more Color
+$read-more-hover-color: red; // .read-more:hover Color
+$entry-meta-font-size: 13px;     // .entry-meta <a> font size
+$entry-meta-a-color: #6B6B6B;    // .entry-meta a color
+$entry-meta-fa-font-size: 14px;  // .entry-meta .fa font size
+$comments-background-color: #fff;// .comment-body backgr color
+$comment-author-font-size: 13px; // .comment-author font size
+$comment-date-font-size: 12px;   // .comment-date font size
+$comment-reply-color: #5e8ee4;     //  comment link - ответить
+
+// SEARCH-MAiN Vall SET
+$search-item-price-font-size: 12px;
+$search-item-price-color: #feb701;  // Search Autocompl Price color
+$search-item-description: 12px;
+$search-footer-color: #222;             // SEARCH Footer Color
+$search-footer-background: transparent; // SEARCH Footer BGD
+$search-header: none;  // Display Search Header in Autocomplete
+
+// Product Labels
+$product-label-font-size: 14px;
+$product-label-font-weight: 600;
+$product-title-height: 32px;
+$product-thumb-icon-color: #66ba33;
+// Prices
+$product-title-color: #0c0c0c;
+$price-color: #444;       // PriceColor
+$price-new-color: #444;   // PriceNewColor
+$price-old-color: #999;   // PriceOLDColor
+$price-tax-color: #999;   // PriceTAXColor
+
+// Подвал
+// верхняя и средняя части
+$footer-main-color: #ffffff;           // Footer Aczent Color
+$footer-background-color: #404040;         // Footer BG-Color
+$footer-font-size-default: 14px;         // Footer Font Size Default
+$footer-links-color: #333;             // Footer links-Color
+$footer-links-hover-color: #ffffff;        // Footer links:hover color
+$footer-links-hover-color: #ffffff;
+// нижняя часть
+$footer-bottom-color: #ffffff;            // Footer Bottom Color
+$footer-bottom-background-color: #404040;//Footer Bottom BG-Color
+$footer-bottom-links-color: #25c;        // Footer Bottom Links Color
+$footer-bottom-links-hover-color: #fff600;// Footer Bottom a:hover Color
+//Личный кабинет
+$order-list-color: #444;
+$order-list-link-color: #5e8ee4;
+
+//Кнопка вверх
+$go-top-background: #66ba33;
+$go-top-color: #ffffff;
+$go-top-background-hover: #6dad45;
+$go-top-color-hover: #ffffff;
+
+//Пагинация
+$pagination-background: #ffffff;
+$pagination-background-hover: #6dad45;
+$pagination-color: #66ba33;
+$pagination-color-hover: #ffffff;
+$pagination-background-active: #66ba33;
+$pagination-color-active: #ffffff;
+

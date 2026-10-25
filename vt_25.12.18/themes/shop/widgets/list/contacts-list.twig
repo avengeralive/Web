@@ -1,0 +1,23 @@
+<div class="row column conts">
+  <h4 class="contacts__our-managers-title"><strong>{{widget.catalog.name}}</strong></h4>
+<div class="row">
+<div class="large-19 large-centered columns">
+
+{% for m in widget.getChildren.orderBy('tag') %}
+<div class="media-object">
+  <div class="media-object-section">
+    <div class="thumbnail"><img src="{{m.pic}}" alt="{{m.name}}" height="100" width="100"></div>
+  </div>
+  <div class="media-object-section">
+    <h4 class="media-object-section__title">{{m.name}}</h4>
+    {{m.text | raw}}
+  </div>
+</div>
+
+{% endfor %}
+
+
+
+</div>
+</div>
+</div>

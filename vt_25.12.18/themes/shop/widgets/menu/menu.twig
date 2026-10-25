@@ -1,0 +1,15 @@
+{% if widget.children|length > 0 or widget.getMaterials()|length > 0 %}
+<ul class="emerald">
+	{% for c in widget.children %}
+    <li class="emerald__item">
+    
+        <a href="{{ c.prototype.url }}" {% if c.id==4 %} style="pointer-events: none;" {% endif %} {% if c.id==492 or c.id==493 %} style="display: none;" {% endif %}class="emerald__link ">{{ c.name|raw }}</a>
+		{{ widget.showSubmenu(c)|raw }}
+
+    </li>
+    
+    {% endfor %}
+
+
+</ul>
+{% endif %}

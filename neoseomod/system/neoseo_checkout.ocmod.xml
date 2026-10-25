@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>NeoSeo Checkout</name>
+	<version>22</version>
+	<code>neoseo-checkout</code>
+	<author>Alexander Sorokin</author>
+	<link>https://neoseo.com.ua/</link>
+
+	<file path="admin/controller/common/menu.php">
+		<operation>
+			<search><![CDATA[$data['backup']]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		if( $this->user->hasPermission('access','localisation/neoseo_address') && isset($this->session->data['token']) ) {
+			$this->language->load("localisation/neoseo_address");
+			if( $this->config->get("neoseo_checkout_status") ) {
+				$data['text_address'] = $this->language->get("text_address");
+				$data['address'] = $this->url->link('localisation/neoseo_address', 'token=' . $this->session->data['token'], 'SSL');
+			}
+		}
+		if( $this->user->hasPermission('access','localisation/neoseo_city') && isset($this->session->data['token']) ) {
+			$this->language->load("localisation/neoseo_city");
+			if( $this->config->get("neoseo_checkout_status") ) {
+				$data['text_city'] = $this->language->get("text_city");
+				$data['city'] = $this->url->link('localisation/neoseo_city', 'token=' . $this->session->data['token'], 'SSL');
+			}
+		}
+		if( $this->user->hasPermission('access','sale/neoseo_dropped_cart') && isset($this->session->data['token']) ) {
+			$this->language->load("sale/neoseo_dropped_cart");
+			if( $this->config->get("neoseo_checkout_status") ) {
+				$data['text_dropped_cart'] = $this->language->get("text_dropped_cart");
+				$data['dropped_cart'] = $this->url->link('sale/neoseo_dropped_cart', 'token=' . $this->session->data['token'], 'SSL');
+			}
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/view/template/common/menu.tpl">
+		<operation>
+			<search><![CDATA[href="<?php echo $zone; ?>"><?php echo $text_zone; ?>]]></search>
+			<add position="after"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+			<?php if( isset($address) ) { ?>
+				<li><a href="<?php echo $address; ?>"><?php echo $text_address; ?></a></li>
+			<?php } ?>
+			<?php if( isset($city) ) { ?>
+				<li><a href="<?php echo $city; ?>"><?php echo $text_city; ?></a></li>
+			<?php } ?>
+			<!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>]]></search>
+			<add position="after"><![CDATA[         <!-- NeoSeo Checkout - begin -->
+			<?php if(isset($dropped_cart)) { ?><li><a href="<?php echo $dropped_cart; ?>"><?php echo $text_dropped_cart; ?></a></li><?php } ?>
+            <!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/controller/sale/customer.php">
+		<operation>
+			<search><![CDATA[
+				protected function getForm() {
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				if (isset($this->request->get['customer_id'])) {
+					$customer_id = (int)$this->request->get['customer_id'];
+				} else {
+					$customer_id = 0;
+				}
+				$data['scfields'] = $this->model_tool_neoseo_checkout->getCustomerData($customer_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/model/sale/customer.php">
+		<operation>
+			<search><![CDATA[
+				$customer_id = $this->db->getLastId();
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->updateCustomerData($customer_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				public function editCustomer($customer_id, $data) {
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->updateCustomerData($customer_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				public function deleteCustomer
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->deleteCustomerData($customer_id);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/view/template/sale/customer_form.tpl">
+		<operation>
+			<search><![CDATA[
+				<div id="htabs" class="htabs">
+			]]></search>
+			<add position="after"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+				<a href="#tab-scfields">Поля</a>
+				<!--  NeoSeo Checkout - end -->]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				<div id="tab-ip">
+			]]></search>
+			<add position="after"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+				<?php echo $scfields; ?>
+				<!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/controller/customer/customer.php">
+		<operation>
+			<search><![CDATA[
+				protected function getForm() {
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				if (isset($this->request->get['customer_id'])) {
+					$customer_id = (int)$this->request->get['customer_id'];
+				} else {
+					$customer_id = 0;
+				}
+				$data['scfields'] = $this->model_tool_neoseo_checkout->getCustomerData($customer_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/model/customer/customer.php">
+		<operation>
+			<search><![CDATA[
+				$customer_id = $this->db->getLastId();
+			]]></search>
+			<add position="after"><![CDATA[			/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->updateCustomerData($customer_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				public function editCustomer($customer_id, $data) {
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->updateCustomerData($customer_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				public function deleteCustomer
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->deleteCustomerData($customer_id);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/view/template/customer/customer_form.tpl">
+		<operation>
+			<search>
+				<![CDATA[<li><a href="#tab-history" data-toggle="tab"><?php echo $tab_history; ?></a></li>]]></search>
+			<add position="before"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+				<li><a href="#tab-scfields" data-toggle="tab">Поля</a></li>
+				<!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[<div class="tab-pane" id="tab-history">]]></search>
+			<add position="before"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+			<div class="tab-pane" id="tab-scfields"><?php echo $scfields; ?></div>
+			<!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/controller/sale/order.php">
+		<operation>
+			<search><![CDATA[
+				function getForm() {
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				if (isset($this->request->get['order_id'])) {
+					$order_id = (int)$this->request->get['order_id'];
+				} else {
+					$order_id = 0;
+				}
+				$data['scfields'] = $this->model_tool_neoseo_checkout->getOrderData($order_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				function info() {
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$order_id = (int)$this->request->get['order_id'];
+				$data['scfields'] = $this->model_tool_neoseo_checkout->viewOrderData($order_id);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				$data['account_custom_fields'] = array();
+			]]></search>
+			<add position="before"><![CDATA[				/* NeoSeo Checkout - begin */
+			$data['sc_fields'] = array('shipping' => array(), 'payment' => array());
+			$scfields = $this->db->query('SELECT * FROM `' . DB_PREFIX . 'order_scfield` WHERE order_id=' . $order_id)->rows;
+			foreach ($scfields as $key => $value) {
+				$scfields[$value['name']] = $value['value'];
+				unset($scfields[$key]);
+			}
+			if(isset($order_info['shipping_code'])) {
+				$shipping_fields = $this->config->get('neoseo_checkout_shipping_fields');
+				if(isset($shipping_fields[$order_info['shipping_code']])) {
+					foreach ($shipping_fields[$order_info['shipping_code']] as $k=>$v) {
+						if(isset($scfields[$v['name']])) {
+							$data['sc_fields']['shipping'][] = array('name' => array_pop($v['label']), 'value' => $scfields[$v['name']]);
+							unset($scfields[$v['name']]);
+						}
+					}
+				}
+			}
+			if(isset($order_info['payment_code'])) {
+				$shipping_fields = $this->config->get('neoseo_checkout_payment_fields');
+				if(isset($shipping_fields[$order_info['payment_code']])) {
+					foreach ($shipping_fields[$order_info['payment_code']] as $k=>$v) {
+						if(isset($scfields[$v['name']])) {
+							$data['sc_fields']['payment'][] = array('name' => array_pop($v['label']), 'value' => $scfields[$v['name']]);
+							unset($scfields[$v['name']]);
+						}
+					}
+				}
+			}
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[public function shipping() {]]></search>
+			<add position="before"><![CDATA[
+	/* NeoSeo Checkout - begin */
+	public function downloadFiles()
+	{
+		$this->load->model('tool/neoseo_checkout');
+
+		if (isset($this->request->get['download_id'])) {
+			$download_id = $this->request->get['download_id'];
+		} else {
+			$download_id = 0;
+		}
+
+		$download_info = $this->model_tool_neoseo_checkout->getFile($download_id);
+
+		if ($download_info) {
+			$file = DIR_DOWNLOAD . $download_info['name'];
+			$mask = basename($download_info['mask_name']);
+			if (is_file($file) && file_get_contents($file)) {
+				$this->response->addheader('Pragma: public');
+				$this->response->addheader('Expires: 0');
+				$this->response->addheader('Content-Description: File Transfer');
+				$this->response->addheader('Content-Type: ' . $download_info['type']);
+				$this->response->addheader('Content-Disposition: attachment; filename=' . $mask);
+				$this->response->addheader('Content-Transfer-Encoding: binary');
+				$this->response->setOutput(file_get_contents($file, FILE_USE_INCLUDE_PATH, null));
+			} else {
+				$this->response->redirect($this->url->link('sale/order/info', 'token=' . $this->session->data['token'] . '&order_id=' . $this->request->get['order_id'], 'SSL'));
+			}
+		} else {
+			$this->response->redirect($this->url->link('sale/order/info', 'token=' . $this->session->data['token'] . '&order_id=' . $this->request->get['order_id'], 'SSL'));
+		}
+	}
+	/* NeoSeo Checkout - end */
+		]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/model/sale/order.php">
+		<operation>
+			<search><![CDATA[
+				$order_id = $this->db->getLastId();
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->updateOrderData($order_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				public function editOrder($order_id, $data) {
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->updateOrderData($order_id,$this->request->post);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				public function deleteOrder
+			]]></search>
+			<add position="after"><![CDATA[				/* NeoSeo Checkout - begin */
+				$this->load->model( 'tool/neoseo_checkout' );
+				$this->model_tool_neoseo_checkout->deleteOrderData($order_id);
+				/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/view/template/sale/order_form.tpl">
+		<operation>
+			<search><![CDATA[
+				<td><input type="text" name="fax" value="<?php echo $fax; ?>" /></td>
+			]]></search>
+			<add position="after" offset="2"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+				<?php echo $scfields; ?>
+				<!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/view/template/sale/order_info.tpl">
+		<operation>
+			<search><![CDATA[<td><?php echo $date_added; ?></td>]]></search>
+			<add position="after" offset="2"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+				<?php echo $scfields; ?>
+				<!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+		<operation>
+			<search regex="true"><![CDATA[
+				/[<][\?]php\s+?if\s+?[\(]\$shipping_method[\)]\s+[\{][\s]+?\?[>][\s\n]+[<]tr[>]\s+?[\w\W\s]+[<]td[>][<][\?]php[\s]+?echo[\s]+?\$shipping_method[\;][\s]+?[\?][>][<][\/]td[>][\s]+?[<][\/]tr[>]\s+?[<][\?]php\s+?[\}]\s+?\?[>]/
+			]]></search>
+			<add position="after" offset="2"><![CDATA[				<!-- NeoSeo Checkout - begin -->
+				<?php if(isset($data['sc_fields']['shipping'])) foreach($data['sc_fields']['shipping'] as $item) { ?>
+			<tr>
+				<td><?php echo $item['name']; ?></td>
+				<td><?php echo $item['value']; ?></td>
+			</tr>
+			<?php } ?>
+			<?php if(isset($data['sc_fields']['payment'])) foreach($data['sc_fields']['payment'] as $item) { ?>
+			<tr>
+				<td><?php echo $item['name']; ?></td>
+				<td><?php echo $item['value']; ?></td>
+			</tr>
+			<?php } ?>
+			<!-- NeoSeo Checkout - end -->]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/checkout/checkout.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {	
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		if ($this->config->get('neoseo_checkout_status')) {
+			return new Action('checkout/neoseo_checkout');
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/checkout/cart.php">
+		<operation>
+			<search><![CDATA[public function index() {]]></search>
+			<add position="after"><![CDATA[			/* NeoSeo Checkout - begin */
+			if ($this->cart->hasProducts() && $this->config->get('neoseo_checkout_status') && $this->config->get('neoseo_checkout_cart_redirect')) {
+				$this->response->redirect($this->url->link('checkout/checkout', '', 'SSL'));
+			}
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$data['column_image'] = $this->language->get('column_image');]]></search>
+			<add position="before"><![CDATA[			/* NeoSeo Checkout - begin */
+			$this->load->language('checkout/neoseo_checkout');
+
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[
+				if ($this->config->get('config_customer_price')
+			]]></search>
+			<add position="before"><![CDATA[			/* NeoSeo Checkout - begin */
+			$min_amount = $this->config->get("neoseo_checkout_min_amount");
+			$subtotal = $this->cart->getSubTotal();
+			if ($min_amount > 0 && $min_amount > $subtotal ) {
+				$this->language->load("neoseo_checkout/checkout");
+				$data['error_warning'] = sprintf($this->language->get("error_min_amount"),
+					$this->currency->format($min_amount),
+					$this->currency->format($subtotal)
+				);
+			}
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search regex="true"><![CDATA[
+			/\$json[\[][\']redirect[\'][\]][\s]+?[=][\s]+?str[\_]replace[\(][\'][\&]amp[\;][\'][,][\s]+?[\'\&]+,[\s]+?\$this-[>]url-[>]link[\(][\']product[\/]product[\'],[\s]+?[\']product_id=[\'][\s\.]+\$this-[>]request-[>]post[\[][\']product_id[\'][\]][\)]{2}[\;][\s]+[\}][\s]+[\}]/
+			]]></search>
+			<add position="replace"><![CDATA[			$json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
+			}
+		}
+		/* NeoSeo Checkout - begin */
+		$this->event->trigger('post.cart.add', $json);
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search regex="true"><![CDATA[
+			/\$this-[>]response-[>]redirect[\(]\$this-[>]url-[>]link[\(][\']checkout[\/]cart[\'][\)]{2}[\;][\s]+[\}]/
+			]]></search>
+			<add position="replace"><![CDATA[			$this->response->redirect($this->url->link('checkout/cart'));
+		}
+		/* NeoSeo Checkout - begin */
+		$this->event->trigger('post.cart.edit', $json);
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search regex="true"><![CDATA[
+			/\$json[\[\']{2}total[\'\]]{2}[\s=]+sprintf[\(\$]{2}[\w\-\>\(\']+text_items[\'\),\s]+\$this-[>]cart-[>]countProducts[\(][\)][\s]+[+][\s]+?[\(]isset[\(]\$this-[>]session-[>]data[\[\']{2}vouchers[\'\]]{2}[\)][\s]+?[\?][\s]+?count[\(]\$this-[>]session-[>]data[\[\']{2}vouchers[\'\]]{2}[\)][\s]+?:[\s]+?[0][\)][,][\s]+?\$this-[>]currency-[>]format[\(]\$total[\)]{2}[\;][\s]+[\}][\s]+\$[\w->]+[\(][\']Content-Type[:][\s]+?application[\/]json[\'][\)][\;]/
+			]]></search>
+			<add position="replace"><![CDATA[         $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
+		}
+		/* NeoSeo Checkout - begin */
+		$this->event->trigger('post.cart.remove', $json);
+		/* NeoSeo Checkout - end */
+		$this->response->addHeader('Content-Type: application/json');]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/controller/localisation/country.php">
+		<operation>
+			<search><![CDATA[
+			$this->load->model('localisation/country');
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->load->model('localisation/language');
+		$this->load->language('localisation/neoseo_country');
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true" regex="true"><![CDATA[
+			(foreach\s+[\(]\$this->request->post[\[][']selected['][\]]\s+as\s+\$country_id[\)]\s+[\{][\n\s\t]+\$this->model_localisation_country->deleteCountry[\(]\$country_id[\)];[\n\s\t]+[\}])
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+			foreach ($this->request->post['selected'] as $country_language_id) {
+				list($country_id, $language_id) = explode(":", $country_language_id);
+				$this->model_localisation_country->deleteCountry($country_id, $language_id);
+			}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$data['button_delete'] = $this->language->get('button_delete');
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$data['column_language_id'] = $this->language->get('column_language_id');
+		$data['languages'] = $this->model_localisation_language->getLanguages();
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$data['sort_iso_code_3'] = $this->url->link('localisation/country', 'token=' . $this->session->data['token'] . '&sort=iso_code_3' . $url, 'SSL');
+		]]></search>
+			<add position="after"><![CDATA[			/* NeoSeo Checkout - begin */
+			$data['sort_language_id'] = $this->url->link('localisation/country', 'token=' . $this->session->data['token'] . '&sort=language_id' . $url, 'SSL');
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$data['button_cancel'] = $this->language->get('button_cancel');
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$data['column_language_id'] = $this->language->get('column_language_id');
+		$data['entry_country_id'] = $this->language->get('entry_country_id');
+		$data['languages'] = $this->model_localisation_language->getLanguages();
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		if (isset($this->request->post['name'])) {
+		]]></search>
+			<add position="before"><![CDATA[		/* NeoSeo Checkout - begin */
+		if (isset($this->request->post['country_id'])) {
+			$data['country_id'] = $this->request->post['country_id'];
+		} elseif (!empty($country_info)) {
+			$data['country_id'] = $country_info['country_id'];
+		} else {
+			$data['country_id'] = '';
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		if (isset($this->request->post['status'])) {
+		]]></search>
+			<add position="before"><![CDATA[		/* NeoSeo Checkout - begin */
+		$data['names'][] = array();
+		foreach ($data['languages'] as $language){
+			if (isset($this->request->post['names['.$language['language_id'].']'])) {
+				$data['names'][$language['language_id']] = $this->request->post['names['.$language['language_id'].']'];
+			} elseif (!empty($country_info)) {
+				$country_description = $this->model_localisation_country->getCountryDescription($data['country_id'], $language['language_id']);
+				if(!empty($country_description)){
+					$data['names'][$language['language_id']] = $country_description['name'];
+				}else{
+					$data['names'][$language['language_id']] = $country_info['name'];
+				}
+			} else {
+				$data['names'][$language['language_id']] = '';
+			}
+		}
+		/* NeoSeo Checkout - end */
+		]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->response->setOutput($this->load->view('localisation/country_form.tpl', $data));
+		]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->response->setOutput($this->load->view('localisation/neoseo_country_form.tpl', $data));
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->load->model('marketing/affiliate');
+		]]></search>
+			<add position="replace"><![CDATA[]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/controller/localisation/zone.php">
+		<operation>
+			<search trim="true" regex="true"><![CDATA[
+		(\$affiliate_total\s+=\s+\$this->model_marketing_affiliate->getTotalAffiliatesByCountryId[\(]\$country_id[\)];[\s\n]+if\s+[\(]\$affiliate_total[\)]\s[\{][\s\n]+\$this->error[\[']+warning['\]]+\s+?=[\s]+?sprintf[\(]\$this->language->get[\(']+error_affiliate['\)]+,\s+\$affiliate_total[\)];[\s\n]+[\}])
+		]]></search>
+			<add position="replace"><![CDATA[]]></add>
+		</operation>
+
+		<operation>
+			<search ><![CDATA[public function editZone($zone_id, $data) {]]></search>
+			<add position="after"><![CDATA[
+		/* NeoSeo Checkout - begin */
+		$this->db->query("DELETE FROM " . DB_PREFIX . "zone_description WHERE zone_id = '" . (int)$zone_id . "'");
+		foreach ($data['names'] as $language_id =>$name)
+		{
+			$this->db->query("INSERT INTO " . DB_PREFIX . "zone_description SET zone_id = '". $zone_id ."', status = '" . (int)$data['status'] . "', name = '" . $this->db->escape($name) . "', code = '" . $this->db->escape($data['code']) . "', country_id = '" . (int)$this->db->escape($data['country_id']). "', language_id = '" . (int)$language_id . "'");
+		}
+		/* NeoSeo Checkout - end */
+			]]></add>
+		</operation>
+
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->load->model('localisation/zone');
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->load->model('localisation/language');
+		$this->load->language('localisation/neoseo_country');
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true" regex="true"><![CDATA[
+			(foreach\s+?[\(]\$this->request->post[\[][\']selected[\'][\]]\s+as\s+\$zone_id[\)]\s+?[\{][\s\n]+\$this->model_localisation_zone->deleteZone[\(]\$zone_id[\)];[\s\n]+?[\}])
+		]]></search>
+			<add position="replace"><![CDATA[			/* NeoSeo Checkout - begin */
+			foreach ($this->request->post['selected'] as $zone_language_id) {
+				list($zone_id, $language_id) = explode(":", $zone_language_id);
+				$this->model_localisation_zone->deleteZone($zone_id, $language_id);
+			}
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+			$this->response->setOutput($this->load->view('localisation/zone_form.tpl', $data));
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->response->setOutput($this->load->view('localisation/neoseo_zone_form.tpl', $data));
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true" regex="true"><![CDATA[
+		(foreach\s+?[\(]\$results\s+as\s+\$result[\)]\s+?[\{][\s]+\$data[\[][\']zones[\'][\]\[]+\s+?=\s+?array[\(][\s]+[\']zone_id[\']\s+?=>\s+?\$result[\[\']+zone_id[\'\]]+,[\s]+[\']country[\']\s+?=>\s\$result[\[\']+country[\'\]]+,[\s]+[\']name[\']\s+?=>\s+?\$result[\[\']+name[\'\]]+ . [\(]{2}\$result[\[\']+zone_id[\'\]]+\s+?==\s+?\$this->config->get[\(\']+config_zone_id[\'\)]{3}\s+?[\?]\s+?\$this->language->get[\(\']+text_default[\'\)]+\s+:\s+null[\)],[\s]+[\']code[\']\s+?=>\s+?\$result[\[\']+code[\'\]]+,[\s]+[\']edit[\']\s+?=>\s+?\$this->url->link[\(\']+localisation\/zone\/edit[\'],\s+?[\']+token=[\']+[\s\.]+\$this->session->data[\[\']+token[\'\]]+[\s\.]+[\']&zone_id=[\'][\s\.]+\$result[\[\']+zone_id[\'\]\s\.]+\$url,\s+?[\']+SSL[\']+[\)][\s]+[\)];[\s]+[\}])
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$data['languages'] = $this->model_localisation_language->getLanguages();
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$data['button_cancel'] = $this->language->get('button_cancel');
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$data['column_language_id'] = $this->language->get('column_language_id');
+		$data['languages'] = $this->model_localisation_language->getLanguages();
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->load->model('localisation/country');
+			]]></search>
+			<add position="before"><![CDATA[		/* NeoSeo Checkout - begin */
+		$data['names'][] = array();
+		foreach ($data['languages'] as $language){
+			if (isset($this->request->post['names['.$language['language_id'].']'])) {
+				$data['names'][$language['language_id']] = $this->request->post['names['.$language['language_id'].']'];
+			} elseif (!empty($zone_info)) {
+				$zone_description = $this->model_localisation_zone->getZoneDescription($this->request->get['zone_id'], $language['language_id']);
+				if(!empty($zone_description)){
+					$data['names'][$language['language_id']] = $zone_description['name'];
+				}else{
+					$data['names'][$language['language_id']] = $zone_info['name'];
+				}
+			} else {
+				$data['names'][$language['language_id']] = '';
+			}
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->load->model('marketing/affiliate');
+		]]></search>
+			<add position="replace"><![CDATA[]]></add>
+		</operation>
+		<operation>
+			<search regex="true" trim="true"><![CDATA[
+		(\$affiliate\_total[\w\W]+[\(]\$zone_id[\)][\;])
+		]]></search>
+			<add position="replace"><![CDATA[]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$results = $this->model_localisation_zone->getZones($filter_data);
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		foreach ($results as $result) {
+			$data['zones'][] = array(
+				'zone_id' => $result['zone_id'],
+				'country' => $result['country'],
+				'name'    => $result['name'] . (($result['zone_id'] == $this->config->get('config_zone_id')) ? $this->language->get('text_default') : null),
+				'code'    => $result['code'],
+				'edit'    => $this->url->link('localisation/zone/edit', 'token=' . $this->session->data['token'] . '&zone_id=' . $result['zone_id']. $url, 'SSL')
+			);
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/model/localisation/country.php">
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->db->query("INSERT INTO " . DB_PREFIX . "country SET name = '" . $this->db->escape($data['name']) . "', iso_code_2 = '" . $this->db->escape($data['iso_code_2']) . "', iso_code_3 = '" . $this->db->escape($data['iso_code_3']) . "', address_format = '" . $this->db->escape($data['address_format']) . "', postcode_required = '" . (int)$data['postcode_required'] . "', status = '" . (int)$data['status'] . "'");
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$country_id = $this->db->getLastId();
+		foreach ($data['names'] as $language_id => $name) {
+			$this->db->query("INSERT INTO " . DB_PREFIX . "country_description SET country_id = '" . $country_id . "',name = '" . $this->db->escape($name) . "', iso_code_2 = '" . $this->db->escape($data['iso_code_2']) . "', iso_code_3 = '" . $this->db->escape($data['iso_code_3']) . "', address_format = '" . $this->db->escape($data['address_format']) . "', postcode_required = '" . (int)$data['postcode_required'] . "', language_id = '" . (int)$language_id . "', status = '" . (int)$data['status'] . "'");
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->db->query("UPDATE " . DB_PREFIX . "country SET name = '" . $this->db->escape($data['name']) . "', iso_code_2 = '" . $this->db->escape($data['iso_code_2']) . "', iso_code_3 = '" . $this->db->escape($data['iso_code_3']) . "', address_format = '" . $this->db->escape($data['address_format']) . "', postcode_required = '" . (int)$data['postcode_required'] . "', status = '" . (int)$data['status'] . "' WHERE country_id = '" . (int)$country_id . "'");
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->db->query("DELETE FROM " . DB_PREFIX . "country_description WHERE country_id = '" . (int)$country_id . "'");
+		foreach ($data['names'] as $language_id => $name) {
+			$this->db->query("INSERT INTO " . DB_PREFIX . "country_description SET country_id = '" . $country_id . "',name = '" . $this->db->escape($name) . "', iso_code_2 = '" . $this->db->escape($data['iso_code_2']) . "', iso_code_3 = '" . $this->db->escape($data['iso_code_3']) . "', address_format = '" . $this->db->escape($data['address_format']) . "', postcode_required = '" . (int)$data['postcode_required'] . "', language_id = '" . (int)$language_id . "', status = '" . (int)$data['status'] . "'");
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->db->query("DELETE FROM " . DB_PREFIX . "country WHERE country_id = '" . (int)$country_id . "'");
+		]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->db->query("DELETE FROM " . DB_PREFIX . "country_description WHERE country_id = '" . (int)$country_id . "'");
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		public function getCountry($country_id) {
+		]]></search>
+			<add position="before"><![CDATA[		/* NeoSeo Checkout - begin */
+		public function getCountryDescription($country_id, $language_id) {
+			$query = $this->db->query("SELECT name FROM " . DB_PREFIX . "country_description WHERE country_id = '" . (int)$country_id . "' AND language_id = '".(int)$language_id."'");
+			return $query->row;
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="admin/model/localisation/zone.php">
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->db->query("INSERT INTO " . DB_PREFIX . "zone SET status = '" . (int)$data['status'] . "', name = '" . $this->db->escape($data['name']) . "', code = '" . $this->db->escape($data['code']) . "', country_id = '" . (int)$data['country_id'] . "'");
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$zone_id = $this->db->getLastId();
+		foreach ($data['names'] as $language_id =>$name)
+		{
+			$this->db->query("INSERT INTO " . DB_PREFIX . "zone_description SET zone_id = '". $zone_id ."', status = '" . (int)$data['status'] . "', name = '" . $this->db->escape($name) . "', code = '" . $this->db->escape($data['code']) . "', country_id = '" . (int)$this->db->escape($data['country_id']). "', language_id = '" . (int)$language_id . "'");
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->db->query("UPDATE " . DB_PREFIX . "zone SET status = '" . (int)$data['status'] . "', name = '" . $this->db->escape($data['name']) . "', code = '" . $this->db->escape($data['code']) . "', country_id = '" . (int)$this->db->escape($data['country_id'])  . "' WHERE zone_id = '" . (int)$zone_id . "'");
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->db->query("DELETE FROM " . DB_PREFIX . "zone_description WHERE zone_id = '" . (int)$zone_id . "'");
+		foreach ($data['names'] as $language_id => $name)
+		{
+			$this->db->query("INSERT INTO " . DB_PREFIX . "zone_description SET zone_id = '". $zone_id ."', status = '" . (int)$data['status'] . "', name = '" . $this->db->escape($name) . "', code = '" . $this->db->escape($data['code']) . "', country_id = '" . (int)$this->db->escape($data['country_id']). "', language_id = '" . (int)$language_id . "'");
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->db->query("DELETE FROM " . DB_PREFIX . "zone WHERE zone_id = '" . (int)$zone_id . "'");
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->db->query("DELETE FROM " . DB_PREFIX . "zone_description WHERE zone_id = '" . (int)$zone_id . "'");
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		public function getZone($zone_id) {
+			]]></search>
+			<add position="before"><![CDATA[		/* NeoSeo Checkout - begin */
+		public function getZoneDescription($zone_id, $language_id) {
+			$query = $this->db->query("SELECT DISTINCT * FROM " . DB_PREFIX . "zone_description WHERE zone_id = '" . (int)$zone_id . "' AND language_id = '" . (int)$language_id . "'");
+			return $query->row;
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/model/account/address.php">
+		<operation>
+			<search trim="true"><![CDATA[
+			$country_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "country` WHERE country_id = '" . (int)$address_query->row['country_id'] . "'");
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+			$country_query = $this->db->query("SELECT c.*, IF(cd.name,c.name,cd.name) AS name FROM `" . DB_PREFIX . "country` c LEFT JOIN `" . DB_PREFIX . "country_description` cd ON (cd.country_id=c.country_id AND cd.language_id=" . (int)$this->config->get('config_language_id') . ") WHERE c.country_id = '" . (int)$address_query->row['country_id'] . "'");
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+			$country_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "country` WHERE country_id = '" . (int)$result['country_id'] . "'");
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+			$country_query = $this->db->query("SELECT c.*, IF(cd.name,c.name,cd.name) AS name FROM `" . DB_PREFIX . "country` c LEFT JOIN `" . DB_PREFIX . "country_description` cd ON (cd.country_id=c.country_id AND cd.language_id=" . (int)$this->config->get('config_language_id') . ")  WHERE c.country_id = '" . (int)$result['country_id'] . "'");
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+			$zone_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "zone` WHERE zone_id = '" . (int)$address_query->row['zone_id'] . "'");
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+			$zone_query = $this->db->query("SELECT z.*,IF(zd.name,z.name,zd.name) AS name FROM `" . DB_PREFIX . "zone` z LEFT JOIN `" . DB_PREFIX . "zone_description` zd ON (zd.zone_id=z.zone_id AND zd.language_id=" . (int)$this->config->get('config_language_id') . ") WHERE z.zone_id = '" . (int)$address_query->row['zone_id'] . "'");
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+			$zone_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "zone` WHERE zone_id = '" . (int)$result['zone_id'] . "'");
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+			$zone_query = $this->db->query("SELECT z.*,IF(zd.name,z.name,zd.name) AS name FROM `" . DB_PREFIX . "zone` z LEFT JOIN `" . DB_PREFIX . "zone_description` zd ON (zd.zone_id=z.zone_id AND zd.language_id=" . (int)$this->config->get('config_language_id') . ") WHERE z.zone_id = '" . (int)$result['zone_id'] . "'");
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/model/localisation/country.php">
+		<operation>
+			<search trim="true"><![CDATA[function getCountry($country_id)]]></search>
+			<add position="after"><![CDATA[        // NeoSeo Checkout - begin
+        $language_id = $this->config->get('config_language_id');
+
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "country_description WHERE country_id = '" . (int)$country_id . "' AND status = '1' AND language_id = '".$language_id."'");
+        if($query->row)
+            return $query->row;
+        else
+        // NeoSeo Checkout - end]]></add>
+		</operation>
+
+		<operation>
+			<search trim="true"><![CDATA[function getCountries]]></search>
+			<add position="before"><![CDATA[
+    private function getCountryDescription() {
+        $language_id = $this->config->get('config_language_id');
+
+        $country_data = $this->cache->get('country.status.' . $language_id);
+
+        if (!$country_data) {
+            $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "country_description WHERE status = '1'  AND language_id = '".$language_id."' ORDER BY name ASC");
+
+            $country_data = $query->rows;
+
+            $this->cache->set('country.status.' . $language_id, $country_data);
+        }
+
+        return $country_data;
+    }
+		]]></add>
+		</operation>
+
+		<operation>
+			<search trim="true"><![CDATA[function getCountries]]></search>
+			<add position="after"><![CDATA[		// NeoSeo Checkout - begin
+			return $this->getCountryDescription();
+		// NeoSeo Checkout - end]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/model/localisation/zone.php">
+		<operation>
+			<search trim="true"><![CDATA[
+		public function getZone($zone_id) {
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		$language_id = $this->config->get('config_language_id');
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_description WHERE zone_id = '" . (int)$zone_id . "' AND status = '1' AND language_id = '".$language_id."'");
+		$row = $query->row;
+		if (!$row)
+		{
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone WHERE zone_id = '" . (int)$zone_id . "' AND status = '1'");
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$zone_data = $this->cache->get('zone.' . (int)$country_id);
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+		$language_id = $this->config->get('config_language_id');
+		$zone_data = $this->cache->get('zone.' . (int)$country_id . '.' . (int)$language_id);
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$zone_data = $query->rows;
+			]]></search>
+			<add position="after"><![CDATA[		/* NeoSeo Checkout - begin */
+		}
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		if (!$zone_data) {
+			]]></search>
+			<add position="after"><![CDATA[			/* NeoSeo Checkout - begin */
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_description WHERE country_id = '" . (int)$country_id . "' AND status = '1'  AND language_id = '".$language_id."' ORDER BY name");
+			$zone_data = $query->rows;
+			if (!$zone_data)
+			{
+			/* NeoSeo Checkout - end */]]></add>
+		</operation>
+		<operation>
+			<search trim="true"><![CDATA[
+		$this->cache->set('zone.' . (int)$country_id, $zone_data);
+			]]></search>
+			<add position="replace"><![CDATA[		/* NeoSeo Checkout - begin */
+		$this->cache->set('zone.' . (int)$country_id . '.' . (int)$language_id, $zone_data);
+		/* NeoSeo Checkout - end */]]></add>
+		</operation>
+	</file>
+
+
+</modification>

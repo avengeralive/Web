@@ -1,0 +1,841 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Модуль \"Торговля\"\n"
+"POT-Creation-Date: 2017-06-29 16:02+0300\n"
+"PO-Revision-Date: 2017-06-29 16:03+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _;translate\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ext/Delivery.js:8 ext/Discounts.js:8 ext/OrderProps.js:11 ext/Payment.js:10
+#: ext/PersonType.js:11
+msgid "Акт."
+msgstr "Active"
+
+#: ext/Delivery.js:8 ext/Discounts.js:8 ext/OrderProps.js:11
+#: ext/OrderProps.js:12 ext/Payment.js:10 ext/PersonType.js:11
+msgid "Да"
+msgstr "Yes"
+
+#: ext/Delivery.js:8 ext/Discounts.js:8 ext/OrderProps.js:11
+#: ext/OrderProps.js:12 ext/Payment.js:10 ext/PersonType.js:11
+msgid "Нет"
+msgstr "No"
+
+#: ext/Delivery.js:9 ext/OrderProps.js:16 ext/OrderPropsGroups.js:11
+#: ext/Payment.js:11 ext/PersonType.js:12
+msgid "Сорт."
+msgstr "Sort"
+
+#: ext/Delivery.js:10 ext/DeliveryEdit.js:27 ext/DiscountEdit.js:43
+#: ext/Discounts.js:10 ext/OrderProps.js:17 ext/OrderPropsEdit.js:27
+#: ext/OrderPropsGroupEdit.js:27 ext/OrderPropsGroups.js:13 ext/Payment.js:12
+#: ext/PaymentEdit.js:30 ext/PaymentEdit.js:162 ext/PersonType.js:13
+#: ext/PersonTypeEdit.js:26
+msgid "Название"
+msgstr "Name"
+
+#: ext/DeliveryEdit.js:32 ext/DiscountEdit.js:48 ext/OrderPropsEdit.js:37
+#: ext/PaymentEdit.js:35 ext/PersonTypeEdit.js:31
+msgid "Активность"
+msgstr "Active"
+
+#: ext/DeliveryEdit.js:38 ext/Filter.js:55 ext/FilterEdit.js:78
+#: ext/OrderPropsEdit.js:134 ext/OrderPropsGroupEdit.js:46
+#: ext/PaymentEdit.js:41 ext/PersonTypeEdit.js:37
+msgid "Сортировка"
+msgstr "Sorting"
+
+#: ext/DeliveryEdit.js:45 lang/messages.php:3
+msgid "Калькулятор стоимости"
+msgstr "Cost calculator"
+
+#: ext/DeliveryEdit.js:68 ext/PaymentEdit.js:76
+msgid "Настроить"
+msgstr "Tune"
+
+#: ext/DeliveryEdit.js:115 lang/messages.php:4
+msgid "Новый способ доставки"
+msgstr "New delivery"
+
+#: ext/DiscountConditionBlock.js:51
+msgid "Добавить условие"
+msgstr "Add Condition"
+
+#: ext/DiscountConditionBlock.js:80
+msgid "все условия"
+msgstr "all conditions"
+
+#: ext/DiscountConditionBlock.js:81
+msgid "любое из условий"
+msgstr "any of the conditions"
+
+#: ext/DiscountConditionBlock.js:93
+msgid "выполнено(ы)"
+msgstr "completed (s)"
+
+#: ext/DiscountConditionBlock.js:94
+msgid "не выполнено(ы)"
+msgstr "not fulfilled (s)"
+
+#: ext/DiscountConditionContainer.js:50
+msgid "равно"
+msgstr "equally"
+
+#: ext/DiscountConditionContainer.js:51
+msgid "не равно"
+msgstr "not equal"
+
+#: ext/DiscountConditionContainer.js:52
+msgid "содержит"
+msgstr "contains"
+
+#: ext/DiscountConditionContainer.js:53
+msgid "не содержит"
+msgstr "does not contain"
+
+#: ext/DiscountConditionContainer.js:54
+msgid "больше или равно"
+msgstr "more or equal"
+
+#: ext/DiscountConditionContainer.js:55
+msgid "меньше"
+msgstr "less"
+
+#: ext/DiscountEdit.js:36
+msgid "Скидка"
+msgstr "Discount"
+
+#: ext/DiscountEdit.js:53
+msgid "Тип скидки"
+msgstr "Discount type"
+
+#: ext/DiscountEdit.js:58
+msgid "в процентах"
+msgstr "in percentages"
+
+#: ext/DiscountEdit.js:59
+msgid "фиксированная сумма"
+msgstr "fixed amount"
+
+#: ext/DiscountEdit.js:60
+msgid "установить цену на товар"
+msgstr "set a price for a product"
+
+#: ext/DiscountEdit.js:65
+msgid "Величина скидки"
+msgstr "Discount value"
+
+#: ext/DiscountEdit.js:71
+msgid "Максимальная скидка"
+msgstr "Maximum discount"
+
+#: ext/DiscountEdit.js:78 ext/Discounts.js:11
+msgid "Приоритет"
+msgstr "A priority"
+
+#: ext/DiscountEdit.js:85
+msgid "прекратить дальнейшее применение скидок"
+msgstr "to cease further application of discounts"
+
+#: ext/DiscountEdit.js:90 ext/OrderPropsEdit.js:142 ext/PaymentEdit.js:48
+msgid "Описание"
+msgstr "Description"
+
+#: ext/DiscountEdit.js:98
+msgid "Условия"
+msgstr "Conditions"
+
+#: ext/DiscountEdit.js:112 ext/FilterEdit.js:103 ext/OrderPropsEdit.js:149
+#: ext/OrderPropsGroupEdit.js:56 ext/PaymentEdit.js:172
+#: ext/PersonTypeEdit.js:47
+msgid "OK"
+msgstr "OK"
+
+#: ext/DiscountEdit.js:124 ext/FilterEdit.js:118 ext/OrderPropsEdit.js:158
+#: ext/OrderPropsGroupEdit.js:65 ext/PaymentEdit.js:198
+#: ext/PersonTypeEdit.js:56
+msgid "Отмена"
+msgstr "Cancel"
+
+#: ext/DiscountEdit.js:134
+msgid "Изменить скидку"
+msgstr "Change discount"
+
+#: ext/DiscountEdit.js:134
+msgid "Новая скидка"
+msgstr "New discount"
+
+#: ext/Discounts.js:9
+msgid "Величина"
+msgstr "Value"
+
+#: ext/Filter.js:52 ext/FilterEdit.js:31
+msgid "Поле"
+msgstr "Field"
+
+#: ext/Filter.js:53 widgets/sale.catalog/default.twig:78
+msgid "Вид"
+msgstr "View"
+
+#: ext/Filter.js:54
+msgid "Только для раздела"
+msgstr "For section only"
+
+#: ext/FilterEdit.js:60
+msgid "Вид фильтра"
+msgstr "Type of filter"
+
+#: ext/FilterEdit.js:73
+msgid "Показывать только в разделе"
+msgstr "Show only in section"
+
+#: ext/FilterEdit.js:128
+msgid "Редактировать поле"
+msgstr "Edit Field"
+
+#: ext/FilterEdit.js:128
+msgid "Добавить поле"
+msgstr "Add a field"
+
+#: ext/OrderEdit.js:13 widgets/sale.order/default.twig:27
+msgid "Заказ №"
+msgstr "Order No."
+
+#: ext/OrderEdit.js:13 widgets/sale.order/default.twig:27
+msgid "от"
+msgstr "from"
+
+#: ext/OrderEdit.js:26
+msgid "Статус оплаты"
+msgstr "Payment State"
+
+#: ext/OrderEdit.js:27 config.php:103
+msgid "Статус заказа"
+msgstr "Order status"
+
+#: ext/OrderEdit.js:40 ext/Orders.js:10
+msgid "Покупатель"
+msgstr "Buyer"
+
+#: ext/OrderEdit.js:41 widgets/sale.order.detail/default.twig:34
+#: widgets/sale.order/default.twig:31 widgets/sale.order/default.twig:141
+msgid "Способ оплаты"
+msgstr "Payment method"
+
+#: ext/OrderEdit.js:42 widgets/sale.order.detail/default.twig:31
+#: widgets/sale.order/default.twig:29 widgets/sale.order/default.twig:155
+msgid "Способ доставки"
+msgstr "Delivery method"
+
+#: ext/OrderEdit.js:64 ext/OrderEdit.js:88 config.php:125
+msgid "Товары"
+msgstr "Goods"
+
+#: ext/OrderEdit.js:70 ext/Orders.js:34
+msgid "Товар"
+msgstr "Product"
+
+#: ext/OrderEdit.js:70 ext/Orders.js:34 classes/Sale/Order.php:234
+msgid "Цена"
+msgstr "Price"
+
+#: ext/OrderEdit.js:70 ext/Orders.js:34 classes/Sale/Order.php:234
+msgid "Кол-во"
+msgstr "Quantity"
+
+#: ext/OrderEdit.js:70 ext/Orders.js:34 classes/Sale/Order.php:234
+msgid "Стоимость"
+msgstr "Cost"
+
+#: ext/OrderEdit.js:78 ext/OrderEdit.js:90 ext/Orders.js:42
+msgid "Всего"
+msgstr "Total"
+
+#: ext/OrderEdit.js:89
+msgid "Доставка"
+msgstr "Delivery"
+
+#: ext/OrderProps.js:12
+msgid "Обяз."
+msgstr "Required"
+
+#: ext/OrderProps.js:14 ext/OrderPropsEdit.js:47 ext/OrderPropsGroupEdit.js:32
+#: ext/OrderPropsGroups.js:12
+msgid "Тип плательщика"
+msgstr "Type of payer"
+
+#: ext/OrderProps.js:15 ext/OrderPropsEdit.js:77
+msgid "Группа"
+msgstr "Group"
+
+#: ext/OrderPropsEdit.js:42
+msgid "Обязательное"
+msgstr "Required"
+
+#: ext/OrderPropsEdit.js:95
+msgid "Тип"
+msgstr "Type"
+
+#: ext/OrderPropsEdit.js:104
+msgid "Текстовое"
+msgstr "Text"
+
+#: ext/OrderPropsEdit.js:105
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: ext/OrderPropsEdit.js:106
+msgid "Город"
+msgstr "City"
+
+#: ext/OrderPropsEdit.js:114
+msgid "Значение по умолчанию"
+msgstr "Default value"
+
+#: ext/OrderPropsEdit.js:118
+msgid "использовать как e-mail"
+msgstr "use as e-mail"
+
+#: ext/OrderPropsEdit.js:123
+msgid "использовать как телефон"
+msgstr "used as a telephone"
+
+#: ext/OrderPropsEdit.js:168 ext/OrderPropsGroupEdit.js:75
+#: ext/PersonTypeEdit.js:66
+msgid "Редактировать"
+msgstr "Edit"
+
+#: ext/OrderPropsEdit.js:168
+msgid "Новое свойство"
+msgstr "New Property"
+
+#: ext/OrderPropsGroupEdit.js:75
+msgid "Новая группа"
+msgstr "A new group"
+
+#: ext/OrderPropsSetup.js:17 config.php:150
+msgid "Свойства заказов"
+msgstr "Order properties"
+
+#: ext/OrderPropsSetup.js:23
+msgid "Группы свойств"
+msgstr "Property groups"
+
+#: ext/Orders.js:8
+msgid "Дата"
+msgstr "Date"
+
+#: ext/Orders.js:15
+msgid "Статус"
+msgstr "Status"
+
+#: ext/Orders.js:19
+msgid "Оплачен"
+msgstr "Paid"
+
+#: ext/Orders.js:23
+msgid "Сумма"
+msgstr "Sum"
+
+#: ext/Orders.js:58
+msgid "Подробно"
+msgstr "In detail"
+
+#: ext/PaymentEdit.js:53
+msgid "Платежная система"
+msgstr "Payment system"
+
+#: ext/PaymentEdit.js:129
+msgid "Службы доставки, связанные с платежной системой"
+msgstr "Delivery services associated with the payment system"
+
+#: ext/PaymentEdit.js:158
+msgid "Типы плательщиков, связанные с платежной системой"
+msgstr "Types of payers associated with the payment system"
+
+#: ext/PaymentEdit.js:208
+msgid "Изменить"
+msgstr "Edit"
+
+#: ext/PaymentEdit.js:208
+msgid "Новая платежная система"
+msgstr "New payment system"
+
+#: ext/PersonTypeEdit.js:66
+msgid "Новый плательщик"
+msgstr "New payer"
+
+#: ext/Setup.js:18
+msgid "Настройки магазина"
+msgstr "Store Settings"
+
+#: ext/Setup.js:32
+msgid "Email отдела продаж"
+msgstr "Email sales department"
+
+#: ext/Setup.js:36
+msgid "Точность цены (десятичных знаков)"
+msgstr "Precision of the price (decimal places)"
+
+#: ext/Setup.js:44
+msgid "учет остатков товаров"
+msgstr ""
+
+#: ext/Setup.js:53
+msgid "Сохранить"
+msgstr "Save"
+
+#: ext/Setup.js:71
+msgid "Настройки фильтра"
+msgstr "Filter settings"
+
+#: ext/Setup.js:77
+msgid "Типы плательщиков"
+msgstr "Types of payers"
+
+#: js/common.js:49
+msgid "Подождите..."
+msgstr "Wait..."
+
+#: js/common.js:77
+msgid "Товар добавлен в список"
+msgstr "The item added to wishlist"
+
+#: js/common.js:97
+msgid "Товар добавлен к сравнению"
+msgstr "The item added to compare list"
+
+#: js/common.js:117
+msgid "Товар удален из списка"
+msgstr "The item is removed"
+
+#: js/common.js:205
+msgid "Товар добавлен в корзину"
+msgstr "The item added to cart"
+
+#: js/common.js:266
+msgid "Пересчитать"
+msgstr "Recalculate"
+
+#: js/common.js:331
+msgid "Заполните обязательные поля."
+msgstr "Fill all required fields."
+
+#: classes/Sale/Cart.php:133 classes/Sale/Cart.php:217
+#: classes/Sale/Compare.php:34 classes/Sale/WishList.php:33
+msgid "Не указан продукт"
+msgstr "No product specified"
+
+#: classes/Sale/Cart.php:145 classes/Sale/Cart.php:229
+msgid "Не указано торговое предложение"
+msgstr "No offer specified"
+
+#: classes/Sale/Cart.php:168
+msgid "Отсутствует указанное количество"
+msgstr "There is not required amount"
+
+#: classes/Sale/DeliveryCalculator/Fixed.php:11
+msgid "Фиксированная стоимость"
+msgstr "Fixed cost"
+
+#: classes/Sale/DeliveryCalculator/Fixed.php:16
+msgid "Стоимость доставки"
+msgstr "Cost of delivery"
+
+#: classes/Sale/Filter.php:142
+msgid "да"
+msgstr "yes"
+
+#: classes/Sale/Filter.php:143
+msgid "нет"
+msgstr "no"
+
+#: classes/Sale/Filter.php:282
+msgid "Число от-до"
+msgstr "Number"
+
+#: classes/Sale/Filter.php:283
+msgid "Число от-до с ползунком"
+msgstr "Slider"
+
+#: classes/Sale/Filter.php:284
+msgid "Флажки"
+msgstr "Checkboxes"
+
+#: classes/Sale/Filter.php:285
+msgid "Радиокнопки"
+msgstr "Radio"
+
+#: classes/Sale/Filter.php:286
+msgid "Выпадающее меню"
+msgstr "Dropdown"
+
+#: classes/Sale/Order.php:108
+msgid "Ваша корзина пуста!"
+msgstr "Your basket is empty!"
+
+#: classes/Sale/Order.php:116
+#, php-format
+msgid "Заказ №%s не найден"
+msgstr "Order №%s not found"
+
+#: classes/Sale/Order.php:140
+msgid "заказ сформирован"
+msgstr "order is formed"
+
+#: classes/Sale/Order.php:141
+msgid "заказ проверен"
+msgstr "order verified"
+
+#: classes/Sale/Order.php:142
+msgid "заказ в обработке"
+msgstr "order in processing"
+
+#: classes/Sale/Order.php:143
+msgid "заказ готов к отправке, выдаче"
+msgstr "the order is ready for dispatch, delivery"
+
+#: classes/Sale/Order.php:144
+msgid "заказ отправлен"
+msgstr "the order has been sent"
+
+#: classes/Sale/Order.php:145
+msgid "заказ доставлен"
+msgstr "order delivered"
+
+#: classes/Sale/Order.php:146
+msgid "заказ отменен"
+msgstr "order Cancelled"
+
+#: classes/Sale/Order.php:171
+msgid "ожидает оплаты"
+msgstr "pending payment"
+
+#: classes/Sale/Order.php:172
+msgid "оплачен"
+msgstr "paid for"
+
+#: classes/Sale/Order.php:173
+msgid "отменен"
+msgstr "canceled"
+
+#: classes/Sale/Order.php:174
+msgid "деньги возвращены"
+msgstr "money returned"
+
+#: classes/Sale/Order.php:234
+msgid "Наименование"
+msgstr "Name"
+
+#: classes/Sale/Order.php:580
+msgid "Не указан пользователь для заказа"
+msgstr "No user specified for order"
+
+#: classes/Sale/Order.php:735
+msgid "Неправильная валюта платежа"
+msgstr ""
+
+#: classes/Sale/Order.php:736
+msgid "Неправильная сумма платежа"
+msgstr ""
+
+#: classes/Sale/Order.php:741
+msgid "Плательщик отличается от пользователя заказа"
+msgstr ""
+
+#: classes/Sale/WidgetCart.php:14 classes/Sale/WidgetCart.php:20
+msgid "Корзина"
+msgstr "Basket"
+
+#: classes/Sale/WidgetCatalog.php:39
+msgid "Страница не найдена"
+msgstr "Page not found"
+
+#: classes/Sale/WidgetOrder.php:22 widgets/sale.cart/default.twig:94
+msgid "Оформить заказ"
+msgstr "Checkout"
+
+#: config.php:9
+msgid "Управление магазином"
+msgstr "Sale management"
+
+#: config.php:95
+msgid "E-mail отдела продаж"
+msgstr "Sales departments E-mail"
+
+#: config.php:97
+msgid "Номер заказа"
+msgstr "Order number"
+
+#: config.php:98
+msgid "E-mail покупателя"
+msgstr "Buyer's E-mail"
+
+#: config.php:99
+msgid "Имя покупателя"
+msgstr "Buyer's name"
+
+#: config.php:100
+msgid "Дата заказа"
+msgstr "Order date"
+
+#: config.php:101
+msgid "Стоимость заказа"
+msgstr "Order cost"
+
+#: config.php:102
+msgid "Список товаров (HTML)"
+msgstr "List of products (HTML)"
+
+#: config.php:109
+msgid "Новый заказ в магазине"
+msgstr "New order in the store"
+
+#: config.php:110
+msgid "Отмена заказа в магазине"
+msgstr "Cancel an order in the store"
+
+#: config.php:111
+msgid "Заказ оплачен"
+msgstr ""
+
+#: config.php:120
+msgid "Магазин"
+msgstr "Shop"
+
+#: config.php:130
+msgid "Скидки"
+msgstr "Discounts"
+
+#: config.php:135
+msgid "Заказы"
+msgstr "Orders"
+
+#: config.php:140
+msgid "Платежные системы"
+msgstr "Payment systems"
+
+#: config.php:145
+msgid "Способы доставки"
+msgstr "Delivery methods"
+
+#: data_person_type.php:31
+msgid "Нельзя удалить плательщика с ID=1"
+msgstr "You can not remove a payer with ID = 1"
+
+#: lang/messages.php:5 widgets/sale.order.detail/default.twig:10
+msgid "Отменить заказ"
+msgstr "Cancel the order"
+
+#: lang/messages.php:6
+msgid "Подробности заказа"
+msgstr ""
+
+#: pay.php:12
+msgid "В настоящее время заказ не может быть оплачен"
+msgstr ""
+
+#: widgets/_common/favorite.twig:4
+msgid "Чтобы сохранять список, вам нужно:"
+msgstr "To save the list, you need:"
+
+#: widgets/_common/favorite.twig:4
+msgid "Войти"
+msgstr "To come in"
+
+#: widgets/_common/favorite.twig:5
+msgid "или"
+msgstr "or"
+
+#: widgets/_common/favorite.twig:5
+msgid "Зарегистрироваться"
+msgstr "Sign Up"
+
+#: widgets/sale.cart/default.twig:6 widgets/sale.order/default.twig:6
+msgid "Ваша корзина пуста"
+msgstr "Your basket is empty"
+
+#: widgets/sale.cart/default.twig:9 widgets/sale.compare/default.twig:4
+#: widgets/sale.order/default.twig:9 widgets/sale.order/default.twig:69
+msgid "Вернуться в каталог"
+msgstr "Back to catalog"
+
+#: widgets/sale.cart/default.twig:85
+msgid "Количество товаров"
+msgstr "Number of goods"
+
+#: widgets/sale.catalog/default.twig:70
+msgid "Сортировать по"
+msgstr "Sort by"
+
+#: widgets/sale.catalog/default.twig:72
+msgid "Названию"
+msgstr "Name"
+
+#: widgets/sale.catalog/default.twig:73
+msgid "Цене (возрастание)"
+msgstr "Price (ascending)"
+
+#: widgets/sale.catalog/default.twig:74
+msgid "Цене (убывание)"
+msgstr "Price (descending)"
+
+#: widgets/sale.catalog/default.twig:87
+msgid "Отсутствуют товары, удовлетворяющие заданным условиям."
+msgstr "There are no products that meet specified conditions."
+
+#: widgets/sale.catalog/default.twig:89
+msgid "Товары отсутствуют."
+msgstr "There are no goods."
+
+#: widgets/sale.compare.line/default.twig:7
+msgid "Сравнить"
+msgstr "Compare"
+
+#: widgets/sale.compare/default.twig:16
+msgid "Сравнить товары"
+msgstr "Compare"
+
+#: widgets/sale.compare/default.twig:27
+msgid "Список сравнения пуст"
+msgstr "Compare list is emty"
+
+#: widgets/sale.compare/default.twig:31
+msgid "Показать"
+msgstr "Show"
+
+#: widgets/sale.compare/default.twig:33 widgets/sale.compare/default.twig:36
+msgid "Только отличия"
+msgstr "Only differences"
+
+#: widgets/sale.compare/default.twig:34 widgets/sale.compare/default.twig:37
+msgid "Все параметры"
+msgstr "All fields"
+
+#: widgets/sale.compare/default.twig:54 widgets/sale.goods.list/strings.twig:31
+msgid "В наличии"
+msgstr ""
+
+#: widgets/sale.compare/default.twig:56
+#: widgets/sale.goods.item/default.twig:146
+#: widgets/sale.goods.list/strings.twig:33
+msgid "Нет в наличии"
+msgstr ""
+
+#: widgets/sale.filter/default.twig:6
+msgid "Фильтр"
+msgstr "Filter"
+
+#: widgets/sale.filter/default.twig:100
+msgid "Подобрать"
+msgstr "Pick up"
+
+#: widgets/sale.filter/default.twig:101
+msgid "Сбросить фильтр"
+msgstr "Reset filter"
+
+#: widgets/sale.goods.item/default.twig:58
+#: widgets/sale.goods.list/default.twig:16
+#: widgets/sale.goods.list/strings.twig:15
+msgid "Акция"
+msgstr "Stock"
+
+#: widgets/sale.goods.item/default.twig:66
+#: widgets/sale.goods.item/default.twig:191
+msgid "Отзывы"
+msgstr "Feedback"
+
+#: widgets/sale.goods.item/default.twig:94
+msgid "Дополнительная информация"
+msgstr "Additional info"
+
+#: widgets/sale.goods.item/default.twig:114
+msgid "Добавить в корзину"
+msgstr "Add to Basket"
+
+#: widgets/sale.goods.item/default.twig:158
+msgid "Запомнить"
+msgstr "Add to wishlist"
+
+#: widgets/sale.goods.item/default.twig:166
+msgid "Рассказать"
+msgstr "Tell"
+
+#: widgets/sale.goods.item/default.twig:217
+msgid "Отзывы покупателей"
+msgstr "Customer Reviews"
+
+#: widgets/sale.order.detail/default.twig:4
+msgid "Заказ не найден"
+msgstr "Order not found"
+
+#: widgets/sale.order.detail/default.twig:24 widgets/sale.order/default.twig:87
+msgid "Информация о покупателе"
+msgstr "Buyer information"
+
+#: widgets/sale.order.detail/default.twig:37 widgets/sale.order/default.twig:33
+msgid "Cостав заказа"
+msgstr "Order status"
+
+#: widgets/sale.order.detail/default.twig:58
+#: widgets/sale.order/default.twig:201
+msgid "шт."
+msgstr "pieces"
+
+#: widgets/sale.order.detail/default.twig:67
+msgid "Сумма заказа"
+msgstr ""
+
+#: widgets/sale.order.list/default.twig:32
+msgid "Нет заказов"
+msgstr "No orders"
+
+#: widgets/sale.order/default.twig:20
+msgid ""
+"Ваш заказ принят. В ближайшее время с Вами свяжется менеджер для уточнения "
+"деталей."
+msgstr ""
+"Your order is accepted. In the near future the manager will contact you to "
+"clarify the details."
+
+#: widgets/sale.order/default.twig:24
+msgid "Показать подробности заказа"
+msgstr "Show order details"
+
+#: widgets/sale.order/default.twig:27
+msgid "на сумму"
+msgstr "for the amount of"
+
+#: widgets/sale.order/default.twig:62
+msgid "ИТОГО"
+msgstr "TOTAL"
+
+#: widgets/sale.order/default.twig:165
+msgid "Рассчитать"
+msgstr "Calculate"
+
+#: widgets/sale.order/default.twig:183
+msgid "Проверьте состав заказа"
+msgstr "Check the contents of the order"
+
+#: widgets/sale.order/default.twig:210
+msgid "Изменить состав заказа в корзине"
+msgstr "Change the order in the cart"
+
+#: widgets/sale.order/default.twig:220
+msgid "Подтвердить заказ"
+msgstr "Valide purchase"
+
+#: widgets/sale.wish.list/default.twig:33
+msgid "Список пуст"
+msgstr "The list is empty"

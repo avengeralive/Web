@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Google Analytics</name>
+    <version>5</version>
+    <code>soforp-google-analytics</code>
+    <author>Alexander Sorokin</author>
+
+    <file path="catalog/controller/common/footer.php">
+        <operation>
+            <search><![CDATA[$data['return'] =]]></search>
+            <add position="before"><![CDATA[				/* NeoSeo Google Analytics - begin */
+				$status = $this->config->get('neoseo_google_analytics_status');
+
+				if ($status[$this->config->get('config_store_id')]) {
+					$this->load->model('analytics/neoseo_google_analytics');
+					$data['neoseo_google_analytics_remarketing'] = $this->model_analytics_neoseo_google_analytics->getRemarketing();
+				} else {
+				    $data['neoseo_google_analytics_remarketing'] = false;
+				}
+				/* NeoSeo Google Analytics - end */]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/common/footer.tpl">
+        <operation>
+            <search><![CDATA[</footer>]]></search>
+            <add position="after"><![CDATA[
+<?php if( $neoseo_google_analytics_remarketing && $neoseo_google_analytics_remarketing['conversion'] ) { ?>
+<!-- NeoSeo Google Remarketing Tag -->
+<script type="text/javascript">
+    var google_tag_params = {
+<?php if( is_array($neoseo_google_analytics_remarketing["ecomm_prodid"]) ) { ?>
+        ecomm_prodid: ['<?php echo implode("', '", $neoseo_google_analytics_remarketing["ecomm_prodid"]); ?>'],
+<?php } else { ?>
+        ecomm_prodid: '<?php echo $neoseo_google_analytics_remarketing["ecomm_prodid"]; ?>',
+<?php } ?>
+        ecomm_pagetype: '<?php echo $neoseo_google_analytics_remarketing["ecomm_pagetype"]; ?>',
+<?php if( is_array($neoseo_google_analytics_remarketing["ecomm_totalvalue"]) ) { ?>
+        ecomm_totalvalue: [<?php echo implode(", ",$neoseo_google_analytics_remarketing["ecomm_totalvalue"]); ?>],
+<?php } else { ?>
+        ecomm_totalvalue: <?php echo $neoseo_google_analytics_remarketing["ecomm_totalvalue"]; ?>,
+<?php } ?>
+    };
+</script>
+<script type="text/javascript">
+    var google_conversion_id = <?php echo $neoseo_google_analytics_remarketing['conversion']; ?>;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/<?php echo $neoseo_google_analytics_remarketing['conversion']; ?>/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+<!-- End of NeoSeo Google Remarketing Tag -->
+<?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/checkout/success.php">
+        <operation>
+            <search><![CDATA[if (isset($this->session->data['order_id'])) {]]></search>
+            <add position="after"><![CDATA[			/* NeoSeo Google Analytics E-Commerce - begin */
+			$order_id = $this->session->data['order_id'];
+
+
+			$json = array();
+
+			$order_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE order_id = '" . (int)$order_id . "'");
+			$json['order_id'] = $order_query->row['order_id'];
+			$json['total'] = $order_query->row['total'];
+			$json['store_name'] = $order_query->row['store_name'];
+
+			$json['shipping'] = 0;
+			$order_shipping_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_total WHERE order_id = '" . (int)$order_id . "' and code='shipping'");
+			if( $order_shipping_query->num_rows ) {
+				$json['shipping'] = $order_shipping_query->row['value'];
+			}
+
+			$json['tax'] = 0;
+			$order_tax_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_total WHERE order_id = '" . (int)$order_id . "' and code='tax'");
+			if( $order_tax_query->num_rows ) {
+				$json['tax'] = $order_tax_query->row['value'];
+			}
+
+			$json['products'] = array();
+			$order_product_query = $this->db->query("SELECT op.*, p.sku FROM " . DB_PREFIX . "order_product op left join " . DB_PREFIX . "product p on ( op.product_id = p.product_id)  WHERE order_id = '" . (int)$order_id . "'");
+			foreach( $order_product_query->rows as $product ) {
+
+				$json['products'][] = array(
+					'name' => $product["name"],         // Product name. Required.
+					'sku' => $product["sku"],           // SKU/code.
+					'category' => '',                   // Category or variation.
+					'price' => $product["price"],       // Unit price.
+					'quantity' => $product["quantity"]  // Quantity.
+				);
+			}
+
+			$data['ecommerce'] = "<script>sendGoogleECommerceTransaction(" . json_encode($json) . ");</script>";
+			//$this->log->write('ecommerce:' . $data['ecommerce']);
+
+			/* NeoSeo Google Analytics E-Commerce - end */
+]]></add>
+        </operation>
+    </file>
+
+
+    <file path="catalog/view/theme/*/template/common/success.tpl">
+        <operation>
+            <search><![CDATA[<?php echo $footer; ?>]]></search>
+            <add position="before"><![CDATA[
+
+<!-- NeoSeo Google Ecommerce Func -->
+<?php
+    if(isset($ecommerce)){
+     echo $ecommerce;
+    }
+ ?>
+<!-- End of NeoSeo Google Ecommerce Func -->
+
+                ]]></add>
+        </operation>
+    </file>
+
+</modification>

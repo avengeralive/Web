@@ -1,0 +1,583 @@
+# Copyright (C) 2018 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Period 1.220\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2018-11-05 14:35:13+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#: 404.php:6
+msgid "404: Page Not Found"
+msgstr ""
+
+#: 404.php:9
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+
+#: comments.php:12 comments.php:32 comments.php:54
+msgid "Be First to Comment"
+msgstr ""
+
+#: comments.php:12 comments.php:32 comments.php:54
+msgid "One Comment"
+msgstr ""
+
+#: comments.php:46
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this "
+"post\">trackbacks</a> and pingbacks are open."
+msgstr ""
+
+#: comments.php:68 comments.php:85
+msgid "Comments are closed."
+msgstr ""
+
+#: content/comments-link.php:2
+msgid "comment icon"
+msgstr ""
+
+#: content/comments-link.php:5
+msgid "Comments closed"
+msgstr ""
+
+#: content/comments-link.php:5 content/comments-link.php:8
+msgid "1 Comment"
+msgstr ""
+
+#: content/comments-link.php:8
+msgid "Leave a Comment"
+msgstr ""
+
+#: content/post-nav-attachment.php:3
+msgid "Previous Image"
+msgstr ""
+
+#: content/post-nav-attachment.php:6
+msgid "Next Image"
+msgstr ""
+
+#: content/post-nav.php:6
+msgid "Previous Post"
+msgstr ""
+
+#: content/post-nav.php:9
+msgid "No Older Posts"
+msgstr ""
+
+#: content/post-nav.php:15 content/post-nav.php:28
+msgid "Return to Blog"
+msgstr ""
+
+#: content/post-nav.php:19
+msgid "Next Post"
+msgstr ""
+
+#: content/post-nav.php:22
+msgid "No Newer Posts"
+msgstr ""
+
+#: content/post-tags.php:8
+msgid "View all posts tagged %s"
+msgstr ""
+
+#: content/search-bar.php:11 searchform.php:3 searchform.php:6
+msgid "Search"
+msgstr ""
+
+#: content/search-bar.php:12
+msgid "Search..."
+msgstr ""
+
+#: content/search-bar.php:13 searchform.php:5
+msgid "Search for:"
+msgstr ""
+
+#: content-page.php:12 content.php:13 templates/full-width.php:22
+msgid "Pages:"
+msgstr ""
+
+#: footer.php:15
+msgid "<a href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes."
+msgstr ""
+
+#: functions.php:19
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Period for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:52
+msgid "Primary"
+msgstr ""
+
+#: functions.php:71
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:73
+msgid ""
+"Widgets in this area will be shown in the sidebar next to the main post "
+"content"
+msgstr ""
+
+#: functions.php:101
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:125
+msgid "(optional)"
+msgstr ""
+
+#: functions.php:131
+msgid "Jane Doe"
+msgstr ""
+
+#: functions.php:138
+msgid "name@email.com"
+msgstr ""
+
+#: functions.php:144
+msgid "Website"
+msgstr ""
+
+#: functions.php:198 functions.php:262
+msgid "Continue reading"
+msgstr ""
+
+#: functions.php:467
+msgid "Featured"
+msgstr ""
+
+#: functions.php:534
+msgid "Customizer settings deleted."
+msgstr ""
+
+#: functions.php:540
+msgid "%s successfully activated!"
+msgstr ""
+
+#: functions.php:749
+msgid "Scroll to the top"
+msgstr ""
+
+#: header.php:11
+msgid "Press \"Enter\" to skip to content"
+msgstr ""
+
+#: inc/customizer.php:15
+msgid "Front Page"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:31
+msgid "Change your layouts across the site"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Upload a logo"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Adjust the size of the logo"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Add the URL for each of your social profiles."
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Email Address"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Phone"
+msgstr ""
+
+#: inc/customizer.php:119
+msgid "Google Plus"
+msgstr ""
+
+#: inc/customizer.php:121
+msgid "RSS"
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "SoundCloud"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "SlideShare"
+msgstr ""
+
+#: inc/customizer.php:127
+msgid "CodePen"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "StumbleUpon"
+msgstr ""
+
+#: inc/customizer.php:131
+msgid "DeviantArt"
+msgstr ""
+
+#: inc/customizer.php:133
+msgid "Hacker News"
+msgstr ""
+
+#: inc/customizer.php:135
+msgid "Google Wallet"
+msgstr ""
+
+#: inc/customizer.php:137
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid "QQ"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "VK"
+msgstr ""
+
+#: inc/customizer.php:143
+msgid "WeChat"
+msgstr ""
+
+#: inc/customizer.php:145
+msgid "Tencent Weibo"
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "PayPal"
+msgstr ""
+
+#: inc/customizer.php:149
+msgid "OK.ru"
+msgstr ""
+
+#: inc/customizer.php:151
+msgid "Stack Overflow"
+msgstr ""
+
+#: inc/customizer.php:153
+msgid "Contact Form"
+msgstr ""
+
+#: inc/customizer.php:165
+msgid ""
+"Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
+"more</a>)"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Search Bar"
+msgstr ""
+
+#: inc/customizer.php:202
+msgid "Show search bar at top of site?"
+msgstr ""
+
+#: inc/customizer.php:206 inc/customizer.php:378 inc/customizer.php:394
+#: inc/customizer.php:466 inc/customizer.php:510
+msgid "Show"
+msgstr ""
+
+#: inc/customizer.php:207 inc/customizer.php:379 inc/customizer.php:395
+#: inc/customizer.php:467 inc/customizer.php:511
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer.php:215
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer.php:217 inc/customizer.php:241 inc/customizer.php:265
+#: inc/customizer.php:289
+msgid ""
+"Want more layouts? Check out the <a target=\"_blank\" href=\"%1$s\">%2$s "
+"Pro plugin</a>."
+msgstr ""
+
+#: inc/customizer.php:228 inc/customizer.php:252 inc/customizer.php:276
+#: inc/customizer.php:300
+msgid "Choose your layout"
+msgstr ""
+
+#: inc/customizer.php:233 inc/customizer.php:257 inc/customizer.php:281
+#: inc/customizer.php:305 inc/customizer.php:525
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:234 inc/customizer.php:258 inc/customizer.php:282
+#: inc/customizer.php:306 inc/customizer.php:526
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:239
+msgid "Pages"
+msgstr ""
+
+#: inc/customizer.php:263
+msgid "Blog"
+msgstr ""
+
+#: inc/customizer.php:287
+msgid "Archives"
+msgstr ""
+
+#: inc/customizer.php:324
+msgid "Show full posts on blog?"
+msgstr ""
+
+#: inc/customizer.php:329 inc/customizer.php:418 inc/customizer.php:485
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:330 inc/customizer.php:419 inc/customizer.php:486
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:340
+msgid "Excerpt word count"
+msgstr ""
+
+#: inc/customizer.php:347
+msgid "Continue Reading"
+msgstr ""
+
+#: inc/customizer.php:352
+msgid "Read More button text"
+msgstr ""
+
+#: inc/customizer.php:362
+msgid "Display Controls"
+msgstr ""
+
+#: inc/customizer.php:364
+msgid ""
+"Want more options like these? Check out the <a target=\"_blank\" "
+"href=\"%1$s\">%2$s Pro plugin</a>."
+msgstr ""
+
+#: inc/customizer.php:374
+msgid "Post author name in byline"
+msgstr ""
+
+#: inc/customizer.php:390
+msgid "Post date in byline"
+msgstr ""
+
+#: inc/customizer.php:403
+msgid "Scroll-to-Top Arrow"
+msgstr ""
+
+#: inc/customizer.php:413
+msgid "Display Scroll-to-top arrow?"
+msgstr ""
+
+#: inc/customizer.php:439
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:450
+msgid "Add Custom CSS Here"
+msgstr ""
+
+#: inc/customizer.php:527
+msgid "No sidebar - Narrow"
+msgstr ""
+
+#: inc/customizer.php:528
+msgid "No sidebar - Wide"
+msgstr ""
+
+#: inc/customizer.php:529
+msgid "Two column - Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:530
+msgid "Two column - Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:531
+msgid "Two column - No Sidebar - Narrow"
+msgstr ""
+
+#: inc/customizer.php:532
+msgid "Two column - No Sidebar - Wide"
+msgstr ""
+
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
+
+#: index.php:21
+msgid "Previous"
+msgstr ""
+
+#: index.php:22
+msgid "Next"
+msgstr ""
+
+#: search.php:9
+msgid "%1$d search result for \"%2$s\""
+msgid_plural "%1$d search results for \"%2$s\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr ""
+
+#: search.php:34
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr ""
+
+#: searchform.php:5
+msgid "Search for..."
+msgstr ""
+
+#: sidebar-primary.php:12
+msgid "Sidebar"
+msgstr ""
+
+#: theme-options.php:4 theme-options.php:20
+msgid "%s Dashboard"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Period is a dark, clean, and SEO-optimized blogging theme. As a responsive "
+"theme, it displays your content beautifully across phones, widescreen "
+"monitors, and everything in between. With special attention to typography, "
+"accessibility, and minimalism, Period has a design you can trust for "
+"presenting your content. Now with WooCommerce support, you can include an "
+"eCommerce shop right on your website (for free). Use Period to blog about "
+"the news, music, travel, business, gaming, you name it! It’s equally "
+"well-suited for a corporate blog or personal podcast. Preview Period on "
+"desktop, tablets, and mobile devices with the interactive live demo: "
+"https://www.competethemes.com/demos/?theme=period"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
+msgstr ""
+
+#: comments.php:12 comments.php:32 comments.php:54 content/comments-link.php:5
+#: content/comments-link.php:8
+msgctxt "noun: 5 comments"
+msgid "% Comments"
+msgstr ""
+
+#: content/archive-header.php:4
+msgctxt "noun: Site Title posts"
+msgid "Posts"
+msgstr ""
+
+#: content/post-byline.php:14
+msgctxt "This blog post was published on some date"
+msgid "Published %s"
+msgstr ""
+
+#: content/post-byline.php:16
+msgctxt "This blog post was published by some author"
+msgid "Published by %s"
+msgstr ""
+
+#: content/post-byline.php:18
+msgctxt "This blog post was published on some date by some author"
+msgid "Published %1$s by %2$s"
+msgstr ""
+
+#: content/post-categories.php:10
+msgctxt "Published in post category"
+msgid "Published in"
+msgstr ""
+
+#: content/post-categories.php:15
+msgctxt "category, category, AND category"
+msgid "and"
+msgstr ""
+
+#: content/post-categories.php:17
+msgctxt "View all posts in post category"
+msgid "View all posts in %s"
+msgstr ""
+
+#: functions.php:108
+msgctxt "verb: reply to this comment"
+msgid "Reply"
+msgstr ""
+
+#: functions.php:113
+msgctxt "verb: edit this comment"
+msgid "Edit"
+msgstr ""
+
+#: functions.php:130
+msgctxt "noun"
+msgid "Name"
+msgstr ""
+
+#: functions.php:137
+msgctxt "noun"
+msgid "Email"
+msgstr ""
+
+#: functions.php:166
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: functions.php:402 functions.php:403
+msgctxt "noun"
+msgid "email"
+msgstr ""
+
+#: functions.php:454 inc/scripts.php:18
+msgctxt "verb: open the dropdown menu"
+msgid "open dropdown menu"
+msgstr ""
+
+#: header.php:23 inc/scripts.php:16
+msgctxt "verb: open the menu"
+msgid "open menu"
+msgstr ""
+
+#: inc/customizer.php:314
+msgctxt "noun: blog section"
+msgid "Blog"
+msgstr ""
+
+#: inc/scripts.php:17
+msgctxt "verb: close the menu"
+msgid "close menu"
+msgstr ""
+
+#: inc/scripts.php:19
+msgctxt "verb: close the dropdown menu"
+msgid "close dropdown menu"
+msgstr ""

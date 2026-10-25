@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title> {% if ACTIVE_GLOBALCAT == 'M' %} Металлопрокат {% elif ACTIVE_GLOBALCAT == 'N' %} Нержавейка {% else %} Цвет.Мет {% endif %} | {{ mcat }} – купить в Санкт-Петербурге.</title>
+    <meta name="keywords" content="{% if ACTIVE_GLOBALCAT == 'M' %} Металлопрокат {% elif ACTIVE_GLOBALCAT == 'N' %} Нержавейка {% else %} Цвет.Мет {% endif %} , {{ mcat }}, купить, цена, прайс-лист, стоимость, в Санкт-Петербурге">
+    <meta name="description" content=" {% if ACTIVE_GLOBALCAT == 'M' %} Металлопрокат {% elif ACTIVE_GLOBALCAT == 'N' %} Нержавейка {% else %} Цвет.Мет {% endif %} | {{ mcat }} в Санкт-Петербурге – актуальный прайс-лист с ценами: +7 (812) 777-53-71.">
+{% endblock %}
+
+{% block content %}
+    <!--<div class="select_buy">-->
+    	<!--<div class="container">-->
+    		<!--<div class="first_line">-->
+    			<!--<a href="/price/M" class="item {% if ACTIVE_GLOBALCAT == 'M' %} active {% endif %}">-->
+    				<!--<span class="name">Металлопрокат</span>-->
+    				<!--<span class="buy">Выбрать</span>-->
+    				<!--<img src="/static/images/item01.png" alt="">-->
+    			<!--</a>-->
+    			<!--<a href="/price/N" class="item {% if ACTIVE_GLOBALCAT == 'N' %} active {% endif %}">-->
+    				<!--<span class="name">Нержавейка</span>-->
+    				<!--<span class="buy">Выбрать</span>-->
+    				<!--<img src="/static/images/item02.png" alt="">-->
+    			<!--</a>-->
+    			<!--<a href="/price/C" class="item {% if ACTIVE_GLOBALCAT == 'C' %} active {% endif %}">-->
+    				<!--<span class="name">Цвет.Мет</span>-->
+    				<!--<span class="buy">Выбрать</span>-->
+    				<!--<img src="/static/images/item03.png" alt="">-->
+    			<!--</a>-->
+    		<!--</div>-->
+            <!--<div class="second_line">-->
+            	<!--<div class="icon">-->
+                    <!--{% for item in Meta_cats %}-->
+            		<!--<a href="/price/{{ item.type }}/{{item.slug}}/"{% if item.slug == ACTIVE_MCAT %} class="active" {% endif %}><span class="img"><img src="{{ item.image.url }}" alt=""></span><span class="text">{{ item.title }}</span></a>-->
+            	    <!--{% endfor %}-->
+                <!--</div>-->
+<!--<h3 style="text-align: center">Выберите тип</h3>-->
+                        <!--<div class="column">-->
+                	<!--<ul>-->
+                                                <!--{% for item in cats|NatSort %}-->
+                		<!--<li><a href="/price/{{ item.type }}/{{ item.parent.slug }}/{{ item.slug }}/">{{ item.title }}</a></li>-->
+                        <!--{% endfor %}-->
+                	<!--</ul>-->
+                <!--</div>-->
+    	<!--</div>-->
+    <div class="wrapper">
+    	<div class="container">
+        	<div class="breadcrumbs"><a href="#">Главная</a>Каталог</div>
+            <div class="tabs">
+            	<ul class="tabs_list">
+            		<li class="{% if ACTIVE_GLOBALCAT == 'M' %} current {% endif %}"><a href="/price/M" >Металлопрокат</a></li>
+            		<li class="{% if ACTIVE_GLOBALCAT == 'N' %} current {% endif %}"><a href="/price/N">Нержавейка</a></li>
+            		<li class="{% if ACTIVE_GLOBALCAT == 'C' %} current {% endif %}"><a href="/price/C">Цветные металлы</a></li>
+            	</ul>
+            </div>
+            <div class="sub_tabs">
+            	<ul class="sub_tabs_list">
+					                    {% for item in Meta_cats %}
+
+            		<li {% if item.slug == ACTIVE_MCAT %} class="current" {% endif %}><a href="/price/{{ item.type }}/{{item.slug}}/">{{ item.title }}</a></li>
+					            	    {% endfor %}
+            	</ul>
+            </div>
+            <div class="catalog_list_fourcolumn">
+                <ul>
+					                                                {% for item in cats|NatSort %}
+                    <li class="current"><a href="/price/{{ item.type }}/{{ item.parent.slug }}/{{ item.slug }}/">{{ item.title }}</a></li>
+					{% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+<div style='display:none'>
+    <div id='popup_call_back'>
+	    <a href="#" class="close"></a>
+        <div class="parent_popup">
+            <div class="title">Обратный звонок</div>
+            <div class="sub_title">Уважаемый клиент!<br>
+            Укажите ваши имя и телефон, и наш менеджер<br>
+            перезвонит Вам в ближайшее время.</div>
+            <form action="#">
+              <div class="line_form"><input type="text" placeholder="Ваше имя"><div class="asterisk"></div></div>
+              <div class="line_form"><input type="text" placeholder="Ваш телефон"><div class="asterisk"></div></div>
+              <div class="line_form"><label class="label_name">Удобное время для звонка</label></div>
+              <div class="line_form column">
+              	<label><input type="radio" /> <div class="text">с 9:00<br>до 12:00</div></label>
+                <label><input type="radio" /> <div class="text">с 13:00<br>до 14:00</div></label>
+                <label><input type="radio" /> <div class="text">с 13:00<br>до 14:00</div></label>
+              </div>
+              <div class="line_btn"><input type="submit" value="Отправить"></div>
+            </form>
+        </div>
+        
+
+    </div>
+</div>
+
+{% endblock %}

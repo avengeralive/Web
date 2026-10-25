@@ -1,0 +1,41 @@
+.icon-fix-before:before{
+    background-image: url('/wp-content/themes/mark_up/css/../images/sprite.png');
+}
+.footer-request-call-fix{
+    padding: 1px 10px 4px 10px !important;
+}
+.footer-info-fix{
+    margin-top:9px !important;
+    font-size:14px !important;
+}
+.fade:not(.show){
+    opacity: 1;
+}
+.modal {
+    height: !important;
+    top: auto !important;;
+}
+.option-input{
+    position: relative;
+}
+.modal-header .close{
+    right: 15px;
+    margin:15px;
+    padding: 0;
+    position: absolute;
+}
+.input_type_textarea{
+    width:100%;
+}
+.contact-info {
+    position: relative;
+    display: inline-flex;
+}
+.contact-info a:hover, .contact-info a:active, .contact-info a:focus {
+    color: #f2bb31 !important;
+}
+@media screen and (max-width: 480px) {
+    .form_title{
+        margin-top:40px !important;
+    }
+}

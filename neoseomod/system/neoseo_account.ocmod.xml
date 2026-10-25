@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>NeoSeo account</name>
+	<version>27</version>
+	<code>neoseo-account</code>
+	<author>Alexander Sorokin</author>
+	<link>http://neoseo.com.ua/</link>
+
+
+	<file path="catalog/controller/account/account.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_account');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/account/forgotten.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_forgotten');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/account/login.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_login');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/account/logout.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_logout');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/account/order.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_order');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+
+	<file path="catalog/controller/account/register.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_register');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/account/edit.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_edit');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+
+	<file path="catalog/controller/account/reward.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_reward');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/account/wishlist.php">
+		<operation>
+			<search><![CDATA[
+				public function index() {
+			]]></search>
+			<add position="after"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		if ( $this->config->get('neoseo_account_status') ) {
+			return new Action('account/neoseo_wishlist');
+		}
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/common/header.php">
+		<operation>
+			<search><![CDATA[
+			$this->document->getScripts();
+			]]></search>
+			<add position="before"><![CDATA[
+
+		/* NeoSeo Account - begin */
+		$this->document->addScript('catalog/view/javascript/jquery/jquery.validation/jquery.validate.js');
+		$this->document->addScript('catalog/view/javascript/jquery/jquery.validation/additional-methods.js');
+		if($this->config->get('config_language') === 'ua' || $this->config->get('config_language') === 'uk') {
+            $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/localization/messages_uk.js');
+        } else {
+            $this->document->addScript('catalog/view/javascript/jquery/jquery.validation/localization/messages_ru.js');
+        }
+		/* NeoSeo Account - end */
+
+			]]></add>
+		</operation>
+	</file>
+
+
+</modification>

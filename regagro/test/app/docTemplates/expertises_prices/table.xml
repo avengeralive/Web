@@ -1,0 +1,92 @@
+					<w:tbl>
+						<w:tblPr>
+							<w:tblStyle w:val="a3"/>
+							<w:tblW w:w="9606" w:type="dxa"/>
+							<w:tblLayout w:type="fixed"/>
+							<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+						</w:tblPr>
+						<w:tblGrid>
+							<w:gridCol w:w="2943"/>
+							<w:gridCol w:w="2835"/>
+							<w:gridCol w:w="1276"/>
+							<w:gridCol w:w="1134"/>
+							<w:gridCol w:w="1418"/>
+						</w:tblGrid>
+						<w:tr w:rsidR="00760B6E" w:rsidRPr="0095130F" w:rsidTr="00760B6E">
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2943" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRDefault="00760B6E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Вид продукции</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="2835" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRDefault="00760B6E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Продукция</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1389" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRDefault="00760B6E" w:rsidP="00760B6E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>Ед. измерения</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1134" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRDefault="00760B6E" w:rsidP="00760B6E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:proofErr w:type="gramStart"/>
+									<w:r>
+										<w:t>Коли-чество</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+							<w:tc>
+								<w:tcPr>
+									<w:tcW w:w="1418" w:type="dxa"/>
+								</w:tcPr>
+								<w:p w:rsidR="00760B6E" w:rsidRDefault="00760B6E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t xml:space="preserve">Сумма </w:t>
+									</w:r>
+								</w:p>
+								<w:p w:rsidR="00760B6E" w:rsidRDefault="00760B6E" w:rsidP="00BB668E">
+									<w:pPr>
+										<w:jc w:val="center"/>
+									</w:pPr>
+									<w:r>
+										<w:t>(руб.)</w:t>
+									</w:r>
+								</w:p>
+							</w:tc>
+						</w:tr>
+						${iteration}
+					</w:tbl>

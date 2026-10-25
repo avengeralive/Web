@@ -1,0 +1,145 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+Redirect 301 /services/ https://kst-clinic.ru/uslugi/
+Redirect 301 /гинекологический-кабинет-smart-innovation/ https://kst-clinic.ru/uslugi/гинекологический-кабинет-smart-innovation/
+Redirect 301 /uslugi/гинекологический-кабинет-smart-innovation/ https://kst-clinic.ru/uslugi/ginekologicheskiy-kabinet-smart-innovation/
+Redirect 301 /неоперативная-гинекология/ https://kst-clinic.ru/uslugi/неоперативная-гинекология/
+Redirect 301 /uslugi/неоперативная-гинекология/ https://kst-clinic.ru/uslugi/neoperativnaya-ginekologiya/
+Redirect 301 /оперативная-гинекология/ https://kst-clinic.ru/uslugi/оперативная-гинекология/
+Redirect 301 /uslugi/оперативная-гинекология/ https://kst-clinic.ru/uslugi/operativnaya-ginekologiya/
+Redirect 301 /ведение-беременности/ https://kst-clinic.ru/uslugi/ведение-беременности/
+Redirect 301 /uslugi/ведение-беременности/ https://kst-clinic.ru/uslugi/vedenie-beremennosti/
+
+Redirect 301 /лазерное-интимное-омоложение/ https://kst-clinic.ru/uslugi/лазерное-интимное-омоложение/
+Redirect 301 /uslugi/лазерное-интимное-омоложение/ https://kst-clinic.ru/uslugi/lazernoe-intimnoe-omologenie/
+
+Redirect 301 /эстетическая-гинекология/ https://kst-clinic.ru/uslugi/эстетическая-гинекология/
+Redirect 301 /uslugi/эстетическая-гинекология/ https://kst-clinic.ru/uslugi/esteticheskaya-ginekologiya/
+
+Redirect 301 /интимная-контурная-пластика/ https://kst-clinic.ru/uslugi/интимная-контурная-пластика/
+Redirect 301 /uslugi/интимная-контурная-пластика/ https://kst-clinic.ru/uslugi/intimnaya-konturnaya-plastika/
+
+Redirect 301 /неоперативная-урология/ https://kst-clinic.ru/uslugi/неоперативная-урология/
+Redirect 301 /uslugi/неоперативная-урология/ https://kst-clinic.ru/uslugi/neoperativnaya-urologiya/
+
+Redirect 301 /оперативная-урология/ https://kst-clinic.ru/uslugi/оперативная-урология/
+Redirect 301 /uslugi/оперативная-урология/ https://kst-clinic.ru/uslugi/operativnaya-urologiya/
+
+Redirect 301 /флебология/ https://kst-clinic.ru/uslugi/флебология/
+Redirect 301 /uslugi/флебология/ https://kst-clinic.ru/uslugi/flebologiya/
+
+Redirect 301 /операционный-блок/ https://kst-clinic.ru/uslugi/операционный-блок/
+Redirect 301 /uslugi/операционный-блок/ https://kst-clinic.ru/uslugi/operation-block/
+
+Redirect 301 /дневной-стационар/ https://kst-clinic.ru/uslugi/дневной-стационар/
+Redirect 301 /uslugi/дневной-стационар/ https://kst-clinic.ru/uslugi/dnevnoy-statcionar/
+
+Redirect 301 /анализы-и-лабораторная-диагностика/ https://kst-clinic.ru/uslugi/анализы-и-лабораторная-диагностика/
+Redirect 301 /uslugi/анализы-и-лабораторная-диагностика/ https://kst-clinic.ru/uslugi/analizy-i-laboratornaya-diagnostika/
+
+Redirect 301 /процедурное-дело/ https://kst-clinic.ru/uslugi/процедурное-дело/
+Redirect 301 /uslugi/процедурное-дело/ https://kst-clinic.ru/uslugi/procedurnoe-delo/
+
+Redirect 301 /узи-диагностика/ https://kst-clinic.ru/uslugi/узи-диагностика/
+Redirect 301 /uslugi/узи-диагностика/ https://kst-clinic.ru/uslugi/uzi-diagnostika/
+
+Redirect 301 /удаление-кожных-новообразований/ https://kst-clinic.ru/uslugi/удаление-кожных-новообразований/
+Redirect 301 /uslugi/удаление-кожных-новообразований/ https://kst-clinic.ru/uslugi/udalenie-kognuh-novoobrazovaniy/
+
+Redirect 301 /маммология/ https://kst-clinic.ru/uslugi/маммология/
+Redirect 301 /uslugi/маммология/ https://kst-clinic.ru/uslugi/mammologiya/
+
+Redirect 301 /терапия/ https://kst-clinic.ru/uslugi/терапия/
+Redirect 301 /uslugi/терапия/ https://kst-clinic.ru/uslugi/terapiya/
+
+Redirect 301 /медицинские-справки/ https://kst-clinic.ru/uslugi/медицинские-справки/
+Redirect 301 /uslugi/медицинские-справки/ https://kst-clinic.ru/uslugi/meditcinskiye-spravki/
+
+Redirect 301 /анзимирова-наталья-владиславовна/ https://kst-clinic.ru/anzimirova-natalya-vladislavovna/
+
+Redirect 301 /кучерук-оксана-петровна/ https://kst-clinic.ru/kucheruk-oksana-petrovna/
+
+
+Redirect 301 /харичкова-алевтина-михайловна/ https://kst-clinic.ru/harichkova-alevtina-mihaylovna/
+
+
+Redirect 301 /вовк-ирина-леонидовна/ https://kst-clinic.ru/vovk-irina-leonidovna/
+
+
+Redirect 301 /валентинова-наталья-николаевна/ https://kst-clinic.ru/valentinova-natalya-nikolaevna/
+
+Redirect 301 /суздальцева-ирина-валерьевна/ https://kst-clinic.ru/suzdalceva-irina-valeryevna/
+
+
+Redirect 301 /пастухова-нина-михайловна/ https://kst-clinic.ru/pastuhova-nina-mihaylovna/
+
+
+Redirect 301 /никитина-татьяна-николаевна/ https://kst-clinic.ru/nikitina-tatyana-nikolaevna/
+
+
+Redirect 301 /скороход-борис-геннадьевич https://kst-clinic.ru/skorohod-boris-gennadyevich/
+
+Redirect 301 /вервихвост-андрей-викторович/ https://kst-clinic.ru/vervihvost-andrey-viktorovich/
+
+Redirect 301 /сокольников-михаил-валерьевич/ https://kst-clinic.ru/sokolnikov-mihail-valeryevich/
+
+
+Redirect 301 /глобов-владимир-викторович/ https://kst-clinic.ru/globov-vladimir-viktorovich/
+
+Redirect 301 /после-оперативного-вмешательства/ https://kst-clinic.ru/posle-operativnogo-vmeshatelstva/
+
+Redirect 301 /подготовка-к-операции/ https://kst-clinic.ru/podgotovka-k-operatcii/
+
+Redirect 301 /подготовка-к-сдаче-анализа-крови/ https://kst-clinic.ru/podgotovka-k-sdache-analiza-krovi/
+
+Redirect 301 /uslugi/neoperativnaya-urologiya/ /uslugi/urologiya/
+Redirect 301 /uslugi/ginekologicheskiy-kabinet-smart-innovation/ /uslugi/kabinet-smart-innovation/
+Redirect 301 /uslugi/procedurnoe-delo/ /uslugi/procedurniy-kabinet/
+
+
+Redirect 301 /иванова-олеся-ивановна/ https://kst-clinic.ru/ivanova-olesya-ivanovna/
+
+
+Redirect 301 /румянцева-софья-константиновна/ https://kst-clinic.ru/rumyanceva-sofya-konstantinovna/
+
+
+Redirect 301 /суворова-светлана-николаевна/ https://kst-clinic.ru/suvorova-svetlana-nikolaevna/
+
+
+Redirect 301 /прахницкая-анна-николаевна/ https://kst-clinic.ru/prahnitckaya-anna-nikolaevna/
+
+
+Redirect 301 /свиридова-ольга-ивановна/ https://kst-clinic.ru/sviridova-olga-ivanovna/
+
+
+Redirect 301 /patients/оплата-услуг/ https://kst-clinic.ru/patients/oplata-uslug/
+
+Redirect 301 /patients/лечение-по-дмс/ https://kst-clinic.ru/patients/lechenie-po-dms/
+
+Redirect 301 /patients/задать-вопрос/ https://kst-clinic.ru/patients/zadat-vopros/
+
+Redirect 301 /политика-конфиденциальности/ https://kst-clinic.ru/politika-konfidentcialnosti/
+
+Redirect 301 /пользовательское-соглашение/ https://kst-clinic.ru/polzovatelskoe-soglashenie/
+
+Redirect 301 /uslugi/lechenie-patologiy-sheyki-matki/eroziya-sheyki-matki/lechenie-posle-prijiganiya-erozii-sheyki-matki/ https://kst-clinic.ru/uslugi/lechenie-patologiy-sheyki-matki/eroziya-sheyki-matki/
+
+Redirect 301 /uslugi/lechenie-patologiy-sheyki-matki/displaziya-sheyki-matki-lechenie/konservativnoe-lechenie-displazii-sheyki-matki/ https://kst-clinic.ru/uslugi/lechenie-patologiy-sheyki-matki/displaziya-sheyki-matki-lechenie/
+
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+SetEnvIf X-HTTPS 1 HTTPS
+

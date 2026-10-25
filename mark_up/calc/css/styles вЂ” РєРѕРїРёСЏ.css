@@ -1,0 +1,366 @@
+/*! Infoshell Calc */
+#calculator {
+    font-family:'Montserrat',sans-serif;
+    color:#fff;
+    text-align:center;
+    background-image:url('../img/bg-black.jpg');
+    background-position:top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight:bold;
+    padding:50px;
+}
+
+#calculator header h2,
+#calculator header .h2,
+#calculator header h3,
+#calculator header .h3{
+    font-size: 44px;
+    text-transform: none;
+    letter-spacing: -1.3px;
+}
+#calculator header p,
+#calculator .header p{
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: -0.8px;
+}
+
+
+
+/* DEFAULTS */
+#calculator .btn{
+    white-space: normal;
+    text-transform: none;
+}
+
+#calculator .calc-send .container,
+#calculator .nav-tabs,
+#calculator .nav-tabs > li > a,
+#calculator .nav-tabs > li > a:hover,
+#calculator .nav-tabs > li.active > a,
+#calculator .nav-tabs > li.active > a:focus,
+#calculator .nav-tabs > li.active > a:hover,
+#calculator .btn-primary,
+#calculator .btn-default,
+#calculator .btn-default:focus,
+#calculator .btn-default.focus,
+#calculator .btn-default::before{
+    color:#fff;
+    background:none;
+    outline:none;
+    border:none;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    transition:all 1s;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -ms-transition:all 1s;
+    -o-transition:all 1s;
+}
+
+#calculator .nav {
+	display: block !important;
+}
+
+#calculator .nav-tabs {
+    margin: 80px -50px 80px 10px;
+    position:relative;
+}
+#calculator .nav-tabs li {
+    vertical-align: middle;
+    padding-right:20px;
+}
+#calculator .nav-tabs li b {
+  font-size: 48px;
+  position: absolute;
+  top: 0;
+  left: -35px;
+}
+
+#calculator .nav-tabs > li > a {
+    font-size: 21px;
+    text-align: left;
+    line-height:1;
+    min-width: 220px;
+    letter-spacing: -1.5px;
+    height:100%;
+    /*width: 220px;*/
+}
+
+#calculator .nav-tabs li.active b,
+#calculator .nav-tabs > li.active > a,
+#calculator .nav-tabs > li.active > a:focus,
+#calculator .nav-tabs > li.active > a:hover,
+#calculator .nav-tabs > li > a.checked{
+    color:#fc0;
+}
+
+#calculator .nav-tabs > li.active > a::before{
+    background-image: url('/wp-content/themes/mark_up/calc/css/../icons/check-done.svg');
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    color:#fff;
+    font-size:22px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display:block;
+    position:absolute;
+    top: -30px;
+    left:50px;
+}
+
+/*#calc .btn-default .fa,*/
+#calculator .btn-default .icn{
+    font-size: 2.7em;
+    float: left;
+    display: block;
+    margin: 0 7px 0 0;
+}
+#calculator .btn-default span{
+    display:table-cell;
+    height:50px;
+    vertical-align:middle;
+}
+
+#calculator .btn-default,
+#calculator .btn-default:focus,
+#calculator .btn-default.focus {
+    width: 250px;
+    height: 100px;
+    padding: 25px 0 0 25px;
+    margin: 10px;
+    color: #fff;
+    background: none;/*fff*/
+    border: 1px solid #fff;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1;
+    letter-spacing: -1px;
+    display: inline-block;
+}
+
+#calculator .btn-default::before{
+    font: normal normal normal 14px/1 calc;
+    content: '\e927';
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    position: absolute;
+    top: -9px;
+    right: -12px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #444;
+    border: 4px solid #444;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: -1px 1px 0 -0 #fff;
+    z-index: 2;
+}
+
+
+
+/* HOVER/ACTIVE */
+#calculator .btn-primary,
+#calculator .btn-default:active,
+#calculator .btn-default.active.focus,
+#calculator .btn-default.active {
+    background-color: #fc0;
+    color: #111;
+    border: 1px solid #fc0;
+    font-weight: bold;
+}
+
+#calculator .btn-default:active .svg-stroke,
+#calculator .btn-default.active.focus .svg-stroke,
+#calculator .btn-default.active .svg-stroke{
+    stroke: #111;
+}
+
+#calculator .btn-default:active .svg-fill,
+#calculator .btn-default.active.focus .svg-fill,
+#calculator .btn-default.active .svg-fill{
+    fill: #111;
+}
+
+#calculator .btn-default:hover::before,
+#calculator .btn-default:active::before,
+#calculator .btn-default:active:hover::before,
+#calculator .btn-default.active:hover::before,
+#calculator .btn-default.active.focus::before,
+#calculator .btn-default.active::before {
+    background-color: #fc0;
+    box-shadow: none;
+}
+
+
+
+#calculator .btn-primary{
+    padding: 14px 35px;
+}
+
+#calculator .modal-content,
+#calculator .form-control {
+    color: #111;
+    font-weight: normal;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+#calculator input.form-control {
+    height: 40px;
+}
+
+#calculator .calc-send .container {
+    padding: 70px;
+    background-color: #fff;
+    color: #111;
+}
+
+#calculator .modal-content {
+    color: #111;
+}
+
+#calculator .modal-content label {
+    font-size:12px;
+    margin-top:9px;
+    text-transform:uppercase;
+}
+
+#calculator .modal-content .close {
+    position: absolute;
+}
+
+
+#calculator .modal-content #calc_address {
+    border: 1px solid white;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+#calculator .nav-tabs {
+    margin: 60px 5px;
+    position:relative;
+}
+
+#calculator .nav-tabs > li > a {
+    font-size:18px;
+    width:100%;
+    padding-right:30px;
+    min-width: 100%;
+    /* bottom:8px; */
+}
+#calculator .nav-tabs li b {
+    font-size: 40px;
+    top: 0px;
+    /*left: -15px;*/
+}
+}
+
+@media (max-width:992px) {
+#calculator .nav-tabs li {
+    padding-right:0;
+}
+}
+
+@media (max-width:768px) {
+#calculator {padding:10px;}
+
+#calculator .btn{letter-spacing:-1px; margin:15px 0; /*font-weight:100;font-size:13px;*/}
+#calculator header h2,
+#calculator header .h2,
+#calculator header h3,
+#calculator header .h3{font-size: 28px;}
+#calculator header p,
+#calculator .header p{font-size: 16px;}
+
+#calculator .nav-tabs {margin: 20px 9px;}
+#calculator .nav-tabs li {
+    padding-right:0;
+}
+
+#calculator .nav > li > a,
+#calculator .nav-tabs > li > a {font-size:18px;width: 100%;padding-right:0;}
+#calculator .nav-tabs > li.active > a::before,
+#calculator .nav-tabs > li{display:none !important;}
+#calculator .nav-tabs > li.active,
+#calculator .nav-tabs > li.active > a {display:inline !important;}
+#calculator .nav-tabs li b {
+    font-size: 36px;
+    top: -15px;
+    /*left: -15px;*/
+}
+
+#calculator .btn-default,
+#calculator .btn-default:focus,
+#calculator .btn-default.focus {
+    width: 225px;
+    height: 80px;
+    padding: 15px 0 0 15px;
+    margin: 9px;
+    float:none;
+    font-size: 15px;
+}
+
+
+
+}
+
+
+
+
+/* RETINA */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 768px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (                min-resolution: 192dpi) and (min-width: 768px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 768px) { 
+
+#calculator {
+    background-image:url('../img/bg@2x.jpg');
+}
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 3)      and (min-width: 768px),
+only screen and (   min--moz-device-pixel-ratio: 3)      and (min-width: 768px),
+only screen and (     -o-min-device-pixel-ratio: 3/1)    and (min-width: 768px),
+only screen and (        min-device-pixel-ratio: 3)      and (min-width: 768px),
+only screen and (                min-resolution: 384dpi) and (min-width: 768px),
+only screen and (                min-resolution: 3dppx)  and (min-width: 768px) {
+
+#calculator {
+    background-image:url('../img/bg@3x.jpg');
+}
+
+}
+

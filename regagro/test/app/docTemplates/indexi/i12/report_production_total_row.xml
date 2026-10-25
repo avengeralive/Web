@@ -1,0 +1,102 @@
+<w:tr w:rsidR="009441B1" w:rsidTr="00D96648">
+	<w:trPr>
+		<w:cantSplit/>
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="2748"/>
+			<w:vMerge/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+			<w:vAlign w:val="center"/>
+			<w:hideMark/>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B"/>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="1965"/>
+			<w:vMerge/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+			<w:vAlign w:val="center"/>
+			<w:hideMark/>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B"/>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="2126"/>
+			<w:gridSpan w:val="2"/>
+			<w:tcBorders>
+				<w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+			<w:hideMark/>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="002C5A4B" w:rsidRDefault="002C5A4B">
+			<w:pPr>
+				<w:jc w:val="center"/>
+			</w:pPr>
+			<w:r>
+				<w:t>Итого</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="3283"/>
+			<w:tcBorders>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="009441B1" w:rsidRDefault="002C5A4B">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${report_production_count_total}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="dxa" w:w="5544"/>
+			<w:tcBorders>
+				<w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+				<w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/>
+			</w:tcBorders>
+		</w:tcPr>
+		<w:p w:rsidP="002C5A4B" w:rsidR="009441B1" w:rsidRDefault="002C5A4B">
+			<w:pPr>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:lang w:val="en-US"/>
+				</w:rPr>
+				<w:t>${report_production_weight_total}</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr>

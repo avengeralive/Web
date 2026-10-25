@@ -1,0 +1,186 @@
+{% if widget.hasPages() %}
+
+<ul class="pagination" role="navigation">
+
+	<li class="pagination-previous{% if 1 == widget.getIterator().getCurrentPageNumber() %} disabled{% endif %}">
+		{% if 1 == widget.getIterator().getCurrentPageNumber() %}
+			{{ _('<') }}<span class="show-for-sr"> {{ _('страница') }}</span>
+		{% else %}
+			<a href="{{ widget.getUrl(widget.getPreviousPage()) }}" data-page="{{ widget.getPreviousPage() }}">{{ _('<') }}<span class="show-for-sr"> {{ _('страница') }}</span></a>
+		{% endif %}
+	</li>                                  
+		
+	{% if widget.getIterator().getPageCount() <= 6 %}
+		
+		{% for i in range(1, widget.getIterator().getPageCount()) %}
+		<li{% if i == widget.getIterator().getCurrentPageNumber() %} class="current"{% endif %}>
+			{% if i == widget.getIterator().getCurrentPageNumber() %}
+				<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ i }}
+			{% else %}
+				<a href="{{ widget.getUrl(i) }}" data-page="{{ i }}">{{ i }}</a>
+			{% endif %}
+		</li>		
+		{% endfor %}
+
+	{% else %}
+
+		{% if widget.getIterator().getCurrentPageNumber() == 1 %}
+
+		<li class="current">
+			<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ 1 }}
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(2) }}" data-page="{{ 2 }}">{{ 2 }}</a>
+		</li>
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getPageCount()) }}" data-page="{{ widget.getIterator().getPageCount() }}">{{ widget.getIterator().getPageCount() }}</a>
+		</li>
+
+		{% endif %}
+
+		{% if widget.getIterator().getCurrentPageNumber() == 2 %}
+		<li>
+			<a href="{{ widget.getUrl(1) }}" data-page="{{ 1 }}">{{ 1 }}</a>
+		</li>
+		<li class="current">
+			<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ 2 }}
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(3) }}" data-page="{{ 3 }}">{{ 3 }}</a>
+		</li>
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getPageCount()) }}" data-page="{{ widget.getIterator().getPageCount() }}">{{ widget.getIterator().getPageCount() }}</a>
+		</li>
+
+		{% endif %}
+
+		{% if widget.getIterator().getCurrentPageNumber() == 3 %}
+
+		<li>
+			<a href="{{ widget.getUrl(1) }}" data-page="{{ 1 }}">{{ 1 }}</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(2) }}" data-page="{{ 2 }}">{{ 2 }}</a>
+		</li>
+		<li class="current">
+			<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ 3 }}
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(4) }}" data-page="{{ 4 }}">{{ 4 }}</a>
+		</li>
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getPageCount()) }}" data-page="{{ widget.getIterator().getPageCount() }}">{{ widget.getIterator().getPageCount() }}</a>
+		</li>
+
+
+		{% endif %}
+
+		{% if widget.getIterator().getCurrentPageNumber() >= 4 and widget.getIterator().getCurrentPageNumber() < widget.getIterator().getPageCount() - 2 %}
+		
+		<li>
+			<a href="{{ widget.getUrl(1) }}" data-page="{{ 1 }}">{{ 1 }}</a>
+		</li>
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getCurrentPageNumber() - 1) }}" data-page="{{ widget.getIterator().getCurrentPageNumber() - 1 }}">{{ widget.getIterator().getCurrentPageNumber() - 1 }}</a>
+		</li>
+		<li class="current">
+			<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ widget.getIterator().getCurrentPageNumber() }}</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getCurrentPageNumber() + 1) }}" data-page="{{ widget.getIterator().getCurrentPageNumber() + 1 }}">{{ widget.getIterator().getCurrentPageNumber() + 1 }}</a>
+		</li>	
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getPageCount()) }}" data-page="{{ widget.getIterator().getPageCount() }}">{{ widget.getIterator().getPageCount() }}</a>
+		</li>
+
+		{% endif %}
+
+		{% if widget.getIterator().getCurrentPageNumber() == widget.getIterator().getPageCount() - 2 %}
+
+		<li>
+			<a href="{{ widget.getUrl(1) }}" data-page="{{ 1 }}">{{ 1 }}</a>
+		</li>
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getCurrentPageNumber() - 1) }}" data-page="{{ widget.getIterator().getCurrentPageNumber() - 1 }}">{{ widget.getIterator().getCurrentPageNumber() - 1 }}</a>
+		</li>
+		<li class="current">
+			<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ widget.getIterator().getCurrentPageNumber() }}</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getCurrentPageNumber() + 1) }}" data-page="{{ widget.getIterator().getCurrentPageNumber() + 1 }}">{{ widget.getIterator().getCurrentPageNumber() + 1 }}</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getPageCount()) }}" data-page="{{ widget.getIterator().getPageCount() }}">{{ widget.getIterator().getPageCount() }}</a>
+		</li>
+
+		{% endif %}
+
+		{% if widget.getIterator().getCurrentPageNumber() == widget.getIterator().getPageCount() - 1 %}
+
+		<li>
+			<a href="{{ widget.getUrl(1) }}" data-page="{{ 1 }}">{{ 1 }}</a>
+		</li>
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getCurrentPageNumber() - 1) }}" data-page="{{ widget.getIterator().getCurrentPageNumber() - 1 }}">{{ widget.getIterator().getCurrentPageNumber() - 1 }}</a>
+		</li>
+		<li class="current">
+			<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ widget.getIterator().getCurrentPageNumber() }}</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getPageCount()) }}" data-page="{{ widget.getIterator().getPageCount() }}">{{ widget.getIterator().getPageCount() }}</a>
+		</li>
+
+		{% endif %}
+
+		{% if widget.getIterator().getCurrentPageNumber() == widget.getIterator().getPageCount() %}
+
+		<li>
+			<a href="{{ widget.getUrl(1) }}" data-page="{{ 1 }}">{{ 1 }}</a>
+		</li>
+		<li>
+			<a href="" onclick="return false;">...</a>
+		</li>
+		<li>
+			<a href="{{ widget.getUrl(widget.getIterator().getCurrentPageNumber() - 1) }}" data-page="{{ widget.getIterator().getCurrentPageNumber() - 1 }}">{{ widget.getIterator().getCurrentPageNumber() - 1 }}</a>
+		</li>
+		<li class="current">
+			<span class="show-for-sr">{{ _('Вы на странице') }} </span>{{ widget.getIterator().getCurrentPageNumber() }}</a>
+		</li>
+
+		{% endif %}
+
+	{% endif %}
+
+	<li class="pagination-next{% if widget.getIterator().getPageCount() <= widget.getIterator().getCurrentPageNumber() %} disabled{% endif %}">
+		{% if widget.getIterator().getPageCount() <= widget.getIterator().getCurrentPageNumber() %}
+			{{ _('>') }}<span class="show-for-sr"> {{ _('страница') }}</span>
+		{% else %}
+			<a href="{{ widget.getUrl(widget.getIterator().getCurrentPageNumber()+1) }}" data-page="{{ widget.getIterator().getCurrentPageNumber()+1 }}">{{ _('>') }}<span class="show-for-sr"> {{ _('страница') }}</span></a>
+		{% endif %}
+	</li>
+	
+</ul>
+
+
+{% endif %}

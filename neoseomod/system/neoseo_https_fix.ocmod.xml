@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>NeoSeo https fix</name>
+	<version>1</version>
+	<code>neoseo-https-fix</code>
+	<author>Alexander Sorokin</author>
+
+	<file path="system/library/response.php">
+		<operation>
+			<search><![CDATA[if ($this->output) {]]></search>
+			<add position="after"><![CDATA[		// NeoSeo SSL response - start
+			$domain = parse_url(HTTP_SERVER);
+			$domain['host'] = str_replace("www.","",$domain['host']);
+			if ($_SERVER['HTTPS'] || $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+			    $this->output = str_replace("http://www.".$domain['host'],"https://www.".$domain['host'],$this->output);
+			    $this->output = str_replace("http://".$domain['host'],"https://".$domain['host'],$this->output);
+            } else {
+			    $this->output = str_replace("https://www.".$domain['host'],"http://www.".$domain['host'],$this->output);
+			    $this->output = str_replace("https://".$domain['host'],"http://".$domain['host'],$this->output);
+            }
+			// NeoSeo SSL response - end]]></add>
+		</operation>
+	</file>  
+</modification>

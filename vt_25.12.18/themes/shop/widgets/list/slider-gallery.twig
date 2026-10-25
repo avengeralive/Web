@@ -1,0 +1,20 @@
+
+<div class="row columns">
+	<hr class="individual-hr">
+	<h4 class="individual"><a href="/stars/">Звёздные клиенты</a></h4>
+	<div class="small-24 large-16 columns large-centered">
+        <div class="star-clients__slider">
+    
+			{% for m in widget.getChildren %}
+					<div class="chain text-center">
+					  <a class="tap" href="/stars/{{ m.alias }}"><img src="{{ m.pic }}" style="display:block;
+  margin: auto;" alt=""></a><br>
+					  <a href="/stars/{{ m.alias }}"><p>{{ m.name }}</p></a>
+					</div>	
+			{% endfor %}    
+        
+		</div>
+	</div>
+</div>	
+
+	

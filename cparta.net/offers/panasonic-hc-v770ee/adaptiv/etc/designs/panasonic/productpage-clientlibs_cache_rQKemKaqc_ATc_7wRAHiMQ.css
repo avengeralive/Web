@@ -1,0 +1,74 @@
+/*tabs*/
+#sections .pagesection .edit-mode-tabs {
+    position:relative;
+    z-index:1;
+    min-height:650px;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu {
+    position:absolute;
+    top:50px;
+    width:100%;
+    text-align:center;
+    z-index:20;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul {
+    display:inline-block;
+    font-size:0;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu form {
+    display:none;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li {
+    display:inline-block;
+    height:36px;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li a {
+    display:inline-block;
+    padding:0 25px;
+    height:36px;
+    border-left:1px solid #e5ecec;
+    background:url(productpage-clientlibs/images/img-tab-off-1px.png) repeat-x;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:13px;
+    font-weight:bold;
+    color:#1f1f1f;
+    text-transform:uppercase;
+    /*outline:none!important;*/
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li span {
+    display:inline-block;
+    padding-top:12px;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:first-child {
+    background:url(productpage-clientlibs/images/img-tab-off-cap-left.png) no-repeat 0 0;
+    padding-left:22px;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:first-child a {
+    border-left:none;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:first-child span {
+    margin-left:-22px;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:last-child {
+    background:url(productpage-clientlibs/images/img-tab-off-cap-right.png) no-repeat 100% 0;
+    padding-right:22px;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:last-child span {
+    margin-right:-22px;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:hover a,
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li.ui-state-active a {
+    background:url(productpage-clientlibs/images/img-tab-on-1px.png) repeat-x;
+    color:#606060;
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:first-child:hover,
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:first-child.ui-state-active {
+    background-image:url(productpage-clientlibs/images/img-tab-on-cap-left.png);
+}
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:last-child:hover,
+#sections .pagesection .edit-mode-tabs .tabs-menu ul li:last-child.ui-state-active {
+    background-image:url(productpage-clientlibs/images/img-tab-on-cap-right.png);
+}
+#sections .pagesection .edit-mode-tabs ui-tabs-panel {
+    z-index:2;
+}

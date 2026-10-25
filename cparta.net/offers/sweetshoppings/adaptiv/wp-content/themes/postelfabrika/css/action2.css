@@ -1,0 +1,75 @@
+.action {
+  /*background-image: url('../images/486283832.jpg');*/
+  /*background-size: auto 100%;*/
+
+  font-family: 'Roboto Slab';
+  text-transform: uppercase;
+}
+
+.action > div {
+  background-color: white;
+
+  border-radius: 10px;
+
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.action h2 {
+  color: red;
+  font-weight: bold;
+}
+
+.action > div > span:nth-child(1) {
+  font-size: 48px;
+  color: white;
+
+  line-height: 64px;
+
+  padding: 0 5px;
+
+  background-color: rgba(255, 0, 0, 0.65);
+}
+
+.action > div > span:nth-child(3) {
+  font-size: 48px;
+  color: white;
+
+  line-height: 62px;
+
+  padding: 0 5px;
+
+  background-color: rgba(255, 0, 0, 0.65);
+}
+
+.action-timer > div.action-timer-tablo {
+  margin: 0px auto;
+}
+
+.action-timer > div.action-timer-tablo > div > span {
+  color: white;
+  display: inline-block;
+  width: 45px;
+  height: 55px;
+  background-color: gray;
+  border-radius: 3px;
+  font-size: 36px;
+  margin: 0px 5px;
+}
+
+.action-timer > div.action-timer-description > div > span {
+  display: inline-block;
+  width: 45px;
+  border-radius: 3px;
+  font-size:10px;
+  margin: 0px 5px;
+}
+
+.action-timer > div.action-timer-tablo > div {
+  margin: 20px auto 0px auto;
+}
+
+.action-timer > div.action-timer-description > div {
+  margin: 0px auto;
+}

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/************************** page progress navigation *****************************/
+
+.page-progress-navigation {
+}
+.page-progress-navigation div.fixarea {
+	background:url(../images/img-bar-bookmark-gradient-db.png) no-repeat top center #434343;
+	border-top:1px solid #333;
+}
+.page-progress-navigation div.fixarea > div {
+}
+.page-progress-navigation .fix {
+	position:fixed;
+	width:100%;
+	max-width:1200px;
+	min-width:976px;
+	margin: 0 auto;
+	z-index:100;
+}
+.page-progress-navigation ul {
+	font-size:0;
+	text-align:center;
+	height:34px;
+	position:relative;
+	background-image:url(../images/img-bar-bookmark-angled2-db.png);
+	background-repeat:no-repeat;
+	background-position:-1000px 0;
+}
+.page-progress-navigation li {
+	display:inline-block;
+	cursor:pointer;
+	/*background-color:#434343;
+	background-image:url(../images/img-bar-bookmark-angled2-db.png);
+	background-repeat:no-repeat;
+	background-position:-1000px 0;*/
+}
+.page-progress-navigation a {
+	display:block;
+	padding:0 30px;
+	font-family: 'Open Sans Condensed', 'Arial', sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#b6b6b6;
+}
+.page-progress-navigation a:before {
+	content:"";
+	display:inline-block;
+	height:34px;
+	vertical-align:middle;
+}
+.page-progress-navigation a + * {
+	vertical-align:middle;
+}
+.page-progress-navigation a:hover,
+.page-progress-navigation a.active {
+	color:#fff;
+	/*background-color:#00a0c6;*/
+}
+@media only screen and (max-width:640px) and (max-device-width:1280px){
+	.page-progress-navigation {
+			display:none;
+	}
+}

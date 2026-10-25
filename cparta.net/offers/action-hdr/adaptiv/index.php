@@ -1,0 +1,464 @@
+<?php 
+   $offer = 25;
+   include_once $_SERVER['DOCUMENT_ROOT'].'/../includes/landingsData/index2.php';
+?> 
+		
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Содержимое HEAD индексного файла -->
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css\form.min.css?lvcss=201810261218">
+<script type="text/javascript">
+/*<![CDATA[*/
+document.write('<scr'+'ipt type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">'+'</scr'+'ipt>');
+document.write('<scr'+'ipt type="text/javascript">lvjq1 = jQu'+'ery.noConflict(true);</scr'+'ipt>');
+/*]]>*/
+</script>
+<title>Видеокамера SONY HDR-AS50</title>
+	<meta name="description" content="">
+  	<link rel="shortcut icon" href="files\f\fb\action-hdr.ru\files\favicon.ico"> 
+  	<link rel="stylesheet" href="files\f\fb\action-hdr.ru\files\css\reset.css">
+  	<link rel="stylesheet" href="files\f\fb\action-hdr.ru\files\css\settings.css">
+    <link rel="stylesheet" href="files\f\fb\action-hdr.ru\files\css\slick.css">
+   	<link rel="stylesheet" href="files\f\fb\action-hdr.ru\files\css\style.css?ver=12345678912345678912345678912345678912345678912345678912345678">
+    <link rel="stylesheet" href="files\f\fb\action-hdr.ru\files\css\timer.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <!-- Содержимое, помещаемое в HEAD -->
+    <!-- Land-2019-1 -->
+
+  
+</head>
+<body>
+<section class="block26">
+    <div class="wrap">
+        <h1 class="text-center" style="font-size: 1.5rem;">Экшн видеокамера <span style="font-weight: 700; color: #fc4944">SONY HDR-AS50</span></h1>
+        <ul class="topul">
+            <li>Улучшенный формат Full HD 60p</li>
+            <li>Стабилизация изображения</li>
+            <li>Ударопрочная и водостойкая</li>
+            <li>Интегрированный модуль Wi-Fi</li>
+        </ul>
+	</div>
+</section>
+
+<section class="block1">
+    <div class="wrap">
+        <div class="hdn"><h1 class="i">Экшн видеокамера <span style="font-weight: 700; color: #fc4944">SONY HDR-AS50</span></h1>
+        <ul class="topul">
+            <li>Улучшенный формат Full HD 60p</li>
+            <li>Стабилизация изображения</li>
+            <li>Ударопрочная и водостойкая</li>
+            <li>Интегрированный модуль Wi-Fi</li>
+        </ul></div>
+        <div class="formbox shadow"> 
+                <div class="price clearfix">
+                    <div class="cost_sale">
+                        <div class="sale">-77%</div>
+                        <div class="old-cost"><span>13000</span><small>Руб</small></div>
+                    </div>
+                    <div class="new-cost">
+                        <span>Цена сегодня:</span>
+                        <p><?php echo $price['real_price']; ?></p>
+                    </div>
+                </div> 
+               
+				<form class="m1-form form clearfix lv2-form lv2-form1 " id="lv-formLanding1" action="./_success_/" method="post">
+
+                   
+					
+<input class="field input form-control form_field_text_input form-input txt-m" placeholder="Введите Ваше имя" id="lv-formLanding1-fio" name="name" type="text" maxlength="255" required>
+
+<input class="field form-control input textField form_field_text_input form_phone form-input txt-m" placeholder="Введите Ваш телефон" id="lv-formLanding1-phone" name="phone" type="text" maxlength="25" required>
+
+                    <button class="button-m">Оформить заказ</button>
+                    <div>
+           
+          </div>
+          <input type='hidden' name='referer' value="<?php echo isset($_GET['referer']) ? $_GET['referer'] : $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] ;?>">
+<input type="hidden" name="subid1"  value="<?php echo isset($_GET['subid1']) ? $_GET['subid1'] : '' ;?>" />
+<input type="hidden" name="subid2"  value="<?php echo isset($_GET['subid2']) ? $_GET['subid2'] : '' ;?>" />
+<input type="hidden" name="subid3"  value="<?php echo isset($_GET['subid3']) ? $_GET['subid3'] : '' ;?>" />
+<input type="hidden" name="subid4"  value="<?php echo isset($_GET['subid4']) ? $_GET['subid4'] : '' ;?>" />  
+<input type="hidden" name="subid5"  value="<?php echo isset($_GET['subid5']) ? $_GET['subid5'] : '' ;?>" />
+</form>
+                <!-- <div class="products_count">Осталось товара по акции:<b>7 шт.</b></div> -->
+            </div>
+    </div>
+</section>  
+<!-- michael-k90 -->  
+<section class="block2">
+    <div class="wrap">
+        <h2 class="title" style="font-size: 1.85rem;">Используйте <span>Action Cam</span> вместе с пультом ДУ <span>LiveView</span></h2>
+        <p class="text-center mb-3" style="font-size: 1.3rem">Новый пульт ДУ LiveView можно не только носить на запястье благодаря браслету, входящему в комплект, но и использовать отдельно, зафиксировав устройство с помощью дополнительных креплений. Теперь вы готовы к любым приключениям!</p>
+        <div class="container clearfix">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="files\f\fb\action-hdr.ru\files\img\ph1.jpeg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="subt">Легкое управление благодаря удобному интерфейсу</p>
+                                <p style="font-size: 1.1rem">Выбирать и менять функции теперь просто, как никогда, благодаря новому интуитивному интерфейсу, где все пункты меню легко доступны. Оцените удобную настройку камеры и выбирайте нужные вам параметры. Камеру можно включать и выключать через смартфон с приложением PlayMemories Mobile.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="files\f\fb\action-hdr.ru\files\img\ph2.jpeg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section> 
+
+<section class="block3">
+        <div class="wrapper" style="max-width: 97%; margin: 0 auto">
+          <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="files\f\fb\action-hdr.ru\files\img\koll.jpeg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+</section> 
+
+<section class="gift_section">
+    <div class="wrap">
+        <h2 class="title">Оставайтесь на высоте благодаря <span>уникальным возможностям</span> камеры</h2>
+        <p class="text-center mb-4" style="font-size: 1.15rem">Создавайте безупречно четкие видеоролики благодаря системе стабилизации изображения SteadyShot™, снимайте в темноте и полумраке благодаря высокой чувствительности матрицы, настраивайте ширину охвата кадра с функцией изменения поля зрения. Матрица Exmor R®, процессор BIONZ X™ и объектив ZEISS® — секрет безупречного качества изображения кроется в этих трех компонентах.</p>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-12">
+                <img src="files\f\fb\action-hdr.ru\files\img\ph4.jpeg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-12">
+                <p class="subt">SteadyShot обеспечивает четкость изображения при съемке от первого лица.</p>
+                <p>Система стабилизации изображения SteadyShot устраняет мелкое дрожание видео, которое возникает при съемке с велосипеда и при других активных движениях. Теперь у вас есть возможность снимать захватывающие видео от первого лица, которые покорят ваших зрителей.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<!-- bizlife_inc -->    
+<section class="block4">
+    <div class="wrap nopad">
+        <div class="row">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="files\f\fb\action-hdr.ru\files\img\ph6.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="subt">Снимайте и днем, и ночью. Слабое освещение не испортит кадр.</p>
+                                    <p>Снимать в темноте теперь можно без опасений. Положитесь на возможности CMOS-матрицы Exmor® R и создавайте великолепные видеосюжеты от рассвета до заката на природе или в помещении.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+    </div>
+</section>    
+    
+<section class="block5">
+    <div class="wrap nopad">
+       <div class="row">
+           <div class="col-md-4">
+               <div class="row">
+                   <div class="col-12 text-center">
+                    <img src="files\f\fb\action-hdr.ru\files\img\ph7.jpeg" alt="" class="img-fluid">
+                    <p class="subt mt-3">CMOS-матрица Exmor R</p>
+                    <p>Снимайте в темноте и в полумраке благодаря возможностям передовой матрицы.</p>
+                </div>
+               </div>
+           </div>
+           <div class="col-md-4">
+               <div class="row">
+                   <div class="col-12 text-center">
+                    <img src="files\f\fb\action-hdr.ru\files\img\ph8.jpeg" alt="" class="img-fluid">
+                    <p class="subt mt-3">Процессор обработки изображения BIONZ X</p>
+                    <p>Создавайте безупречно четкие и динамичные видеоролики в Full HD со скоростью потока 50 Мбит/с3.</p>
+                </div>
+               </div>
+           </div>
+           <div class="col-md-4">
+               <div class="row">
+                   <div class="col-12 text-center">
+                    <img src="files\f\fb\action-hdr.ru\files\img\ph9.jpeg" alt="" class="img-fluid">
+                    <p class="subt mt-3">Объектив ZEISS® Tessar™</p>
+                    <p>Сверхширокоугольный объектив отлично подходит для съемки пейзажей и аэросъемки.</p>
+                </div>
+               </div>
+           </div>
+       </div>
+        <h2 class="title mt-4" style="font-size: 1.85rem;">Настройка <span>угла поля зрения</span> и <span>регулируемый зум</span></h2>
+        <p class="text-center mb-5" style="font-size: 1.3rem">Новый пульт ДУ LiveView можно не только носить на запястье благодаря браслету, входящему в комплект, но и использовать отдельно, зафиксировав устройство с помощью дополнительных креплений. Теперь вы готовы к любым приключениям!</p>
+       <div class="row mb-4">
+           <div class="col-md-6">
+               <div class="row">
+                   <div class="col-12 text-center">
+                    <img src="files\f\fb\action-hdr.ru\files\img\ph10.jpeg" alt="" class="img-fluid">
+                    <p class="mt-2">Выбирайте между «узким» и «широким»4 углом съемки — подходит для панорамных кадров.</p>
+                </div>
+               </div>
+           </div>
+           <div class="col-md-6">
+               <div class="row">
+                   <div class="col-12 text-center">
+                    <img src="files\f\fb\action-hdr.ru\files\img\ph11.jpeg" alt="" class="img-fluid">
+                    <p class="mt-2">Изменять настройки зума можно со смартфона через приложение PlayMemories™ Mobile.</p>
+                </div>
+               </div>
+           </div>
+       </div>
+       <div class="orderbox clearfix">
+           <a href="#order_form" class="button-m" style="text-decoration: none; color: #fff;">Заказать сейчас</a>
+    </div>
+</div></section>                
+<!-- owmen17 -->
+<section class="block6">
+    <div class="wrap">
+        <h2 class="title">Будьте готовы к съемке в любой момент и в любой ситуации с Action Cam.</h2>
+        <div class="video-container shadow">
+        	<div class="youtube" id="48xcEDK92s4"></div>
+        </div>
+        
+    </div>
+</section> 
+
+<section class="block7">
+    <div class="wrap">
+        <h3 class="title mt-4" style="font-size: 1.85rem; text-align: center;">Используйте <span style="color: #fc4944;">Action Cam</span> и аксессуары в любых условиях</h3>
+        <p class="text-center mb-4" style="font-size: 1.3rem">Свобода творческих экспериментов с прочной Action Cam. Погружайтесь на глубину до 60 метров, поместив видеокамеру в аквабокс, поставляемый в комплекте. Он обеспечивает удобный доступ к кнопкам управления камерой. Исследуйте мир во всем многообразии благодаря надежной защите от ударов, влаги, ржавчины, пыли и песка.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-4">
+                <img src="files\f\fb\action-hdr.ru\files\img\14ph.png" alt="" class="img-fluid mb-4">
+                <img src="files\f\fb\action-hdr.ru\files\img\11ph.png?ver=123" alt="" class="img-fluid mb-4">
+                <img src="files\f\fb\action-hdr.ru\files\img\12ph.png?ver=123" alt="" class="img-fluid mb-5">
+                <img src="files\f\fb\action-hdr.ru\files\img\13ph.png" alt="" class="img-fluid mb-3">
+              </div>
+                <div class="col-8">
+                  <p>Улучшенный формат Full HD 60p для четких изображений и насыщенных цветов.</p>
+                  <p>Новый интерфейс обеспечивает интуитивное управление камерой.</p>
+                  <p>Стабилизация изображения SteadyShot устраняет размытость в три раза эффективнее. 7</p>
+                  <p>Снимайте под любым углом с регулируемым полем зрения и зумом.</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+            <div class="row">
+              <div class="col-12">
+                <p><span style="font-weight: 700">Тип объектива</span><br> ZEISS® Tessar</p>
+                <p><span style="font-weight: 700">Тип матрицы</span><br> Матрица Exmor R CMOS тип 1/2.3 (7,77 мм) с обратной засветкой</p>
+                <p><span style="font-weight: 700">Водостойкость</span><br> C входящим в комплект аквабоксом (MPK-UWH1)</p>
+                <p><span style="font-weight: 700">Пылестойкость</span><br> C входящим в комплект аквабоксом (MPK-UWH1)</p>
+                <p><span style="font-weight: 700">Ударопрочность</span><br> C входящим в комплект аквабоксом (MPK-UWH1)</p>
+                <p><span style="font-weight: 700">Ударопрочность</span><br> C входящим в комплект аквабоксом (MPK-UWH1)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="row">
+              <div class="col-12" style="background: #f1f5f9">
+                <img src="files\f\fb\action-hdr.ru\files\img\15ph.png" alt="" style="padding-top: 25px">
+                <img src="files\f\fb\action-hdr.ru\files\img\16ph.png" alt="" style="padding-bottom: 25px">
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+</section>
+<!-- after_qbici -->
+<section class="block8">
+    <div class="wrap nopad">
+        <h2 class="title"><span>Отзывы</span> покупателей</h2>
+        <div class="reviews">
+            <div>
+                <div class="rev">
+                    <div>
+                        <img src="files\f\fb\action-hdr.ru\files\img\rev1.jpeg" alt="">
+                        <span>Сергей Акимов, 35 лет</span>
+                    </div>
+                    <p>Это самый лучший вариант для отдыхающих. Никакой фотоаппарат не нужен абсолютно. Фокус быстрый, корпус компактный, качество лучшее, цена низкая. Отличное качество сборки, качество видео особенно максимальное, отличный аква-бокс. Определенно советую!</p>
+                </div>
+            </div>
+            
+            <div>
+                <div class="rev">
+                    <div>
+                        <img src="files\f\fb\action-hdr.ru\files\img\rev2.jpeg" alt="">
+                        <span>Максим Самойлов, 39 лет</span>
+                    </div>
+                    <p>Купил ее для того, чтобы запечатлеть семейное видео о путешествиях. Камера уже принесла много радости засняв интересные моменты)). Так, как всегда, под рукой и включается быстро. Качество хорошее. Видео отличное. Все свои заявленные характеристики оправдывает.</p>
+                </div>
+            </div>
+            
+            <div>
+                <div class="rev">
+                    <div>
+                        <img src="files\f\fb\action-hdr.ru\files\img\rev3.jpeg" alt="">
+                        <span>Виктор Урбанов, 33 года</span>
+                    </div>
+                    <p>Во-первых- эта фирма, которой можно доверять и не ждать сюрпризов как от камер других. Во-вторых- эта камера действительно хороша. Пользуюсь месяц для съемки видео- ни разу не подвела. Качество съемки за свои деньги отличное, все, кто смотрел записи - в восторге.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="block9 text-center">
+        <div class="wrapper" style="max-width: 97%; margin: 0 auto">
+          <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="files\f\fb\action-hdr.ru\files\img\kol2.jpeg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+</section>
+<!-- michael-k90 -->
+<section class="block10">
+    <div class="wrap nopad">
+        <h2 class="title"><span>Как заказать</span> экшн камеру?</h2>
+        <ul class="ship">
+            <li>
+                <div></div>
+                <p>Оформляете заказ на&nbsp;нашем&nbsp;сайте</p>
+            </li>
+            <li>
+                <div></div>
+                <p>Менеджер перезванивает для оформления заказа</p>
+            </li>
+            <li>
+                <div></div>
+                <p>Мы отправляем Ваш заказ почтой в любой регион</p>
+            </li>
+            <li>
+                <div></div>
+                <p>Вы оплачиваете заказ при&nbsp;получении</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="block11">
+    <div class="wrap"><h3>ЗАКАЖИТЕ СЕЙЧАС SONY HDR-AS50 <span>со скидкой 77%</span></h3></div>
+</section>
+
+<section class="block1 end block-2">
+    <div class="wrap">
+        <h1 class="i">Экшн видеокамера <span style="font-weight: 700; color: #fc4944">SONY HDR-AS50</span></h1>
+        
+        <div class="formbox shadow"> 
+                <div class="price clearfix">
+                    <div class="cost_sale">
+                        <div class="sale">-77%</div>
+                        <div class="old-cost"><span>13000</span><small>Руб</small></div>
+                    </div>
+                    <div class="new-cost" id="order_form">
+                        <span>Цена сегодня:</span>
+                        <p><?php echo $price['real_price']; ?></p>
+                    </div>
+                </div> 
+              
+					<form class="m1-form form clearfix lv2-form lv2-form2 " id="lv-formLanding2" action="./_success_/" method="post">
+
+                   <input class="field input form-control form_field_text_input form-input txt-m" placeholder="Введите Ваше имя" id="lv-formLanding2-fio" name="name" type="text" maxlength="255" required>
+
+<input class="field form-control input textField form_field_text_input form_phone form-input txt-m" placeholder="Введите Ваш телефон" id="lv-formLanding2-phone" name="phone" type="text" maxlength="25" required>
+
+                    <button class="button-m" style="color: #fff">Оформить заказ</button>
+                    <div>
+             
+          </div>
+          <input type='hidden' name='referer' value="<?php echo isset($_GET['referer']) ? $_GET['referer'] : $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] ;?>">
+<input type="hidden" name="subid1"  value="<?php echo isset($_GET['subid1']) ? $_GET['subid1'] : '' ;?>" />
+<input type="hidden" name="subid2"  value="<?php echo isset($_GET['subid2']) ? $_GET['subid2'] : '' ;?>" />
+<input type="hidden" name="subid3"  value="<?php echo isset($_GET['subid3']) ? $_GET['subid3'] : '' ;?>" />
+<input type="hidden" name="subid4"  value="<?php echo isset($_GET['subid4']) ? $_GET['subid4'] : '' ;?>" />  
+<input type="hidden" name="subid5"  value="<?php echo isset($_GET['subid5']) ? $_GET['subid5'] : '' ;?>" />
+ </form>
+                <!-- <div class="products_count">Осталось товара по акции:<b>7 шт.</b></div> -->
+            </div>
+            </div>
+</section> 
+
+
+<footer class="footer">
+    <div class="wrap">  
+        <p style="text-align: center">
+          ИНН: 525401820790 Полищук Андрей Викторович
+
+<br>
+            
+            <a href="politika.pdf" style="text-decoration: none; font-size: 1rem">Политика&nbsp;конфиденциальности</a>
+        </p>
+    </div>
+</footer>
+            <script src="files\f\fb\action-hdr.ru\files\js\jquery.js" type="text/javascript"></script>
+           
+         
+            <script type="text/javascript">
+			var i, c, y, v, s, n;
+v = document.getElementsByClassName("youtube");
+if (v.length > 0) {
+    s = document.createElement("style");
+    s.type = "text/css";
+    s.innerHTML = '.youtube{background-color:#000;max-width:100%;height:inherit;overflow:hidden;position:relative;cursor:hand;cursor:pointer}.youtube .thumb{bottom:0;display:block;left:0;margin:auto;max-width:100%;position:absolute;right:0;top:0;width:100%;height:auto}.youtube .play{filter:alpha(opacity=80);opacity:.8;height:77px;left:50%;margin-left:-38px;margin-top:-38px;position:absolute;top:50%;width:77px;background:url("http://action-hdr.ru/files/f/fb/action-hdr.ru/files/img/youtube-play-icon.png") no-repeat}';
+    document.body.appendChild(s)
+}
+for (n = 0; n < v.length; n++) {
+    y = v[n];
+    i = document.createElement("img");
+    i.setAttribute("src", "https://i.ytimg.com/vi/" + y.id + "/hqdefault.jpg");
+    i.setAttribute("class", "thumb");
+    c = document.createElement("div");
+    c.setAttribute("class", "play");
+    y.appendChild(i);
+    y.appendChild(c);
+    y.onclick = function() {
+        var a = document.createElement("iframe");
+        a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0");
+        a.setAttribute("allowfullscreen","");
+        a.style.width = this.style.width;
+        a.style.height = this.style.height;
+        this.parentNode.replaceChild(a, this)
+    }
+};
+</script>
+            <script src="files\f\fb\action-hdr.ru\files\js\slick.min.js"></script>
+            <script src="files\f\fb\action-hdr.ru\files\js\main.js"></script>
+            <script src="files\f\fb\action-hdr.ru\files\js\count.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+body {background: white; font-size: 17px; font-family: Arial, Tahoma; color: black; margin: 0; padding: 0; overflow: hidden; position:fixed;width: 100%;}
+.block1 {position: relative; width: 100%; height: 1496px; background: url(../img/main_bg.jpg) no-repeat top center;}
+.block1_content {position: relative; margin: 0px auto 0px auto; width: 970px; height: 1496px; background-position: -475px 0; text-align: center;}
+.block1_zagolovok1 {position: relative; margin: 0px auto; top: 35px; font-family: Tahoma, Arial; font-size: 25px; font-weight: bold; line-height: 35px;}
+.block1_zagolovok2 {position: relative; margin: 0px auto; top: 135px; font-family: Tahoma, Arial; font-size: 25px; font-weight: normal; line-height: 35px; color: white;}

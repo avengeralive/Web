@@ -1,0 +1,313 @@
+/* my_presets *//* michael-k90 *//* endzeit_____ */
+.formOrder input.field:focus::-webkit-input-placeholder {opacity:0;}
+.formOrder input.field:focus::-moz-placeholder          {opacity:0;}
+.formOrder input.field:focus:-moz-placeholder           {opacity:0;}
+.formOrder input.field:focus:-ms-input-placeholder      {opacity:0;}
+.formOrder input.field::-webkit-input-placeholder {color: #222; opacity: 1;}
+.formOrder input.field:-moz-placeholder {color: #222; opacity: 1;}
+.formOrder input.field::-moz-placeholder {color: #222; opacity: 1;}
+.formOrder input.field:-ms-input-placeholder {color: #222; opacity: 1;}
+.hidden{display: none;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.just {
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+.clearfix:after, .use li:after {content: '';display: block;clear: both;}
+.clear{clear: both;height: 0px;}
+.ulfix {font-size: 0;}
+/* END my_presets */
+
+h1,h2,h3,h4,h5,h6{font-family: 'Montserrat', Helvetica, sans-serif; font-weight: 700; text-transform: uppercase;line-height: 1.2em;}
+b,strong{font-weight: 700;}
+body{
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px auto;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #222222;
+    background: #fff;
+}
+section{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.wrap{
+    width: 960px;
+    padding: 0px 10px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.nopad {
+    padding: 0;
+}
+.wrap:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.formOrder input.field{
+    position: relative;
+    display: block;
+    outline: 0;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    margin: 0 auto 13px;
+    padding: 0 20px;
+    background:#fafafa;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-weight: 400;
+    color: #222;
+    -webkit-transition: all 0.2s;
+    -moz-transition:    all 0.2s;
+    -o-transition:      all 0.2s;
+    -ms-transition:     all 0.2s;
+    transition:         all 0.2s;
+}
+.button-m{
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 76px;
+    line-height: 76px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    color: #222;
+    text-shadow: 0 1px 0 #ffe58b;
+    background: rgba(253,222,64,1);
+    background: -moz-linear-gradient(top, rgba(253,222,64,1) 0%, rgba(253,190,1,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(253,222,64,1)), color-stop(100%, rgba(253,190,1,1)));
+    background: -webkit-linear-gradient(top, rgba(253,222,64,1) 0%, rgba(253,190,1,1) 100%);
+    background: -o-linear-gradient(top, rgba(253,222,64,1) 0%, rgba(253,190,1,1) 100%);
+    background: -ms-linear-gradient(top, rgba(253,222,64,1) 0%, rgba(253,190,1,1) 100%);
+    background: linear-gradient(to bottom, rgba(253,222,64,1) 0%, rgba(253,190,1,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdde40', endColorstr='#fdbe01', GradientType=0 );
+    -webkit-box-shadow: 0 2px 0 0 #d4a000;
+    box-shadow: 0 2px 0 0 #d4a000;
+    -webkit-transition: all 0.2s;
+    -moz-transition:    all 0.2s;
+    -o-transition:      all 0.2s;
+    -ms-transition:     all 0.2s;
+    transition:         all 0.2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.button-m:hover{
+    background: rgba(253,223,73,1);
+    background: -moz-linear-gradient(top, rgba(253,223,73,1) 0%, rgba(254,193,11,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(253,223,73,1)), color-stop(100%, rgba(254,193,11,1)));
+    background: -webkit-linear-gradient(top, rgba(253,223,73,1) 0%, rgba(254,193,11,1) 100%);
+    background: -o-linear-gradient(top, rgba(253,223,73,1) 0%, rgba(254,193,11,1) 100%);
+    background: -ms-linear-gradient(top, rgba(253,223,73,1) 0%, rgba(254,193,11,1) 100%);
+    background: linear-gradient(to bottom, rgba(253,223,73,1) 0%, rgba(254,193,11,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fddf49', endColorstr='#fec10b', GradientType=0 );
+}
+.button-m:active{
+    top:-1px;
+}
+.formOrder {
+    width: 300px;
+    margin: 0 auto;
+}
+.formOrder .button-m{
+    width: 100%;
+}
+h2.title {
+    margin: 0 0 40px 0;
+    text-align: center;
+    font-size: 36px;
+}
+h2.title>span{
+    
+}
+h2.title span.green {
+    display: inline-block;
+    line-height: 48px;
+    background: url(./tlt-line2-d75.arb.png) repeat-x 0 95%;
+}
+.price {
+    width: 300px;
+    color:#fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    text-align: center;
+    background:#77c300 url(./price-ae0.arb.png) no-repeat 0 0;
+}
+.old-cost {
+    float: left;
+}
+.old-cost p {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 26px;
+    text-decoration: line-through;
+}
+.old-cost p span {
+    
+}
+.old-cost > span, .new-cost > span {
+    font-size: 15px;
+}
+.new-cost {
+    float: right;
+}
+.new-cost p {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 26px;
+}
+.new-cost, .old-cost  {
+    width: 50%;
+    height: 78px;
+    padding-top: 12px;
+}
+.old-cost p small, .new-cost p small {
+    font-size: .7em;
+}
+
+/*Таймер*/
+.countbox:before {
+    content: 'Акция закончится через:';
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color:#fff;
+    font-weight: 400;
+}
+.countbox {
+    float: left;
+    height: 78px;
+    width: 260px;
+    padding: 5px 0 0 0;
+    margin: 0 30px 0 0 ;
+    background: #3c3f53;
+    border-radius: 3px;
+}
+.countbox > div:last-child {
+    margin: 0;    
+}
+.countbox > div:first-child {
+    margin-left: 20px;    
+}
+.countbox .countbox-num {
+    float: left;
+    width: 60px;
+    height: 40px;
+    margin-right: 20px;
+}
+.countbox-hours, .countbox-mins, .countbox-secs {
+    color: #fec104;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 3px;
+    position: relative;
+}
+.countbox-hours:after, .countbox-mins:after {
+    content:':';
+    display: block;
+    color: #fec104;
+    font-weight: 700;
+    font-size: 30px;
+    position: absolute;
+    top:0;
+    right: -10px;
+}
+.countbox-hours-text, .countbox-mins-text, .countbox-secs-text {
+    font-size: 18px;
+    text-align: center;
+    text-transform: lowercase;
+    display: none;
+}
+
+.video-container {
+     position: relative;
+     width: 100%;
+     height: 566px;
+     margin: 0 auto;
+     overflow:hidden;
+     background:#000;
+    border: 45px solid #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,.2);
+box-shadow: 0 0 50px 0 rgba(0,0,0,.2);
+}
+ .video-container iframe, .video-container object, .video-container embed{
+    position:absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.youtube {
+    height: 100% !important;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 110px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;    
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    background:#77c300 url(./arrow-b21.arb.png) no-repeat center center;
+    z-index: 3;
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0;
+    -moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+
+@media screen and (max-width: 976px) {
+    .wrap{
+        width: 640px;
+    }
+}
+@media screen and (max-width: 659px) {
+    .wrap{
+        width: 320px;
+    }
+    
+}

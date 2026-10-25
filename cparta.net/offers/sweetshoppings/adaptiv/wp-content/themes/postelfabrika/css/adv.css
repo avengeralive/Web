@@ -1,0 +1,19 @@
+
+
+.adv > div {
+  text-transform: uppercase;
+  margin-top: 20px;
+
+  height: 250px;
+}
+
+.adv img {
+  height: 100%;
+  max-height: 100px;
+  width: auto;
+  margin: 0px 0px 0px auto;
+}
+
+.adv h3 {
+  margin-top: 15px;
+}

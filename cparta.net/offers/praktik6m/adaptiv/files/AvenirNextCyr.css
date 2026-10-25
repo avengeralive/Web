@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('AvenirNextCyr/AvenirNextCyr-Light.eot') format('eot'),
+        url('AvenirNextCyr/AvenirNextCyr-Light.woff') format('woff'),
+        url('AvenirNextCyr/AvenirNextCyr-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('AvenirNextCyr/AvenirNextCyr-Regular.eot') format('eot'),
+        url('AvenirNextCyr/AvenirNextCyr-Regular.woff') format('woff'),
+        url('AvenirNextCyr/AvenirNextCyr-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('AvenirNextCyr/AvenirNextCyr-Medium.eot') format('eot'),
+        url('AvenirNextCyr/AvenirNextCyr-Medium.woff') format('woff'),
+        url('AvenirNextCyr/AvenirNextCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('AvenirNextCyr/AvenirNextCyr-Bold.eot') format('eot'),
+        url('AvenirNextCyr/AvenirNextCyr-Bold.woff') format('woff'),
+        url('AvenirNextCyr/AvenirNextCyr-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

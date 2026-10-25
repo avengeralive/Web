@@ -1,0 +1,834 @@
+/*block1*//* after_qbici */
+.block1 {
+    background: url(../img/b1.jpg) no-repeat center top;
+    height: auto;
+    padding: 20px 0 0;
+    background-size: cover;
+}
+.block26 {
+    display: none;
+}
+.block1 .gift_image {
+    display: block;
+    width: 150px;
+    position: absolute;
+    top: 390px;
+    right: 480px;
+}
+
+.block1  h1 {
+    font-size: 43.5px;
+    margin-bottom: 7px;
+}
+.block1  h2 {
+    font-size: 40px;
+    line-height: 40px;
+    color:#fff;
+    letter-spacing: 3px;
+    display: inline-block;
+    background: #63c314;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 18px;
+    margin-bottom: 30px;
+    max-width: 511px;
+}
+.topul {
+    font-size: 0;
+    width: 344px;
+}
+.topul li {
+    font-size: 18px;
+    display: block;
+    background: url(../img/check.png) no-repeat 11px 7px;
+    padding: 5px 0 5px 43px;
+    color: #fff;
+    font-weight: 600;
+}
+/*.orderbox {
+    width: 300px;
+}*/
+.price {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 6px;
+}
+.price .oldcost {
+    font-size: 24px;
+    line-height: 26px;
+    text-decoration: line-through;
+}
+.price .newcost {
+    font-size: 38px;
+    line-height: 40px;
+    color: #4eac00;;
+    font-weight: 700;
+}
+.stock {
+    text-align: center;
+    padding: 20px 0 0;
+    letter-spacing: .8px;
+}
+.stock span {
+    display: inline-block;
+    font-weight: 700;
+    background: #ffd800;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 5px;
+    line-height: 30px;
+}
+/*.sale {
+    width: 123px;
+    height: 90px;
+    text-align: center;
+    font-size: 20px;
+    padding:6px 0 ;
+    position: absolute;
+    top: 360px;
+    right: 15px;
+}
+.sale p {
+    font-size: 44px;
+    line-height: 44px;
+}*/
+/*block2*//* endzeit_____ */
+.block2 {
+    background-image: url(../img/bg2.jpg);
+}
+
+.block2 .container p {
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+.about {
+    font-size: 0;
+}
+.about li {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 0 6px;
+}
+.about img {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.about img b {
+}
+.about p {
+    overflow: hidden;
+}
+.about p b {
+    display: block;
+    margin-bottom: 3px;
+}
+/*block3*//* michael-k90 */
+.block3 {
+    padding: 0;
+    height: 215px;
+    background-size: cover;
+}
+
+/*block4*//* bizlife_inc */
+.create {
+    text-align: center;
+    font-size: 0;
+}
+.subt {
+    font-weight: 700;
+    font-size: 1.55rem;
+    text-align: center;
+}
+.create li {
+    font-size: 16px;
+    display: inline-block;
+    width: 220px;
+    margin: 0 10px;
+    vertical-align: top;
+}
+.create span {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: block;
+    margin: 0 auto -20px;
+    color:#fff;
+    text-align: center;
+    line-height: 40px;
+    background: #63c314;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 5;
+}
+.create img {
+    display: block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 auto 10px;
+}
+.create p {
+}
+/*block5*//* owmen17 */
+.preim {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 50px;
+}
+.preim li {
+    font-size: 16px;
+    vertical-align: top;
+    width: 220px;
+    margin: 0 10px;
+    display: inline-block;
+}
+.preim div {
+    background:#63c314 url(http://sony-action.new-t0var.ru/img/feature.png) no-repeat center 31px ;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+.preim li:nth-child(2) div {
+    background-position: center -74px;
+}
+.preim li:nth-child(3) div {
+    background-position: center -187px;
+}
+.preim li:nth-child(4) div {
+    background-position: center -304px;
+}
+.preim p {
+}
+.block5 .orderbox {
+    margin: 0 auto;
+}
+.block5 .orderbox  .price {
+    width: 300px;
+    float: left;
+    margin: 15px 30px 0 0;
+}
+.block5 .orderbox  .button-m {
+    width: 300px;
+}
+/*block6*//* after_qbici */
+.block6 {
+    background: url(../img/b2.jpg) no-repeat center top / cover;
+}
+/*block7*//* endzeit_____ */
+.block7 h2  {
+    text-align: left;
+}
+.block7 h2 span {
+    display: block;
+}
+.kit {
+    padding-bottom: 20px;
+}
+.kit li {
+    margin-bottom: 10px;
+}
+.kit li:before {
+    content:'';
+    display: block;
+    width: 4px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 4px;
+    background: #33b133;
+    border: 3px solid rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 0 1px #33b133;
+    -moz-box-shadow: 0 0 0 1px #33b133;
+    box-shadow: 0 0 0 1px #33b133;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    float: left;
+    margin: 7px 10px 0 0;
+}
+.butbox {
+    width: 300px;
+}
+.kitimg {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top:-2px;
+    z-index: -1;
+}
+.hit {
+    display: block;
+    position: absolute;
+    top: 153px;
+    left: 335px;
+}
+/*block8*//* michael-k90 */
+.block8 {
+    background: #f4f5f8;
+} 
+.reviews {
+
+}
+.rev {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.rev > div  {
+    background: rgb(116,229,23);
+    background: -moz-linear-gradient(top, rgba(116,229,23,1) 0%, rgba(99,195,20,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(116,229,23,1) 0%,rgba(99,195,20,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(116,229,23,1)),to(rgba(99,195,20,1)));
+    background: -moz-linear-gradient(top, rgba(116,229,23,1) 0%,rgba(99,195,20,1) 100%);
+    background: -o-linear-gradient(top, rgba(116,229,23,1) 0%,rgba(99,195,20,1) 100%);
+    background: linear-gradient(to bottom, rgba(116,229,23,1) 0%,rgba(99,195,20,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74e517', endColorstr='#63c314',GradientType=0 );
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 280px;
+}
+.rev > div img   {
+    display: block;
+    margin: 0 auto -18px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    top:-30px;
+}
+.rev > div  span {
+    display: inline-block;
+    font-size: 18px;
+    color:#fff;
+}
+.rev > p {
+    padding: 20px 10px 0;
+}
+/*block9*//* bizlife_inc */
+.block9 {
+    padding: 0;
+    height: 215px;
+}
+
+/*block10*//* owmen17 */
+.ship {
+    text-align: center;
+    font-size: 0;
+}
+.ship li {
+    font-size: 16px;
+    vertical-align: top;
+    width: 220px;
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+}
+.ship li:not(:last-child):before {
+    content:'';
+    display: block;
+    background: url(../img/ar.png) no-repeat 0 0;
+    width: 46px;
+    height: 30px;
+    position: absolute;
+    top: 31px;
+    right: -38px;
+}
+.ship div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+.ship li:nth-child(2) div {
+    background-position: center -101px;
+}
+.ship li:nth-child(3) div {
+    background-position: center -235px;
+}
+.ship li:nth-child(4) div {
+    background-position: center -371px;
+}
+.ship li p {
+    padding: 5px 8px 0;
+}
+
+
+
+.block11 {
+    background: #d9dbde;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.block11 h3 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.block11 span {
+    color:#fc4944;
+}
+
+.gift_section img {
+    display: block;
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+.gift_section .text_block {
+    float: left;
+    width: 540px;
+}
+
+.gift_section .text_block p {
+    margin: 0 0 5px;
+}
+
+.gift_section .text_block p:last-child {
+    margin: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 0 30px;
+}
+.footer a {
+    font-size: 14px;
+    color:#333;
+}
+/*-------------------------------------- Media Queries ----959---------------------------------*//* after_qbici */    
+@media screen and (max-width: 976px) {
+    .topul {
+    }
+    .row {
+    margin-right: -11px !important;
+    margin-left: -11px !important;
+}
+    .block1 {
+        background: url(../img/bm.jpg) no-repeat center top;
+        padding: 25px 0 0;
+    }
+    .stock {
+    color: #fff;
+    background: rgba(33,37,48,0.95);
+}
+    .block1 .gift_image {
+            top: 362px;
+    right: 169px;
+    }
+    .block1 h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    .block1 h2 {
+        font-size: 18px;
+        line-height: normal;
+    }
+    /*.sale {
+    top: 57px;
+    right: 37px;
+    }*/
+    h2.title {
+        font-size: 30px;
+    }
+    .block2 .container img {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .about li {
+        width: 100%;
+        padding: 0;
+    }
+    .about li:first-child {
+        margin-bottom: 30px;
+    }
+    .block3 {
+        padding: 0;
+        height: 266px;
+    }
+    .create li:nth-child(1), .create li:nth-child(2),
+    .preim li:nth-child(1), .preim li:nth-child(2),
+    .ship li:nth-child(1), .ship li:nth-child(2) {
+        margin-bottom: 30px;
+    }
+    .video-container {
+        width: 100%;
+        height: 366px;
+        border-width: 20px;
+    }
+    .block6 {
+        background: url(http://sony-action.new-t0var.ru/img/b2m.jpg) no-repeat center top / cover;
+    }
+    .block7 h2 {
+        text-align: center;
+    }
+    .kitimg {
+        position: relative;
+        right: inherit;
+        top:-85px;
+        margin: 0 auto -70px;
+    }
+    .hit {
+        top: 112px;
+        left: 379px;
+    }
+    .butbox {
+        margin: 0 auto;
+    }
+    .block9 {
+        padding: 0;
+        height: 166px;
+        background-size: contain;
+    }
+    .ship li:nth-child(2):before {
+        display: none;
+    }
+    .block11 h3 {
+        font-size: 26px;
+        letter-spacing: 0;
+    }
+    .ship li:not(:last-child):before {
+        display: none;
+    }
+    .block11 h3 {
+        font-size: 22px;
+    }
+
+    .gift_section h2.title {
+        font-size: 26px;
+    }
+
+    .gift_section img {
+    }
+
+    .gift_section .text_block {
+        margin: 0;
+        width: 340px;
+    }
+    
+}
+/*-------------------------------------- Media Queries ----639---------------------------------*//* michael-k90 */ 
+@media screen and (max-width: 659px) {
+    .hdn {
+        display: none;
+    }
+    .row {
+    margin-right: -5px !important;
+    margin-left: -5px !important;
+}
+    .block26 {
+       display: block;
+    }
+    .formbox {
+        margin-top: 340px !important;
+    }
+    .block-2 {
+        background-position-y: -5344% !important;
+    }
+    .block1 {
+        background:#edebee url(../img/bs.jpg) center;
+        height: auto;
+        background-size: cover;
+        padding: 20px 0 30px;
+    }
+    .end {
+        background:#edebee url(../img/bs1.jpg) center;
+        height: auto;
+        background-size: cover;
+        padding: 20px 0 30px;
+    }
+    .formbox {
+        transform: translateX(-6%);
+    }
+    .stock {
+    color: #fff;
+    background: rgba(33,37,48,0.95);
+}
+    .block1 .gift_image {
+    top: 382px;
+    right:181px;
+    }
+    .block1 h1 {
+        font-size: 33px;
+        text-align: center;
+        color: #fff;
+    }
+    .block1 h2 {
+        margin-bottom: 398px;
+    }
+    .topul {
+        width: 300px;
+        margin: 0 auto;
+    }
+    /*.sale {
+        display: none;
+    }*/
+    .topul li {
+        padding: 0 0 16px 43px;
+        font-size: 16px;
+        color: #fff;  
+    }
+    .price {
+        margin-bottom: 20px;
+        background: rgba(33,37,48,0.95);
+        color: #fff;
+        text-align: center;
+    }
+    h2.title {
+        font-size: 22px;
+    }
+    .about img {
+        float: none;
+        margin: 0 auto 10px;
+    }
+    .block3, .block9 {
+        background:none;
+        height: auto;
+    }
+    .block3 .hidden, .block9 .hidden {
+        display: block;
+    }
+    .create li:nth-child(3),
+    .preim li:nth-child(3),
+    .ship li:nth-child(3) {
+        margin-bottom: 30px;
+    }
+    .block5 .orderbox {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .block5 .orderbox .price {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .block5 .orderbox .button-m {
+        float: none;
+    }
+    .video-container {
+        height: 190px;
+        border-width: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    .block6 .wrap {
+        padding: 0;
+    }
+    .block6 {
+        background: url(http://sony-action.new-t0var.ru/img/b2s.jpg) no-repeat center top / cover;
+    }
+    .kitimg {
+        top: 0;
+        margin: 0 auto 10px ;
+    }
+    .hit {
+        top: 237px;
+        left: 186px;
+    }
+    .kit {
+        padding-bottom: 39px;
+    }
+
+    .gift_section h2.title {
+        font-size: 22px;
+    }
+
+    .gift_section img {
+        float: none;
+        margin: 0 auto 15px;
+        width: 100%;
+    }
+
+    .gift_section .text_block {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+.info-block {
+    background-color: #fff; 
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 976px) {
+    /*.isale {
+    top: 417px !important;
+    right: 625px !important;
+}
+    .sale {
+    top: 150px;
+    right: 625px;*/
+}
+    .tran {
+        transform: translateY(23%);
+    }
+    .transla {
+        transform: translateX(4%);
+    }
+}
+
+.price {
+    width: 300px;
+    margin: 0 auto 15px;
+    text-transform: uppercase;
+}
+.formbox {
+    width: 340px;
+    background: #fff;
+    padding: 20px 0;
+    margin-top: 22px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+}
+
+.m1-form {
+    width: 280px;
+    margin: 0 auto;
+}
+.products_count {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.m1-form input.field {
+    position: relative;
+    display: block;
+    outline: 0;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto 15px;
+    padding: 0 20px;
+    background: #f3f4f6;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-box-shadow: inset 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+.m1-form .button-m {
+    width: 100%;
+}
+.button-m {
+    position: relative;
+    display: block;
+    width: 280px;
+    height: 64px;
+    line-height: 64px;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+}
+
+.cost_sale {
+    float: left;
+    width: 50%;
+    padding-top: 8px;
+}
+
+.cost_sale .sale {
+    background: #ffbc3d;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin: 0;
+    width: 70px;
+    margin: 0px auto 4px;
+    text-align: center;
+    padding: 2px 0;
+}
+
+.cost_sale .old-cost {
+    font-size: 22px;
+    line-height: 1.2em;
+    text-transform: none;
+    text-align: center;
+}
+
+.old-cost span {
+    text-decoration: line-through;
+}
+
+.cost_sale .old-cost > small {
+    font-size: 0.8em;
+}
+
+.new-cost {
+    float: right;
+    width: 50%;
+    text-transform: none;
+}
+
+.new-cost > span {
+    font-size: 18px;
+}
+
+.new-cost p small {
+    font-size: .8em;
+}
+
+.new-cost p {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0;
+}
+
+.cost_sale .sale {
+    background: #ffbc3d;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin: 0;
+    width: 70px;
+    margin: 0px auto 4px;
+    text-align: center;
+    padding: 2px 0;
+}
+
+.products_count > b {
+    color: #fff;
+    font-weight: 700;
+    background: #77c300;
+    border-radius: 3px;
+    padding: 3px;
+    margin-left: 8px;
+}

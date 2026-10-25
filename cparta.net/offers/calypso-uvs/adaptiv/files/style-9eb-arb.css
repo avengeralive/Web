@@ -1,0 +1,839 @@
+/*block1*//* after_qbici */
+.block1 {
+    background: #d4f8fc url(bg1-894.arb.jpg) no-repeat center top;
+    height: 767px;
+    padding: 20px 0 0;
+}
+.block1 h1, .block12 h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    height: 71px;
+    background: #ffff00;
+    line-height: 76px;
+    margin-bottom: 5px;
+}
+.block1 h1 span, .block12 h1 span {
+    color:#006666;
+}
+.block1 h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+}
+.block1 ul {
+    width: 360px;
+    margin: 60px 0 0 0;
+    float: left;
+}
+.block1 ul li {
+    display: block;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background: #006666;
+    font-size: 17px;
+    font-weight: 600;
+    color:#fff;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+.block1 ul li:before {
+    content: '';
+    display: inline-block;
+    background: url(check-761.arb.png) no-repeat 0 0;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px 0 18px;
+    position: relative;
+    top:6px;
+}
+.block1 .price {
+    margin: 140px 0 0 250px;
+    float: left;
+
+}
+.block1 .wrap:before {
+    content: '';
+    display: block;
+    background: url(nabor-5c7.arb.png) no-repeat 0 0;
+    background-size: cover;
+    width: 428px;
+    height: 363px;
+    position: absolute;
+    top:120px;
+    left: 360px;
+    z-index: 3;
+}
+.block1 .button-m {
+    margin-top: 296px;
+}
+/*block2*//* endzeit_____ */
+.block2 {
+    padding: 50px 0 40px;
+    background: #d4f8fc;
+}
+/*block3*//* michael-k90 */
+.block3 {
+    padding: 40px 0;
+    background: url(prim-bc7.arb.jpg) no-repeat center 205px;
+}
+.block3 h2 {
+    margin-bottom: 10px;
+}
+.block3 h2 + p{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 30px 120px;
+}
+.what {
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background: #006666;
+    color:#fff;
+    text-align: center;
+    padding: 0 10px;
+}
+.what h3 {
+    color:#ffff00;
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+.what p {
+}
+.what:before {
+    content: '';
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url(dnk-41a.arb.jpg) no-repeat -128px 0;
+    margin: -80px auto 15px;
+    border:6px solid #00b2ca;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+.wh1 {
+    float: left;
+}
+.wh1:before {
+    background-position: 0 0;
+}
+.wh1 h3 {
+    padding: 0 35px;
+}
+.wh2 {
+    float: right;
+}
+/*block4*//* bizlife_inc */
+.block4 {
+    background: #162b30;
+    padding: 40px 0 60px;
+    color:#fff;
+}
+.block4 .title, .block6 .title {
+    color:#ccffff;
+}
+.block4 .title span, .block6 .title span {
+    color:#ffff00;
+}
+.prof {
+    background: url(proff-fba.arb.jpg) no-repeat 0 0 / contain;
+    width: 420px;
+    height: 326px;
+    border:10px solid #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 50px;
+}
+.prof-text{
+    width: 420px;
+    min-height: 410px;
+    margin-bottom: 20px;
+    float: left;
+}
+.prof-text p{
+    display: block;
+    text-align: right;
+    color: #fff;
+    font-weight: 200;
+}
+.prof-text b{
+    float: left;
+    text-align: left;
+    color: #ffff00;
+    font-weight:  bold;
+}
+
+
+/*block5*//* owmen17 */
+.block5 {
+    padding: 40px 0;
+}
+.block5 .wrap {
+    background: url(bg_preim-a01.arb.jpg) no-repeat right 77px;
+}
+.preim {
+    padding: 10px 396px 0 0;
+}
+.preim li {
+    clear: both;
+    margin-bottom: 20px;
+    min-height: 120px; 
+}
+.preim h3 {
+    font-size: 22px;
+    color:#006666;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.preim p {
+    font-size: 14px;
+}
+.preim li:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 120px;
+    height: 120px;
+    background: url(preim-d45.arb.jpg) no-repeat 0 0;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    margin-right: 30px;
+}
+.preim li:nth-child(2):before {
+    background-position: -120px 0;
+}
+.preim li:nth-child(3):before {
+    background-position: -240px 0;
+}
+/*block6*//* after_qbici */
+.block6 {
+    height: 655px;
+    background: url(bgrev-576.arb.jpg) no-repeat center top;
+    padding: 40px 0 0;
+    color:#fff;
+}
+.block6 h2 {
+    margin-bottom: 10px;
+}
+.block6 h2 + p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.use {
+    text-align: center;
+    margin-bottom: 43px;
+}
+.use li {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+.use h3 {
+    color:#ffff00;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+.use p {
+    font-size: 20px;
+    padding: 0 5px;
+}
+.use li:before {
+    content: '';
+    display: block;
+    width: 168px;
+    height: 168px;
+    background: url(use-63b.arb.jpg) no-repeat 0 0;
+    margin: 0 auto 20px;
+    border:6px solid #fff;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+.use li:nth-child(2):before {
+    background-position: -168px 0;
+}
+.use li:nth-child(3):before {
+    background-position: -336px 0;
+}
+/*block7*//* endzeit_____ */
+.block7 {
+    background: url(fish-ff2.arb.jpg) no-repeat center top;
+    height: 210px;
+}
+/*block8*//* michael-k90 */
+.block8 {
+    padding: 40px 0 60px;
+}  
+.prim2 {
+    background: url(prim2-9e1.arb.jpg) no-repeat 0 0 / contain;
+    width: 440px;
+    height: 310px;
+    float: left;
+    margin-right: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.prim2 + p {
+    margin-bottom: 15px;
+}
+.block8 p {
+    font-size: 20px;
+}
+.block8 p span {
+    font-weight: 600;
+}
+/*block9*//* bizlife_inc */
+.block9 {
+    background: url(bgrev-576.arb.jpg) no-repeat center top;
+    height: 687px;
+    padding: 40px 0 0;
+}
+.block9 h2 {
+    color:#ccffff;
+}
+.reviews {
+    text-align: center;
+}
+.reviews li {
+    display:block;
+    width: 300px;
+    float: left;
+}
+.reviews h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color:#ffff00;
+    margin-bottom: 10px;
+}
+.reviews p {
+    color:#fff;
+}
+.reviews li:before {
+    content: '';
+    display: block;
+    background: url(rev-74c.arb.jpg) no-repeat 0 0;
+    width: 284px;
+    height: 254px;
+    margin: 0 auto 20px;
+    border:8px solid #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.reviews li:nth-child(2):before {
+    background-position: -284px 0;
+}
+.reviews li:nth-child(3):before {
+    background-position: -568px 0;
+}
+.reviews li:nth-child(2) {
+    margin: 0 20px;
+}
+/*block10*//* owmen17 */
+.block10 {
+    background: url(imgs-3ac.arb.jpg) no-repeat center top;
+    height: 333px;
+}
+/*block11*/
+.block11 {
+    background: url(bgship-389.arb.jpg) no-repeat center top;
+    height: 578px;
+    padding: 40px 0 0;
+    color:#fff;
+}
+.block11 h2 {
+    color:#ccffff;
+    margin-bottom: 10px;
+}
+.block11 h2 + p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+.ship {
+    text-align: center;
+}
+.ship li {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+}
+.ship h3 {
+    color:#ffff00;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.ship p {
+    font-size: 18px;
+    padding: 0 30px;
+    padding: 0 6px;
+}
+.ship li:before {
+    content: '';
+    display: block;
+    background: url(ship-c7e.arb.jpg) no-repeat 0 0;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    width: 168px;
+    height: 168px;
+    border:6px solid #fff;
+    margin: 0 auto 20px;
+}
+.ship li:nth-child(2):before {
+    background-position: -168px 0;
+}
+.ship li:nth-child(3):before {
+    background-position: -336px 0;
+}
+/*block12*/
+.block12 .price{
+    width:  210px;
+}
+.block12 .skidka{
+    top: 460px;
+    left: 200px;
+}
+.block12 {
+    background: url(b2-fc7.arb.jpg) no-repeat center top;
+    height: 725px;
+    padding: 20px 0 0;
+}
+.block12 h1 {
+    margin-bottom: 10px;
+}
+.block12 h2 {
+    color:#133443;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+.formbox {
+    width: 400px;
+    height: 450px;
+    float: right;
+    background: rgba(255,255,255,.4);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    overflow: hidden;
+    margin-top: 28px;
+}
+.redbox {
+    background: #cb3200;
+    height: 132px;
+    padding-top: 14px;
+    margin-bottom: 20px;
+}
+.my_form {
+    width: 340px;
+    margin: 0 auto;
+}
+.block12 .price {
+    margin: 194px 0 0 0;
+    float: left;
+}
+.block12 .price span {
+    background: none;
+    padding-left: 25px;
+}
+.block12 .old-cost:before, .block12 .new-cost:before {
+    left: 25px;
+}
+/*footer*/
+.footer {
+    text-align: center;
+    padding: 40px 0 30px;
+}
+.footer a {
+    font-size: 14px;
+    color:#333;
+}
+.skidka{
+    z-index:   3;
+    top: 300px;
+    position: absolute;
+    left: 280px;
+
+}
+/*-------------------------------------- Media Queries ----959---------------------------------*//* after_qbici */    
+@media screen and (max-width: 976px) {
+    .block12 .skidka{
+        left: 0px;
+        top: 300px;
+    }
+    .prof-text{
+        width: 100%;
+    }
+    .skidka{
+        top: 360px;
+    }
+    .block1 {
+        background: #d4f8fc url(b1m-15e.arb.jpg) no-repeat center top;
+        height: 716px;
+        padding: 10px 0 0;
+    }
+    .block1 h1, .block12 h1 {
+        font-size: 24px;
+        height: 60px;
+        line-height: 65px;
+    }
+    .block1 h2 {
+        font-size: 22px;
+    }
+    .block1 ul {
+        margin: 20px 0 0 0;
+        width: 391px;
+    }
+    .block1 .wrap:before {
+        background: url(dry_medium-fd1.arb.png) no-repeat 0 0;
+        width: 376px;
+        height: 448px;
+        top: 81px;
+        left: 234px;
+    }
+    .block1 .price {
+        margin: 16px 0 0 59px;
+        float: none;
+    }
+    .price {
+        width: 210px;
+    }
+    .block1 .button-m {
+        margin-top: 135px;
+    }
+    h2.title {
+        font-size: 36px;
+    }
+    .block3 h2 + p {
+        padding: 0 0 66px;
+    }
+    .block3 {
+        background: #fff;
+    }
+    .block3 h2 + p:after {
+        content: '';
+        display: block;
+        background: url(dry_large-13e.arb.png) no-repeat 0 0 / contain;
+        width:528px;
+        height: 383px;
+        margin: 0 auto 20px;
+    }
+    .prof, .prim2 {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .block4 .prof + p, .block8 p {
+        text-align: justify;
+    }
+    .block4 p, .preim p, .block3 h2 + p, .block6 h2 + p, .use p, .block8 p, .block11 h2 + p, .ship p  {
+        font-size: 14px;
+    }
+    .block5 .wrap {
+        background: #fff;
+    }
+    .preim {
+        padding: 10px 0 0 0;
+    }
+    .preim li {
+        height: 120px;
+        padding: 0 24px;
+    }
+    .preim h3 {
+        padding-top:10px;
+    }
+    .block6 {
+        height: 932px;
+        background: #2e4145;
+        padding: 40px 0;
+    }
+    .block6 h2 span {
+        display: block;
+    }
+    .use li {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: left;
+        padding: 0 20px 0 40px;
+    }
+    .use li:before {
+        float: left;
+        margin: 0 30px 0 0;
+    }
+    .use h3 {
+        padding-top: 28px;
+    }
+    .block7 {
+        background: url(fish_m-1fb.arb.jpg) no-repeat center top;
+    }
+    .block8 {
+        padding: 40px 0;
+    }
+    .block9 {
+        background: #2e4145;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .reviews li {
+        width: 100%;
+        height: 270px;
+        float: none;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    .reviews li:nth-child(2) {
+        margin: 0 0 25px 0;
+    }
+    .reviews li:before {
+        margin: 0 26px 0 0;
+        float: left;
+    }
+    .block10 {
+        background: url(imgs_m-5fe.arb.jpg) no-repeat center top;
+        height: 200px;
+    }
+    .block11 {
+        background: #006d6a;
+        height: auto;
+        padding: 40px 0 20px;
+    }
+    .block11 h2 + p {
+        padding: 0;
+    }
+    .ship li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 25px;
+        padding: 0 50px;
+    }
+    .ship li:before {
+        margin: 0 27px 0 0;
+        float: left;
+    }
+    .ship h3 {
+        padding-top: 29px;
+    }
+    .block12 {
+        background: url(b2m-6fe.arb.jpg) no-repeat center top;
+    }
+    .block12 h2 {
+        font-size: 24px;
+    }
+    .formbox {
+        width: 340px;
+        margin-top: 39px;
+    }
+    .my_form {
+        width: 300px;
+    }
+    .countbox .countbox-num {
+        width: 82px;
+    }
+    .countbox:before {
+        font-size: 22px;
+    }
+    .countbox {
+        width: 285px;
+    }
+    .block12 .price .old-cost {
+        background: #006666;
+    }
+    .block12 .price .new-cost {
+        background: #cb3200;
+    }
+    .block12 .price {
+        margin: 329px 0 0 59px;
+    }
+    .block12 .price span {
+        padding-left: 31px;
+    }
+    .block12 .old-cost:before, .block12 .new-cost:before {
+        left: 31px;
+    }
+}
+/*-------------------------------------- Media Queries ----639---------------------------------*//* michael-k90 */ 
+@media screen and (max-width: 659px) {
+    .block12 img.skidka{
+        display: none;
+    }
+    .img-off{
+        display: none;
+    }
+    .skidka{
+        width: 100px;
+        left: 120px;
+        top: 220px;
+    }
+    .block1 {
+        background: #ffff00 url(b1s2-190.arb.jpg) no-repeat center 54px;
+        height: 892px;
+        padding: 5px 0 0;
+    }
+    .block1 h1, .block12 h1 {
+        font-size: 20px;
+        line-height: 1.2;
+        background: none;
+    }  
+    .block1 h1, .block12 h1, .preim li, .reviews li, .block12 {
+        height: auto;
+    }    
+    .block1 h2 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .block1 ul {
+        margin: 220px 0 0 0;
+    }
+    .block1 ul, .block3 h2 + p:after, .prof, .prim2, .block12 .wrap, .formbox {
+        width: 100%;
+    }
+    .block1 ul{
+        margin-top: 490px;
+
+    }
+    .block1 ul, .preim li:before, .use li:before, .reviews li, .reviews li:before, .ship li:before, .block12 .price {
+        float: none;
+    }
+    .block1 .price{
+        position: absolute;
+        top:110px;
+        left: 0;
+        margin: 0;
+    }
+    .old-cost {
+        margin-bottom: 0px;
+    }
+    .block1 ul li {
+        font-size: 14px;
+    }    
+    .block1 ul li:before {
+        margin: 0 13px 0 15px;
+    }
+    .block1 .button-m {
+        margin-top: 29px;
+    }
+    h2.title {
+        font-size: 26px;
+    }
+    .block2, .block4 {
+        padding: 40px 0;
+    }
+    .block2 h2 span, .block3 h2 span, .block5 h2 span {
+        display: block;
+    }
+    .block4 p, .preim p, .block3 h2 + p, .block6 h2 + p, .use p, .block8 p, .block11 h2 + p, .ship p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .block5 p{
+        text-align: center;
+    }
+    .block3 h2 + p:after {
+        height: 223px;
+    }
+    .wh1 {
+        margin-bottom: 92px;
+    }
+    .prof, .prim2 {
+        height: 235px;
+        border-width: 5px;
+    }
+    .preim li:before {
+        margin: 0 auto 7px;
+    }
+    .preim h3, .use li {
+        text-align: center;
+    }
+    .block5 {
+        padding: 40px 0 20px;
+    }
+    .use li:before {
+        margin: 0 auto 20px;
+    }
+    .use h3 {
+        padding-top: 0px;
+    }
+    .use p, .preim li, .use li, .ship p, .block12 .wrap, .ship li {
+        padding: 0;
+    }
+    .block6 {
+        height: 1345px;
+    }
+    .block7, .block10, .block1 .wrap:before {
+        display: none;
+    }
+    .block8 {
+        padding: 70px 0 40px;
+    }
+    .prof, .prim2 {
+        height: 235px;
+    }
+    .reviews li {
+        text-align: center;
+    }
+    .reviews li:before {
+        margin: 0 0 20px 0;
+        border-width: 5px;
+    }
+    .ship li {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .ship li:before {
+        margin: 0 auto 20px;
+    }
+    .ship h3 {
+        padding-top: 0;
+    }
+    .block12 {
+        background: #ffff00 url(b2s-076.arb.jpg) no-repeat center 64px;
+        padding: 5px 0 0;
+    }
+    .block12 h1, .block12 h2 {
+        width: 300px;
+        margin: 0 auto 10px;
+    }
+    .block12 .wrap {
+    }
+    .block12 h2 {
+        font-size: 20px;
+    }
+    .block12 .price {
+        margin: 20px auto;
+        width: 300px;
+    }
+    .block12 .old-cost:before, .block12 .new-cost:before {
+        left: 10px;
+    }
+    .block12 .old-cost{
+        margin-top: 10px;
+    }
+    .block12 .price span {
+        padding-left: 10px;
+    }
+    .block12 .skidka{
+        top: 220px;
+        left: 200px;
+    }
+    .formbox {
+        height: 444px;
+        margin-top: 33px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        background: #fff url(b3s-ff3.arb.jpg) no-repeat center 132px;
+    }
+    .my_form .button-m {
+        font-size: 28px;
+        line-height: 74px;
+    }
+}

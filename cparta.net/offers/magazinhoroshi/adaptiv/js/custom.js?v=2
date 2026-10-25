@@ -1,0 +1,71 @@
+$(function() {
+
+	/* timer */
+	function update() {
+		var Now = new Date(), Finish = new Date();
+		Finish.setHours( 23);
+		Finish.setMinutes( 59);
+		Finish.setSeconds( 59);
+		if( Now.getHours() === 23  &&  Now.getMinutes() === 59  &&  Now.getSeconds === 59) {
+			Finish.setDate( Finish.getDate() + 1);
+		}
+		var sec = Math.floor( ( Finish.getTime() - Now.getTime()) / 1000);
+		var hrs = Math.floor( sec / 3600);
+		sec -= hrs * 3600;
+		var min = Math.floor( sec / 60);
+		sec -= min * 60;
+		$(".countdown .hours").text( pad(hrs));
+		$(".countdown .minutes").text( pad(min));
+		$(".countdown .seconds").text( pad(sec));
+		setTimeout( update, 200);
+	}
+	function pad(s) { return ('00'+s).substr(-2) }
+	update();
+
+
+	$('button.js-popup').fancybox();
+
+	$('.nav>li>a').click(function(e){
+		e.preventDefault(); 
+		$(this).parent().parent().toggleClass('is-active');
+		var href=$(this).attr('href');
+               var top=$(href).offset().top; //'#catalog'
+               $(document).scrollTop(top);
+               $('.header__menu-btn').toggleClass('is-active');
+             });
+
+
+	$('.header__menu-btn').click(function(){
+		$(this).toggleClass('is-active');
+		$('#nav').toggleClass('is-active');
+	});
+
+	$('a[href^="#"]:not([data-fancybox])').on('click', function(e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 900, 'swing', function() {
+			window.location.hash = target;
+		});
+	});
+
+
+	$('.product__box button').click(function(){
+		var prodName = $(this).parent().parent().parent().find('h2').text();
+		$('#modal-form').find('.name').text(prodName);
+		$("input[name='comment']").val(prodName);
+		console.log(prodName);
+	});
+
+	$('.perebit').click(function(){
+		$("input[name='comment']").val('Заказать звонок');
+	});
+
+
+
+});
+

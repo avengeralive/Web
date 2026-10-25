@@ -1,0 +1,84 @@
+#jGrowl > [class*="message-error"] {
+    background: #CC4141 !important;
+    color: #FDFDFD!important;
+    border-radius: 0px!important;
+    border: 0px!important;
+}
+#jGrowl > [class*="message-success"] {
+    background: #65A52A !important;
+    color: #FDFDFD!important;
+    border-radius: 0px!important;
+    border: 0px!important;
+}
+#jGrowl > [class*="message-info"] {
+    background: #2A72A5 !important;
+    color: #FDFDFD!important;
+    border-radius: 0px!important;
+    border: 0px!important;
+}
+.ajax_form.af_example {
+    width: 100%;
+}
+.ajax_form.af_example .controls input,
+.ajax_form.af_example .controls textarea {
+    width: 100%;
+}
+.ajax_form .error {
+    color: brown;
+}
+@media screen and (min-width: 320px) {
+    .ajax_form.af_example .controls button[type="submit"] {
+        float: right;
+    }
+}
+@media screen and (max-width: 320px) {
+    .ajax_form.af_example .controls button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+.order-form input {
+    height: 42px;
+    font-size: 18px;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 300;
+}
+header .btn-danger{
+    margin: 10px 0 0;
+}
+.list-1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+.list-1 li{
+    padding-bottom: 10px;
+}
+.price{
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.price>span{
+    margin: 0 0 0 10px;
+}
+.old-price{
+    color: #999;
+    text-decoration: line-through;
+}
+.new-price{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+p{
+    font-weight: 300;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .box-simple p{
+      padding: 0;
+  }
+  .order-form input{
+      width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+#browsebar-utils .btn:not(#browsebar-compare) {
+	margin-top:0;
+}
+.no-opacity #browsebar-utils #browsebar-buy.btn {
+	margin-top:0;
+}
+#browsebar-utils .btn .btn-blue {
+	height:47px;
+	border-radius:0;
+	padding:0 13px;
+}
+#browsebar-utils .btn .btn-blue span {
+	font-size:16px;
+}

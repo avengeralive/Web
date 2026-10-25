@@ -1,0 +1,16 @@
+.sizes h1 {
+  text-transform: uppercase;
+}
+
+.sizes table {
+  margin: 30px auto;
+  font-size: 16px;
+}
+
+.sizes table tr:nth-child(1) {
+  font-weight: bold;
+}
+
+.sizes table tr > td:nth-child(1) {
+  font-weight: bold;
+}

@@ -1,0 +1,2393 @@
+﻿<?php 
+   $offer = 134;
+   include_once $_SERVER['DOCUMENT_ROOT'].'/../includes/landingsData/index2.php';
+?> 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Магазин постельного белья</title>
+	<meta name="description" content="Магазин постельного белья">
+    <meta charset="utf-8" > 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAm07+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAARAAAAAAAAABEQAAABEREREREAAAERERERERAAAREREREREQABEREREREREAEREREREREQAREREREREQABEREREREQAAEREREREQAAAAAAABEQAAAAAAAAEQAAAAAAAAAQAAAAAAAAAAAAAAD//wAA/38AAP8/AAD/HwAAgA8AAIAHAACAAwAAgAEAAIABAACAAwAAgAcAAIAPAAD/HwAA/z8AAP9/AAD//wAA" rel="icon" type="image/x-icon">
+	<link href="https://yastatic.net/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link href="wp-content/themes/postelfabrika/css/main.css" rel="stylesheet" media="all">
+    <link href="wp-content/themes/postelfabrika/css/header2.css" rel="stylesheet" media="all">
+    <link href="wp-content/themes/postelfabrika/css/action2.css" rel="stylesheet" media="all">
+    <link href="wp-content/themes/postelfabrika/css/adv.css" rel="stylesheet" media="all">
+    <link href="wp-content/themes/postelfabrika/css/catalog.css" rel="stylesheet" media="all">
+    <link href="wp-content/themes/postelfabrika/css/sizes.css" rel="stylesheet" media="all">
+	<link href="wp-content/themes/postelfabrika/css/screens.css" rel="stylesheet" media="all">
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="wp-content/themes/postelfabrika/style.css">
+	<script type="text/javascript">
+        (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=e/MFkqffU77Zi0jCmTV/bWDC4iGPBZX66gvufU3IBKXojwq6DwkQHlQQR70azlOb3S4PHN*BM9RWI8HCioZotQviKAhqHstySR/ZH*pcECliAQuFau5ZroFnpRq3nWEPSwgVYP/hwHQMTJGRXRobk72EfisORHfaevw6NBboxFU-&pixel_id=1000058952';
+    </script>
+	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-74699954-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+		
+	
+	
+</head>
+
+<body>
+    <div class='container-fluid'>
+    <div style="background-image:url('wp-content/themes/postelfabrika/images/bg.jpg')!important; background-size: hover;" id='go'>
+        <!-- Первый экран -->
+        <div class='row header'>
+
+            <!-- Телефон XS-->
+            <div class='col-md-5 col-xs-12 visible-xs'>
+            </div>
+
+            
+
+
+            <!-- Оффер -->
+            <div class='col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 text-center header-offer'>
+                <span>
+              ИНТЕРНЕТ-МАГАЗИН<br>ПОСТЕЛЬНОГО БЕЛЬЯ
+            </span>
+                <br>
+                <br>
+                <span>
+              20 лет успешной работы
+            </span>
+            </div>
+
+        </div>
+
+        <!-- Второй экран - Акция -->
+        <div class='row action'>
+
+            <div class='col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 text-center' style="opacity:0.8!important;"> 
+                <div style="background-color: transparent; opacity: 1!important;">
+                    <span style="font-size:32px; text-align: text;">ТОЛЬКО СЕГОДНЯ</span>
+                    <br> 
+                    <br>
+                    <br>
+                    <h2>Сегодня скидка 60% + подарок!</h2>
+                    <div class='action-timer col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3'>
+                        <div class='action-timer-tablo text-center col-xs-12'>
+                            <div>
+                                <span class='d'>0</span>
+                                <span class='h'>15</span>
+                                <span class='m'>8</span>
+                                <span class='s'>10</span>
+                            </div>
+                        </div>
+                        <div class='action-timer-description text-center col-xs-12'>
+                            <div>
+                                <span>дни</span>
+                                <span>часы</span>
+                                <span>мин</span>
+                                <span>сек</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-xs-12' style="margin: 10px auto; color: red;">
+                        <h4>осталось до конца акции</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+		
+		<div id='bobo1'>
+		
+			<img src='wp-content/themes/postelfabrika/images/hed.jpg'>
+			
+		</div>
+		
+		<div  class='col-xs-12 text-center' id='bobo'>
+
+			<h2>ИНТЕРНЕТ-МАГАЗИН<br>ПОСТЕЛЬНОГО БЕЛЬЯ</h2>
+
+		</div>
+		
+        <!-- Четвертый экран - Каталог -->
+        <div class='row catalog'>
+
+<div class='col-xs-12 text-center' id="catalog">
+    <h1>Каталог</h1>
+</div>
+
+
+
+<div class='col-xs-12 text-center'>
+
+<ul class='list-inline'>
+    <li><a href="15-sleeping/index.php" class="catalog-link">1,5-спальные</a></li>
+    <li><a href="index.php" class="catalog-link">2-спальные</a></li>
+    <li><a href="euro/index.php" class="catalog-link">евро</a></li>
+    <li><a href="pillows-and-blankets/index.php" class="catalog-link">семейные</a></li>
+    <li><a href="family/index.php" class="catalog-link">Подушки и одеяла</a></li>
+	<li><a href="covers-1.5/index.php" class="catalog-link">Покрывала</a></li>
+	 
+</ul>
+
+<ul class='wwq'>
+
+	<li><a href="covers-1.5/index.php" class="catalog-link">1,5-спальные</a></li>
+    <li><a href="http://d.sweetshoppings.ru/covers-2/" class="catalog-link">2-спальные</a></li>
+    <li><a href="http://d.sweetshoppings.ru/covers-euro/" class="catalog-link">евро</a></li>
+
+</ul>
+
+</div>
+
+<style>
+.wwq {
+	padding-left:0 !important;
+	display:none;
+	text-align:center;
+}
+.wwq li {
+	list-style:none;
+	display:inline-block;
+	padding:0 6px;
+}
+</style>
+
+<div class='col-xs-12 text-center' id="catalog-content">
+				
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок8-422x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Веселый пёс</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок7-418x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Милый кот</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок12-413x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Щенок</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB1FDfxeUuF3KVjSZK9q6zVtXXav-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Цветы и бабочки</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB1GjmPacfrK1RjSszcq6xGGFXaq-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Сердечки 1</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/H714954b9bf5347b9a934fb70b7dabfe2G-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Мурлыка</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок2-408x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Листья 3</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок3-409x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Розовый</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок4-1-405x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Олень</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB17TvFf_JYBeNjy1zeq6yhzVXaS-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Кит</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок5-370x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Звезда 3</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Hefc88d55c3454926836596ff5973dd2fI-1-369x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Детский 4</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок9-1-427x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Нежность</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок10-1-428x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Красные розы</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Снимок11-1-426x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Роза</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB1txQla3mH3KVjSZKzq6z2OXXas-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Белый волк</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB1ZG_veLWG3KVjSZFgq6zTspXa4-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Птички на ветке</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB17oZWKwHqK1RjSZFkq6x.WFXaw_-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Цветы 7</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB15nwMaGSs3KVjSZPiq6AsiVXaz-435x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Листья</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB1bE.DaLWG3KVjSZPcq6zkbXXaJ-435x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Голубой 3</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB1fX3DaMmH3KVjSZKzq6z2OXXah-420x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Детский 6</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/08/6-1-399x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Водопад 2</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/5-397x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Загадочный лес</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/4-397x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Водопад 1</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/29-442x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Сердце 2</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/28-441x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Любовь</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/24-439x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Звезда</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/25-440x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Ананас</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/36-441x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Ёлочки</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/09/10-1-439x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Цветы 1</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/3-400x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Таинственный лес</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/2-395x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Море</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/1-384x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Летнее настроение</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/10/H868101e55c2a418b8ce053b5597d3af2q-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Волк 2</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/10/HTB136xOKv9TBuNjy1zbq6xpepXap-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Цвет2</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Hf96ee2cab8f048fba81b7a9e7683172aP-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Люкс 2</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/10/HTB1TUgtRmzqK1RjSZFHq6z3CpXaY-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Цыпа</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/Hec001ce097f24b9ca620789622ed9881L-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Люкс 1</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2020/01/HTB10SR1SpXXXXXMaFXXq6xXFXXXO-375x375.jpg'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Ёлки</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2018/10/38-439x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Дождик</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/34-440x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Лесные жители</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2018/10/30-1-438x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Поцелуй</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2018/09/27-1-443x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Кактус</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2018/09/37-443x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Зайка в поле</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/32-442x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Грибочки</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/22-385x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Слон 2</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/08/23-386x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Шаман</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/21-385x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Скорпион</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/20-387x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Рыба</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/19-385x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Танец</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/18-384x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Золотая стрекоза</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/17-385x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Сова</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/16-385x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Цапля</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/15-384x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Маска</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/08/14-1-389x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Бабочка</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/08/13-389x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Черепаха</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  		
+		<div class='col-md-4 col-sm-6 col-xs-12 catalog-product-card'>
+			<div class=''>
+			
+			  <div class='catalog-product-card-image'>
+			  
+			  <img class='lazy' src='wp-content/themes/postelfabrika/img/loading.gif' data-original='http://d.sweetshoppings.ru/wp-content/uploads/2019/06/12-389x375.png'>
+			  
+			  </div>
+			  
+				<span id='price_old' class='products-price-old'>обычная цена: <b>5990 Р</b></span>
+				<span id='price' class='products-price-new'>цена по акции: <b>199 р</b></span>
+			  
+				  <ul class='list-unstyled'>
+					<li id='article'>артикул: <strong>Слон 1</strong></li>
+					<li>характеристика: 100% ХЛОПОК, САТИН 3D</li>
+				  </ul>
+				  
+				  <ul class='list-unstyled'>
+					<li>состав комплекта:</li>
+					<li>простыня: 200Х215 - 1 ШТ</li>
+					<li>пододеяльник: 175Х215 - 1 ШТ.</li>
+					<li>наволочка: 70Х70 - 2 ШТ.</li>
+				  </ul>
+				  
+				  <div class='catalog-product-card-button'>
+					<div>заказать по акции</div>
+				  </div>
+				  
+				<div class='catalog-skidka'><span>полотенце<br>в подарок</span></div>
+			  
+			</div>
+      </div>
+	  
+	  
+</div>
+<!--F24987CE8-->
+
+</div>
+
+        <!-- Пятый экран - Акция -->
+        <div class='row action'>
+
+            <div class='col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 text-center'>
+                <span>ТОЛЬКО СЕГОДНЯ</span>
+                <br>
+                <br>
+                <br>
+                <h2>СКИДКА 60% + ПОДАРКИ!</h2>
+                <div class='action-timer col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3'>
+                    <div class='action-timer-tablo text-center col-xs-12'>
+                        <div>
+                            <span class='d'>0</span>
+                            <span class='h'>15</span>
+                            <span class='m'>8</span>
+                            <span class='s'>10</span>
+                        </div>
+                    </div>
+                    <div class='action-timer-description text-center col-xs-12'>
+                        <div>
+                            <span>дни</span>
+                            <span>часы</span>
+                            <span>мин</span>
+                            <span>сек</span>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-xs-12' style="margin: 10px auto; color: red;">
+                    <h4>осталось до конца акции</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Седьмой экран - Таблица размеров -->
+        <div class='row sizes hidden-xs'>
+            <div class='col-xs-12 text-center'>
+                <h1>таблица размеров</h1>
+            </div>
+            <div class='col-xs-12 text-center'>
+                <table class='table-hover table'>
+
+                    <tr>
+                        <td class='col-xs-2 col-xs-offset-1'>Размер</td>
+                        <td class='col-xs-2'>1,5-спальные</td>
+                        <td class='col-xs-2'>2-спальные</td>
+                        <td class='col-xs-2'>Евро </td>
+                        <td class='col-xs-2'>Семейные</td>
+                    </tr>
+
+                    <tr>
+                        <td class='col-xs-2 col-xs-offset-1'>Простыня</td>
+                        <td class='col-xs-2'>150Х220 - 1 ШТ.</td>
+                        <td class='col-xs-2'>175Х200 - 1 ШТ.</td>
+                        <td class='col-xs-2'>240Х220 - 1 ШТ.</td>
+                        <td class='col-xs-2'>240Х220 - 1 ШТ.</td>
+                    </tr>
+
+                    <tr>
+                        <td class='col-xs-2 col-xs-offset-1'>Пододеяльник</td>
+                        <td class='col-xs-2'>145Х217 - 1 ШТ.</td>
+                        <td class='col-xs-2'>174X217 - 1 ШТ.</td>
+                        <td class='col-xs-2'>200Х220 - 1 ШТ.</td>
+                        <td class='col-xs-2'>150х215 - 2 шт.</td>
+                    </tr>
+
+                    <tr>
+                        <td class='col-xs-2 col-xs-offset-1'>Наволочка</td>
+                        <td class='col-xs-2'>70Х70 - 2 ШТ.</td>
+                        <td class='col-xs-2'>70Х70 - 2 ШТ.</td>
+                        <td class='col-xs-2'>70Х70 - 2 ШТ.
+                            <br>50Х70 - 2 ШТ.</td>
+                        <td class='col-xs-2'>70Х70 - 2 ШТ.
+                            <br>50Х70 - 2 ШТ.</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+<div class='row footer' style='margin: 30px auto;'>
+            <div class='col-md-5 col-xs-12 visible-xs'>
+            </div>
+
+            
+            <!-- Футер 2 -->
+        <div class='row text-center'>
+            ООО «Магия Чистоты», <br> ИНН 7723456461, ОГРН 1167746615860, <br> 
+			109388, г.Москва, ул.Шоссейная, д. 58, корп. 3
+            <br>
+            <a href='wp-content/themes/postelfabrika/policy.html' target='_blank'>Политика конфиденциальности</a>
+	        </div>
+
+            
+            </div>
+       
+
+        <!-- Футер 2 -->
+            
+
+    <!-- Модаль -->
+    <div class="modal fade" tabindex="-1" role="dialog" id='modal'>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					
+					<h4>Введите ваши данные:</h4>
+					
+                </div>
+                <div class="modal-body text-center">
+					
+                </div>
+				
+				<div class='bombom'>
+				
+					<form action='./_success_/' method='post'>
+						
+						<input type='text' name='name' required placeholder='Введите Ф.И.О' class='inp'>
+						<input type='tel' name='phone' required placeholder='Введите телефон' class='inp' autocomplete="off">
+						
+						<input type='submit' value='ЗАКАЗАТЬ ПО АКЦИИ' class='sub'>
+						 <input type='hidden' name='referer' value="<?php echo isset($_GET['referer']) ? $_GET['referer'] : $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] ;?>">
+<input type="hidden" name="subid1"  value="<?php echo isset($_GET['subid1']) ? $_GET['subid1'] : '' ;?>" />
+<input type="hidden" name="subid2"  value="<?php echo isset($_GET['subid2']) ? $_GET['subid2'] : '' ;?>" />
+<input type="hidden" name="subid3"  value="<?php echo isset($_GET['subid3']) ? $_GET['subid3'] : '' ;?>" />
+<input type="hidden" name="subid4"  value="<?php echo isset($_GET['subid4']) ? $_GET['subid4'] : '' ;?>" />  
+<input type="hidden" name="subid5"  value="<?php echo isset($_GET['subid5']) ? $_GET['subid5'] : '' ;?>" />
+						 
+						
+						
+					</form>
+				
+				</div>
+                
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://yastatic.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="wp-content/themes/postelfabrika/js/jquery.lazyload.min.js"></script>
+	
+	<script>$(document).ready(function () {
+			$("img.lazy").lazyload({
+			    effect : "fadeIn"
+			});
+	});
+	</script>
+    <script src="wp-content/themes/postelfabrika/js/url.min.js"></script>
+    <script src="wp-content/themes/postelfabrika/js/cookie.js"></script>
+    <script src="wp-content/themes/postelfabrika/js/main.js"></script>
+	<script src="wp-content/themes/postelfabrika/js/jquery.maskedinput.min.js"></script>
+	<script>
+		$(function(){
+		  //2. Получить элемент, к которому необходимо добавить маску
+		  $("input[type='tel']").mask("+7 (999) 999-99-99");
+		});
+	</script>
+	
+	<div id="upbutton"></div>
+
+	<script>
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				if ($('#upbutton').is(':hidden')) {
+					$('#upbutton').css({opacity : 1}).fadeIn('slow');
+				}
+			} else { $('#upbutton').stop(true, false).fadeOut('fast'); }
+		});
+		$('#upbutton').click(function() {
+			$('html, body').stop().animate({scrollTop : 0}, 300);
+		});
+	</script>
+
+	<style>
+	  #upbutton {
+		background: url("wp-content/themes/postelfabrika/images/up.png") no-repeat top left;
+		height: 48px;
+		width: 48px;
+		bottom: 25px;
+		right: 15px;
+		cursor: pointer;
+		display: none;
+		position: fixed;
+		z-index: 999;
+	  }
+	</style>
+
+  <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter37026060 = new Ya.Metrika({
+                        id: 37026060,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {}
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function() {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/37026060" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+ 
+    
+
+
+
+<!-- Код тега ремаркетинга Google -->
+ 
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 835988743;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/835988743/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for &#1050;&#1085;&#1086;&#1087;&#1082;&#1072; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100; Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  goog_snippet_vars = function() {
+    var w = window;
+    w.google_conversion_id = 835988743;
+    w.google_conversion_label = "YHjlCO-lwXQQh9rQjgM";
+    w.google_remarketing_only = false;
+  }
+  // DO NOT CHANGE THE CODE BELOW.
+  goog_report_conversion = function(url) {
+    goog_snippet_vars();
+    window.google_conversion_format = "3";
+    var opt = new Object();
+    opt.onload_callback = function() {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  }
+  var conv_handler = window['google_trackConversion'];
+  if (typeof(conv_handler) == 'function') {
+    conv_handler(opt);
+  }
+}
+/* ]]> */
+</script>
+<script type="text/javascript"
+  src="http://www.googleadservices.com/pagead/conversion_async.js">
+</script>
+
+
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=Ux1rQ8dCn1S2Qva0VLSJPMT/pJt1xAFnwKZDnxBxsw2gT317ptkgSDiHzNzyD*IDgn7LUueTBLTCXaPey8*d2pCQGQsm0RR6OifnU4kL3O32lSEAVNwi0puc4PLZa6EOBxVxro*H/OeiveKK1U3XCUq3RtVHQmI*H9nJh9q8mZM-&pixel_id=1000076993';</script>
+  
+	</body>
+</html>

@@ -1,0 +1,223 @@
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav, output, ruby, section,
+summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0;}
+
+/* HTML5 display-role reset for older browsers */
+/* endzeit_____ */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {display: block;}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+img{max-width: 100%; height: auto;}
+a{text-decoration: underline;}
+a:hover{cursor: pointer;}
+/* michael-k90 */
+*::-webkit-input-placeholder {color: #a9a9a9; opacity: 1;}
+*:-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*::-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*:-ms-input-placeholder {color: #a9a9a9; opacity: 1;}
+*{margin: 0; padding: 0;}
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+button,input,a{outline: none;}
+/* endzeit_____ */
+.hidden{display: none;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.clearfix:after{content: '';display: block;clear: both;}
+.clear{clear: both;height: 0px;}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('subset-MuseoSansCyrl-900.woff2')/*tpa=http://tovarweb.ru/babylito1/fonts/subset-MuseoSansCyrl-900.woff2*/ format('woff2'),
+        url('subset-MuseoSansCyrl-900.woff')/*tpa=http://tovarweb.ru/babylito1/fonts/subset-MuseoSansCyrl-900.woff*/ format('woff'),
+        url('subset-MuseoSansCyrl-900.ttf')/*tpa=http://tovarweb.ru/babylito1/fonts/subset-MuseoSansCyrl-900.ttf*/ format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('subset-MuseoSansCyrl-500.woff2')/*tpa=http://tovarweb.ru/babylito1/fonts/subset-MuseoSansCyrl-500.woff2*/ format('woff2'),
+        url('subset-MuseoSansCyrl-500.woff')/*tpa=http://tovarweb.ru/babylito1/fonts/subset-MuseoSansCyrl-500.woff*/ format('woff'),
+        url('subset-MuseoSansCyrl-500.ttf')/*tpa=http://tovarweb.ru/babylito1/fonts/subset-MuseoSansCyrl-500.ttf*/ format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+html{
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+h1,h2,h3,h4,h5,h6{font-family: "Museo Sans", sans-serif; font-weight: 700;}
+b,strong{font-weight: 700;}
+body{
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px auto;
+    font-family: "Museo Sans", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: #222;
+    background: url(bg-r.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-r.jpg*/ repeat #fff;
+}
+section{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.wrap{
+    width: 960px;
+    padding: 40px 10px 50px;
+    margin: 0 auto;
+}
+.m1-form{
+    width: 380px;
+    margin: 20px 0 0;
+}
+.m1-form>div{
+    margin: 0 auto 15px;
+}
+.m1-form>div:last-child{
+    margin-bottom: 0;
+}
+.m1-form input{
+    position: relative;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    height: 67px;
+    line-height: 67px;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Museo Sans", Helvetica, sans-serif;
+    font-weight: 400;
+    border-radius: 12px;
+}
+.m1-form input:focus{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(49, 40, 2, 0.3);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(49, 40, 2, 0.3);
+    box-shadow:         0px 0px 10px 0px rgba(49, 40, 2, 0.3);
+}
+.m1-form .button-m{
+    width: 100%;
+}
+.button-m{
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 70px;
+    margin: 0 auto;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer; 
+    line-height: 68px;
+    font-family: "Museo Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    background: #fe6118;
+    background-image: -webkit-linear-gradient(top, #fe6118, #e24611);
+    background-image: -moz-linear-gradient(top, #fe6118, #e24611);
+    background-image: -ms-linear-gradient(top, #fe6118, #e24611);
+    background-image: -o-linear-gradient(top, #fe6118, #e24611);
+    background-image: linear-gradient(to bottom, #fe6118, #e24611);
+    border-radius: 12px;
+    border-bottom: 3px solid #c63605;
+    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+}
+.button-m:hover{
+    background: #e64e13;
+}
+.title{
+    margin: 0 0 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-size: 32px;
+    line-height: 1.3em;
+}
+.countbox{
+    width: 282px; 
+    margin: 0 auto;
+    padding: 10px 0 25px;
+    font-size: 30px; 
+    line-height: 1.2; 
+    text-align: center;
+    color: #fff;
+}
+.countbox .countbox-num{
+    position: relative;
+    float: left; 
+    width: 84px;
+    height: 46px; 
+    line-height: 46px; 
+    color: #fff;
+}
+.countbox .countbox-space{
+    float: left; 
+    width: 15px; 
+    height: 46px;
+    line-height: 46px;
+    font-weight: 400; 
+    color: #fff;
+}
+.countbox .countbox-space:before{content: '\003A';}
+.countbox-hours1,.countbox-mins1,.countbox-secs1, .countbox-hours2,.countbox-mins2,.countbox-secs2{
+    float: left; 
+    width: 38px;
+    height: 46px;
+    margin: 0 2px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #333;
+    background: #fff;
+    z-index: 1;
+}
+.countbox-hours-text,.countbox-mins-text,.countbox-secs-text{
+    position: absolute;
+    margin-top: 35px;
+    height: 18px;
+    width: 84px;
+    text-align: center; 
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    text-transform: lowercase;
+}
+@media screen and (max-width: 959px){
+    .wrap{
+        width: 640px;
+    }
+    .m1-form{
+        width: 360px;
+    }
+}
+@media screen and (max-width: 639px){
+    .wrap{
+        width: 320px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .m1-form{
+        width: 300px;
+        margin: 20px auto 0;
+    }
+}

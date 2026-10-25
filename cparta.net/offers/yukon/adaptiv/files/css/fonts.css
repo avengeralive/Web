@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweatherbold.woff2') format('woff2'),
+      	url('../fonts/merriweatherbold.ttf')  format('truetype'),
+       url('../fonts/merriweatherbold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweatherregular.woff2') format('woff2'),
+      	url('../fonts/merriweatherregular.ttf')  format('truetype'),
+       url('../fonts/merriweatherregular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubikbold.woff2') format('woff2'),
+      	url('../fonts/Rubikbold.ttf')  format('truetype'),
+       url('../fonts/Rubikbold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

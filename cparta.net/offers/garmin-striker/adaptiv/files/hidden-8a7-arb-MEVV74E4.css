@@ -1,0 +1,15 @@
+@media screen and (max-width: 600px) {
+    #benefits_list {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+}
+
+@media screen and (max-width: 600px) {
+    #discount {
+        visibility: hidden;
+        display: none;
+    }
+}

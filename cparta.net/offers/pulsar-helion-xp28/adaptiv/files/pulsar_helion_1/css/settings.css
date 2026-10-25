@@ -1,0 +1,263 @@
+.hidden{display: none;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.clearfix:after{content: '';display: block;clear: both;}
+.clear{clear: both;height: 0px;}
+
+body{
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px auto;
+    font-family: "Gotham Pro", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5em;
+    color: #222;
+    background: #fff;
+}
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+.wrap h1, .wrap h2, .wrap h3, .wrap h4, .wrap h5, .wrap h6{font-weight: 400;}
+.wrap b, .wrap strong{font-weight: 700;}
+
+section{
+    margin: 0 auto;
+}
+.container-text>p{
+    margin: 0 0 15px;
+}
+.col-1{
+    color: #00b4ff;
+}
+.gradient--theme{
+    color: #fff;
+    background: #07a6e0;
+    background: -moz-linear-gradient(-45deg, #32dac3 30%, #07a6e0 100%);
+    background: -webkit-linear-gradient(-45deg, #32dac3 30%,#07a6e0 100%);
+    background: linear-gradient(135deg, #32dac3 30%,#07a6e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32dac3', endColorstr='#07a6e0',GradientType=1 );
+}
+.dark--theme{
+    color: #fff;
+}
+.mob-hid{
+    display: block;
+}
+.mob-vis{
+    display: none;
+}
+
+/*заголовки*/
+.lvl-title-v1{
+    margin: 0 0 30px;
+    font-size: 22px;
+    line-height: 1.4em;  
+}
+.lvl-title-v1>strong{
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 44px;
+    line-height: 1em;
+}
+.lvl-title-v1:after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    margin: 20px 0 0;
+    background: #e5e5e5;
+}
+
+/*списки - только разметка. Обводки, тени, цвета и д.р. прописываются в основном файле под требование дизайна*/
+
+.list-type-v1{
+    margin: 20px 0 0;
+}
+.list-type-v1>li{
+    margin: 15px 0 0;
+    padding: 0 0 0 30px;
+}
+
+.list-type-v2{
+    font-size: 0;
+    letter-spacing: 0;
+}
+.list-type-v2>li{
+    display: inline-block;
+    margin: 30px 0 0;
+    padding: 0 15px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: normal;
+}
+.list-type-v2 .list-img{
+    display: block;
+    margin: 0 auto 15px;
+}
+.list-type-v2 .list-cont h4{
+    margin: 0 0 5px;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.list-type-v3{
+    font-size: 0;
+    letter-spacing: 0;
+}
+.list-type-v3>li{
+    margin: 20px auto 0;
+    font-size: 15px;
+    letter-spacing: normal;
+}
+.list-type-v3>li:after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.list-type-v3 .list-img{
+    display: block;
+    float: left;
+}
+.list-type-v3 .list-cont{
+    padding: 5px 0 0 110px;
+}
+.list-type-v3 .list-cont h4{
+    margin: 0 0 5px;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/*обвесы списков*/
+.list--circle>li .list-img{
+    border-radius: 50%;
+}
+.list--square>li .list-img{
+    border-radius: 4px;
+}
+
+/* Таймер-v1 */
+.timer-box-v1{
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 0;
+}
+.timer-box-v1 .timer-num{
+    position: relative;
+    display: inline-block;
+    letter-spacing: normal;
+}
+.timer-box-v1 .timer-num:after{
+    content: ':';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+}
+.timer-box-v1 .timer-num:last-of-type:after{
+    display: none;
+}
+.timer-box-v1 .timer-num>span{
+    display: inline-block;
+}
+.timer-box-v1 .timer-num>small{
+    display: block;
+}
+
+.button-m{
+    display: block;
+    max-width: 280px;
+    height: 72px;
+    margin: 0 auto;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer; 
+    line-height: 72px;
+    font-family: "Gotham Pro", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #ff7200;
+    -webkit-box-shadow: 0 0px 0px 6px rgba(255, 114, 0, 0.3);
+    box-shadow:         0 0px 0px 6px rgba(255, 114, 0, 0.3);
+    border-radius: 35px;
+}
+
+.video-cont{
+    position: relative;
+    height: 260px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+}
+.video-cont iframe, .video-cont object, .video-cont embed{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.my_form{
+    width: auto;
+    max-width: 380px;
+    margin: 0 auto;
+}
+.my_form>div{
+    margin: 18px auto;
+}
+.my_form>div:last-of-type{
+    margin-bottom: 0;
+}
+.my_form input, .my_form select{
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-family: "Gotham Pro", Helvetica, Arial, sans-serif;
+    font-weight: 400;  
+    border: 1px solid #dedede;
+    border-radius: 4px;
+}
+.my_form button{
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width: 959px){
+    .wrap{
+        width: 640px;
+        padding: 40px 10px;
+    }    
+    .lvl-title-v1{
+        text-align: center;
+    }
+    .lvl-title-v1:after{
+        margin: 20px auto 0;
+    }
+} 
+
+@media screen and (max-width: 639px){
+    .wrap{
+        width: 320px;
+        padding: 40px 5px;
+    }
+    .lvl-title-v1>strong{
+        font-size: 32px;
+    }
+}

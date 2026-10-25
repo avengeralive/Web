@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'PT Serif';
+    src: url('subset-PTSerif-Regular-e16.arb-2e4.arb.woff2') format('woff2'),
+        url('fonts/subset-PTSerif-Regular-16d.arb.woff') format('woff'),
+        url('fonts/subset-PTSerif-Regular-e93.arb.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('fonts/subset-PTSerif-Italic-ce7.arb.woff2') format('woff2'),
+        url('fonts/subset-PTSerif-Italic-ff5.arb.woff') format('woff'),
+        url('fonts/subset-PTSerif-Italic-7b8.arb.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('subset-PTSerif-Bold-66c.arb-7a6.arb.woff2') format('woff2'),
+        url('fonts/subset-PTSerif-Bold-e19.arb.woff') format('woff'),
+        url('fonts/subset-PTSerif-Bold-17e.arb.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('fonts/subset-PTSerif-BoldItalic-f97.arb.woff2') format('woff2'),
+        url('fonts/subset-PTSerif-BoldItalic-108.arb.woff') format('woff'),
+        url('fonts/subset-PTSerif-BoldItalic-e96.arb.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}

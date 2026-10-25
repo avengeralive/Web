@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('fonts/subset-AvenirNextCyr-Light-b49.arb.woff2') format('woff2'),
+        url('fonts/subset-AvenirNextCyr-Light-73d.arb.woff') format('woff'),
+        url('fonts/subset-AvenirNextCyr-Light-3c8.arb.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('subset-AvenirNextCyr-Regular-6de.arb-964.arb.woff2') format('woff2'),
+        url('fonts/subset-AvenirNextCyr-Regular-9fc.arb.woff') format('woff'),
+        url('fonts/subset-AvenirNextCyr-Regular-90c.arb.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('fonts/subset-AvenirNextCyr-Medium-e13.arb.woff2') format('woff2'),
+        url('fonts/subset-AvenirNextCyr-Medium-a63.arb.woff') format('woff'),
+        url('fonts/subset-AvenirNextCyr-Medium-b9b.arb.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('subset-AvenirNextCyr-Bold-7e1.arb-2ef.arb.woff2') format('woff2'),
+        url('fonts/subset-AvenirNextCyr-Bold-5e6.arb.woff') format('woff'),
+        url('fonts/subset-AvenirNextCyr-Bold-ac9.arb.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

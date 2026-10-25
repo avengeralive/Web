@@ -1,0 +1,61 @@
+#desc-text-btn-halfbg{
+    background: #f8f9fb;
+}
+
+#desc-text-btn-halfbg .half-container-right {
+	background-image: url('../images/ecco-store.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-repeat: no-repeat;
+	background-position: top center;
+	opacity: 0.88;
+}
+#benefit-3col-2row-2 .bg {
+	background-image: url('../images/1-travel-bots.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.68;
+}
+#benefit-3col-2row-2 {
+	background: #999999;
+}
+
+#desc-halfbg-list-btn .half-container-left {
+	background-image: url('../images/2-travel-bots-min.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-repeat: no-repeat;
+	background-position: center right;
+	opacity: 1;
+}
+#desc-fluid-card-5col .bg {
+	background-image: url('../images/1-travel-bots.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-repeat: no-repeat;
+	background-position: top center;
+	opacity: 0.5;
+}
+
+#desc-fluid-card-5col {
+	background: #ffffcc;
+}
+#footer-list-text {
+    background: #444444;
+}
+
+#footer-list-text .bg {
+	background-image: url('../images/bg-28.jpg');
+	background-size: auto;
+	-webkit-background-size: auto;
+	background-repeat: no-repeat;
+	-webkit-background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.25;
+}

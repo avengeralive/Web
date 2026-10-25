@@ -1,0 +1,64 @@
+
+%icon{
+	display: inline-block;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+%icon-size-130{
+	width: 130px;
+	height: 130px;
+
+        @media all and (max-width: $medium){
+			width: 70px;
+			height: 70px;
+		}
+}
+
+//
+@each $type in vk, inst, fc, tg, conditions1, conditions2, conditions3{
+  .ico-#{$type} {
+	@extend %icon;
+
+	@if $type == vk or $type == inst or $type == fc or $type == tg {
+		@extend %icon-size-130;
+		transition: transform .20s ease-out;
+
+	} @else if $type == conditions1{
+		width: 318.96px;
+		height: 262px;
+
+		@media all and (max-width: $medium){
+			width: 120px;
+			height: 120px;
+		}
+	} @else if $type == conditions2{
+		width: 269.83px;
+		height: 221px;
+
+		@media all and (max-width: $medium){
+			width: 116px;
+			height: 94px;
+		}
+	} @else if conditions3{
+		width: 227.43px;
+		height: 187px;
+
+		@media all and (max-width: $medium){
+			width: 112px;
+			height: 91px;
+		}
+	} @else{
+
+	}
+	@if $type == vk or $type == inst or $type == fc or $type == tg  {
+	    background-image: url('../images/#{$type}.svg');
+	} @elseif $type == conditions1 or $type == conditions2 or $type == conditions3{
+	    background-image: url('../images/#{$type}.png');
+	}
+
+  }
+}

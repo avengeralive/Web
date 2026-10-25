@@ -1,0 +1,60 @@
+.hub-modal.instagram-content>.hub-modal-content .content.instagram-modal:before {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  height: 45px;
+  right: 0px;
+  top: 5px;
+}
+
+.hub-modal.instagram-content>.hub-modal-content .content.instagram-modal .product-cta-callout {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  background-color: #0041c0;
+  border: transparent !important;
+  border-radius: 2px !important;
+  padding: 8px 20px;
+  text-align: center;
+  top: 12px !important;
+  right: 8px !important;
+}
+
+.hub-modal.instagram-content>.hub-modal-content .content.instagram-modal .product-cta-callout>span.product-shop-button {
+  border: none !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1 !important;
+  padding: 0 !important;
+}
+
+@media (min-width: 641px), (min-device-width: 1281px), print {
+  .hub-modals>.hub-modal.instagram-content>.hub-modal-content .content.instagram-modal:before {
+    width: 200px !important;
+  }
+
+  .hub-modal #popover-div>.lf-popover.lf-product-popover {
+    top: 10px !important;
+  }
+
+  .hub-modal.instagram-content>.hub-modal-content .content.instagram-modal .product-cta-callout>span.product-shop-button:before {
+    content: '';
+    display: none; // cta icon exists none => inline-block
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 28px;
+    width: 36px;
+    margin: -4px 10px -8px 0px;;
+  }
+}
+
+@media only screen and (max-width: 640px) and (max-device-width: 1280px) {
+  .hub-modals>.hub-modal.instagram-content>.hub-modal-content .content.instagram-modal:before {
+    width: 160px !important;
+  }
+
+  .hub-modal .product-cta-callout.mobile+#popover-div>.lf-popover {
+    margin-top: -70px !important;
+  }
+}

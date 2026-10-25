@@ -1,0 +1,560 @@
+.block-1{
+    height: 600px;
+    color: #fff;
+    background: url(bg-1.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-1.jpg*/ 50% 0 no-repeat;
+}
+.block-1 .wrap{
+    padding: 20px 10px 0;
+}
+.block-1 h1{
+    margin: 0 350px 0 0;
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 1.1em;
+    letter-spacing: 1.4px;
+    color: #ffff00;
+}
+.block-1 .container{
+    padding: 24px 370px 0 0;
+}
+.block-1 .title{
+    margin: 0;
+    font-size: 20px;
+    text-align: left;
+}
+.block-1 .list{
+    padding: 30px 140px 0 0;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+.block-1 .list li{
+    padding: 0 0 15px 34px;
+    background: url(check-marker.png)/*tpa=http://tovarweb.ru/babylito1/img/check-marker.png*/ 0 0 no-repeat;
+}
+.block-1 .button-m{
+    margin: 0;
+}
+.cost{
+    overflow: hidden;
+    margin: 20px 190px 0 0;
+    font-size: 18px;
+    background: #09889c;
+    border-radius: 12px;
+}
+.cost>span{
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 6px 10px;
+    text-align: center;
+    color: #fff;
+}
+.cost span.new-cost{
+    color: #222;
+    background: #fff;
+}
+.cost>span span{
+    display: inline-block;
+    font-size: 36px;
+    line-height: 1em;
+}
+.cost span.old-cost>span{
+    text-decoration: line-through;
+}
+.cost span.new-cost>span{
+    font-weight: 700;
+}
+.block-1 .button-m{
+    width: auto;
+    margin: 20px 190px 0 0;
+}
+.block-2 {
+    background: url(bg-2.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-2.jpg*/ 50% 0 no-repeat;
+    color: #fff;
+}
+.block-2 .about{
+    padding: 0 50px;
+    text-align: center;
+}
+.block-2 .container{
+    margin: 30px 0 0;
+    padding: 70px 0;
+    background: url(tov-1.jpg)/*tpa=http://tovarweb.ru/babylito1/img/tov-1.jpg*/ 50% 0 no-repeat;
+}
+.block-2 .container ul{
+    width: 310px;
+}
+.block-2 .container ul.left-side{
+    float: left;
+}
+.block-2 .container ul.right-side{
+    float: right;
+}
+.block-2 .container ul li{
+    position: relative;
+    margin: 0 0 30px;
+    padding: 14px 10px;
+    text-align: center;
+    border-radius: 12px;
+    color: #fff;
+    background: #68841c;
+}
+.block-2 .container ul li:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 40%;
+    border: 10px solid transparent;
+}
+.block-2 .container ul.left-side li:before{
+    right: -20px;
+    border-left: 10px solid #68841c;
+}
+.block-2 .container ul.right-side li:before{
+    left: -20px;
+    border-right: 10px solid #68841c;
+}
+.block-2 .sizes{
+    padding: 10px 0 0;
+}
+.block-2 .sizes h3{
+    font-size: 26px;
+    font-weight: 400;
+}
+.block-2 .sizes table{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+.block-2 .sizes table td {
+    padding: 10px;
+    border: 0;
+    color: #fff;
+}
+.block-2 .sizes table tr:first-child{
+    font-size: 20px;
+    color: #69802a;
+}
+
+.block-3 .wrap {
+    padding: 40px 10px 30px;
+}
+.block-3 .use ul li{
+    float: left;
+    width: 25%;
+    margin: 0 0 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.block-3 .use ul li img{
+    display: block;
+    border: 5px solid #eee;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+.block-4{
+    color: #fff;
+    background: url(bg-2.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-2.jpg*/ 50% 0 no-repeat;
+}
+.block-4 .title{
+    font-size: 30px;
+}
+.block-4 .container{
+    width: 45%;
+}
+.block-4 .deliv>li{
+    height: 102px;
+    padding: 10px 0 0;
+}
+.block-4 .deliv>li span{
+    display: block;
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px 0 0;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    line-height: 70px;
+    color: #666633;
+    background: #ffff00;
+    border-radius: 50%;
+}
+.block-4 .deliv>li p{
+    padding: 5px 0 0;
+}
+ul.deliv li:last-child p {
+    padding-top: 21px;
+}
+.block-4 .sup li{
+    position: relative;
+    padding: 10px 0 20px 80px;
+}
+.block-4 .sup li:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 64px;
+    height: 64px;
+    top: 0;
+    left: 0;
+    background: url(del-icon.png)/*tpa=http://tovarweb.ru/babylito1/img/del-icon.png*/ no-repeat;
+}
+.block-4 .sup li:nth-child(1):before{
+    background-position: 0 0;
+}
+.block-4 .sup li:nth-child(2):before{
+    background-position: -64px 0;
+}
+.block-4 .sup li:nth-child(3):before{
+    background-position: -128px 0;
+}
+.block-6 .wrap{
+    padding: 40px 0;
+}
+.block-6 .rev-slider{
+    position: relative;
+    padding: 10px 0 0;
+}
+.block-6 .rev-item{
+    float: left;
+    width: 300px;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.block-6 .rev-item>img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border: 5px solid #eee;
+    border-radius: 50%;
+}
+.block-6 .rev-item>h4{
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+.block-6 .rev-item>p{
+    padding: 0 20px 30px;
+    text-align: justify;
+}
+.block-8{
+    height: 560px;
+    background: url(bg-1.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-1.jpg*/ 50% 0 no-repeat;
+}
+.block-8 .wrap{
+    padding: 30px 10px 0;
+}
+.block-8 .title{
+    margin: 0 370px 0 0;
+    text-align: left;
+    letter-spacing: 1.4px;
+    color: #ffff00;
+}
+.block-8 .container{
+    padding: 0 370px 0 0;
+}
+.copyright{
+    padding: 20px 0;
+    text-align: center;
+}
+.copyright .mob-vis{
+    display: none;
+}
+.block-stress {
+    background: #fff;
+    text-align: center;
+}
+.block-option .itemBlock {
+    clear: both;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+
+.block-option .itemBlock .left,
+.block-option .itemBlock .right {
+    width: 50%;
+}
+
+.block-option .itemBlock .left {
+    text-align: center;
+}
+
+.block-option .itemBlock .left img {
+    max-width: 200px;
+}
+
+.block-option .itemBlock h3 {
+    color: #00b6ce;
+}
+
+.block-option .itemBlock ul {
+    margin-left: 30px;
+}
+
+.block-option .itemBlock li {
+    margin-bottom: 20px;
+}
+.block-option .itemBlock li:before {
+    content: '';
+    position: absolute;
+    margin-left: -29px;
+    background: url(check.png)/*tpa=http://tovarweb.ru/babylito1/img/check.png*/ no-repeat;
+    width: 21px;
+    height: 21px;
+    margin-top: 1px;
+}
+
+.block-option .itemBlock-2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.block-option .itemBlock-2 .item {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin-bottom: 20px;
+    padding: 0 40px;
+}
+
+.block-option .itemBlock-2 .item img {
+    border: 5px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.imgBlock {
+    margin: 30px 0 0;
+}
+
+.imgBlock img {
+    margin: 0 30px;
+}
+
+
+
+
+
+@media screen and (max-width: 959px){
+    .block-1{
+        height: 597px;
+        background: url(bg-1-640.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-1-640.jpg*/ 50% 0 no-repeat;
+    }
+    .block-1 h1{
+        margin: 0 100px 0 0;
+        font-size: 28px;
+    }
+    .block-1 .container {
+        padding: 24px 140px 0 0;
+    }
+    .block-1 .title{
+        font-size: 17px;
+    }
+    .block-1 .list {
+        padding: 30px 90px 0 0;
+    }
+    .cost, .block-1 .button-m{
+        margin: 20px 100px 0 0;
+    }
+    .block-2 .about{
+        padding: 0 20px;
+    }
+    .block-2 .container{
+        background-position: 0 40px;
+        padding: 20px 0;
+    }
+    .block-2 .container ul{
+        width: auto;
+        padding: 0 0 0 300px;
+    }
+    .block-2 .container ul.left-side{
+        float: none;
+    }
+    .block-2 .container ul.left-side li:before{
+        right: auto;
+        left: -20px;
+        border: 10px solid transparent;
+        border-right: 10px solid #68841c;
+    }
+    .block-2 .container ul li{
+        margin: 0 0 10px;
+        padding: 10px;
+    }
+    .block-2 .sizes table{
+        width: 100%;
+    }
+    .block-3 .use ul li{
+        width: 50%;
+    }
+    .block-4 .wrap{
+        padding: 40px 0;
+    }
+    .block-4 {
+        background-size: cover;
+    }
+
+    .block-4 .container{
+        float: none;
+        width: auto;
+    }
+    .block-4 .deliv{
+        padding: 0 0 40px;
+    }
+    .block-4 .deliv>li, .block-4 .sup>li{
+        float: left;
+        width: 33.33%;
+        height: auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+    .block-4 .deliv>li span{
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .block-4 .deliv>li p{
+        padding: 5px 0 0;
+    }
+    .block-4 .sup li:before{
+        position: static;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .block-8 {
+        height: 510px;
+        background: url(bg-1-640.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-1-640.jpg*/ 50% 0 no-repeat;
+    }
+    .block-8 .wrap{
+        padding: 10px 10px 0;
+    }
+    .block-8 .title{
+        margin: 0 0 40px;
+        text-align: center;
+    }
+    .block-8 .container{
+        padding: 0 160px 0 0;
+    }
+    .imgBlock img {
+        margin: 0 2px;
+    }
+
+}
+@media screen and (max-width: 639px){
+    .block-1, .block-8{
+        height: auto;
+        background: url(bg-1-320.jpg)/*tpa=http://tovarweb.ru/babylito1/img/bg-1-320.jpg*/ 50% 0 no-repeat #93bec5;
+    }
+    .block-1 .wrap {
+        padding: 10px 10px 40px;
+    }
+    .block-1 h1{
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.3em;
+        text-align: center;
+    }
+    .block-1 .container{
+        padding: 15px 0 0;
+    }
+    .block-1 .container h2{
+        text-align: center;
+    }
+    .block-1 .list{
+        padding: 320px 0 0 0;
+    }
+    .cost, .block-1 .button-m{
+        margin: 20px 0 0 0;
+    }
+    .cost{
+        font-size: 16px;
+    }
+    .cost>span{
+        padding: 6px;
+    }
+    .cost>span span{
+        font-size: 30px;
+    }
+    .block-2 .about{
+        padding: 0;
+    }
+    .block-2 .container {
+        background-position: 50% 0;
+        padding: 570px 0 0;
+    }
+    .block-2 .container ul{
+        padding: 0;
+    }
+    .block-2 .container ul.left-side li:before, .block-2 .container ul.right-side li:before{
+        display: none;
+    }
+    .block-2 .sizes{
+        overflow-x: scroll;
+    }
+    .block-2 .sizes table, .block-2 .sizes table tr:first-child{
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+    .block-2 .sizes table td{
+        padding: 5px 2px;
+    }
+    .block-3 .use ul li{
+        float: none;
+        width: 100%;
+        margin: 0 0 30px;
+    }
+    .block-4{
+        background-size: cover;
+    }
+    .block-4 .deliv{
+        padding: 0 0 10px;
+    }
+    .block-4 .deliv>li, .block-4 .sup>li{
+        float: none;
+        width: auto;
+        padding: 0 10px 30px;
+    }
+    .block-8 .title{
+        font-size: 28px;
+    }
+    .block-8 .container{
+        padding: 288px 0 40px;
+    }
+    .copyright .mob-vis {
+        display: inline;
+    }
+    .copyright .mob-hid {
+        display: none;
+    }
+    .block-option .itemBlock .left {
+        float: none;
+        width: inherit;
+        margin-bottom: 40px;
+    }
+    .block-option .itemBlock .right {
+        float: none;
+        width: initial;
+        padding: 0 10px;
+    }
+    .title {
+        font-size: 26px;
+    }    
+    .block-option .itemBlock-2 .item {
+        width: initial;
+    }
+
+
+}
+#footer-polit{
+    color:#222;
+    transition-duration:0.2s
+}
+#footer-polit:hover{
+    color: #c63605;
+    transition-duration:0.1s
+}

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* [Livefyre Mosaic] Cell Styles */
+.lf-mosaic-wrap .card-container .card-view {
+  border: none !important;
+}
+
+.lf-mosaic-wrap:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.lf-mosaic-wrap .card-container .small-format .content-footer {
+  display: none;
+}

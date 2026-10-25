@@ -1,0 +1,434 @@
+@media (max-width: 1240px) {
+	.container {
+		max-width: 330px;
+		padding: 0;
+	}
+
+	#wrapper header {
+		display: none;
+	}
+
+	.header-mobile {display: block; padding: 0; height: 70px; background: #848484;}
+
+	.top_btn {
+		margin-top: 13px;
+		width: 140px;
+		height: 45px;
+		line-height: 42px;
+	}
+
+	#nav ul {
+		background: #fff;
+		padding: 2px;
+		position: absolute;
+		border: solid 1px #ccc;
+		display: none; /* hide dropdown */
+		width: 200px;
+	}
+	.pl {
+		padding-left: 0px;
+	}
+	#nav ul li {
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+	#nav li:hover > ul {
+		display: block; /* show dropdown on hover */
+	}
+
+	#nav-wrap {
+		float: left;
+		position: relative;
+	}
+
+	#menu-icon {
+		margin-top: 20px;
+		border-radius: 45em;
+		color: #000;
+		width: 30px;
+		height: 30px;
+		background: url(../img/nav_ic.png) no-repeat;
+		cursor: pointer;
+		display: block; /* show menu icon */
+	}
+
+	#menu-icon.active {
+		background-color: transparent;
+	}
+	
+	/* main nav */
+	#nav {
+		text-align: center;
+		clear: both;
+		position: absolute;
+		list-style-type: none;
+		top: 70px;
+		left: 0;
+		height: 213px;
+		width: 330px;
+		z-index: 10000;
+		padding: 5px;
+		background: url(../img/nav-m-b.png) no-repeat;
+		display: none; /* visibility will be toggled with jquery */
+	}
+	#nav li {
+		clear: both;
+		float: none;
+		margin: 5px 0 5px 0;
+	}
+	#nav a, 
+	#nav ul a {
+		font: inherit;
+		background: none;
+		display: inline;
+		text-transform: uppercase;
+		text-align: center;
+		font: 18.5px "Open Sans", sans-serif;
+		color: #000;
+		text-align: center !important;
+	}
+	#nav a:hover, 
+	#nav ul a:hover {
+		background: none;
+		color: #000;
+	}
+	
+	/* dropdown */
+	#nav ul {
+		width: auto;
+		position: static;
+		display: block;
+		border: none;
+		background: inherit;
+	}
+	#nav ul li {
+		text-align: center;
+		margin: 3px 0 3px 15px;
+	}
+	.nav-hr {
+		width: 200px;
+		height: 2px;
+		display: block;
+		margin: 10px auto 0;
+	}
+
+	#sec_1 {
+		padding-top: 0;
+		min-height: auto;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: 60% 0;
+	}
+
+	#sec_1 img:first-child {
+		width: 100px;
+	}
+
+	.main_text {
+		margin-left: 0;
+	}
+
+	#sec_1 h1 {
+		font-size: 29px;
+		line-height: 35px;
+	}
+
+	#sec_1 h1 span {
+		font-size: 20px;
+	}
+
+	.buy_now {
+		height: 65px;
+		line-height: 60px;
+		float: none;
+	}
+
+	.h_price {
+		margin-top: 10px;
+		border-radius: 10px;
+		display: inline-block;
+	}
+
+	.priced_head {
+		text-align: center;
+	}
+
+	.clubs {
+		margin-top: 50px;
+		width: 100%;
+	}
+
+	.pre_item {
+		margin-bottom: 25px;
+	}
+
+	.popup {
+		width: 300px;
+		height: 100%;
+		overflow-y: scroll; 
+	}
+
+	.cat_text {
+		text-align: center;
+	}
+
+	.new_pr {
+		text-align: center;
+		padding: 0 0 15px;
+	}
+
+	h2 {
+		font-size: 36px;
+		line-height: 40px;
+	}
+
+	#size p {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	#size img {
+		width: 100%;
+	}
+
+	.centered {margin-top: 20px;}
+
+	.feed_text {
+		margin: 15px auto 30px;
+	}
+
+	#sec_5 {
+		padding-bottom: 140px;
+	}
+
+	#sec_6 {
+		background-position: 20% 0;
+	}
+
+	.vertical .tabs {
+		width: 100%;
+		float: none;
+	}
+
+	.vertical .tabs li {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.vertical .box {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	ul.tabs {
+		float: none;
+	}
+
+	.vertical .box {
+		padding: 10px;
+		margin-top: 10px;
+	}
+
+	.circle {
+		width: 100%;
+		margin: 15px 0;
+		background: transparent;
+	}
+
+	.circle p:nth-child(odd) {
+		text-align: left;
+	}
+
+	.circle p {
+		position: static;
+		padding-left: 45px;
+		margin-bottom: 25px;
+		background: url(../img/icons/plus.png);
+		background-repeat: no-repeat;
+		background-position: 0 5px;
+	}
+
+	#sec_8 {
+		padding: 120px 0 80px;
+		background: url(../img/insta_bg.png) no-repeat;
+		background-position: 50% 0;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	.insta_head {
+		display: block;
+		text-align: center;
+		font-family: "Comfortaa";
+		height: 40px;
+		line-height: 40px;
+		font-size: 22px;
+		color: #fff;
+	}
+
+	.insta_profile {
+		height: 30px;
+		display: block;
+		position: relative;
+		line-height: 30px;
+		color: #191919;
+		text-align: center;
+		font-family: "Comfortaa";
+		background: #fff;
+		transform: rotate(-1deg);
+		top: -3px;
+		left: 0px;
+		font-size: 12px;
+		max-width: 680px;
+		box-shadow: 4px -3px 13px 0px rgba(0,0,0,0.5);
+	}
+	
+	#sec_9 h2 {margin-bottom: 25px;}
+
+	.num_two {
+		margin-bottom: 30px;
+	}
+
+	.non {padding-right: 15px !important;}
+
+	.form_bot {
+		max-width: 290px;
+		height: 275px;
+		width: 100%;
+	}
+
+	.form_bot p {
+		color: #fff;
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 600;
+		padding: 30px 0 20px;
+	}
+
+	.form_bot input {
+		display: block;
+		max-width: 440px;
+		width: 90%;
+		height: 42px;
+		padding-left: 15px;
+		outline: none;
+		font-size: 16px;
+		font-weight: 600;
+		border: none;
+		display: block;
+		margin: 0 auto 10px;
+	}
+
+	.form_bot button {
+		border-radius: 15px;
+		border-bottom-width: 5px;
+		width: 90%;
+		font-size: 20px;
+		height: 50px;
+		line-height: 48px;
+		outline: none;
+	}
+
+	.phone, .recv {
+		float: none !important;
+	}
+
+	.phone {
+		margin-top: 15px;
+	}
+
+	footer a {
+		float: none !important;
+		display: block;
+		margin: 10px auto;
+		text-align: center;
+	}
+
+	.popup {
+		width: 310px;
+		height: 100%;
+		overflow-y: scroll; 
+	}
+
+	.slider_item {
+		float: none;
+	}
+
+	.slider-for, .slider-for-1 {
+		float: none;
+	}
+
+	.slider-nav, .slider-nav-1 {
+		float: none;
+	}
+
+	.slider-nav, .slider-nav-1 {
+		max-width: 100%;
+	}
+
+	.slider-for, .slider-for-1 {
+		max-width: 100%;
+	}
+
+	.date p {
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+
+	.date p span {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+
+	.form_price .price_cat {
+		float: none;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.slider-for img, .slider-for-1 img {
+		width: 100%;
+		min-width: 100%;
+		height: auto;
+		border: 1px solid #ccc;
+	}
+
+	.slider-nav, .slider-nav-1 {
+		margin-top: 5px;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	.slider-nav img,
+	.slider-nav-1 img {
+		display: block;
+		margin: auto;
+	}
+
+	.form_price button {
+		margin: auto;
+		float: none;
+	}
+
+	.firt_name_cat {
+		font-size: 20px;
+		line-height: 22px;
+		text-align: center;
+		margin: 10px 0 !important;
+	}
+
+	.close::before {
+		color: #000;
+	}
+
+	.close {
+		top: 0;
+		right: 0;
+	}
+
+
+
+}
+

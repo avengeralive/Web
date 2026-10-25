@@ -1,0 +1,131 @@
+.catalog {
+  background-image: url('../images/catalog_bg.png');
+}
+
+.catalog h1:nth-child(1) {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-family: 'Roboto Slab';
+}
+
+.catalog > div:nth-child(1) {
+  margin-top: 30px;
+}
+
+.catalog > div:nth-child(2) {
+  margin-top: 30px;
+}
+
+.catalog > div:nth-child(2) > ul > li  {
+  font-size: 24px;
+  font-family: 'Roboto Slab';
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  margin: 0px 5px;
+}
+
+.catalog > div:nth-child(2) > ul {
+  margin-bottom: 30px;
+}
+
+.catalog-product-card {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.catalog-product-card > div {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.catalog-product-card img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.catalog-product-card span{
+  display: block;
+}
+
+.catalog-product-card span:nth-child(2) {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.catalog-product-card span:nth-child(2) b {
+  font-weight: bold;
+  text-decoration: line-through;
+  font-size: 32px;
+}
+
+.catalog-product-card span:nth-child(3) {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.catalog-product-card span:nth-child(3) b {
+  font-weight: bold;
+  color: #e02a27;
+  font-size: 32px;
+}
+
+.catalog-product-card span:nth-child(4) {
+    display: inline-block;
+    line-height: 18px;
+    padding: 0px 15px;
+    max-width: 100%;
+    white-space: initial;
+}
+
+.catalog-product-card ul > li:nth-child(1) {
+  /*text-decoration: underline;*/
+  font-weight: bold;
+}
+
+.catalog-product-card ul {
+  margin: 10px auto;
+}
+
+.catalog-product-card-button {
+  padding: 5px 10px;
+  margin: 0px auto;
+
+  cursor: pointer;
+}
+
+.catalog-product-card-button > div {
+    font-family: 'Roboto Slab';
+    font-size: 15px;
+    color: white;
+    width: 80%;
+    display: inline-block;
+    background-color: #e02a27;
+    padding: 5px;
+    text-decoration: underline;
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.catalog-skidka {
+  width: 70px;
+  height: 70px;
+  background-color: #E02A27;
+  border-radius: 35px;
+  color:white;
+  font-size: 24px;
+  font-family: 'Poiret One';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.catalog-skidka {
+  line-height: 70px;
+  vertical-align: middle;
+}

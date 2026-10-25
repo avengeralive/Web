@@ -1,0 +1,898 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+	.list_header{
+		margin-left: 0;
+	}
+
+	.form>span{
+		font-size: 21px;
+		padding: 18px 20px 47px;
+	}
+
+	.form__btn, .item_btn a{
+		font-size: 35px;
+	}
+
+	.header_img img{
+		width: 100%;
+	}
+
+	.new__name, .new_price_cur{
+		font-size: 19px;
+	}
+
+	.new_price_val{
+		font-size: 30px;
+	}
+
+	.price__old{
+		font-size: 12px;
+	}
+
+	.old_price_cur, .old_price_val{
+		font-size: 21px;
+	}
+
+	.why_foot{
+		font-size: 24px;
+	}
+
+	.testos_item p{
+		font-size: 19px;
+	}
+
+	.item_btn a{
+		-webkit-background-size: 100%;
+		     -o-background-size: 100%;
+		        background-size: 100%;
+	}
+
+	.testos_foot .item_btn:before{
+		left: 60px;
+	}
+
+	.testos_foot .item_btn:after{
+		right: 60px;
+	}
+
+	.appetit_list{
+		font-size: 18px;
+	}
+
+	.appetit_product img{
+		width: 100%;
+	}
+
+	.appetit_text p{
+		font-size: 16px;
+	}
+
+	.appetit_product{
+		padding-top: 125px;
+	}
+
+	.dokvo_img img{
+		width: 100%;
+	}
+
+	.dokvo_text{
+		font-size: 18px;
+	}
+
+	.spec_text div{
+		font-size: 46px;
+	}
+
+	.spec_text p{
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+
+	.spec_list{
+		font-size: 12px;
+		left: 32px;
+		bottom: 83px;
+	}
+
+	.garanti_text p{
+		font-size: 17px;
+	}
+
+	.how_use_text p{
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.header_img{
+		text-align: center;
+	}
+
+	.list_header{
+		margin-left: 0;
+		font-size: 19px;
+	}
+
+	.header_img img{
+		width: 100%;
+	}
+
+	.new__name, .new_price_cur{
+		font-size: 19px;
+	}
+
+	.new_price_val{
+		font-size: 35px;
+	}
+
+	.why_head{
+		margin-bottom: 40px;
+	}
+
+	.why_foot{
+		font-size: 28px;
+	}
+
+	.testos_head{
+		font-size: 38px;
+	}
+
+	.testos_text{
+		font-size: 18px;
+	}
+
+	.form__btn{
+		padding: 19px 0 19px;
+	}
+
+	.testos_item img{
+		width: 100%;
+	}
+
+	.testos_item p{
+		font-size: 14px;
+	}
+
+	.testos_foot_text{
+		font-size: 38px;
+	}
+
+	.testos_foot .item_btn:before{
+		left: 0;
+	}
+
+	.testos_foot .item_btn:after{
+		right: 0;
+	}
+
+	.item_btn a{
+		-webkit-background-size: 85%;
+		     -o-background-size: 85%;
+		        background-size: 85%;
+	}
+
+	.form__btn, .item_btn a{
+		font-size: 30px;
+	}
+
+	.item_btn{
+		margin: 50px 0 20px 0;
+	}
+
+	.testos_foot .item_btn:after, .testos_foot .item_btn:before{
+		top: -77px;
+	}
+
+	.appetit_head{
+		font-size: 37px;
+	}
+
+	.sostav_head p{
+		font-size: 18px;
+	}
+
+	.dokvo_head div{
+		font-size: 30px;
+	}
+
+	.dokvo_text{
+		text-align: center;
+		margin-left: 0;
+		margin-top: 20px;
+	}
+
+	.dokvo .item_btn{
+		top: 40px;
+	}
+
+	.dokvo .item_btn a{
+		font-size: 18px;
+	}
+
+	.dokvo .item_btn a{
+		-webkit-background-size: 100%;
+		     -o-background-size: 100%;
+		        background-size: 100%;
+	    padding: 31px 25px 31px 70px;
+	}
+
+	.spec_list{
+		font-size: 25px;
+		left: 115px;
+		bottom: 260px;
+	}
+
+	.spec_text{
+		text-align: center;
+		font-size: 18px;
+	}
+
+	.spec_text img{
+		left: 0;
+	}
+
+	.reviews_head{
+		font-size: 46px;
+	}
+
+	.item_reviews p{
+		font-size: 13px;
+	}
+
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+	.owl-nav{
+		bottom: 110px;
+	}
+}
+
+@media (max-width: 800px) {
+	.owl-prev{
+		left: 0;
+	}
+
+	.owl-next{
+		right: 0;
+	}
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.header_title p{
+		font-size: 34px;
+		line-height: 40px;
+	}
+
+	.list_header{
+		margin-left: 0;
+	}
+
+	.list_header li{
+		margin-bottom: 0;
+	}
+
+	header img,
+	footer img{
+		width: 400px;
+		margin: 0 auto;
+	}
+
+	.header_img{
+		text-align: center;
+	}
+
+	.form__wrapper{
+		width: 400px;
+		margin: 25px auto;
+	}
+
+	.form__btn, .item_btn a{
+		font-size: 35px;
+	}
+
+	.form__btn{
+		padding: 19px 0 28px;
+	}
+
+	.why_head{
+		font-size: 37px;
+		margin-bottom: 20px;
+	}
+
+	.why_foot{
+		font-size: 17px;
+	}
+
+	.why_list{
+		font-size: 20px;
+	}
+
+	.testos_head{
+		font-size: 24px;
+		margin-bottom: 25px;
+		margin-top: 15px;
+	}
+
+	.testos_text{
+		font-size: 18px;
+		margin-top: 20px;
+	}
+
+	.testos_wrapper span{
+		font-size: 19px;
+	}
+
+	.testos_item p{
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+
+	.testos_foot_text{
+		font-size: 25px;
+	}
+
+	.item_btn a{
+		-webkit-background-size: 100%;
+		     -o-background-size: 100%;
+		        background-size: 100%;
+	}
+
+	.testos_foot .item_btn:before,
+	.testos_foot .item_btn:after{
+		display: none;
+	}
+
+	.appetit{
+		padding-top: 35px;
+		padding-bottom: 0;
+		
+	}
+
+	.appetit_head{
+		font-size: 26px;
+	}
+
+	.appetit_list{
+		font-size: 14px;
+	}
+
+	.appetit_list li{
+		-webkit-background-size: 27px;
+		     -o-background-size: 27px;
+		        background-size: 27px;
+	    background-position: 0 -260px;
+	    margin-bottom: 0;
+	}
+
+	.sostav_head{
+		font-size: 36px;
+	}
+
+	.sostav_head p{
+		font-size: 16px;
+	}
+
+	.dokvo_text{
+		font-size: 17px;
+		margin-top: 30px;
+	}
+
+	.spec_list{
+		left: 0;
+		bottom: 160px;
+		font-size: 16px;
+		text-align: left;
+		width: 100%;
+		text-align: center !important;
+	}
+
+	.spec_img{
+		text-align: center;
+	}
+
+	.spec_img img{
+		width: 450px;
+	}
+
+	.spec_list li{
+		width: 295px;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	.garanti_img img{
+		width: 90px;
+	}
+
+	.garanti_text{
+		padding-left: 130px;
+	}
+
+	.garanti_img{
+		left: 10px;
+		top: 15px;
+	}
+
+	.garanti_text p{
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+
+	.garanti_text span{
+		font-size: 15px;
+	}
+
+	.garanti{
+		margin-bottom: 25px;
+	}
+
+	.how_use_head{
+		font-size: 34px;
+	}
+
+	.how_use_text p{
+		font-size: 20px;
+	}
+
+	.reviews_head{
+		font-size: 26px;
+	}
+}
+
+@media (max-width: 480px) {
+	body{
+		background-color: #000 !important;
+	}
+
+	.mobile{
+		width: 320px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.desktop{
+		display: none;
+	}
+
+	.header_img img{
+		width: 100%;
+	}
+
+	header,
+	footer{
+		padding: 0 10px;
+	}
+
+
+	header small,
+	footer small{
+		font-size: 22px;
+	}
+
+	.header_title>span{
+		font-family: 'Impact';
+		color: #f8a341;
+		font-size: 45px;
+		text-transform: uppercase;
+	}
+
+	.header_title small{
+		color: #FFF;
+		text-transform: uppercase;
+		font-family: 'Impact';
+		font-size: 23px;
+	}
+
+	.header_title small span{
+		color: #f8a341;
+	}
+
+	.list_header{
+		margin-left: 10px;
+	}
+
+	.list_header{
+		font-size: 17px;
+	}
+
+	.header_title{
+		padding-left: 0;
+		padding-top: 20px;
+		line-height: 1.2;
+	}
+
+	.list_header{
+		margin-left: 0;
+		margin-top: 40px;
+	}
+
+	footer, header{
+		background: #1c1c1c url('../img/header_bg_mob.png') no-repeat;
+		padding-bottom: 15px;
+	}
+
+	.header_img{
+		margin-top: 35px;
+		margin-bottom: 25px;
+	}
+
+	.list_header li{
+		-webkit-background-size: 30px;
+		     -o-background-size: 30px;
+		        background-size: 30px;
+	height: 30px;
+	}
+
+
+	.list_header li:nth-child(2){
+		background-position: 0 -46px;
+	}
+
+	.list_header li:nth-child(3){
+		background-position: 0 -93px;
+	}
+
+	.list_header li:nth-child(4){
+		background-position: 0 -141px;
+	}
+
+	.list_header li:nth-child(5){
+		background-position: 0 -188px;
+	}
+
+	.form>span{
+		font-size: 23px;
+		padding: 18px 20px 45px;
+	}
+
+	.form__btn, .item_btn a{
+		font-size: 37px;
+	}
+
+	.new_price_val{
+		font-size: 35px;
+	}
+
+	.new__name, .new_price_cur{
+		font-size: 18px;
+	}
+
+	.price__old{
+		font-size: 14px;
+	}
+
+	.old_price_cur, .old_price_val{
+		font-size: 18px;
+	}
+
+	.price__old:after{
+		bottom: 12px;
+	}
+
+	.why{
+		background: url('../img/why_mob.png') no-repeat;
+		padding: 10px 15px 25px;
+	}
+
+	.why_head span{
+		display: block;
+	}
+
+	.why_head{
+		font-size: 35px;
+		line-height: 1.3;
+		margin-bottom: 15px;
+	}
+
+	.why_list{
+		font-size: 19px;
+	}
+
+	.why_list li{
+		padding-left: 40px;
+		background-position: -9px -337px;
+		margin-bottom: 25px;
+	}
+
+	.why_foot{
+		font-size: 19px;
+		padding: 15px 0 19px;
+	}
+
+	.testos{
+		background-color: #FFF;
+		padding: 10px 20px;
+	}
+
+	.testos_head{
+		font-size: 40px;
+		text-align: left;
+		line-height: 1.2;
+		margin-bottom: 25px;
+	}
+
+	.testos_text{
+		font-size: 18px;
+		margin-top: 25px;
+	}
+
+	.testos_wrapper span{
+		padding-top: 0;
+		font-size: 27px;
+		line-height: 1.2;
+	}
+
+	.testos_text p{
+		margin-bottom: 25px;
+		font-size: 16px;
+	}
+
+	.testos_item p{
+		font-size: 16px;
+	}
+
+	.testos_item{
+		margin-bottom: 20px;
+	}
+
+	.testos_foot{
+		background-color: #FFF;
+	}
+
+	.testos_foot_text{
+		font-size: 22px;
+		text-align: center;
+	}
+
+	.form__btn, .item_btn a{
+		font-size: 20px;
+	}
+
+	.item_btn{
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.item_btn a{
+		-webkit-background-size: 100%;
+		     -o-background-size: 100%;
+		        background-size: 100%;
+	    padding: 20px 45px 20px 45px;
+	}
+
+	.testos_foot .item_btn:after{
+		background: url(../img/strelka2_mob.png) no-repeat;
+		width: 56px;
+		height: 13px;
+		right: 0;
+		top: -15px;
+	}
+
+	.testos_foot .item_btn:before{
+		background: url(../img/strelka1_mob.png) no-repeat;
+		width: 56px;
+		height: 13px;
+		left: 0;
+		top: -15px;
+	}
+
+	.testos_foot .item_btn a{
+		position: relative;
+		bottom: 23px;
+	}
+
+	.form__btn{
+		padding: 18px 0 22px;
+		margin-left: 0;
+	}
+
+	.appetit{
+		background: url('../img/appetit_mob.png') center no-repeat;
+		padding-top: 15px;
+		padding-bottom: 0;
+	}
+
+	.appetit_head{
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+
+	.appetit_list{
+		font-size: 14px;
+	}
+
+	.appetit_list li{
+		height: 35px;
+		-webkit-background-size: 25px;
+		     -o-background-size: 25px;
+		        background-size: 25px;
+		    background-position: 0 -242px;
+		    padding-left: 40px;
+		    margin-bottom: 33px;
+	}
+
+	.sostav_head{
+		font-size: 34px;
+	}
+
+	.sostav_head p{
+		font-size: 12px;
+	}
+
+	.appetit_product{
+		padding-top: 0;
+	}
+
+	.appetit_product img{
+		width: 100%;
+	}
+
+	.appetit_img img{
+		width: 70px;
+	}
+
+	.appetit_text span{
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+
+	.appetit_text p{
+		font-size: 13px;
+		line-height: 17px;
+	}
+
+	.appetit_text{
+		padding-left: 0;
+	}
+
+	.dokvo{
+		background-color: #FFF;
+		padding: 15px 0;
+	}
+
+	.sostav{
+		padding-bottom: 10px;
+	}
+
+	.dokvo_head{
+		font-size: 32px;
+	}
+
+	.dokvo_head div{
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.dokvo_head div span{
+		display: block;
+	}
+
+	.dokvo_img img{
+		width: 100%;
+	}
+
+	.dokvo_text{
+		margin-left: 20px;
+		font-size: 16px;
+	}
+
+	.dokvo_img{
+		padding: 0 15px;
+		margin-bottom: 20px;
+	}
+
+	.spec_text div{
+		font-size: 36px;
+		text-align: center;
+	}
+
+	.spec{
+		padding: 20px 15px 0;
+	}
+
+	.spec_list{
+		bottom: 87px;
+		left: 36px;
+		font-size: 12px;
+	}
+
+	.spec_img{
+		margin-bottom: 20px;
+	}
+
+	.garanti_img img{
+		width: 90px;
+	}
+
+	.garanti{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.garanti_img{
+		position: static;
+		float: left;
+		margin-right: 15px;
+	}
+
+	.proc{
+		display: block;
+		font-family: "ProximaNovaExCnSemiBold";
+		font-size: 21px;
+		text-transform: uppercase;
+		line-height: 24px;
+		padding-top: 10px;
+	}
+
+	.garanti_text{
+		padding-left: 0;
+	}
+
+	.garanti_wrapper{
+		height: auto;
+		padding: 10px 10px 5px 15px;
+	}
+
+	.garanti_text p{
+		font-family: 'Roboto';
+		font-size: 18px;
+	}
+
+	.how_use_head{
+		font-size: 35px;
+		margin-bottom: 15px;
+		line-height: 1;
+	}
+
+	.how_use{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.how_use_text p{
+		font-size: 18px;
+	}
+
+	.reviews_head{
+		font-size: 30px;
+	}
+
+	.reviews{
+		background-color: #FFF;
+	}
+
+	.owl-nav{
+		display: none !important;
+	}
+
+	.item_reviews p:before,
+	.item_reviews p:after{
+		display: none;
+	}
+
+	.item_reviews{
+		padding: 0;
+	}
+
+	.item_reviews p{
+		font-size: 14px;
+	}
+
+	.item_reviews address{
+		text-align: left;
+	}
+
+	.links{
+		color: #FFF;
+		font-size: 14px;
+	}
+
+	.links a{
+		color: #FFF;
+	}
+
+	.spec_text p{
+		font-size: 15px;
+	}
+
+}

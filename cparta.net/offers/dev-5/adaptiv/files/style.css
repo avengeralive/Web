@@ -1,0 +1,808 @@
+/*block1*//* after_qbici */
+.block1 {
+    background: url(../files/b1.jpg) no-repeat center top;
+    height: 778px;
+    padding: 30px 0 0;
+}
+h1.tlt {
+    font-size: 32px;
+    line-height: 32px;
+    width: 419px;
+}
+h1.tlt span {
+    font-size: 60px;
+    display: block;
+    line-height: 60px;
+    background: url(../files/tlt-line.png) repeat-x 0 95%;
+}
+.subtlt {
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    line-height: 32px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+}
+.subtlt span {
+    display: block;
+}
+.subtlt span:nth-of-type(1) {
+    padding-left: 30px;
+}
+.subtlt span:nth-of-type(2) {
+    padding-left: 94px;
+}
+.sale {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    background: rgba(34,34,34,.7);
+    border: 3px solid #ffcc00;
+    padding: 13px 0 0;
+    position: absolute;
+    top: 123px;
+    left: 50px;
+}
+
+.block10 .sale{
+
+    left: 850px;
+}
+.sale p {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 34px;
+}
+.topplus {
+    font-size: 0;
+    margin: 420px 0 30px 10px ;
+}
+.topplus li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    width: 250px;
+    border-left: 4px solid #77c300;
+    padding: 0 0 0 10px;
+}
+.topplus li:not(:last-child) {
+    margin-right: 32px;
+}
+.topplus p {
+    font-weight: 700;
+}
+.topplus li:nth-child(2) {
+    width: 175px;
+}
+.topplus li:nth-child(3) {
+    width: 190px;
+}
+.topplus li:nth-child(4) {
+    width: 205px;
+}
+.blockbox .button-m {
+    margin: 0;
+    float: left;
+}
+.blockbox {
+    padding-left: 10px;
+}
+.blockbox .price {
+    margin: 0 30px 0 0;
+    float: left;
+}
+/*block2*//* endzeit_____ */
+.block2 {
+    padding: 0;
+    margin-top: -45px;
+}
+
+/*block3*//* michael-k90 */
+.block3 {
+    padding-bottom: 0;
+}
+.block3 .title{
+    width: 100%;
+    text-align: center;
+}
+.block3 h2  {
+    text-align: left;
+    width: 506px;
+    position: relative;
+    z-index: 3;
+    padding-left: 10px;
+}
+.block3 p {
+    position: relative;
+    z-index: 3;
+    font-size: 15px;
+    line-height: 22px;
+}
+.bright {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.gif {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 30px;
+}
+
+.result {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: -70px;
+}
+.result li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 18px;
+}
+.result img {
+    display: block;
+    margin: 0 auto;
+}
+/*block4*//* bizlife_inc */
+.block4 {
+    background: url(../files/bg2.jpg);
+    background-size: cover;
+    color:#fff;
+    padding: 105px 0 40px;
+}
+.block4 h2.title span.green {
+    background: url(../files/tlt-line.png) repeat-x 0 95%;
+}
+.block4 h2.title {
+    padding: 0 25px;
+}
+.safe {
+    text-align: center;
+    font-size: 0;
+}
+.safe li {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    width: 210px;
+    margin: 0 15px;
+}
+.safe img {
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 5px;
+}
+/*block5*//* owmen17 */
+.block5 {
+    background: url(../files/bg3.jpg);
+    background-size: cover;
+    color:#fff;
+    border-top:1px dashed #505365;
+    border-bottom:1px dashed #505365;
+}
+/*block6*//* after_qbici */
+.block6 {
+    background: url(../files/bg4.jpg);
+    background-size: cover;
+
+}
+/*block7*//* endzeit_____ */
+.block7 .title {
+    width: 100%;
+    text-align: center;
+}
+.block7 ul{
+    width: 100%;
+    margin: 0 auto;
+}
+.block7 ul li:nth-child(even){
+    background: rgb(0,0,0, 0.1);
+}
+.block7 ul li{
+    padding: 5px;
+    margin: 2px 0;
+    width: 100%;
+    text-align: right;
+}
+.block7 ul{
+    margin-bottom: 20px;
+}
+.block7  h3{
+    width: 100%;
+    margin: 25px 0 5px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.block7 ul li b{
+    float: left;
+    text-align: left;
+}
+.block7 h2 {
+    width: 525px;
+    text-align: left;
+    padding-left: 10px;
+}
+.block7 h2.title span.green {
+    background: url(../files/tlt-line2.png) repeat-x 0 100%;
+}
+
+.usecont {
+    padding: 0 10px 40px;
+}
+.use {
+    width: 430px;
+    float: left;
+}
+.use li {
+    font-size: 0;
+}
+.use li:not(:last-child) {
+    margin-bottom: 30px;
+}
+.use img {
+    float: left;
+    margin: 0 20px 0 0;
+    display: block;
+}
+.use p {
+    font-size: 15px;
+    line-height: 22px;
+    overflow: hidden;
+    
+}
+
+.gallery {
+    width: 440px;
+    height: 268px;
+    float: right;
+}
+.gallery div {
+}
+.gallery img {
+    border-radius: 5px;
+}
+
+.useimg {
+    font-size: 0;
+    text-align: center;
+}
+.useimg li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 11px;
+}
+.useimg img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
+}
+/*block8*//* michael-k90 */
+.block8 {
+    background: url(../files/bg2.jpg);
+    background-size: cover;
+    color:#fff;
+} 
+.block8 h2.title span.green {
+    background: url(../files/tlt-line.png) repeat-x 0 95%;
+}
+
+.rev {
+    width: 290px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    color:#222;
+    padding: 20px 15px;
+}
+.rev > img {
+    display: block;
+    margin: 0 auto;
+}
+.rev .person {
+    margin: 15px 0;
+    background: url(../files/q.png) no-repeat right center;
+}
+.rev .person img {
+    display: block;
+    float: left;
+    margin: 0 15px 0 0;
+}
+.rev .person p {
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 15px;
+}
+.rev .person p b {
+    display: block;
+}
+.rev > p {
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+}
+/*block9*//* bizlife_inc */
+.ship {
+    text-align: center;
+    font-size: 0;
+}
+.ship li {
+    font-size: 16px;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 34px;
+    position: relative;
+}
+.ship li > img {
+    display: block;
+    margin: 0 auto 20px;
+}
+.ship li .ship-right > div {
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid #ececec;
+    width: 200px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 30px;
+    position: relative;
+}
+.ship li .ship-right > div:before {
+    content:'';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #fec104;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+.ship li:nth-child(2) .ship-right > div:before {
+    left: 50%;
+    margin-left: -20px;
+}
+.ship li:nth-child(3) .ship-right > div:before {
+    left: inherit;
+    right: 0;
+}
+.ship li .ship-right > div span {
+    color:#77c300;
+    font-size: 24px;
+    padding: 0 7px;
+}
+.ship li .ship-right > p {
+    font-size: 15px;
+    line-height: 22px;
+    padding: 10px 9px 0;
+}
+.ship li:nth-child(1):before {
+    content:'';
+    display: block;
+    background: url(../files/ar1.png) no-repeat 0 0;
+    width: 56px;
+    height: 13px;
+    position: absolute;
+    top:20px;
+    right: -61px;
+}
+.ship li:nth-child(2):before {
+    content:'';
+    display: block;
+    background: url(../files/ar2.png) no-repeat 0 0;
+    width: 56px;
+    height: 13px;
+    position: absolute;
+    top: 114px;
+    right: -66px;
+}
+/*block10*//* owmen17 */
+.block10 {
+    background: url(../files/bf.jpg) no-repeat center top;
+    height: 730px;
+}
+.formbox {
+    width: 360px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 25px 0 0;
+}
+.block10 h1.tlt {
+    margin-bottom: 40px;
+}
+.formbox .countbox {
+    margin: 5px auto;
+    float: none;
+    background: #fff;
+}
+.formbox .countbox:before {
+    color:#222;
+}
+.stock {
+    text-align: center;
+    font-size: 15px;
+    line-height: 22px;
+    color:#222;
+    padding: 18px 0 25px;
+}
+.stock span {
+    display: inline-block;
+    font-size: 18px;
+    color:#fff;
+    font-weight: 700;
+    background: #77c300;
+    padding: 2px 7px;
+    margin: 0 4px;
+    letter-spacing: 4px;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 40px 0 30px;
+}
+.footer a {
+    font-size: 14px;
+    color:#333;
+}
+/*-------------------------------------- Media Queries ----959---------------------------------*//* after_qbici */    
+@media screen and (max-width: 976px) {
+    .block1 {
+        background: url(../files/b1m.jpg) no-repeat center top;
+        padding: 20px 0 0;
+    }
+    h1.tlt {
+        margin: 0 auto 15px;
+    }
+    .subtlt {
+        position: static;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    .subtlt span:nth-of-type(1), .subtlt span:nth-of-type(2) {
+        padding-left: 0;
+    }
+    .subtlt span {
+        display: inline;
+    }
+    .sale {
+        position: static;
+        margin: 19px 0 0 440px;
+    }
+    .topplus {
+        font-size: 0;
+        margin: 208px 0 10px 0px;
+    }
+    .topplus li {
+        margin: 0 0 20px 0 !important;
+        width: 310px !important;;
+    }
+    .topplus li:nth-child(1) {
+        padding-right: 62px;
+    }
+    .topplus li:nth-child(2) {
+        padding-right: 100px;
+    }
+    .topplus li:nth-child(3) {
+        padding-right: 100px;
+    }
+    .topplus li:nth-child(4) {
+        padding-right: 100px;
+    }
+    .blockbox .countbox, .block7 .wrap:before, .ship li:nth-child(1):before, .ship li:nth-child(2):before {
+        display: none;
+    }
+    .blockbox {
+        padding: 0;
+    }
+    .blockbox .price {
+        margin: 0 20px 0 0;
+    }
+    .video-container {
+        border: 20px solid #fff;
+    }
+    .block2 {
+        margin-top: -22px;
+    }
+    .video-container {
+        height: 364px;
+    }
+    .bright {
+        position: static;
+        margin: 0 auto;
+    }
+    h2.title {
+        font-size: 26px;
+        text-align: center;
+    }
+    h2.title span.green {
+        line-height: 31px;
+        background: url(../files/tlt-line2.png) repeat-x 0 115%;
+    }
+    .block4 h2.title span.green, .block8 h2.title span.green {
+        background: url(../files/tlt-line.png) repeat-x 0 115%;
+    }
+    .block3 h2.title {
+        padding: 0 126px;
+        width: 100%;
+    }
+    .block3 p {
+        padding: 20px 10px 30px;
+    }
+    .gif li {
+        margin-bottom: 20px;
+    }
+    .gif {
+        margin-bottom: 10px;
+    }
+    .result {
+        margin-bottom: 0;
+    }
+    .result li {
+        margin-bottom: 20px;
+    }
+    .block4 {
+        padding: 40px 0 20px;
+    }
+    .block3 {
+        padding-bottom: 20px;
+    }
+    .safe li {
+        margin-bottom: 20px;
+    }
+    .block7 h2 {
+        width: 100%;
+        text-align: center;
+        padding: 0 110px;
+    }
+    .block7 h2.title span.green {
+        line-height: 49px;
+    }
+    .use {
+        float: none;
+        margin: 0 auto 30px;
+    }
+    .gallery {
+        float: none;
+        margin: 0 auto;
+    }
+    .usecont {
+        padding: 0 10px 35px;
+    }
+    .useimg li {
+        margin: 0 11px 20px;
+    }
+    .reviews .slick-prev, .reviews .slick-next {
+        border-radius: 5px;
+    }
+    .ship li {
+        width: 500px;
+        margin: 0 auto 40px;
+    }
+    .ship li > img {
+        float: left;
+        margin: 0 20px 0 0;
+    }
+    .ship-right {
+        overflow: hidden;
+        padding-top: 20px;
+    }
+    .block9 {
+        padding-bottom: 0;
+    }
+    .block10 {
+        background: url(../files/bfm.jpg) no-repeat center top;
+        height: 778px;
+    }
+    .block10 .sale {
+        position: absolute;
+        top: 165px;
+        left: 422px;
+        margin: 0;
+    }
+    .formbox {
+        float: left;
+        margin-top: 29px;
+    }
+    .block10 h1.tlt {
+        margin-bottom: 16px;
+    }
+
+}
+/*-------------------------------------- Media Queries ----639---------------------------------*//* michael-k90 */ 
+@media screen and (max-width: 659px) {
+    .block1 {
+        background: url(../files/b1s.jpg) no-repeat center top;
+        height: auto;
+        padding-bottom: 35px;
+    }
+    h1.tlt {
+        font-size: 22px;
+        line-height: 24px;
+        width: 100%;
+        text-align: center;
+    }
+    h1.tlt span {
+        font-size: 42px;
+        line-height: 45px;
+    }
+    .subtlt {
+        text-align: left;
+        line-height: 24px;
+        padding-left: 10px;
+    }
+    .subtlt span {
+        display: block;
+        line-height: 24px;
+        text-align: left;
+    }
+    .subtlt span:nth-of-type(1) {
+    }
+    .subtlt span:nth-of-type(2) {
+        padding-left: 94px;
+    }
+    .sale {
+        position: static;
+        margin: 34px 0 0 10px;
+    }
+    .topplus {
+        margin: 180px 0 0px 20px;
+    }
+    .topplus li {
+        width: 100%;
+    }
+    .blockbox {
+        position: relative;
+    }
+    .blockbox .countbox {
+        display: block;
+        position: absolute;
+        top:88px;
+        left: 20px;
+        background: none;
+    }
+    .blockbox .price, .blockbox .button-m, .blockbox .countbox  {
+        float: none;
+        margin: 0 auto;
+    }
+    .blockbox .price {
+        margin-bottom: 98px;
+    }
+    .block2 {
+        margin-top:0;
+        padding: 0;
+    }
+    .block2 .wrap {
+        padding: 0;
+    }
+    .video-container {
+        width: 100%;
+        height: 190px;
+        border: none;
+        border-radius: 0;
+    }
+    h2.title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .block3 h2.title {
+        padding: 0 25px;
+    }
+    h2.title span.green {
+        line-height: 20px;
+        background: url(../files/tlt-line2.png) repeat-x 0 170%;
+    }
+    .block3 p {
+        padding: 0px 10px 20px;
+    }
+    .gif li {
+        width: 100%;
+        margin: 0 auto 15px;
+    }
+    .gif span {
+        line-height: 20px;
+        padding: 10px 0;
+    }
+    .result li {
+        margin-bottom: 10px;
+    }
+    .block4 h2.title {
+        font-size: 18px;
+    }
+    .block4 h2.title span.green{
+        background: none;
+        font-size: 18px;
+        display: inline;
+    }
+    .block7 {
+        padding-bottom: 20px;
+    }
+    .block7 h2.title span.green {
+        font-size: 28px;
+        background: url(../files/tlt-line2.png) repeat-x 0 119%;;
+        line-height: 31px;
+    }
+    .block7 h2.title {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    .use {
+        width: 100%;
+    }
+    .gallery {
+        width: 100%;
+        height: 182px;
+    }
+    .gallery .slick-prev, .gallery .slick-next {
+        top: 69px;
+    }
+    .block8 h2.title {
+        padding: 0 51px;
+    }
+    .block8 h2.title span.green {
+        display: block;
+        font-size: 26px;
+        line-height: 26px;
+        background: url(../files/tlt-line.png) repeat-x 0 133%;
+    }
+    .safe li {
+        width: 290px;
+    }
+    .ship li {
+        width: 100%;
+        margin: 0 auto 30px;
+    }
+    .block5 {
+        padding-bottom: 20px;
+    }
+    .ship li > img {
+        float: none;
+        margin: 0 auto;
+    }
+    .ship-right {
+        width: 240px;
+        margin: 0 auto;
+        padding-top: 13px;
+    }
+    .block10 {
+        background: url(../files/b1s.jpg) no-repeat center top;
+        height: auto;
+        padding: 20px 0 30px;
+    }
+    .block10 .wrap {
+        padding: 0;
+    }
+    .block10 h1.tlt {
+        padding: 0 10px;
+    }
+    .formbox {
+        float: none;
+        width: 100%;
+        padding: 10px 0 0;
+        margin-top: 339px;
+    }
+    .stock {
+        padding: 18px 0 17px;
+    }
+    .block10 .sale {
+        top: 176px;
+        left: 20px;
+    }
+    
+    
+}
+
+
+
+
+
+
+

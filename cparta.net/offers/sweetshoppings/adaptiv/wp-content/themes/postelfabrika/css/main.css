@@ -1,0 +1,251 @@
+@import "http://d.sweetshoppings.ru/wp-content/themes/postelfabrika/css/css/header.css"
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+ 
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+.catalog-skidka span {
+	font-size:10px;
+	line-height:1.4;
+	font-weight:bold;
+	margin-top:20px;
+}
+ 
+.otzyvy {
+  margin: 20px auto;
+}
+#bobo {
+		display:none;
+		
+	}
+	#bobo1 {
+		display:none;
+		text-align:center;
+		
+	}
+	#bobo1 img {
+		width:100%;
+		height:100%;
+	}
+	#bobo h2 {
+		font-size:22px !important;
+		font-weight:bold;
+	}
+#input-name, #input-phone, #input-adress {
+  margin: 5px auto;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid gray;
+  display: block;
+  width: 260px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+}
+
+.bot_basket
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	display: none;
+    left: 0;
+    padding: 15px 0;
+    font-size: 0;
+	cursor: pointer;
+    background: #ff5722;
+    color: #fff;
+	box-shadow: 0px 15px 50px 15px rgba(0,0,0,.5);
+}
+
+.bastek_items
+{
+	display: inline-block;
+    vertical-align: middle;
+    /* width: 75%; */
+    font-size: 20px!important;
+    margin-left: 10px;
+}
+.b_title
+{
+    font-size: 20px;
+	display: inline-block;
+    text-decoration: underline;
+    vertical-align: middle;
+    text-transform: uppercase;
+	cursor: pointer;
+	animation:blur 4s ease-out infinite;
+}
+.b_title i
+{
+    margin-right: 10px;
+	-webkit-animation: 1s tremor ease-out infinite;  
+    animation: 1s tremor ease-out infinite;    
+}
+
+.mini_img
+{
+	width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.mini_img img
+{
+	max-width: 100%;
+}
+.bas_items
+{
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.remove_b_item
+{
+    font-size: 16px;
+    margin-right: 16px;
+    vertical-align: middle;
+	cursor: pointer;
+    color: #9E9E9E;
+}
+
+@-webkit-keyframes tremor {
+    0%, 25% {
+        left: 0;
+        top:-1px;
+        -webkit-transform: translateY(-4%);
+        transform: translateY(-4%);
+    }
+    50%, 100% {
+        left: 0;
+        top: 1px;
+        -webkit-transform: translateY(4%);
+        transform: translateY(4%);
+    }
+}
+@-moz-keyframes tremor {
+    0%, 25% {
+        left: 0;
+        -webkit-transform: translateY(-4%);
+        transform: translateY(-4%);
+    }
+    50%, 100% {
+        left: 0;
+        -webkit-transform: translateY(4%);
+        transform: translateY(4%);
+    }
+}
+@-ms-keyframes tremor {
+    0%, 25% {
+        left: 0;
+        -webkit-transform: translateY(-4%);
+        transform: translateY(-4%);
+    }
+    50%, 100% {
+        left: 0;
+        -webkit-transform: translateY(4%);
+        transform: translateY(4%);
+    }
+}
+@-o-keyframes tremor {
+    0%, 25% {
+        left: 0;
+        -webkit-transform: translateY(-4%);
+        transform: translateY(-4%);
+    }
+    50%, 100% {
+        left: 0;
+        -webkit-transform: translateY(4%);
+        transform: translateY(4%);
+    }
+}
+@keyframes tremor {
+    0%, 20% {
+        left: 0;
+        -webkit-transform: translateY(-4%);
+        transform: translateY(-4%);
+    }20%, 40% {
+        left: 0;
+        -webkit-transform: translateY(-30%);
+        transform: translateY(-30%);
+    }40%, 60% {
+        left: 0;
+        -webkit-transform: translateY(-30%);
+        transform: translateY(-30%);
+    }60%, 80% {
+        left: 0;
+        -webkit-transform: translateY(-30%);
+        transform: translateY(-30%);
+    }
+    80%, 100% {
+        left: 0;
+        -webkit-transform: translateY(4%);
+        transform: translateY(4%);
+    }
+}
+
+#modal-order-no-adress-button {
+    display: none !important;
+}
+
+.catalog-link {
+    color: #333;
+    text-decoration: underline;
+}
+
+.catalog-link:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.catalog-link:visited {
+    color: #333;
+    text-decoration: underline;
+}
+
+.catalog-link-white {
+    color: white;
+    text-decoration: underline;
+}
+
+.catalog-link-white:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.catalog-link-white:visited {
+    color: white;
+    text-decoration: underline;
+}
+.bombom {
+	width:280px;
+	margin:0 auto 15px auto;
+}
+.bombom .inp {
+	width:280px;
+	padding:12px 20px;
+	display:block;
+	margin-bottom:12px;
+	font-size:16px;
+}
+.bombom .sub {
+	width:280px;
+	text-align:center;
+	padding:12px 0;
+	color:white;font-size:16px;
+	border:none;
+	background:#e02a27;
+	text-decoration:underline;
+}

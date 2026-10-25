@@ -1,0 +1,466 @@
+@font-face {
+    font-family: 'GothamPro-Bold';
+    src: url('fonts/GothamPro-Bold.eot');
+    src: url('fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GothamPro-Bold.woff2') format('woff2'),
+        url('fonts/GothamPro-Bold.woff') format('woff'),
+        url('fonts/GothamPro-Bold.ttf') format('truetype'),
+        url('fonts/GothamPro-Bold.svg#GothamPro-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamPro-Light';
+    src: url('fonts/GothamPro-Light.eot');
+    src: url('fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GothamPro-Light.woff2') format('woff2'),
+        url('fonts/GothamPro-Light.woff') format('woff'),
+        url('fonts/GothamPro-Light.ttf') format('truetype'),
+        url('fonts/GothamPro-Light.svg#GothamPro-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamPro-Black";
+    src: url("fonts/GothamProBlack.eot");
+    src: url("fonts/GothamProBlack.eot?#iefix")format("embedded-opentype"),
+        url("fonts/GothamProBlack.woff") format("woff"),
+        url("fonts/GothamProBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* 
+        Resets defualt browser settings
+        reset.css
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre, abbr,
+acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,
+sub,sup,tt,var,dl,dt,dd,ol, fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th { 
+    margin:0; 
+    padding:0; 
+    border:0; 
+    outline:0; 
+    font-weight:inherit; 
+    font-style:inherit; 
+    font-size:100%; 
+    font-family:inherit; 
+    vertical-align:baseline; }
+:focus { outline:0; }
+a:active { outline:none; }
+body { line-height:1; color:black; background:white; }
+ol,ul { list-style:none; }
+table { border-collapse:separate; border-spacing:0; } 
+blockquote:before,blockquote:after,q:before,q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+
+body {
+    font-family: 'GothamPro-Light';
+}
+.wrap {
+   // min-width: 480px;
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 0 10px;
+}
+.block1 {
+    background: url(../img2/block1_fon.jpg) top center no-repeat;
+ 
+}
+.head {
+    background: url(../img2/block1_line.png) top center repeat-x;
+    height: 101px;
+}
+.logo {
+    background: url(../img/logo.png) no-repeat;
+    width: 232px; 
+    height: 63px;
+    float: left;
+}
+.menu_icon {
+    background: url(../img2/block1_menu_icon.png) no-repeat;
+    width: 36px;
+    height: 27px;
+    float: right;
+    margin-top: 37px;
+}
+h1 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 38px;
+}
+span.bold {
+    font-family: 'GothamPro-Bold';
+}
+span.yellow {
+    color: #ffd800;
+}
+.clock1 {
+    width: 300px;
+    margin: 0 auto;
+}
+.clock1_photo {
+    width: 300px;
+    height: 262px;
+    background: url(../img2/clock1_black.png) bottom center no-repeat;
+   
+}
+.clock1_colors {    
+    background: url(../img/clock1_colors.png) no-repeat bottom center;
+    width: 300px;
+    height: 292px;
+}
+.block2 {
+    border-bottom: 1px solid #0f2238;
+    padding-bottom: 22px;
+    background: black;
+}
+.price1 {
+    width: 300px;
+    margin: 0 auto;    
+    padding-top: 42px;
+}
+.prices {
+    width: 300px;
+    height: 71px;
+    margin-bottom: 1px;
+    position: relative;
+    background: url(../img/prices2.png) no-repeat top left; 
+    background-size: 95% ;
+}
+.price_new {
+    font-family: 'GothamPro-Bold';
+    color: white;
+    font-size: 23px;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+}
+.price_old {
+    font-family: 'GothamPro-Bold';
+    color: #455058;
+    font-size: 12px;
+    position: absolute;
+    top: 26px;
+    right: 33px;
+}
+.button1 {
+    width: 300px;
+    height: 75px;
+    display: block;
+    margin: 0 auto;
+    background: url(../img/button1.png) no-repeat center center; 
+    background-size: 90% 90%;
+}
+.block3 {
+    background: black;
+}
+.desc1 {
+    font-size: 20px;
+    color: white;
+    padding-top: 44px; 
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+}
+span.s21 {
+    font-size: 14px;
+}
+span.blue {
+    color: #4589d0;
+}
+.action1 {
+    width: 240px;
+    margin: 0 auto;
+    padding-bottom: 22px;
+}
+.action1_text {
+    font-size: 18px;
+    color: white;
+    padding-top: 44px; 
+    padding-bottom: 22px;
+}
+#timerb35eb491162bbc7d86384bfeb22329a9,
+#timerb35eb491162bbc7d86384bfeb22329a90,
+#timerb35eb491162bbc7d86384bfeb22329a900{
+    min-width: 260px !important;
+    position: relative; 
+    left: -10px;
+}
+.timer-element span {
+    font-size: 18px !important;
+}
+#timer-text-b35eb491162bbc7d86384bfeb22329a9-days,
+#timer-text-b35eb491162bbc7d86384bfeb22329a9-hours,
+#timer-text-b35eb491162bbc7d86384bfeb22329a9-minutes,
+#timer-text-b35eb491162bbc7d86384bfeb22329a9-secundes,
+
+#timer-text-b35eb491162bbc7d86384bfeb22329a90-days,
+#timer-text-b35eb491162bbc7d86384bfeb22329a90-hours,
+#timer-text-b35eb491162bbc7d86384bfeb22329a90-minutes,
+#timer-text-b35eb491162bbc7d86384bfeb22329a90-secundes,
+
+#timer-text-b35eb491162bbc7d86384bfeb22329a900-days,
+#timer-text-b35eb491162bbc7d86384bfeb22329a900-hours,
+#timer-text-b35eb491162bbc7d86384bfeb22329a900-minutes,
+#timer-text-b35eb491162bbc7d86384bfeb22329a900-secundes {
+    font-size: 12px !important;
+}
+.block4 {
+    background: white;
+}
+h2 {
+    font-size: 32px;
+    font-family: 'GothamPro-Bold';
+    text-align: center;
+    background: url(../img/block3_h2_line.png) bottom center no-repeat;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+}
+.button2 {
+    width: 196px;
+    height: 45px;
+    display: inline-block;
+    margin: 0 auto;
+    background: url(../img/button2.png) no-repeat center center; 
+}
+.price_old2 {
+    color: #455058;
+    font-size: 14px; 
+    margin-bottom: 8px; 
+    text-align: center;
+    position: relative; 
+}
+.price_old2 .bold {
+    font-size: 18px;
+}
+.price_new2 {
+    color: #0090ff;
+    font-family: "GothamPro-Black";
+    font-size: 33px; 
+    margin-bottom: 24px;
+    text-align: center;
+}
+.line-through {
+    background: #455058;
+    height: 1px;
+    position: absolute;
+    top: 10px;
+    width: 200px;
+}
+.clear {
+    clear: both;
+}
+.block5 {
+    background: url(../img2/block5_fon.jpg) top center no-repeat;
+}
+.block5 h2 {
+    color: white;
+}
+.block5_clocks {
+    margin: 0 auto;
+    width: 300px;
+}
+.block5_clock {
+    background: url(../img/clock_black.png) top center no-repeat;
+    height: 455px;
+    background-size: 90%  ;
+}
+.block5_colors {    
+    background: url(../img/block4_colors.png) no-repeat bottom center;
+    width: 300px;
+    height: 425px;
+}
+.block5_desc { 
+    padding-bottom: 34px;
+    padding-top: 0px;
+}
+.block5_desc table {
+    margin: 0 auto;
+}
+.block7 {
+    background: url(../img2/block7_fon.jpg) top center no-repeat;
+}
+.iphone_i_clock {
+    background: url(../img2/block7_iphone_i_clock.png) top center no-repeat;
+    background-size: 90%;
+    width: 300px;
+    height: 120px;
+    margin: 0 auto;
+}
+.iphone_i_clock .price1 {
+    padding-top: 110px;
+}
+.block8 {
+    padding-bottom: 48px;
+}
+.block9 {
+    background: url(../img2/block9_fon.jpg) top center no-repeat;
+}
+.block9 h2, .block9 td {
+    color: white;
+}
+.block10 {
+    background: url(../img2/block10_fon.jpg) top center no-repeat;
+}
+.block10_right {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    padding-top: 33px;
+    padding-bottom: 44px;
+}
+.block10_right h3 {
+    font-family: 'GothamPro-Bold';
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+.block10_button {
+    background: url(../img/block9_button.png) top center no-repeat;
+    background-size: 90%;
+    display: block;
+    width: 290px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+
+.block12 {
+    background: url(../img2/block7_fon.jpg) top center no-repeat;
+}
+.footer { 
+    font-size:14px;
+    background:#000000;
+    width:100%; 
+    color:#ffffff;
+    border-top:1px #3a4650 solid;
+}
+.footer a {color:#3e5e84}
+
+
+.clock1_colors {
+    position: relative;
+}
+.clock1_colors_toggle {
+    position: absolute;
+    bottom: 50px;
+    left: 106px;
+}
+.clock1_colors_toggle span {   
+    display: block;
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+.block5_colors {
+    position: relative;
+}
+.clock4_colors_toggle {
+    position: absolute;
+    bottom: 8px;
+    left: 132px;
+}
+.clock4_colors_toggle span {  
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.menu_icon {
+    cursor: pointer;
+}
+#nav {
+    display: none;
+    background: #070f18;
+    width: 100%; 
+    height: 200px;
+    position: relative; 
+    top: 35px;
+}
+.menu_li {
+
+}
+.menu_li a {
+        padding-top: 20px;
+    padding-left: 20px;
+    display: inline-block;
+    width: 100%;
+        font-size: 16px;
+    color: #4488d1;
+    text-decoration: none;
+}
+.menu_li a:hover {
+    text-decoration: underline;
+}
+
+	
+ 
+
+
+ 
+
+.slides_container { 
+	width: 99%;
+        max-width: 300px; 
+	overflow:hidden;
+	position:relative;
+}
+ 
+.otzyv-text img {
+    -moz-border-radius: 85px;
+border-radius: 85px;
+}
+.pagination {
+	margin:26px auto 0 auto;
+	width:150px;
+}
+ 
+.callback {
+	font-family: "GothamPro-Light";
+	width:100%;
+	height:500px;
+	background:#ffffff;}
+#example { 
+	height:380px;
+        width: 300px;
+	position:relative;
+        margin: 0 auto;
+}
+
+#slides {
+	position:absolute;
+	top:15px;
+	left:4px;
+	z-index:100;
+}
+
+.pagination li {
+	float:left;
+	margin:0 12px;
+}
+
+.pagination li a {
+	
+	display:block;
+	width:20px;
+	height:0;
+	padding-top:20px;
+	background-image:url(../img/pagination.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -20px;
+}

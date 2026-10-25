@@ -1,0 +1,1309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=1100">
+    <title>Расчет оффера </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <link rel="stylesheet" href="http://cpanl.ru/templates/default/css/styles.css">
+        
+   
+        
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toggles/2.0.4/toggles.css" type="text/javascript"--></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toggles/2.0.4/toggles.css" rel="stylesheet">
+    <!--link href="content/js/jquery-toggles-master/css/themes/toggles-light.css" rel="stylesheet"-->
+	<style> 
+body, html {
+	background-image: url(fon.jpg);
+	/* background-repeat: no-repeat; */
+	background-position: center center;
+	/* background-size: cover; */
+}
+.switches label {
+    display: initial;
+}
+.label label {
+    font-size: 17px;
+    padding-left: 18px;
+}
+div.calc div.calc_in {
+	height: auto;
+	border: solid 1px #d8d8d8;
+	padding: 15px;
+	overflow: hidden;
+	background: #fff;
+	margin-bottom: 45px;
+}
+div.calc_left div.row div.value div.input input {
+ 
+	height: 26px;
+ 
+}
+	</style> 
+</head>
+<body>
+ <section id="guaranty">
+    <div class="container text-center" style="max-width: 1000px;">
+        
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                <a href="https://cparta.net" style="color:white;text-transform:uppercase;">
+                <img class="img-responsive" src="/landing/images/logo.svg" style="max-width: 120px;margin-top: 25px;"><br>
+                <b>Cparta.net</b></a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <h1 style="color: #f9f8f0;font-weight: bold;text-align: center;margin: 0 auto;padding-top: 55px;font-family: 'PT Sans Narrow',sans-serif;font-size: 40px;">РАСЧЕТ ОФФЕРА</h1>
+            </div><div class="col-xs-4 col-md-4">
+                <a href="https://vk.com/cparta_net" style="color:inherit;" target="_blank"><img class="img-responsive" src="vkontakte.png" style="float: right;max-width: 180px;margin-top: 15px;"></a>
+            </div>
+            <div style="clear: both;"></div>
+			
+        </div>
+    </div>
+</section><div style="clear: both;"></div>
+ 
+<div class="calc">
+  
+    <div class="calc_in">
+        <div class="calc_left">
+            <h2>Входные данные</h2>
+            <div class="local">
+                <div class="label">
+                    Что продаем
+                </div>
+                <div class="values">
+                    <a href="#" id="goods" onclick="return set_type('goods');" class="on">Физ. товары</a>
+                    <a href="#" id="bd" onclick="return set_type('bd');">БАДы</a>
+                </div>
+            </div>
+            <div class="local">
+                <div class="label">
+                    Страна
+                </div>
+                <div class="values">
+                    <a href="#" id="ru" onclick="return set_country('ru');" class="on">Моновалюта</a>
+                    <a href="#" id="kz" onclick="return set_country('kz');">Бивалюта</a>
+                </div>
+            </div>
+            <div id="rows_country" style="width:100%;display:none;">
+                <div class="row">
+                    <div class="label">
+                        <label for="price_nominal">Курс рубля</label>
+                    </div>
+                    <div class="value">
+                        <div class="input tenge">
+                            <span>1</span>
+                            <span class="fa fa-rub"></span>
+                            <span>=&nbsp;</span>
+                            <input type="text" id="rate" value="">
+                            <span>$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="price_nominal">Цена закупа товара</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="price_nominal" class="minus"><div></div></a>
+                        <input type="text" id="price_nominal" min="0" value="">
+                        <a href="#" for="price_nominal" class="plus"><div></div></a>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <div class="input tenge">
+                        <input type="text" id="price_nominal_t" value="">
+                        <span>$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="price">Цена продажи товара</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="price" class="minus"><div></div></a>
+                        <input type="text" id="price" min="0" value="">
+                        <a href="#" for="price" class="plus"><div></div></a>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <div class="input tenge">
+                        <input type="text" id="price_t" value="">
+                        <span>$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row bd">
+                <div class="label">
+                    <label for="price_delivery_client">Цена доставки для клиента</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="price_delivery_client" class="minus"><div></div></a>
+                        <input type="text" id="price_delivery_client" min="0" value="">
+                        <a href="#" for="price_delivery_client" class="plus"><div></div></a>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <div class="input tenge">
+                        <input type="text" id="price_delivery_client_t" value="">
+                        <span>$</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bd_rows" style="width:100%;display:none;overflow:hidden;">
+                <div class="row">
+                    <div class="label">
+                        <label for="perc_complect">Выкуп одиночного комплекта</label>
+                    </div>
+                    <div class="value">
+                        <div class="input">
+                            <a href="#" for="perc_complect" class="minus"><div></div></a>
+                            <input type="text" id="perc_complect" min="0" value="">
+                            <a href="#" for="perc_complect" class="plus"><div></div></a>
+                            <span>%</span>
+                        </div>
+                        <div class="input tenge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="local">
+                <div class="label">
+                    Апселл
+                </div>
+                <div class="switches">
+                    <div>
+                        <input type="checkbox" id="upsell" name="upsell" onclick="if ($('#upsell:checked').val()==1) { if (complects[1]==undefined) { add_complect(); } $('#upsell_'+sale_type+'_rows').slideDown(300); } else { $('#upsell_'+sale_type+'_rows').slideUp(300); }" value="1">
+                        <label for="upsell"><i></i></label>
+                    </div>
+                </div>
+            </div>
+            <div id="upsell_bd_rows" style="width:100%;display:none;overflow:hidden;">
+                <div id="upsell_bd_rows_append">
+                </div>
+                <div class="row">
+                    <div class="label">
+                        &nbsp;
+                    </div>
+                    <div class="switches">
+                        <div>
+                            <a href="#" onclick="return add_complect();">Добавить еще комплект</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="upsell_goods_rows" style="width:100%;display:none;overflow:hidden;">
+                <div class="row">
+                    <div class="label">
+                        <label for="price_nominal_upsell">&nbsp;&nbsp;Цена закупа апселла</label>
+                    </div>
+                    <div class="value">
+                        <div class="input">
+                            <a href="#" for="price_nominal_upsell" class="minus"><div></div></a>
+                            <input type="text" id="price_nominal_upsell" min="0" value="">
+                            <a href="#" for="price_nominal_upsell" class="plus"><div></div></a>
+                            <span class="fa fa-rub"></span>
+                        </div>
+                        <div class="input tenge">
+                            <input type="text" id="price_nominal_upsell_t" value="">
+                            <span>$</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <label for="price_upsell">&nbsp;&nbsp;Цена продажи апселла</label>
+                    </div>
+                    <div class="value">
+                        <div class="input">
+                            <a href="#" for="price_upsell" class="minus"><div></div></a>
+                            <input type="text" id="price_upsell" min="0" value="">
+                            <a href="#" for="price_upsell" class="plus"><div></div></a>
+                            <span class="fa fa-rub"></span>
+                        </div>
+                        <div class="input tenge">
+                            <input type="text" id="price_upsell_t" value="">
+                            <span>$</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <label for="perc_upsell">&nbsp;&nbsp;Процент заказа апселла</label>
+                    </div>
+                    <div class="value">
+                        <div class="input">
+                            <a href="#" for="perc_upsell" class="minus"><div></div></a>
+                            <input type="text" id="perc_upsell" min="0" value="">
+                            <a href="#" for="perc_upsell" class="plus"><div></div></a>
+                            <span>%</span>
+                        </div>
+                        <div class="input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            if ($('#upsell:checked').val()==1) { $('#upsell_rows').show(); } else { $('#upsell_rows').hide(); }
+            </script>
+            <div class="row">
+                <div class="label">
+                    <label for="count_delivery">Кол-во отправок</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="count_delivery" class="minus"><div></div></a>
+                        <input type="text" id="count_delivery" min="0" value="">
+                        <a href="#" for="count_delivery" class="plus"><div></div></a>
+                    </div>
+                    <div class="input">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="price_delivery">Цена доставки</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="price_delivery" class="minus"><div></div></a>
+                        <input type="text" id="price_delivery" min="0" value="">
+                        <a href="#" for="price_delivery" class="plus"><div></div></a>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <div class="input tenge">
+                        <input type="text" id="price_delivery_t" value="">
+                        <span>$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="price_call">Стоимость КЦ</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="price_call" class="minus"><div></div></a>
+                        <input type="text" id="price_call" min="0" value="">
+                        <a href="#" for="price_call" class="plus"><div></div></a>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <div class="input tenge">
+                        <input type="text" id="price_call_t" value="">
+                        <span>$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="price_lead">Цена лида до 2 прозвона</label>
+                    <!-- стоимость полученной заявки на покупку товара -->
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="price_lead" class="minus"><div></div></a>
+                        <input type="text" id="price_lead" min="0" value="">
+                        <a href="#" for="price_lead" class="plus"><div></div></a>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <div class="input tenge">
+                        <input type="text" id="price_lead_t" value="">
+                        <span>$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="price_outsourcing">Аутсорсинг</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="price_outsourcing" class="minus"><div></div></a>
+                        <input type="text" id="price_outsourcing" min="0" value="">
+                        <a href="#" for="price_outsourcing" class="plus"><div></div></a>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <div class="input tenge">
+                        <input type="text" id="price_outsourcing_t" value="">
+                        <span>$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="local">
+                <div class="label">
+                    Второй прозвон
+                </div>
+                <div class="switches">
+                    <div>
+                        <input type="checkbox" id="call2" name="call2" onclick="if ($('#call2:checked').val()==1) { $('#call2_rows').slideDown(300); } else { $('#call2_rows').slideUp(300); }" value="1">
+                        <label for="call2"><i></i></label>
+                    </div>
+                </div>
+            </div>
+            <div id="call2_rows" style="width:100%;display:none;">
+                <div class="row">
+                    <div class="label">
+                        <label for="perc_call2">&nbsp;&nbsp;Отказ на втором прозвоне</label>
+                    </div>
+                    <div class="value">
+                        <div class="input">
+                            <a href="#" for="perc_call2" class="minus"><div></div></a>
+                            <input type="text" id="perc_call2" min="0" value="">
+                            <a href="#" for="perc_call2" class="plus"><div></div></a>
+                            %
+                        </div>
+                        <div class="input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            if ($('#call2:checked').val()==1) { $('#call2_rows').show(); } else { $('#call2_rows').hide(); }
+            </script>
+            <div class="local">
+                <div class="label">
+                    Налоги (6%)
+                </div>
+                <div class="switches">
+                    <div>
+                        <input type="checkbox" id="tax" name="tax" value="1">
+                        <label for="tax"><i></i></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="perc_fee">РКО + комиссии</label>
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="perc_fee" class="minus"><div></div></a>
+                        <input type="text" id="perc_fee" min="0" value="">
+                        <a href="#" for="perc_fee" class="plus"><div></div></a>
+                        <span>%</span>
+                    </div>
+                    <div class="input tenge">
+                    </div>
+                </div>
+            </div>
+            <div class="local">
+                <div class="label">
+                    Выкупать возврат
+                </div>
+                <div class="switches">
+                    <div>
+                        <input type="checkbox" id="back" name="back" onclick="if ($('#back:checked').val()==1) { $('#back_rows').slideDown(300); } else { $('#back_rows').slideUp(300); }" value="1">
+                        <label for="back"><i></i></label>
+                    </div>
+                </div>
+            </div>
+            <div id="back_rows" style="width:100%;display:none;">
+                <div class="row">
+                    <div class="label">
+                        <label for="price_back">&nbsp;&nbsp;Цена выкупа возврата</label>
+                        <!-- это цена за возврат продавцу невыкупленных покупателем посылок -->
+                    </div>
+                    <div class="value">
+                        <div class="input">
+                            <a href="#" for="price_back" class="minus"><div></div></a>
+                            <input type="text" id="price_back" min="0" value="">
+                            <a href="#" for="price_back" class="plus"><div></div></a>
+                            <span class="fa fa-rub"></span>
+                        </div>
+                        <div class="input tenge">
+                            <input type="text" id="price_back_t" value="">
+                            <span>$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            if ($('#back:checked').val()==1) { $('#back_rows').show(); } else { $('#back_rows').hide(); }
+            </script>
+            <div class="row">
+                <div class="label">
+                    <label for="perc_delivery">Процент выкупа</label>
+                    <!-- это % посылок, которые купит покупатель от всех отправленных -->
+                </div>
+                <div class="value">
+                    <div class="input">
+                        <a href="#" for="perc_delivery" class="minus"><div></div></a>
+                        <input type="text" id="perc_delivery" min="0" value="">
+                        <a href="#" for="perc_delivery" class="plus"><div></div></a>
+                        <span>%</span>
+                    </div>
+                    <div class="input tenge">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calc_right">
+            <h2>Результаты</h2>
+            <div class="money_box">
+                <div class="money">
+                    <div id="coins_price_income" class="coins"></div>
+                </div>
+                <div class="result">
+                    Доходы:
+                    <br><span id="price_income">0</span>
+                    <span class="fa fa-rub"></span>
+                </div>
+            </div>
+            <div class="money_box">
+                <div class="money">
+                    <div id="coins_price_outcome" class="coins"></div>
+                </div>
+                <div class="result">
+                    Расходы:
+                    <br><span id="price_outcome">0</span>
+                    <span class="fa fa-rub"></span>
+                </div>
+            </div>
+            <div class="money_box">
+                <div class="money">
+                    <div id="coins_price_profit" class="coins"></div>
+                </div>
+                <div class="result">
+                    Прибыль в деньгах:
+                    <br><span id="price_profit">0</span>
+                    <span class="fa fa-rub"></span>
+                </div>
+            </div>
+            <div class="money_box">
+                <div class="money">
+                    <div id="coins_price_goods" class="coins"></div>
+                </div>
+                <div class="result">
+                    Деньги в товаре:
+                    <br><span id="price_goods">0</span>
+                    <span class="fa fa-rub"></span>
+                </div>
+            </div>
+            <div id="results_goods">
+                <table class="results">
+                    <tr>
+                        <td>Прибыль (с учетом возвратов):</td>
+                        <td class="price">
+                            <nobr><span id="price_profit_with_back">0</span>
+                            <span class="fa fa-rub"></span></nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Чистая прибыль на 1 отправку (без учета возвратов):</td>
+                        <td class="price">
+                            <nobr><span id="price_profit_per_sale">0</span>
+                            <span class="fa fa-rub"></span></nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Чистая прибыль на 1 отправку (с учетом возвратов):</td>
+                        <td class="price">
+                            <nobr><span id="price_profit_with_back_per_sale">0</span>
+                            <span class="fa fa-rub"></span></nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ROI без учета возвратов:</td>
+                        <td class="price">
+                            <nobr><span id="roi_perc">0</span>%</nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ROI с учетом возвратов:</td>
+                        <td class="price">
+                            <nobr><span id="roi_perc_with_back">0</span>%</nobr>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="results_bd" style="display:none;">
+                <table id="tbl_bd" class="results">
+                    <tr>
+                        <td>Прибыль (с учетом возвратов):</td>
+                        <td class="price">
+                            <nobr><span id="price_profit_with_back_bd">0</span>
+                            <span class="fa fa-rub"></span></nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Чистая прибыль на 1 отправку (без учета возвратов):</td>
+                        <td class="price">
+                            <nobr><span id="price_profit_per_sale_bd">0</span>
+                            <span class="fa fa-rub"></span></nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Чистая прибыль на 1 отправку (с учетом возвратов):</td>
+                        <td class="price">
+                            <nobr><span id="price_profit_with_back_per_sale_bd">0</span>
+                            <span class="fa fa-rub"></span></nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ROI общий:</td>
+                        <td class="price">
+                            <nobr><span id="roi_perc_full">0</span>%</nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="border:0;font-size:20px;">Одиночная отправка:</td>
+                    </tr>
+                    <tr>
+                        <td>Доход одиночный:</td>
+                        <td class="price">
+                            <nobr><span id="price_profit_single">0</span>
+                            <span class="fa fa-rub"></span></nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ROI одиночный:</td>
+                        <td class="price">
+                            <nobr><span id="perc_profit_single">0</span>%</nobr>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p style="font-size:16px;padding:10px 0 0 0;">Нашли ошибку или есть предложения по улучшению калькулятора? Напишите или позвоните </p>
+        </div>
+    </div>
+<script>
+$("input[type=checkbox]").prop("checked",false);
+$('input[type=text]').val('');
+
+$('input[type=checkbox]').on('click keyup',function(){
+    if ($(this).attr('id')=='tax' || ($(this).attr('id')=='call2' && $('#perc_call2').val()!='') || ($(this).attr('id')=='back' && $('#price_back').val()!='') ) {
+        calc();
+    } else if ( sale_type!='bd' && $(this).attr('id')=='upsell' && $('#perc_upsell').val()!='' && ($('#price_nominal').val()!='' || $('#price_upsell').val()!='') ) {
+        calc();
+    } else if (sale_type=='bd' && $(this).attr('id')=='upsell') {
+        var do_calc=0;
+        $.each(complects,function(i,val){
+            if ($('#perc_upsell_'+i).val()!='') {
+                do_calc=1;
+            }
+        });
+        if (do_calc==1) {
+            check_changes();
+            calc();
+        }
+    }
+});
+
+$('input[type=text]').on('click keyup',function(){
+    if (check_changes()) {
+        calc_tenge($(this).attr('id'));
+        calc();
+    }
+});
+
+var perc_delivery=0, perc_deliveries=0, perc_deliveries_count=0, perc_delivery_changed=0;
+function check_changes() {
+    var is_input_changed=0;
+        
+    if (sale_type=='bd') {
+        if (perc_delivery!=$('#perc_delivery').val() && $.isNumeric($('#perc_delivery').val()) && $('#perc_delivery').val()>0) {
+            perc_delivery_changed=1;
+            //console.log('Part 1: '+perc_delivery_changed);
+        }
+        if (perc_delivery_changed==1) {
+            var disable_delivery_changed=0;
+            if ($('#perc_complect').val()!=vals.perc_complect && $.isNumeric($('#perc_complect').val()) && $('#perc_complect').val()>0) {
+                disable_delivery_changed=1;
+                //console.log('Part 2 - check #perc_complect: '+perc_delivery_changed);
+            }
+            $.each(complects,function(i,val){
+                if ($('#perc_complect_'+i).val()!=vals['perc_complect_'+i] && $.isNumeric($('#perc_complect_'+i).val()) && $('#perc_complect_'+i).val()>0) {
+                    disable_delivery_changed=1;
+                }
+            });
+            if (disable_delivery_changed==1) {
+                perc_delivery_changed=0;
+            }
+            //console.log('Part 2: '+perc_delivery_changed);
+        }
+        if (perc_delivery_changed==0) {
+            perc_deliveries=0;
+            perc_deliveries_count=0;
+            perc_delivery_changed=0;
+            if ($('#perc_complect').val()!=vals.perc_complect && $.isNumeric($('#perc_complect').val()) && $('#perc_complect').val()>0) {
+                perc_deliveries+=+$('#perc_complect').val();
+                perc_deliveries_count++;
+            }
+            $.each(complects,function(i,val){
+                if ($.isNumeric($('#perc_complect_'+i).val()) && $('#perc_complect_'+i).val()>0) {
+                    perc_deliveries+=+$('#perc_complect_'+i).val();
+                    perc_deliveries_count++;
+                    //console.log('check complect: '+perc_deliveries_count);
+                }
+            });
+            //console.log('average: '+perc_deliveries_count+' '+perc_deliveries);
+            if (perc_deliveries_count>0) {
+                perc_delivery=Math.round(perc_deliveries/perc_deliveries_count);
+                $('#perc_delivery').val(perc_delivery);
+            } else {
+                perc_delivery=0;
+                $('#perc_delivery').val('');
+            }
+            //console.log('Part 3: '+perc_delivery_changed);
+        } else {
+            perc_delivery=$('#perc_delivery').val();
+            $('#perc_complect').val($('#perc_delivery').val());
+            $.each(complects,function(i,val){
+                $('#perc_complect_'+i).val($('#perc_delivery').val());
+            });
+            //console.log('perc_delivery changed part 3: '+perc_delivery_changed);
+        }
+    }
+
+    $('input[type=text]').each(function(){
+        var val=+$(this).val();
+        if (/*Math.floor(val)==val && */$.isNumeric(val) && val>0) {
+            if (vals[$(this).attr('id')]=='' || vals[$(this).attr('id')]==undefined) { vals[$(this).attr('id')]=0; }
+            if (val!=vals[$(this).attr('id')]) {
+                //console.log($(this).attr('id'));
+                is_input_changed++;
+            }
+            vals[$(this).attr('id')]=val;
+            console.log($(this).attr('id'));
+        } else {
+            console.log($(this).attr('id'));
+            if (vals[$(this).attr('id')]=='' || vals[$(this).attr('id')]==undefined) { vals[$(this).attr('id')]=0; }
+
+            if ( ($(this).attr('id')=='perc_delivery' || $(this).attr('id')=='perc_complect') && vals[$(this).attr('id')]==100 && val==0 ) {
+            } else if ($(this).attr('id')=='count_delivery' && vals[$(this).attr('id')]==1 && val==0) {
+            } else {
+                if (val!=vals[$(this).attr('id')]) {
+                    //console.log($(this).attr('id'));
+                    is_input_changed++;
+                }
+            }
+
+            if ($(this).attr('id')=='count_delivery' && $(this).val()=='') {
+                vals[$(this).attr('id')]=1;
+            } else if ( ($(this).attr('id')=='perc_delivery' || $(this).attr('id')=='perc_complect') && $(this).val()=='') {
+                vals[$(this).attr('id')]=100;
+            } else {
+                vals[$(this).attr('id')]=0;
+            }
+        }
+    });
+    //console.log(is_input_changed);
+    return is_input_changed;
+}
+
+var sale_type='goods';
+function set_type(c) {
+    sale_type=c;
+    if (c=='goods') {
+        $('#goods').addClass('on'); $('#bd').removeClass('on');
+        $('#bd_rows').slideUp(300);
+        if ($('#upsell:checked').val()==1) {
+            $('#upsell_bd_rows').slideUp(300);
+            $('#upsell_goods_rows').slideDown(300);
+        } else {
+            $('#upsell_bd_rows').slideUp(300);
+            $('#upsell_goods_rows').slideUp(300);
+        }
+        $('#results_goods').slideDown(300);
+        $('#results_bd').slideUp(300);
+        check_changes();
+        calc_tenge($(this).attr('id'));
+        calc();
+    } else {
+        $('#bd').addClass('on'); $('#goods').removeClass('on');
+        $('#bd_rows').slideDown(300);
+        if ($('#upsell:checked').val()==1) {
+            $('#upsell_goods_rows').slideUp(300);
+            $('#upsell_bd_rows').slideDown(300);
+            if (complects[1]==undefined) {
+                add_complect();
+            }
+        } else {
+            $('#upsell_bd_rows').slideUp(300);
+            $('#upsell_goods_rows').slideUp(300);
+        }
+        $('#results_goods').slideUp(300);
+        $('#results_bd').slideDown(300);
+        check_changes();
+        calc_tenge($(this).attr('id'));
+        calc();
+    }
+    return false;
+}
+
+var country='ru';
+function set_country(c) {
+    country=c;
+    if (c=='ru') {
+        $('#ru').addClass('on'); $('#kz').removeClass('on');
+        $('.tenge').hide();
+        $('#rows_country').slideUp(300);
+    } else {
+        $('#kz').addClass('on'); $('#ru').removeClass('on');
+        $('.tenge').show();
+        $('#rows_country').slideDown(300);
+    }
+    return false;
+}
+
+function calc_tenge(field) {
+    var rate=+$('#rate').val();
+    if (/*Math.floor(rate)==rate && */$.isNumeric(rate) && rate>0) {
+    } else {
+        rate=0;
+    }
+    $('input[type=text]').each(function(){
+        var val=+$(this).val();
+        if (/*Math.floor(val)==val && */$.isNumeric(val) && val>0) {
+        } else {
+            val=0;
+        }
+        var f=$(this).attr('id');
+        if (f.substr(-2)=='_t') {
+        } else if ($('#'+f+'_t').length && f+'_t'!=field) {
+            $('#'+f+'_t').val(val*rate);
+        } else if (f+'_t'==field && $('#'+f).length) {
+            var val_t=+$('#'+f+'_t').val();
+            if (/*Math.floor(val)==val && */$.isNumeric(val_t) && val_t>0) {
+            } else {
+                val_t=0;
+            }
+            if (rate>0) {
+                $('#'+f).val(Math.round(100*val_t/rate)/100);
+            } else {
+                $('#'+f).val(0);
+            }
+        }
+    });
+}
+
+var complect_index=0, complects={}, single={};
+function add_complect() {
+    if (sale_type=='bd' && $('#upsell:checked').val()==1) {
+        complect_index++;
+        var fields={
+            'price_complect_nominal':'Стоимость комплекта',
+            'price_complect':'Цена продажи комплекта',
+            'price_complect_delivery_client':'Клиент платит за доставку',
+            'perc_complect_upsell':'Процент апсела комплекта',
+            'perc_complect':'Процент выкупа комплекта',
+        }
+        var html='';
+        complects[complect_index]={};
+        complects[complect_index]['added']=1;
+        html+='<div class="row"><div class="local">'+"\r\n"+
+            '<div class="label">'+"\r\n"+
+                '&nbsp;&nbsp;Комплект '+complect_index+"\r\n"+
+            '</div>'+"\r\n"+
+            '<div class="switches">'+"\r\n"+
+                '<div>'+"\r\n"+
+                '</div>'+"\r\n"+
+            '</div>'+"\r\n"+
+        '</div></div>';
+        $.each(fields,function(field,title){
+            var input_val='';
+            if (field=='perc_complect' && perc_delivery_changed==1 && $.isNumeric($('#perc_delivery').val()) && $('#perc_delivery').val()>0) {
+                input_val=$('#perc_delivery').val();
+            }
+
+            html+='<div id="complect_'+complect_index+'" class="row">'+"\r\n"+
+                    '<div class="label">'+"\r\n"+
+                        '<label for="'+field+'_'+complect_index+'">&nbsp;&nbsp;'+title+' '+complect_index+'</label>'+"\r\n"+
+                    '</div>'+"\r\n"+
+                    '<div class="value">'+"\r\n"+
+                        '<div class="input">'+"\r\n"+
+                            '<a href="#" for="'+field+'_'+complect_index+'" class="minus"><div></div></a>'+"\r\n"+
+                            '<input type="text" id="'+field+'_'+complect_index+'" min="0" value="'+input_val+'">'+"\r\n"+
+                            '<a href="#" for="'+field+'_'+complect_index+'" class="plus"><div></div></a>'+"\r\n";
+            if (field=='perc_complect_upsell' || field=='perc_complect') {
+                html+='%'+"\r\n";
+            } else {
+                html+='<span class="fa fa-rub"></span>'+"\r\n";
+            }
+                           
+            html+='</div>'+"\r\n"+
+                        '<div class="input tenge"';
+            if (country=='kz') {
+                html+=' style="display:block;"';
+            }
+            html+='>'+"\r\n";
+            if (field.substr(0,5)=='price') {
+                html+='<input type="text" id="'+field+'_'+complect_index+'_t" value="">'+"\r\n"+
+                        '<span>$</span>'+"\r\n";
+            }
+            html+='</div>'+"\r\n"+
+                    '</div>'+"\r\n"+
+                '</div>';
+        });
+        $(html).hide().appendTo($('#upsell_bd_rows_append')).slideDown(500);
+        
+        $('#tbl_bd').append('<tr>'+"\r\n"+
+                        '<td colspan="2" style="border:0;font-size:20px;">Комплект '+complect_index+':</td>'+"\r\n"+
+                    '</tr>'+"\r\n"+
+                    '<tr>'+"\r\n"+
+                        '<td>Доход (комплект '+complect_index+'):</td>'+"\r\n"+
+                        '<td class="price">'+"\r\n"+
+                            '<nobr><span id="price_profit_'+complect_index+'">0</span>'+"\r\n"+
+                            '<span class="fa fa-rub"></span></nobr>'+"\r\n"+
+                        '</td>'+"\r\n"+
+                    '</tr>'+"\r\n"+
+                    '<tr>'+"\r\n"+
+                        '<td>ROI (комплект '+complect_index+'):</td>'+"\r\n"+
+                        '<td class="price">'+"\r\n"+
+                            '<nobr><span id="perc_profit_'+complect_index+'">0</span>%</nobr>'+"\r\n"+
+                        '</td>'+"\r\n"+
+                    '</tr>');
+        
+        $('#complect_'+complect_index+' input[type=text]').on('click keyup',function(){
+            if (check_changes()) {
+                calc_tenge($(this).attr('id'));
+                calc();
+            }
+        });
+    }
+    return false;
+}
+
+var vals={};
+var timer_outcome_id=0, timer_profit_id=0, timer_goods_id=0;
+function calc() {
+    var time_limit=500;
+    
+    // цена доставки товара - кол-во*на расходы доставки, коллцентра, аутсорсинга
+    var price_delivery=vals.count_delivery*(vals.price_delivery+vals.price_call+vals.price_outsourcing);
+    
+    // цена возврата неоплаченных посылок
+    var price_back=0;
+    if ($('#back:checked').val()==1) {
+        price_back=(vals.count_delivery-vals.count_delivery*vals.perc_delivery/100)*vals.price_back;
+    }
+    
+    // стомость лида средняя, с учетом отказов после 2 звонка
+    var price_lead=vals.price_lead;
+    if ($('#call2:checked').val()==1) {
+        price_lead=vals.count_delivery*vals.price_lead/(vals.count_delivery-vals.count_delivery*vals.perc_call2/100);
+    }
+    
+    // стоимость всех купленных лидов
+    var price_leads_full=price_lead*vals.count_delivery;
+    
+    if (sale_type=='bd') {
+        var perc_upsell_complects_full=0; // суммы процентов допродажи всех дополнительных комплектов
+        var price_nominal_full=0; // все затраты на товары (себестоимость товаров)
+        var price_income_full=0; // выловый доход со всех товаров
+        var price_outcome_full=0; // выловый расход на все товаров
+        var price_goods=0; //деньги в товаре
+        var price_profit=0; // прибыль
+
+        if ($('#upsell:checked').val()==1) {
+            perc_upsell_complects_full=0;
+            $.each(complects,function(i,val){
+                complects[i]['count_delivery']=vals.count_delivery*vals['perc_complect_upsell_'+i]/100; // кол-во продаж комплекта
+                //console.log('count_delivery '+complects[i]['count_delivery']);
+                
+                // доход за комплект
+                complects[i]['price_income_full']=(vals['price_complect_'+i]+vals['price_complect_delivery_client_'+i])*complects[i]['count_delivery']*vals['perc_complect_'+i]/100;
+                //console.log(vals['price_complect_'+i]+' '+vals['price_complect_delivery_client_'+i]);
+                
+                //console.log(complects[i]['price_income_full']+' '+vals['price_complect_'+i]+' '+vals['price_complect_delivery_client_'+i]+' '+complects[i]['count_delivery']+' '+vals['perc_complect_'+i]);
+                
+                // затраты на комплект
+                complects[i]['price_outcome_full']=(vals['price_complect_nominal_'+i]+vals.price_delivery+vals.price_call+vals.price_outsourcing+price_lead)*complects[i]['count_delivery']
+                                                    +complects[i]['price_income_full']*vals.perc_fee/100;
+                //console.log('price_outcome_full '+complects[i]['price_outcome_full']);
+                if ($('#tax:checked').val()==1) {
+                    complects[i]['price_outcome_full']+=complects[i]['price_income_full']*0.06;
+                }
+                                            
+                // roi за комплект
+                complects[i]['roi_perc']=0;
+                if (complects[i]['price_outcome_full']!=0) {
+                    complects[i]['roi_perc']=(complects[i]['price_income_full']-complects[i]['price_outcome_full'])*100/complects[i]['price_outcome_full'];
+                }
+                                            
+                // деньги в товаре комплекта
+                complects[i]['price_goods']=vals['price_complect_nominal_'+i]*(vals.count_delivery-vals.count_delivery*vals['perc_complect_'+i]/100);
+                
+                perc_upsell_complects_full+=vals['perc_complect_upsell_'+i];
+                price_nominal_full+=vals['price_complect_nominal_'+i]*complects[i]['count_delivery'];
+                price_income_full+=complects[i]['price_income_full'];
+                price_outcome_full+=complects[i]['price_outcome_full'];
+                price_goods+=complects[i]['price_goods'];
+                
+                $('#perc_profit_'+i).html(0);
+                //if (complects[i]['roi_perc']>0) {
+                    $('#perc_profit_'+i).stop().animateNumber({ number:Math.round(complects[i]['roi_perc']) },time_limit);
+                //}
+
+                var price_profit_complect=complects[i]['price_income_full']-complects[i]['price_outcome_full'];
+                $('#price_profit_'+i).html(0);
+                //if (price_profit_complect>0) {
+                    $('#price_profit_'+i).stop().animateNumber({ number:Math.round(price_profit_complect) },time_limit);
+                //}
+            });
+        }
+        //console.log(complects[i]['price_outcome_full']);
+        single['perc_upsell']=100-perc_upsell_complects_full; // процент продаж основного товара без доп. комплекта
+        single['count_delivery']=vals.count_delivery*single.perc_upsell/100; // кол-во продаж основного товара без доп. комплекта
+        
+        // доход за продажи товара без доп.комплектов
+        single['price_income_full']=(vals.price+vals.price_delivery_client)*single.count_delivery*vals.perc_complect/100;
+        
+        // затраты на основной товар
+        single['price_outcome_full']=(vals.price_nominal+vals.price_delivery+vals.price_call+vals.price_outsourcing+price_lead)*single.count_delivery+
+                                     +single.price_income_full*vals.perc_fee/100;
+
+        if ($('#tax:checked').val()==1) {
+            single.price_outcome_full+=single.price_income_full*0.06;
+        }
+
+        // деньги в основном товаре
+        single['price_goods']=vals.price_nominal*(single.count_delivery-single.count_delivery*vals.perc_complect/100);
+        
+        // roi за основной товар
+        single['roi_perc']=0;
+        if (single['price_outcome_full']!=0) {
+            single['roi_perc']=(single['price_income_full']-single['price_outcome_full'])*100/single['price_outcome_full'];
+        }
+        $('#perc_profit_single').html(0);
+        //if (single['roi_perc']>0) {
+            $('#perc_profit_single').stop().animateNumber({ number:Math.round(single['roi_perc']) },time_limit);
+        //}
+        
+        var price_profit_single=single['price_income_full']-single['price_outcome_full'];
+        $('#price_profit_single').html(0);
+        //if (price_profit_single>0) {
+            $('#price_profit_single').stop().animateNumber({ number:Math.round(price_profit_single) },time_limit);
+        //}
+
+        price_nominal_full+=vals.price_nominal*single['count_delivery'];
+        price_income_full+=single['price_income_full'];
+        price_outcome_full+=single['price_outcome_full'];
+        
+        price_profit=price_income_full-price_outcome_full; // прибыль
+        price_goods+=single['price_goods'];
+        if ($('#back:checked').val()!=1) {
+            price_goods=0;
+        }
+
+        // Прибыль с учетом возвратов
+        var price_profit_with_back_bd=price_profit+price_goods;
+        var price_profit_per_sale_bd=0, price_profit_with_back_per_sale_bd=0;
+        if (vals.count_delivery>0) {
+            // Чистая прибыль на 1 отправку (без учета возвратов)
+            price_profit_per_sale_bd=price_profit/vals.count_delivery;
+            
+            // Чистая прибыль на 1 отправку (с учетом возвратов)
+            price_profit_with_back_per_sale_bd=price_profit_with_back_bd/vals.count_delivery;
+        }
+        $('#price_profit_with_back_bd').stop().animateNumber({ number:Math.round(price_profit_with_back_bd) },time_limit);
+        $('#price_profit_per_sale_bd').stop().animateNumber({ number:Math.round(price_profit_per_sale_bd) },time_limit);
+        $('#price_profit_with_back_per_sale_bd').stop().animateNumber({ number:Math.round(price_profit_with_back_per_sale_bd) },time_limit);
+        
+        var roi_perc_full=0;
+        if (price_outcome_full!=0) {
+            roi_perc_full=price_profit*100/price_outcome_full;
+        }
+        $('#roi_perc_full').html(0);
+        //if (roi_perc_full>0) {
+            $('#roi_perc_full').stop().animateNumber({ number:Math.round(roi_perc_full) },time_limit);
+        //}
+
+        $('#price_income').html(0);
+        //if (price_income_full>0) {
+            //console.log(price_income_full);
+            price_income_full=Math.round(price_income_full);
+            $('#price_income').stop().animateNumber({ number:Math.round(price_income_full), numberStep:function(now, tween){ var target=$(tween.elem); target.text(Math.round(now)); if ($('#coins_price_income').height()<Math.round(100*now/price_income_full)) $('#coins_price_income').height(Math.round(100*now/price_income_full)); } },time_limit);
+        //}
+        $('#price_outcome').html(0);
+        //if (price_outcome_full>0) {
+            $('#price_outcome').stop().animateNumber({ number:Math.round(price_outcome_full) },time_limit);
+        //}
+        $('#price_profit').html(0);
+        //if (price_profit>0) {
+            $('#price_profit').stop().animateNumber({ number:Math.round(price_profit) },time_limit);
+        //}
+        $('#price_goods').html(0);
+        //if (price_goods>0) {
+            $('#price_goods').stop().animateNumber({ number:Math.round(price_goods) },time_limit);
+        //}
+
+        clearInterval(timer_outcome_id);
+        var height_from=$('#coins_price_outcome').height();
+        var height_to=5;
+        if (price_outcome_full>0) {
+            height_to=Math.round(100*price_outcome_full/price_income_full);
+        }
+        if (height_to<5) { height_to=5; }
+        if (height_from>height_to) {
+            var delay=Math.round(time_limit/(height_from-height_to));
+            timer_outcome_id=setInterval(function () { count_height_down('coins_price_outcome',height_to); },delay);
+        } else {
+            var delay=Math.round(time_limit/(height_to-height_from));
+            timer_outcome_id=setInterval(function () { count_height_up('coins_price_outcome',height_to); },delay);
+        }
+
+        clearInterval(timer_profit_id);
+        var height_from_profit=$('#coins_price_profit').height();
+        var height_to_profit=5;
+        if (price_income_full>0) {
+            height_to_profit=Math.round(100*price_profit/price_income_full);
+        }
+        if (height_to_profit<5) { height_to_profit=5; }
+        if (height_from_profit>height_to_profit) {
+            var delay=Math.round(time_limit/(height_from_profit-height_to_profit));
+            timer_profit_id=setInterval(function () { count_height_down('coins_price_profit',height_to_profit); },delay);
+        } else {
+            var delay=Math.round(time_limit/(height_to_profit-height_from_profit));
+            timer_profit_id=setInterval(function () { count_height_up('coins_price_profit',height_to_profit); },delay);
+        }
+
+        clearInterval(timer_goods_id);
+        var height_from_goods=$('#coins_price_goods').height();
+        var height_to_goods=5;
+        if (price_income_full>0) {
+            height_to_goods=Math.round(100*price_goods/price_income_full);
+        }
+        if (height_to_goods<5) { height_to_goods=5; }
+        if (height_from_goods>height_to_goods) {
+            var delay=Math.round(time_limit/(height_from_goods-height_to_goods));
+            timer_goods_id=setInterval(function () { count_height_down('coins_price_goods',height_to_goods); },delay);
+        } else {
+            var delay=Math.round(time_limit/(height_to_goods-height_from_goods));
+            timer_goods_id=setInterval(function () { count_height_up('coins_price_goods',height_to_goods); },delay);
+        }
+    } else {
+        // стоимость всех купленных товаров
+        var price_nominal_full=vals.count_delivery*vals.price_nominal;
+        if ($('#upsell:checked').val()==1) {
+            price_nominal_full+=vals.count_delivery*vals.price_nominal_upsell*vals.perc_upsell/100;
+        }
+
+        // Валовый доход
+        var price_income_full=vals.count_delivery*(vals.price+vals.price_delivery_client)*vals.perc_delivery/100;
+        if ($('#upsell:checked').val()==1) {
+            price_income_full+=vals.count_delivery*vals.price_upsell*vals.perc_upsell/100;
+        }
+        // налоги
+        var price_taxes_full=0;
+        if ($('#tax:checked').val()==1) {
+            price_taxes_full=price_income_full*0.06;
+        }
+        if (vals.perc_fee>0) { // РКО+комиссии
+            price_taxes_full+=price_income_full*vals.perc_fee/100;
+        }
+
+        // расход
+        var price_outcome_full=price_delivery+price_back+price_leads_full+price_nominal_full+price_taxes_full;
+
+        // прибыль
+        var price_profit=price_income_full-price_outcome_full;
+
+        // деньги в товаре
+        var price_goods=price_nominal_full*(1-vals.perc_delivery/100);
+        if ($('#back:checked').val()!=1) {
+            price_goods=0;
+        }
+
+        // Прибыль с учетом возвратов
+        var price_profit_with_back=price_profit+price_goods;
+
+        var price_profit_per_sale=0, price_profit_with_back_per_sale=0;
+        if (vals.count_delivery>0) {
+            // Чистая прибыль на 1 отправку (без учета возвратов)
+            price_profit_per_sale=price_profit/vals.count_delivery;
+            
+            // Чистая прибыль на 1 отправку (с учетом возвратов)
+            price_profit_with_back_per_sale=price_profit_with_back/vals.count_delivery;
+        }
+
+        var roi_perc=0, roi_perc_with_back=0;
+        if (price_outcome_full!=0) {
+            // ROI без учета возвратов
+            roi_perc=price_profit*100/price_outcome_full;
+        
+            // Roi с учетом возвратов
+            roi_perc_with_back=price_profit_with_back*100/price_outcome_full;
+        }
+
+        $('#price_profit_with_back').stop().animateNumber({ number:Math.round(price_profit_with_back) },time_limit);
+        $('#price_profit_per_sale').stop().animateNumber({ number:Math.round(price_profit_per_sale) },time_limit);
+        $('#price_profit_with_back_per_sale').stop().animateNumber({ number:Math.round(price_profit_with_back_per_sale) },time_limit);
+        //if (roi_perc>0) {
+            $('#roi_perc').stop().animateNumber({ number:Math.round(roi_perc) },time_limit);
+        //}
+        //if (roi_perc_with_back>0) {
+            $('#roi_perc_with_back').stop().animateNumber({ number:Math.round(roi_perc_with_back) },time_limit);
+        //}
+
+        $('#price_income').html(0);
+        //if (price_income_full>0) {
+            price_income_full=Math.round(price_income_full);
+            $('#price_income').stop().animateNumber({ number:Math.round(price_income_full), numberStep:function(now, tween){ var target=$(tween.elem); target.text(Math.round(now)); if ($('#coins_price_income').height()<Math.round(100*now/price_income_full)) $('#coins_price_income').height(Math.round(100*now/price_income_full)); } },time_limit);
+        //}
+        $('#price_outcome').html(0);
+        //if (price_outcome_full>0) {
+            $('#price_outcome').stop().animateNumber({ number:Math.round(price_outcome_full) },time_limit);
+        //}
+        $('#price_profit').html(0);
+        //if (price_profit>0) {
+            $('#price_profit').stop().animateNumber({ number:Math.round(price_profit) },time_limit);
+        //}
+        $('#price_goods').html(0);
+        //if (price_goods>0) {
+            $('#price_goods').stop().animateNumber({ number:Math.round(price_goods) },time_limit);
+        //}
+
+        clearInterval(timer_outcome_id);
+        var height_from=$('#coins_price_outcome').height();
+        var height_to=2;
+        if (price_outcome_full>0) {
+            height_to=Math.round(100*price_outcome_full/price_income_full);
+        }
+        if (height_to<2) { height_to=2; }
+        if (height_to>100) { height_to=100; }
+        if (height_from>height_to) {
+            var delay=Math.round(time_limit/(height_from-height_to));
+            timer_outcome_id=setInterval(function () { count_height_down('coins_price_outcome',height_to); },delay);
+        } else {
+            var delay=Math.round(time_limit/(height_to-height_from));
+            timer_outcome_id=setInterval(function () { count_height_up('coins_price_outcome',height_to); },delay);
+        }
+
+        clearInterval(timer_profit_id);
+        var height_from_profit=$('#coins_price_profit').height();
+        var height_to_profit=2;
+        if (price_income_full>0) {
+            height_to_profit=Math.round(100*price_profit/price_income_full);
+        }
+        if (height_to_profit<2) { height_to_profit=2; }
+        if (height_to_profit>100) { height_to_profit=100; }
+        if (height_from_profit>height_to_profit) {
+            var delay=Math.round(time_limit/(height_from_profit-height_to_profit));
+            timer_profit_id=setInterval(function () { count_height_down('coins_price_profit',height_to_profit); },delay);
+        } else {
+            var delay=Math.round(time_limit/(height_to_profit-height_from_profit));
+            timer_profit_id=setInterval(function () { count_height_up('coins_price_profit',height_to_profit); },delay);
+        }
+
+        clearInterval(timer_goods_id);
+        var height_from_goods=$('#coins_price_goods').height();
+        var height_to_goods=2;
+        if (price_income_full>0) {
+            height_to_goods=Math.round(100*price_goods/price_income_full);
+        }
+        if (height_to_goods<2) { height_to_goods=2; }
+        if (height_to_goods>100) { height_to_goods=100; }
+        if (height_from_goods>height_to_goods) {
+            var delay=Math.round(time_limit/(height_from_goods-height_to_goods));
+            timer_goods_id=setInterval(function () { count_height_down('coins_price_goods',height_to_goods); },delay);
+        } else {
+            var delay=Math.round(time_limit/(height_to_goods-height_from_goods));
+            timer_goods_id=setInterval(function () { count_height_up('coins_price_goods',height_to_goods); },delay);
+        }
+    }
+}
+
+function count_height_down(id,height_to) {
+    if ($('#'+id).height()<=height_to) {
+        $('#'+id).height(height_to);
+        if (id=='coins_price_outcome') { clearInterval(timer_outcome_id); }
+        if (id=='coins_price_profit') { clearInterval(timer_profit_id); }
+        if (id=='coins_price_goods') { clearInterval(timer_goods_id); }
+    } else {
+        $('#'+id).height($('#'+id).height()-1);
+    }
+}
+
+function count_height_up(id,height_to) {
+    if ($('#'+id).height()>=height_to) {
+        $('#'+id).height(height_to);
+        if (id=='coins_price_outcome') { clearInterval(timer_outcome_id); }
+        if (id=='coins_price_profit') { clearInterval(timer_profit_id); }
+        if (id=='coins_price_goods') { clearInterval(timer_goods_id); }
+    } else {
+        $('#'+id).height($('#'+id).height()+1);
+    }
+}
+
+/*
+var keys=[0, 8, 9, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 144, 145];
+$("input[type=text]").keypress(function(e) {
+    if ( (e.which>=48 && e.which<=59) || $.inArray(e.which,keys)>=0) {
+    } else {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+});*/
+    
+var settimeout_id='', setinterval_id='';
+function do_increase(id) {
+    var input=$('#'+id), val=+input.val(), max=$('#'+id).attr('max');
+    if (val>=max) {
+        input.val(max);
+    } else {
+        input.val(val+1);
+    }
+}
+function do_decrease(id) {
+    var input=$('#'+id), val=+input.val(), min=$('#'+id).attr('min');
+    if (val<=min) {
+        input.val(min);
+    } else {
+        input.val(val-1);
+    }
+}
+$(".plus").mousedown(function(e) {
+    var self=$(this), id='';
+    clearInterval(setinterval_id);
+    if (self.attr('for')!=undefined && self.attr('for')!='') {
+        id=self.attr('for');
+    }
+    if (id!='') {
+        do_increase(id);
+        settimeout_id=setTimeout(function() {
+            setinterval_id=setInterval(function () { do_increase(id); },100);
+        },500);
+    }
+}).mouseup(function(e) {
+    clearTimeout(settimeout_id);
+    clearInterval(setinterval_id);
+});
+$(".plus").click(function(e) {
+    e.preventDefault();
+});
+$(".minus").mousedown(function(e) {
+    var self=$(this), id='';
+    clearInterval(setinterval_id);
+    if (self.attr('for')!=undefined && self.attr('for')!='') {
+        id=self.attr('for');
+    }
+    if (id!='') {
+        do_decrease(id);
+        settimeout_id=setTimeout(function() {
+            setinterval_id=setInterval(function () { do_decrease(id); },100);
+        },500);
+    }
+}).mouseup(function(e) {
+    clearTimeout(settimeout_id);
+    clearInterval(setinterval_id);
+});
+$(".minus").click(function(e) {
+    e.preventDefault();
+});
+</script>
+</div>
+ 
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+</body>
+</html>

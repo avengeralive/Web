@@ -1,0 +1,62 @@
+
+.btn {
+    appearance: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-style: normal;
+	font-weight: 300;
+    font-size: 18px;
+    line-height: 19px;
+    transition: background .25s ease-in, color .25s ease-in, border .25s ease-in ;
+    position: relative;
+
+    &-dark{
+        background: transparent;
+        border: 2px solid $color_text;
+        color: $color_text;
+
+        &:hover, &:active, &:focus{
+            border-color: $color_text;
+            background: $color_text;
+            color: $base_color_dark;
+        }
+    }
+
+    &-white{
+        background: $color_text;
+        border: 2px solid $color_text;
+        color: $base_color_dark;
+
+        &:hover, &:active, &:focus{
+            background: $base_color_dark;
+            color: $color_text;
+        }
+
+    }
+
+    &--radius{
+        border-radius: 50px;
+        height: 54px;
+        padding: 0 50px;
+    }
+
+    &--rectangle{
+        height: 92px;
+        padding: 0 73px;
+        border: 2px solid $color_text;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 19px;
+        text-transform: uppercase;
+        max-width: 360px;
+        white-space: nowrap;
+        margin: 49px auto 79px;
+    }
+}

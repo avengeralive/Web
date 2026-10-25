@@ -1,0 +1,7 @@
+.intl-tel-input {display: block;color: black; width: auto;} 
+.intl-tel-input .country-list {position: absolute;}
+.input-phone {text-align: left;}
+.intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=text], .intl-tel-input.separate-dial-code input[type=tel] {
+   
+    max-width: 394px;
+}

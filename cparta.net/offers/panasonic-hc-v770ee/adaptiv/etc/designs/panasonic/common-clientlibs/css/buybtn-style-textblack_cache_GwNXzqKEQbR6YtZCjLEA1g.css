@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.product-box-in .buy-btn .btn-blue span,
+.common-productbox-btns__buy a,
+#browsebar-utils .btn-blue,
+#ChooseProduct .ChooseProduct_entry_etc_inner_block .ec-part .buy-btn .btn-blue span,
+#dynamic-popup-content.buttonblue .dp-btn a span {
+	color:#222;
+}
+.common-productbox-btns__buy a:hover, .common-productbox-btns__buy a:focus {
+	color:#222!important;
+}

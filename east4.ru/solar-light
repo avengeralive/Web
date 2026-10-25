@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ультраяркий светильник с датчиком движения Smart Light</title>
+    <meta name="description"
+          content="В Smart Light встроен современный датчик движения, который включает светильник только в те моменты, когда поблизости появляются люди, домашние животные или, например, автомобиль. ">
+    <link rel="shortcut icon" href="png/favicon.png" type="image/png">
+    <link rel="icon" href="png/favicon.png" type="image/png">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/flipclock.css">
+
+    </head>
+<body>
+<style> 
+  .menu {
+    text-align: center;padding: 8px 0;background: #ececec;
+}
+
+.menu__icon {
+   display: none;
+   width: 45px;
+   height: 35px;
+   position: relative;
+   cursor: pointer;
+}
+
+.menu__icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #333333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.menu__icon span:nth-child(1) {
+  top: 0px;
+}
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+  top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+  top: 26px;
+ }
+
+.menu__links-item {
+    display: inline-block;
+    color: #333333;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__links-item:hover {
+    text-decoration: underline;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__links {
+  display: block;  
+}
+
+@media screen and (max-width: 999px) {
+  .menu {
+    text-align: right;
+padding-top: 10px;
+padding-right: 15px;
+}
+  .menu__icon{
+    display: inline-block;
+  }
+  
+  .menu__links {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+  </style> 
+  
+<!-- partial:index.partial.html -->
+<div class="menu">
+    <div class="menu__icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <div class="menu__links">
+        <a class="menu__links-item" href="../">Главная</a>
+        <a class="menu__links-item" href="../tovary_dlya_doma.php">Товары Для Дома</a>
+        <a class="menu__links-item" href="../detskie_tovary.php">Детские Товары</a>
+        <a class="menu__links-item" href="../odezhda_i_aksessuary.php">Одежда и Аксессуары</a>
+        <a class="menu__links-item" href="../podarki_i_razvlecheniya.php">Подарки и Развлечения</a>
+        <a class="menu__links-item" href="../elektronika_i_gadzhety.php">Электроника и Гаджеты</a>
+         
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script>(function($){
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu').toggleClass('menu_state_open');
+    });
+  });
+})(jQuery);</script>
+<section class="sec-1">
+    <div class="row-1">
+        <div class="logo"><img src="svg/logo.svg"></div>
+    </div>
+    <div class="row-2">
+        <div class="pageTitle">
+            <p>Ультраяркий светильник с датчиком движения - фонарь для вашей дачи</p><img class="imgTitle"
+                                                                                          src="svg/sec-1-title.svg">
+            <p class="sub">там, где его не хватает </p>
+        </div>
+    </div>
+    <div class="row-3">
+        <div class="mainProduct"><img class="label" src="svg/hit.svg"><img src="png/sec-1-product.png"></div>
+        <div class="mainForm">
+            <div class="formWrap">
+                <div class="form-box">
+
+                    <div class="price">
+                        <div class="price-title">Скидка 53%</div>
+                        <div class="price-box">
+                            <p class="price-old"><span>2250руб</span></p>
+                            <p class="price-new">1190руб</p>
+                        </div>
+                    </div>
+                    <div id="main-2">
+                        <div class="timer-wrapper">
+                            <p class="title">
+                                до конца акции осталось:
+                            </p>
+                            <div class="timer-body">
+                                <div class="timers" data-minutes-left="385"></div>
+                                <div class="timer-item first">
+                                    ЧАС
+                                </div>
+                                <div class="timer-item second">
+                                    МИН
+                                </div>
+                                <div class="timer-item third">
+                                    СЕК
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" method="post"
+              onsubmit="if(this.name.value==''){alert('Введите Ваше имя!');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона!');return false}return true;"><input type="hidden" name="task" value="process" />
+<input type="hidden" name="country" value="ru" />
+            
+                        <div class="inputs">
+                            <input type="text" name="name" placeholder="Введите имя" required>
+                            <input type="text" name="phone" placeholder="Введите телефон" required class="phone">
+                        </div>
+                        <div class="formFoot">
+                            <button class="button" type="submit">Заказать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mainInfo">
+            <div class="infoBox">
+                <div id="main-2"><h2 style="color: #fff;">Характеристики</h2></div>
+                <div id="main-1"><p class="timerWrap-p">До конца акции</p>
+                    <div class="timerWrap">
+                        <div class="timer">
+                            <div class="item-timer ih">
+                                <div class="h"></div>
+                            </div>
+                            <div class="dots">:</div>
+                            <div class="item-timer im">
+                                <div class="m"></div>
+                            </div>
+                            <div class="dots">:</div>
+                            <div class="item-timer is">
+                                <div class="s"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li><img src="svg/check.svg">
+                        <p>Установка <b>без проводов</b></p>
+                    </li>
+                    <li><img src="svg/check.svg">
+                        <p><b>Устойчив </b>к любой непогоде</p>
+                    </li>
+                    <li><img src="svg/check.svg">
+                        <p>Автоматическое <b>включение от движения</b></p>
+                    </li>
+                    <li><img src="svg/check.svg">
+                        <p>Быстро закрепляется <b>на любой поверхности</b></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bg-img-2"><img src="svg/sec-1-bg-2.svg"></div>
+    <div class="bg-img"><img src="jpg/sec-1-bg.jpg"></div>
+</section>
+<section class="sec-2">
+    <div class="container">
+        <div class="block-1">
+            <h2>Что такое Smart Light</h2>
+            <p class="font-m">Smart Light светильник, в который встроены <b>ультраяркие и экономичные </b>светодиоды
+                COB. </p>
+            <p>Светильник Smart Light не нуждается в подключении проводов и устанавливается буквально за 5 секунд на
+                любую поверхность благодаря сверхнадежной липучке. </p>
+            <p>Просто снимите полоску с липкого слоя, прижмите светильник к поверхности, отпустите – теперь у вас будет
+                свет там, где его не хватало.</p>
+        </div>
+        <div class="block-2">
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YXQqGBDJ2C4?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec-3">
+    <div class="sec-t-cont">
+        <div class="sec-t-wrap">
+            <h2>Работает тогда, когда вам необходимо</h2>
+            <div class="divided"><img src="svg/divided.svg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block-1"><img src="png/sec-3-product.png"></div>
+        <div class="block-2">
+            <p>В Smart Light встроен современный датчик движения, который включает светильник только в те моменты, когда
+                поблизости появляются люди, домашние животные или, например, автомобиль. При необходимости, вы можете
+                поменять режим работы на беспрерывное свечение.</p>
+            <ul class="itemList">
+                <li><img src="jpg/sec-3-img-1.jpg">
+                    <p>С одной стороны это <b>позволяет экономить заряд </b>батарей, а с другой – освещать пространство,
+                        когда это необходимо.</p>
+                </li>
+                <li><img src="jpg/sec-3-img-2.jpg">
+                    <p><b>Вам не придется искать </b>ключи или выключатель в темноте. Вы не споткнетесь и не упадете.
+                    </p>
+                </li>
+                <li><img src="jpg/sec-3-img-3.jpg">
+                    <p><b>Защитит ваш дом и участок </b>от непрошеных гостей и животных. При включении света они
+                        убегают. </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="sec-4">
+    <div class="sec-t-cont">
+        <div class="sec-t-wrap">
+            <h2>Где можно установить Smart Light</h2>
+            <div class="subtitle">Smart Light – автономный источник света, который можно использовать даже тогда, когда
+                к даче совсем не подведено электричество, или когда его отключили.
+            </div>
+            <div class="divided"><img src="svg/divided-l.svg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="icons">
+            <div class="iconItem"><img src="svg/sec-4-icon-1.svg">
+                <p>Над входной дверью</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-2.svg">
+                <p>Над калиткой</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-3.svg">
+                <p>В гараже</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-4.svg">
+                <p>На чердаке</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-5.svg">
+                <p>В подвале </p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-6.svg">
+                <p>В погребе</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-7.svg">
+                <p>В сарае</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-8.svg">
+                <p>В туалете </p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-9.svg">
+                <p>В беседке</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-4-icon-10.svg">
+                <p>На веранде</p>
+            </div>
+        </div>
+        <div id="button-cont"><a class="button" href="#buy">Заказать</a></div>
+    </div>
+</section>
+<section class="sec-5">
+    <div class="sec-t-cont">
+        <div class="sec-t-wrap">
+            <h2>Что такое Smart Light</h2>
+            <div class="divided"><img src="svg/divided.svg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <div class="item">
+                <div class="item-img" style="background-image: url('jpg/sec-5-img.jpg')"><img class="icon" src="svg/sec-5-icon-1.svg">
+                </div>
+                <div class="item-text">
+                    <h4>Повышенный ресурс работы</h4>
+                    <p>В Smart Light используются современные COB светодиоды. Такие светодиоды отличаются не только
+                        высокой яркостью и экономичностью, но и длительным сроком службы – <b>более 100.000 часов </b>непрерывной
+                        работы. А с учетом того, что свет включается всего на несколько минут в день, Smart Light имеет
+                        практически неограниченный ресурс работы – он прослужит вам десятки лет.</p>
+                </div>
+            </div>
+            <div class="shadow"><img src="svg/shadow.svg"></div>
+        </div>
+        <div class="block">
+            <div class="item">
+                <div class="item-img" style="background-image: url('jpg/sec-5-img-2.jpg')"><img class="icon" src="svg/sec-5-icon-2.svg">
+                </div>
+                <div class="item-text">
+                    <h4>Работает от солнца</h4>
+                    <p>Smart Light имеет <b>солнечную панель </b>Что очень экономит электроэнергию! </p>
+                    <p>Радиус освещения составляет 15 метров. Вы можете настроить светильник Smart Light так, как удобно
+                        именно вам. </p>
+                </div>
+            </div>
+            <div class="shadow"><img src="svg/shadow.svg"></div>
+        </div>
+    </div>
+</section>
+<section class="sec-6">
+    <div class="sec-t-cont">
+        <div class="sec-t-wrap">
+            <h2>Где можно установить Smart Light</h2>
+            <div class="subtitle">Водонепроницаемый корпус надежно защищает светодиоды от ненастий погоды.<br><b>Стабильная
+                работа Smart Light гарантируется. </b></div>
+            <div class="divided"><img src="svg/divided-l.svg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="icons">
+            <div class="iconItem"><img src="svg/sec-6-icon-1.svg">
+                <p>В дождь</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-6-icon-2.svg">
+                <p>В снегопады</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-6-icon-3.svg">
+                <p>В морозы</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-6-icon-4.svg">
+                <p>В изнуряющую жару</p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-6-icon-5.svg">
+                <p>В туманы </p>
+            </div>
+            <div class="iconItem"><img src="svg/sec-6-icon-6.svg">
+                <p>При сильном ветре</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec-7">
+    <div class="sec-t-cont">
+        <div class="sec-t-wrap">
+            <h2>Простая установка за 5 секунд</h2>
+            <div class="subtitle">Водонепроницаемый корпус надежно защищает светодиоды от ненастий погоды.<br><b>Стабильная
+                работа Smart Light гарантируется. </b></div>
+            <div class="divided"><img src="svg/divided.svg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h3>Для установки Smart Light достаточно:</h3>
+            <ul class="stepList">
+                <li><img src="jpg/sec-7-img-1.jpg">
+                    <p>Cнять ленту с липучки</p>
+                </li>
+                <li><img src="jpg/sec-7-img-2.jpg">
+                    <p>Прижать к ровной поверхности</p>
+                </li>
+            </ul>
+        </div>
+        <div class="block">
+            <div class="content">
+                <p class="font-m">Липучка обладает <b>повышенной адгезией </b>к любым строительным материалам:</p>
+                <ul class="materialList">
+                    <li><img src="jpg/sec-7-m-1.jpg">
+                        <p>Металл</p>
+                    </li>
+                    <li><img src="jpg/sec-7-m-2.jpg">
+                        <p>Бетон</p>
+                    </li>
+                    <li><img src="jpg/sec-7-m-3.jpg">
+                        <p>Кирпич</p>
+                    </li>
+                    <li><img src="jpg/sec-7-m-4.jpg">
+                        <p>Дерево </p>
+                    </li>
+                    <li><img src="jpg/sec-7-m-5.jpg">
+                        <p>Керамика </p>
+                    </li>
+                    <li><img src="jpg/sec-7-m-6.jpg">
+                        <p>Пластик </p>
+                    </li>
+                </ul>
+                <div class="content-foot"><img src="svg/sec-7-icon.svg">
+                    <p>СЗАДИ БАЗЫ СВЕТИЛЬНИКА <b>ИМЕЮТСЯ КРПЕЛЕНИЯ </b>ДЛЯ ШЛЯПОК САМОРЕЗОВ, ШУРУПОВ ИЛИ ГВОЗДЕЙ. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec-8">
+    <div class="container">
+        <div class="block-1"><img src="png/sec-8-product.png"></div>
+        <div class="block-2">
+            <h2>Подробные технические характеристики Smart Light</h2>
+            <ul class="mainList">
+                <li>
+                    <div class="cont"><img class="icon" src="svg/sec-8-icon-1.svg">
+                        <p class="title">Степень защиты: </p>
+                        <p>IP 55</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="cont"><img class="icon" src="svg/sec-8-icon-2.svg">
+                        <p class="title">Тип работы: </p>
+                        <p>Автономный</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="cont"><img class="icon" src="svg/sec-8-icon-3.svg">
+                        <p class="title">Гарантия:</p>
+                        <p>1 год</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="paramList">
+                <li>
+                    <p><b>Цвет: </b>Черный</p>
+                </li>
+                <li>
+                    <p><b>Световой поток: </b>1200 Люмен</p>
+                </li>
+                <li>
+                    <p><b>Температура эксплуатации: </b>- 40°С до + 55°С</p>
+                </li>
+                <li>
+                    <p><b> Аналог лампе накаливания по мощности: </b>100 ватт</p>
+                </li>
+                <li>
+                    <p><b> Сверхточный датчик движения: </b>есть</p>
+                </li>
+                <li>
+                    <p><b> Автоматическое выключение: </b>через 30 секунд</p>
+                </li>
+                <li>
+                    <p><b> Ресурс непрерывной работы: </b>100.000 часов</p>
+                </li>
+                <li>
+                    <p><b> Размер упаковки: </b>12*13*16 см</p>
+                </li>
+            </ul>
+            <a class="button" href="#buy">Заказать </a>
+        </div>
+    </div>
+</section>
+<section class="sec-9">
+    <div class="sec-t-cont">
+        <div class="sec-t-wrap">
+            <h2>Отзывы покупателей</h2>
+            <div class="divided"><img src="svg/divided.svg"></div>
+        </div>
+    </div>
+    <div class="reviewSlider">
+        <section class="quotes no-fouc" role="complementary">
+            <div class="reviewItem">
+                <div class="reviewBox">
+                    <div class="userInfo"><img src="jpg/client-1.jpg">
+                        <h3>Сначала купили 1, а потом еще 3. Все работают!</h3>
+                        <p class="name">Влада, 22 года, Москва </p>
+                    </div>	
+                    <div class="userText">
+                        <p>Один установили в беседке, один в гараже, два других в доме. В гараже и беседке свет хотели
+                            сделать давно, но пришлось бы его тянуть, а это довольно-таки затратно. Smart Light
+                            полностью устранил эту проблему. Экономно и быстро. Советовали Smart Light своим соседям по
+                            даче, они тоже купили несколько штук.</p><img class="image" src="jpg/client-1-img.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="reviewItem">
+                <div class="reviewBox">
+                    <div class="userInfo"><img src="jpg/client-2.jpg">
+                        <h3>Светильник отличный. Заказали и получили быстро! </h3>
+                        <p class="name">Светлана, 31 год, Балашиха</p>
+                    </div>
+                    <div class="userText">
+                        <p>Долго искали что-то подобное, и в итоге нашли. Smart Light полностью нам подошел. Все
+                            продумано до мелочей. Боялись, что липучка будет ненадежной, но уже несколько месяцев
+                            светильник держится, если попробовать его оторвать, то вряд ли получится без инструмента.
+                            При этом на него постоянно льет дождь и ничего не отклеивается. Загорается быстро, светит
+                            достаточно ярко, но не ослепляет. Нам все понравилось. Спасибо!</p><img class="image"
+                                                                                                    src="jpg/client-2-img.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="reviewItem">
+                <div class="reviewBox">
+                    <div class="userInfo"><img src="jpg/client-3.jpg">
+                        <h3>Хороший, очень качественный и красивый светильник!</h3>
+                        <p class="name">Марина, 44 года, Москва</p>
+                    </div>
+                    <div class="userText">
+                        <p>Крепится действительно за секунды. Установили его над дверью. Очень удобно. Выходишь на
+                            улицу, он загорается. Отошел, он погасает, подошел, загорелся. Днем не светит. Загорается
+                            только в темное время суток. Теперь даже уже забыли, как раньше без него обходились)
+                            Пользовались фонариком, но с Smart Light удобство повысилось в разы. Для дачи просто
+                            идеальное устройство. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewItem">
+                <div class="reviewBox">
+                    <div class="userInfo"><img src="jpg/client-4.jpg">
+                        <h3>Классный светильник. Очень выручает. Светит отлично!</h3>
+                        <p class="name">Михаил, 34 года, Видное</p>
+                    </div>
+                    <div class="userText">
+                        <p>Когда заезжаешь на машине в ворота, не надо выходить и включать его. Включается сам. Также
+                            включается, если подходят посторонние, что повышает безопасность. Раньше все время какие-то
+                            личности ходили у ворот, сейчас их практически не бывает. Свет хотели сделать давно, но
+                            думали, что он будет в окна светить и мешать спать. Smart Light идеальное решение. По
+                            качеству к светильнику претензий нет – все работает и ничего не болтается. </p>
+                        <p>Хорошо, современно смотрится. Рекомендую всем.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<section class="sec-10">
+    <div class="sec-t-cont">
+        <div class="sec-t-wrap">
+            <h2>Как заказать светильник Smart Light</h2>
+            <div class="divided"><img src="svg/divided.svg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item"><img src="svg/step-1.svg">
+            <p>Вы <b>оставляете заявку </b>на нашем сайте</p>
+        </div>
+        <div class="item"><img src="svg/step-2.svg">
+            <p>Мы <b>перезвоним </b>вам для уточнения адреса доставки</p>
+        </div>
+        <div class="item"><img src="svg/step-3.svg">
+            <p>Мы <b>доставим </b>Smart Light в любую точку страны</p>
+        </div>
+        <div class="item"><img src="svg/step-4.svg">
+            <p>Вы <b>оплачиваете </b>его при получении</p>
+        </div>
+    </div>
+    <div class="bg-1"><img src="svg/spte-bg-1.svg"></div>
+    <div class="bg-2"><img src="svg/spte-bg-2.svg"></div>
+</section>
+<section class="sec-1">
+    <div class="row-1">
+        <div class="logo"><img src="svg/logo.svg"></div>
+    </div>
+    <div class="row-2">
+        <div class="pageTitle">
+            <p style="font-size: 20px">Поможет осветить любое место в доме или на участке</p><img class="imgTitle"
+                                                                                                  src="svg/sec-11-title.svg">
+            <p class="sub">там, где его всё время не хватает </p>
+        </div>
+    </div>
+    <div class="row-3">
+        <div class="mainProduct"><img class="label" src="svg/hit.svg"><img src="png/sec-1-product.png"></div>
+        <div class="mainForm">
+            <div class="formWrap">
+                <div class="form-box">
+                    <div class="price">
+                        <div class="price-title">Скидка 53%</div>
+                        <div class="price-box">
+                            <p class="price-old"><span>2250руб</span></p>
+                            <p class="price-new">1190руб</p>
+                        </div>
+                    </div>
+                    <div id="main-2">
+                        <div class="timer-wrapper">
+                            <p class="title">
+                                до конца акции осталось:
+                            </p>
+                            <div class="timer-body">
+                                <div class="timers" data-minutes-left="385"></div>
+                                <div class="timer-item first">
+                                    ЧАС
+                                </div>
+                                <div class="timer-item second">
+                                    МИН
+                                </div>
+                                <div class="timer-item third">
+                                    СЕК
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" method="post" id="buy"
+              onsubmit="if(this.name.value==''){alert('Введите Ваше имя!');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона!');return false}return true;"><input type="hidden" name="task" value="process" />
+<input type="hidden" name="country" value="ru" />
+                      
+                        <div class="inputs">
+                            <input type="text" name="name" placeholder="Введите имя" required>
+                            <input type="tel" name="phone" placeholder="Введите телефон" required class="phone">
+                        </div>
+                        <div class="formFoot">
+                            <button class="button" type="submit">Заказать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mainInfo">
+            <div class="infoBox">
+                <div id="main-2"><h2 style="color: #fff;">Характеристики</h2></div>
+                <div id="main-1"><p class="timerWrap-p">До конца акции</p>
+                    <div class="timerWrap">
+                        <div class="timer">
+                            <div class="item-timer ih">
+                                <div class="h"></div>
+                            </div>
+                            <div class="dots">:</div>
+                            <div class="item-timer im">
+                                <div class="m"></div>
+                            </div>
+                            <div class="dots">:</div>
+                            <div class="item-timer is">
+                                <div class="s"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li><img src="svg/check.svg">
+                        <p><b>Автоматически включается, </b>когда это необходимо</p>
+                    </li>
+                    <li><img src="svg/check.svg">
+                        <p>Устанавливается <b>за 5 секунд</b></p>
+                    </li>
+                    <li><img src="svg/check.svg">
+                        <p><b>Большой радиус </b>освещения</p>
+                    </li>
+                    <li><img src="svg/check.svg">
+                        <p><b>Защищён от любой непогоды </b>и сырости</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bg-img-2"><img src="svg/sec-1-bg-2.svg"></div>
+    <!--        <div class="bg-img"><img src="images/sec-1-bg.jpg"></div>-->
+</section>
+
+
+<footer style="text-align: center; font-size: 14px; padding: 20px 0;">
+ <div style="text-align: center;margin: 10px auto;display: block;font-size: 14px;line-height: 26px;">
+MustHaveOffers - Интернет Магазин Популярных товаров.<br> 
+ИНН 330640485495 ОГРНИП 315332600000462<br> 
+"Официальный Дистрибьютор на территории РФ"<br> 
+Для связи - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e28f968d9583908d94a29b838c86879acc9097">[email&#160;protected]</a><br> 
+<a href="polit.html" target="_blank" style="cursor: pointer;color: initial;">Политика конфиденциальности</a><br> 
+*На данном сайте действует <br> <a href="https://www.facebook.com/about/privacy/update"  target="_blank" style="cursor: pointer;color: initial;">'Политика использования данных Facebook'</a><br> 
+ВСЕ ПРАВА ЗАЩИЩЕНЫ © <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script>
+</div></footer>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/previewyoutube.js"></script>
+<script src="js/flipclock.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<script>
+
+    $('a[href^="#"]').click(function (){
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated), body:not(:animated)").animate({scrollTop: destination}, 800);
+        return false;
+    })
+</script>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter54735790 = new Ya.Metrika({ id:54735790, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54735790" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- BEgin roistat -->
+<script>
+    (function(w, d, s, h, id) {
+        w.roistatProjectId = id; w.roistatHost = h;
+        var p = d.location.protocol == "https:" ? "https://" : "http://";
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+        var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+    })(window, document, 'script', 'cloud.roistat.com', '90bf639ac39c25be70323934c940ed7d');
+</script>
+<!-- End roistat --></body>
+
+</html>

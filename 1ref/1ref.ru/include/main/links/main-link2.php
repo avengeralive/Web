@@ -1,0 +1,1 @@
+<a href="https://bs-opt.ru/server-solution/" class="main-actions-link" style="background-image:url(/local/templates/bso/assets/img/main-actions-link-img-2.jpg)"> <span class="btn btn-block">Серверные решения</span> </a>

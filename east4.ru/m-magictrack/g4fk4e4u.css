@@ -1,0 +1,212 @@
+/* Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: none;
+}
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+.slick-track:after {
+    clear: both;
+}
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    outline: none;
+}
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+.slick-slide img {
+    display: block;
+}
+.reviews-v2 img {
+    width: 200px;
+    height: 200px;
+}
+.slick-slide.slick-loading img {
+    display: none;
+}
+.slick-slide.dragging img{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.slick-loading .slick-slide{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/* Arrows */
+.slick-prev,
+.slick-next{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;    
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: url(lynlifkq.png) no-repeat #fff;
+    z-index: 3;
+    border-radius: 5px;
+}
+
+.slick-prev{
+    left: 10px;
+    background-position: 14px 12px;
+}
+.slick-next{
+    right: 10px;
+    background-position: -405px 12px;
+}
+
+
+/* Dots */
+.slick-dots{
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li{
+    position: relative;
+    display: inline-block;
+    margin: 0 5px 25px;
+    padding: 0;
+    cursor: pointer;
+
+}
+.slick-dots li button{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #31a1d5;
+    width: 40px;
+    height: 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px #ffffff42;
+}
+.slick-dots li.slick-active button{
+   background: #e8e8e8; 
+   box-shadow: inset 0 2px 1px #77777742;
+}
+
+
+/** rev1 **/
+.rev1-inner {
+    background: #fff;
+    margin: 0 40px 10px;
+    border-radius: 8px;
+    color: #222;
+}
+.reviews_slider_rev1 .slick-prev,
+.reviews_slider_rev1 .slick-next {
+    top: 50%;
+    margin-top: -40px;
+    background: url(w8lh_abm.png) no-repeat #ff92b8;
+}
+.reviews_slider_rev1 .slick-prev{
+    left: 10px;
+    background-position: 14px 12px;
+}
+.reviews_slider_rev1 .slick-next{
+    right: 10px;
+    background-position: -405px 12px;
+}
+
+.rev1-inner h2 {
+    margin: 0 0 25px;
+}
+
+.rev1-inner .author_info_wrapper {
+    margin:20px 20px 20px;
+}
+
+.rev1-inner .author_info_wrapper img {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+    width: 59px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.rev1-inner .author_info_wrapper .author_info {
+    float: left;
+    margin: 8px 0 0;
+    padding: 0 0 20px;
+    background: url(isgje3pt.png) left bottom no-repeat;
+    font-family:'DINRoundPro-Bold';
+    font-size: 20px;
+}
+
+.rev1-inner .review_item p {
+    padding: 0 0 20px;
+}

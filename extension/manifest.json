@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Archangel",
+  "version": "1.2",
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "js": [ "content.js" ]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "Архангел",
+    "default_popup": "popup.html"
+  }
+}

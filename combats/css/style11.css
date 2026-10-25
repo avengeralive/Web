@@ -1,0 +1,85 @@
+html, body {
+	width:auto;
+	padding:0;
+	margin:0;
+	background: #000 url('../images/BK_index-1.jpg') center top no-repeat;
+	background-size: fixed;
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1024px){
+	body {
+		-moz-transform: scale(0.62, 0.62); /* Moz-browsers */
+		zoom: 0.62; /* Other non-webkit browsers */
+		zoom: 62%; /* Webkit browsers */
+	}
+}
+@media screen and (max-width: 1440px) and (min-width: 1281px){
+	body {
+		-moz-transform: scale(0.75, 0.75); /* Moz-browsers */
+		zoom: 0.75; /* Other non-webkit browsers */
+		zoom: 75%; /* Webkit browsers */
+	}
+}
+@media screen and (max-width: 1680px) and (min-width: 1441px){
+	body {
+		-moz-transform: scale(0.88, 0.88); /* Moz-browsers */
+		zoom: 0.88; /* Other non-webkit browsers */
+		zoom: 88%; /* Webkit browsers */
+	}
+}
+@media screen and (min-width: 1681px){
+	body {
+		-moz-transform: scale(0.94, 0.94); /* Moz-browsers */
+		zoom: 0.94; /* Other non-webkit browsers */
+		zoom: 94%; /* Webkit browsers */
+	}
+}
+	#txt_centr{
+	text-align: center;
+	font-size: 16px;
+	color: #b1b1b1;
+	font-weight: bold;
+	font-family: "RobotoSlab";
+	padding-top: 20px;
+	padding-bottom: 30px;
+	
+	}
+.input_base {
+	width: 166px;
+	border: 0;
+	padding: 6px 5px 6px 5px;
+	margin: 0px 0px 0px 9px;
+	background-color: #1e1e1e;
+	color: #b1b1b1;
+	font-size:10pt;
+	font-family:Verdana, Times, Helvetica, Tahoma;
+}
+
+
+input {
+	outline: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.topmenu { height: 39px; margin-bottom: 10px; margin-right:100px; margin-left:100px;}
+.topmenu, .topmenu div { height: 41px; background: url("../images/topmenu.png") repeat-x 0 -118px; }
+.topmenu div {margin-left:-100px; margin-right:-50px; background: url("../images/topmenu.png") no-repeat; padding: 0 0 0 2px; }
+.topmenu div div { overflow: hidden; background-position: 100% -59px; padding: 0 15px 0 0; }	
+.topmenu .lcolomn li, .topmenu .lcolomn li a, .topmenu .lcolomn li a b { cursor: pointer; float: left; height: 42px;}
+.topmenu .lcolomn li a { padding: 0 0 0 17px; color: #9d9c9a; font-size: 1.1em; line-height: 48px; }
+.topmenu .lcolomn li a b { padding-right: 17px; }
+.topmenu .lcolomn li a:hover { color: #ba8a20; }
+.topmenu .lcolomn li.active a { color: #ba8a20; }
+.header h1, .lcolomn, .rcolomn { display: inline; }
+.lcolomn { float: left;}
+.reset, .reset li { list-style: none; padding: 0; margin: 0; }
+a, a:active {
+	color: #a9a9a9;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #f9f9f9;
+	text-decoration: underline;
+}

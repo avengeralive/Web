@@ -1,0 +1,1 @@
+<a href="https://bs-opt.ru/feedback/" class="main-actions-link" style="background-image:url(/local/templates/bso/assets/img/main-actions-link-img-4.jpg)"> <span class="btn btn-block">Сервис и гарантия</span> </a>

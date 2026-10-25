@@ -1,0 +1,1 @@
+<a href="https://bs-opt.ru/data-storage-systems/" class="main-actions-link" style="background-image:url(/local/templates/bso/assets/img/main-actions-link-img-3.jpg)"> <span class="btn btn-block">СХД</span> </a>

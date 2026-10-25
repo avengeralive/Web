@@ -1,0 +1,73 @@
+@media screen and (max-width:1199px){body{zoom:81%;}
+.container{width:95%;}
+.preimul li{font-size:17.5px;}
+.carImg img{margin-top:-56px;}
+.size{margin:-37px -45px 0px 0vw}
+.vaha{margin:-37px 0px 0px 48px}
+.guarance img{top:17%;left:11%;}
+}
+@media screen and (max-width:991px){.nopadl{padding-left:15px;}
+.nopadr{padding-right:15px;}
+.mobc{text-align:center!important;}
+.nomob{display:none}
+.onlymob{display:block}
+body{zoom:100%;}
+.container{width:100%;}
+.one{padding-top:20px;padding-bottom:20px;text-align:center;}
+br{display:none;}
+.logo{margin-left:auto;margin-right:auto;}
+h1{font-size:30px;}
+.subh1, .subh1 span{font-size:22px;}
+.padmob0{padding-left:0;padding-right:0;}
+.two{height:auto;background:none;background-color:#161b2e;padding-top:0px;padding-bottom:0px;}
+.one{position:relative;}
+.one .row{position:relative;z-index:100}
+.one::after{content:'';display:block;position:absolute;width:100%;height:100%;z-index:10;background-color:#000;top:0;left:0;opacity:.6}
+.subh1 br{display:block!important}
+.preimul li{display:block;vertical-align:middle;text-align:left;font-size:15px;text-transform:uppercase;line-height:1.1;color:#fff;position:relative;padding-left:60px;margin:0px 10px;padding:0;margin:25px 0px;text-align:center;}
+.preimul li::before{content:'';background-image:url(t2hvb0rk.png);width:29px;height:29px;display:inline-block;vertical-align:middle;position:absolute;left:0;top:calc(50% - 18px);position:relative;top:0;background-size:100%;display:block;margin:0 auto;margin-bottom:15px;}
+.three{padding-top:0;padding-bottom:25px;}
+.hidewhile{height:1px;overflow:hidden;}
+.three .wantbyu{margin-top:10px;}
+.galka::before{content:'';display:block;background-image:url(1schzul8.png);width:25px;height:25px;position:absolute;left:4px;position:relative;display:block;background-size:100%;margin:0 auto;margin-bottom:15px;}
+.mobmarg25{margin-top:25px;}
+.galka{position:relative;font-size:15.6px;margin-bottom:15px;padding-left:42px;text-align:center;padding:0;}
+.four{padding-bottom:25px;}
+.revt{text-align:left;margin-bottom:15px;}
+.four{text-align:center;padding-top:0;}
+.formttle{margin-top:20px;margin-bottom:20px;}
+.revt{margin-top:0;margin-bottom:25px;}
+.five{background:none;background-color:#252c48;height:auto;text-align:center;padding:20px 0px;}
+.sizelabel{display:inline-block;vertical-align:middle;margin-left:3px;margin-right:3px;}
+.sizelabel .label{padding-left:4px;}
+.pricedostavka{border:1px solid #fff;padding:15px;margin:0 auto;}
+.dostavkalabel{display:inline-block;vertical-align:middle;margin-left:-3px;margin-right:-3px;}
+.inlinedcolor{margin-left:7px;margin-right:7px;}
+.dostavkalabel .checkbox-custom, .dostavkalabel .radio-custom, .dostavkalabel .label{display:block;vertical-align:middle;margin:0 auto;margin-bottom:10px;font-size:13px;}
+.dopinfa{padding:0;margin:0;margin-top:-6px;padding-left:20px;list-style-type:none;text-align:center;margin:20px 0px;padding:0;}
+.oldprice::after{display:none;}
+.oldprice{text-decoration:line-through}
+.form-modal > p{color:#fff;margin-bottom:15px;margin-bottom:20px;margin:20px 0px;margin-top:0;}
+.blocktittle{margin-top:25px;margin-bottom:25px;}
+.row.mobowl{margin-left:0;margin-right:0;}
+.one{background-position:75% 50%;min-height:auto}
+.blocktittle{color:#232c46;text-transform:uppercase;line-height:1.3;letter-spacing:0.09em;margin-bottom:35px;text-align:center;margin-top:25px;margin-bottom:25px;}
+.dopinfa li{margin-top:5px;margin-bottom:5px;font-size:15px;}
+.dopinfa li:first-child{display:block;text-align:center;}
+.mobtop{margin-top:15px;}
+.carImg img{margin-top:-50px;margin-left:auto;margin-right:auto;border-bottom:2px solid #5e6890;}
+.size, .vaha{color:#fff;margin:0;text-align:center;margin-top:0px;display:inline-block;vertical-align:middle;margin-left:4px;margin-right:4px;padding-top:10px;text-decoration:underline;}
+.guarance img{top:17%;left:unset;right:0;top:unset;bottom:10px;width:70px;}
+.w-20 {
+    width: 50%;
+}}
+@media screen and (max-width: 640px) {
+.form2 .in1 {
+    width: 100%;
+    float: none;
+    margin-right: 15px;
+}
+.form2 .wantbyu {
+    width: 100%;
+}
+}

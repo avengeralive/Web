@@ -1,0 +1,1344 @@
+/*=========================================================================================
+    FONTS
+=========================================================================================*/
+@font-face {
+	font-family: 'AGAalenBold Roman';
+	src: url('../fonts/AGAalenBold Roman_0.eot');
+	src: local('☺'), url('../fonts/AGAalenBold Roman_0.woff') format('woff'), url('../fonts/AGAalenBold Roman_0.ttf') format('truetype'), url('../fonts/AGAalenBold Roman_0.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'a_AvanteInt Book';
+    src: url('../fonts/a_avanteint-book-webfont.eot');
+    src: url('../fonts/a_avanteint-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/a_avanteint-book-webfont.woff2') format('woff2'),
+         url('../fonts/a_avanteint-book-webfont.woff') format('woff'),
+         url('../fonts/a_avanteint-book-webfont.ttf') format('truetype'),
+         url('../fonts/a_avanteint-book-webfont.svg#a_avanteintbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'a_AvanteLt DemiBold';
+    src: url('../fonts/ava_ldb-webfont.eot');
+    src: url('../fonts/ava_ldb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ava_ldb-webfont.woff2') format('woff2'),
+         url('../fonts/ava_ldb-webfont.woff') format('woff'),
+         url('../fonts/ava_ldb-webfont.ttf') format('truetype'),
+         url('../fonts/ava_ldb-webfont.svg#a_avanteltdemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/9622-webfont.eot');
+    src: url('../fonts/9622-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/9622-webfont.woff2') format('woff2'),
+         url('../fonts/9622-webfont.woff') format('woff'),
+         url('../fonts/9622-webfont.ttf') format('truetype'),
+         url('../fonts/9622-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'a_avanteltlight';
+    src: url('../fonts/ava_ll-webfont.eot');
+    src: url('../fonts/ava_ll-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ava_ll-webfont.woff2') format('woff2'),
+         url('../fonts/ava_ll-webfont.woff') format('woff'),
+         url('../fonts/ava_ll-webfont.ttf') format('truetype'),
+         url('../fonts/ava_ll-webfont.svg#a_avanteltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'a_AvanteInt Bold';
+    src: url('../fonts/a_avanteint-bold_1299_crack_1-webfont.eot');
+    src: url('../fonts/a_avanteint-bold_1299_crack_1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/a_avanteint-bold_1299_crack_1-webfont.woff2') format('woff2'),
+         url('../fonts/a_avanteint-bold_1299_crack_1-webfont.woff') format('woff'),
+         url('../fonts/a_avanteint-bold_1299_crack_1-webfont.ttf') format('truetype'),
+         url('../fonts/a_avanteint-bold_1299_crack_1-webfont.svg#a_avanteintbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Intro';
+    src: url('../fonts/Intro.eot?#iefix') format('embedded-opentype'),  
+           url('../fonts/Intro.otf')  format('opentype'),
+           url('../fonts/Intro.woff') format('woff'), 
+           url('../fonts/Intro.ttf')  format('truetype'), 
+           url('../fonts/Intro.svg#Intro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr-Medium';
+    src: url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),  
+           url('../fonts/HelveticaNeueCyr-Medium.otf')  format('opentype'),
+           url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),  
+           url('../fonts/HelveticaNeueCyr-Medium.ttf')  format('truetype'), 
+           url('../fonts/HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gabriola';
+    src: url('../fonts/Gabriola.eot?#iefix') format('embedded-opentype'), 
+           url('../fonts/Gabriola.woff') format('woff'), 
+           url('../fonts/Gabriola.ttf')  format('truetype'), 
+           url('../fonts/Gabriola.svg#Gabriola') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*=========================================================================================
+    GLOBAL STYLES
+=========================================================================================*/
+
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+body { 
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+body.open-modal {
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+/*=========================================================================================
+    HEADER
+=========================================================================================*/
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background: url('../img-new/bg-header.png') center no-repeat;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+	    margin-top: 15px;
+}
+
+.menu {
+    margin-top: 40px;
+}
+
+.menu__item {
+    display: inline-block;
+}
+
+.menu__item a {
+    display: block;
+    padding: 10px 19px;
+    border-radius: 6px;
+    color: #fff;
+    font: 20px 'a_AvanteLt DemiBold', arial;
+    text-transform: uppercase;
+    letter-spacing: 1.56px;
+    transition: all .3s linear;
+}
+
+.menu__item a:hover {
+    background: #1b6f99;
+}
+
+.social {
+    margin-top: 40px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.social a {
+    display: inline-block;
+}
+
+.social__vk {
+    position: relative;
+    top: 2px;
+    width: 42px;
+    height: 42px;
+    margin-right: 20px;
+    background: url('../img-new/logo-vk.png') center no-repeat;
+    background-size: contain;
+}
+
+.social__vk:hover {
+    background: url('../img-new/logo-vk-hover.png') center no-repeat;
+}
+
+.social__skype {
+    width: 42px;
+    height: 38px;
+    background: url('../img-new/logo-skype.png') center no-repeat;
+    background-size: contain;
+}
+
+.social__skype:hover {
+    background: url('../img-new/logo-skype-hover.png') center no-repeat;
+}
+
+.login {
+    margin-top: 53px;
+    padding-left: 25px;
+}
+
+.reg__btn {
+    margin-right: 15px;
+    padding: 10px 25px;
+    border-bottom: 5px solid #547227;
+    border-radius: 20px;
+    color: #fff;
+    font: 16px 'HelveticaNeueCyr-Medium', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.56px;
+    background: #678e31;
+    transition: all .3s linear;
+}
+
+.reg__btn:hover {
+    color: #fff;
+    border-bottom-color: #3e5021;
+    background: #547227;
+}
+
+.login__btn {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .75);
+    color: #fff;
+    font: 18px 'HelveticaNeueCyr-Medium', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
+    transition: all .3s linear;
+}
+
+.login__btn:hover {
+    color: #77bc4e;
+    border-bottom-color: #77bc4e;
+}
+
+/*=========================================================================================
+    MAIN
+=========================================================================================*/
+
+/* 
+    BANNER
+---------------------------*/
+
+.banner {
+    position: relative;
+    height: 877px;
+    margin-top: -160px;
+    background: url('../img-new/banner-bg.png') center repeat-x;
+    z-index: 900;
+}
+
+.banner-cont {background: url('../img-new/banner.png') center no-repeat;width: 100%;height: 877px;}
+
+.banner .container {
+    position: relative;
+    height: 100%;
+}
+
+.banner__link {
+    position: absolute;
+    top: 200px;
+    left: 455px;
+    color: #fff;
+    font: 18px 'AGAalenBold Roman', arial;
+    text-transform: uppercase;
+    letter-spacing: .45px;
+    z-index: 900;
+    transition: all .3s linear;
+}
+
+.banner__link:hover {
+    color: #ffc93a;
+}
+
+.banner-text {
+    position: absolute;
+    top: 370px;
+    left: 0;
+    width: 600px;
+}
+
+.banner__title {
+    margin: 0 0 20px;
+    padding-left: 10px;
+    color: #1c76a9;
+    font: 36px 'Intro', sans-serif;
+    text-shadow: 3px 0 0 #fff,
+                          -3px 0 0 #fff,
+                          0 -3px 0 #fff,
+                          0 3px 0 #fff,
+                          2px 2px 0 #fff,
+                          -2px 2px 0 #fff,
+                          2px -2px 0 #fff,
+                          -2px -2px 0 #fff;
+}
+
+.banner__txt {
+    margin: 0;
+    padding-left: 10px;
+    color: #1c76a9;
+    font: 36px 'a_AvanteInt Book', arial;
+    text-transform: uppercase;
+    text-shadow: 3px 0 0 #fff,
+                          -3px 0 0 #fff,
+                          0 -3px 0 #fff,
+                          0 3px 0 #fff,
+                          2px 2px 0 #fff,
+                          -2px 2px 0 #fff,
+                          2px -2px 0 #fff,
+                          -2px -2px 0 #fff;
+}
+
+.banner__txt--small {
+    text-transform: none;
+}
+
+.banner-registr {
+    position: absolute;
+    top: 405px;
+    left: 710px;
+    width: 350px;
+    text-align: center;
+}
+
+.banner-reg__btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 15px 45px;
+    border-radius: 40px;
+    color: #ffc93a;
+    font: 24px 'a_AvanteInt Bold', arial;
+    text-transform: uppercase;
+    text-shadow: 2px 3px 1px rgba(94, 10, 28, 0.75);
+    background: #e22d54;
+    transition: all .3s linear;
+}
+
+.banner-reg__btn:hover {
+    color: #e22d54;
+    text-shadow: 1px 2px 1px rgba(94, 10, 28, 0.75);
+    background: #ffc93a;
+}
+
+/* 
+    ABOUT
+---------------------------*/
+
+.text-center {text-align:center;}
+
+.about {
+    position: relative;
+    height: 1517px;
+    margin-top: -800px;
+    background: url('../img-new/bg-about.png') center no-repeat;
+    z-index: 1000;
+}
+
+.about__title {
+    margin: 45px 0 0;
+    text-align: center;
+    color: #678e31;
+    font: 60px 'Gabriola', cursive;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.about__title--lwr {
+    margin: 50px auto 0px;
+    padding-top: 70px;
+    padding-left: 15px;    
+    width:495px;
+    height:196px;
+    text-transform: none;
+    background: url('../img-new/sky.png') center no-repeat;
+}
+
+.abbout .about__title {
+    margin-top:25px;
+    margin-bottom: 30px;
+}
+.abbout img {
+    display: block;
+    border:0;
+    margin: 0 auto;
+}
+
+.abbout p {
+    font-family: 'latoregular';
+    font-size: 18px;
+}
+
+.about-txt {
+    margin-top: 20px;
+    text-align:center;
+    color:#fff;
+    font-family: 'latoregular';
+    font-size: 18px;    
+}
+
+
+/* 
+    OFFER
+---------------------------*/
+
+.offer {
+    position: relative;
+    height: 1047px;
+    margin-top: -35px;
+    background: url('../img-new/bg-offer.png') center no-repeat;
+    z-index: 950;
+}
+
+.offer__title {
+    margin: 50px 0 30px;
+    text-align: center;
+    color: #1475a8;
+    font: 60px 'Gabriola', cursive;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+}
+
+.offer__title span {
+    text-transform: uppercase;
+}
+
+.offer-item {
+    text-align: center;
+    word-break: break-word;
+    margin-top:35px;
+    cursor:pointer;
+}
+
+.offer-item__img {
+    width: 210px;
+    margin: 0 auto 20px;
+}
+
+.offer-item__img img {
+    width: 100%;
+}
+
+.offer-item__title {
+    margin: 0 0 5px;
+    color: #1475a8;
+    font-family: 'latoregular';
+    font-size: 20px;
+}
+
+.offer-item__txt {
+    margin: 0 10px;
+    color: #000;
+    font: 18px 'a_AvanteLt Light', arial;
+    letter-spacing: .6px;
+}
+
+.offer-registr {
+    position: relative;
+    bottom: 0px;
+    width: 429px;
+    height: 291px;
+    margin: 0 auto;
+    background: url('../img-new/bg-offer-reg.png') center no-repeat;
+}
+
+.offer-registr .banner-reg__btn {
+    position: relative;
+    top: 140px;
+    left: 45px;
+}
+
+/* 
+    PARTNERS
+---------------------------*/
+
+.partners {
+    position: relative;
+    height: 880px;
+    margin-top: -30px;
+    background: url('../img-new/bg-partners.jpg') center -100px no-repeat;
+    z-index: 900;
+}
+
+.partners__title {
+    margin: 70px 0 60px;
+    text-align: center;
+    color: #678e31;
+    font: 60px 'Gabriola', cursive;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.partners-list {
+    text-align: center;
+}
+
+.partners-list img {
+    margin: 0 10px 20px;;
+}
+
+/*=========================================================================================
+    FOOTER
+=========================================================================================*/
+
+.footer {
+    position: relative;
+    height: 290px;
+    margin-top: -120px;
+    padding-top: 180px;
+    text-align: center;
+    background: url('../img-new/bg-footer.png') center no-repeat;
+    z-index: 1000;
+}
+
+.footer__link {
+    display: inline-block;
+    margin: 0 0 5px;
+    color: #a3d3ed;
+    font: 20px 'a_AvanteLt DemiBold', arial;
+    text-decoration: underline;
+    transition: all .3s linear;
+}
+
+.copyright {
+    margin: 0;
+    color: #a3d3ed;
+    font: 20px 'a_AvanteLt DemiBold', arial;
+}
+
+/*=========================================================================================
+    MODAL
+=========================================================================================*/
+
+.modal {
+    position: fixed; 
+    top: 100px;
+    left: 50%;
+    display: none;
+    width: 850px;
+    height: 715px;
+    margin-left: -425px;
+    padding-top: 55px;
+    text-align: center;
+    z-index:1100;
+}
+
+.modal--login {
+    background: url('../img-new/bg-modal-login.png') center no-repeat;    
+}
+
+.modal--privacy {
+    padding-top: 90px;
+    padding-left: 85px;
+    background: url('../img-new/bg-modal-privacy.png') center no-repeat;    
+}
+
+.modal--registr {
+    padding-top: 0px;
+    background: url('../img-new/bg-modal-reg.png') center no-repeat;    
+}
+
+.modal--access {
+    height: 580px;
+    padding-top: 20px;
+    background: url('../img-new/bg-modal-reg.png') center no-repeat;    
+    background-size: contain;
+}
+
+.modal__title {
+    color: #9cd61b;
+    font: 48px 'Gabriola', cursive;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 0 0 #006ea6,
+                          -2px 0 0 #006ea6,
+                          0 -2px 0 #006ea6,
+                          0 2px 0 #006ea6,
+                          1px 1px 0 #006ea6,
+                          -1px 1px 0 #006ea6,
+                          1px -1px 0 #006ea6,
+                          -1px -1px 0 #006ea6;
+}
+
+.modal--privacy .modal__title {
+    margin: 0 100px 15px;
+/*    font-size: 40px;*/
+    line-height: .8;
+}
+
+.modal--access .modal__title {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.login-form__input {
+    display: block;
+    width: 350px;
+    height: 45px;
+    margin: 0 auto 20px;
+    border: 1px solid #88c177;
+    text-align: center;
+    color: #77a8c1;
+    font: 26px 'a_AvanteInt Book', arial;
+    letter-spacing: .65px;
+    background: transparent;
+}
+
+.modal--access .login-form__input {
+    margin-bottom: 50px;
+}
+
+.login-form__link {
+    display: inline-block;
+    margin: 0 25px 25px;
+    font: 24px 'a_AvanteInt Book', arial;
+    letter-spacing: .65px;
+    text-decoration: underline;
+    transition: all .3s linear;
+}
+
+.login-form__link--green {
+    color: #678e31;
+}
+
+.login-form__link--blue {
+    color: #308ab9;
+}
+
+.login-form__link--green:hover {
+    color: #308ab9;
+    text-decoration: underline;
+}
+
+.login-form__link--blue:hover {
+    color: #678e31;
+    text-decoration: underline;
+}
+
+.login-form__btn {
+    width: 340px;
+    height: 60px;
+    border: none;
+    border-radius: 40px;
+    color: #ffc93a;
+    font: 22px 'a_AvanteInt Bold', arial;
+    text-transform: uppercase;
+    text-shadow: 2px 3px 1px rgba(94, 10, 28, 0.75);
+    background: #e22d54;
+    transition: all .3s linear;
+}
+
+.login-form__btn:hover {
+    color: #e22d54;
+    text-shadow: 1px 2px 1px rgba(94, 10, 28, 0.75);
+    background: #ffc93a;
+}
+
+.reg-form-group {
+    margin-bottom: 15px;
+}
+
+.reg-form__label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    color: #308ab9;
+    font: 24px 'a_AvanteInt Book', arial;
+    letter-spacing: .65px;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.reg-form__label--green {
+    color: #678e31;
+} 
+
+.reg-form__label--radio {
+    margin: 0 10px;
+}
+
+.reg-form__checkbox {
+    display: none;
+}
+
+.reg-form__radio {
+    display: none;
+}
+
+.reg-form__label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #308ab9;
+    background: transparent;
+}
+
+.reg-form__label--radio:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #308ab9;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.reg-form__label--green:before {
+    border-color: #678e31;
+}
+
+.reg-form__checkbox:checked + .reg-form__label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    bottom: 9px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #308ab9;
+} 
+
+.reg-form__radio:checked + .reg-form__label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    bottom: 9px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #308ab9;
+} 
+
+.reg-form__radio:checked + .reg-form__label--green:after {
+    background: #678e31;
+}
+
+.privacy-txt {
+    width: 635px;
+    padding: 30px 65px 10px;
+    margin: 0 auto;
+    text-align: left;
+    color: #03608d;
+    font: 20px 'a_AvanteInt Book', arial;
+}
+
+.privacy-txt--green {
+    color: #547227;
+    font-family: 'a_AvanteInt Bold', arial;
+}
+
+.js-rules-btn {
+    text-decoration: underline;
+}
+
+.js-scroll {
+    height: 407px;
+    overflow-y: auto;
+}
+
+.close__btn {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0970a2 url('../img-new/close-icon.png') center no-repeat;
+}
+
+.modal--login .close__btn {
+    top: 70px;
+    right: 90px;
+}
+
+.modal--registr .close__btn {
+    top: 50px;
+    right: 75px;
+}
+
+.modal--access .close__btn {
+    top: 35px;
+    right: 140px;
+}
+
+.overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+    z-index: 1050;
+}
+
+.form-group {
+    position: relative;
+}
+
+.login-form__input.error {
+    border-color: #f00;
+}
+
+label.error {
+    position: absolute;
+    bottom: -22px;
+    left: 30%;
+    color: #f00;
+    font-size: 18px;
+}
+
+
+/*=========================================================================================
+    RESPONSIVE
+=========================================================================================*/
+
+/* 
+    Large Devices, Wide Screens 
+----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width : 1221px) {
+	.banner__link {
+		left: 340px;
+	}	 
+    .menu__item a {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+    
+    .social {
+        margin-left: 0;
+        text-align: right;
+    }
+    
+    .login {
+        margin-top: 30px;
+        padding-left: 0;
+        text-align: right;
+    }
+    
+    .reg__btn {
+        margin-right: 0;
+		font-size:15px;
+    }
+    
+    .login__btn {
+        position: relative;
+        top: 30px;
+    }
+    
+    .banner-registr {
+        left: 615px;
+    }
+    
+    .about-txt {
+        margin-top: 0; 
+        padding: 15px 0 15px 30px;
+        background-size: cover;
+    }
+    
+    .offer-item__img {
+        width: 90%;
+    }
+    
+    .partners {
+        height: auto;
+        padding-bottom: 70px;
+    }
+    
+}
+
+@media only screen and (max-width : 1140px) {
+    
+
+    
+}
+
+@media only screen and (max-width : 1060px) {
+    
+
+}
+@media only screen and (max-height : 470px) {
+        .modal{
+		top:0px;
+	}
+
+}
+/* 
+    Medium Devices, Desktops 
+----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width : 992px) {
+    
+    .header {
+        height: 200px;;
+        background-size: cover;
+    }
+    
+    .menu__item a {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .login {
+        position: relative;
+        bottom: 35px;
+        margin-top: 0;
+    }
+    
+    .reg__btn {
+        display: inline-block;
+        margin-top: 40px;
+        margin-right: 20px;
+    }
+	 .banner-text {
+		text-align: center;
+		left: 50%;
+		margin-left: -300px;
+		top:200px;
+	}   
+    .login__btn {
+        top: 0;
+    }
+    .banner__link {
+        display:none;
+    }
+    .banner-registr {
+    left: 50%;
+    margin-left: -175px;
+	    top: 500px;
+    }
+	.banner-cont {
+		background-image:none;
+	}    
+    .about {
+        height: auto;
+        padding-bottom: 100px;
+        background-size: cover;
+    }
+    
+    .offer {
+        margin-top: -55px;
+    }
+    
+    .offer-registr {
+        bottom: 0;
+    }
+    
+    .partners {
+        background: url(../img-new/bg-partners.jpg) center 0px no-repeat;
+        background-size: cover;
+    }
+    
+    .modal {
+        width: 750px;
+    }
+    
+    .close__btn {
+        right: 0;
+    }
+    
+    .modal--login .close__btn {
+        top: 70px;
+        right: 40px;
+    }
+
+    .modal--registr .close__btn {
+        top: 50px;
+        right: 30px;
+    }
+    
+    .modal--access .close__btn {
+        right: 90px;
+    }
+    
+}
+
+/*
+    Small Devices, Tablets 
+----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width : 768px) {
+    
+	.banner__link {
+        left: 223px;
+    }   
+    .menu {
+        position: relative;
+        margin-top: 20px;
+        text-align: right;
+        z-index: 1000;
+    }
+            
+    .first_item {margin-left:auto !important;}
+    .social {
+        margin-top: 13px;
+    }
+    
+    .login {
+        bottom: 20px;
+    }
+
+    .banner-text {
+        text-align: center;
+        left: 50%;
+        margin-left: -300px;
+    }
+    
+    .banner-registr {
+        left: 50%;
+        margin-left: -175px;
+    }
+    
+    .offer {
+        text-align: center;
+        height: auto;
+        background-size: cover;
+    }
+   
+    .offer-item {
+        display: inline-block;
+        width: 200px;
+        float: none;
+        margin-bottom: 25px;
+        vertical-align: top;
+    }
+    
+    .offer-registr {
+        bottom: -75px;
+    }
+    
+    .offer-registr .banner-reg__btn {
+        left: 35px;
+    }
+    
+    body.open-modal {
+        overflow: auto;
+    }
+    
+    .modal {
+        position: ашчув;
+        top: 0px;
+        width: 100%;
+        height: 550px;
+        left: 0;
+        margin-left: 0;
+        padding-top: 0;
+        background: url('../img-new/bg-modal-login-adaptive.png') center no-repeat;
+        background-size: cover;
+    }
+    
+    .modal--privacy {
+        padding-top: 40px;
+        padding-left: 0;
+    }
+    
+    .modal--access {
+        height: 400px;
+        background: url(../img-new/bg-modal-login-adaptive.png) center 0 no-repeat;
+    }
+    
+    .modal--privacy .modal__title {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .privacy-txt {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .close__btn,
+    .modal--login .close__btn,
+    .modal--registr .close__btn {
+        top: 0;
+        right: 15px;
+    }
+    
+    .modal--access .close__btn {
+        top: 0;
+        right: 40px;
+    }
+    
+}
+
+@media only screen and (max-width : 620px) {
+    
+    .reg__btn {
+        margin-top: 15px;
+    }       
+
+}
+
+@media only screen and (max-width : 540px) {
+    
+    .header {
+        height: 220px;
+    }
+    
+    .menu__item a {
+        font-size: 20px;
+    }
+    
+    .social {
+        position: relative;
+        top: 30px;
+        right: 115px;
+    }
+    .reg__btn {
+        margin-top: 15px;
+    }       
+    .login {
+        bottom: -40px;
+    }
+    
+    .modal--privacy {
+        height: 650px;
+    }
+    
+    .modal--privacy .modal__title {
+        margin-bottom: 60px;
+    }
+    
+    .js-scroll {
+        height: 480px;
+    }
+    
+    .modal--access .close__btn {
+        right: 0;
+    }
+ 
+}
+
+/*
+    Extra Small Devices, Phones 
+----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width : 620px) {
+    
+    .header {
+        height: 350px;
+        background-size: cover;
+    }
+ 	.logo {
+		margin-bottom: 15px;
+	}   
+	.logo img {    max-width: 40%;}   
+    .header .col-md-2.col-xs-3 {
+        width: 100%;
+        float: none;
+    }
+    
+    .header nav {
+        width: 100%;
+        float: none;
+    }
+    
+    .menu {
+        margin-top: 0;
+        text-align: center;
+    }
+    
+    .social {
+        display: none;
+    }
+    
+    .login {
+        position: static;
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .banner-text {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    
+    .banner-registr {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    
+    .offer-registr {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    
+    .offer-registr .banner-reg__btn {
+        left: 0;
+    }
+    
+}
+
+@media only screen and (max-width : 430px) {
+    
+    .banner-registr {
+        top: 600px;
+    }
+    
+    .about__title,
+    .offer__title,
+    .partners__title {
+        font-size: 40px;
+    }
+    
+    .about__title--lwr {
+        margin-top: 1067px !important;
+        background: none;
+        width: auto;
+        height: auto;
+        color: #fff;
+    }
+    
+    .modal--access .modal__title {
+        line-height: .7;
+        margin-top: 30px;
+        margin-bottom: 85px;
+    }
+    
+    .modal--access .close__btn {
+        top: -15px;
+    }
+    
+    .modal--access {
+        top: 25px;
+    }
+    
+}
+
+@media only screen and (max-width : 380px) {
+    
+    .header {
+        height: 385px;
+    }
+    
+    .banner-registr {
+        top: 650px;
+    }
+    
+    .banner-reg__btn {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .offer-registr .banner-reg__btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .login-form__btn,
+    .login-form__input {
+        width: 300px;
+    }
+    .modal--access {
+        height: 430px;
+        background: url(../img-new/bg-modal-login-adaptive.png) center no-repeat;
+    }
+    
+    .modal--access .close__btn {
+        top: -15px;
+    }
+    
+    .modal--access .modal__title {
+        margin-top: 20px;
+    }
+    
+}
+
+@media only screen and (max-width : 320px) {
+    
+    .modal--privacy .modal__title {
+        margin-bottom: 21px;
+    }
+    
+}
+
+.errormsgLogin{
+    display: none;
+    color: red;
+    margin-top:-34px;
+    font-size: 14px;
+}
+
+#vk_groups {width:60%;margin:0px auto;height:300px;background: transparent !important;}

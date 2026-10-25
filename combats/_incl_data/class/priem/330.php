@@ -1,0 +1,6 @@
+<?
+if(!defined('GAME'))
+{
+	die();
+}
+?>

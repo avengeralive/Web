@@ -1,0 +1,109 @@
+<?
+if(!defined('GAME')) {
+	die();
+}
+/*
+	Прием: Коварный Уход
+*/
+$pvr = array();
+if( isset($pr_momental_this)) {
+	$fx_moment = function(  $uid, $enemy, $j_id, $yron, $profil ) {
+		return round($yron);
+	};
+}elseif( isset($pr_tested_this) ) {
+		$fx_priem = function(  $id , $at , $uid, $j_id ) {
+		// -- начало приема
+		global $u, $btl;	
+		//
+		//Параметры приема
+		$pvr['used'] = 0;
+		//		
+		$uid1 = $btl->atacks[$id]['uid1'];
+		$uid2 = $btl->atacks[$id]['uid2'];			
+		if( $uid == $uid2 ) {
+			$a = 1;
+			$b = 2;
+			$u1 = ${'uid1'};
+			$u2 = ${'uid2'};
+		}elseif( $uid == $uid1 ) {
+			$a = 2;
+			$b = 1;
+			$u1 = ${'uid2'};
+			$u2 = ${'uid1'};
+		}
+
+		if( isset($at['p'][$a]['priems']['kill'][$uid][$j_id]) )
+		{	
+			$prv['color2'] = '000000';
+			$prv['text'] = $btl->addlt(1 , 17 , $btl->users[$btl->uids[$uid]]['sex'] , NULL);	
+			$prv['text2'] = '{tm1} '.$prv['text'].'.'.$prv['effx'];
+			$btl->priemAddLog( $id, 1, 2, $uid, 0,
+				'<font color^^^^#'.$prv['color2'].'>Коварный Уход</font>',
+				$prv['text2'],
+				($btl->hodID + 1)
+			);
+			//pr('del');
+			mysql_query('UPDATE `eff_users` SET `delete` = "'.time().'" WHERE `id` = "'.$btl->stats[$btl->uids[$uid]]['u_priem'][$j_id][3].'" AND `uid` = "'.$uid.'" LIMIT 1');
+			unset($btl->stats[$btl->uids[$uid]]['u_priem'][$j_id]);
+			$btl->stats[$btl->uids[$uid]]['u_priem'][$j_id] = false;
+		}
+		//pr('test');
+		//
+		// -- конец приема
+		return $at;
+	};
+	unset( $pr_used_this );
+}elseif( isset($pr_used_this) ) { 
+	$fx_priem = function(  $id , $at , $uid, $j_id ) {
+		// -- начало приема
+		global $u, $btl;	
+		//
+		//Параметры приема
+		$pvr['used'] = 0;
+		//	
+		$uid1 = $btl->atacks[$id]['uid1'];
+		$uid2 = $btl->atacks[$id]['uid2'];			
+		if( $uid == $uid2 ) {
+			$a = 1;
+			$b = 2;
+			$u1 = ${'uid1'};
+			$u2 = ${'uid2'};
+		}elseif( $uid == $uid1 ) {
+			$a = 2;
+			$b = 1;
+			$u1 = ${'uid2'};
+			$u2 = ${'uid1'};
+		}
+		if( $a > 0 )
+		{
+			if( $pvr['used'] == 0 && !isset($at['p'][$a]['priems']['kill'][$uid][$j_id]) )
+			{
+				$at['p'][$a]['atack'][$j]['yron']['plog'][] = '$this->priemAddLog( '.$id.', '.$b.', '.$a.', '.$u2.', '.$u1.',
+					"Коварный Уход",
+					"{tm1} '.$btl->addlt($b , 17 , $btl->users[$btl->uids[$u2]]['sex'] , NULL).'",
+				'.($btl->hodID + 1).' );';
+
+				$btl->stats[$btl->uids[$u1]]['za']  -= $btl->stats[$btl->uids[$u2]]['za'];
+				$btl->stats[$btl->uids[$u2]]['za']  -= $btl->stats[$btl->uids[$u1]]['za'];
+				$btl->stats[$btl->uids[$u1]]['m4']  -= $btl->stats[$btl->uids[$u2]]['m4'];
+				$at = $this->yronRazmen($id,$at,true);
+				//
+				$at['p'][$a]['atack'][$j]['yron']['used'][] = array($j_id,$uid,$pvr['used']);
+				$at['p'][$a]['atack'][$j]['yron']['kill'][] = array($j_id,$uid,$pvr['kill']);
+				//
+				$at['p'][$a]['priems']['kill'][$uid][$j_id] = true;
+
+			}
+            //pr('used');
+		}
+		//
+		// -- конец приема
+		return $at;
+	};
+	unset( $pr_used_this );
+}else{
+	//Действие при клике
+	$this->addEffPr($pl,$id);
+}
+unset($pvr);
+?>

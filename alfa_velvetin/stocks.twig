@@ -1,0 +1,19 @@
+{% include "@widget/_common/favorite.twig" %}
+
+{% block html %}
+  {% for m in widget.children %}
+  <div class="row stocksitem active" id="act{{ m.id }}">
+      <div class="columns">
+        <div class="date">
+          {{ m.dat|date('d.m.Y') }}
+        </div>
+        <div class="content">
+          <a class="news__more" href="{{ m.url}}" onclick="return false;"><h4>{{ m.name}}</h4></a>
+          {% if m.pic != '' %}<img src="{{ m.pic }}">{% endif %}
+          <div class="materialall">{{ m.text|raw }}</div>
+        </div>
+      </div>
+  </div>
+  {% endfor %}
+  	
+{% endblock %}

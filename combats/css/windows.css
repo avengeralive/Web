@@ -1,0 +1,504 @@
+.w1 {
+	position:absolute;
+	z-index:1102;
+    top: 100px !important;
+}
+
+.1x1 {
+	width:1px;
+	height:1px;
+	display:block;
+}
+
+/* First style */ 
+.wi1s0 {
+	width:5px;
+	height:6px;
+	background:url(https://img.testcombats.ru/i/bneitral_03.gif) 1px 0px no-repeat;
+}
+.wi1s1 {
+	height:6px;
+	background:url(https://img.testcombats.ru/i/bneitral_05.gif);
+}
+.wi1s2 {
+	width:5px;
+	height:6px;
+	background:url(https://img.testcombats.ru/i/bneitral_03.gif) -2px 0px no-repeat;
+}
+.wi1s3 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/bneitral_17.gif) 1px 0px repeat-y;
+}
+.wi1s4 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/bneitral_19.gif) -1px 0px repeat-y;
+	background-position:right;
+	background-color:#675600;
+}
+.wi1s5 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/bneitral_19.gif) 0px 0px repeat-y;
+}
+.wi1s6 {
+	height:6px;
+	background:url(https://img.testcombats.ru/i/bneitral_05.gif);
+}
+.wi1s7 {
+	background:#ddd5bf;
+}
+
+.wi1s8 {
+	background:url(https://img.testcombats.ru/i/bneitral_05.gif);
+}
+.wi1s9 {
+	width:5px;
+	height:6px;
+	background:url(https://img.testcombats.ru/i/bneitral_19.gif);
+}
+.wi1s10 {
+	background-color:#b1a993;
+	white-space:nowrap;
+	color:#003388;
+	padding:2px 2px 2px 7px;
+	min-width:140px;
+}
+.wi1s10 text {
+	cursor:move;
+}
+.wi1s10 img {
+	cursor:pointer;
+}
+.wi1s11 {
+
+}
+.wi1s12 {
+
+}
+
+/* Fire style */ 
+.wi2s0 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_03.gif) 1px 0px no-repeat;*/
+	position:relative;
+}
+.wi2s0 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_03.gif) 1px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-10px;
+}
+.wi2s1 {
+	height:30px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_05.gif) 0px 4px;
+	background-repeat:repeat-x;
+}
+.wi2s2 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_03.gif) -2px 0px no-repeat;*/
+	position:relative;
+}
+.wi2s2 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_07.gif) -2px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-14px;
+}
+.wi2s3 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_17.gif) 1px 0px repeat-y;
+}
+.wi2s4 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_19.gif) -1px 0px repeat-y;
+	background-position:right;
+	background-color:#675600;
+}
+/**/
+.wi2s5 {
+	width:5px;
+	height:10px;
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_19.gif) 0px 0px repeat-y;*/
+}
+.wi2s5 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_27.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:20px;
+	height:14px;
+	top:0px;
+	left:-10px;
+}
+.wi2s6 {
+	height:14px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_29.gif);
+}
+.wi2s8 {
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_05.gif);*/
+}
+.wi2s8 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_31.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:21px;
+	height:14px;
+	top:0px;
+	left:-4px;
+}
+
+
+/**/
+.wi2s7 {
+	background:#d3cec8;
+}
+
+.wi2s9 {
+	width:5px;
+	height:6px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_19.gif);
+}
+.wi2s10 {
+	background-color:#aca396;
+	white-space:nowrap;
+	color:#003388;
+	padding:2px 2px 2px 7px;
+	min-width:140px;
+}
+.wi2s10 text {
+	cursor:move;
+}
+.wi2s10 img {
+	cursor:pointer;
+}
+.wi2s11 {
+
+}
+.wi2s12 {
+
+}
+
+/* Air style */ 
+.wi3s0 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_03.gif) 1px 0px no-repeat;*/
+	position:relative;
+}
+.wi3s0 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_03.gif) 1px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-10px;
+}
+.wi3s1 {
+	height:30px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_05.gif) 0px 4px;
+	background-repeat:repeat-x;
+}
+.wi3s2 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_03.gif) -2px 0px no-repeat;*/
+	position:relative;
+}
+.wi3s2 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_07.gif) -2px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-14px;
+}
+.wi3s3 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_17.gif) 1px 0px repeat-y;
+}
+.wi3s4 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_19.gif) -1px 0px repeat-y;
+	background-position:right;
+	background-color:#675600;
+}
+/**/
+.wi3s5 {
+	width:5px;
+	height:10px;
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bair_19.gif) 0px 0px repeat-y;*/
+}
+.wi3s5 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_27.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:20px;
+	height:14px;
+	top:0px;
+	left:-10px;
+}
+.wi3s6 {
+	height:14px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_29.gif);
+}
+.wi3s8 {
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bair_05.gif);*/
+}
+.wi3s8 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_31.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:21px;
+	height:14px;
+	top:0px;
+	left:-4px;
+}
+
+
+/**/
+.wi3s7 {
+	background:#cfe1ea;
+}
+
+.wi3s9 {
+	width:5px;
+	height:6px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bair_19.gif);
+}
+.wi3s10 {
+	background-color:#aec0c9;
+	white-space:nowrap;
+	color:#003388;
+	padding:2px 2px 2px 7px;
+	min-width:140px;
+}
+.wi3s10 text {
+	cursor:move;
+}
+.wi3s10 img {
+	cursor:pointer;
+}
+.wi3s11 {
+
+}
+.wi3s12 {
+
+}
+
+/* Water style */ 
+.wi4s0 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_03.gif) 1px 0px no-repeat;*/
+	position:relative;
+}
+.wi4s0 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_03.gif) 1px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-10px;
+}
+.wi4s1 {
+	height:30px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_05.gif) 0px 4px;
+	background-repeat:repeat-x;
+}
+.wi4s2 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_03.gif) -2px 0px no-repeat;*/
+	position:relative;
+}
+.wi4s2 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_07.gif) -2px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-14px;
+}
+.wi4s3 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_17.gif) 1px 0px repeat-y;
+}
+.wi4s4 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_19.gif) -1px 0px repeat-y;
+	background-position:right;
+	background-color:#675600;
+}
+/**/
+.wi4s5 {
+	width:5px;
+	height:10px;
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_19.gif) 0px 0px repeat-y;*/
+}
+.wi4s5 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_27.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:20px;
+	height:14px;
+	top:0px;
+	left:-10px;
+}
+.wi4s6 {
+	height:14px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_29.gif);
+}
+.wi4s8 {
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bfire_05.gif);*/
+}
+.wi4s8 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_31.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:21px;
+	height:14px;
+	top:0px;
+	left:-4px;
+}
+
+
+/**/
+.wi4s7 {
+	background:#bdcddb;
+}
+
+.wi4s9 {
+	width:5px;
+	height:6px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bwater_19.gif);
+}
+.wi4s10 {
+	background-color:#96b0c6;
+	white-space:nowrap;
+	color:#003388;
+	padding:2px 2px 2px 7px;
+	min-width:140px;
+}
+.wi4s10 text {
+	cursor:move;
+}
+.wi4s10 img {
+	cursor:pointer;
+}
+.wi4s11 {
+
+}
+.wi4s12 {
+
+}
+
+/* Earth style */ 
+.wi5s0 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_03.gif) 1px 0px no-repeat;*/
+	position:relative;
+}
+.wi5s0 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_03.gif) 1px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-10px;
+}
+.wi5s1 {
+	height:30px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_05.gif) 0px 4px;
+	background-repeat:repeat-x;
+}
+.wi5s2 {
+	width:5px;
+	height:6px;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_03.gif) -2px 0px no-repeat;*/
+	position:relative;
+}
+.wi5s2 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_07.gif) -2px 0px no-repeat;
+	position:absolute;
+	width:57px;
+	height:30px;
+	top:4px;
+	left:-14px;
+}
+.wi5s3 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_17.gif) 1px 0px repeat-y;
+}
+.wi5s4 {
+	width:5px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_19.gif) -1px 0px repeat-y;
+	background-position:right;
+	background-color:#675600;
+}
+/**/
+.wi5s5 {
+	width:5px;
+	height:10px;
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_19.gif) 0px 0px repeat-y;*/
+}
+.wi5s5 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_27.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:20px;
+	height:14px;
+	top:0px;
+	left:-10px;
+}
+.wi5s6 {
+	height:14px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_29.gif);
+}
+.wi5s8 {
+	position:relative;
+	/*background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_05.gif);*/
+}
+.wi5s8 img {
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_31.gif) 0px 0px no-repeat;
+	position:absolute;
+	width:21px;
+	height:14px;
+	top:0px;
+	left:-4px;
+}
+
+
+/**/
+.wi5s7 {
+	background:#d6cebd;
+}
+
+.wi5s9 {
+	width:5px;
+	height:6px;
+	background:url(https://img.testcombats.ru/i/misc/dmagic/bearth_19.gif);
+}
+.wi5s10 {
+	background-color:#aaa291;
+	white-space:nowrap;
+	color:#003388;
+	padding:2px 2px 2px 7px;
+	min-width:140px;
+}
+.wi5s10 text {
+	cursor:move;
+}
+.wi5s10 img {
+	cursor:pointer;
+}
+.wi5s11 {
+
+}
+.wi5s12 {
+
+}

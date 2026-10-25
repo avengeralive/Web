@@ -1,0 +1,136 @@
+body{
+	background:#dedfde;
+	font-size: 10.04pt;
+	color: #222;
+	font-family: Verdana, Times, Helvetica, Tahoma;
+	overflow-y: scroll;
+}
+ul,body,form{
+	margin:0;
+	padding:0;
+}
+a,a:visited {
+	text-decoration: none;
+	FONT-WEIGHT: bold;
+	color: #003388;
+}
+a:active{
+	color: #6F0000;
+}
+a:hover{
+	color: #0066FF;
+	cursor: pointer;
+}
+.loading{
+	position:absolute;
+	height:100%;
+	width:100%;
+	background:#dedfde;
+	z-index:1;
+	text-align:center;
+}
+.container{
+	margin:auto;
+	min-width:1200px;
+	max-width:1800px;
+	padding:0 50px;
+	padding-bottom:50px;
+}
+.header{
+	padding:5px;
+    border-bottom: 1px solid #b0b0b0;
+	text-align:center;
+
+}
+.menu{
+	min-width:249px;
+	width:249px;
+	border-right: 1px solid #b0b0b0;
+	padding-top:15px;
+}
+.menu ul{
+	padding-left:15px;
+}
+.context{
+	margin-left: 20px;
+	padding-top: 15px;
+	width: 100%;
+
+}
+
+
+.divTable{
+	display: table;
+	width: 100%;
+	border: 1px solid #999999;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+h3{
+	COLOR: #8f0000;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: center;
+}
+.workHeader{
+	width:100%;
+	min-width:350px;
+	height:50px;
+}
+.workHeaderL{
+	width:40%;
+	float:left;
+}
+.workHeaderR{
+	width:60%;
+	padding-top:10px;
+	float:left;
+	text-align: right;
+	margin-left:-50px;
+	padding-right:50px;
+}
+.workAdd{
+	display:none;
+}
+.workMsg{
+	font-weight:bold;
+	color:red;
+	text-align: center;
+}
+.getRazdel{
+	float:left;
+}
+.razdelContent{
+	margin-top:20px;
+}
+
+button, input, textarea, select
+{	font-size:12px;
+	padding:3px;
+	margin:2px;
+	margin-left:0px;
+}

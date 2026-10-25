@@ -1,0 +1,498 @@
+{% block html %}
+{% if widget.param('cart_is_empty') %}
+
+	<div class="row column">
+		<div class="callout secondary">
+			<p>{{ _('Ваша корзина пуста') }}</p>
+		</div>
+		{% if widget.param('catalog_url') %}
+        <p><a href="{{ widget.param('catalog_url') }}" title="В каталог">{{ _('Вернуться в каталог') }}</a></p>
+		{% endif %}
+	</div>
+
+{% elseif widget.order.id > 0 %}
+{# заказ сформирован #}
+
+    <div class="row">
+      {# <div class="large-10 large-offset-3 column"> #}
+      <div class="large-16 columns large-centered">
+        <h5 class="individual">Завершение заказа</h5>
+      </div>
+    </div>
+    <div class="row columns">
+      <div class="cart succ">
+        <div class="row">
+          <div class="large-8 large-centered columns">
+            <p class="cart__price">{{ _('Заказ №') }}{{ widget.order.id }} {#{{ _('от') }} {{ widget.order.date|date('d.m.Y') }}<br>{{ _('на сумму') }} {{ widget.order.getTotal(1)|raw }}#} принят!</p>
+            <p>В ближайшее время наши менеджеры обязательно с Вами свяжутся.<br>При возникновении вопросов, просьба обращаться по телефону: +7 (499) 650-53-72. Время работы: с понедельника по пятницу 09:00-18:00.<br>Благодарим за Ваш заказ!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% else %}
+{# формирование заказа #}
+	<div id="{{ widget.uniqueId }}">
+
+		<div class="row">
+      <div class="large-16 columns large-centered">
+	  <div class="row column">
+        <h5 class="individual">Оформление заказа</h5>
+      </div>
+	  </div>
+    </div>
+
+
+    	<form class="x-order-form mb11" method="post" data-abide novalidate>
+    	 <div class="row columns" id="order-container">
+    	 	{% block products %}
+            {% for c in widget.order.getProducts() %}
+						<div class="cart">
+        <div class="row">
+          <div class="large-16 columns large-centered">
+            <div class="row" data-equalizer data-equalize-by-row="true">
+              <div class="column small-8 medium-6 large-6 cart__img img22" data-equalizer-watch style="padding-bottom: 0px;">
+                <img src="/imagetransform/width_400_height_260_fit_2{{ c.product.pic }}" alt="{{ c.product.name }}">
+              </div>
+              <div class="column small-16 medium-9 large-6" data-equalizer-watch>
+                <p>
+                     Aрт. {{ c.product.code }}<br>{{ c.product.name }}{% if c.offer %},<br>{{ c.offer.name }}{% endif %}</p>
+              </div>
+              <div class="large-4 medium-3 large-offset-2 small-9 columns">
+                  <input class="cart__input x-quantity text-center" disabled type="text" value="{{ c.quantity }}" data-id="{{ c.id }}">
+              </div>
+              <div class="large-6 medium-6 small-15 columns">
+                <div class="cart__price">{{ c.displayPrice|raw }}</div>
+              </div>
+            </div>
+          </div>
+          <!--div class="large-9 large-centered columns">
+            <p><strong>Металл</strong></p>
+            <div class="row small-up-2">
+              <div class="columns">
+                  <div class="saphire">
+                    <input class="saphire__input" type="checkbox" id="b2">
+                    <label class="saphire__label" for="b2">Белое золото</label>
+                  </div>
+                <div class="mb15"></div>
+              </div>
+              <div class="columns">
+                  <div class="saphire">
+                    <input class="saphire__input" type="checkbox" id="b3">
+                    <label class="saphire__label" for="b3">Желтое золото</label>
+                  </div>
+                <div class="mb15"></div>
+              </div>
+              <div class="columns">
+                  <div class="saphire">
+                    <input class="saphire__input" type="checkbox" id="b4">
+                    <label class="saphire__label" for="b4">Красное золото</label>
+                  </div>
+                <div class="mb15"></div>
+              </div>
+              <div class="columns">
+                  <div class="saphire">
+                    <input class="saphire__input" type="checkbox" id="b5">
+                    <label class="saphire__label" for="b5">Серебро</label>
+                  </div>
+                <div class="mb15"></div>
+              </div>
+            </div>
+            <div class="mb15">     </div>
+            <p><strong>Текст гравировки</strong></p>
+            <input class="cart__engraving" type="text" placeholder="">
+            <div class="row small-up-2">
+              <div class="columns">
+                <div class="saphire">
+                  <input class="saphire__input" type="checkbox" id="b6">
+                  <label class="saphire__label saphire__label_top" for="b6">Горизонтальное расположение гравировки</label>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="saphire">
+                  <input class="saphire__input" type="checkbox" id="b7">
+                  <label class="saphire__label saphire__label_top" for="b7">Вертикальное расположение гравировки</label>
+                </div>
+              </div>
+              <div class="columns">
+                <p><img src="./i/flower.png" alt="Товар"></p>
+              </div>
+              <div class="columns large-text-right">
+                <p><img src="./i/flower.png" alt="Товар"></p>
+              </div>
+            </div>
+            <div class="mb15">  </div>
+            <p><strong>Длина браслета (см)    </strong></p>
+            <div class="row small-up-2">
+              <div class="columns">
+                <input class="cart__engraving" type="text" placeholder="">
+              </div>
+              <div class="columns"><a href="#">→ Как замерить длину? Инструкция по замеру</a></div>
+            </div>
+            <div class="mb15">  </div>
+            <p><strong>Тип замка</strong></p>
+            <div class="row small-up-2">
+              <div class="columns">
+                  <div class="saphire">
+                    <input class="saphire__input" type="checkbox" id="b8">
+                    <label class="saphire__label" for="b8">Круглый</label>
+                  </div>
+                <div class="mb15"></div>
+              </div>
+              <div class="columns">
+                  <div class="saphire">
+                    <input class="saphire__input" type="checkbox" id="b9">
+                    <label class="saphire__label" for="b9">Карабин</label>
+                  </div>
+                <div class="mb15"></div>
+              </div>
+              <div class="columns">
+                <p><img src="./i/flower.png" alt="Товар"></p>
+              </div>
+              <div class="columns large-text-right">
+                <p><img src="./i/flower.png" alt="Товар"></p>
+              </div>
+            </div>
+            <div class="mb15"></div>
+            <p><strong>Тип цепи</strong></p>
+            <div class="row small-up-2">
+              <div class="columns">
+                  <div class="saphire">
+                    <input class="saphire__input" type="checkbox" id="b10">
+                    <label class="saphire__label" for="b10">Якорная</label>
+                  </div>
+                <div class="mb15"></div>
+                <p><img src="./i/flower.png" alt="Товар"></p>
+              </div>
+            </div>
+            <div class="mb15"></div>
+            <p><strong>Ваши пожелания / изменения / дополнения</strong></p>
+            <textarea class="cart__tarea"> </textarea>
+            <div class="file">
+              <div class="file__upload text-center">
+                <label>
+                  <input type="file" name="file"><span>Прикрепить файл</span>
+                </label>
+              </div>
+              <input class="file__main" type="text" disabled="">
+            </div>
+          </div-->
+        </div>
+      </div>
+            {% endfor %}
+
+				{% endblock %}
+        <div class="cart">
+        	<div class="row">
+            {% if widget.order.getPersonTypes()|length > 0 %}
+            	<div class="large-8 large-centered columns">
+            		<p><strong>Контактная информация</strong></p>
+          		</div>
+
+          		{% if widget.order.getPersonTypes()|length > 1 %}
+            		<fieldset>
+            	  	<legend><strong>Тип плательщика</strong></legend>
+            	  	{% for p in widget.order.getPersonTypes() %}
+            	  		<input id="user-{{ p.id }}" type="radio" name="person_type" class="x-person-type" value="{{ p.id }}"{% if loop.first %} checked{% endif %}>
+            	  		<label for="user-{{ p.id }}">{{ p.name }}</label>
+				    			{% endfor %}
+				    		</fieldset><br>
+				    	{% else %}
+				    		<input name="person_type" type="hidden" value="{{ widget.order.personTypes[0].id }}">
+				    	{% endif %}
+
+				    	{% for p in widget.order.getPersonTypes() %}
+				    		<div id="props-{{ p.id }}" class="clearfix x-order-props{% if not loop.first %} hide{% endif %}">
+				    			<div class="large-16 columns large-offset-4">
+				    				<div class="row medium-up-2">
+				    			{% set group %}{% endset %}
+				    			{% for f in widget.getProps(p.id) %}
+                                    {% if f.alias in ['surname','name','phone','email']%}
+				    				<div class="columns">
+				    				{% if group != f.group_name %}
+				    					<h5><b>{{ f.group_name }}</b></h5>
+				    				{% endif %}
+				    				{% if f.type == 1 or f.type == 'TEXT' %}
+				    					<label class="cart__label" for="x-prop-{{ f.id }}"><span>{% if f.required %}* {% endif %}</span>{{ f.name }}
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="text" class="cart__engraving{% if f.required %} required{% endif %}" {% if f.required %}required{% endif %} value="{{ f.default_value }}" {% if f.is_email %} pattern="email"{% endif %} {% if f.is_phone %} onkeypress='return event.charCode >= 48 && event.charCode <= 57' {% endif %} /></label>
+				    				{% endif %}
+				    				{% if f.type == 2 or f.type == 'CHECKBOX' %}
+				    					<label for="x-prop-{{ f.id }}">{{ f.name }}{% if f.required %} *{% endif %}</label>
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="checkbox" {% if f.required %} class="required" required{% endif %} value="1" />
+				    				{% endif %}
+				    				{#% if f.name == 'CITY' %}
+				    					<label for="x-prop-{{ f.id }}">{{ f.name }}{% if f.required %} *{% endif %}</label>
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="text" class="x-sale-city{% if f.required %} required{% endif %}"{% if f.required %} required{% endif %} value="{{ f.default_value }}" />
+				    				{% endif %#}
+				    				{% if f.note %}
+				    					<p class="help-text">{{ f.note }}</p>
+				    				{% endif %}
+				    				{% set group %}{{ f.group_name }}{% endset %}
+				    				</div>
+				    				{%endif%}
+				    			{% endfor %}
+				    				</div>
+				    			</div>
+				    		</div>
+				    	{% endfor %}
+				    {% endif %}
+
+          {% block delivery %}
+			<div class="mb30"></div>
+      <div class="large-8 large-centered columns">
+				<p class="mb14"><strong>Доставка</strong></p>
+          	</div>
+            <div class="large-8 large-centered columns">
+            	{% for d in widget.getOrder().getDeliveryMethods(1) %}
+            				<div class="hide x-delivery-method x-delivery-{{ d.id }}">
+            					<div class="saphire">
+            						<input id="d{{d.id}}" class="saphire__input" type="radio" name="delivery_method" {% if loop.first %} checked{% endif %} value="{{ d.id }}">
+            						<!--span class="label">{% if d.getCost(false,false)>=0 %}
+            						{{ d.getCost(true,false)|raw }}
+            						{% else %}
+            						<a data-id="{{ d.id }}" class="x-delivery-method-calculate button small" id="x-delivery-method-calculate-{{ d.id }}">{{ _('Рассчитать') }}</a>
+            						<span class="x-delivery-method-cost"></span>
+            						{% endif %}
+            						</span-->
+            						<label class="saphire__label" for="d{{d.id}}">{{ d.name|raw}}</label>
+
+
+            					{% set html %}{{ d.getHtml()|raw }}{% endset %}
+            					{% if html %}
+            						<div class="row">
+            							<div class="small-11 small-offset-1 columns x-delivery-method-html" id="x-delivery-method-html-{{ d.id }}">
+            								{{ html }}
+            							</div>
+            						</div>
+            					{% endif %}
+            				</div>
+            			</div>
+            	{% endfor %}
+            	</div>
+			  {% endblock %}
+
+        <div class="mb30"></div>
+        <div class="large-8 large-centered columns">
+            <p class="mb30"><strong>Адрес доставки</strong></p>
+        </div>
+        {% set pay = "" %}{% set comment = "" %}
+			  {% for p in widget.order.getPersonTypes() %}
+
+				    		<div id="props-{{ p.id }}" style="margin-left: 0px; margin-right: 0px;" class="row x-order-props{% if not loop.first %} hide{% endif %}">
+				    			<div class="large-16 columns large-offset-4">
+				    				<div class="row medium-up-2">
+
+				    			{% for f in widget.getProps(p.id) %}
+				    			{% if f.alias in ['country', 'city','street','index'] %}
+				    				<div class="columns">
+
+				    				{% if f.type == 1 or f.type == 'TEXT' %}
+				    					<label class="cart__label" for="x-prop-{{ f.id }}"><span>{% if f.required %}* {% endif %}</span>{{ f.name }}
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="text" class="cart__engraving{% if f.required %} required{% endif %}" {% if f.required %}required{% endif %} value="{{ f.default_value }}" {% if f.is_email %} pattern="email"{% endif %} /></label>
+				    				{% endif %}
+				    				{% if f.type == 2 or f.type == 'CHECKBOX' %}
+				    					<label for="x-prop-{{ f.id }}">{{ f.name }}{% if f.required %} *{% endif %}</label>
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="checkbox" {% if f.required %} class="required" required{% endif %} value="1" />
+				    				{% endif %}
+				    				{#% if f.name == 'CITY' %}
+				    					<label for="x-prop-{{ f.id }}">{{ f.name }}{% if f.required %} *{% endif %}</label>
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="text" class="x-sale-city{% if f.required %} required{% endif %}"{% if f.required %} required{% endif %} value="{{ f.default_value }}" />
+				    				{% endif %#}
+				    				{% if f.note %}
+				    					<p class="help-text">{{ f.note }}</p>
+				    				{% endif %}
+
+				    				</div>
+				    			{%else%}
+				    				{% if f.alias =='payment' %}
+				    					{%set pay%}
+				    						<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" class="cart__engraving" type="text" placeholder="">
+				    					{%endset%}
+				    				{%endif%}
+				    				{% if f.alias =='comment' %}
+				    					{%set comment%}
+		<div class="row">
+      <div class="large-12 large-centered columns">
+          <p class="mb14"><strong>Комментарии к заказу</strong></p>
+          <textarea id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" class="cart__tarea"> </textarea>
+    </div>
+        </div>
+				    					{%endset%}
+				    				{%endif%}
+				    			{%endif%}
+				    			{% endfor %}
+				    			</div>
+				    			<div class="row large-up-4 small-up-2">
+				    			{% for f in widget.getProps(p.id) %}
+				    			{% if f.alias in ['dom', 'build','apartment'] %}
+				    				<div class="columns">
+
+				    				{% if f.type == 1 or f.type == 'TEXT' %}
+				    					<label class="cart__label" for="x-prop-{{ f.id }}"><span>{% if f.required %}* {% endif %}</span>{{ f.name }}
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="text" class="cart__engraving{% if f.required %} required{% endif %}" {% if f.required %}required{% endif %} value="{{ f.default_value }}" {% if f.is_email %} pattern="email"{% endif %} /></label>
+				    				{% endif %}
+				    				{% if f.type == 2 or f.type == 'CHECKBOX' %}
+				    					<label for="x-prop-{{ f.id }}">{{ f.name }}{% if f.required %} *{% endif %}</label>
+				    					<input id="x-prop-{{ f.id }}" name="props[{{ f.id }}]" type="checkbox" {% if f.required %} class="required" required{% endif %} value="1" />
+				    				{% endif %}
+				    				{% if f.note %}
+				    					<p class="help-text">{{ f.note }}</p>
+				    				{% endif %}
+
+				    				</div>
+				    			{%endif%}
+				    			{% endfor %}
+				    			</div>
+				    				</div>
+				    			</div>
+				    	{% endfor %}
+
+        {% block payment %}
+          <div class="mb26"></div>
+        	<div class="large-8 large-centered columns">
+				<p><strong>Оплата</strong></p>
+			</div>
+        	<div class="large-16 columns large-centered">
+            <div class="row large-up-4 small-up-2">
+					{% for p in widget.getOrder().getPaymentMethods(1) %}
+          {% if loop.last %}</div><div class="columns">{% endif %}
+					{% if loop.index % 2 == 1 and not loop.last %}
+						<div class="columns">
+					{%endif%}
+							<div class="saphire hide x-payment-method x-payment-{{ p.id }}">
+								<input id="p{{p.id}}" class="saphire__input" type="radio"
+										name="payment_method"
+										{% if loop.first %} checked{% endif %}
+										value="{{ p.id }}"
+										{% if widget.order.paymentData and widget.order.paymentData.id == p.id %}checked{% endif %}>
+								{%if p.id == 5%}
+									<label class="saphire__label otherwise" for="p{{p.id}}" data-equalizer-watch>
+										&#160;{{ p.name }} 
+									</label>{{pay}}
+								{%else%}
+									<label class="saphire__label" for="p{{p.id}}" data-equalizer-watch>
+										&#160;{{ p.name }}
+										{%endif%}
+									</label>
+								{% if p.note %}<p class="help-text"> {{ p.note }}</p>{% endif %}
+							</div>
+
+						{% if loop.index % 2 == 0 and not loop.first %}
+							</div>
+						{%endif%}
+					{% endfor %}
+			  		</div>
+					</div>
+			  {% endblock %}
+
+<div class="large-16 columns large-centered">
+			  {{comment}}
+
+</div>
+            <div class="mb11"></div>
+            
+
+
+			<div class="row">
+        <div class="large-16 columns large-centered">
+          <div class="row" style="margin-bottom: 20px;">
+              <div class="large-12 columns">
+                <div class="saphire">
+                  <input class="saphire__input" type="checkbox" id="b61" required="">
+                  <label class="saphire__label saphire__label_top" for="b61">* Согласен с условиями заказа <br>→ <a class="openmodal" style="cursor: pointer;">Условия заказа</a></label>
+                </div>
+              </div>
+              <div class="large-12 columns">
+                <p class="mb33 cart__order">
+                     Итого:<br><span class="x-total"></span></p>
+              </div>
+            </div>
+
+          <div class="large-12 large-centered columns">
+            <button class="button x-order-confirm medium-gray expanded " > Оформить заказ</button>
+              <p id="errorMsgForm" class="x-order-error hide"></p>
+              <p id="msg-order-error">* Заполните обязательные поля.</p>
+          </div>
+        </div>
+			</div>
+        </div>
+    </div>
+  </div>
+</form>
+
+<div class="modalusl">
+<div class="modalusl_in">
+<button class="close-button" data-close="" aria-label="Close modal" type="button"><img src="/themes/shop/images/cross.svg" alt="" style="width: 14px; height: 14px;"></button>
+
+{% widget 'List' with {template: 'delivery_list.twig', catalog: 509} %}
+</div>
+</div>
+
+	</div>
+
+
+	{% set script %}
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			jQuery('#{{ widget.uniqueId }} input[name="person_type"]').on('change', function(){
+
+				jQuery('.x-order-props').addClass('hide');
+				jQuery('.x-order-props .required').removeAttr('required');
+
+				jQuery('#props-'+jQuery(this).val()).removeClass('hide');
+				jQuery('#props-'+jQuery(this).val()+' .required').attr('required','required');
+
+				sale_order_get_available_payments( jQuery('#{{ widget.uniqueId }} .x-order-form') );
+
+			});
+			jQuery('.x-order-props.hide .required').removeAttr('required');
+
+			jQuery('#{{ widget.uniqueId }} input[name="delivery_method"]').on('change', function(){
+				sale_order_get_available_payments( jQuery('#{{ widget.uniqueId }} .x-order-form') );
+			});
+
+			jQuery('#{{ widget.uniqueId }} input[name="payment_method"]').on('change', function(){
+				sale_order_get_available_payments( jQuery('#{{ widget.uniqueId }} .x-order-form') );
+			});
+
+			jQuery('#{{ widget.uniqueId }} input').on('change', function(){
+				sale_order_check_form( jQuery('#{{ widget.uniqueId }} .x-order-form') );
+			});
+
+			jQuery('#{{ widget.uniqueId }} input[name="props[1]"]').on('change', function(){
+
+ 			if ($(this).hasClass('is-invalid-input'))
+			{
+				$('.x-order-confirm').attr("disabled", 'disabled');
+			}
+
+			});
+
+			sale_order_get_available_payments( jQuery('#{{ widget.uniqueId }} .x-order-form') );
+
+/*
+            jQuery('.x-order-error').bind("DOMSubtreeModified",function()
+            {
+            var strError = document.getElementById('errorMsgForm').innerHTML;
+            strError = (strError.trim) ? strError.trim() : strError.replace(/^\s+/,'');
+            if (strError=='')
+            {
+            $('#msg-order-error').removeClass('hide');
+            $('#msg-order-error').addClass('hide');
+
+            }
+            else
+            {
+            $('#msg-order-error').removeClass('hide');
+
+            }
+            });
+						*/
+
+		});
+	{% endset %}
+	{% do widget.application.addHeadString( "<script>#{script}</script>" ) %}
+{% endif %}
+
+{% endblock %}

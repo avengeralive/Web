@@ -1,0 +1,43 @@
+.others_button_sohranit,
+.others_button_vyvesti,
+.others_button_dalee,
+.others_button_sendmessage {
+    background: #678e31;
+    color:#fff;
+    font-size: 16px;
+    font-family: 'open_sansbold';
+    border-radius: 20px;
+    border:none;
+    border-bottom: 5px solid #456a21;
+    cursor: pointer;
+    padding: 4px 25px 2px 25px;
+    text-transform: uppercase;
+}
+.others_button_dalee:hover,
+.others_button_vyvesti:hover,
+.others_button_sohranit:hover,
+.others_button_sendmessage:hover {
+    background: #4f6f24;
+    border-color: #2c4315;  
+}
+
+.type_deadline {
+    background: #4d86d6;
+    color: #fff;
+    padding: 8px;
+    /* border: 1px solid #2867a8; */
+    -webkit-box-shadow: 0px 4px 12px -7px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 4px 12px -7px rgba(0,0,0,0.6);
+    box-shadow: 0px 4px 12px -7px rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+.type_deadline.active , .type_deadline:hover {
+    background: #2d5ea3;
+    color: #fff;
+    padding: 8px;
+    /* border: 1px solid #2867a8; */
+    -webkit-box-shadow: 0px 7px 15px -4px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 7px 15px -4px rgba(0,0,0,0.6);
+    box-shadow: 0px 7px 15px -4px rgba(0,0,0,0.6);
+    cursor: pointer;
+}

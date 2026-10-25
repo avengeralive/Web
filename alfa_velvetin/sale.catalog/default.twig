@@ -1,0 +1,156 @@
+<div id="{{ widget.uniqueId }}">
+{% block html %}
+
+	{% if widget.error404 %}
+
+		{% if widget.getParam('page404_template') %}
+			{% include widget.getParam('page404_template') %}
+		{% else %}
+			{% include "@widget/_common/page404.twig" %}
+		{% endif %}
+
+	{% elseif widget.material %}
+
+		{% widget 'Sale.Goods.Item' with {
+			material_id:   widget.material.id,
+			show_meta:     widget.getParam('show_meta'),
+			field_picture: widget.getParam('item_field_picture'),
+			field_pictures: widget.getParam('item_field_pictures'),
+			show_tabs: widget.getParam('item_show_tabs'),
+			show_properties: widget.getParam('item_show_properties'),
+			show_comments: widget.getParam('item_show_comments'),
+		} %}
+
+	{% else %}
+
+			<div class="row rails">
+				<div class="medium-6 large-5 xlarge-4 columns text-center medium-text-left">
+					<h4 class="individual">{{widget.catalog.name}}</h4>
+				</div>
+				<div class="medium-8 large-5 xlarge-4 columns text-center medium-text-right xxlarge-text-right">
+					<a class="rel" data-toggle="filter"><img src="{{ basePath }}images/sq.svg" alt="">Отфильтровать</a>
+				</div>
+				<div class="medium-10 large-14 xlarge-8 columns text-center">
+                    {{ widget.application.showPageProperty('list-paginator') }}
+				</div>
+
+<div class="columns">
+						<div class="filter text-left hide" id="filter" data-toggler=".hide">
+						  <div class="filter__triangle"></div>
+						  {% widget 'Sale.Filter' with { catalog: widget.catalog, filter_name: widget.getParam('filter_name'), css_class: widget.getParam('filter_css_class') } %}
+						</div>
+					  </div>
+					</div>
+
+					{% if widget.iterator.count > 0 %}
+					
+					{% widget 'Sale.Goods.List' with { iterator: widget.iterator, template: widget.view, limit: widget.getParam('list_limit'), paginator: true, paginator_url: widget.listPaginatorUrl } %}
+
+				{% else %}
+
+				<div class="row medium-up-3" style="margin-bottom: 30px; margin-left: 0px;">
+					
+					{% if widget.getParam('filter') and widget.filter.isActive() %}
+						<p>{{ _('Отсутствуют товары, удовлетворяющие заданным условиям.') }}</p>
+					{% else %}
+						<p>{{ _('Товары отсутствуют.') }}</p>
+					{% endif %}
+					
+				{% endif %}
+
+
+	{% endif %}
+{% endblock %}
+</div>
+<div class="row">
+      <div class="large-18 large-centered columns">
+        <div class="row medium-up-2 mb25">
+          <div class="columns">
+            <p class="minify">Размещенные на сайте материалы носят информационный характер и не являются публичной офертой, так как не содержат всех существенных условий договора (ст.435 ГК РФ). Цены зависят от валютного курса и могут быть изменены.</p>
+          </div>
+          <div class="columns">
+            <p class="minify">Для уточнения окончательной стоимости изделий, а также других условий заказа (сроков изготовления, оплаты и доставки) обращайтесь к нашим менеджерам: <a href="tel:+79683930083">+7 (968) 393-00-83</a>, <a href="tel:+74996505372">+7 (499) 650-53-72</a>, e-mail: <a href="mailto:gold@velvetin.ru">gold@velvetin.ru</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+{% widget 'List' with {template: 'slider-gallery-star-clients.twig', iterator: catalog.getById(498).getMaterials()} %}
+    <div class="row columns">
+      <hr class="individual-hr">
+    </div>
+    <div class="row columns">
+      <h4 class="individual" style="margin: 0px !important; margin-bottom: 20px !important;">Популярные изделия</h4>
+    </div>
+    {% widget 'List' with { limit:6, template: 'main_pop.twig', catalog:465, where: 'pop=true', subsections: 1, order:'RAND()' } %}
+
+{% set script %}
+	{% block script %}
+	document.addEventListener('DOMContentLoaded', function () {
+
+		jQuery('#{{ widget.uniqueId }} .x-clear').click(function(){
+			saleClearFilter( jQuery(this).parents('.x-filter') );
+			return false;
+		});
+
+		jQuery('#{{ widget.uniqueId }} .x-clear-all').click(function(){
+			saleClearFilter( jQuery('#{{ widget.uniqueId }}') );
+			jQuery('#{{ widget.uniqueId }} form').submit();
+			return false;
+		});
+
+		jQuery('#{{ widget.uniqueId }}').find('.x-filter').each(function(){
+			saleCheckFilter( jQuery(this) );
+		});
+
+		jQuery('#{{ widget.uniqueId }} input, #{{ widget.uniqueId }} select').on('change', function(){
+			saleCheckFilter( jQuery(this).parents('.x-filter') );
+		});
+
+		jQuery('#{{ widget.uniqueId }} .x-sort').on('change', function(){
+			var qd = sale_qd ();
+			qd['sort'] = jQuery(this).val();
+			location = '?' + jQuery.param(qd);
+
+		});
+
+		jQuery('#{{ widget.uniqueId }} .x-view').on('click', function(e){
+			e.preventDefault();
+			var qd = sale_qd ();
+			qd['view'] = jQuery(this).attr('data-view');
+			location = '?' + jQuery.param(qd);
+
+		});
+
+
+	});
+	function saleClearFilter(elm) {
+		elm.find('input[type="text"]').each(function(){
+			jQuery(this).val( jQuery(this).attr('data-default') ).trigger('change');
+		});
+		elm.find('input:checked').prop('checked', false);
+		elm.find('select').val('');
+		saleCheckFilter(elm);
+	}
+	function saleCheckFilter(elm) {
+		var c = elm.find('.x-clear');
+		if (elm.find('input[type="checkbox"], input[type="radio"]').length>0)
+		{
+			c.toggle(  elm.find(':checked').length > 0 );
+		}
+		if (elm.find('select').length>0)
+		{
+			c.toggle( elm.find('select').val() != '' );
+		}
+		if (elm.find('input[type="text"]').length>0)
+		{
+			var f = false;
+			elm.find('input[type="text"]').each(function(){
+				if (jQuery(this).val() != jQuery(this).attr('data-default')) f = true;
+			});
+			c.toggle( f );
+		}
+	}
+	{% endblock %}
+{% endset %}
+{% do widget.application.addHeadString( "<script>#{script}</script>" ) %}

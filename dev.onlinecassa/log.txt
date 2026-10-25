@@ -1,0 +1,39 @@
+* Hostname was found in DNS cache
+* Hostname in DNS cache was stale, zapped
+*   Trying 217.6.60.45...
+* Connected to catalog.mahle-aftermarket.com (217.6.60.45) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: none
+  CApath: /etc/ssl/certs
+* SSL connection using TLSv1.0 / AES128-SHA
+* Server certificate:
+* 	 subject: C=DE; L=Stuttgart; O=MAHLE International GmbH; OU=FIG4.3; CN=catalog.mahle-aftermarket.com
+* 	 start date: 2017-12-12 00:00:00 GMT
+* 	 expire date: 2019-01-26 12:00:00 GMT
+* 	 subjectAltName: catalog.mahle-aftermarket.com matched
+* 	 issuer: C=US; O=DigiCert Inc; CN=DigiCert Global CA G2
+* 	 SSL certificate verify ok.
+> GET /eu/ HTTP/1.1
+Host: catalog.mahle-aftermarket.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+
+< HTTP/1.1 200 OK
+< Content-Type: text/html;charset=UTF-8
+< Content-Encoding: gzip
+< Vary: Accept-Encoding
+* Server Microsoft-IIS/7.0 is not blacklisted
+< Server: Microsoft-IIS/7.0
+< Set-Cookie: oam.Flash.RENDERMAP.TOKEN=ww0kvif92; Path=/; Secure; HttpOnly
+< Set-Cookie: JSESSIONID=848C9BC56B896CA33E3862593894D538; Path=/eu/; Secure; HttpOnly
+< Access-Control-Allow-Origin: *
+< X-Frame-Options: SAMEORIGIN
+< Date: Thu, 07 Jun 2018 14:08:54 GMT
+< Content-Length: 9831
+< 
+* Connection #0 to host catalog.mahle-aftermarket.com left intact

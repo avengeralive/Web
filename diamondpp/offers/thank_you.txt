@@ -1,0 +1,65 @@
+<?php
+$params = [
+	'clientname' => $_POST['name'],
+	'phone' => $_POST['phone'],
+	'key' => '{key}',
+	'stream' => {stream},
+	'ip' => $_SERVER['REMOTE_ADDR'],
+	'referer' => $_POST['referer'],
+	'sub1' => $_POST['subid1'],
+	'sub2' => $_POST['subid2'],
+	'sub3' => $_POST['subid3'],
+];
+
+$url = "https://api.avaleads.pro/v1/order/";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_REFERER, $_SERVER['HTTP_REFERER']);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+$return= curl_exec($ch);
+curl_close($ch);
+$arr = json_decode($return, true);
+if ($arr['status'] == 400){
+	echo $arr['error'];
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Ваша заявка принята</title>
+  <meta charset="UTF-8"/>
+  <link rel="icon" href="data:image/png;base64,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" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<style>
+body { font-famaly: 'PT Sans';}a:hover { text-decoration: none;}#nav-container { padding: 10px 30px;}#nav-container a { font-size: 16px;}#nav-container a:hover { cursor: pointer; color: red;}/* Portrait tablets and small desktops */@media (min-width: 768px) and (max-width: 991px) { #nav-container a { font-size: 14px; }}/* Landscape phones and portrait tablets */@media (min-width: 577px) and (max-width: 767px) { #nav-container a { font-size: 10px; }}@media (max-width: 576px) { #nav-container a { font-size: 10px; }}#congratulation-container { border: 2px solid #e6e6e6; border-radius: 4px; margin-top: 40px; margin-bottom: 50px; padding: 30px;}.red-color { color: #ff0000;}.grey-color { color: #919191;}.back-dark { background: #393939; -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75); box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);}.color-white { color: white;}
+</style>
+</head>
+<body>
+
+<div class="container-fluid back-dark" id="nav-container">
+  <div class="row">
+    <div class="col-xs-8">
+      <a onclick="history.back(); return false;" style="cursor: pointer;" class="color-white">
+        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+        Вернуться и посмотреть
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12" id="congratulation-container">
+        <h1 class="text-center">Спасибо, заявка принята!</h1>
+	    <h3 class="text-center">Наш менеджер свяжется с вами в течение 15 мин.</h3>
+    </div>
+  </div>
+</div>
+</body>
+</html>

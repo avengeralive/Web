@@ -1,0 +1,42 @@
+{{ header }}
+<div class="container">
+	<ul class="breadcrumb">
+		{% for breadcrumb in breadcrumbs %}
+			<li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+		{% endfor %}
+	</ul>
+	<div class="row">{{ column_left }}
+		{% if column_left  and  column_right %}
+			{% set class = 'col-sm-6' %}
+		{% elseif  column_left  or  column_right %}
+			{% set class = 'col-sm-9' %}
+		{% else %}
+			{% set class = 'col-sm-12' %}
+		{% endif %} 
+		<div id="content" class="{{ class }}">{{ content_top }}
+			<h1 class="gallery-title" style="font-family: {{ heading_title_font }} ; font-size: {{ heading_title_size }}px;">{{ heading_title }}</h1>
+			{% if albums %}
+			<div class="row ">
+				<div class="og-container">
+					{% for album in albums %}
+					<div class="og-album {{ apr }} col-xs-12" style="height:{{ og_album_height }}px;">
+						<div class="og-album-{{ og_album_image_type }}-{{ og_album_size }}">
+								<a href="{{ album.href }}"><img src="{{ album.thumb }}" title="{{ album.name }}" alt="{{ album.name }}"/></a>
+						</div>
+						<p><a href="{{ album.href }}" style="font-family: {{ title_font }} ; font-size: {{ title_size }}px; {% if og_title_font_weight %} {{ 'font-weight: bold;' }} {% endif %}">{{ album.name }}</a></p>
+						
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center">{{ pagination }}</div>
+			</div>
+			{% endif %}
+			{% if not albums %}
+				<p>{{ text_empty }}</p>
+			{% endif %}
+			{{ content_bottom }}</div>
+		{{ column_right }}</div>
+</div>
+{{ footer }}

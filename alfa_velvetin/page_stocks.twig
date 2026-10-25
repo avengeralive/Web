@@ -1,0 +1,16 @@
+{% extends layout %}
+
+{% block main %}
+
+<div class="row">
+	<div class="large-16 columns large-centered">
+        <h5 class="individual" style="margin-bottom: 0px !important;">Акции</h5>
+    </div>
+      <div class="columns">
+  <hr class="individual-hr" style="margin-bottom: 0px !important;">
+</div>
+      <div class="large-16 columns large-centered text-center stocks">
+        {% widget 'List' with {order: 'tag',sort: 'ASC', limit: 0, template: 'stocks.twig', catalog: 477} %}
+      </div>
+    </div>
+{% endblock %}

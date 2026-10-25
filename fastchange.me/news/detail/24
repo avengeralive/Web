@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+    content="Fast CHANGE | Сервис быстрых обменов валют">
+    <title>FAST CHANGE | Сервис быстрых обменов валют</title>
+    <meta name="keywords"
+    content="Fast CHANGE | Сервис быстрых обменов валют">
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/css_all_site.css?v=23" type="text/css">
+</head>
+<body>
+    <script type="text/javascript">
+        var csrfName = 'csrf_fast',
+        csrfHash = 'e5a99604c3404c3383588db8eef5e222';
+    </script>
+
+    <div style="display: none;">
+        <div class="box-modal" id="info_popup">
+            <div class="box-modal_close arcticmodal-close"></div>
+            <div id="info_title_popup" class="for_pop_h1">Уведомление</div>
+            <div class="popup_content">
+                <div id="info_text_popup"></div>
+                <a class="popup_a_all close_modal">Продолжить</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <div class="box-modal" id="error_modal_text">
+            <div class="box-modal_close arcticmodal-close"></div>
+            <div id="err_title_popup" class="for_pop_h1 err">Ошибка ввода</div>
+            <div class="popup_content">
+                <div class="text">
+                </div>
+                <a class="close_modal popup_a_all">Закрыть уведомление</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="display: none;">
+        <div class="box-modal" id="error_modal_two">
+            <div class="box-modal_close arcticmodal-close"></div>
+            <div id="err_title_popup" class="for_pop_h1 err">Ошибка ввода</div>
+            <div class="popup_content">
+                <div class="text">
+                </div>
+                <a class="this_close_modal popup_a_all">Закрыть уведомление</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <div class="box-modal" id="exit_cabinet">
+            <div class="box-modal_close arcticmodal-close"></div>
+            <div id="info_title_popup" class="for_pop_h1">Уведомление</div>
+            <div class="popup_content">
+                <p>Вы действительно хотите выйти?</p>
+                <a class="popup_a_all close_modal" href="https://fastchange.me/login/logout">Продолжить</a>
+                <a class="close_modal">Отмена</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <div class="box-modal" id="verification_wait">
+            <div class="box-modal_close arcticmodal-close"></div>
+            <form id="load_img_vetyfication" style="overflow: hidden;">
+                <input type="hidden" name="csrf_fast" value="e5a99604c3404c3383588db8eef5e222" />
+                <h2 style="text-align: center;" class="loader">Ожидание верификации карты</h2>
+                <div id="loading_img">
+                    <img src="/img/preloader.gif" alt="loading veryfication">
+                </div>
+                <div class="timer_container"><span class="timer_add_application">Уважаемый клиент! Верификация длится не более 5 минут. Благодарим Вас за ожидание.</span></div>
+            </form>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <div class="box-modal" id="video_o_nas">
+            <div class="box-modal_close arcticmodal-close"></div>
+            <div class="iframe_video"></div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="container">
+            <div class="clearfix">
+                <div id="kartinka_dliya_menu" class="menu_palki-krestik">
+                    <span></span>
+                </div>
+                <div class="logo_info">
+                    <a id="logo" href="/">
+                        <img src="https://fastchange.me/img/svg-icons/fastchange-logo.svg" alt="Быстрый обмен валют - FastChange">
+                    </a>
+                    <a class="login_mobile" href="https://fastchange.me/login/"></a>
+                    <div class="triger">Сервис качеcтвенных и быстрых обменов валют 24/7</div>
+                </div>
+                <div class="menu_head">
+                    <ul id='head_menu' class='clearfix'><li class="video_o_nas"></li><li><a href="https://fastchange.me/partners">Партнерам</a></li><li><a href="https://fastchange.me/news">Новости</a></li><li><a href="https://fastchange.me/faq">Пользователям</a></li><li><a href="https://fastchange.me/kontakts">Контакты</a></li><li class="logo"><a id="logo" href="/"><img src="/img/logo.png" alt="Быстрый обмен валют - FastChange"></a></li></ul>                    <div class="video_o_nas video_o_nas1"><span></span><a class="video_o_nas">Посмотреть видео о нас</a></div>
+                </div>
+
+                <script type="application/javascript">
+                    function exit_menu(){
+                        $('#exit_cabinet').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                    }
+                </script>
+                <div class="head_login clearfix">
+                                            <div class="email_login"><a href="https://fastchange.me/login/">Авторизация</a></div>
+                                    </div>
+
+            </div>
+            <div id="alerts">
+                            </div>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <div class="box-modal" id="rezerv_window">
+            <div class="box-modal_close arcticmodal-close"></div>
+            <div class="for_pop_h1">Пополнить резерв</div>
+            <div class="popup_content">
+                <p style="text-align: center;">Для того, чтобы пополнить резерв, введите <br> ваш e-mail и необходимую сумму.</p>
+                <form id="rezerv_form" class="rezerv_form" method="POST" action="/front/rezerv_add">
+                    <input type="hidden" name="csrf_fast" value="e5a99604c3404c3383588db8eef5e222" />
+                    <input type="hidden" name="bank_rezerv" id="bank_rez" value="">
+                    <ul class="regist_ul">
+                        <li class="inputs koshelek">
+                            <span class="span_txt">E-MAIL</span>
+                            <input type="text" required="required" name="mail_rezerv" value="" placeholder="E-mail">
+                        </li>
+                        <li class="inputs email">
+                            <span class="span_txt">Сумма</span>
+                            <input type="text" required="" name="summ_rezerv" value="" placeholder="Необходимая сумма">
+                        </li>
+                        <li class="inputs captha">
+                            <span class="span_txt">КАПЧА</span>
+                            <div id="captha_img">
+                                <div id="cap_img2" class="cap_img"></div>
+                                <span id="upd_capth2"></span>
+                            </div>
+                            <input type="text" required="" name="captcha2" autocomplete="off" value="">
+                        </li>
+                        <li class="inputs submit">
+                            <input type="submit" value="Пополнить резерв">
+                            <a class="close_modal">Отмена пополнения</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div><div class="gray_box2">
+    <div class="page_head news">
+        <h1><span></span>Новости сервиса fast change</h1>
+    </div>
+</div>
+
+<div class="container clearfix">
+    <div class="page_content">
+        <div class="main_content">
+            <div class="back"><span></span><a href="https://fastchange.me/news">Вернуться назад к новостям</a></div>
+            <div class="news_content">
+                <div class="date">2016-10-14</div>
+                <div class="h1">Сотрудничество с мониторингом CheckExchange!</div>
+                <div class="txt">
+                    <p>Теперь наши курсы сравнивать с другими обменниками можно в мониторинге Check Exchange. Для этого вы можете зайти на мониторинг и задать интересующие Вас направления, а затем  выбрать самое выгодное.</p>                    <img src="/uploads/news/73e620b01c345f4941fd9d63ce1b75b9.png"
+                                                                       class="img_news_detail"
+                                                                       alt="Обменный сервис Fast Change, Сотрудничество с мониторингом CheckExchange!"/>                </div>
+            </div>
+        </div>
+        <div class="last_content">
+            <div class="prew_next">
+                <span>Новости: </span>
+                                    <a href="https://fastchange.me/news/detail/20" class="prew">Предыдущая</a> |
+                                                    <a href="https://fastchange.me/news/detail/25" class="next">Следующая</a>
+                            </div>
+        </div>
+    </div>
+    <div class="sidebar"><a href="/" class="btny">Начать обмен</a><div class="otziv_na_forumah"><h3>Отзывы на форумах</h3><ul><li><a target='_blank' href='http://mmgp.ru/showthread.php?t=442799&page=1#post10728824'>mmgp.ru</a></li><li><a target='_blank' href='https://forum.bits.media/index.php?/topic/19745-fastchangecc-cervis-kachestvennykh-i-bystrykh-obmenov-valiut/'>forum.bits.media</a></li><li><a target='_blank' href='https://bitcointalk.org/index.php?topic=1331529.0'>bitcointalk.org</a></li></ul></div><div class="side_partners"><h3>Наши партнеры</h3><div class="side_pod_title">Мы принимаем</div><a target='_blank' class='side_img per_side' href='https://perfectmoney.is/business-partners.html'></a><a target='_blank' class='side_img adv_side' href='http://advcash.com/about/exchange/'></a><a target='_blank' class='side_img pay_side' href='https://payeer.com/ru/'></a></div><div class="soc_icon">
+			<div class="mi_v_soc_set">Мы в социальных сетях:</div>
+			<div class="soc_set_icon">
+				<a target="_blank" href="http://vk.com/fast_change" class="vk"></a>
+			</div>
+		</div></div></div><div class="block_foot_crut">
+    <div class="container clearfix">
+        <div class="main_slider_1">
+            <div class="col-md-4">
+                <span></span>
+                <div class="crut_title">выгодный обмен 24/7</div>
+                <div class="crut_txt">Качественно меняем валюту онлайн <br>вот уже на протяжении 2 лет.</div>
+            </div>
+            <div class="col-md-4">
+                <span></span>
+                <div class="crut_title">надежность на пределе</div>
+                <div class="crut_txt">Сомневаетесь? Что-то пошло не так, мы всегда<br>вернем Вам деньги. Помните об этом.</div>
+            </div>
+            <div class="col-md-4">
+                <span></span>
+                <div class="crut_title">быстрый обмен до 7 мин.</div>
+                <div class="crut_txt">Нас любят не только за надежность и лучший<br>курс, но и за быстрый обмен.</div>
+            </div>
+        </div>
+        <div class="main_slider_2">
+            <div class="col-md-4">
+                <span></span>
+                <div class="crut_title">450 направлений обмена</div>
+                <div class="crut_txt">Совершаем обмены в самых популярных направлениях.<br> Вы всегда сможете обменять свои средства.</div>
+            </div>
+            <div class="col-md-4">
+                <span></span>
+                <div class="crut_title">100% гарантия обмена</div>
+                <div class="crut_txt">Многочисленные положительные отзывы<br> подтверждают высокое качество нашей работы.</div>
+            </div>
+            <div class="col-md-4">
+                <span></span>
+                <div class="crut_title">экономичный обмен</div>
+                <div class="crut_txt">У нас всегда лояльные курсы.<br> Мы всегда открыты к сотрудничеству, обращайтесь.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="col-md-4 copyright">
+            © Сервис мгновенного обмена валюты Fast Change.<br>
+            Все права защищены. Copyright © 2018
+        </div>
+        <div class="col-md-4 soc_icon">
+            <div class="mi_v_soc_set">Мы в социальных сетях:</div>
+            <div class="soc_set_icon">
+                <a target="_blank" href="http://vk.com/fast_change" class="vk"></a>
+                <!--<a href="" class="fb"></a>
+                <a href="" class="tw"></a>
+                <a href="" class="yo"></a>-->
+            </div>
+        </div>
+        <div class="col-md-4 mini_menu">
+            <div class="aaaa">
+                <a href="/exchange_rules">Условия обмена</a>
+            </div>
+            <!--<div class="aaaa">
+                <a href="">Карта сайта</a>
+            </div>-->
+            <div class="aaaa">
+                <a href="/kontakts">Контакты</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/js/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/jquery.arcticmodal-0.3.min.js"></script>
+<script src="/js/fileupload.js"></script>
+<script src="/js/common_script.js?v=21"></script>
+
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+    (function () {
+        var widget_id = '73GUhn72xi';
+        var d = document;
+        var w = window;
+
+        function l() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//code.jivosite.com/script/widget/' + widget_id;
+            var ss = document.getElementsByTagName('script')[0];
+            ss.parentNode.insertBefore(s, ss);
+        }
+
+        if (d.readyState == 'complete') {
+            l();
+        } else {
+            if (w.attachEvent) {
+                w.attachEvent('onload', l);
+            } else {
+                w.addEventListener('load', l, false);
+            }
+        }
+    })();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter39193480 = new Ya.Metrika({
+                    id: 39193480,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    trackHash: true
+                });
+            } catch (e) {
+            }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

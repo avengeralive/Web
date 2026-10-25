@@ -1,0 +1,727 @@
+  <!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+	<link rel="shortcut icon" href="http://effortthemes.com/wp/spring/wp-content/themes/spring/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="http://effortthemes.com/wp/spring/wp-content/themes/spring/images/favicon.ico" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Home Version Three &#8211; Spring</title>
+<link rel='dns-prefetch' href='//maps.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Spring &raquo; Feed" href="http://effortthemes.com/wp/spring/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Spring &raquo; Comments Feed" href="http://effortthemes.com/wp/spring/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/effortthemes.com\/wp\/spring\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.6"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://effortthemes.com/wp/spring/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='http://effortthemes.com/wp/spring/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.7' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='bootstrap-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/bootstrap.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/font-awesome.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-icons-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/themify-icons.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='linear-icons-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/linear-icons.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/animate.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/owl.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/jquery.fancybox.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='spring-main-style-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/style.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='spring-custom-style-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/custom.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='spring-responsive-css'  href='http://effortthemes.com/wp/spring/wp-content/themes/spring/css/responsive.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='arctica-theme-slug-fonts-css'  href='https://fonts.googleapis.com/css?family=Heebo%3A300%2C400%2C500%2C700%2C800%2C900&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='kc-general-css'  href='http://effortthemes.com/wp/spring/wp-content/plugins/kingcomposer/assets/frontend/css/kingcomposer.min.css?ver=2.6.17' type='text/css' media='all' />
+<link rel='stylesheet' id='kc-animate-css'  href='http://effortthemes.com/wp/spring/wp-content/plugins/kingcomposer/assets/css/animate.css?ver=2.6.17' type='text/css' media='all' />
+<link rel='stylesheet' id='kc-icon-1-css'  href='http://effortthemes.com/wp/spring/wp-content/plugins/kingcomposer/assets/css/icons.css?ver=2.6.17' type='text/css' media='all' />
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.7'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.7'></script>
+<script type='text/javascript' src='http://maps.google.com/maps/api/js?key=AIzaSyBhRfpxP8pyckIWC0eq7vMnEBI5_wGar3k&#038;ver=4.9.6'></script>
+<link rel='https://api.w.org/' href='http://effortthemes.com/wp/spring/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://effortthemes.com/wp/spring/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://effortthemes.com/wp/spring/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.6" />
+<link rel="canonical" href="http://effortthemes.com/wp/spring/home-version-three/" />
+<link rel='shortlink' href='http://effortthemes.com/wp/spring/?p=22' />
+<link rel="alternate" type="application/json+oembed" href="http://effortthemes.com/wp/spring/wp-json/oembed/1.0/embed?url=http%3A%2F%2Feffortthemes.com%2Fwp%2Fspring%2Fhome-version-three%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://effortthemes.com/wp/spring/wp-json/oembed/1.0/embed?url=http%3A%2F%2Feffortthemes.com%2Fwp%2Fspring%2Fhome-version-three%2F&#038;format=xml" />
+<script type="text/javascript">var kc_script_data={ajax_url:"http://effortthemes.com/wp/spring/wp-admin/admin-ajax.php"}</script>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by Slider Revolution 5.4.7 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(e){
+				document.addEventListener("DOMContentLoaded", function() {
+					try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+						if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+					}catch(d){console.log("Failure at Presize of Slider:"+d)}
+				});
+			};</script>
+<script type="text/javascript"></script><style type="text/css" id="kc-css-general">.kc-off-notice{display: inline-block !important;}.kc-container{max-width:1170px;}</style><style type="text/css" id="kc-css-render"></style></head>
+<body class="page-template page-template-tpl-king_composer_three page-template-tpl-king_composer_three-php page page-id-22 kingcomposer kc-css-system">
+
+<div class="page-wrapper">
+ 	
+     	
+    <!-- Main Header-->
+    <header class="main-header alternate">
+    	
+        <!-- Main Box -->
+    	<div class="main-box">
+        	<div class="auto-container">
+            	<div class="outer-container clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box">
+                                                    <div class="logo"><a href="http://effortthemes.com/wp/spring/"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/logo.png" alt="Spring" title="Spring"></a></div>
+                                            </div>
+                    
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                        
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->    	
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse scroll-nav clearfix">
+                                <ul class="navigation clearfix">
+                                    <li id="menu-item-254" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-254 dropdown current"><a title="Home" href="#banner" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Home</a>
+<ul role="menu" class="dropdown">
+	<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-253"><a title="Home Version One" href="http://effortthemes.com/wp/spring/">Home Version One</a></li>
+	<li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a title="Home Version Two" href="http://effortthemes.com/wp/spring/home-version-two/">Home Version Two</a></li>
+	<li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-22 current_page_item menu-item-251 active"><a title="Home Version Three" href="http://effortthemes.com/wp/spring/home-version-three/">Home Version Three</a></li>
+	<li id="menu-item-250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a title="Home Version Four" href="http://effortthemes.com/wp/spring/home-version-four/">Home Version Four</a></li>
+</ul>
+</li>
+<li id="menu-item-257" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a title="Services" href="#services" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Services</a></li>
+<li id="menu-item-258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-258"><a title="Feature" href="#features" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Feature</a></li>
+<li id="menu-item-259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259"><a title="Overview" href="#overview" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Overview</a></li>
+<li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-260"><a title="Download" href="#download" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Download</a></li>
+<li id="menu-item-256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-256 dropdown"><a title="Blog" href="#news-section" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Blog</a>
+<ul role="menu" class="dropdown">
+	<li id="menu-item-248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-248"><a title="Blog Grid View" href="http://effortthemes.com/wp/spring/blog-grid-view/">Blog Grid View</a></li>
+	<li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a title="Our Blog" href="http://effortthemes.com/wp/spring/our-blog/">Our Blog</a></li>
+	<li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255"><a title="Blog Single" href="http://effortthemes.com/wp/spring/2018/04/excepteur-sint-occaecat-cupidatat-16/">Blog Single</a></li>
+</ul>
+</li>
+                                   
+                                 </ul>
+                            </div>
+                            
+                        </nav>
+                        <!-- Main Menu End-->
+                        
+                                                <!--Other Links-->
+                        <div class="other-links">
+                        	<a href="#" class="theme-btn btn-style-one">Contact Us</a>
+                        </div>
+                                                
+                    </div>
+                    <!--Nav Outer End-->
+                    
+            	</div>    
+            </div>
+        </div>
+    
+    </header>
+    <!--End Main Header -->    <div class="kc_clfw"></div><section class="kc-elm kc-css-329692 kc_row"><div class="kc-row-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-492807 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"><!--Main Banner / Banner Three-->
+<section class="main-banner banner-three" id="banner" style="background-image:url('http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/banner-bg-3.png');">
+    <!--Image Layer-->
+    <div class="image-layer" style="background-image:url('http://effortthemes.com/wp/spring/wp-content/uploads/2018/05/banner-image-1.png')"></div>
+    
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Text Column-->
+            <div class="text-column col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                <div class="inner">
+                    <h2>Manage all of you stuff using one app Solution.</h2>
+                    <p>labore et dolore magna aliqua. Ut eniminim veniam, the exercitation ullamco laboris commodo.</p>
+                    <div class="links-box clearfix"><a href="#" class="theme-btn btn-style-one">Download</a> <a href="#" class="theme-btn btn-style-five">Lean more</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<!--End Main Banner--></div></div></div></div></section><section class="kc-elm kc-css-455760 kc_row"><div class="kc-row-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-127461 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"> 
+   
+
+<!--What We Offer-->
+<section class="what-we-offer" id="services">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Text Column-->
+            <div class="text-column col-md-5 col-sm-12 col-xs-12">
+                <div class="inner">
+                    <h2>We offer your needs</h2>
+                    <div class="text">The standard chunk of Lorem Ipsum useds since the 1500s is reproduced below form those this interested. Sections this 1.10.32 and apps API 1.10.33 from Finibus Bonorum.</div>
+                </div>
+            </div>
+            
+            <!--Features Column-->
+            <div class="features-column col-md-7 col-sm-12 col-xs-12">
+                <div class="inner">
+                    <div class="row clearfix">
+                    	                        <!--Service Style Two-->
+                        <div class="service-style-two col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <div class="icon"><figure class="image"><img width="24" height="30" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-18.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" /></figure></div>
+                                <h3><a href="#">Advance Protection</a></h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority.</div>
+                            </div>
+                        </div>
+                                                <!--Service Style Two-->
+                        <div class="service-style-two col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <div class="icon"><figure class="image"><img width="34" height="30" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-19.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" /></figure></div>
+                                <h3><a href="#">Your Data in Cloud</a></h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority.</div>
+                            </div>
+                        </div>
+                                                <!--Service Style Two-->
+                        <div class="service-style-two col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <div class="icon"><figure class="image"><img width="30" height="30" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-20.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" /></figure></div>
+                                <h3><a href="#">24/7 Support</a></h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority.</div>
+                            </div>
+                        </div>
+                                                <!--Service Style Two-->
+                        <div class="service-style-two col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <div class="icon"><figure class="image"><img width="30" height="30" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-21.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" /></figure></div>
+                                <h3><a href="#">Exclusive Design</a></h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority.</div>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+</div></div></div></div></section><section class="kc-elm kc-css-406426 kc_row"><div class="kc-row-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-834044 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"><!--Key Features Section-->
+<section class="key-features-section" id="features">
+    <div class="auto-container">
+        <!--Heading-->
+        <div class="sec-title-two alternate centered">
+            <h2>Key Feature</h2>
+            <div class="desc-text">The standard chunk of Lorem Ipsum useds since the 1500s is reproduced below form those</div>
+        </div>
+                <!--Key Feature-->
+        <div class="key-feature image-right">
+            <div class="row clearfix">
+                <!--Text Column-->
+                <div class="text-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner">
+                        <h3>Your app activity count</h3>
+                        <div class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</div>
+                        <div class="more-link-one"><a href="#">See more <span class="icon ti-arrow-circle-right"></span></a></div>
+                    </div>
+                </div>
+                <!--Image Column-->
+                <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner">
+                        <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-8.png" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!--Key Feature-->
+        <div class="key-feature image-left">
+            <div class="row clearfix">
+                <!--Text Column-->
+                <div class="text-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner">
+                        <h3>Real time tracking</h3>
+                        <div class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</div>
+                        <div class="more-link-one"><a href="#">See more <span class="icon ti-arrow-circle-right"></span></a></div>
+                    </div>
+                </div>
+                <!--Image Column-->
+                <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner">
+                        <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-9.png" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!--Key Feature-->
+        <div class="key-feature image-right">
+            <div class="row clearfix">
+                <!--Text Column-->
+                <div class="text-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner">
+                        <h3>Social comment activity</h3>
+                        <div class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</div>
+                        <div class="more-link-one"><a href="#">See more <span class="icon ti-arrow-circle-right"></span></a></div>
+                    </div>
+                </div>
+                <!--Image Column-->
+                <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner">
+                        <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-8.png" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+</section></div></div></div></div></section><section class="kc-elm kc-css-910539 kc_row"><div class="kc-row-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-75978 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"><!--Overview Section-->
+<section class="review-section" id="overview">
+    <div class="auto-container">
+        
+        <!--Heading-->
+        <div class="sec-title-two centered">
+            <h2>Take a quick overview</h2>
+            <div class="desc-text">The standard chunk of Lorem Ipsum useds since the 1500s is reproduced below form those</div>
+        </div>
+        
+        <div class="review-tabs tabs-box">
+            <!--Buttons-->
+            <div class="buttons-box">
+                <ul class="tab-buttons clearfix">
+                                        <li class="tab-btn active-btn" data-tab="#tab-1">Modern Design</li>
+                                        <li class="tab-btn " data-tab="#tab-2">Friendly Use</li>
+                                        <li class="tab-btn " data-tab="#tab-3">Face ID</li>
+                                        <li class="tab-btn " data-tab="#tab-4">Wireless Charging</li>
+                                        <li class="tab-btn " data-tab="#tab-5">New Sensor</li>
+                                    </ul>
+            </div>
+            
+            <!--Tabs Content-->
+            <div class="tabs-content">
+                                <!--Tab / Active tab-->
+                <div class="tab active-tab" id="tab-1">
+                    <div class="row clearfix">
+                        <!--Image Column-->
+                        <div class="image-column col-md-4 col-sm-4 col-xs-12">
+                            <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-11.png" alt=""></figure>
+                        </div>
+                        <!--Text Column-->
+                        <div class="text-column col-md-8 col-sm-8 col-xs-12">
+                            <div class="inner">
+                                <div class="icon"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-22.png" alt=""></div>
+                                <h3>Modern Design</h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority. Many museu are transforming thanks to echnology. They are adding interactivity and magic to the visitorer experience. Estimote Beacons have helped the Guggenheim in New York to be at the forefront of this process. The club uses Estimote Beacons to transform the in-stadium experience for its guests.</div>
+                                <div class="more-link-one"><a href="#">See More <span class="icon ti-arrow-circle-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <!--Tab / Active tab-->
+                <div class="tab " id="tab-2">
+                    <div class="row clearfix">
+                        <!--Image Column-->
+                        <div class="image-column col-md-4 col-sm-4 col-xs-12">
+                            <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-11.png" alt=""></figure>
+                        </div>
+                        <!--Text Column-->
+                        <div class="text-column col-md-8 col-sm-8 col-xs-12">
+                            <div class="inner">
+                                <div class="icon"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-22.png" alt=""></div>
+                                <h3>Friendly Use</h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority. Many museu are transforming thanks to echnology. They are adding interactivity and magic to the visitorer experience. Estimote Beacons have helped the Guggenheim in New York to be at the forefront of this process. The club uses Estimote Beacons to transform the in-stadium experience for its guests.</div>
+                                <div class="more-link-one"><a href="#">See More <span class="icon ti-arrow-circle-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <!--Tab / Active tab-->
+                <div class="tab " id="tab-3">
+                    <div class="row clearfix">
+                        <!--Image Column-->
+                        <div class="image-column col-md-4 col-sm-4 col-xs-12">
+                            <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-11.png" alt=""></figure>
+                        </div>
+                        <!--Text Column-->
+                        <div class="text-column col-md-8 col-sm-8 col-xs-12">
+                            <div class="inner">
+                                <div class="icon"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-22.png" alt=""></div>
+                                <h3>Face ID</h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority. Many museu are transforming thanks to echnology. They are adding interactivity and magic to the visitorer experience. Estimote Beacons have helped the Guggenheim in New York to be at the forefront of this process. The club uses Estimote Beacons to transform the in-stadium experience for its guests.</div>
+                                <div class="more-link-one"><a href="#">See More <span class="icon ti-arrow-circle-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <!--Tab / Active tab-->
+                <div class="tab " id="tab-4">
+                    <div class="row clearfix">
+                        <!--Image Column-->
+                        <div class="image-column col-md-4 col-sm-4 col-xs-12">
+                            <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-11.png" alt=""></figure>
+                        </div>
+                        <!--Text Column-->
+                        <div class="text-column col-md-8 col-sm-8 col-xs-12">
+                            <div class="inner">
+                                <div class="icon"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-22.png" alt=""></div>
+                                <h3>Wireless Charging</h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority. Many museu are transforming thanks to echnology. They are adding interactivity and magic to the visitorer experience. Estimote Beacons have helped the Guggenheim in New York to be at the forefront of this process. The club uses Estimote Beacons to transform the in-stadium experience for its guests.</div>
+                                <div class="more-link-one"><a href="#">See More <span class="icon ti-arrow-circle-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <!--Tab / Active tab-->
+                <div class="tab " id="tab-5">
+                    <div class="row clearfix">
+                        <!--Image Column-->
+                        <div class="image-column col-md-4 col-sm-4 col-xs-12">
+                            <figure class="image"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/featured-image-11.png" alt=""></figure>
+                        </div>
+                        <!--Text Column-->
+                        <div class="text-column col-md-8 col-sm-8 col-xs-12">
+                            <div class="inner">
+                                <div class="icon"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/icon-22.png" alt=""></div>
+                                <h3>New Sensor</h3>
+                                <div class="text">There are many variations of passages of Lorem Ipsume available, but the majority. Many museu are transforming thanks to echnology. They are adding interactivity and magic to the visitorer experience. Estimote Beacons have helped the Guggenheim in New York to be at the forefront of this process. The club uses Estimote Beacons to transform the in-stadium experience for its guests.</div>
+                                <div class="more-link-one"><a href="#">See More <span class="icon ti-arrow-circle-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+        </div>
+        
+    </div>
+</section></div></div></div></div></section><section class="kc-elm kc-css-301667 kc_row"><div class="kc-row-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-318023 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"> 
+   
+
+<!--Testimonials Section Two-->
+<section class="testimonials-two" id="testimonials">
+    <div class="auto-container">
+        <!--Heading-->
+        <div class="sec-title-two centered">
+            <h2>What customer says</h2>
+            <div class="desc-text">Grow your traffic and draw customers to your business We couldn't put it better than our users.</div>
+        </div>
+        
+        <div class="testimonial-style-two owl-theme owl-carousel">
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                        <!--Slide Item-->
+            <div class="slide-item">
+                <div class="inner">
+                    <div class="quote-icon"></div>
+                    <div class="text">Since investing the time to learn good SEO strategies, using tool such as Traffic Travis, we have come to dominate our specific niche, event photography for the Asian community.</div>
+                    <div class="quote-info">
+                        <figure class="thumb img-circle"><img width="66" height="66" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg" class="img-circle wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1.jpg 66w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/author-thumb-1-60x60.jpg 60w" sizes="(max-width: 66px) 100vw, 66px" /></figure>
+                        <h4>David Ramirez</h4>
+                        <div class="designation">Envato Market</div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+    </div>
+</section>
+
+</div></div></div></div></section><section class="kc-elm kc-css-152906 kc_row"><div class="kc-row-container  kc-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-985226 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container">
+<!--Blog Section-->
+<section class="blog-section" id="news-section">
+    <div class="auto-container">
+        <!--Heading-->
+        <div class="sec-title-two centered">
+            <h2>Recent Blog</h2>
+            <div class="desc-text">Solution is an easy to use tool for eCommerce. <br>You can present your products.</div>
+        </div>
+        
+        <div class="row clearfix">
+                        <!--News Block-->
+            <div class="news-style-one col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <figure class="image-box"><a href="http://effortthemes.com/wp/spring/2018/03/excepteur-sint-occaecat-cupidatat/"><img width="360" height="220" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-1.jpg" class="attachment-spring_360x220 size-spring_360x220 wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-1.jpg 360w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-1-300x183.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" /></a></figure>
+                    <div class="lower-content">
+                        <div class="post-meta">Mar 31 2018 by admin</div>
+                        <h3><a href="http://effortthemes.com/wp/spring/2018/03/excepteur-sint-occaecat-cupidatat/">Excepteur sint occaecat cupidatat</a></h3>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore ...</div>
+                    </div>
+                </div>
+            </div>
+                        <!--News Block-->
+            <div class="news-style-one col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <figure class="image-box"><a href="http://effortthemes.com/wp/spring/2018/03/excepteur-sint-occaecat-cupidatat-2/"><img width="360" height="220" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-2.jpg" class="attachment-spring_360x220 size-spring_360x220 wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-2.jpg 360w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-2-300x183.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" /></a></figure>
+                    <div class="lower-content">
+                        <div class="post-meta">Mar 31 2018 by admin</div>
+                        <h3><a href="http://effortthemes.com/wp/spring/2018/03/excepteur-sint-occaecat-cupidatat-2/">Excepteur sint occaecat cupidatat</a></h3>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore ...</div>
+                    </div>
+                </div>
+            </div>
+                        <!--News Block-->
+            <div class="news-style-one col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <figure class="image-box"><a href="http://effortthemes.com/wp/spring/2018/03/excepteur-sint-occaecat-cupidatat-3/"><img width="360" height="220" src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-3.jpg" class="attachment-spring_360x220 size-spring_360x220 wp-post-image" alt="" srcset="http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-3.jpg 360w, http://effortthemes.com/wp/spring/wp-content/uploads/2018/03/blog-image-3-300x183.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" /></a></figure>
+                    <div class="lower-content">
+                        <div class="post-meta">Mar 31 2018 by admin</div>
+                        <h3><a href="http://effortthemes.com/wp/spring/2018/03/excepteur-sint-occaecat-cupidatat-3/">Excepteur sint occaecat cupidatat</a></h3>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore ...</div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+        
+        <div class="text-center wow tada" data-wow-delay="0ms" data-wow-duration="1500ms"><a href="#" class="theme-btn btn-style-seven">Go To Blog</a></div>
+        
+    </div>
+</section>
+
+</div></div></div></div></section><section class="kc-elm kc-css-316594 kc_row"><div class="kc-row-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-262809 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"><!--Get App Section-->
+<section class="get-app-section" id="download">
+    <div class="auto-container">
+        <!--Heading-->
+        <div class="sec-title-two centered">
+            <h2>Get The App</h2>
+            <div class="desc-text">Grow your traffic and draw customers to your business We couldn't put it better than our users.</div>
+        </div>
+        
+        <div class="links-outer">
+            <ul class="get-app-links clearfix">
+                                <li><a href="#" class="link-box"><div class="icon-box"><span class="icon"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/apple-icon.png" alt=""></span></div><span class="title">App Store</span><span class="text">Available on</span></a></li>
+            	                <li><a href="#" class="link-box"><div class="icon-box"><span class="icon"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/android-icon.png" alt=""></span></div><span class="title">Google Play</span><span class="text">Available on</span></a></li>
+            	            </ul>
+        </div>
+        
+    </div>
+</section></div></div></div></div></section>	
+    <div class="clearfix"></div>
+    
+    <!--Footer Style Three-->
+    <footer class="footer-style-three">
+        			                <!--Footer Upper-->
+                <div class="footer-upper">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+                            <div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"><div id="bunch_about_us-2"  class="column footer-widget widget_bunch_about_us">      		
+			<!--Footer Column-->
+            <div class="info-widget">
+                <div class="widget-inner">
+                    <div class="logo"><img src="http://effortthemes.com/wp/spring/wp-content/uploads/2018/04/footer-logo.png" alt=""></div>
+                    <ul class="info">
+                        <li><a href="info@solution.com">info@solution.com</a></li>
+                        <li><a href="+65-2545-57581">+65-2545-57581</a></li>
+                    </ul>
+                                        <div class="social-links">
+                        <ul class="clearfix">
+                            
+			<li><a title="Facebook" href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
+
+			<li><a title="Twitter" href="https://www.twitter.com/"><span class="fa fa-twitter"></span></a></li>
+
+			<li><a title="Instagram" href="https://www.instagram.com/"><span class="fa fa-instagram"></span></a></li>
+
+			<li><a title="Linkedin" href="https://www.linkedin.com/"><span class="fa fa-linkedin"></span></a></li>
+
+			<li><a title="Pinterest" href="https://www.pinterest.com/"><span class="fa fa-pinterest"></span></a></li>
+                        </ul>
+                    </div>
+                                    </div>
+			</div>
+            
+		</div></div><div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"><div id="text-4"  class="column footer-widget widget_text"><h3>Company</h3>			<div class="textwidget"><div class="links">
+<ul>
+<li><a class="scroll-to-target" href="#banner" data-target="#banner">Home</a></li>
+<li><a class="scroll-to-target" href="#services" data-target="#services">Services</a></li>
+<li><a class="scroll-to-target" href="#features" data-target="#features">Feature</a></li>
+<li><a class="scroll-to-target" href="#overview" data-target="#overview">Overview</a></li>
+<li><a class="scroll-to-target" href="#download" data-target="#download">Download</a></li>
+</ul>
+</div>
+</div>
+		</div></div><div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"><div id="bunch_footer_recent_post-3"  class="column footer-widget widget_bunch_footer_recent_post">		
+        <!-- Recent Posts -->
+        <div class="links-widget">
+            <div class="widget-inner">
+                <h3>Resources</h3>                <div class="links">
+                    <ul>
+                                
+           	<!-- Title -->
+			            	<li><a href="http://effortthemes.com/wp/spring/2018/04/excepteur-sint-occaecat-cupidatat-11/">Excepteur sint...</a></li>
+                        	<li><a href="http://effortthemes.com/wp/spring/2018/04/excepteur-sint-occaecat-cupidatat-10/">Excepteur sint...</a></li>
+                        	<li><a href="http://effortthemes.com/wp/spring/2018/04/excepteur-sint-occaecat-cupidatat-9/">Excepteur sint...</a></li>
+                        	<li><a href="http://effortthemes.com/wp/spring/2018/04/excepteur-sint-occaecat-cupidatat-8/">Excepteur sint...</a></li>
+                        	<li><a href="http://effortthemes.com/wp/spring/2018/04/excepteur-sint-occaecat-cupidatat-7/">Excepteur sint...</a></li>
+                    
+                            </ul>
+                </div>
+            </div>
+        </div>
+
+		</div></div><div class="footer-column col-lg-3 col-md-3 col-sm-6 col-xs-12"><div id="bunch_newsletter-2" class="column footer-widget widget_bunch_newsletter">      		
+			<!--newsletter Widget-->
+            <div class="newsletter-widget">
+                <div class="widget-inner">
+                    <h3><h3>Join Our Newsletter</h3></h3>
+                    <div class="text">There are many variations of passages of Lorem Ipsume available.</div>
+                    <form method="post" action="http://feedburner.google.com/fb/a/mailverify" accept-charset="utf-8">
+                        <div class="form-group">
+                            <input type="hidden" id="uri2" name="uri" value="themeforest">
+                            <input type="email" name="email-field" value="" placeholder="Email here...">
+                            <button type="submit"><span class="icon lnr lnr-arrow-right"></span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+		</div></div> 
+                        </div>	
+                    </div>
+                </div>
+                	        
+                <!--Footer Bottom-->
+        <div class="footer-bottom">
+        	<div class="auto-container">
+            	<div class="row clearfix">
+                	<div class="bottom-column col-md-6 col-sm-12 col-xs-12">
+                    	<div class="copyright">© 2018 Spring.com </div>
+                    </div>
+                    <div class="bottom-column col-md-6 col-sm-12 col-xs-12">
+                    	<div class="bottom-nav">
+                        	<ul class="clearfix">
+                            	<li id="menu-item-280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-280"><a title="Services" href="#services" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Services</a></li>
+<li id="menu-item-281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-281"><a title="Feature" href="#features" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Feature</a></li>
+<li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-282"><a title="Overview" href="#overview" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Overview</a></li>
+<li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-283"><a title="Download" href="#download" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Download</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </footer>
+    
+    
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/effortthemes.com\/wp\/spring\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.1'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/themes/spring/js/bootstrap.min.js?ver=4.9.6'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/themes/spring/js/pagenav.js?ver=4.9.6'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/themes/spring/js/jquery.scrollTo.js?ver=4.9.6'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/themes/spring/js/jquery.fancybox.pack.js?ver=4.9.6'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/themes/spring/js/owl.js?ver=4.9.6'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/themes/spring/js/wow.js?ver=4.9.6'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/themes/spring/js/script.js?ver=4.9.6'></script>
+<script type='text/javascript'>
+var spring_data = {"ajaxurl":"http:\/\/effortthemes.com\/wp\/spring\/wp-admin\/admin-ajax.php","nonce":"ec74b3446d"};
+var spring_data = {"ajaxurl":"http:\/\/effortthemes.com\/wp\/spring\/wp-admin\/admin-ajax.php","nonce":"ec74b3446d"};
+</script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-includes/js/comment-reply.min.js?ver=4.9.6'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-content/plugins/kingcomposer/assets/frontend/js/kingcomposer.min.js?ver=2.6.17'></script>
+<script type='text/javascript' src='http://effortthemes.com/wp/spring/wp-includes/js/wp-embed.min.js?ver=4.9.6'></script>
+</body>
+</html>

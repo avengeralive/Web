@@ -1,0 +1,311 @@
+var range_1 = document.getElementById('range_1');
+var range_2 = document.getElementById('range_2');
+var range_1_value = document.getElementById('range_1_value');
+var range_2_value = document.getElementById('range_2_value');
+var value_summ;
+var value_month;
+var average_income = 0.358;
+
+noUiSlider.create(range_1, {
+    start: [100000],
+    range: {
+        'min': 100000,
+        'max': 5000000
+    },
+    step: 50000,
+    format: wNumb({
+        decimals: 0,
+        thousand: ' '
+    }),
+    connect: 'lower'
+});
+
+range_1.noUiSlider.on('update', function(values, handle) {
+    range_1_value.innerHTML = values[handle];
+    value_summ = values[handle];
+    calculate();
+});
+
+noUiSlider.create(range_2, {
+    start: [1],
+    range: {
+        'min': 1,
+        'max': 24
+    },
+    format: wNumb({
+        decimals: 0,
+        thousand: ' '
+    }),
+    connect: 'lower'
+});
+
+range_2.noUiSlider.on('update', function(values, handle) {
+    range_2_value.innerHTML = values[handle];
+    value_month = values[handle];
+    calculate();
+});
+
+function nospace(str) {
+    var VResult = str.replace(/\s/g, '');
+    return VResult;
+}
+
+function roundPlus(x, n) { //x - число, n - количество знаков
+    if (isNaN(x) || isNaN(n)) return false;
+    var m = Math.pow(10, n);
+    return Math.round(x * m) / m;
+}
+
+function calculate() {
+
+    let investor_profit = 0;
+    let value_summ_number = Number(nospace(value_summ));
+
+    if (+value_month === 1) {
+        investor_profit = 0.25;
+    } else {
+        investor_profit = 0.50;
+    }
+
+    var value_resultProcent = 0;
+
+    for (i = 1; i <= value_month; i++) {
+        if (i === 1) {
+            value_resultProcent = value_resultProcent + average_income * 0.25;
+        } else {
+            value_resultProcent = value_resultProcent + average_income * investor_profit;
+        }
+
+    }
+
+    /*  console.log(
+     `${value_resultProcent} * 100 * ${value_month} - ${value_resultProcent} * 100 = ${roundPlus(value_resultProcent * 100 * value_month - value_resultProcent * 100, 2) + " %"}`
+     )
+
+     console.log(
+     `${value_summ_number} * ${value_resultProcent} * ${value_month}  - ${value_summ_number} * ${value_resultProcent}  = ${Math.round(value_summ_number * value_resultProcent * value_month - value_summ_number * value_resultProcent) + "  ₽"}`
+     )*/
+
+    $('.calculate__percent').text(roundPlus(value_resultProcent * 100, 2) + ' %');
+    $('.calculate__summ').text(Math.round(value_summ_number * value_resultProcent) + '  ₽');
+
+}
+
+var chartProcent;
+var chartMoney;
+var chartindex;
+
+$.getJSON('./json/charts.json', function(data) {
+    chartProcent = JSON.parse(data.chartProcent);
+    chartMoney = JSON.parse(data.chartMoney);
+    chart();
+});
+
+function chart() {
+    var ctx = document.getElementById('chart');
+    // var ctx2 = document.getElementById('chart2');
+    var customTooltips = function(tooltip) {
+        var tooltipEl = document.getElementById('chartjs-tooltip');
+        if (!tooltipEl) {
+            tooltipEl = document.createElement('div');
+            tooltipEl.id = 'chartjs-tooltip';
+            tooltipEl.innerHTML = '<table></table>';
+            this._chart.canvas.parentNode.appendChild(tooltipEl);
+        }
+        if (tooltip.opacity === 0) {
+            tooltipEl.style.opacity = 0;
+            return;
+        }
+        tooltipEl.classList.remove('above', 'below', 'no-transform');
+        if (tooltip.yAlign) {
+            tooltipEl.classList.add(tooltip.yAlign);
+        } else {
+            tooltipEl.classList.add('no-transform');
+        }
+
+        function getBody(bodyItem) {
+            return bodyItem.lines;
+        }
+
+        if (tooltip.body) {
+            var titleLines = tooltip.title || [];
+            var bodyLines = tooltip.body.map(getBody);
+
+            var innerHtml = '<thead>';
+
+            titleLines.forEach(function() {
+                innerHtml += '<tr><th>' + chartProcent[chartindex] + '%</th></tr>';
+            });
+            innerHtml += '</thead><tbody>';
+
+            innerHtml += '</tbody>';
+
+            var tableRoot = tooltipEl.querySelector('table');
+            tableRoot.innerHTML = innerHtml;
+        }
+
+        var positionY = this._chart.canvas.offsetTop;
+        var positionX = this._chart.canvas.offsetLeft;
+
+        // Display, position, and set styles for font
+        tooltipEl.style.opacity = 1;
+        tooltipEl.style.left = positionX + tooltip.caretX + 'px';
+        tooltipEl.style.top = positionY + tooltip.caretY + 'px';
+    };
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            datasets: [
+                {
+                    data: chartProcent,
+                    backgroundColor: 'rgba(255, 99, 132, 0)',
+                    borderColor: '#ffed01',
+                    borderWidth: 5,
+                    pointBackgroundColor: '#000',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 3,
+                    pointHoverBorderWidth: 3,
+                    pointRadius: 6,
+                    pointHoverRadius: 6
+                }]
+
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        chartindex = tooltipItem.index;
+                    }
+                },
+                enabled: false,
+                mode: 'index',
+                position: 'nearest',
+                custom: customTooltips
+
+            },
+            scales: {
+                yAxes: {
+                    ticks: {
+                        fontSize: 0
+                    }
+                }
+            }
+        }
+    });
+
+}
+
+//var courusel = $('#carousel').waterwheelCarousel();
+//$('.slider__prev').on('click', function() {
+//    courusel.prev();
+//});
+//
+//$('.slider__next').on('click', function() {
+//    courusel.next();
+//});
+
+$('.look-code').on('mousedown ', function() {
+    $(this).siblings('input').attr('type', 'text');
+});
+
+$('.look-code').on('mouseup ', function() {
+    $(this).siblings('input').attr('type', 'password');
+});
+
+$('.popup__close, .popup__bg').on('click', function() {
+    $('.popup').fadeOut();
+});
+
+$('.--enter').on('click', function(e) {
+    e.preventDefault();
+    $('.popup--enter').fadeIn();
+});
+
+$('.faq__open ').on('click', function() {
+    let ttl = $(this).data('ttl');
+    let text = $(this).data('text');
+    $('.popup--faq h3').html(ttl);
+    $('.popup--faq p').html(text);
+    $('.popup--faq').fadeIn();
+});
+
+$('.--history').on('click', function(e) {
+    e.preventDefault();
+    $('.popup--history').fadeIn();
+});
+$('.--security').on('click', function(e) {
+    e.preventDefault();
+    $('.popup--security').fadeIn();
+});
+$('.--raspred').on('click', function(e) {
+    e.preventDefault();
+    $('.popup--raspred').fadeIn();
+});
+$('.--betfair').on('click', function(e) {
+    e.preventDefault();
+    $('.popup--betfair').fadeIn();
+});
+
+//$('.chart__slider').slick({
+//    prevArrow: $('.prev'),
+//    infinite: false,
+//    nextArrow: $('.next')
+//});
+
+var url_string = window.location.href; //
+var url = new URL(url_string);
+var c = url.searchParams.get('r');
+if (c) {
+    console.log(c);
+    window.localStorage.setItem('ref_code', c);
+}
+
+$(document).ready(function() {
+    $('#carousel').slick({
+        //dots: true,
+        infinite: false,
+        speed: 300,
+        //arrows: false,
+        appendArrows: $('.slider'),
+        prevArrow: `<div class="slider__prev"></div>`,
+        nextArrow: `<div class="slider__next"></div>`,
+        variableWidth: true,
+        //adaptiveHeight: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        rows: 2,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    })
+    ;
+});

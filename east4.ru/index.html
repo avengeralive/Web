@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Интернет-магазин</title>
+	<link rel="stylesheet" href="cms/style.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+ 
+  <style> 
+  .menu {
+    text-align: center;padding: 8px 0;background: #ececec;
+}
+
+.menu__icon {
+   display: none;
+   width: 45px;
+   height: 35px;
+   position: relative;
+   cursor: pointer;
+}
+
+.menu__icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #333333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.menu__icon span:nth-child(1) {
+  top: 0px;
+}
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+  top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+  top: 26px;
+ }
+
+.menu__links-item {
+    display: inline-block;
+    color: #333333;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__links-item:hover {
+    text-decoration: underline;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__links {
+  display: block;  
+}
+
+@media screen and (max-width: 999px) {
+  .menu {
+    text-align: right;
+padding-top: 10px;
+padding-right: 15px;
+}
+  .menu__icon{
+    display: inline-block;
+  }
+  
+  .menu__links {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+  </style> 
+  
+<!-- partial:index.partial.html -->
+<div class="menu">
+    <div class="menu__icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <div class="menu__links">
+        <a class="menu__links-item" href="../">Главная</a>
+        <a class="menu__links-item" href="../tovary_dlya_doma.php">Товары Для Дома</a>
+        <a class="menu__links-item" href="../detskie_tovary.php">Детские Товары</a>
+        <a class="menu__links-item" href="../odezhda_i_aksessuary.php">Одежда и Аксессуары</a>
+        <a class="menu__links-item" href="../podarki_i_razvlecheniya.php">Подарки и Развлечения</a>
+        <a class="menu__links-item" href="../elektronika_i_gadzhety.php">Электроника и Гаджеты</a>
+         
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script>(function($){
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu').toggleClass('menu_state_open');
+    });
+  });
+})(jQuery);</script><div style="text-align: center;padding: 15px 0;background: #fff;font-size: 22px;box-shadow: 0 1px 3px rgba(0, 0, 0, .28);color: #0030ff;text-transform: uppercase;"><span style="font-weight: bold;color: #df003b;">MustHaveOffers</span>  - Магазин популярных товаров, которые не найти в магазинах.</div>
+	<ul id="offers">
+			<li class="the-offer">
+			<a class="imga" href="/m-risuy-svetom"><img class="offer-image" src="cms/offer/pic27.jpg" alt="Детский планшет Рисуй Светом" /></a>
+			<div class="offer-name">Детский планшет Рисуй Светом</div>
+			<div class="offer-button"><a href="/m-risuy-svetom">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">4208</span>
+				<span class="order">1859</span>
+				<span class="price ru">1490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/clevercutter"><img class="offer-image" src="cms/offer/pic117.jpg" alt="Умный нож Clever Cutter" /></a>
+			<div class="offer-name">Умный нож Clever Cutter</div>
+			<div class="offer-button"><a href="/clevercutter">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">7932</span>
+				<span class="order">4796</span>
+				<span class="price ru">1490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/dispenser"><img class="offer-image" src="cms/offer/pic155.jpg" alt="Сенсорный диспенсер Dispenser" /></a>
+			<div class="offer-name">Сенсорный диспенсер Dispenser</div>
+			<div class="offer-button"><a href="/dispenser">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3472</span>
+				<span class="order">1387</span>
+				<span class="price ru">1990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/hanger"><img class="offer-image" src="cms/offer/pic82.jpg" alt="Free Space  умное хранение вещей" /></a>
+			<div class="offer-name">Free Space  умное хранение вещей</div>
+			<div class="offer-button"><a href="/hanger">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">7758</span>
+				<span class="order">5180</span>
+				<span class="price ru">1190 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-magictrack"><img class="offer-image" src="cms/offer/pic42.jpg" alt="Magic Track - гибкая и яркая гоночная трасса" /></a>
+			<div class="offer-name">Magic Track - гибкая и яркая гоночная трасса</div>
+			<div class="offer-button"><a href="/m-magictrack">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5598</span>
+				<span class="order">4461</span>
+				<span class="price ru">990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/huggle-hoodie"><img class="offer-image" src="cms/offer/pic131.jpg" alt="Толстовка-плед с капюшоном Huggle Hoodie" /></a>
+			<div class="offer-name">Толстовка-плед с капюшоном Huggle Hoodie</div>
+			<div class="offer-button"><a href="/huggle-hoodie">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5458</span>
+				<span class="order">3242</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/solar-light-1"><img class="offer-image" src="cms/offer/pic91.jpg" alt="Solar Light Ландшафтный светильник на солнечной батарее" /></a>
+			<div class="offer-name">Solar Light Ландшафтный светильник на солнечной батарее</div>
+			<div class="offer-button"><a href="/solar-light-1">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">6250</span>
+				<span class="order">5262</span>
+				<span class="price ru">690 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-magic-clean"><img class="offer-image" src="cms/offer/pic4.jpg" alt="Magic-clean - швабра-лентяйка с уникальной системой отжима" /></a>
+			<div class="offer-name">Magic-clean - швабра-лентяйка с уникальной системой отжима</div>
+			<div class="offer-button"><a href="/m-magic-clean">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5602</span>
+				<span class="order">4386</span>
+				<span class="price ru">1690 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/bedofnails"><img class="offer-image" src="cms/offer/pic150.jpg" alt="Акупунктурный коврик с подушкой" /></a>
+			<div class="offer-name">Акупунктурный коврик с подушкой</div>
+			<div class="offer-button"><a href="/bedofnails">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3530</span>
+				<span class="order">3458</span>
+				<span class="price ru">2590 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-finos"><img class="offer-image" src="cms/offer/pic18.jpg" alt="Сумка-кобура FINO" /></a>
+			<div class="offer-name">Сумка-кобура FINO</div>
+			<div class="offer-button"><a href="/m-finos">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3748</span>
+				<span class="order">1642</span>
+				<span class="price ru">1690 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/artist-set"><img class="offer-image" src="cms/offer/pic108.jpg" alt="Набор художника 176 предметов с мольбертом" /></a>
+			<div class="offer-name">Набор художника 176 предметов с мольбертом</div>
+			<div class="offer-button"><a href="/artist-set">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3764</span>
+				<span class="order">1202</span>
+				<span class="price ru">2590 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/master-foto"><img class="offer-image" src="cms/offer/pic109.jpg" alt="MASTЕR FOTO  ШТАТИВ ДЛЯ СЪЁМКИ МАСТЕР ФОТО" /></a>
+			<div class="offer-name">MASTЕR FOTO  ШТАТИВ ДЛЯ СЪЁМКИ МАСТЕР ФОТО</div>
+			<div class="offer-button"><a href="/master-foto">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3268</span>
+				<span class="order">1712</span>
+				<span class="price ru">2490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/senilar"><img class="offer-image" src="cms/offer/pic89.jpg" alt="Набор силиконовых крышек SENILAR" /></a>
+			<div class="offer-name">Набор силиконовых крышек SENILAR</div>
+			<div class="offer-button"><a href="/senilar">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">1412</span>
+				<span class="order">187</span>
+				<span class="price ru">1190 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/waterstopers"><img class="offer-image" src="cms/offer/pic90.jpg" alt="Water Stopers Защита обуви" /></a>
+			<div class="offer-name">Water Stopers Защита обуви</div>
+			<div class="offer-button"><a href="/waterstopers">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">7450</span>
+				<span class="order">4663</span>
+				<span class="price ru">1190 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/hamster"><img class="offer-image" src="cms/offer/pic153.jpg" alt="Подушка-игрушка Хомячок с пледом" /></a>
+			<div class="offer-name">Подушка-игрушка Хомячок с пледом</div>
+			<div class="offer-button"><a href="/hamster">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2460</span>
+				<span class="order">287</span>
+				<span class="price ru">2490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-big-foot"><img class="offer-image" src="cms/offer/pic19.jpg" alt="Машина - Трансформер" /></a>
+			<div class="offer-name">Машина - Трансформер</div>
+			<div class="offer-button"><a href="/m-big-foot">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3796</span>
+				<span class="order">3246</span>
+				<span class="price ru">3990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/silicone-shoes"><img class="offer-image" src="cms/offer/pic100.jpg" alt="Силиконовые чехлы для обуви silicone shoes" /></a>
+			<div class="offer-name">Силиконовые чехлы для обуви silicone shoes</div>
+			<div class="offer-button"><a href="/silicone-shoes">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5246</span>
+				<span class="order">3681</span>
+				<span class="price ru">1490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/capsule"><img class="offer-image" src="cms/offer/pic105.jpg" alt="Капсульный зонтик" /></a>
+			<div class="offer-name">Капсульный зонтик</div>
+			<div class="offer-button"><a href="/capsule">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2200</span>
+				<span class="order">1809</span>
+				<span class="price ru">1890 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/kontur"><img class="offer-image" src="cms/offer/pic154.jpg" alt="Измеритель контура" /></a>
+			<div class="offer-name">Измеритель контура</div>
+			<div class="offer-button"><a href="/kontur">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5518</span>
+				<span class="order">4820</span>
+				<span class="price ru">1990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/organaizer-1"><img class="offer-image" src="cms/offer/pic140.jpg" alt="Органайзер для кухни 4в1" /></a>
+			<div class="offer-name">Органайзер для кухни 4в1</div>
+			<div class="offer-button"><a href="/organaizer-1">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3604</span>
+				<span class="order">2140</span>
+				<span class="price ru">1990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/lenta"><img class="offer-image" src="cms/offer/pic163.jpg" alt="Лента липучка" /></a>
+			<div class="offer-name">Лента липучка</div>
+			<div class="offer-button"><a href="/lenta">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">1800</span>
+				<span class="order">920</span>
+				<span class="price ru">890 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/laser"><img class="offer-image" src="cms/offer/pic164.jpg" alt="Лазерный проектор" /></a>
+			<div class="offer-name">Лазерный проектор</div>
+			<div class="offer-button"><a href="/laser">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2710</span>
+				<span class="order">1955</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/egg-boil"><img class="offer-image" src="cms/offer/pic149.jpg" alt="Silicone Egg Boil" /></a>
+			<div class="offer-name">Silicone Egg Boil</div>
+			<div class="offer-button"><a href="/egg-boil">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3668</span>
+				<span class="order">3567</span>
+				<span class="price ru">1190 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/led"><img class="offer-image" src="cms/offer/pic102.jpg" alt="LED Селфи штатив" /></a>
+			<div class="offer-name">LED Селфи штатив</div>
+			<div class="offer-button"><a href="/led">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3230</span>
+				<span class="order">2220</span>
+				<span class="price ru">1790 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/shoe-racks"><img class="offer-image" src="cms/offer/pic41.jpg" alt="Double Shoe Racks - двойные подставки для обуви" /></a>
+			<div class="offer-name">Double Shoe Racks - двойные подставки для обуви</div>
+			<div class="offer-button"><a href="/shoe-racks">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2772</span>
+				<span class="order">237</span>
+				<span class="price ru">1690 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/tws"><img class="offer-image" src="cms/offer/pic129.jpg" alt="Швабра Titan Twist Mop" /></a>
+			<div class="offer-name">Швабра Titan Twist Mop</div>
+			<div class="offer-button"><a href="/tws">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3502</span>
+				<span class="order">1355</span>
+				<span class="price ru">1690 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/tooth"><img class="offer-image" src="cms/offer/pic143.jpg" alt="Дозатор для зубной пасты" /></a>
+			<div class="offer-name">Дозатор для зубной пасты</div>
+			<div class="offer-button"><a href="/tooth">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">922</span>
+				<span class="order">707</span>
+				<span class="price ru">1190 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/flat-mop"><img class="offer-image" src="cms/offer/pic77.jpg" alt="Flat Mop" /></a>
+			<div class="offer-name">Flat Mop</div>
+			<div class="offer-button"><a href="/flat-mop">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">4986</span>
+				<span class="order">1848</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/solar-light"><img class="offer-image" src="cms/offer/pic45.jpg" alt="Smart Light - ультраяркий светильник с датчиком движения" /></a>
+			<div class="offer-name">Smart Light - ультраяркий светильник с датчиком движения</div>
+			<div class="offer-button"><a href="/solar-light">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5250</span>
+				<span class="order">3887</span>
+				<span class="price ru">1190 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/holder-mobile"><img class="offer-image" src="cms/offer/pic110.jpg" alt="Держатель для телефона" /></a>
+			<div class="offer-name">Держатель для телефона</div>
+			<div class="offer-button"><a href="/holder-mobile">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3428</span>
+				<span class="order">2516</span>
+				<span class="price ru">1390 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/amst"><img class="offer-image" src="cms/offer/pic152.jpg" alt="Часы Амст + клатч Beallery Italy" /></a>
+			<div class="offer-name">Часы Амст + клатч Beallery Italy</div>
+			<div class="offer-button"><a href="/amst">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">1894</span>
+				<span class="order">398</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-prazdnik-progector"><img class="offer-image" src="cms/offer/pic28.jpg" alt="Лазерный проектор для Рождества" /></a>
+			<div class="offer-name">Лазерный проектор для Рождества</div>
+			<div class="offer-button"><a href="/m-prazdnik-progector">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2472</span>
+				<span class="order">1767</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/massage"><img class="offer-image" src="cms/offer/pic160.jpg" alt="Массажер для шеи и спины с прогревом" /></a>
+			<div class="offer-name">Массажер для шеи и спины с прогревом</div>
+			<div class="offer-button"><a href="/massage">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2682</span>
+				<span class="order">682</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/rack-organizer"><img class="offer-image" src="cms/offer/pic132.jpg" alt="Стойка-органайзер для обуви" /></a>
+			<div class="offer-name">Стойка-органайзер для обуви</div>
+			<div class="offer-button"><a href="/rack-organizer">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5898</span>
+				<span class="order">4257</span>
+				<span class="price ru">1990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-ooonies"><img class="offer-image" src="cms/offer/pic26.jpg" alt="Конструктор из надувных шариков Oonies" /></a>
+			<div class="offer-name">Конструктор из надувных шариков Oonies</div>
+			<div class="offer-button"><a href="/m-ooonies">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">4486</span>
+				<span class="order">2012</span>
+				<span class="price ru">1790 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/freedox"><img class="offer-image" src="cms/offer/pic137.jpg" alt="Трюковая радиоуправляемая машина FREEDOX" /></a>
+			<div class="offer-name">Трюковая радиоуправляемая машина FREEDOX</div>
+			<div class="offer-button"><a href="/freedox">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">4162</span>
+				<span class="order">2788</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/miracle-board"><img class="offer-image" src="cms/offer/pic128.jpg" alt="ЧУДО-ДОСКА   3в1" /></a>
+			<div class="offer-name">ЧУДО-ДОСКА   3в1</div>
+			<div class="offer-button"><a href="/miracle-board">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">6878</span>
+				<span class="order">3729</span>
+				<span class="price ru">1490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-beautybox"><img class="offer-image" src="cms/offer/pic8.jpg" alt="Beauty Box - органайзер для хранения косметики" /></a>
+			<div class="offer-name">Beauty Box - органайзер для хранения косметики</div>
+			<div class="offer-button"><a href="/m-beautybox">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">4430</span>
+				<span class="order">1292</span>
+				<span class="price ru">2190 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/huggle-socks"><img class="offer-image" src="cms/offer/pic151.jpg" alt="Плюшевые Носки Huggle Slipper Socks" /></a>
+			<div class="offer-name">Плюшевые Носки Huggle Slipper Socks</div>
+			<div class="offer-button"><a href="/huggle-socks">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5542</span>
+				<span class="order">2830</span>
+				<span class="price ru">1490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/smart-sensor"><img class="offer-image" src="cms/offer/pic145.jpg" alt="Smart Sensor R1" /></a>
+			<div class="offer-name">Smart Sensor R1</div>
+			<div class="offer-button"><a href="/smart-sensor">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2604</span>
+				<span class="order">1951</span>
+				<span class="price ru">2490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/double-shoe"><img class="offer-image" src="cms/offer/pic120.jpg" alt="Комплект Double Shoe Racks" /></a>
+			<div class="offer-name">Комплект Double Shoe Racks</div>
+			<div class="offer-button"><a href="/double-shoe">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5130</span>
+				<span class="order">2555</span>
+				<span class="price ru">1990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/t-shirt-1"><img class="offer-image" src="cms/offer/pic103.jpg" alt="Система хранения для одежды" /></a>
+			<div class="offer-name">Система хранения для одежды</div>
+			<div class="offer-button"><a href="/t-shirt-1">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2166</span>
+				<span class="order">90</span>
+				<span class="price ru">1390 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-flexible-mirror"><img class="offer-image" src="cms/offer/pic59.jpg" alt="Flexible Mirror - косметическое зеркало с LED подсветкой" /></a>
+			<div class="offer-name">Flexible Mirror - косметическое зеркало с LED подсветкой</div>
+			<div class="offer-button"><a href="/m-flexible-mirror">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">6302</span>
+				<span class="order">3884</span>
+				<span class="price ru">1990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/travel"><img class="offer-image" src="cms/offer/pic81.jpg" alt="Набор для путешествий" /></a>
+			<div class="offer-name">Набор для путешествий</div>
+			<div class="offer-button"><a href="/travel">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3730</span>
+				<span class="order">3661</span>
+				<span class="price ru">1690 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/create-and-play"><img class="offer-image" src="cms/offer/pic80.jpg" alt="Детский развивающий конструктор! «Create and Play»" /></a>
+			<div class="offer-name">Детский развивающий конструктор! «Create and Play»</div>
+			<div class="offer-button"><a href="/create-and-play">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">4920</span>
+				<span class="order">3355</span>
+				<span class="price ru">1990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/m-night-kids-light"><img class="offer-image" src="cms/offer/pic7.jpg" alt="STAR MASTER - Ночник проектор звездного неба" /></a>
+			<div class="offer-name">STAR MASTER - Ночник проектор звездного неба</div>
+			<div class="offer-button"><a href="/m-night-kids-light">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">3928</span>
+				<span class="order">2810</span>
+				<span class="price ru">1490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/potterywheel"><img class="offer-image" src="cms/offer/pic146.jpg" alt="Набор для лепки из глины" /></a>
+			<div class="offer-name">Набор для лепки из глины</div>
+			<div class="offer-button"><a href="/potterywheel">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">5670</span>
+				<span class="order">2523</span>
+				<span class="price ru">2490 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/carvacuum"><img class="offer-image" src="cms/offer/pic148.jpg" alt="Портативный пылесос Car Vacuum" /></a>
+			<div class="offer-name">Портативный пылесос Car Vacuum</div>
+			<div class="offer-button"><a href="/carvacuum">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">4736</span>
+				<span class="order">2381</span>
+				<span class="price ru">2990 руб</span>			</div>
+		</li>
+			<li class="the-offer">
+			<a class="imga" href="/gibkoe-steklo"><img class="offer-image" src="cms/offer/pic116.jpg" alt="Скатерть из гибкого стекла" /></a>
+			<div class="offer-name">Скатерть из гибкого стекла</div>
+			<div class="offer-button"><a href="/gibkoe-steklo">Заказать сейчас</a></div>
+			<div class="offer-info">
+				<span class="likes">2056</span>
+				<span class="order">1265</span>
+				<span class="price ru">1490 руб</span>			</div>
+		</li>
+		</ul>
+<div style="text-align: center;background: #514b4b;color: #fff;padding: 20px 0;">
+<div style="text-align: center;margin: 10px auto;display: block;font-size: 14px;line-height: 26px;">
+MustHaveOffers - Интернет Магазин Популярных товаров.<br> 
+ИНН 330640485495 ОГРНИП 315332600000462<br> 
+"Официальный Дистрибьютор на территории РФ"<br> 
+Для связи - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abc6dfc4dccad9c4ddebd2cac5cfced385d9de">[email&#160;protected]</a><br> 
+<a href="polit.html" target="_blank" style="cursor: pointer;color: initial;">Политика конфиденциальности</a><br> 
+*На данном сайте действует <br> <a href="https://www.facebook.com/about/privacy/update"  target="_blank" style="cursor: pointer;color: initial;">'Политика использования данных Facebook'</a><br> 
+ВСЕ ПРАВА ЗАЩИЩЕНЫ © <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script>
+</div><a href="oferta.html" style="color:inherit;" target="_blank">Договор оферты</a>
+</div>
+</div>
+ 
+
+<!-- BEgin roistat -->
+<script>
+    (function(w, d, s, h, id) {
+        w.roistatProjectId = id; w.roistatHost = h;
+        var p = d.location.protocol == "https:" ? "https://" : "http://";
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+        var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+    })(window, document, 'script', 'cloud.roistat.com', '90bf639ac39c25be70323934c940ed7d');
+</script>
+<!-- End roistat -->
+</body>
+</html>

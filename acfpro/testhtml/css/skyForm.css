@@ -1,0 +1,336 @@
+/*!======SkyForm================================================================*/
+
+
+/*!------Сброс стилей по умолчанию----------------------------------------------*/
+.skyForm section, .skyForm header, .skyForm footer{
+	display:block; margin:0; padding:0;
+}
+
+.skyForm fieldset, .skyForm form, .skyForm label, .skyForm legend{
+	margin:0; padding:0;
+	border:0; outline:0;
+	font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline;
+}:focus{outline:0;}
+
+.skyForm label{
+	display:block;
+}
+
+.skyForm input, .skyForm textarea{
+	display:block;
+	margin:0; padding:0;
+	border:none;
+	transition:border-color 400ms ease-in-out;
+	-o-transition:border-color 400ms ease-in-out;
+	-moz-transition:border-color 400ms ease-in-out;
+	-webkit-transition:border-color 400ms ease-in-out;
+}
+
+.skyForm input[type="submit"]{
+	cursor:pointer;
+}
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*!------Блоки------------------------------------------------------------------*/
+.skyForm{
+	position:relative;
+	overflow:hidden;
+}
+
+.skyForm fieldset{
+	display:block;	
+	padding:15px 30px 20px 30px;
+	background-color:#fdfcfb; border-top:1px solid rgba(0,0,0,.1);
+}
+
+.skyForm section{
+	margin-bottom:15px;
+}
+.skyForm fieldset section:last-of-type{margin-bottom:0;}
+
+.skyForm label{
+	display:block;
+	position:relative;
+}
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*!------Заголовок и подвал-----------------------------------------------------*/
+/*!Заголовок*/
+.skyForm .formHeader{
+	display:block;
+	height:auto; padding:20px 30px;	
+	background:#039be5; border-bottom:1px solid rgba(0,0,0,.1);
+	font-weight:300; font-size:25px; color:#ffffff;
+}
+
+
+/*!Нижняя чать*/
+.skyForm .formFooter{
+	display:block;
+	padding:15px 30px 25px;
+	background:#082a3e; border-top:1px solid rgba(0,0,0,0.1);
+}
+
+.skyForm .formFooter:after{
+	content:'';
+	display:table;
+	clear:both;
+}
+
+.skyForm .formFooter p{
+	float:left;
+	margin-top:20px;
+	font-style:italic; font-size:16px;
+}
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*!------Элементы---------------------------------------------------------------*/
+/*!Заголовк поля*/
+.skyForm .title{
+	display:block;
+	margin-bottom:6px;
+	font-weight:400; line-height:19px; color:#000000;
+}
+
+.skyForm .required .title:after{
+	content:'*';
+	display:inline-block;
+	position:absolute;
+	margin-left:3px;
+	vertical-align:super; color:#f13340;
+}
+
+
+/*!Иконка*/
+.skyForm .icon{
+	position:absolute; top:5px; right:5px;
+	width:29px; height:29px; padding-left:3px;
+	border-left:1px solid #e5e5e5;
+	font-size:15px; line-height:29px; text-align:center; color:#cccccc;
+	-webkit-transition:border-color 0.3s; -moz-transition:border-color 0.3s; -ms-transition:border-color 0.3s;
+}
+
+
+/*!Сообщение об ошибке*/
+.skyForm em.invalid{
+	display:block;
+	margin-bottom:6px; padding:0 1px;
+	font-style:normal; font-size:11px; line-height:15px; color:#e44433;
+}
+
+
+/*!Загрузка*/
+.skyForm .loader{
+	position:absolute; top:0; left:0;
+	width:100%; height:100%;
+	background:rgba(255,255,255,0.8);
+}
+
+.skyForm .loader img{
+	position:absolute; top:0; right:0; bottom:0; left:0;
+	margin:auto;
+}
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*!------Поля-------------------------------------------------------------------*/
+/*!Текстовые поля*/
+.skyForm input, .skyForm textarea{
+	display:block;
+	width:100%;	height:39px; padding:8px 46px 8px 10px;
+	background:#ffffff; border:2px solid #e5e5e5;
+	appearance:normal; -moz-appearance:none; -webkit-appearance:none;
+	box-sizing:border-box; -moz-box-sizing:border-box;
+}
+
+.skyForm textarea{
+	height:auto; resize:vertical;
+}
+
+
+/*!Переключатели*/
+.skyForm .checkbox, .skyForm .radio{
+	margin-bottom:21px; padding-left:27px;
+	cursor:pointer;
+	font-size:15px; color:#404040;
+}
+.skyForm .checkbox:last-of-type, .skyForm .radio:last-of-type{margin-bottom:0;}
+
+.skyForm .checkbox input[type="checkbox"], .skyForm .radio input[type="radio"]{
+	position:absolute; opacity:0; left:-9999px;
+}
+
+.skyForm .checkbox input+i, .skyForm .radio input+i{
+	display:block;
+	position:absolute; top:0; left:0;
+	width:15px; height:15px;
+	border:2px solid #e5e5e5;
+	font:normal 12px/16px FontAwesome; text-align:center;
+}
+
+.skyForm .radio input+i{
+	border-radius:50%;
+}
+
+.skyForm .checkbox input+i::after, .skyForm .radio input+i::after{
+	position:absolute;
+	opacity:0;
+	transition:opacity 0.3s; -o-transition:opacity 0.3s; -moz-transition:opacity 0.3s; -webkit-transition:opacity 0.3s;
+}
+
+.skyForm .checkbox input+i::after{
+	content: '\f00c';
+	top:-2px; right:0; bottom:0; left:0;
+	margin:auto;
+	font-size:12px;
+}
+	
+.skyForm .radio input+i::after{
+	content: '';
+	top:0; right:0; bottom:0; left:0;
+	width:5px; height:5px; margin:auto;
+	border-radius:50%;
+}
+
+.skyForm .checkbox input:checked+i::after, .skyForm .radio input:checked+i::after{
+	opacity:1;
+}
+
+
+/*!Выпадающий список*/
+.skyForm .select{
+	position:relative;
+	width:100%; padding:0 8px;
+	background:#ffffff; border:2px solid #e5e5e5; border-radius:0;
+	box-sizing:border-box; -moz-box-sizing:border-box;
+}
+
+.skyForm .select select{
+	width:100%; height:35px;
+	background:transparent;
+	border:none;
+	font-size:15px; line-height:19px; color: #404040;
+	appearance:normal; -moz-appearance:none; -webkit-appearance:none;
+}
+
+.skyForm .select i{
+	position: absolute; top:0; right:0;
+	width:35px; height:100%;
+	pointer-events:none;
+}
+
+.skyForm .select i:before, .skyForm .select i:after{
+	content:'';
+	position:absolute; right:0px; left:0;
+	width:0; height:0; margin:auto;
+	border-right:4px solid transparent; border-left:4px solid transparent;
+}
+
+.skyForm .select i:before{
+	top:12px;
+	width:0; height:0;
+	border-bottom:4px solid #404040;
+}
+
+.skyForm .select i:after{
+	bottom:12px;
+	width:0; height:0;
+	border-top:4px solid #404040;
+}
+
+
+/*!Кнопки*/
+.skyForm input[type="submit"], .skyForm button{
+	float:right;
+	width:auto; height:39px; margin:10px 0 0 20px; padding:0 25px; overflow:hidden;
+	background-color:#039be5; border:none; cursor:pointer; opacity:1;
+	font-size:15px; line-height:39px; text-decoration:none; color:#ffffff;
+}
+
+.skyForm .button-secondary{
+	background-color:#375c79;
+}
+
+.skyForm input[type="submit"]:hover, .skyForm button:hover, #content .button:hover{
+	opacity:0.8;
+}
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*!------Состояния--------------------------------------------------------------*/
+/*!Наведение*/
+.skyForm input:hover,
+.skyForm textarea:hover,
+.skyForm .select:hover,
+.skyForm .checkbox:hover input+i,
+.skyForm .radio:hover input+i
+{border-color:#81d4fa;}
+
+
+/*!Фокус*/
+.skyForm input:focus,
+.skyForm textarea:focus,
+.skyForm .checkbox input:checked+i,
+.skyForm .radio input:checked+i
+{border-color:#0095e8;}
+.skyForm .radio input+i::after{background-color:#0095e8;}
+.skyForm .checkbox input+i::after{color:#0095e8;}
+
+
+/*!Успех*/
+.skyForm input.valid,
+.skyForm textarea.valid,
+.skyForm .select.success
+{background:#f0fff0;}
+
+
+/*!Ошибка*/
+.skyForm input.invalid,
+.skyForm textarea.invalid,
+.skyForm .select.error
+{background:#fff0f0; border-color:#f13340;}
+
+
+/*!Отключенные*/
+.skyForm .disabled{
+	border-color:#e5e5e5; cursor:default;
+	opacity:0.5;
+
+}
+
+.skyForm .disabled input, .skyForm .disabled i{
+	background:#eee;
+}
+.skyForm .disabled:hover input, .skyForm .checkbox input+i:hover, .skyForm label.disabled:hover i{
+	border-color:#e5e5e5;
+}
+
+.skyForm .formFooter p{
+    float: left;
+    font-style: italic;
+    width: 70%;
+    font-size: 14px;
+    color: #808080;
+    margin-top: 4px;
+    line-height: 18px;
+}
+.skyForm .formFooter p a {
+    text-decoration: underline;
+}
+/*------------------------------------------------------------------------------*/
+
+
+/*==============================================================================*/

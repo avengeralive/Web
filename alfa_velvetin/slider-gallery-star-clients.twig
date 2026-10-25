@@ -1,0 +1,20 @@
+<style>
+.individual-hr { margin-top: 40px !important; }
+</style>
+<div class="row columns">
+	<hr class="individual-hr">
+	<h4 class="individual" style="margin-left: 0px;"><a href="/stars/">Звёздные клиенты</a></h4>
+	<div class="small-24 large-16 columns large-centered scslider" style="width: 1025px; max-width: 100%;">
+        <div class="star-clients__slider">
+
+			{% for m in widget.getChildren %}
+					<div class="chain text-center">
+					  <a class="tap" href="/stars/{{ m.alias }}?id={{m.id}}"><img src="{{ m.star_logo }}" style="display:block;
+  margin: auto;" alt=""></a><br>
+					  <a href="/stars/?id={{ m.id }}"><p>{{ m.name }}</p></a>
+					</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</div>

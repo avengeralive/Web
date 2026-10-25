@@ -1,0 +1,1 @@
+<a href="https://bs-opt.ru/servers/" class="main-actions-link" style="background-image:url(/local/templates/bso/assets/img/main-actions-link-img-1.jpg)"> <span class="btn btn-block">Серверы&nbsp; с гарантией до 5 лет&nbsp;</span> </a>

@@ -1,0 +1,33 @@
+{
+  "name": "brntsrs/leadrock-integration",
+  "type": "library",
+  "version" : "0.2.16.1",
+  "description": "Integration package for Leadrock API",
+  "keywords": ["leadrock", "integration", "client", "postback", "landing", "lead"],
+  "homepage": "https://github.com/brntsrs/leadrock-integration",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "brntsrs",
+      "email": "brntsrs@gmail.com",
+      "homepage": "https://github.com/brntsrs"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "guzzlehttp/guzzle": "^6.3",
+    "athlon1600/php-proxy": "^5.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Leadrock\\": "src/",
+      "Leadrock\\Layouts\\": "src/layouts/",
+      "Leadrock\\Helpers\\": "src/helpers/",
+      "Leadrock\\Items\\": "src/items/",
+      "Leadrock\\Providers\\": "src/providers/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.2"
+  }
+}

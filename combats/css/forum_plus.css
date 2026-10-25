@@ -1,0 +1,99 @@
+.style6 {
+    color: #DFD3A3;
+    font-size: 9px;
+}
+
+.style8 {
+    font-size: 10pt
+}
+
+.style9 {
+    color: #8F0000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.inup3 {
+    border: 1px dashed #D3CAA0;
+    font-size: 12px;
+}
+
+a:link {
+    font-weight: bold;
+    color: #5b3e33;
+    text-decoration: none;
+}
+
+a:visited {
+    font-weight: bold;
+    color: #633525;
+    text-decoration: none;
+}
+
+a:active {
+    font-weight: bold;
+    color: #77684d;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a.cite {
+    display: none
+}
+
+.color_sel {
+    border: grey 1px solid;
+    cursor: pointer;
+}
+
+.black_sel {
+    background-color: #000000;
+}
+
+.aquamarine_sel {
+    background-color: #7FFFD4;
+}
+
+.red_sel {
+    background-color: #FF0000;
+}
+
+.steelblue_sel {
+    background-color: #4682B4;
+}
+
+.springgreen_sel {
+    background-color: #00FF7F;
+}
+
+.peru_sel {
+    background-color: #CD853F;
+}
+
+.silver_sel {
+    background-color: #C0C0C0;
+}
+
+.darkred_sel {
+    background-color: #8B0000;
+}
+
+.fuchsia_sel {
+    background-color: #FF00FF;
+}
+
+.blue_sel {
+    background-color: #0000FF;
+}
+
+.green_sel {
+    background-color: #008000;
+}
+
+.yellow_sel {
+    background-color: #FFFFFF;
+}

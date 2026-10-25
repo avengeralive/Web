@@ -1,0 +1,1053 @@
+// Иконки резерва
+$("#rezervs li").hover(function () {
+    $(this).toggleClass('hover');
+    $(this).find('.bank_n').toggle();
+    $(this).find('.r_summ').toggle();
+    $(this).find('.rezerv_container_button').toggle();
+});
+
+$(document).ready(function(){
+
+    $("a.video_o_nas").click(function () {
+        $(".iframe_video").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/qJeGwT_bZbE" frameborder="0" allowfullscreen></iframe>');
+        $("#video_o_nas").arcticmodal({
+            afterClose:  function(data, el) {
+                $("#video_o_nas iframe").detach();
+            }
+        });
+    });
+
+    // Мобильное меню
+    $("#kartinka_dliya_menu").click(function () {
+        $('.menu_head').show();
+    });
+    $(".mobile_menu_txt_close").click(function () {
+        $('.menu_head').hide();
+    });
+
+
+    $('.close_modal').click(function () {
+        $.arcticmodal('close');
+    });
+
+    // Выпадашка иконок на главной
+    $(".ul_li_active").click(function () {
+        $(this).toggleClass("block_cl");
+        $('.overlay_icon').toggleClass("active");
+        $(this).closest('.selecting').toggleClass("active");
+    });
+    $(".overlay_icon").click(function () {
+        $('.ul_li_active').removeClass("block_cl");
+        $('.overlay_icon').toggleClass("active");
+        $('.ul_li_active').closest('.selecting').removeClass("active");
+    });
+
+    // FAQ аккордион
+    $(".acc_title").click(function () {
+        if($(this).closest('.acc_item').find('.acc_content.active').length > 0){
+            $(this).closest('.acc_item').find('.acc_content').toggleClass('active');
+            $(this).toggleClass('active');
+        } else {
+            $('.acc_content').removeClass('active');
+            $('.acc_title').removeClass('active');
+            $(this).closest('.acc_item').find('.acc_content').toggleClass('active');
+            $(this).toggleClass('active');
+        }
+    });
+    $(".svernut_vopr").click(function () {
+        $(this).closest('.acc_item').find('.acc_content').removeClass('active');
+        $(this).closest('.acc_item').find('.acc_title').removeClass('active');
+    });
+
+    // FAQ табы
+    $(".click_tab_1").click(function () {
+        $(".click_tab").removeClass('active');
+        $(this).addClass('active');
+        $(".content_tab").removeClass('active');
+        $(".content_tab_1").addClass('active');
+    });
+    $(".click_tab_2").click(function () {
+        $(".click_tab").removeClass('active');
+        $(this).addClass('active');
+        $(".content_tab").removeClass('active');
+        $(".content_tab_2").addClass('active');
+    });
+    $(".click_tab_3").click(function () {
+        $(".click_tab").removeClass('active');
+        $(this).addClass('active');
+        $(".content_tab").removeClass('active');
+        $(".content_tab_3").addClass('active');
+    });
+});
+
+$(document).on("click", ".couse_button", function () {
+    var help_obj = $(this);
+    var headcouse = help_obj.data('headcouse');
+    var couse = help_obj.data('couse');
+    $('#info_title_popup').text(headcouse);
+    $('#info_text_popup').html('<p>' + couse + '</p>');
+    $('#info_popup').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+});
+
+
+
+$(document).on("click", ".rezerv_container_button", function () {
+    var id_bank_rez = $(this).data("body");
+    $('#rezerv_window').find("#bank_rez").val(id_bank_rez);
+    $('#rezerv_window').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+});
+
+$(document).on("submit", "#rezerv_form", function () {
+    var obj_rezerv_form = $(this);
+    $.ajax({
+        type: obj_rezerv_form.attr('method'),
+        url: obj_rezerv_form.attr('action'),
+        data: obj_rezerv_form.serialize(),
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            $('#cap_img2').html(res.cap);
+            $('#rezerv_window').arcticmodal('close');
+            $('#info_text_popup').html('<p>Вы успешно создали заявку на пополнение резерва</p><p>Наш оператор свяжется с вами в ближайшее время. </p>');
+            $('#info_popup').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+$(document).on("click", "#upd_capth2", function (e) {
+    $('#cap_img2').children("img").remove();
+    $.ajax({
+        type: 'post',
+        url: '/front/update_captha',
+        resetForm: 'true',
+        success: function (cap) {
+
+            $('#cap_img2').html(cap);
+        },
+        dataType: "json"
+    });
+});
+
+// Мобильное меню
+var menu = $('.menu_palki-krestik');
+var menu_active = $('.menu_head');
+var nav_link = $('.menu_head a');
+
+menu.click(function() {
+    menu.toggleClass('menu_palki-krestik-active');
+    menu_active.toggleClass('menu_head-active');
+});
+
+nav_link.click(function() {
+    menu.toggleClass('menu_active');
+    menu_active.toggleClass('dropping_menu_active');
+});
+
+$(".mobile_menu_txt_close").click(function () {
+    $('.menu_head').hide();
+});
+
+$(document).on("click", "#upd_capth3", function (e) {
+    $('#cap_img3').children("img").remove();
+    $.ajax({
+        type: 'post',
+        url: '/front/update_captha',
+        data: {'csrf_fast' : csrfHash},
+        resetForm: 'true',
+        success: function (arr) {
+            csrfHash = arr.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(arr.csrf.csrfHash);
+            $('#cap_img3').html(arr.image);
+        },
+        dataType: "json"
+    });
+});
+
+$(document).on("click", "#upd_capth4", function (e) {
+    $('#cap_img4').children("img").remove();
+    $.ajax({
+        type: 'post',
+        url: '/front/update_captha',
+        data: {'csrf_fast' : csrfHash},
+        resetForm: 'true',
+        success: function (arr) {
+            csrfHash = arr.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(arr.csrf.csrfHash);
+            $('#cap_img4').html(arr.image);
+        },
+        dataType: "json"
+    });
+});
+
+
+$(document).on("click", "#upd_capth5", function (e) {
+    $('#cap_img5').children("img").remove();
+    $.ajax({
+        type: 'post',
+        url: '/front/update_captha',
+        data: {'csrf_fast' : csrfHash},
+        resetForm: 'true',
+        success: function (arr) {
+            csrfHash = arr.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(arr.csrf.csrfHash);
+            $('#cap_img5').html(arr.image);
+        },
+        dataType: "json"
+    });
+});
+
+
+$(document).on("submit", "#auth_personal_form", function () {
+    var obj_rezerv_form = $(this);
+    $.ajax({
+        type: obj_rezerv_form.attr('method'),
+        url: obj_rezerv_form.attr('action'),
+        data: obj_rezerv_form.serialize(),
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            $('#cap_img4').html(res.cap);
+            location="/personal/app";
+        },
+        error: function (errResult) {
+            var error_text = '';
+            //var error_text_input = '';
+            var errArr = errResult.responseJSON.fields;
+                csrfHash = errResult.responseJSON.csrf_hash;
+                $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            var cap = errResult.responseJSON.cap;
+            $('#cap_img4').html(cap);
+
+            $(obj_rezerv_form).find('input').parent('.inputs').removeClass('error');
+            $(obj_rezerv_form).find('input').parent('.inputs').find('.oshiba_avtor').css('display', 'none');
+            $(obj_rezerv_form).parent('.inputs').find('#captha_img').css('border-right', '3px solid #000');
+            $.each(errArr, function (index, value) {
+                if (errResult.responseJSON.auth_form != 1 && value != 0) {
+                    error_text += value;
+                }
+                if (errResult.responseJSON.auth_form == 1 && value != 0) {
+                    // error_text_input += value;
+                    $('input[name="' + index + '"]').parent('.inputs').addClass('error');
+                    $('input[name="' + index + '"]').parent('.inputs').find('.oshiba_avtor').css('display','block');
+                    $('input[name="' + index + '"]').parent('.inputs').find('#captha_img').css('border-right', '3px solid #e93030');
+                }
+            });
+
+            if(error_text != ''){
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            }
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+
+$(document).on("submit", "#password_recovery", function () {
+    var obj_rezerv_form = $(this);
+    $.ajax({
+        type: obj_rezerv_form.attr('method'),
+        url: obj_rezerv_form.attr('action'),
+        data: obj_rezerv_form.serialize(),
+        resetForm: 'true',
+        success: function (res) {
+            $('#cap_img5').html(res.cap);
+            location="/front/password_recovery_success";
+        },
+        error: function (errResult) {
+            var error_text = '';
+            //var error_text_input = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            var cap = errResult.responseJSON.cap;
+            $('#cap_img4').html(cap);
+
+            $(obj_rezerv_form).find('input').parent('.inputs').removeClass('error');
+            $(obj_rezerv_form).find('input').parent('.inputs').find('.oshiba_avtor').css('display', 'none');
+            $(obj_rezerv_form).parent('.inputs').find('#captha_img').css('border-right', '3px solid #000');
+            $.each(errArr, function (index, value) {
+                if (errResult.responseJSON.auth_form != 1 && value != 0) {
+                    error_text += value;
+                }
+                if (errResult.responseJSON.auth_form == 1 && value != 0) {
+                    // error_text_input += value;
+                    $('input[name="' + index + '"]').parent('.inputs').addClass('error');
+                    $('input[name="' + index + '"]').parent('.inputs').find('.oshiba_avtor').css('display','block');
+                    $('input[name="' + index + '"]').parent('.inputs').find('#captha_img').css('border-right', '3px solid #e93030');
+                }
+            });
+
+            if(error_text != ''){
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            }
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+/* ------------------------------------ Верификация ------------------------------------ */
+// выпадающий список для верификации ЛК
+$("#verification_personal_banks li").click(function(){
+    var this_select = $(this);
+    $('.ul_li_active').removeClass("block_cl");
+    $('.overlay_icon').toggleClass("active");
+    $('.ul_li_active').closest('.selecting').removeClass("active");
+    var class_control = this_select.children("strong").attr("class");
+    var text_control = this_select.children("span").text();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').removeClass();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').addClass(class_control);
+    this_select.parents(".selecting").children(".ul_li_active").children('span').text(text_control);
+
+    this_select.parent().find('li').removeClass('active');
+    this_select.addClass('active');
+    $('#hidden_verification').val(this_select.data('body'));
+});
+
+$(document).on("click", "#verification_start", function () {
+    var serial = {};
+    serial.bank = $('#hidden_verification').val();
+    serial.image_name = $('#file_success').val();
+    serial.kardnum = $('#kardnum').val();
+    serial.fio = $('#fio').val();
+    $.ajax({
+        type: 'POST',
+        url: '/front/personal_veryfication',
+        data: {'csrf_fast' : csrfHash, 'bank_selected': serial.bank, 'image_name': serial.image_name, 'kard_num': serial.kardnum, 'fio': serial.fio},
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            $('#verification_wait').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+            loadresVerification = setInterval(function () {
+                verification_wait(result['id']);
+            }, 5000);
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            var cap = errResult.responseJSON.cap;
+            $('#cap_img5').html(cap);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+
+    return false;
+});
+
+/* --- стилизация input`а для загрузки файла --- */
+/*var wrapper = $(".file_upload"),
+    inp = wrapper.find( ".fileupload" ),
+    btn = wrapper.find( "button" ),
+    lbl = wrapper.find( "div" );
+btn.add( lbl ).click(function(){
+    inp.click();
+});
+
+inp.change(function(){
+    var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+    var file_name;
+    if( file_api && inp[ 0 ].files[ 0 ] )
+        file_name = inp[ 0 ].files[ 0 ].name;
+    else
+        file_name = inp.val().replace( "C:\\path\\", '' );
+
+    if( ! file_name.length )
+        return;
+
+    lbl.text( file_name );
+}).change();*/
+
+$('#file_select_button').add($("#file_select_verifi")).click(function() {
+    $('.upload_bar_container .upload_bar').css('width', '0%');
+    $('#progress_upload').css('display', 'none');
+    $('#fileupload').click().change(function() {
+        var lastIndexOfSep = this.value.lastIndexOf('\\'); // Windows
+        if (lastIndexOfSep == -1)
+            lastIndexOfSep = this.value.lastIndexOf('/'); // Linux
+        var fileName = this.value.substring(lastIndexOfSep + 1, this.length);
+        $("#file_select_verifi").text(fileName);
+    });
+});
+/* --- стилизация input`а для загрузки файла --- */
+
+
+$('#fileupload').fileupload({
+    dataType: 'json',
+    done: function (e, data) {
+        //console.log(data.result.success.upload_data.file_name);
+        console.log(data.result);
+        if (data.result.err == 1) {
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html('<p>Ошибка загрузки файла. Вероятно файл весит больше 5 Мб</p>');
+            $('#progress_upload').css('display', 'none');
+            $('.upload_bar_container .upload_bar').css('width', 0);
+            $('#file_success').text(0);
+        } else {
+            $('#progress_upload').css('display', 'block');
+            $('.upload_bar_container .upload_bar').text('Файл успешно загружен');
+            $('#file_success').val(data.result.success.upload_data.file_name);
+        }
+        csrfHash = data.result.csrf.csrfHash;
+        $("input[name='csrf_fast']").val(data.result.csrf.csrfHash);
+    },
+    progressall: function (e, data) {
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        $('.upload_bar_container .upload_bar').css('display', 'block');
+        $('.upload_bar_container .upload_bar').text('Загрузка: ' + progress + '%');
+        $('.upload_bar_container .upload_bar').css('width', progress + '%');
+    }
+
+});
+
+
+function verification_wait(id) {
+    $.ajax({
+        type: 'post',
+        url: '/front/wait_verification',
+        data: {'csrf_fast' : csrfHash, 'id_ver': id},
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            if (result['status'] == 1) {
+                $('.file_upload .file_select').text('Выберите файл');
+                $('#file_success').val('');
+                $('#fio').val('');
+                $('#kardnum').val('');
+
+                $('#info_text_popup').html('<p>Вы успешно прошли верификацию!</p>');
+                $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+                $('#verification_wait').arcticmodal('close');
+                clearInterval(loadresVerification);
+            }
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $('.file_upload .file_select').text('Выберите файл');
+            $('#file_success').val('');
+            $('#fio').val('');
+            $('#kardnum').val('');
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#err_title_popup').text(errResult.responseJSON.message);
+            $('#error_modal_text').find('.text').html(error_text);
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#verification_wait').arcticmodal('close');
+            clearInterval(loadresVerification);
+        },
+        dataType: "json"
+    });
+    return false;
+}
+/* ------------------------------------ Верификация ------------------------------------ */
+
+
+/* ------------------------------------ Вывод рефер ------------------------------------ */
+
+// выпадающий список для верификации ЛК
+$("#ref_personal_banks li").click(function(){
+    var this_select = $(this);
+    $('.ul_li_active').removeClass("block_cl");
+    $('.overlay_icon').toggleClass("active");
+    $('.ul_li_active').closest('.selecting').removeClass("active");
+    var class_control = this_select.children("strong").attr("class");
+    var text_control = this_select.children("span").text();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').removeClass();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').addClass(class_control);
+    this_select.parents(".selecting").children(".ul_li_active").children('span').text(text_control);
+
+    this_select.parent().find('li').removeClass('active');
+    this_select.addClass('active');
+
+    var text_contrl = $(this).data("bnk");
+    var wallet_show = $(this).data("wallet");
+
+    $("#pay_name_one").text(this_select.data('method'));
+    $("#wallet_referal_lable input").attr('placeholder', this_select.data('placeholder'));
+
+    $('#verification_pay_method').text(this_select.data('paymethod'));
+    $('#kardnum').attr('placeholder', this_select.data('placeholder'));
+
+    $('#ref_select').val(this_select.data('body'));
+    if (text_contrl == 0) {
+        $("#fio_referal_lable").css('display', 'none');
+    } else {
+        $("#fio_referal_lable").css('display', 'block');
+    }
+    if (wallet_show == 0) {
+        $("#wallet_referal_lable").css('display', 'none');
+    } else {
+        $("#wallet_referal_lable").css('display', 'block');
+    }
+
+});
+
+$("#ver_personal_banks li").click(function(){
+    var this_select = $(this);
+    $('.ul_li_active').removeClass("block_cl");
+    $('.overlay_icon').toggleClass("active");
+    $('.ul_li_active').closest('.selecting').removeClass("active");
+    var class_control = this_select.children("strong").attr("class");
+    var text_control = this_select.children("span").text();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').removeClass();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').addClass(class_control);
+    this_select.parents(".selecting").children(".ul_li_active").children('span').text(text_control);
+
+    this_select.parent().find('li').removeClass('active');
+    this_select.addClass('active');
+
+    var text_contrl = $(this).data("bnk");
+    var wallet_show = $(this).data("wallet");
+
+    $("#pay_name_one").text(this_select.data('method'));
+    $("#wallet_referal_lable input").attr('placeholder', this_select.data('placeholder'));
+
+    $('#verification_pay_method').text(this_select.data('paymethod'));
+    $('#kardnum').attr('placeholder', this_select.data('placeholder'));
+
+    $('#hidden_verification').val(this_select.data('body'));
+    if (text_contrl == 0) {
+        $("#fio_referal_lable").css('display', 'none');
+    } else {
+        $("#fio_referal_lable").css('display', 'block');
+    }
+    if (wallet_show == 0) {
+        $("#wallet_referal_lable").css('display', 'none');
+    } else {
+        $("#wallet_referal_lable").css('display', 'block');
+    }
+
+});
+
+
+$(document).on("submit","#withdrawal_referal",function(){
+    var obj_btc = $(this);
+    var method_type_btc = obj_btc.attr('method');
+    var action_type_btc = obj_btc.attr('action');
+    var data_serial_btc = obj_btc.serialize();
+    $.ajax({
+        type: method_type_btc,
+        url: action_type_btc,
+        data: data_serial_btc,
+        resetForm: 'true',
+        success: function(res){
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            $('#info_title_popup').text('Заявка успешно создана');
+            $('#info_text_popup').html('<p>Вы успешно создали заявку на списание реферального вознагражения. Заявка будет обработана в течении 15 минут.</p>');
+            $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+            $('#message_box').arcticmodal({overlay: {css: { opacity: .85 }},closeOnOverlayClick: 0});
+        },
+        error: function(errResult){
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+
+            $.each(errArr, function( index, value ) {
+                if(value != 0)
+                {
+                    error_text += value;
+                    $('#'+ index +'').parents('.inputs_right').addClass('error_message');
+                }else{
+                    $('#'+ index +'').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').find('.text').html(error_text);
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+/* ------------------------------------ Вывод рефер ------------------------------------ */
+
+function getName(str) {
+    if (str.lastIndexOf('\\')) {
+        var i = str.lastIndexOf('\\') + 1;
+    }
+    else {
+        var i = str.lastIndexOf('/') + 1;
+    }
+    var filename = str.slice(i);
+    var uploaded = document.getElementById("fileformlabel");
+    uploaded.innerHTML = filename;
+}
+
+
+$(document).on("submit", "#change_password_form", function () {
+    var obj_change_password = $(this);
+    var change_password_serialize = obj_change_password.serialize();
+    var change_password_method = obj_change_password.attr('method');
+    var change_password_action = obj_change_password.attr('action');
+    $.ajax({
+        type: change_password_method,
+        url: change_password_action,
+        data: change_password_serialize,
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            $('#info_text_popup').html('<p>Вы успешно сменили пароль.</p>');
+            $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+            obj_change_password.find('input[type=password]').val("");
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields,
+                errType = errResult.responseJSON.type_message;
+                csrfHash = errResult.responseJSON.csrf_hash;
+                $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            var cap = errResult.responseJSON.cap;
+            $('#cap_img5').html(cap);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    if(errType != 1){
+                        error_text += value;
+                    }
+                    $('#' + index + '').addClass('error');
+                    $('#' + index + ' .oshiba_avtor').html('<b>Ошибка авторизации</b><br>' + value);
+                } else {
+                    $('#' + index + '').removeClass('error');
+                    $('#' + index + ' .oshiba_avtor').html('');
+                }
+            });
+
+            if(errType != 1){
+                $('#error_modal_text').find('.text').html(error_text);
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            }
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+$(document).on("submit", "#registration", function () {
+    var obj_change_password = $(this);
+    var change_password_serialize = obj_change_password.serialize();
+    var change_password_method = obj_change_password.attr('method');
+    var change_password_action = obj_change_password.attr('action');
+    $.ajax({
+        type: change_password_method,
+        url: change_password_action,
+        data: change_password_serialize,
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            location= res.link;
+        },
+        error: function (errResult) {
+            var error_text = '';
+            //var error_text_input = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            var cap = errResult.responseJSON.cap;
+            $('#cap_img4').html(cap);
+
+            $(obj_change_password).find('input').parent('.inputs').removeClass('error');
+            $(obj_change_password).find('input').parent('.inputs').find('.oshiba_avtor').css('display', 'none');
+            $(obj_change_password).parent('.inputs').find('#captha_img').css('border-right', '3px solid #000');
+            $.each(errArr, function (index, value) {
+                if (errResult.responseJSON.auth_form != 1 && value != 0) {
+                    error_text += value;
+                }
+                if (errResult.responseJSON.auth_form == 1 && value != 0) {
+                    // error_text_input += value;
+                    $('input[name="' + index + '"]').parent('.inputs').addClass('error');
+                    $('input[name="' + index + '"]').parent('.inputs').find('.oshiba_avtor').css('display','block');
+                    $('input[name="' + index + '"]').parent('.inputs').find('#captha_img').css('border-right', '3px solid #e93030');
+                }
+            });
+
+            if(error_text != ''){
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            }
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+$(document).on("submit", "#recovery_form", function () {
+    var obj_change_password = $(this);
+    var change_password_serialize = obj_change_password.serialize();
+    var change_password_method = obj_change_password.attr('method');
+    var change_password_action = obj_change_password.attr('action');
+    $.ajax({
+        type: change_password_method,
+        url: change_password_action,
+        data: change_password_serialize,
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            location = res.link;
+        },
+        error: function (errResult) {
+            var error_text = '';
+            //var error_text_input = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            var cap = errResult.responseJSON.cap;
+            $('#cap_img4').html(cap);
+
+            $(obj_change_password).find('input').parent('.inputs').removeClass('error');
+            $(obj_change_password).find('input').parent('.inputs').find('.oshiba_avtor').css('display', 'none');
+            $(obj_change_password).parent('.inputs').find('#captha_img').css('border-right', '3px solid #000');
+            $.each(errArr, function (index, value) {
+                if (errResult.responseJSON.auth_form != 1 && value != 0) {
+                    error_text += value;
+                }
+                if (errResult.responseJSON.auth_form == 1 && value != 0) {
+                    // error_text_input += value;
+                    $('input[name="' + index + '"]').parent('.inputs').addClass('error');
+                    $('input[name="' + index + '"]').parent('.inputs').find('.oshiba_avtor').css('display','block');
+                    $('input[name="' + index + '"]').parent('.inputs').find('#captha_img').css('border-right', '3px solid #e93030');
+                }
+            });
+
+            if(error_text != ''){
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            }
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+$(document).on("submit", "#ajax_pagination", function () {
+    var obj_navi = $(this);
+    var navi_serialize = obj_navi.serialize();
+    var navi_method = obj_navi.attr('method');
+    var navi_action = obj_navi.attr('action');
+    $.ajax({
+        type: navi_method,
+        url: navi_action,
+        data: navi_serialize,
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $(".ref_table").append(res.result);
+            $("#offset").val(res.offset);
+            if(res.show_ajax_pagenation == 0){
+                $("#load_items_button").css('display', 'none');
+            }
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+$("#one_banner").click(function() {
+    var banner_one = copyToClipboardAdversting(document.getElementById("one_banner_obj"));
+    $('#info_title_popup').text('Код успешно скопирован');
+    $('#info_text_popup').text(banner_one);
+    $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+});
+
+$("#two_banner").click(function() {
+    var banner_two = copyToClipboardAdversting(document.getElementById("two_banner_obj"));
+    $('#info_title_popup').text('Код успешно скопирован');
+    $('#info_text_popup').text(banner_two);
+    $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+});
+
+$("#three_banner").click(function() {
+    var banner_three = copyToClipboardAdversting(document.getElementById("three_banner_obj"));
+    $('#info_title_popup').text('Код успешно скопирован');
+    $('#info_text_popup').text(banner_three);
+    $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+});
+
+$("#ref_link").click(function() {
+    var ref_link = copyToClipboardAdversting(document.getElementById("ref_link"));
+    $('#info_title_popup').text('Ссылка успешно скопирована');
+    $('#info_text_popup').text(ref_link);
+    $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+});
+
+function copyToClipboardAdversting(elem) {
+    var target = elem;
+    var rng, sel;
+    if (document.createRange) {
+        rng = document.createRange();
+        rng.selectNode(target)
+        sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(rng);
+    } else {
+        var rng = document.body.createTextRange();
+        rng.moveToElementText(target);
+        rng.select();
+    }
+
+    try {
+        // Теперь, когда мы выбрали текст ссылки, выполним команду копирования
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+    } catch(err) {
+        console.log('Oops, unable to copy');
+    }
+
+    // Снятие выделения - ВНИМАНИЕ: вы должны использовать
+    // removeRange(range) когда это возможно
+    window.getSelection().removeAllRanges();
+    return rng;
+}
+
+function blur_enable(){
+    $(".header").addClass('blur'); $(".gray_box2").addClass('blur'); $(".container").addClass('blur');
+}
+function blur_disable(){
+    $(".header").removeClass('blur'); $(".gray_box2").removeClass('blur'); $(".container").removeClass('blur');
+}
+
+
+$(document).on("click", ".title_bank_wallets", function () {
+    var cards_load_class = $(this).data('classname');
+    var standart_check = '&csrf_fast=' + csrfHash + '&bankclass=' + cards_load_class;
+    $.ajax({
+        type: 'post',
+        url: '/personal/card_show',
+        data: standart_check,
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            var text = '';
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            $.each(result.wallet_list, function( index, value ) {
+                text += '<li>' + value.wallet_number + '(<span data-cardnum_delete="' + value.wallet_number + '" data-bankclass="' + value.class_pay + '"class="delete_wallet">Удалить</span>)</li>';
+            });
+
+            if(text == ""){
+                text += "Нет кошельков";
+            }
+
+            $("#card_list ul").html(text);
+            $('#banks_edit').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+$(document).on("click", ".delete_wallet", function () {
+    var cardnum_delete = $(this).data('cardnum_delete');
+    var bankclass = $(this).data('bankclass');
+    var standart_check = '&csrf_fast=' + csrfHash + '&cardnum_delete=' + cardnum_delete + '&bankclass=' + bankclass;
+    $.ajax({
+        type: 'post',
+        url: '/personal/card_delete',
+        data: standart_check,
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            var text = '';
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            $.each(result.wallet_list, function( index, value ) {
+                text += '<li>' + value.wallet_number + '(<span data-cardnum_delete="' + value.wallet_number + '" data-bankclass="' + value.class_pay + '"class="delete_wallet">Удалить</span>)</li>';
+            });
+
+            if(text == ""){
+                text += "Нет кошельков";
+            }
+
+            $("#card_list ul").html(text);
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+
+
+$(document).on("submit", "#add_new_card", function () {
+    var obj_rezerv_form = $(this);
+    $.ajax({
+        type: obj_rezerv_form.attr('method'),
+        url: obj_rezerv_form.attr('action'),
+        data: obj_rezerv_form.serialize(),
+        resetForm: 'true',
+        success: function (result) {
+            $('#cap_img_cardnum').html(result.cap);
+            csrfHash = result.csrf.csrfHash;
+            $('#info_text_popup').html(result.success_add);
+            $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+        },
+        error: function (errResult) {
+            var error_text = '';
+            //var error_text_input = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+            var cap = errResult.responseJSON.cap;
+            $('#cap_img_cardnum').html(cap);
+
+            $(obj_rezerv_form).find('input').parent('.inputs').removeClass('error');
+            $(obj_rezerv_form).find('input').parent('.inputs').find('.oshiba_avtor').css('display', 'none');
+            $(obj_rezerv_form).parent('.inputs').find('#captha_img').css('border-right', '3px solid #000');
+            $.each(errArr, function (index, value) {
+                if (errResult.responseJSON.auth_form != 1 && value != 0) {
+                    error_text += value;
+                }
+                if (errResult.responseJSON.auth_form == 1 && value != 0) {
+                    // error_text_input += value;
+                    $('input[name="' + index + '"]').parent('.inputs').addClass('error');
+                    $('input[name="' + index + '"]').parent('.inputs').find('.oshiba_avtor').css('display','block');
+                    $('input[name="' + index + '"]').parent('.inputs').find('#captha_img').css('border-right', '3px solid #e93030');
+                }
+            });
+
+            if(error_text != ''){
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            }
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+// выпадающий список добавления карты в натройках
+$("#wal_personal_banks li").click(function(){
+    var this_select = $(this);
+    $('.ul_li_active').removeClass("block_cl");
+    $('.overlay_icon').toggleClass("active");
+    $('.ul_li_active').closest('.selecting').removeClass("active");
+    var class_control = this_select.children("strong").attr("class");
+    var text_control = this_select.children("span").text();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').removeClass();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').addClass(class_control);
+    this_select.parents(".selecting").children(".ul_li_active").children('span').text(text_control);
+
+    $("#wallet_bankname_class").val(this_select.data("classname"));
+    $("#add_cardnum_input").attr('placeholder', this_select.data("placeholder"));
+});
+
+
+$(document).on("click", "#upd_capth_cardnum", function (e) {
+    $('#cap_img').children("img").remove();
+    $.ajax({
+        type: 'post',
+        url: '/front/update_captha',
+        data: {'csrf_fast' : csrfHash},
+        resetForm: 'true',
+        success: function (arr) {
+            csrfHash = arr.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(arr.csrf.csrfHash);
+            $('#cap_img_cardnum').html(arr.image);
+        },
+        dataType: "json"
+    });
+});

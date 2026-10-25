@@ -1,0 +1,77 @@
+.admin-bar #main,.admin-bar #main header {top: 32px;}
+.gal_hide{display: none !important;}
+.domik_pagination {padding-bottom: 15px;}
+.domik_pagination > *{padding: 6px 12px;position: relative;}
+.domik_pagination >.current:before {
+	content:'';
+	position:absolute;
+	bottom:-6px;
+	right:0;
+	height:4px;
+	width:0;
+	background:#000;	
+}
+.domik_pagination >.current:before {
+	width:100%;
+}
+.full-height .wpb_wrapper {height: 100%;}
+.blog-media blockquote {text-align: left;}
+.fixed-column .comments-start {padding:50px 0 50px;}
+.index_nav .content-nav,.nav-border-top {border-top: 6px solid #eee; margin-top: 50px;}
+.back-link-mes, .back-link-but {position: relative;top: 30%;text-align: center;float: left;width: 100%;font-size: 16px;}
+nav ul, ul.blog-title,ul.pager,ul.commentlist,ul.commentlist ul.children,ul.footer-contact,ul.domik_pagi,.blog-sidebar ul,ul.descr,ul.inline-gallery,.contact-details ul,.filter-button ul {list-style: none;}
+/*.blog-text * {max-width: 100%;}*/
+.gallery-item-notfound {width: 100% !important;}
+.blog-title {word-break:break-all;}
+.page-title h3 p {font-size: 100%;}
+.responsive-video {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.socials-widget {
+	position: absolute;
+	top: auto;
+	right: 0px;
+	width: 30%;
+	padding: 30px;
+	background: #fff;
+}
+/*nav li ul{min-width: 200px;}
+nav li ul li {float: left;width: 100%;text-align: left;}*/
+.folio_pagination {margin-top: 50px;float: left;width: 100%;}
+.no-deco:before {display: none;}
+.full-width-wrap.no-deco .gallery-items {padding-bottom: 0px !important;}
+.page-title.fullwidth,.page-title.fullwidth h2 {max-width: 100%;width: 100%;}
+/*nav li a:before {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background:transparent;
+	z-index: -1;
+}
+nav li a:hover:before,
+nav li a.act-link:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    background: #f7f7f7 none repeat scroll 0% 0%;
+    transition: all 200ms linear 0s;
+    z-index: -1;
+    width: 100%;
+    top: 0px;
+}
+nav li a:after {display: none;}*/

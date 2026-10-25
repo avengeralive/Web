@@ -1,0 +1,363 @@
+@font-face {
+    font-family:'MuseoSansBlack';
+    src: url('v-d1a02f.html') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-0525;
+}
+
+@font-face {
+    font-family:'MuseoSansRegular';
+    src: url('xm-9vxw7.html') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-0525;
+}
+
+@font-face {
+    font-family:'MuseoSansMiddle';
+    src: url('ypgyyg8x.html') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-0525;
+}
+
+
+@font-face {
+    font-family: 'MagistralBold'; /* Гарнитура шрифта */
+    src: url(gstuanl5.html); /* Путь к файлу со шрифтом */
+   }
+
+@font-face {
+    font-family: 'MagistralBlack'; /* Гарнитура шрифта */
+    src: url(cr49l0gj.html); /* Путь к файлу со шрифтом */
+   } 
+/*block1*//* after_qbici */
+.b1 {
+        height: 90px;
+    background: #163d56;
+    color: #fee12b;
+    text-align: center;
+    padding: 20px 0 0;
+}
+.b1 h1 {
+    font-size: 35px;
+    letter-spacing: .825px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.b1 h2 {
+    font-size: 14px;
+    letter-spacing: 0.9px;
+    font-weight: 400;
+    color: #fff;
+}
+/*block2*//* endzeit_____ */
+.b2 {
+    background: url('v9_tgzck.jpg') no-repeat center top;
+    height: 436px;
+}
+.sale {
+color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    width: 106px;
+    font-size: 19px;
+    letter-spacing: 1.425px;
+    margin: 31px 0 0 330px;
+    line-height: 31px;
+}
+.sale p {
+    font-weight: 700;
+    font-size: 36px;
+}
+/*block3*//* michael-k90 */
+.b3 {
+   padding: 0;
+}
+/*block4*//* bizlife_inc */
+.b4 {
+    background: #163d56;
+    padding-bottom: 5px;
+    padding: 30px 0px 10px;
+}
+.plus {
+    margin: 0 0 0 20px;
+}
+.plus li {
+    clear: both;
+    margin-bottom: 10px;
+}
+.plus p {
+font-size: 17px;
+    font-weight: 600;
+    color: #dedede;
+    overflow: hidden;
+    line-height: 22px;
+}
+.plus li:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('d0dt912o.html') no-repeat center 0px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+/*block5*//* owmen17 */
+.b5 {
+   
+}
+.b5 > p {
+    padding: 0 20px 17px;
+}
+
+.b6{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.b6 p{
+        text-align: justify;
+    padding: 5px 25px 10px;
+    text-align-last: center;
+}
+
+.b6 b{
+    font-size: 17px;
+    padding: 10px 25px 15px;
+    text-align: justify;
+    text-align-last: center;
+    display: block;
+    color: #a8001f;
+}
+
+.char {
+    margin: 0 20px;
+}
+.char li {
+    border-bottom: 1px solid #d9dce0;
+    padding: 10px 0;
+}
+.char li:last-child {
+    border:none;
+}
+.char p {    display: flow-root;
+}
+.char span {
+    font-weight: 700;
+    display: inline-block;
+    float: right;
+}
+.char li:before {
+    content: '';
+    display: block;
+    background: #2e668b;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    float: left;
+    margin: 8px 20px 0 0;
+}
+.note {
+    color:#fff;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 700;
+     background: #2e668b;
+    padding: 16px 0;
+}
+.prich {
+    margin-bottom: 30px;
+}
+.prich li {
+background: url('0n8btp2u.jpg') no-repeat right 0 #163d56;
+    color: #fff;
+    text-align: center;
+    display: block;
+    height: 230px;
+    padding: 60px 255px 0 15px;
+}
+
+.prich h2{
+    font-size: 20px;
+    color: #fee12b;
+    margin-top: 20px;    
+}
+
+.prich h3 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 5px;
+    text-transform: inherit;
+}
+.prich p {
+    font-size: 16px;
+    line-height: 24px;
+}
+.prich li:nth-child(2) {
+    background-position: left -230px;
+}
+.prich li:nth-child(3) {
+    background-position: right -460px;
+}
+.prich li:nth-child(4) {
+    background-position: left -690px;
+}
+.prich li:nth-child(5) {
+    background-position: right -920px;
+}
+.prich li:nth-child(6) {
+    background-position: left -1150px;
+}
+
+.prich li:nth-child(even) {
+    padding: 58px 15px 0 255px;
+}
+/*block6*//* after_qbici */
+.b6 {
+   padding-bottom: 10px;
+   background: #fff;
+}
+
+
+.b6 .plus {
+    margin: 0 0 30px 20px;
+}
+
+/*block7*//* endzeit_____ */
+.b7 {
+background: #ffffff;
+}
+/*block8*//* michael-k90 */
+.b8 {
+    background: #fff;
+} 
+.b8 h2 {
+    color:#fff;
+}
+.ship {
+    text-align: center;
+}
+.ship li {
+    vertical-align: top;
+    width: 49%;
+    display: inline-block;
+    clear: both;
+    color:#2e2d32;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 19px 20px;
+}
+.ship img {
+    display: block;
+    margin: 0 auto 10px;
+}
+.reviews {
+    text-align: center;
+}
+.reviews img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin:0 auto;
+}
+.reviews h3 {
+    font-size: 18px;
+    padding: 14px 0 7px;
+}
+.reviews p {
+    padding: 0 20px;
+}
+
+.reviews_photo{
+    margin: 0 auto;
+}
+
+/*block9*//* bizlife_inc */
+.b9 {
+    padding-bottom: 20px;
+}
+/*block10*//* owmen17 */
+.end {
+    padding-top: 10px;
+}
+.b2-end {
+    background-image: url('dnr3fy8m.html');
+}
+
+
+.footer {
+    text-align: center;
+    padding: 40px 0 30px;
+}
+.footer a {
+    font-size: 14px;
+    color:#333;
+}
+
+.products_count{
+display: block;
+    background: #194d6d;
+    color: #fee12b;
+    width: 320px;
+    height: 34px;
+    margin: -12px auto 25px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+
+.products_count b{
+    font-weight: 700;
+    color: #cce92f;
+    background: #163d56;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+h2.title {
+    margin: 0 0 20px 0;
+    letter-spacing: .36px;
+    color: #2e2d32;
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+    text-transform: uppercase;
+    padding: 0px 0 10px;
+    margin-bottom: 20px;
+    font-family: 'MuseoSansBlack';
+}
+h2.title > span{
+    font-size: 22px;
+    display: block;
+    color: #163d56;
+}
+
+h2.title:after {
+    content: '';
+    display: block;
+    width: 110px;
+    height: 9px;
+    background: url('hw156hee.html') center top no-repeat;
+    position: relative;
+    left: 50%;
+    bottom: -5px;
+    margin-left: -55px;
+}
+
+.bottom_text{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #cbe82e;
+    text-transform: uppercase;
+    font-weight: 600;
+}

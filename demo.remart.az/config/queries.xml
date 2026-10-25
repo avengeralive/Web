@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+    <test>select * from s_configuration where id = [id] and name = [name]</test>
+    
+    
+    <!--w_documents-->
+    
+    <all_packages_old>SELECT s_packages.id,s_packages.package_code,s_packages.account_num,s_packages.package_type,s_packages.status,s_packages.reg_date,
+(select sum(total_amount) from nf_operations where package_id = s_packages.id) as amount,h_storages.name as storage_name,
+  s_packages.change_date,s_packages.details,s_package_types.name type_id FROM s_packages LEFT JOIN h_storages ON s_packages.storage_id=h_storages.id, s_package_types where s_packages.package_type=s_package_types.id
+  </all_packages_old>
+  <all_packages>
+      select * from (
+SELECT id,package_code,account_num,package_type,status,reg_date,amount,storage_name,storage_id,change_date,details,type_id,created_by, modified_by FROM (
+  SELECT s_packages.id,s_packages.package_code,s_packages.account_num,s_packages.package_type,s_packages.status,s_packages.reg_date,
+(select sum(total_amount) from nf_operations where package_id = s_packages.id) as amount,created_by, modified_by,
+( select hs.name as storage_name from nf_operations no, h_storages hs  where no.package_id = s_packages.id and hs.id = no.storage_id order by no.create_date limit 0,1) as storage_name,
+( select no.storage_id as storage_name from nf_operations no, h_storages hs  where no.package_id = s_packages.id and hs.id = no.storage_id order by no.create_date limit 0,1) as storage_id,
+  s_packages.change_date,s_packages.details,s_package_types.name type_id FROM s_packages, s_package_types 
+  WHERE s_packages.package_type=s_package_types.id ) l 
+  JOIN (select resource_id   from grants 
+                    where id in (
+                              select grant_id from user_grants where user_id in  (  select id  from users where  login ='[login]' ) and grant_id is not null
+                              union all
+                              select grant_id from role_grants where role_id in (select role_id from user_grants where user_id in
+                                                                              (select id from users where login='[login]') and role_id is not null)
+                                                                    ) and resource_type = 'h_storages' and grant_type = 'GET' ) m  ON l.storage_id = m.resource_id) s_packages where 1=1
+  </all_packages>
+    
+    <packages_by_type>SELECT s_packages.id,s_package_types.name type,s_packages.status,s_packages.reg_date,s_packages.details FROM s_packages,s_package_types WHERE s_packages.package_type = s_package_types.id  and package_type in ([package_type]) order by s_packages.reg_date desc</packages_by_type>
+    
+       
+    <selling_nf_operations>select nf_operations.id id, h_items.item_name, nf_operations.count,nf_operations.total_amount,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id]</selling_nf_operations>
+    
+    <migration_nf_operations>select nf_operations.id id, h_items.item_name,h_storages.name storage, nf_operations.count,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations,h_storages where  (h_items.id,h_storages.id) in (select item_id,storage_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id]</migration_nf_operations>
+    
+    <inventarisation_nf_operations>select nf_operations.id id,h_contractors.name,h_contractors.last_name, h_items.item_name, nf_operations.count,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations,h_contractors where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and h_contractors.id = nf_operations.respondent_id and nf_operations.package_id =[package_id]</inventarisation_nf_operations>
+    
+    <clearing_nf_operations>select nf_operations.id id, h_items.item_name,h_storages.name storage, nf_operations.count,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations,h_storages where  (h_items.id,h_storages.id) in (select item_id,storage_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id]</clearing_nf_operations>
+    
+    <reservation_nf_operations>select nf_operations.id id,h_contractors.name,h_contractors.last_name, h_items.item_name, nf_operations.count,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations,h_contractors where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and h_contractors.id = nf_operations.respondent_id and nf_operations.package_id =[package_id]</reservation_nf_operations>
+    
+    <cashdesk_nf_operations>select nf_operations.id id, h_items.item_name, nf_operations.count,nf_operations.total_amount,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id]</cashdesk_nf_operations>
+    
+    <income_nf_operations>select nf_operations.id id, h_contractors.name, h_contractors.last_name, h_items.item_name, nf_operations.price, nf_operations.count,nf_operations.total_amount,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations,h_contractors where   h_items.id in ( select item_id from h_items_info where id = nf_operations.item_id  ) and h_contractors.id =  (select reg_num from f_accounts where account_num = nf_operations.sender) and nf_operations.package_id =  [package_id]</income_nf_operations>
+    
+    <outgo_nf_operations>select nf_operations.id id, h_contractors.name, h_contractors.last_name,h_items.item_name,nf_operations.price, nf_operations.count,nf_operations.total_amount,nf_operations.reg_date,nf_operations.change_date,nf_operations.details,nf_operations.imei,nf_operations.item_serial_number from h_items,nf_operations,h_contractors where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id] and h_contractors.id = (select reg_num from f_accounts where account_num = nf_operations.receiver)</outgo_nf_operations>
+    
+    <returns_nf_operations>select nf_operations.id id, h_contractors.name, h_contractors.last_name,h_items.item_name, nf_operations.price, nf_operations.count,nf_operations.total_amount,nf_operations.reg_date,nf_operations.change_date,nf_operations.details,nf_operations.imei,nf_operations.item_serial_number from h_items,nf_operations,h_contractors where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id] and h_contractors.id = (select reg_num from f_accounts where account_num = nf_operations.receiver)</returns_nf_operations>
+
+
+    <!--<returns_nf_operations>select nf_operations.id id, h_items.item_name,h_storages.name storage, nf_operations.count,nf_operations.reg_date,nf_operations.change_date,type.[lang] as `return_type`,nf_operations.details from h_items,nf_operations,h_storages,translations type where  (h_items.id,h_storages.id) in (select item_id,storage_id from h_items_info where id = nf_operations.item_id) and type.field_name = (select name from s_operations_types where id = nf_operations.operation_type_id) and nf_operations.package_id = [package_id]</returns_nf_operations>-->
+
+	<package_nf_operations>select * from nf_operations where package_id = [package_id]</package_nf_operations>
+    
+    <selling_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id =  [package_id]</selling_f_operations>
+    
+    <migration_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id = [package_id]</migration_f_operations>
+    
+    <inventarisation_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id =  [package_id]</inventarisation_f_operations>
+    
+    <clearing_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id = [package_id]</clearing_f_operations>
+    
+    <reservation_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id =  [package_id]</reservation_f_operations>
+    
+    <cashdesk_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id =  [package_id]</cashdesk_f_operations>
+    
+    <income_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id =  [package_id]</income_f_operations>
+    
+    <outgo_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id = [package_id]</outgo_f_operations>
+    
+    <returns_f_operations>SELECT f_operations.id fo_id, h_items.item_name, f_operations.amount_ncur,f_operations.amount_fcur,f_operations.currency_code, f_operations.reg_date,f_operations.change_date,f_operations.details
+FROM `f_operations`,h_items WHERE h_items.id in (select item_id from h_items_info where id = f_operations.item_id) and f_operations.package_id =  [package_id]</returns_f_operations>
+    
+    <package_by_id>SELECT * FROM s_packages WHERE id = [package_id]</package_by_id>
+ 
+    
+    <!--END w_documents-->
+    
+    <!--w_warehouse controller-->
+    
+    <inventarisation_crud>
+      SELECT 
+       nf_operations.id,
+       t2.item_name,
+       t3.name,
+       t3.last_name,
+       nf_operations.count 
+     FROM  nf_operations, h_items t2, h_contractors t3  , h_items_info t4 
+       WHERE 
+        nf_operations.respondent_id=t3.id 
+    	AND nf_operations.item_id = t4.id 
+    	AND t4.item_id = t2.id
+    	AND nf_operations.package_id = [package_id]
+    </inventarisation_crud>
+    
+    <clearing_crud>
+       SELECT
+        	nf_operations.id,
+        	t2.item_name,
+        	t3.name,
+        	nf_operations.count
+        FROM  nf_operations, h_items t2, h_items_info t4, h_storages t3 
+          WHERE 
+           nf_operations.storage_id=t3.id 
+           AND nf_operations.item_id = t4.id 
+           AND t4.item_id = t2.id    
+           AND nf_operations.package_id =[package_id]
+    </clearing_crud>
+
+    <income_crud>
+    SELECT nf_operations.id,
+       nf_operations.item_name,
+       t2.name,
+       nf_operations.count,
+       nf_operations.price,
+       nf_operations.sell_price,
+       nf_operations.vat,
+       nf_operations.vat_amount
+    FROM nf_operations,
+         h_storages t2
+    WHERE nf_operations.storage_id = t2.id
+      AND nf_operations.package_id =[package_id]
+    </income_crud>
+
+    <outgo_crud>
+    SELECT nf_operations.id,
+       nf_operations.item_name,
+       t2.name,
+       h_contractors.name as contractor_name,
+       h_contractors.last_name,
+       nf_operations.count,
+       nf_operations.total_amount
+    FROM nf_operations,
+         h_storages t2,
+         h_contractors
+    WHERE nf_operations.storage_id = t2.id
+      AND h_contractors.id = (select reg_num from f_accounts where account_num = nf_operations.receiver)
+      AND nf_operations.package_id = [package_id]
+    </outgo_crud>    
+
+    <migration_crud>
+    SELECT nf_operations.id,
+           t2.item_name,
+           t3.name,
+           nf_operations.count
+    FROM nf_operations,
+         h_items t2,
+         h_storages t3,
+    	 h_items_info t4 
+    WHERE nf_operations.storage_id=t3.id
+      AND nf_operations.item_id = t4.id
+      AND t4.item_id = t2.id
+      AND nf_operations.package_id = [package_id]
+    </migration_crud>
+               
+               
+               
+    <returns_crud>
+    SELECT nf_operations.id,
+           t2.item_name,
+           concat(h_contractors.name,' ',h_contractors.last_name) as contractor,
+           t3.name,
+           nf_operations.total_amount,
+           nf_operations.count
+    FROM nf_operations,
+         h_items t2,
+         h_storages t3,
+    	 h_items_info t4,
+    	 h_contractors
+    WHERE nf_operations.storage_id=t3.id
+      AND nf_operations.item_id = t4.id
+      AND t4.item_id = t2.id
+      AND h_contractors.id = (select reg_num from f_accounts where account_num = nf_operations.receiver)
+      AND nf_operations.package_id = [package_id]
+    </returns_crud>
+    
+    <reservation_crud>
+    SELECT nf_operations.id,
+           t2.item_name,
+           concat(h_contractors.name,' ',h_contractors.last_name) as contractor,
+           t3.name,
+           nf_operations.count
+    FROM nf_operations,
+         h_items t2,
+         h_storages t3,
+    	 h_items_info t4,
+    	 h_contractors
+    WHERE nf_operations.storage_id=t3.id
+      AND nf_operations.item_id = t4.id
+      AND t4.item_id = t2.id
+      AND h_contractors.id = nf_operations.respondent_id
+      AND nf_operations.package_id = [package_id]
+    </reservation_crud>
+               
+               
+                  
+    <selling_crud>
+        SELECT nf_operations.id,
+               t2.item_name,
+               t3.name,
+               nf_operations.price,
+               nf_operations.count,
+               nf_operations.total_amount
+        FROM nf_operations,
+             h_items t2,
+             h_storages t3,
+        	 h_items_info t4
+        WHERE t4.storage_id=t3.id
+          AND nf_operations.item_id = t4.id
+          AND t4.item_id = t2.id
+          AND nf_operations.package_id = [package_id]
+    </selling_crud>
+    
+    
+    <itemslist>
+    SELECT * FROM
+     (
+        SELECT
+         m.id, m.item_name,
+    	 m.item_code,
+    	 m.ean_number,
+    	 m.storage_name, 
+    	 ti.name as 'category_name',
+    	 m.measure_id, m.measure_name, m.price ,
+    	 m.currency_code,
+    	 m.sell_price, 
+    	 SUM(m.count) as count, 
+    	 SUM(m.reserved)  as reserved
+           FROM (
+    		 SELECT t3.id, 
+    		 t1.item_name, 
+    		 t3.item_code, 
+    		 t3.ean_number,
+    		 t2.name as 'storage_name',
+    		 t1.category_id, 
+    		 t3.measure_id, 
+    		 t4.name AS measure_name,
+    		 t3.price, 
+    		 t3.currency_code, 
+    		 t3.sell_price,
+    		 t3.count, 
+    		 getReservedCountByItemIdAndStorageId(t3.item_id,t3.storage_id) AS reserved
+                FROM h_items t1,h_items_info t3, h_storages t2, s_measures t4
+    			 WHERE t3.measure_id = t4.id  AND 
+    			 t3.item_id = t1.id 
+    			 AND t3.storage_id = t2.id
+    			 AND  EXISTS (select * FROM nf_operations where item_id=t3.id and storage_id = t2.id )
+    			 AND t1.status != "RE"
+    			  ) m 
+    	 LEFT JOIN s_item_categories ti ON m.category_id = ti.id 
+        GROUP BY m.id) n where 1
+    </itemslist>
+    
+    <!--END w_warehouse controller-->
+    
+    <!--w_warehouse model-->
+    
+<operation_rule>
+    select * from
+        (
+        select 
+            id, payment_type_id, operation_type_id,
+         case 
+          when credit like ('^[%]$') then 
+        (select value from s_configuration where name = trim(TRAILING ']$' from trim(LEADING '^[' from credit)) )
+          else credit
+          end as credit_val,
+         case 
+          when debet like ('^[%]$') then 
+        (select value from s_configuration where name = trim(TRAILING ']$' from trim(LEADING '^[' from debet)) )
+          else debet
+          end as debet_val
+         from s_operation_rules 
+         ) as val_table 
+         where  '[debet]' regexp debet_val and '[credit]' regexp credit_val and payment_type_id = [payment_type_id] and operation_type_id = [operation_type_id]
+</operation_rule>
+
+<transaction_rules>
+    select * from
+        (
+        select 
+            id,
+         case 
+          when credit like ('^[%]$') then 
+        (select value from s_configuration where name = trim(TRAILING ']$' from trim(LEADING '^[' from credit)) )
+          else credit
+          end as credit_val,
+         case 
+          when debet like ('^[%]$') then 
+        (select value from s_configuration where name = trim(TRAILING ']$' from trim(LEADING '^[' from debet)) )
+          else debet
+          end as debet_val, cn_flag,
+            amount,operation_rule_id,currency_code
+         from s_transaction_rules 
+         ) as val_table 
+          where   operation_rule_id = [operation_rule_id]
+</transaction_rules>
+
+<check_package_id>select IF(status > 1, 0, 1) as editable from s_packages where id = [package_id] and package_type = [package_type]</check_package_id>
+
+<get_main_currency>select id, code, value from s_currencies where is_main = 1</get_main_currency>
+
+<get_currency_details>select id, code, name, value, is_main from s_currencies where code = '[code]' and effective_date &lt;= '[effective_date]' order by effective_date desc limit 0,1</get_currency_details>
+
+<get_account_type>select type from f_accounts where account_num='[account_num]'</get_account_type>
+
+<get_items_json>
+  SELECT 
+   t1.id AS  `id` ,
+   ifnull(t3.id, 0) AS `item_info_id`,
+   t2.name AS  `category` , 
+   t3.package_id AS  `package_id` , 
+   t3.reg_date AS  `reg_date` ,
+   t3.count AS  `count` , 
+   t3.price AS  `price` , 
+   t3.sell_price AS  `sell_price` , 
+   t1.category_id,
+   t1.item_name AS  `name` ,
+   t4.name AS  `measure_name` , 
+   ifnull(t3.limit_cnt,0) AS limit_cnt,
+   ifnull(t5.id, 0) AS `storage_id`,
+   ifnull(t5.name,'') AS `storage`,
+   t3.currency_code 
+FROM h_items t1
+    LEFT JOIN h_items_info t3
+	    ON t1.id = t3.item_id
+ 	LEFT JOIN s_measures t4
+ 	    ON t3.measure_id = t4.id
+ 	LEFT JOIN h_storages t5
+ 	    ON t5.id = t3.storage_id,
+ 	s_item_categories t2
+ 	    WHERE t1.category_id = t2.id AND t1.status!='RE'
+				AND (lower(t1.item_name) like  lower('%[param]%') 
+    				OR t3.item_code like('%[param]%') 
+    				OR lower(t1.details) like lower('%[param]%') 
+    				OR t1.ean_number  like('%[param]%') 
+    				OR lower(t2.name) like lower('%[param]%')  
+    				OR t1.id like('%[param]%')) 
+    group by t1.id , t3.storage_id	    				
+</get_items_json>
+
+<get_items_counted_sold_json>
+SELECT * FROM (SELECT 
+   t3.id AS  `id` ,
+   t1.id AS 'h_item_id',
+   t2.name AS  `category` , 
+   t3.package_id AS  `package_id` , 
+   MIN(t3.reg_date) AS  `reg_date` ,
+   t3.count AS  `count` , 
+   t3.price AS  `price` , 
+   t3.sell_price AS  `sell_price` , 
+   t1.category_id,
+   t1.item_name AS  `name` ,
+   t3.ean_number AS `ean_number`,
+   t4.name AS  `measure_name` , 
+   t4.id AS `measure_id`,
+   t3.limit_cnt,
+   t3.storage_id,
+   t5.name AS `storage`,
+   t3.currency_code 
+FROM h_items t1, 
+     h_items_info t3,
+ 	 s_item_categories t2, 
+	 s_measures t4,
+	 h_storages t5
+WHERE t3.measure_id = t4.id  AND t1.status!='RE'
+                AND t5.id = t3.storage_id AND t3.storage_id!=2
+                AND t1.id = t3.item_id
+                AND t1.category_id = t2.id
+                
+                AND t3.id in (
+select item_id from nf_operations where operation_type_id in (3,5) )
+				AND (lower(t1.item_name) like lower('%[param]%') 
+				OR t3.item_code like('%[param]%') 
+				OR t1.details like('%[param]%') 
+				OR t1.ean_number  like('%[param]%') 
+				OR t1.details  like('%[param]%') 
+				OR lower(t2.name) like lower('%[param]%')  
+				OR t1.id like('%[param]%')) 
+		group by t3.id, t1.id , t3.storage_id	) l 
+</get_items_counted_sold_json>
+
+<get_items_counted_json>
+ SELECT * FROM ( SELECT 
+   t3.id AS  `id` ,
+   t1.id AS 'h_item_id',
+   t2.name AS  `category` , 
+   t3.package_id AS  `package_id` , 
+   MIN(t3.reg_date) AS  `reg_date` ,
+   t3.count AS  `count` , 
+   t3.price AS  `price` , 
+   t3.sell_price AS  `sell_price` , 
+   t1.category_id,
+   t1.item_name AS  `name` ,
+   t4.name AS  `measure_name` , 
+   t4.id AS `measure_id`,
+   t3.limit_cnt,
+   t3.storage_id,
+   t5.name AS `storage`,
+   t3.currency_code,
+   t3.ean_number AS `ean_number`
+FROM h_items t1, 
+     h_items_info t3,
+ 	 s_item_categories t2, 
+	 s_measures t4,
+	 h_storages t5
+WHERE t3.measure_id = t4.id  AND t1.status!='RE'
+                AND t5.id = t3.storage_id AND t3.storage_id!=2
+                AND t1.id = t3.item_id
+                AND t1.category_id = t2.id
+				AND t3.count > 0  
+				AND (lower(t1.item_name) like lower('%[param]%') 
+				OR t3.item_code like('%[param]%') 
+				OR t1.details like('%[param]%') 
+				OR t1.ean_number  like('%[param]%') 
+				OR t1.details  like('%[param]%') 
+				OR lower(t2.name) like lower('%[param]%')  
+				OR t1.id like('%[param]%')) 
+		group by t1.id , t3.storage_id	) l
+</get_items_counted_json>
+
+<get_items_by_id_storage>
+  SELECT 
+   t3.id AS  `id` ,
+   t1.id AS 'h_item_id',
+   t2.name AS  `category` , 
+   t3.package_id AS  `package_id` , 
+   t3.reg_date AS  `reg_date` ,
+   t3.count AS  `count` , 
+   t3.price AS  `price` , 
+   t3.sell_price AS  `sell_price` , 
+   t1.category_id,
+   t1.item_name AS  `name` ,
+   t4.name AS  `measure_name` ,
+   t4.id AS `measure_id` ,
+   t3.limit_cnt,
+   t3.storage_id,
+   t5.name AS `storage`,
+   t3.currency_code 
+FROM h_items t1, 
+     h_items_info t3,
+ 	 s_item_categories t2, 
+	 s_measures t4,
+	 h_storages t5
+WHERE t3.measure_id = t4.id  AND t1.status!='RE'
+                AND t5.id = t3.storage_id
+                AND t1.id = t3.item_id
+                AND t1.category_id = t2.id
+				AND t3.count > 0  
+				AND t1.id = [item_id]
+				AND t3.storage_id = [storage_id]
+				ORDER BY t3.reg_date
+</get_items_by_id_storage>
+
+<get_items_info_json>
+  SELECT 
+   t3.id AS  `id` ,
+   t1.id AS 'h_item_id',
+   t2.name AS  `category` , 
+   t3.package_id AS  `package_id` , 
+   t3.reg_date AS  `reg_date` ,
+   t3.count AS  `count` , 
+   t3.price AS  `price` , 
+   t3.sell_price AS  `sell_price` , 
+   t1.category_id,
+   t1.item_name AS  `name` ,
+   t4.name AS  `measure_name` , 
+   t3.limit_cnt,
+   t3.storage_id,
+   t5.name AS `storage`,
+   t3.currency_code 
+FROM h_items t1, 
+     h_items_info t3,
+ 	 s_item_categories t2, 
+	 s_measures t4,
+	 h_storages t5
+WHERE t3.measure_id = t4.id  AND t1.status!='RE'
+                AND t5.id = t3.storage_id
+                AND t1.id = t3.item_id
+                AND t1.category_id = t2.id
+				AND t3.count > 0  
+				AND (lower(t1.item_name) like lower('%[param]%') 
+				OR t3.item_code like('%[param]%') 
+				OR t1.details like('%[param]%') 
+				OR t1.ean_number  like('%[param]%') 
+				OR t1.details  like('%[param]%') 
+				OR lower(t2.name) like lower('%[param]%')  
+				OR t1.id like('%[param]%')) 
+</get_items_info_json>
+
+<get_items_categories_json>
+    select id, name, (select name from s_item_categories t2 where t2.id = t1.parent_id) as parent_name from s_item_categories t1 where status != "RE" and (name like('%[param]%') or details like('%[param]%'))
+</get_items_categories_json>
+
+<get_storages_json>
+   SELECT * FROM ( select id,name, id as storage_id from h_storages where lower(name) like  lower('%[param]%') and status!='RE' and id not in
+(select value from s_configuration where name in ('return_storage_id','cleared_storage_id'))  ) l 
+</get_storages_json>
+
+<get_all_storages>
+   SELECT * FROM ( select id,name, id as storage_id from h_storages where status!='RE' and id not in
+(select value from s_configuration where name in ('return_storage_id','cleared_storage_id'))  ) l 
+</get_all_storages>
+
+<get_contragents_json>
+    select id,reg_num,name,last_name,father_name,CONCAT_WS(" ",name,last_name,father_name) as full_name from h_contractors where (name like ('%[param]%') or last_name like ('%[param]%') or father_name like ('%[param]%')) and h_contractors.status != 'RE'
+</get_contragents_json>
+
+<get_invoices_json>
+ SELECT * FROM ( select id, package_code, reg_date, package_type, status, account_num, (select storage_id from nf_operations where package_id = s.id order by create_date limit 0,1) as storage_id ,
+ (select sum(total_amount)  from nf_operations where package_id = s.id) as amount
+ from s_packages s where (id like ('%[param]%') or reg_date like ('%[param]%') or package_code like ('%[param]%')) and [where] ) l 
+</get_invoices_json>
+
+<get_accounts_json>
+    select CONCAT_WS(" ", co.name, co.last_name, co.father_name) full_name, ac.account_num, ac.details,co.id contragent_id,ac.bal_out_ncur debt from f_accounts ac,h_contractors co where ac.reg_num = co.reg_num [where] and ac.status != 'RE'
+</get_accounts_json>
+
+<get_payment_types_json>
+    select id,name from s_payment_types where name like ('%[param]%') and status != "RE"
+</get_payment_types_json>
+
+<get_count_by_item_id_free>
+    select ifnull(SUM(count),-9999) `count` from nf_operations where [where]
+</get_count_by_item_id_free>
+
+<get_count_by_item_id>
+    select ifnull(SUM(count),-9999) `count` from h_items_info where id=[item_id] and storage_id = [storage_id] 
+</get_count_by_item_id>
+
+<get_count_by_h_item_id>
+    select ifnull(SUM(count),-9999) `count` from h_items_info where item_id=[hitem_id] and storage_id = [storage_id] 
+</get_count_by_h_item_id>
+
+
+<get_count_by_item_id_reserved>
+    select ifnull(SUM(count),-9999) `count` from nf_operations where [where] and operation_type_id in (1,2) and status = 'AC'
+</get_count_by_item_id_reserved>
+
+<copy_item_old_item>
+    select `item_name`,`item_code`,`price`,`sell_price`,`currency_code`,`category_id`,`storage_id`,`brand_id`,`ean_number`,`error_code`,`status`,`details`,`respondent_id`,`reg_date`,`count`,`payment_type_id`,`netto`,`brutto`,`limit_cnt`,`reserved_cnt`,`guarantee`,`measure_id`,`expiration_date` from h_items where id = [item_id]
+</copy_item_old_item>
+
+<check_package_counts>
+    select * from (SELECT item_id,
+    case 
+    when s_packages.package_type = 1 then
+    if (SUM(nf_operations.count) &gt; 0,getCountByItemIdAndStorageId(item_id,nf_operations.storage_id) - getInventarisedCountByItemIdAndStorageIdAndContractorId(item_id,nf_operations.storage_id,0)-SUM( nf_operations.count ),SUM(nf_operations.count)+getInventarisedCountByItemIdAndStorageIdAndContractorId
+    		(item_id,nf_operations.storage_id,nf_operations.respondent_id))
+    when s_packages.package_type = 4 then 
+    if (SUM(nf_operations.count) &gt; 0,getCountByItemIdAndStorageId(item_id,nf_operations.storage_id) - getReservedCountByItemIdAndStorageIdAndContractorId(item_id,nf_operations.storage_id,0)-SUM( nf_operations.count ),SUM(nf_operations.count)+getReservedCountByItemIdAndStorageIdAndContractorId
+    		(item_id,nf_operations.storage_id,nf_operations.respondent_id))
+   when s_packages.package_type = 8 or s_packages.package_type=2 or s_packages.package_type=3 then  
+   SUM(if(nf_operations.count &lt; 0,nf_operations.count,0)) + getCountByItemIdAndStorageId(item_id,nf_operations.storage_id)
+    else
+    SUM( nf_operations.count ) + getCountByItemIdAndStorageId(item_id,nf_operations.storage_id)
+    end as items
+    FROM nf_operations, s_packages
+    WHERE package_id =[package_id]
+    AND s_packages.id = nf_operations.package_id
+    AND s_packages.status = 1 
+    GROUP BY item_id
+    ) alias where items &lt; 0
+</check_package_counts>
+
+<copy_item_check>
+    select t1.id from h_items t1, h_items t2 where t1.id &lt;&gt; t2.id and t1.item_code = t2.item_code and t1.item_name = t2.item_name and t1.category_id = t2.category_id and t1.storage_id &lt;&gt; t2.storage_id and t1.storage_id = [new_storage_id] and t2.id=[item_id]
+</copy_item_check>
+
+
+<get_item_sell_price>
+    select sell_price from h_items where id = [item_id]
+</get_item_sell_price>
+
+<get_item_data>
+    select * from h_items_info where id = [item_id]
+</get_item_data>
+
+<get_retail_debet_and_credit>
+    select name,value from s_configuration where name = 'revenue' or name = 'company_[payment_type_id]' 
+</get_retail_debet_and_credit>
+
+<get_value_from_s_configuration>
+    select name,value from s_configuration where name = '[name]'
+</get_value_from_s_configuration>
+
+<get_main_storage>
+    select id,name from h_storages where is_main = 1
+</get_main_storage>
+
+<get_currencies>
+    select code from s_currencies where status != "RE" group by code order by code
+</get_currencies>
+
+<get_chart_of_accounts>
+    select id,account_num,type,details from f_chart_of_accounts order by id
+</get_chart_of_accounts>
+
+<get_payment_types>
+    select id,name from s_payment_types where status != "RE"
+</get_payment_types>
+
+<insert_items>
+    insert into h_items_info 
+        select 
+            0, 
+            item_id, 
+            item_code, 
+            ean_number,
+            item_serial_number, 
+            [storage_id], 
+            price, 
+            sell_price, 
+            package_id, 
+            guarantee, 
+            expiration_date, 
+            reg_date, 
+            now(), 
+            currency_code, 
+            [count], 
+            measure_id, 
+            0 
+        from h_items_info where id = [item_id]
+</insert_items>
+
+<update_items_count>
+    update h_items_info 
+        set 
+    where id in (select item_id from nf_operations where package_id = [package_id])    
+        select 0, item_id, item_code, storage_id, price, sell_price, package_id, guarantee, expiration_date, reg_date, now(), currency_code, count, 0, 0, measure_id, 0 from nf_operations where operation_type_id = 4 and package_id = [package_id]
+</update_items_count>
+
+<get_package_debt>
+    SELECT 
+    	ifnull((select sum(amount_ncur) FROM f_operations WHERE package_id = [package_id] AND credit like '[credit]'),0) -
+    	ifnull((select sum(amount_ncur) FROM f_operations WHERE package_id = [package_id] AND debet like '[debet]'),0) as debt
+    FROM DUAL
+</get_package_debt>
+
+<get_cashdesks>
+    SELECT * FROM (SELECT c.id, c.account_num, ifnull((select sum(case when debet = c.account_num then amount_ncur when credit = c.account_num then -amount_ncur end) from f_transactions where status != 'RE' and debet = c.account_num or credit = c.account_num),0) balance, a.chart_account_num, c.name, c.details, ifnull(c.operator_name, '') operator_name, c.state, c.last_handover_user, c.last_accept_user, c.last_handover_date, c.last_accept_date, c.last_open_date, c.last_close_date , c.storage_id as storage_id FROM h_cashdesks c, f_accounts a 
+    WHERE (c.name like ('%[query]%') or c.details like ('%[query]%') or c.account_num like ('%[query]%'))
+    and c.account_num = a.account_num
+    and c.status != "RE" order by c.is_main desc ) l 
+</get_cashdesks>
+
+<package_arhlog>
+SELECT a.id, a.reg_date, a.session_id, b.[lang] resource, c.[lang] type FROM
+	(SELECT id, reg_date, session_id, table_name, case type when 'i' then 'inserted' when 'u' then 'updated' end type
+	FROM arhlog  
+	where hash_group in (select distinct hash_group FROM arhlog where table_name = 's_packages' and conditions = 'id=[package_id]')) a,
+	translations b,
+	translations c
+WHERE 
+	c.row_id = 0 and b.field_name = a.table_name
+	and  c.row_id = 0 and c.field_name = a.type 
+</package_arhlog>
+
+<check_item_code>
+select item_code from h_items_info where item_code = '[item_code]'
+union all
+select item_code from nf_operations where item_code = '[item_code]' and item_code != ''
+</check_item_code>
+
+<!--END w_warehouse model-->
+
+<!--w_resources controller-->
+
+<!--END w_warehouse controller-->
+
+<!--w_resources model-->
+<get_accounts>
+    select * from (SELECT f_accounts.id,f_accounts.reg_num,h_contractors.name,h_contractors.last_name,f_accounts.account_num, f_accounts.currency_code,f_accounts.bal_in_ncur,f_accounts.bal_out_ncur,f_accounts.bal_in_fcur,
+      		f_accounts.bal_out_fcur, f_accounts.type,f_accounts.reg_date,f_chart_of_accounts.details as `chart_of_accounts`, f_accounts.details, f_accounts.organisation_id, h_organisations.name org_name
+    FROM f_accounts LEFT JOIN h_organisations ON f_accounts.organisation_id = h_organisations.id,
+            f_chart_of_accounts, h_contractors
+    WHERE f_accounts.chart_account_num = f_chart_of_accounts.account_num and h_contractors.reg_num = f_accounts.reg_num and f_accounts.status != 'RE') f_accounts where 1=1
+</get_accounts>
+
+<get_account_sub_num>
+    select account_num,sub_num from f_chart_of_accounts where account_num = [account_num]
+</get_account_sub_num>
+
+<check_account_type>
+    SELECT * FROM `f_chart_of_accounts` where account_num = '[chart_of_account]' and type like('%[type]%')
+</check_account_type>
+
+<get_item_categories>
+    select id,name from s_item_categories where status != "RE"
+</get_item_categories>
+
+<get_measure_types>
+    select id,name from s_measures where status != "RE"
+</get_measure_types>
+
+<get_item_by_ean_number>
+    select id,sell_price from h_items where ean_number='[ean_number]' and status != "RE" 
+</get_item_by_ean_number>
+
+<get_package_statuses>
+SELECT t1.id,statuses.[lang] name,t1.details,t1.status FROM s_package_statuses t1,translations statuses where t1.name = statuses.field_name and statuses.row_id = 0 and t1.status != "RE" 
+</get_package_statuses>
+
+<get_package_types>
+SELECT t1.id,type.[lang] name,t1.details,t1.status FROM s_package_types t1,translations type where t1.name = type.field_name and type.row_id = 0 and t1.status != "RE"   
+</get_package_types>
+
+<cashdesks>
+SELECT h_cashdesks.id, h_cashdesks.name, translations.[lang] cur_name, h_cashdesks.account_num, CONCAT(fa.account_num,  ' - ', fa.details) account, 
+        h_cashdesks.details, h_cashdesks.is_main, h_cashdesks.status, h_cashdesks.storage_id, h_storages.name storage_name,
+        ifnull((select sum(case when debet = fa.account_num then amount_ncur when credit = fa.account_num then -amount_ncur end) from f_transactions where status != 'RE' and debet = fa.account_num or credit = fa.account_num),0) balance
+        FROM h_cashdesks LEFT JOIN f_accounts fa ON h_cashdesks.account_num = fa.account_num LEFT JOIN h_storages ON h_cashdesks.storage_id = h_storages.id,
+        translations WHERE translations.row_id = h_cashdesks.id and translations.table_name = 'h_cashdesks' and translations.field_name = 'name' 
+        and h_cashdesks.status != "RE"
+</cashdesks>
+
+<check_if_storage_is_main>
+     SELECT IF(is_main=1,(select min(id) from h_storages),'not_main') as 'response' from h_storages where id = [key] and status='AC'
+</check_if_storage_is_main>
+
+<check_if_measure_is_main>
+     SELECT IF(is_main=1,(select min(id) from s_measures),'not_main') as 'response' from s_measures where id = [key] and status='AC'
+</check_if_measure_is_main>
+
+<!--END w_resources model-->
+
+<!-- w_dashboard view -->
+<dashboard_select_income>
+SELECT COALESCE(COUNT(*),0) as answer FROM `nf_operations` WHERE 1 and `operation_type_id`=4 and reg_date > current_date-1
+</dashboard_select_income>
+
+<dashboard_select_outgo>
+SELECT COALESCE(COUNT(*),0) as answer FROM `nf_operations` WHERE 1 and `operation_type_id`=5 and reg_date > current_date-1
+</dashboard_select_outgo>
+
+
+<dashboard_select_sales>
+SELECT COALESCE(COUNT(*),0) as answer FROM `nf_operations` WHERE 1 and `operation_type_id`=3 and reg_date > current_date-1
+</dashboard_select_sales>
+
+<dashboard_select_inventarisation>
+SELECT COALESCE(COUNT(*),0) as answer FROM `nf_operations` WHERE 1 and `operation_type_id`=6 and reg_date > current_date-1
+</dashboard_select_inventarisation>
+
+<dashboard_notifications> 
+SELECT    `notifications`.icon,
+         `translations`.[lang], 
+		  `nf_operations`.reg_date 
+ FROM `notifications_config` , `notifications`  ,  `nf_operations` , `translations` 
+ WHERE  
+   `notifications_config`.n_id =  `notifications`.id
+	and CURDATE() between `notifications_config`.start_date and `notifications_config`.end_date
+	and `notifications_config`.hidden = 0 
+	and `nf_operations`.operation_type_id = `notifications`.oper_type 
+	and `nf_operations`.reg_date is not NULL 
+	and `translations`.table_name =   'notifications' 
+	and   `translations`.row_id = `notifications`.id
+ORDER BY `nf_operations`.reg_date  DESC LIMIT 0,9
+</dashboard_notifications>
+
+<notifications> 
+SELECT    `nf_operations`.id, 
+         `translations`.[lang]  lang, 
+		  `nf_operations`.reg_date 
+ FROM `notifications_config` ,  `notifications`  ,  `nf_operations` , `translations` 
+ WHERE  `notifications_config`.n_id =  `notifications`.id
+	and CURDATE() between `notifications_config`.start_date and `notifications_config`.end_date
+	and `notifications_config`.hidden = 0 
+	and `nf_operations`.operation_type_id = `notifications`.oper_type 
+	and `nf_operations`.reg_date is not NULL 
+	and `translations`.table_name =   'notifications' 
+	and   `translations`.row_id = `notifications`.id
+ORDER BY `nf_operations`.reg_date  DESC 
+</notifications>
+
+<!-- END w_dashboard view-->
+
+
+<!-- Discount querie -->
+<discount>
+SELECT  discount.id, discount.name, discount.discount_desc,
+                s_item_categories.name as category_name,  hc.full_name , hi.item_name ,discount.count
+                , discount.discount_card_code, discount.persent , discount.contragent, discount.item_category, discount.item
+                FROM  discount  
+                     LEFT JOIN  h_items hi
+                      ON discount.item =hi.id
+                     LEFT JOIN  s_item_categories 
+                      ON discount.item_category = s_item_categories.id
+                     LEFT JOIN ( select id, CONCAT( name,  ' ', last_name,  ' ', father_name )  as  full_name from h_contractors) hc 
+                       ON discount.contragent=hc.id 
+</discount>
+<!-- END Discount querie -->
+
+
+
+<!-- w_printing -->
+<invoice_header>SELECT s_packages.id,s_packages.package_type,s_package_types.name type_id,s_packages.status,s_packages.reg_date,s_packages.change_date,s_packages.details FROM s_packages, s_package_types where package_type = s_package_types.id and s_packages.id = [package_id]</invoice_header>
+
+<invoice_body>select nf_operations.id id,h_contractors.id contragent, h_contractors.name,h_contractors.last_name, h_items.item_name, nf_operations.count,nf_operations.reg_date,nf_operations.change_date,nf_operations.details from h_items,nf_operations,h_contractors where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id] and h_contractors.id = nf_operations.sender</invoice_body>
+
+<expeditor_header>SELECT s_packages.id,s_packages.package_type,s_package_types.name type_id,s_packages.status,s_packages.reg_date,s_packages.change_date,s_packages.details FROM s_packages, s_package_types where package_type = s_package_types.id and s_packages.id = [package_id]</expeditor_header>
+
+<expeditor_body>select  h_items.item_name, nf_operations.count,nf_operations.reg_date from h_items,nf_operations where  h_items.id in (select item_id from h_items_info where id = nf_operations.item_id) and nf_operations.package_id = [package_id] and nf_operations.count>0</expeditor_body>
+
+<print_package>SELECT s_packages.id,s_packages.package_type,s_package_types.name type_id,s_packages.status,s_packages.reg_date,s_packages.change_date,s_packages.details,created_by,modified_by FROM s_packages, s_package_types where package_type = s_package_types.id and s_packages.id = [package_id]</print_package>
+<!-- END w_printing -->
+    
+    
+<!-- w_accounting -->
+
+<operation_rules>
+    select opr.id, opr.debet, opr.credit, opr.payment_type_id, opr.details, ifnull(b.reg_num, 0) deb_contractor_id, ifnull(a.reg_num, 0) cre_contractor_id,
+		ifnull((select CONCAT_WS(" ", co.name, co.last_name, co.father_name) from h_contractors co where co.id = b.reg_num), 0) deb_full_name, 
+		ifnull((select CONCAT_WS(" ", co.name, co.last_name, co.father_name) from h_contractors co where co.id = a.reg_num), 0) cre_full_name, 
+		ifnull(b.details, 0) deb_details, ifnull(a.details, 0) cre_details, ifnull(b.bal_out_ncur, 0) deb_debt, ifnull(a.bal_out_ncur, 0) cre_debt  
+	from
+        (
+        select 
+            id,
+         case 
+          when credit like ('^[%]$') then 
+        (select value from s_configuration where name = trim(TRAILING ']$' from trim(LEADING '^[' from credit)) )
+          else credit
+          end as credit,
+         case 
+          when debet like ('^[%]$') then 
+        (select value from s_configuration where name = trim(TRAILING ']$' from trim(LEADING '^[' from debet)) )
+          else debet
+          end as debet,
+		  details,
+		  payment_type_id
+         from s_operation_rules 
+         ) as opr left join f_accounts a on opr.credit = a.account_num left join f_accounts b on opr.debet = b.account_num
+         order by opr.details
+</operation_rules>
+
+<operations>
+    select * from (select f_operations.id, h_storages.id storage_id, translations.[lang], s_payment_types.name, f_operations.package_id, h_storages.name storage, f_operations.debet, f_operations.credit, f_operations.amount_ncur, f_operations.amount_fcur, f_operations.currency_code, f_operations.reg_date, f_operations.created_by, f_operations.modified_by, f_operations.status, f_operations.details 
+    from f_operations, s_operations_types, s_payment_types, h_storages, translations
+    where f_operations.operation_type_id = s_operations_types.id and f_operations.payment_type_id = s_payment_types.id and f_operations.storage_id = h_storages.id and translations.field_name = s_operations_types.name) l
+    
+</operations>
+
+<!-- End w_accounting -->
+    
+<!-- CRUD -->    
+<check_content>
+    SELECT count(*) as exist FROM `contents` where content_name = '[content_name]'
+</check_content>  
+<!-- END CRUD -->        
+
+
+<!-- Selling Strategies -->
+
+
+<check_Item_strategy>
+    select count(*) as res from s_configuration where name = 'selling_item_strategy' and value = '[ean_number]'
+</check_Item_strategy>
+
+<get_default_strategy>
+    select `value` from s_configuration where name = 'selling_default_strategy'
+</get_default_strategy>
+
+<strategy_newest>
+   SELECT * FROM ( SELECT
+t2.category_id, t1.id, t1.storage_id, t2.item_name,t2.ean_number, t1.price, t1.sell_price, t1.measure_id, t4.name as measure_name, t5.name as storage, t1.limit_cnt, t1.item_id, t3.name category
+FROM `h_items_info` t1,`h_items` t2, s_item_categories t3, s_measures t4, h_storages t5 WHERE t1.measure_id = t4.id and t1.storage_id = t5.id and t2.category_id = t3.id and t1.item_id = t2.id and t2.ean_number = '[barcode]' and t1.count>0 and t1.storage_id not in 
+(
+select value from s_configuration where name in 
+    (
+    'return_storage_id','cleared_storage_id','main_items_storage_id'
+    )
+) and t2.status != "RE"
+order by t1.reg_date desc  ) l 
+</strategy_newest>
+
+<strategy_123456789>
+        SELECT
+t2.category_id, t1.id, t1.storage_id, t2.item_name,t2.ean_number, t1.price, t1.sell_price, t1.measure_id, t4.name as measure_name, t5.name as storage, t1.limit_cnt, t1.item_id, t3.name category
+FROM `h_items_info` t1,`h_items` t2, s_item_categories t3, s_measures t4, h_storages t5 WHERE t1.measure_id = t4.id and t1.storage_id = t5.id and t2.category_id = t3.id and t1.item_id = t2.id and t2.ean_number = '123456789' and t1.count>0 and t1.storage_id not in 
+(
+select value from s_configuration where name in 
+    (
+    'return_storage_id','cleared_storage_id','main_items_storage_id'
+    )
+) and t2.status != "RE"
+order by t1.sell_price asc limit 0,1
+</strategy_123456789>
+
+<!-- END Selling Strategies -->
+
+<!-- BEGIN Security checks -->
+<restrict_storage_by_user_old>
+   WHERE 1=1 and (getResourceRightByIdUser(l.storage_id,'[login]',"h_storages","GET")=1 or storage_id = 0)
+</restrict_storage_by_user_old>
+<!-- END Security checks -->
+
+
+<!-- BEGIN Security checks -->
+<restrict_storage_by_user>
+     LEFT JOIN (select resource_id   from grants 
+                    where id in (
+                              select grant_id from user_grants where user_id in  (  select id  from users where  login ='[login]' ) and grant_id is not null
+                              union all
+                              select grant_id from role_grants where role_id in (select role_id from user_grants where user_id in
+                                                                              (select id from users where login='[login]') and role_id is not null)
+                                                                    ) and resource_type = 'h_storages' and grant_type = 'GET') m  ON l.storage_id = m.resource_id
+                                                                      WHERE m.resource_id is not null or l.storage_id = 0 
+</restrict_storage_by_user>
+<!-- END Security checks -->
+
+<!-- Settings -->
+<get_operation_rules>
+    select s_operation_rules.id, s_operation_rules.debet, s_operation_rules.credit, s_operation_rules.payment_type_id, s_operation_rules.operation_type_id, s_operation_rules.details, 
+        s_payment_types.name payment_type_name, s_operations_types.name operation_type_name
+    from s_operation_rules left join s_payment_types on s_operation_rules.payment_type_id = s_payment_types.id left join s_operations_types on s_operation_rules.operation_type_id = s_operations_types.id
+</get_operation_rules>
+
+
+
+<!-- Settings -->
+
+
+<get_name_and_surname_by_login>
+    select name,surname from users where login = '[login]'
+</get_name_and_surname_by_login>
+
+<!-- NOTIFICATIONS BEGIN --> 
+<cash_threshold>   SELECT * FROM (SELECT c.id, c.account_num,
+    ifnull((select sum(case when debet = c.account_num then amount_ncur when credit = c.account_num then -amount_ncur end)
+              from f_transactions where status != 'RE' and debet = c.account_num or credit = c.account_num),0) balance, 
+     a.chart_account_num, c.name, c.details
+       FROM h_cashdesks c, f_accounts a 
+    WHERE c.account_num = a.account_num
+    and c.status != "RE" order by c.is_main desc ) l  where l.balance > 10000
+    and account_num like '050%'
+</cash_threshold>
+
+<cash_threshold_80>   SELECT * FROM (SELECT c.id, c.account_num,
+    ifnull((select sum(case when debet = c.account_num then amount_ncur when credit = c.account_num then -amount_ncur end)
+              from f_transactions where status != 'RE' and debet = c.account_num or credit = c.account_num),0) balance, 
+     a.chart_account_num, c.name, c.details
+       FROM h_cashdesks c, f_accounts a 
+    WHERE c.account_num = a.account_num
+    and c.status != "RE" order by c.is_main desc ) l  where l.balance > 8000
+    and account_num like '050%'
+</cash_threshold_80>
+<!-- NOTIFICATIONS END --> 
+
+</queries>

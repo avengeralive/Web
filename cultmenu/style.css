@@ -1,0 +1,39 @@
+/*   
+Theme Name: cultmenu
+Theme URI: cultmenu.ru
+Description: news portal
+Author: Ekaterina Borisovs
+Author URI: cultmenu.ru
+Version: 1.0
+*/
+
+.soc ul { display: inline-block; }
+.soc ul li { display: inline-block; list-style: none; }
+.search-btn { width: 30px; height: 30px; }
+.search-txt { height: 30px; }
+.search-td { float: right;}
+.cultmenu-td { text-align: center; text-transform: uppercase; }
+.cultmenu-td h1 { margin: 0px; }
+.navbar-default { background: #2937B8 !important; text-align: center; }
+.navbar-default a { color: #fff !important; }
+header .col-md-4 { padding: 20px 0px; }
+.menu { display: inline-block; text-align: center; float: none !important; }
+.navbar-top { background: #FFE8F2; padding-bottom: 100px; }
+.slide .item:after { content: ""; display: block; padding-bottom: calc(100% + 30px); }
+.newsitem:after { content: ""; display: block; padding-bottom: calc(100% + 15px); }
+.newstitle { width: calc(100% - 30px); position: absolute; bottom: 0; left: 0; height: 100px; background: #1a1c32; margin: 0 15px; padding: 0 15px; }
+.newstitle h2 { color: #fff; font-size: 18px; }
+.rbns .newsitem:nth-child(1), .rbns .newsitem:nth-child(2) { margin-bottom: 15px; }
+.rbns .newsitem:nth-child(3), .rbns .newsitem:nth-child(4) { margin-top: 15px; }
+footer { background: #1a1c32; }
+footer ul { display: inline-block; margin: 10px 0px; padding: 0px; }
+footer ul li { display: inline-block; list-style: none; padding-right: 25px; }
+footer ul li a, .hello { font-size: 18px; color: #fff; }
+.footsoc { float: right; }
+.navbar-footer { float: left; }
+.post_blog_bg { margin-top: -100px; }
+.menu_bar { padding: 0px !important; }
+.row { margin: 0px !important; }
+@media (max-width: 767px) {
+	.newsitem { margin-top: 15px; }
+}

@@ -1,0 +1,2576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+/* Begin PBXBuildFile section */
+		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		00E356F31AD99517003FC87E /* alphachangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* alphachangeTests.m */; };
+		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */; };
+		2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */; };
+		2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */; };
+		2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */; };
+		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
+		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
+		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* alphachangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* alphachangeTests.m */; };
+		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		BD656F15DB9546308FB19576 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E04CC3544A4B6EA5659345 /* libBVLinearGradient.a */; };
+		29BC554CA7454A979C5B534C /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59415D973B7F432796F9B2B3 /* libAirMaps.a */; };
+		8A003868D5C34CB7BB9F8E2E /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC61B3B9D01344A29B079580 /* libRNVectorIcons.a */; };
+		F61189E7DD7A496CBCC53199 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD100F9A6B8E4DADA80A35A7 /* avatar.jpg */; };
+		D951D0962F644B40826050E8 /* avatar1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA8F2D5A6BB14D19AA19108F /* avatar1.jpg */; };
+		218F3E8B6BB24CEFA52B1E41 /* avatar2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 163E087F97134001AB1FD0F4 /* avatar2.jpg */; };
+		B14ACB085278406F9F4C084C /* avatar3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EF66DD42FF64BBB8D776FC5 /* avatar3.jpg */; };
+		E7832DC6EC994AF9A930A3B4 /* flag1.png in Resources */ = {isa = PBXBuildFile; fileRef = 32AED7FB874C4388A8337E2F /* flag1.png */; };
+		E0139527B1A141689C0B9E6E /* flag2.png in Resources */ = {isa = PBXBuildFile; fileRef = 428DAEAA9478479A9B1ACDEE /* flag2.png */; };
+		D920B87C4B574845BC9574F3 /* flag3.png in Resources */ = {isa = PBXBuildFile; fileRef = C27240914E4C4D2AB55111F4 /* flag3.png */; };
+		DD30E180B8B84782B8EF486F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7509795DF54142E480AE0216 /* Roboto-Bold.ttf */; };
+		2EBBE6EDDBBA4D749325DF51 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F468C248A14848C79B133B9A /* Roboto-Light.ttf */; };
+		80A5A41BF8504488916B52F6 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B158FB3B546E7823E9B70 /* Roboto.ttf */; };
+		DA64A77AF7514D2D9C7159EE /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99E085AF9E7F436A9DF4640C /* Entypo.ttf */; };
+		D1CA69CCA07A4B54BCDA2EF4 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D2E9BCF7ED242D19729B29A /* EvilIcons.ttf */; };
+		B2DEEDE3334E4C20B4C3C6E3 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5854C059AA34A909200008E /* FontAwesome.ttf */; };
+		1B85173C040B4B198342ACB5 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6479ACBB3C8D427EAE800137 /* Foundation.ttf */; };
+		B0D769FAC32A44F8AE71694C /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D8B713E2924994895D2D1E /* Ionicons.ttf */; };
+		806C26FBF6C341878F4087E2 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 845E2B061CA5444DB36A56AB /* MaterialIcons.ttf */; };
+		4B314F5C19F141049E037C64 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94D16F94D6BE45D3881CEC53 /* Octicons.ttf */; };
+		AA5A90BA8BAE43629933CCC9 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E4C9E35EECC4ACC9A29FD48 /* Roboto_medium.ttf */; };
+		4BF015A74A1D4EF7A695EE84 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B63A2CCAD7E242369124B242 /* SimpleLineIcons.ttf */; };
+		638DACB57B8A47AB84D71EFA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C11F62BE3CF64EA48443C26E /* Zocial.ttf */; };
+		C75091E4274944E28D9D7BBB /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6EBD2D77D5D4CD99B18CDE2 /* Feather.ttf */; };
+		66E7430280A44F1CAC2E5F1F /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2152DDE8C0574464BC4ED67B /* MaterialCommunityIcons.ttf */; };
+		BBD7A566B4714CD18FC46D8D /* libRNTextInputMask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A933E5B86374D4FB0A49480 /* libRNTextInputMask.a */; };
+		06D9B21872024BEA9B74D8EB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 056D43BC60AF4D668BC70EE0 /* logo.png */; };
+		B35C27D9E13F4CA5BB7A738A /* libRCTRestart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE36EFFFD64782AA7BF5AC /* libRCTRestart.a */; };
+		E0AF6C8F27CD4696AF3099DC /* write.png in Resources */ = {isa = PBXBuildFile; fileRef = 8209C4895A104A0AA251255E /* write.png */; };
+		1F8E440881734224A492EAE3 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD93E076AB28464B807A1A7F /* libRNFS.a */; };
+		51E54279352F4B2A9FA3FF36 /* libRCTImageResizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A6F44387554E908A6DB35E /* libRCTImageResizer.a */; };
+		FBE7EBA6C98446B491109349 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E620C5026740169F61BE0B /* libRNImagePicker.a */; };
+		AA4EC101F13F475BBDECD372 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 741F2C1089EB49CF94416F34 /* libRNCamera.a */; };
+		BB4DCE4C93AC409F869162DC /* Afghanistan.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E6171314524D96A748707F /* Afghanistan.png */; };
+		ABC561C74F9A4583BB30C9BC /* Albania.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B8006BBD78D455F95A731AE /* Albania.png */; };
+		A522A25997AD446DBE5D59ED /* Algeria.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D1BA95973F4D0EBC51E9F9 /* Algeria.png */; };
+		2F7F932AC1C2484D8F67C034 /* Andorra.png in Resources */ = {isa = PBXBuildFile; fileRef = 5667A5FC27914ABE8D206014 /* Andorra.png */; };
+		044A7B11AEEF48E3A7D50D0B /* Angola.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E3B8590D4DE4F6CA16F779E /* Angola.png */; };
+		9F800DC3DE174B5096EA0FB7 /* Antigua-and-Barbuda.png in Resources */ = {isa = PBXBuildFile; fileRef = 23C539F4D2744807AD605CC8 /* Antigua-and-Barbuda.png */; };
+		304520AA69BE470FB232C98B /* Argentina.png in Resources */ = {isa = PBXBuildFile; fileRef = BE42F525072D46878E868EE4 /* Argentina.png */; };
+		4C7E4F4F1BDA4BB181007D18 /* Armenia.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD4241DF019416CBBBCE94E /* Armenia.png */; };
+		445BD0ACD37042748D438F2D /* Australia.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D9FB555E5D4D9981010792 /* Australia.png */; };
+		6624F957BA60426FA0132F3D /* Austria.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A13A0B97875458CB9F2767B /* Austria.png */; };
+		E0E2DEDA9ED04151BA3B1CBF /* Azerbaijan.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B5CB6BBC49D43DEA4C58199 /* Azerbaijan.png */; };
+		BCF87C860D064B60AE6F87CA /* Bahamas.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A4A50BC5447A6BD7D119E /* Bahamas.png */; };
+		5A5BDEDF2F7744F3AC4AB9B4 /* Bahrain.png in Resources */ = {isa = PBXBuildFile; fileRef = 28140C45465648A09FB41B75 /* Bahrain.png */; };
+		E7C12E36B9E84CE4A01574DF /* Bangladesh.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4354EEEED54C1DAB9AA8BB /* Bangladesh.png */; };
+		26C57BD88E5F4707BA67050E /* Barbados.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FDB7B176834288B51D9FBB /* Barbados.png */; };
+		7269A176A9994EC8A189FC94 /* Belarus.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0D04322E42569794C4CB /* Belarus.png */; };
+		9EED83D43FFB4C46A92A0FA3 /* Belgium.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DD8020B7334237B9C6E6E2 /* Belgium.png */; };
+		290F4B45C65442EC804A6E51 /* Belize.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8B3188E39743AFBEBAE9F2 /* Belize.png */; };
+		34E35FB3904744A1B3803C68 /* Benin.png in Resources */ = {isa = PBXBuildFile; fileRef = 109BA70AE66343E59E349326 /* Benin.png */; };
+		E56E54B8920E4B958FC1B127 /* Bhutan.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA84C8FBDDB4BAF8E4063AE /* Bhutan.png */; };
+		BB2D908E4CAC4EDCBFAD92F4 /* Bitcoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AEFD6FD273C428DBAE2505E /* Bitcoin.png */; };
+		D017F92D93544A3F83C57FE7 /* Bolivia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FAF0AB414784734A5227D12 /* Bolivia.png */; };
+		CD7A9ED7935A4A6F804D766D /* Bosnia-and-Herzegovina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4A416F636945628CB79EB2 /* Bosnia-and-Herzegovina.png */; };
+		EA50F4DE11944C8BB4AF8AFE /* Botswana.png in Resources */ = {isa = PBXBuildFile; fileRef = 23A4E87DE3F945B1829792C6 /* Botswana.png */; };
+		7156DCE6C7544856B8D0A8B0 /* Brazil.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D6C295879449648018111F /* Brazil.png */; };
+		4CDD15A8E6954E199B172762 /* Brunei.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C6F48D8BD845D8A647825B /* Brunei.png */; };
+		4AB36A4081E548E39E24AD43 /* Bulgaria.png in Resources */ = {isa = PBXBuildFile; fileRef = E68D4053CF2D46EBAE3D8D0D /* Bulgaria.png */; };
+		76EA32D78F06411AB4EA9B9B /* Burkina-Faso.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB15B4BDAF40AEA0503146 /* Burkina-Faso.png */; };
+		70A9BB52A38F491F858538CE /* Burundi.png in Resources */ = {isa = PBXBuildFile; fileRef = 07222792793C42FA8F8558F9 /* Burundi.png */; };
+		512A47FE137440EA8F090642 /* Cambodia.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0D74061144423D8A0A3B27 /* Cambodia.png */; };
+		AA85AE51BA2B4F09B6582582 /* Cameroon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD94C30CE5394F7ABF3DBBB1 /* Cameroon.png */; };
+		423D2B18F1DE441EB38D9C32 /* Canada.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1E4971D29340408B34C513 /* Canada.png */; };
+		A20CFFD4E23D44F4A7A96063 /* Cape-Verde.png in Resources */ = {isa = PBXBuildFile; fileRef = 583BF352EB9A4B21BD5890FD /* Cape-Verde.png */; };
+		173D6CD007C041A7B45099DD /* Central-African-Republic.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE8E16DCD3C425E98ED6BC7 /* Central-African-Republic.png */; };
+		B2110C00A5264436A7139A9B /* Chad.png in Resources */ = {isa = PBXBuildFile; fileRef = C001B6D01CC3456B885F719C /* Chad.png */; };
+		9CF7DE70C81142CC99385C0E /* Chile.png in Resources */ = {isa = PBXBuildFile; fileRef = 14097FD474AE474EA4ADE5C7 /* Chile.png */; };
+		07DCCBC9D0CE4ED4B19D5A65 /* China.png in Resources */ = {isa = PBXBuildFile; fileRef = A95F56D7FC364F2281593B9E /* China.png */; };
+		2DA8CCC23389492991D6886E /* Colombia.png in Resources */ = {isa = PBXBuildFile; fileRef = FBDA69ED6C494A2EAD3CD6C3 /* Colombia.png */; };
+		3A901832363C4DC3B68B4C68 /* Comoros.png in Resources */ = {isa = PBXBuildFile; fileRef = 35F089E5F567425796CD32EB /* Comoros.png */; };
+		442DBB6655334541BFCA9691 /* Congo-(Democratic).png in Resources */ = {isa = PBXBuildFile; fileRef = 2E96EE909E2747F58FCDE01C /* Congo-(Democratic).png */; };
+		31BB6B75DC2347C39A42CF2F /* Congo-(Republic).png in Resources */ = {isa = PBXBuildFile; fileRef = B67ACB41C5524C6E942C24EE /* Congo-(Republic).png */; };
+		BBEC6125732F42E389045242 /* Costa-Rica.png in Resources */ = {isa = PBXBuildFile; fileRef = 467CA37692664C6FAE6826A0 /* Costa-Rica.png */; };
+		D6F959D481BB4CCC8240B57E /* Cote-d'Ivoire.png in Resources */ = {isa = PBXBuildFile; fileRef = 0065368470B54EE0A6B24D31 /* Cote-d'Ivoire.png */; };
+		A79BD2F2C86F4730AAD2D9AF /* Croatia.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AB9EA9CE974FA8B9CEBCAF /* Croatia.png */; };
+		98940952C71D44AAB3B701CC /* Cuba.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E3910D507B4759B66F6E22 /* Cuba.png */; };
+		23666A60F79E430AB5458823 /* Cyprus.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD746019574ACD9EBF3A3D /* Cyprus.png */; };
+		2D22042FE0C9444BBE965866 /* Czech-Republic.png in Resources */ = {isa = PBXBuildFile; fileRef = AC67FC7A1EE44DB093483EB9 /* Czech-Republic.png */; };
+		829338E9DBB244B6B6840337 /* Denmark.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D955712C240A283867CDA /* Denmark.png */; };
+		BFFEB08556054F2996831BBA /* Djibouti.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A68AA121D464F0BB57DBDFD /* Djibouti.png */; };
+		07E28C755F5B4C48B4FA7BFF /* Dominica.png in Resources */ = {isa = PBXBuildFile; fileRef = B1DA7EFFD26441C099541FD7 /* Dominica.png */; };
+		DA489F1D90B5470EBA3BBA31 /* Dominican-Republic.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F56B198DEE41548B7314FF /* Dominican-Republic.png */; };
+		455AC3ED9FAC4FF69DB77B0D /* East-Timor.png in Resources */ = {isa = PBXBuildFile; fileRef = C81954AE6AF1407A934D3419 /* East-Timor.png */; };
+		FA72B7D1586047CE8D447A8E /* Ecuador.png in Resources */ = {isa = PBXBuildFile; fileRef = 21247DE36F2541E78B415338 /* Ecuador.png */; };
+		3D7121F88C02420FB1425723 /* Egypt.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0075FE93FC465D8A6E1394 /* Egypt.png */; };
+		A850D0771305429AAFBB1A9C /* El-Salvador.png in Resources */ = {isa = PBXBuildFile; fileRef = 708C0B6E7695447D8DED3534 /* El-Salvador.png */; };
+		0D959139460148DB9F9C9F1F /* Equatorial-Guinea.png in Resources */ = {isa = PBXBuildFile; fileRef = 1729209C56AA42AD807C4357 /* Equatorial-Guinea.png */; };
+		ECADA6D3AA2D42BC8E8C6CCC /* Eritrea.png in Resources */ = {isa = PBXBuildFile; fileRef = F0B8DE617E394484877A9408 /* Eritrea.png */; };
+		71686FA5035A416C85111EF0 /* Estonia.png in Resources */ = {isa = PBXBuildFile; fileRef = B34B51C95E8E4469A67DD5FF /* Estonia.png */; };
+		DFC68F9519974726A6370A62 /* Ethiopia.png in Resources */ = {isa = PBXBuildFile; fileRef = FB801E19FB1C4C08BFA3B41A /* Ethiopia.png */; };
+		E5955AC7BC294A818970095D /* Europe.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C229327E8641E5B7B5E08E /* Europe.png */; };
+		BFF448CF6BA44ECAA7B1B7AB /* Fiji.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EB65ED9034452787429656 /* Fiji.png */; };
+		534233B86FBA44A69C3809E2 /* Finland.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A09174F1624BC1BCB84234 /* Finland.png */; };
+		3B3CDD36AC8B4F23988ECE8C /* France.png in Resources */ = {isa = PBXBuildFile; fileRef = 5149DDE688A741F588869A8D /* France.png */; };
+		FFA6FAC6B8254D63844A445C /* Gabon.png in Resources */ = {isa = PBXBuildFile; fileRef = 82B77BA562264E0487A658A6 /* Gabon.png */; };
+		BF3AD035672E457BAA95D424 /* Gambia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1472A633B1C0406080D404C6 /* Gambia.png */; };
+		124AB5B74CA144F1B701CF08 /* Georgia.png in Resources */ = {isa = PBXBuildFile; fileRef = D64CA12A12AA45F190BD3828 /* Georgia.png */; };
+		01F1D6058114446CADC15765 /* Germany.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C70EAC1061547DB98C7A731 /* Germany.png */; };
+		B10F932619F7450F8ACE8F22 /* Ghana.png in Resources */ = {isa = PBXBuildFile; fileRef = B702B8E44EC949D8A8EC093D /* Ghana.png */; };
+		BF54910D3207441D8048E4DA /* Grecee.png in Resources */ = {isa = PBXBuildFile; fileRef = 572D213AEB2246E2BB96780E /* Grecee.png */; };
+		2AB007C090DE4824A70A6AC0 /* Grenada.png in Resources */ = {isa = PBXBuildFile; fileRef = 21025EA0C9CB4163BDB3920A /* Grenada.png */; };
+		E7A724F9770947B69EBD267E /* Guatemala.png in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3379C1114EBDA9D5C88D /* Guatemala.png */; };
+		3FB2276AEB0C40ABA67935DC /* Guinea-Bissau.png in Resources */ = {isa = PBXBuildFile; fileRef = 40D0AAA937CD41DE951614F8 /* Guinea-Bissau.png */; };
+		0449C0DC5C6047068DC44E22 /* Guinea.png in Resources */ = {isa = PBXBuildFile; fileRef = 37660218E40D49EC92C8F8C2 /* Guinea.png */; };
+		3CA9BA87B1544BE28686BA67 /* Guyana.png in Resources */ = {isa = PBXBuildFile; fileRef = 28339053BBEF4C589B1025E8 /* Guyana.png */; };
+		13FBD5EAE8AF450EB3B46692 /* Haiti.png in Resources */ = {isa = PBXBuildFile; fileRef = 08692903A3024C418D81770F /* Haiti.png */; };
+		AEFDAD64A3A94F9DBCDD2188 /* Honduras.png in Resources */ = {isa = PBXBuildFile; fileRef = CABEAE96EB614A1D9EF8B9FB /* Honduras.png */; };
+		5276F95E12E24F7AA1863D4D /* Hungary.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BE0EAEC1634C30B782323C /* Hungary.png */; };
+		2F6DFAFC9E3048D0BF57D45B /* Iceland.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BB0655E594E1E9CAB049F /* Iceland.png */; };
+		F19E2D8A3E794D1C9336ACDF /* India.png in Resources */ = {isa = PBXBuildFile; fileRef = 3306E9D0900B4E2DAC9ABE40 /* India.png */; };
+		C741E27C8D4D43D29536D8D0 /* Indonesia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8EA69E60914156A8C62ED9 /* Indonesia.png */; };
+		BC4A74FB577C4C1DA63868BC /* Iran.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CE7EE6A3E4420A901482C7 /* Iran.png */; };
+		99475546AEDF47C78914B8E4 /* Iraq.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC23A1E0A6B4F0FA76D400E /* Iraq.png */; };
+		7ABB205EFD884426B27F5568 /* Ireland.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA4597742574E2AA71441B7 /* Ireland.png */; };
+		655877ECA3074B2082AF9EA5 /* Israel.png in Resources */ = {isa = PBXBuildFile; fileRef = BC3843C4AA3249DE8600183B /* Israel.png */; };
+		3B0E46366D7A40A29BEFE047 /* Italy.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F63B0FB6884A6795938AA9 /* Italy.png */; };
+		0B56609D23874A56BFB17CAD /* Jamaica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1213395FFA4E20885942AA /* Jamaica.png */; };
+		E7D956C062174A758E013DF1 /* Japan.png in Resources */ = {isa = PBXBuildFile; fileRef = B05B77B2BF29426D8D665982 /* Japan.png */; };
+		287834A12C864A2EBA48E8BC /* Jordan.png in Resources */ = {isa = PBXBuildFile; fileRef = DA42FE81ECCA443296A8AB24 /* Jordan.png */; };
+		65FD256E774A437B8B9B207A /* Kazakhstan.png in Resources */ = {isa = PBXBuildFile; fileRef = 93269E9CD297492AB20EC28F /* Kazakhstan.png */; };
+		D3DDEC0E12994F058767D516 /* Kenya.png in Resources */ = {isa = PBXBuildFile; fileRef = C63F950A0C7C4CE394D89371 /* Kenya.png */; };
+		E02126860652465697933CB0 /* Kiribati.png in Resources */ = {isa = PBXBuildFile; fileRef = F46D579AD1DF41E58905468E /* Kiribati.png */; };
+		9969670CD59F458BBB350E0F /* Korea-North.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F78A7AB5F724357A85B74A3 /* Korea-North.png */; };
+		4D6CE2AA541F4620BFDB12DB /* Korea-South.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E96C0E43D34CDFA8A82970 /* Korea-South.png */; };
+		3ACE26ACE46E4536A0AAAB05 /* Kosovo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1471D414253A477796BC4D36 /* Kosovo.png */; };
+		228B5229041D48F787DAA224 /* Kuwait.png in Resources */ = {isa = PBXBuildFile; fileRef = B921E7E15CCA4A11BAFB47B2 /* Kuwait.png */; };
+		EF3C6516156344748B622EA3 /* Kyrgyzstan.png in Resources */ = {isa = PBXBuildFile; fileRef = 08ECB763BF5240DF8DC1FC3C /* Kyrgyzstan.png */; };
+		3DDEA274E5844596B7A83EBB /* Laos.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4A0D2C30D84192BDF342FE /* Laos.png */; };
+		36E9D48F68614125AB41E518 /* Latvia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F7283094DCB4E91A457D048 /* Latvia.png */; };
+		037C1AC5FDF1425C976FBCF8 /* Lebanon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E769E28C3B74D91A689D7FC /* Lebanon.png */; };
+		302349F5BA4B42BA87A0AC77 /* Lesotho.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CD6C7B8CF64E3DAE3B0D51 /* Lesotho.png */; };
+		7B11290B959842B28381409A /* Liberia.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA402D3F9B04DEAB98BD779 /* Liberia.png */; };
+		1C53C2DA7E5142ABB6B0A54C /* Libya.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C588E815AC407BABB93762 /* Libya.png */; };
+		EB5A2916981242498B1AB212 /* Liechtenstein.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0D25F617D745D98A37B306 /* Liechtenstein.png */; };
+		34BF8E9D804E4CE2A2E883E5 /* Lithuania.png in Resources */ = {isa = PBXBuildFile; fileRef = 96422865A8E6420393278C86 /* Lithuania.png */; };
+		CA3B9C4D4A7D424A9D1429DD /* Luxembourg.png in Resources */ = {isa = PBXBuildFile; fileRef = 461DF4CADEDF44C8A68BFF42 /* Luxembourg.png */; };
+		76FC97593A8045BEA98E9D7A /* Macedonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AD33C4812414A1C9A1BA3AA /* Macedonia.png */; };
+		ADF7EE2E16FD42FBA88E5926 /* Madagascar.png in Resources */ = {isa = PBXBuildFile; fileRef = B975CCB289B24B0D97F110E7 /* Madagascar.png */; };
+		E59A8A67D1FF45829D0D765B /* Malawi.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFADAA634594855B30EA4BA /* Malawi.png */; };
+		37A3B9B01E25400985B5C6DA /* Malaysia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5612D0F4363B420A9D126683 /* Malaysia.png */; };
+		A4FFD1C6B3B64CBAB3AB53B6 /* Maldives.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F9EEF01324E05B67649B3 /* Maldives.png */; };
+		2BAC25FAB4274D14A731D468 /* Mali.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F9E854F6D4527BA0CB3D7 /* Mali.png */; };
+		DAC4EA8303A24D2396C54D95 /* Malta.png in Resources */ = {isa = PBXBuildFile; fileRef = 958D471903964BECAC78019B /* Malta.png */; };
+		640F79B20E6A491498D4DC35 /* Marshall-Islands.png in Resources */ = {isa = PBXBuildFile; fileRef = CD201BF56A374493AA4F3CC3 /* Marshall-Islands.png */; };
+		683F92FFF85A488B91F60610 /* Mauritania.png in Resources */ = {isa = PBXBuildFile; fileRef = 72AAE8D7DA564FDD9EA2A679 /* Mauritania.png */; };
+		2E31F8AADD404730AA7F7CFA /* Mauritius.png in Resources */ = {isa = PBXBuildFile; fileRef = 439D519E6D00496492F1C4A4 /* Mauritius.png */; };
+		E3AE0B3017FE47CC99C516A4 /* Mexico.png in Resources */ = {isa = PBXBuildFile; fileRef = A076F3DA0E02415F80F32929 /* Mexico.png */; };
+		EDF5042970FE462F8CDA9C83 /* Micronesia-(Federated).png in Resources */ = {isa = PBXBuildFile; fileRef = F379827376F04EECAB6F173F /* Micronesia-(Federated).png */; };
+		E997B19F621B4E0DB565B11B /* Moldova.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DCE20E0F5D4BDEBE9FDD8C /* Moldova.png */; };
+		1D7B3785FCD44620B5A08C44 /* Monaco.png in Resources */ = {isa = PBXBuildFile; fileRef = 3301EE6952CA41E3835578B7 /* Monaco.png */; };
+		256C46AF520B4ED6A4811D90 /* Mongolia.png in Resources */ = {isa = PBXBuildFile; fileRef = BBD10B336452415C9DA493A4 /* Mongolia.png */; };
+		966A464881FB47879E452603 /* Montenegro.png in Resources */ = {isa = PBXBuildFile; fileRef = A23F1BCDF11F46159880E4F1 /* Montenegro.png */; };
+		7774F26AD031435499BE3F47 /* Morocco.png in Resources */ = {isa = PBXBuildFile; fileRef = E66C5011E608432899F71D52 /* Morocco.png */; };
+		2BF2FC925B4440BDB097D8EC /* Mozambique.png in Resources */ = {isa = PBXBuildFile; fileRef = B273D1D05DCF4A08915AA3FF /* Mozambique.png */; };
+		6BE5D1E7907B44B58D3DC113 /* Myanmar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E93118CF0094B6980B64DC2 /* Myanmar.png */; };
+		8BB08692BA284F62BB95F630 /* Namibia.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A59270ADAC4BAC9788A518 /* Namibia.png */; };
+		886670704AF74A588AB1405A /* Nauru.png in Resources */ = {isa = PBXBuildFile; fileRef = BF88461200654E809749399D /* Nauru.png */; };
+		730288E30EAC4741A963541F /* Nepal.png in Resources */ = {isa = PBXBuildFile; fileRef = 149CAA85C90645B1912164A6 /* Nepal.png */; };
+		603C017DE7D14C60961A2B38 /* Netherlands.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D78B2BE9384BEC957C23D3 /* Netherlands.png */; };
+		295129D506084FC78C362A74 /* New-Zealand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3B4EEF0BF645C0B12471E0 /* New-Zealand.png */; };
+		7B6E6EA1B4204088882D90D8 /* Nicaragua.png in Resources */ = {isa = PBXBuildFile; fileRef = E1AA486239D24C7885CBE1DA /* Nicaragua.png */; };
+		F8FD9185E8B74E6EB1492B90 /* Niger.png in Resources */ = {isa = PBXBuildFile; fileRef = D624D27121694724B9EEB276 /* Niger.png */; };
+		6840D408A1E942C48DC9F287 /* Nigeria.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E46274476C459C804C41C9 /* Nigeria.png */; };
+		79EFF107BB5544B48822CB2A /* Norway.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C0CFCADAF64A4F89BFB903 /* Norway.png */; };
+		F36A5B25F18D4824935D5AF8 /* Oman.png in Resources */ = {isa = PBXBuildFile; fileRef = 191DC9B96FCA4657BA0690EE /* Oman.png */; };
+		06BB346200774BAE80D48841 /* Pakistan.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E673472D4B4175B173E488 /* Pakistan.png */; };
+		14344805BD99490F9DC4E624 /* Palau.png in Resources */ = {isa = PBXBuildFile; fileRef = 9937A4C2B5DC43028781A5CC /* Palau.png */; };
+		148FCD806D58485AA085478B /* Panama.png in Resources */ = {isa = PBXBuildFile; fileRef = E6634089924B48E4A3B31672 /* Panama.png */; };
+		74C9DD1EB9D74E5B9865E1A4 /* Papua-New-Guinea.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA0E041E80140E7AE35A569 /* Papua-New-Guinea.png */; };
+		44374791F4314752B0624240 /* Paraguay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CC39613053462E83A358FA /* Paraguay.png */; };
+		6FB1A46384204823BFBB0A65 /* Peru.png in Resources */ = {isa = PBXBuildFile; fileRef = 032226A0C9A145208CE017E0 /* Peru.png */; };
+		6602F4EEB5AC4AEC98D31461 /* Philippines.png in Resources */ = {isa = PBXBuildFile; fileRef = 37AF9B94F5A3460DA5BCFA1D /* Philippines.png */; };
+		70D5771A24A94C699F8CA8FD /* Poland.png in Resources */ = {isa = PBXBuildFile; fileRef = 504A758C394F4A7E9596154B /* Poland.png */; };
+		1DC18BCA7119467EBA63BE72 /* Portugal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D17810673D347A2BF20EC39 /* Portugal.png */; };
+		4217828471A94868A0B7BD07 /* Qatar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2AA4DEF89E406C93D74F7D /* Qatar.png */; };
+		257A5C3D98C24A82866E59E9 /* Romania.png in Resources */ = {isa = PBXBuildFile; fileRef = 297B2BE1090D479698146F73 /* Romania.png */; };
+		83C4C11135524DE699DEC6A3 /* Russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 22BE0389B4FC41BE8B1A6FCB /* Russia.png */; };
+		67523FE2608A400B8BE9F761 /* Rwanda.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA3D18615324466BC7D7629 /* Rwanda.png */; };
+		0C3A58A4AD204FFDBB5B9748 /* Saint-Kitts-and-Nevis.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F812551F4E419EA35B145E /* Saint-Kitts-and-Nevis.png */; };
+		3FF4CF0A8FAB42A080301C97 /* Saint-Lucia.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DFBC5972334B82ABC28695 /* Saint-Lucia.png */; };
+		55604E659C2649028E60C77B /* Saint-Vincent-and-the-Grenadines.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0F04D874A1441DA3BEA1FA /* Saint-Vincent-and-the-Grenadines.png */; };
+		E8837FACA4C04B72A0BCFBAE /* Samoa.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C1263E22854B568A235AEF /* Samoa.png */; };
+		142C246197A749299B16012A /* San-Marino.png in Resources */ = {isa = PBXBuildFile; fileRef = 0456A0CFE5C9461497D5EBBE /* San-Marino.png */; };
+		62662B00ABEB4FF985BF0C7B /* Sao-Tome-and-Principe.png in Resources */ = {isa = PBXBuildFile; fileRef = D06329284B2149D58781CFB8 /* Sao-Tome-and-Principe.png */; };
+		9D0A4DF45BE049859C35B53D /* Saudi-Arabia.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E707B858AFB49E88E65BBFF /* Saudi-Arabia.png */; };
+		579C76DBFED549579778ED42 /* Senegal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0728404BC36749A4ADEC9049 /* Senegal.png */; };
+		DDDE5D27943949DE8DC841B1 /* Serbia.png in Resources */ = {isa = PBXBuildFile; fileRef = 3927491EE48E4AF283673916 /* Serbia.png */; };
+		811030F4CF9B42A38D015D6B /* Seychelles.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDCB62975D54739B0306E5B /* Seychelles.png */; };
+		C78B4039208544F19D9F6960 /* Sierra-Leone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7EEC135B1E4990A238680B /* Sierra-Leone.png */; };
+		A719C53F5ADD41CD8DF365A2 /* Singapore.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EBA57ADFC42D596A3B334 /* Singapore.png */; };
+		2EAFBD9B5A214194BC2C48D6 /* Slovakia.png in Resources */ = {isa = PBXBuildFile; fileRef = 233A7856BB9C4268816022BF /* Slovakia.png */; };
+		E8533D27B04542E6895C2370 /* Slovenia.png in Resources */ = {isa = PBXBuildFile; fileRef = F90D14BC68BC47B090267C1C /* Slovenia.png */; };
+		C0D3596B51584FC789BC101C /* Solomon-Islands.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BDBCAB03A24B15B86F41C3 /* Solomon-Islands.png */; };
+		3C5C789C379A414481676714 /* Somalia.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D23DC7BD9AF4D0BAFE7B986 /* Somalia.png */; };
+		F17E6D53E31C463B92AFBD74 /* South-Africa.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F418C17A5E54C25BF49B2FF /* South-Africa.png */; };
+		DD847DC570014263B93AAA7C /* South-Sudan.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4B671A66814EF68436B686 /* South-Sudan.png */; };
+		D6DEA951560C4988BD35F568 /* Spain.png in Resources */ = {isa = PBXBuildFile; fileRef = 02837081E6F6487D9AA45BE9 /* Spain.png */; };
+		8950861601674E7FA89C821D /* Sri-Lanka.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7131DAAE64478A9FD0E64B /* Sri-Lanka.png */; };
+		F957E067637C450E8BE801A3 /* Sudan.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D6382F51064714A4BC244A /* Sudan.png */; };
+		B6A78897744648B5830B8DCC /* Suriname.png in Resources */ = {isa = PBXBuildFile; fileRef = 14FFA4941F544BC3B0AD7E19 /* Suriname.png */; };
+		6CD0E56886394115AB06AD8D /* Swaziland.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FD6BB5437E49C1938D82A0 /* Swaziland.png */; };
+		B0C95A4287004EB9972EFA4B /* Sweden.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C2C353FCED428893C824D8 /* Sweden.png */; };
+		6C2029D4B8F24D2CA9E8588C /* Switzerland.png in Resources */ = {isa = PBXBuildFile; fileRef = E333ED8C1ECF4529A3365876 /* Switzerland.png */; };
+		16B770F547BC4AD6B4F918E7 /* Syria.png in Resources */ = {isa = PBXBuildFile; fileRef = 6475D7CEB3CE4C44AC689323 /* Syria.png */; };
+		BEC5CCE8A8CA4A5F8C42AEFA /* Taiwan.png in Resources */ = {isa = PBXBuildFile; fileRef = 8462E65A498C4F03B0FC493B /* Taiwan.png */; };
+		9D33334881ED4148BB4F5D7A /* Tajikistan.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2637FF3B449858209B45C /* Tajikistan.png */; };
+		5339EBCA9D1F42ADA1019FD8 /* Tanzania.png in Resources */ = {isa = PBXBuildFile; fileRef = D47FAD636A554B2F9971D093 /* Tanzania.png */; };
+		C877CBB49D4547B795F1F2CD /* Thailand.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7A35141F0A44BCB413817C /* Thailand.png */; };
+		E16953C32D0C46CEA071171D /* Togo.png in Resources */ = {isa = PBXBuildFile; fileRef = A07F8B82FB2B4913A6A1FF2F /* Togo.png */; };
+		5BFCE3EBBF094C61BD6BAF59 /* Tonga.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B5635B04934A468B823ABA /* Tonga.png */; };
+		4147299B2B344DEE85E81323 /* Trinidad-and-Tobago.png in Resources */ = {isa = PBXBuildFile; fileRef = E01BB75808F04557BA97FA80 /* Trinidad-and-Tobago.png */; };
+		2F54092C23774A9180204C7F /* Tunisia.png in Resources */ = {isa = PBXBuildFile; fileRef = A5395386A90341E1A25C3F94 /* Tunisia.png */; };
+		B107D61D7CE24FDDBEEC0175 /* Turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CE0E0D761E498DB76475F0 /* Turkey.png */; };
+		500DF68F217F45AABD26F86D /* Turkmenistan.png in Resources */ = {isa = PBXBuildFile; fileRef = 41670C15A10F43ACA58B881C /* Turkmenistan.png */; };
+		C2C1267305E44A3986FF775A /* Tuvalu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7FD91733D54675B9D6C75F /* Tuvalu.png */; };
+		CA74188896F1441CA370BBDE /* Uganda.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF7EE8B2384B66B967E0ED /* Uganda.png */; };
+		F0936AC8E8C348E4A5096956 /* Ukraine.png in Resources */ = {isa = PBXBuildFile; fileRef = CD95DB775E514B7BBF2F1E52 /* Ukraine.png */; };
+		D1B3DD7F706F404CA0AA9542 /* United-Arab-Emirates.png in Resources */ = {isa = PBXBuildFile; fileRef = 5445CF9FB0D343B4A0DBA8C2 /* United-Arab-Emirates.png */; };
+		81E530BD526947AFB048C219 /* United-Kingdom.png in Resources */ = {isa = PBXBuildFile; fileRef = 942479BECA0643198D665E2C /* United-Kingdom.png */; };
+		12088BAD3E8249BD9C42B63D /* United-States-of-America.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C53F7EA5EC4BBFBE6897FC /* United-States-of-America.png */; };
+		3791C67987944221B20EA25B /* Uruguay.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EA6618233140C8964F89C1 /* Uruguay.png */; };
+		9C085B5A4F2B45B98017147A /* Uzbekistan.png in Resources */ = {isa = PBXBuildFile; fileRef = E8648536F4674CEBA72AC10E /* Uzbekistan.png */; };
+		6772D09907244685B421450E /* Vanuatu.png in Resources */ = {isa = PBXBuildFile; fileRef = 36749B036F424997BF15F0F5 /* Vanuatu.png */; };
+		E8A91CF47B3F4F63A8B8B7AA /* Vatican-City.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A09CFAC730A48DBB6AAE6B5 /* Vatican-City.png */; };
+		555887E490814FB09165588E /* Venezuela.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FD40E574C3408CA03FFB91 /* Venezuela.png */; };
+		F29D01C8663D4F9CBEAF2F04 /* Vietnam.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8325E0AD204309A93DDEAD /* Vietnam.png */; };
+		9859124E753F41F88BD98E30 /* Yemen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF7672F9857425FA46CC37E /* Yemen.png */; };
+		4A51602B7E554E96AF8B7F1C /* Zambia.png in Resources */ = {isa = PBXBuildFile; fileRef = 773501E6B9C14010BA840956 /* Zambia.png */; };
+		704E543022F8475CB89D9F6E /* Zimbabwe.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DFF0A31A31B436BBD96677E /* Zimbabwe.png */; };
+		F171DA5AFD7643E08683AF80 /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBBD709184740BC9237F0B5 /* comment.png */; };
+		36B0EDB0166B420E89F72413 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = D8AA50BCB2964433B6385A0C /* plus.png */; };
+		9D4AAFA676714FC181EFEE2B /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = C46FE09E30C1475ABDC62C30 /* profile.png */; };
+		7F0918B51CDC432C86A211CF /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4E4872FAA6471488AEABA9 /* search.png */; };
+		6A7761BAF75E4729A5336083 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C26FFE302474B89BAEED4D5 /* libRNFirebase.a */; };
+		0EDAC8C97B3E41B9B368945B /* approve.png in Resources */ = {isa = PBXBuildFile; fileRef = A56D6DE0E1934487954FEE34 /* approve.png */; };
+		6C113FBFC195497EADC5C2AE /* decline.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0A33B4687845AAA8FB477E /* decline.png */; };
+		5853C8700ADD464F8EC3DA3F /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E29B4AF23534DA08B2F3B5D /* plus.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTActionSheet;
+		};
+		00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTGeolocation;
+		};
+		00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTImage;
+		};
+		00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B511DB1A9E6C8500147676;
+			remoteInfo = RCTNetwork;
+		};
+		00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
+			remoteInfo = RCTVibration;
+		};
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = alphachange;
+		};
+		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTSettings;
+		};
+		139FDEF31B06529B00C62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C86DF461ADF2C930047B81A;
+			remoteInfo = RCTWebSocket;
+		};
+		146834031AC3E56700842450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
+			remoteInfo = "alphachange-tvOS";
+		};
+		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ADD01A681E09402E00F6D226;
+			remoteInfo = "RCTBlob-tvOS";
+		};
+		2D16E6831FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DBE0D001F3B181A0099AA32;
+			remoteInfo = fishhook;
+		};
+		2D16E6851FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
+			remoteInfo = "fishhook-tvOS";
+		};
+		2DF0FFDE2056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BDC1FC498900052F4D5;
+			remoteInfo = jsinspector;
+		};
+		2DF0FFE02056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BFA1FC4989A0052F4D5;
+			remoteInfo = "jsinspector-tvOS";
+		};
+		2DF0FFE22056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		2DF0FFE42056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
+			remoteInfo = "third-party-tvOS";
+		};
+		2DF0FFE62056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		2DF0FFE82056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
+			remoteInfo = "double-conversion-tvOS";
+		};
+		2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
+			remoteInfo = privatedata;
+		};
+		2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
+			remoteInfo = "privatedata-tvOS";
+		};
+		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A283A1D9B042B00D4039D;
+			remoteInfo = "RCTImage-tvOS";
+		};
+		3DAD3E871DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28471D9B043800D4039D;
+			remoteInfo = "RCTLinking-tvOS";
+		};
+		3DAD3E8B1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28541D9B044C00D4039D;
+			remoteInfo = "RCTNetwork-tvOS";
+		};
+		3DAD3E8F1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28611D9B046600D4039D;
+			remoteInfo = "RCTSettings-tvOS";
+		};
+		3DAD3E931DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A287B1D9B048500D4039D;
+			remoteInfo = "RCTText-tvOS";
+		};
+		3DAD3E981DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28881D9B049200D4039D;
+			remoteInfo = "RCTWebSocket-tvOS";
+		};
+		3DAD3EA21DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
+		3DAD3EA41DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		3DAD3EA61DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		3DAD3EA81DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
+			remoteInfo = jschelpers;
+		};
+		3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
+			remoteInfo = "jschelpers-tvOS";
+		};
+		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTAnimation;
+		};
+		5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
+			remoteInfo = "RCTAnimation-tvOS";
+		};
+		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTLinking;
+		};
+		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
+			remoteInfo = RCTText;
+		};
+		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
+			remoteInfo = RCTBlob;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
+		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
+		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
+		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
+		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* alphachangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alphachangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* alphachangeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alphachangeTests.m; sourceTree = "<group>"; };
+		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
+		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* alphachange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alphachange.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = alphachange/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = alphachange/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = alphachange/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = alphachange/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = alphachange/main.m; sourceTree = "<group>"; };
+		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* alphachange-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alphachange-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* alphachange-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alphachange-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		E0FB4F6F35E047918E40E4A5 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; name = "BVLinearGradient.xcodeproj"; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D8E04CC3544A4B6EA5659345 /* libBVLinearGradient.a */ = {isa = PBXFileReference; name = "libBVLinearGradient.a"; path = "libBVLinearGradient.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		B627462DDBF14DC5BCDEE381 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		59415D973B7F432796F9B2B3 /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		29DBF9A745294FC6B771C557 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; name = "RNVectorIcons.xcodeproj"; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		FC61B3B9D01344A29B079580 /* libRNVectorIcons.a */ = {isa = PBXFileReference; name = "libRNVectorIcons.a"; path = "libRNVectorIcons.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CD100F9A6B8E4DADA80A35A7 /* avatar.jpg */ = {isa = PBXFileReference; name = "avatar.jpg"; path = "../assets/images/avatar.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CA8F2D5A6BB14D19AA19108F /* avatar1.jpg */ = {isa = PBXFileReference; name = "avatar1.jpg"; path = "../assets/images/dev/avatar1.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		163E087F97134001AB1FD0F4 /* avatar2.jpg */ = {isa = PBXFileReference; name = "avatar2.jpg"; path = "../assets/images/dev/avatar2.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8EF66DD42FF64BBB8D776FC5 /* avatar3.jpg */ = {isa = PBXFileReference; name = "avatar3.jpg"; path = "../assets/images/dev/avatar3.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		32AED7FB874C4388A8337E2F /* flag1.png */ = {isa = PBXFileReference; name = "flag1.png"; path = "../assets/images/dev/flag1.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		428DAEAA9478479A9B1ACDEE /* flag2.png */ = {isa = PBXFileReference; name = "flag2.png"; path = "../assets/images/dev/flag2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C27240914E4C4D2AB55111F4 /* flag3.png */ = {isa = PBXFileReference; name = "flag3.png"; path = "../assets/images/dev/flag3.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7509795DF54142E480AE0216 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F468C248A14848C79B133B9A /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F9B158FB3B546E7823E9B70 /* Roboto.ttf */ = {isa = PBXFileReference; name = "Roboto.ttf"; path = "../assets/fonts/Roboto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99E085AF9E7F436A9DF4640C /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6D2E9BCF7ED242D19729B29A /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F5854C059AA34A909200008E /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6479ACBB3C8D427EAE800137 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2D8B713E2924994895D2D1E /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		845E2B061CA5444DB36A56AB /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		94D16F94D6BE45D3881CEC53 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2E4C9E35EECC4ACC9A29FD48 /* Roboto_medium.ttf */ = {isa = PBXFileReference; name = "Roboto_medium.ttf"; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B63A2CCAD7E242369124B242 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C11F62BE3CF64EA48443C26E /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6EBD2D77D5D4CD99B18CDE2 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2152DDE8C0574464BC4ED67B /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E874DFED4ACB4F6EA14B946F /* RNTextInputMask.xcodeproj */ = {isa = PBXFileReference; name = "RNTextInputMask.xcodeproj"; path = "../node_modules/react-native-text-input-mask/ios/RNTextInputMask/RNTextInputMask.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1A933E5B86374D4FB0A49480 /* libRNTextInputMask.a */ = {isa = PBXFileReference; name = "libRNTextInputMask.a"; path = "libRNTextInputMask.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		056D43BC60AF4D668BC70EE0 /* logo.png */ = {isa = PBXFileReference; name = "logo.png"; path = "../assets/images/logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5828428A29F6425AA35C3A47 /* RCTRestart.xcodeproj */ = {isa = PBXFileReference; name = "RCTRestart.xcodeproj"; path = "../node_modules/react-native-restart/ios/RCTRestart.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D6DE36EFFFD64782AA7BF5AC /* libRCTRestart.a */ = {isa = PBXFileReference; name = "libRCTRestart.a"; path = "libRCTRestart.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		8209C4895A104A0AA251255E /* write.png */ = {isa = PBXFileReference; name = "write.png"; path = "../assets/images/write.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3EFB1AE5EFE84ECAA918E10C /* RNFS.xcodeproj */ = {isa = PBXFileReference; name = "RNFS.xcodeproj"; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		CD93E076AB28464B807A1A7F /* libRNFS.a */ = {isa = PBXFileReference; name = "libRNFS.a"; path = "libRNFS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		F4F0F9622439424497E6A84C /* RCTImageResizer.xcodeproj */ = {isa = PBXFileReference; name = "RCTImageResizer.xcodeproj"; path = "../node_modules/react-native-image-resizer/ios/RCTImageResizer.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		59A6F44387554E908A6DB35E /* libRCTImageResizer.a */ = {isa = PBXFileReference; name = "libRCTImageResizer.a"; path = "libRCTImageResizer.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A8C97F2EFEC247D0BEB1D29E /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; name = "RNImagePicker.xcodeproj"; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C7E620C5026740169F61BE0B /* libRNImagePicker.a */ = {isa = PBXFileReference; name = "libRNImagePicker.a"; path = "libRNImagePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		DAFBE1B39EBE4A4E905960E6 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		741F2C1089EB49CF94416F34 /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		E9E6171314524D96A748707F /* Afghanistan.png */ = {isa = PBXFileReference; name = "Afghanistan.png"; path = "../assets/images/flags/Afghanistan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3B8006BBD78D455F95A731AE /* Albania.png */ = {isa = PBXFileReference; name = "Albania.png"; path = "../assets/images/flags/Albania.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99D1BA95973F4D0EBC51E9F9 /* Algeria.png */ = {isa = PBXFileReference; name = "Algeria.png"; path = "../assets/images/flags/Algeria.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5667A5FC27914ABE8D206014 /* Andorra.png */ = {isa = PBXFileReference; name = "Andorra.png"; path = "../assets/images/flags/Andorra.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2E3B8590D4DE4F6CA16F779E /* Angola.png */ = {isa = PBXFileReference; name = "Angola.png"; path = "../assets/images/flags/Angola.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23C539F4D2744807AD605CC8 /* Antigua-and-Barbuda.png */ = {isa = PBXFileReference; name = "Antigua-and-Barbuda.png"; path = "../assets/images/flags/Antigua-and-Barbuda.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BE42F525072D46878E868EE4 /* Argentina.png */ = {isa = PBXFileReference; name = "Argentina.png"; path = "../assets/images/flags/Argentina.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9FD4241DF019416CBBBCE94E /* Armenia.png */ = {isa = PBXFileReference; name = "Armenia.png"; path = "../assets/images/flags/Armenia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		21D9FB555E5D4D9981010792 /* Australia.png */ = {isa = PBXFileReference; name = "Australia.png"; path = "../assets/images/flags/Australia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8A13A0B97875458CB9F2767B /* Austria.png */ = {isa = PBXFileReference; name = "Austria.png"; path = "../assets/images/flags/Austria.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0B5CB6BBC49D43DEA4C58199 /* Azerbaijan.png */ = {isa = PBXFileReference; name = "Azerbaijan.png"; path = "../assets/images/flags/Azerbaijan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9E4A4A50BC5447A6BD7D119E /* Bahamas.png */ = {isa = PBXFileReference; name = "Bahamas.png"; path = "../assets/images/flags/Bahamas.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		28140C45465648A09FB41B75 /* Bahrain.png */ = {isa = PBXFileReference; name = "Bahrain.png"; path = "../assets/images/flags/Bahrain.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F4354EEEED54C1DAB9AA8BB /* Bangladesh.png */ = {isa = PBXFileReference; name = "Bangladesh.png"; path = "../assets/images/flags/Bangladesh.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		56FDB7B176834288B51D9FBB /* Barbados.png */ = {isa = PBXFileReference; name = "Barbados.png"; path = "../assets/images/flags/Barbados.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DB0B0D04322E42569794C4CB /* Belarus.png */ = {isa = PBXFileReference; name = "Belarus.png"; path = "../assets/images/flags/Belarus.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		18DD8020B7334237B9C6E6E2 /* Belgium.png */ = {isa = PBXFileReference; name = "Belgium.png"; path = "../assets/images/flags/Belgium.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E8B3188E39743AFBEBAE9F2 /* Belize.png */ = {isa = PBXFileReference; name = "Belize.png"; path = "../assets/images/flags/Belize.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		109BA70AE66343E59E349326 /* Benin.png */ = {isa = PBXFileReference; name = "Benin.png"; path = "../assets/images/flags/Benin.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CDA84C8FBDDB4BAF8E4063AE /* Bhutan.png */ = {isa = PBXFileReference; name = "Bhutan.png"; path = "../assets/images/flags/Bhutan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2AEFD6FD273C428DBAE2505E /* Bitcoin.png */ = {isa = PBXFileReference; name = "Bitcoin.png"; path = "../assets/images/flags/Bitcoin.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5FAF0AB414784734A5227D12 /* Bolivia.png */ = {isa = PBXFileReference; name = "Bolivia.png"; path = "../assets/images/flags/Bolivia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C4A416F636945628CB79EB2 /* Bosnia-and-Herzegovina.png */ = {isa = PBXFileReference; name = "Bosnia-and-Herzegovina.png"; path = "../assets/images/flags/Bosnia-and-Herzegovina.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23A4E87DE3F945B1829792C6 /* Botswana.png */ = {isa = PBXFileReference; name = "Botswana.png"; path = "../assets/images/flags/Botswana.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		77D6C295879449648018111F /* Brazil.png */ = {isa = PBXFileReference; name = "Brazil.png"; path = "../assets/images/flags/Brazil.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A1C6F48D8BD845D8A647825B /* Brunei.png */ = {isa = PBXFileReference; name = "Brunei.png"; path = "../assets/images/flags/Brunei.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E68D4053CF2D46EBAE3D8D0D /* Bulgaria.png */ = {isa = PBXFileReference; name = "Bulgaria.png"; path = "../assets/images/flags/Bulgaria.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2DDB15B4BDAF40AEA0503146 /* Burkina-Faso.png */ = {isa = PBXFileReference; name = "Burkina-Faso.png"; path = "../assets/images/flags/Burkina-Faso.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		07222792793C42FA8F8558F9 /* Burundi.png */ = {isa = PBXFileReference; name = "Burundi.png"; path = "../assets/images/flags/Burundi.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC0D74061144423D8A0A3B27 /* Cambodia.png */ = {isa = PBXFileReference; name = "Cambodia.png"; path = "../assets/images/flags/Cambodia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD94C30CE5394F7ABF3DBBB1 /* Cameroon.png */ = {isa = PBXFileReference; name = "Cameroon.png"; path = "../assets/images/flags/Cameroon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC1E4971D29340408B34C513 /* Canada.png */ = {isa = PBXFileReference; name = "Canada.png"; path = "../assets/images/flags/Canada.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		583BF352EB9A4B21BD5890FD /* Cape-Verde.png */ = {isa = PBXFileReference; name = "Cape-Verde.png"; path = "../assets/images/flags/Cape-Verde.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BDE8E16DCD3C425E98ED6BC7 /* Central-African-Republic.png */ = {isa = PBXFileReference; name = "Central-African-Republic.png"; path = "../assets/images/flags/Central-African-Republic.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C001B6D01CC3456B885F719C /* Chad.png */ = {isa = PBXFileReference; name = "Chad.png"; path = "../assets/images/flags/Chad.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		14097FD474AE474EA4ADE5C7 /* Chile.png */ = {isa = PBXFileReference; name = "Chile.png"; path = "../assets/images/flags/Chile.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A95F56D7FC364F2281593B9E /* China.png */ = {isa = PBXFileReference; name = "China.png"; path = "../assets/images/flags/China.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FBDA69ED6C494A2EAD3CD6C3 /* Colombia.png */ = {isa = PBXFileReference; name = "Colombia.png"; path = "../assets/images/flags/Colombia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		35F089E5F567425796CD32EB /* Comoros.png */ = {isa = PBXFileReference; name = "Comoros.png"; path = "../assets/images/flags/Comoros.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2E96EE909E2747F58FCDE01C /* Congo-(Democratic).png */ = {isa = PBXFileReference; name = "Congo-(Democratic).png"; path = "../assets/images/flags/Congo-(Democratic).png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B67ACB41C5524C6E942C24EE /* Congo-(Republic).png */ = {isa = PBXFileReference; name = "Congo-(Republic).png"; path = "../assets/images/flags/Congo-(Republic).png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		467CA37692664C6FAE6826A0 /* Costa-Rica.png */ = {isa = PBXFileReference; name = "Costa-Rica.png"; path = "../assets/images/flags/Costa-Rica.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0065368470B54EE0A6B24D31 /* Cote-d'Ivoire.png */ = {isa = PBXFileReference; name = "Cote-d'Ivoire.png"; path = "../assets/images/flags/Cote-d'Ivoire.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		26AB9EA9CE974FA8B9CEBCAF /* Croatia.png */ = {isa = PBXFileReference; name = "Croatia.png"; path = "../assets/images/flags/Croatia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F7E3910D507B4759B66F6E22 /* Cuba.png */ = {isa = PBXFileReference; name = "Cuba.png"; path = "../assets/images/flags/Cuba.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99FD746019574ACD9EBF3A3D /* Cyprus.png */ = {isa = PBXFileReference; name = "Cyprus.png"; path = "../assets/images/flags/Cyprus.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC67FC7A1EE44DB093483EB9 /* Czech-Republic.png */ = {isa = PBXFileReference; name = "Czech-Republic.png"; path = "../assets/images/flags/Czech-Republic.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D03D955712C240A283867CDA /* Denmark.png */ = {isa = PBXFileReference; name = "Denmark.png"; path = "../assets/images/flags/Denmark.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7A68AA121D464F0BB57DBDFD /* Djibouti.png */ = {isa = PBXFileReference; name = "Djibouti.png"; path = "../assets/images/flags/Djibouti.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B1DA7EFFD26441C099541FD7 /* Dominica.png */ = {isa = PBXFileReference; name = "Dominica.png"; path = "../assets/images/flags/Dominica.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37F56B198DEE41548B7314FF /* Dominican-Republic.png */ = {isa = PBXFileReference; name = "Dominican-Republic.png"; path = "../assets/images/flags/Dominican-Republic.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C81954AE6AF1407A934D3419 /* East-Timor.png */ = {isa = PBXFileReference; name = "East-Timor.png"; path = "../assets/images/flags/East-Timor.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		21247DE36F2541E78B415338 /* Ecuador.png */ = {isa = PBXFileReference; name = "Ecuador.png"; path = "../assets/images/flags/Ecuador.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6C0075FE93FC465D8A6E1394 /* Egypt.png */ = {isa = PBXFileReference; name = "Egypt.png"; path = "../assets/images/flags/Egypt.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		708C0B6E7695447D8DED3534 /* El-Salvador.png */ = {isa = PBXFileReference; name = "El-Salvador.png"; path = "../assets/images/flags/El-Salvador.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1729209C56AA42AD807C4357 /* Equatorial-Guinea.png */ = {isa = PBXFileReference; name = "Equatorial-Guinea.png"; path = "../assets/images/flags/Equatorial-Guinea.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0B8DE617E394484877A9408 /* Eritrea.png */ = {isa = PBXFileReference; name = "Eritrea.png"; path = "../assets/images/flags/Eritrea.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B34B51C95E8E4469A67DD5FF /* Estonia.png */ = {isa = PBXFileReference; name = "Estonia.png"; path = "../assets/images/flags/Estonia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FB801E19FB1C4C08BFA3B41A /* Ethiopia.png */ = {isa = PBXFileReference; name = "Ethiopia.png"; path = "../assets/images/flags/Ethiopia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99C229327E8641E5B7B5E08E /* Europe.png */ = {isa = PBXFileReference; name = "Europe.png"; path = "../assets/images/flags/Europe.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02EB65ED9034452787429656 /* Fiji.png */ = {isa = PBXFileReference; name = "Fiji.png"; path = "../assets/images/flags/Fiji.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		11A09174F1624BC1BCB84234 /* Finland.png */ = {isa = PBXFileReference; name = "Finland.png"; path = "../assets/images/flags/Finland.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5149DDE688A741F588869A8D /* France.png */ = {isa = PBXFileReference; name = "France.png"; path = "../assets/images/flags/France.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		82B77BA562264E0487A658A6 /* Gabon.png */ = {isa = PBXFileReference; name = "Gabon.png"; path = "../assets/images/flags/Gabon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1472A633B1C0406080D404C6 /* Gambia.png */ = {isa = PBXFileReference; name = "Gambia.png"; path = "../assets/images/flags/Gambia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D64CA12A12AA45F190BD3828 /* Georgia.png */ = {isa = PBXFileReference; name = "Georgia.png"; path = "../assets/images/flags/Georgia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1C70EAC1061547DB98C7A731 /* Germany.png */ = {isa = PBXFileReference; name = "Germany.png"; path = "../assets/images/flags/Germany.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B702B8E44EC949D8A8EC093D /* Ghana.png */ = {isa = PBXFileReference; name = "Ghana.png"; path = "../assets/images/flags/Ghana.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		572D213AEB2246E2BB96780E /* Grecee.png */ = {isa = PBXFileReference; name = "Grecee.png"; path = "../assets/images/flags/Grecee.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		21025EA0C9CB4163BDB3920A /* Grenada.png */ = {isa = PBXFileReference; name = "Grenada.png"; path = "../assets/images/flags/Grenada.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		93BE3379C1114EBDA9D5C88D /* Guatemala.png */ = {isa = PBXFileReference; name = "Guatemala.png"; path = "../assets/images/flags/Guatemala.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		40D0AAA937CD41DE951614F8 /* Guinea-Bissau.png */ = {isa = PBXFileReference; name = "Guinea-Bissau.png"; path = "../assets/images/flags/Guinea-Bissau.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37660218E40D49EC92C8F8C2 /* Guinea.png */ = {isa = PBXFileReference; name = "Guinea.png"; path = "../assets/images/flags/Guinea.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		28339053BBEF4C589B1025E8 /* Guyana.png */ = {isa = PBXFileReference; name = "Guyana.png"; path = "../assets/images/flags/Guyana.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		08692903A3024C418D81770F /* Haiti.png */ = {isa = PBXFileReference; name = "Haiti.png"; path = "../assets/images/flags/Haiti.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CABEAE96EB614A1D9EF8B9FB /* Honduras.png */ = {isa = PBXFileReference; name = "Honduras.png"; path = "../assets/images/flags/Honduras.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		15BE0EAEC1634C30B782323C /* Hungary.png */ = {isa = PBXFileReference; name = "Hungary.png"; path = "../assets/images/flags/Hungary.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9E5BB0655E594E1E9CAB049F /* Iceland.png */ = {isa = PBXFileReference; name = "Iceland.png"; path = "../assets/images/flags/Iceland.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3306E9D0900B4E2DAC9ABE40 /* India.png */ = {isa = PBXFileReference; name = "India.png"; path = "../assets/images/flags/India.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D8EA69E60914156A8C62ED9 /* Indonesia.png */ = {isa = PBXFileReference; name = "Indonesia.png"; path = "../assets/images/flags/Indonesia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		32CE7EE6A3E4420A901482C7 /* Iran.png */ = {isa = PBXFileReference; name = "Iran.png"; path = "../assets/images/flags/Iran.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BC23A1E0A6B4F0FA76D400E /* Iraq.png */ = {isa = PBXFileReference; name = "Iraq.png"; path = "../assets/images/flags/Iraq.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FCA4597742574E2AA71441B7 /* Ireland.png */ = {isa = PBXFileReference; name = "Ireland.png"; path = "../assets/images/flags/Ireland.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BC3843C4AA3249DE8600183B /* Israel.png */ = {isa = PBXFileReference; name = "Israel.png"; path = "../assets/images/flags/Israel.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		11F63B0FB6884A6795938AA9 /* Italy.png */ = {isa = PBXFileReference; name = "Italy.png"; path = "../assets/images/flags/Italy.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E1213395FFA4E20885942AA /* Jamaica.png */ = {isa = PBXFileReference; name = "Jamaica.png"; path = "../assets/images/flags/Jamaica.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B05B77B2BF29426D8D665982 /* Japan.png */ = {isa = PBXFileReference; name = "Japan.png"; path = "../assets/images/flags/Japan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA42FE81ECCA443296A8AB24 /* Jordan.png */ = {isa = PBXFileReference; name = "Jordan.png"; path = "../assets/images/flags/Jordan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		93269E9CD297492AB20EC28F /* Kazakhstan.png */ = {isa = PBXFileReference; name = "Kazakhstan.png"; path = "../assets/images/flags/Kazakhstan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C63F950A0C7C4CE394D89371 /* Kenya.png */ = {isa = PBXFileReference; name = "Kenya.png"; path = "../assets/images/flags/Kenya.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F46D579AD1DF41E58905468E /* Kiribati.png */ = {isa = PBXFileReference; name = "Kiribati.png"; path = "../assets/images/flags/Kiribati.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2F78A7AB5F724357A85B74A3 /* Korea-North.png */ = {isa = PBXFileReference; name = "Korea-North.png"; path = "../assets/images/flags/Korea-North.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		62E96C0E43D34CDFA8A82970 /* Korea-South.png */ = {isa = PBXFileReference; name = "Korea-South.png"; path = "../assets/images/flags/Korea-South.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1471D414253A477796BC4D36 /* Kosovo.png */ = {isa = PBXFileReference; name = "Kosovo.png"; path = "../assets/images/flags/Kosovo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B921E7E15CCA4A11BAFB47B2 /* Kuwait.png */ = {isa = PBXFileReference; name = "Kuwait.png"; path = "../assets/images/flags/Kuwait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		08ECB763BF5240DF8DC1FC3C /* Kyrgyzstan.png */ = {isa = PBXFileReference; name = "Kyrgyzstan.png"; path = "../assets/images/flags/Kyrgyzstan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0E4A0D2C30D84192BDF342FE /* Laos.png */ = {isa = PBXFileReference; name = "Laos.png"; path = "../assets/images/flags/Laos.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5F7283094DCB4E91A457D048 /* Latvia.png */ = {isa = PBXFileReference; name = "Latvia.png"; path = "../assets/images/flags/Latvia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4E769E28C3B74D91A689D7FC /* Lebanon.png */ = {isa = PBXFileReference; name = "Lebanon.png"; path = "../assets/images/flags/Lebanon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		98CD6C7B8CF64E3DAE3B0D51 /* Lesotho.png */ = {isa = PBXFileReference; name = "Lesotho.png"; path = "../assets/images/flags/Lesotho.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ACA402D3F9B04DEAB98BD779 /* Liberia.png */ = {isa = PBXFileReference; name = "Liberia.png"; path = "../assets/images/flags/Liberia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		55C588E815AC407BABB93762 /* Libya.png */ = {isa = PBXFileReference; name = "Libya.png"; path = "../assets/images/flags/Libya.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6D0D25F617D745D98A37B306 /* Liechtenstein.png */ = {isa = PBXFileReference; name = "Liechtenstein.png"; path = "../assets/images/flags/Liechtenstein.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96422865A8E6420393278C86 /* Lithuania.png */ = {isa = PBXFileReference; name = "Lithuania.png"; path = "../assets/images/flags/Lithuania.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		461DF4CADEDF44C8A68BFF42 /* Luxembourg.png */ = {isa = PBXFileReference; name = "Luxembourg.png"; path = "../assets/images/flags/Luxembourg.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8AD33C4812414A1C9A1BA3AA /* Macedonia.png */ = {isa = PBXFileReference; name = "Macedonia.png"; path = "../assets/images/flags/Macedonia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B975CCB289B24B0D97F110E7 /* Madagascar.png */ = {isa = PBXFileReference; name = "Madagascar.png"; path = "../assets/images/flags/Madagascar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DCFADAA634594855B30EA4BA /* Malawi.png */ = {isa = PBXFileReference; name = "Malawi.png"; path = "../assets/images/flags/Malawi.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5612D0F4363B420A9D126683 /* Malaysia.png */ = {isa = PBXFileReference; name = "Malaysia.png"; path = "../assets/images/flags/Malaysia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8A7F9EEF01324E05B67649B3 /* Maldives.png */ = {isa = PBXFileReference; name = "Maldives.png"; path = "../assets/images/flags/Maldives.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E09F9E854F6D4527BA0CB3D7 /* Mali.png */ = {isa = PBXFileReference; name = "Mali.png"; path = "../assets/images/flags/Mali.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		958D471903964BECAC78019B /* Malta.png */ = {isa = PBXFileReference; name = "Malta.png"; path = "../assets/images/flags/Malta.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CD201BF56A374493AA4F3CC3 /* Marshall-Islands.png */ = {isa = PBXFileReference; name = "Marshall-Islands.png"; path = "../assets/images/flags/Marshall-Islands.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		72AAE8D7DA564FDD9EA2A679 /* Mauritania.png */ = {isa = PBXFileReference; name = "Mauritania.png"; path = "../assets/images/flags/Mauritania.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		439D519E6D00496492F1C4A4 /* Mauritius.png */ = {isa = PBXFileReference; name = "Mauritius.png"; path = "../assets/images/flags/Mauritius.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A076F3DA0E02415F80F32929 /* Mexico.png */ = {isa = PBXFileReference; name = "Mexico.png"; path = "../assets/images/flags/Mexico.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F379827376F04EECAB6F173F /* Micronesia-(Federated).png */ = {isa = PBXFileReference; name = "Micronesia-(Federated).png"; path = "../assets/images/flags/Micronesia-(Federated).png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		11DCE20E0F5D4BDEBE9FDD8C /* Moldova.png */ = {isa = PBXFileReference; name = "Moldova.png"; path = "../assets/images/flags/Moldova.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3301EE6952CA41E3835578B7 /* Monaco.png */ = {isa = PBXFileReference; name = "Monaco.png"; path = "../assets/images/flags/Monaco.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BBD10B336452415C9DA493A4 /* Mongolia.png */ = {isa = PBXFileReference; name = "Mongolia.png"; path = "../assets/images/flags/Mongolia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A23F1BCDF11F46159880E4F1 /* Montenegro.png */ = {isa = PBXFileReference; name = "Montenegro.png"; path = "../assets/images/flags/Montenegro.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E66C5011E608432899F71D52 /* Morocco.png */ = {isa = PBXFileReference; name = "Morocco.png"; path = "../assets/images/flags/Morocco.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B273D1D05DCF4A08915AA3FF /* Mozambique.png */ = {isa = PBXFileReference; name = "Mozambique.png"; path = "../assets/images/flags/Mozambique.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E93118CF0094B6980B64DC2 /* Myanmar.png */ = {isa = PBXFileReference; name = "Myanmar.png"; path = "../assets/images/flags/Myanmar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		53A59270ADAC4BAC9788A518 /* Namibia.png */ = {isa = PBXFileReference; name = "Namibia.png"; path = "../assets/images/flags/Namibia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BF88461200654E809749399D /* Nauru.png */ = {isa = PBXFileReference; name = "Nauru.png"; path = "../assets/images/flags/Nauru.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		149CAA85C90645B1912164A6 /* Nepal.png */ = {isa = PBXFileReference; name = "Nepal.png"; path = "../assets/images/flags/Nepal.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C8D78B2BE9384BEC957C23D3 /* Netherlands.png */ = {isa = PBXFileReference; name = "Netherlands.png"; path = "../assets/images/flags/Netherlands.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9F3B4EEF0BF645C0B12471E0 /* New-Zealand.png */ = {isa = PBXFileReference; name = "New-Zealand.png"; path = "../assets/images/flags/New-Zealand.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E1AA486239D24C7885CBE1DA /* Nicaragua.png */ = {isa = PBXFileReference; name = "Nicaragua.png"; path = "../assets/images/flags/Nicaragua.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D624D27121694724B9EEB276 /* Niger.png */ = {isa = PBXFileReference; name = "Niger.png"; path = "../assets/images/flags/Niger.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		53E46274476C459C804C41C9 /* Nigeria.png */ = {isa = PBXFileReference; name = "Nigeria.png"; path = "../assets/images/flags/Nigeria.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8C0CFCADAF64A4F89BFB903 /* Norway.png */ = {isa = PBXFileReference; name = "Norway.png"; path = "../assets/images/flags/Norway.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		191DC9B96FCA4657BA0690EE /* Oman.png */ = {isa = PBXFileReference; name = "Oman.png"; path = "../assets/images/flags/Oman.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		19E673472D4B4175B173E488 /* Pakistan.png */ = {isa = PBXFileReference; name = "Pakistan.png"; path = "../assets/images/flags/Pakistan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9937A4C2B5DC43028781A5CC /* Palau.png */ = {isa = PBXFileReference; name = "Palau.png"; path = "../assets/images/flags/Palau.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E6634089924B48E4A3B31672 /* Panama.png */ = {isa = PBXFileReference; name = "Panama.png"; path = "../assets/images/flags/Panama.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FBA0E041E80140E7AE35A569 /* Papua-New-Guinea.png */ = {isa = PBXFileReference; name = "Papua-New-Guinea.png"; path = "../assets/images/flags/Papua-New-Guinea.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		54CC39613053462E83A358FA /* Paraguay.png */ = {isa = PBXFileReference; name = "Paraguay.png"; path = "../assets/images/flags/Paraguay.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		032226A0C9A145208CE017E0 /* Peru.png */ = {isa = PBXFileReference; name = "Peru.png"; path = "../assets/images/flags/Peru.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37AF9B94F5A3460DA5BCFA1D /* Philippines.png */ = {isa = PBXFileReference; name = "Philippines.png"; path = "../assets/images/flags/Philippines.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		504A758C394F4A7E9596154B /* Poland.png */ = {isa = PBXFileReference; name = "Poland.png"; path = "../assets/images/flags/Poland.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D17810673D347A2BF20EC39 /* Portugal.png */ = {isa = PBXFileReference; name = "Portugal.png"; path = "../assets/images/flags/Portugal.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DB2AA4DEF89E406C93D74F7D /* Qatar.png */ = {isa = PBXFileReference; name = "Qatar.png"; path = "../assets/images/flags/Qatar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		297B2BE1090D479698146F73 /* Romania.png */ = {isa = PBXFileReference; name = "Romania.png"; path = "../assets/images/flags/Romania.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		22BE0389B4FC41BE8B1A6FCB /* Russia.png */ = {isa = PBXFileReference; name = "Russia.png"; path = "../assets/images/flags/Russia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FAA3D18615324466BC7D7629 /* Rwanda.png */ = {isa = PBXFileReference; name = "Rwanda.png"; path = "../assets/images/flags/Rwanda.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0F812551F4E419EA35B145E /* Saint-Kitts-and-Nevis.png */ = {isa = PBXFileReference; name = "Saint-Kitts-and-Nevis.png"; path = "../assets/images/flags/Saint-Kitts-and-Nevis.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B9DFBC5972334B82ABC28695 /* Saint-Lucia.png */ = {isa = PBXFileReference; name = "Saint-Lucia.png"; path = "../assets/images/flags/Saint-Lucia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB0F04D874A1441DA3BEA1FA /* Saint-Vincent-and-the-Grenadines.png */ = {isa = PBXFileReference; name = "Saint-Vincent-and-the-Grenadines.png"; path = "../assets/images/flags/Saint-Vincent-and-the-Grenadines.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		21C1263E22854B568A235AEF /* Samoa.png */ = {isa = PBXFileReference; name = "Samoa.png"; path = "../assets/images/flags/Samoa.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0456A0CFE5C9461497D5EBBE /* San-Marino.png */ = {isa = PBXFileReference; name = "San-Marino.png"; path = "../assets/images/flags/San-Marino.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D06329284B2149D58781CFB8 /* Sao-Tome-and-Principe.png */ = {isa = PBXFileReference; name = "Sao-Tome-and-Principe.png"; path = "../assets/images/flags/Sao-Tome-and-Principe.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8E707B858AFB49E88E65BBFF /* Saudi-Arabia.png */ = {isa = PBXFileReference; name = "Saudi-Arabia.png"; path = "../assets/images/flags/Saudi-Arabia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0728404BC36749A4ADEC9049 /* Senegal.png */ = {isa = PBXFileReference; name = "Senegal.png"; path = "../assets/images/flags/Senegal.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3927491EE48E4AF283673916 /* Serbia.png */ = {isa = PBXFileReference; name = "Serbia.png"; path = "../assets/images/flags/Serbia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ADDCB62975D54739B0306E5B /* Seychelles.png */ = {isa = PBXFileReference; name = "Seychelles.png"; path = "../assets/images/flags/Seychelles.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9B7EEC135B1E4990A238680B /* Sierra-Leone.png */ = {isa = PBXFileReference; name = "Sierra-Leone.png"; path = "../assets/images/flags/Sierra-Leone.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EF6EBA57ADFC42D596A3B334 /* Singapore.png */ = {isa = PBXFileReference; name = "Singapore.png"; path = "../assets/images/flags/Singapore.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		233A7856BB9C4268816022BF /* Slovakia.png */ = {isa = PBXFileReference; name = "Slovakia.png"; path = "../assets/images/flags/Slovakia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F90D14BC68BC47B090267C1C /* Slovenia.png */ = {isa = PBXFileReference; name = "Slovenia.png"; path = "../assets/images/flags/Slovenia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A5BDBCAB03A24B15B86F41C3 /* Solomon-Islands.png */ = {isa = PBXFileReference; name = "Solomon-Islands.png"; path = "../assets/images/flags/Solomon-Islands.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0D23DC7BD9AF4D0BAFE7B986 /* Somalia.png */ = {isa = PBXFileReference; name = "Somalia.png"; path = "../assets/images/flags/Somalia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9F418C17A5E54C25BF49B2FF /* South-Africa.png */ = {isa = PBXFileReference; name = "South-Africa.png"; path = "../assets/images/flags/South-Africa.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CF4B671A66814EF68436B686 /* South-Sudan.png */ = {isa = PBXFileReference; name = "South-Sudan.png"; path = "../assets/images/flags/South-Sudan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02837081E6F6487D9AA45BE9 /* Spain.png */ = {isa = PBXFileReference; name = "Spain.png"; path = "../assets/images/flags/Spain.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EF7131DAAE64478A9FD0E64B /* Sri-Lanka.png */ = {isa = PBXFileReference; name = "Sri-Lanka.png"; path = "../assets/images/flags/Sri-Lanka.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		17D6382F51064714A4BC244A /* Sudan.png */ = {isa = PBXFileReference; name = "Sudan.png"; path = "../assets/images/flags/Sudan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		14FFA4941F544BC3B0AD7E19 /* Suriname.png */ = {isa = PBXFileReference; name = "Suriname.png"; path = "../assets/images/flags/Suriname.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		05FD6BB5437E49C1938D82A0 /* Swaziland.png */ = {isa = PBXFileReference; name = "Swaziland.png"; path = "../assets/images/flags/Swaziland.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		01C2C353FCED428893C824D8 /* Sweden.png */ = {isa = PBXFileReference; name = "Sweden.png"; path = "../assets/images/flags/Sweden.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E333ED8C1ECF4529A3365876 /* Switzerland.png */ = {isa = PBXFileReference; name = "Switzerland.png"; path = "../assets/images/flags/Switzerland.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6475D7CEB3CE4C44AC689323 /* Syria.png */ = {isa = PBXFileReference; name = "Syria.png"; path = "../assets/images/flags/Syria.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8462E65A498C4F03B0FC493B /* Taiwan.png */ = {isa = PBXFileReference; name = "Taiwan.png"; path = "../assets/images/flags/Taiwan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C8B2637FF3B449858209B45C /* Tajikistan.png */ = {isa = PBXFileReference; name = "Tajikistan.png"; path = "../assets/images/flags/Tajikistan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D47FAD636A554B2F9971D093 /* Tanzania.png */ = {isa = PBXFileReference; name = "Tanzania.png"; path = "../assets/images/flags/Tanzania.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CE7A35141F0A44BCB413817C /* Thailand.png */ = {isa = PBXFileReference; name = "Thailand.png"; path = "../assets/images/flags/Thailand.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A07F8B82FB2B4913A6A1FF2F /* Togo.png */ = {isa = PBXFileReference; name = "Togo.png"; path = "../assets/images/flags/Togo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		97B5635B04934A468B823ABA /* Tonga.png */ = {isa = PBXFileReference; name = "Tonga.png"; path = "../assets/images/flags/Tonga.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E01BB75808F04557BA97FA80 /* Trinidad-and-Tobago.png */ = {isa = PBXFileReference; name = "Trinidad-and-Tobago.png"; path = "../assets/images/flags/Trinidad-and-Tobago.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A5395386A90341E1A25C3F94 /* Tunisia.png */ = {isa = PBXFileReference; name = "Tunisia.png"; path = "../assets/images/flags/Tunisia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E1CE0E0D761E498DB76475F0 /* Turkey.png */ = {isa = PBXFileReference; name = "Turkey.png"; path = "../assets/images/flags/Turkey.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		41670C15A10F43ACA58B881C /* Turkmenistan.png */ = {isa = PBXFileReference; name = "Turkmenistan.png"; path = "../assets/images/flags/Turkmenistan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D7FD91733D54675B9D6C75F /* Tuvalu.png */ = {isa = PBXFileReference; name = "Tuvalu.png"; path = "../assets/images/flags/Tuvalu.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3FFF7EE8B2384B66B967E0ED /* Uganda.png */ = {isa = PBXFileReference; name = "Uganda.png"; path = "../assets/images/flags/Uganda.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CD95DB775E514B7BBF2F1E52 /* Ukraine.png */ = {isa = PBXFileReference; name = "Ukraine.png"; path = "../assets/images/flags/Ukraine.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5445CF9FB0D343B4A0DBA8C2 /* United-Arab-Emirates.png */ = {isa = PBXFileReference; name = "United-Arab-Emirates.png"; path = "../assets/images/flags/United-Arab-Emirates.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		942479BECA0643198D665E2C /* United-Kingdom.png */ = {isa = PBXFileReference; name = "United-Kingdom.png"; path = "../assets/images/flags/United-Kingdom.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		15C53F7EA5EC4BBFBE6897FC /* United-States-of-America.png */ = {isa = PBXFileReference; name = "United-States-of-America.png"; path = "../assets/images/flags/United-States-of-America.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		09EA6618233140C8964F89C1 /* Uruguay.png */ = {isa = PBXFileReference; name = "Uruguay.png"; path = "../assets/images/flags/Uruguay.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8648536F4674CEBA72AC10E /* Uzbekistan.png */ = {isa = PBXFileReference; name = "Uzbekistan.png"; path = "../assets/images/flags/Uzbekistan.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		36749B036F424997BF15F0F5 /* Vanuatu.png */ = {isa = PBXFileReference; name = "Vanuatu.png"; path = "../assets/images/flags/Vanuatu.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7A09CFAC730A48DBB6AAE6B5 /* Vatican-City.png */ = {isa = PBXFileReference; name = "Vatican-City.png"; path = "../assets/images/flags/Vatican-City.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E5FD40E574C3408CA03FFB91 /* Venezuela.png */ = {isa = PBXFileReference; name = "Venezuela.png"; path = "../assets/images/flags/Venezuela.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1B8325E0AD204309A93DDEAD /* Vietnam.png */ = {isa = PBXFileReference; name = "Vietnam.png"; path = "../assets/images/flags/Vietnam.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9AF7672F9857425FA46CC37E /* Yemen.png */ = {isa = PBXFileReference; name = "Yemen.png"; path = "../assets/images/flags/Yemen.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		773501E6B9C14010BA840956 /* Zambia.png */ = {isa = PBXFileReference; name = "Zambia.png"; path = "../assets/images/flags/Zambia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6DFF0A31A31B436BBD96677E /* Zimbabwe.png */ = {isa = PBXFileReference; name = "Zimbabwe.png"; path = "../assets/images/flags/Zimbabwe.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ECBBD709184740BC9237F0B5 /* comment.png */ = {isa = PBXFileReference; name = "comment.png"; path = "../assets/images/icons/comment.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D8AA50BCB2964433B6385A0C /* plus.png */ = {isa = PBXFileReference; name = "plus.png"; path = "../assets/images/icons/plus.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C46FE09E30C1475ABDC62C30 /* profile.png */ = {isa = PBXFileReference; name = "profile.png"; path = "../assets/images/icons/profile.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1C4E4872FAA6471488AEABA9 /* search.png */ = {isa = PBXFileReference; name = "search.png"; path = "../assets/images/icons/search.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E61BCB030C2B483595724E2F /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; name = "RNFirebase.xcodeproj"; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		3C26FFE302474B89BAEED4D5 /* libRNFirebase.a */ = {isa = PBXFileReference; name = "libRNFirebase.a"; path = "libRNFirebase.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A56D6DE0E1934487954FEE34 /* approve.png */ = {isa = PBXFileReference; name = "approve.png"; path = "../assets/images/history/approve.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1A0A33B4687845AAA8FB477E /* decline.png */ = {isa = PBXFileReference; name = "decline.png"; path = "../assets/images/history/decline.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2E29B4AF23534DA08B2F3B5D /* plus.png */ = {isa = PBXFileReference; name = "plus.png"; path = "../assets/images/history/plus.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
+				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
+				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
+				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
+				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
+				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				BD656F15DB9546308FB19576 /* libBVLinearGradient.a in Frameworks */,
+				29BC554CA7454A979C5B534C /* libAirMaps.a in Frameworks */,
+				8A003868D5C34CB7BB9F8E2E /* libRNVectorIcons.a in Frameworks */,
+				BBD7A566B4714CD18FC46D8D /* libRNTextInputMask.a in Frameworks */,
+				B35C27D9E13F4CA5BB7A738A /* libRCTRestart.a in Frameworks */,
+				1F8E440881734224A492EAE3 /* libRNFS.a in Frameworks */,
+				51E54279352F4B2A9FA3FF36 /* libRCTImageResizer.a in Frameworks */,
+				FBE7EBA6C98446B491109349 /* libRNImagePicker.a in Frameworks */,
+				AA4EC101F13F475BBDECD372 /* libRNCamera.a in Frameworks */,
+				6A7761BAF75E4729A5336083 /* libRNFirebase.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4781E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */,
+				2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */,
+				2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */,
+				2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */,
+				2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */,
+				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
+				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
+				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48D1E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302B61ABCB90400DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302BC1ABCB91800DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302C01ABCB91800DB3ED1 /* libRCTImage.a */,
+				3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302D41ABCB9D200DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */,
+				3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302E01ABCB9EE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00E356EF1AD99517003FC87E /* alphachangeTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* alphachangeTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = alphachangeTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		139105B71AF99BAD00B5F7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139105C11AF99BAD00B5F7CC /* libRCTSettings.a */,
+				3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		139FDEE71B06529A00C62182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
+				3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */,
+				2D16E6841FA4F8DC00B85C8A /* libfishhook.a */,
+				2D16E6861FA4F8DC00B85C8A /* libfishhook-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* alphachange */ = {
+			isa = PBXGroup;
+			children = (
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = alphachange;
+			sourceTree = "<group>";
+		};
+		146834001AC3E56700842450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146834041AC3E56700842450 /* libReact.a */,
+				3DAD3EA31DF850E9000B6D8A /* libReact.a */,
+				3DAD3EA51DF850E9000B6D8A /* libyoga.a */,
+				3DAD3EA71DF850E9000B6D8A /* libyoga.a */,
+				3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */,
+				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
+				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
+				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
+				2DF0FFDF2056DD460020B375 /* libjsinspector.a */,
+				2DF0FFE12056DD460020B375 /* libjsinspector-tvOS.a */,
+				2DF0FFE32056DD460020B375 /* libthird-party.a */,
+				2DF0FFE52056DD460020B375 /* libthird-party.a */,
+				2DF0FFE72056DD460020B375 /* libdouble-conversion.a */,
+				2DF0FFE92056DD460020B375 /* libdouble-conversion.a */,
+				2DF0FFEB2056DD460020B375 /* libprivatedata.a */,
+				2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */,
+				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C398B11ACF4ADC00677621 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C398B91ACF4ADC00677621 /* libRCTLinking.a */,
+				3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
+				146833FF1AC3E56700842450 /* React.xcodeproj */,
+				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
+				ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */,
+				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
+				00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */,
+				78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */,
+				00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */,
+				139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */,
+				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
+				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
+				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				E0FB4F6F35E047918E40E4A5 /* BVLinearGradient.xcodeproj */,
+				B627462DDBF14DC5BCDEE381 /* AirMaps.xcodeproj */,
+				29DBF9A745294FC6B771C557 /* RNVectorIcons.xcodeproj */,
+				E874DFED4ACB4F6EA14B946F /* RNTextInputMask.xcodeproj */,
+				5828428A29F6425AA35C3A47 /* RCTRestart.xcodeproj */,
+				3EFB1AE5EFE84ECAA918E10C /* RNFS.xcodeproj */,
+				F4F0F9622439424497E6A84C /* RCTImageResizer.xcodeproj */,
+				A8C97F2EFEC247D0BEB1D29E /* RNImagePicker.xcodeproj */,
+				DAFBE1B39EBE4A4E905960E6 /* RNCamera.xcodeproj */,
+				E61BCB030C2B483595724E2F /* RNFirebase.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		832341B11AAA6A8300B99B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832341B51AAA6A8300B99B32 /* libRCTText.a */,
+				3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* alphachange */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* alphachangeTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				586903E10CBC4037A3B43495 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* alphachange.app */,
+				00E356EE1AD99517003FC87E /* alphachangeTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* alphachange-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* alphachange-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADBDB9201DFEBF0600ED6528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
+				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		586903E10CBC4037A3B43495 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				CD100F9A6B8E4DADA80A35A7 /* avatar.jpg */,
+				CA8F2D5A6BB14D19AA19108F /* avatar1.jpg */,
+				163E087F97134001AB1FD0F4 /* avatar2.jpg */,
+				8EF66DD42FF64BBB8D776FC5 /* avatar3.jpg */,
+				32AED7FB874C4388A8337E2F /* flag1.png */,
+				428DAEAA9478479A9B1ACDEE /* flag2.png */,
+				C27240914E4C4D2AB55111F4 /* flag3.png */,
+				7509795DF54142E480AE0216 /* Roboto-Bold.ttf */,
+				F468C248A14848C79B133B9A /* Roboto-Light.ttf */,
+				3F9B158FB3B546E7823E9B70 /* Roboto.ttf */,
+				99E085AF9E7F436A9DF4640C /* Entypo.ttf */,
+				6D2E9BCF7ED242D19729B29A /* EvilIcons.ttf */,
+				F5854C059AA34A909200008E /* FontAwesome.ttf */,
+				6479ACBB3C8D427EAE800137 /* Foundation.ttf */,
+				D2D8B713E2924994895D2D1E /* Ionicons.ttf */,
+				845E2B061CA5444DB36A56AB /* MaterialIcons.ttf */,
+				94D16F94D6BE45D3881CEC53 /* Octicons.ttf */,
+				2E4C9E35EECC4ACC9A29FD48 /* Roboto_medium.ttf */,
+				B63A2CCAD7E242369124B242 /* SimpleLineIcons.ttf */,
+				C11F62BE3CF64EA48443C26E /* Zocial.ttf */,
+				D6EBD2D77D5D4CD99B18CDE2 /* Feather.ttf */,
+				2152DDE8C0574464BC4ED67B /* MaterialCommunityIcons.ttf */,
+				056D43BC60AF4D668BC70EE0 /* logo.png */,
+				8209C4895A104A0AA251255E /* write.png */,
+				E9E6171314524D96A748707F /* Afghanistan.png */,
+				3B8006BBD78D455F95A731AE /* Albania.png */,
+				99D1BA95973F4D0EBC51E9F9 /* Algeria.png */,
+				5667A5FC27914ABE8D206014 /* Andorra.png */,
+				2E3B8590D4DE4F6CA16F779E /* Angola.png */,
+				23C539F4D2744807AD605CC8 /* Antigua-and-Barbuda.png */,
+				BE42F525072D46878E868EE4 /* Argentina.png */,
+				9FD4241DF019416CBBBCE94E /* Armenia.png */,
+				21D9FB555E5D4D9981010792 /* Australia.png */,
+				8A13A0B97875458CB9F2767B /* Austria.png */,
+				0B5CB6BBC49D43DEA4C58199 /* Azerbaijan.png */,
+				9E4A4A50BC5447A6BD7D119E /* Bahamas.png */,
+				28140C45465648A09FB41B75 /* Bahrain.png */,
+				0F4354EEEED54C1DAB9AA8BB /* Bangladesh.png */,
+				56FDB7B176834288B51D9FBB /* Barbados.png */,
+				DB0B0D04322E42569794C4CB /* Belarus.png */,
+				18DD8020B7334237B9C6E6E2 /* Belgium.png */,
+				3E8B3188E39743AFBEBAE9F2 /* Belize.png */,
+				109BA70AE66343E59E349326 /* Benin.png */,
+				CDA84C8FBDDB4BAF8E4063AE /* Bhutan.png */,
+				2AEFD6FD273C428DBAE2505E /* Bitcoin.png */,
+				5FAF0AB414784734A5227D12 /* Bolivia.png */,
+				9C4A416F636945628CB79EB2 /* Bosnia-and-Herzegovina.png */,
+				23A4E87DE3F945B1829792C6 /* Botswana.png */,
+				77D6C295879449648018111F /* Brazil.png */,
+				A1C6F48D8BD845D8A647825B /* Brunei.png */,
+				E68D4053CF2D46EBAE3D8D0D /* Bulgaria.png */,
+				2DDB15B4BDAF40AEA0503146 /* Burkina-Faso.png */,
+				07222792793C42FA8F8558F9 /* Burundi.png */,
+				AC0D74061144423D8A0A3B27 /* Cambodia.png */,
+				AD94C30CE5394F7ABF3DBBB1 /* Cameroon.png */,
+				AC1E4971D29340408B34C513 /* Canada.png */,
+				583BF352EB9A4B21BD5890FD /* Cape-Verde.png */,
+				BDE8E16DCD3C425E98ED6BC7 /* Central-African-Republic.png */,
+				C001B6D01CC3456B885F719C /* Chad.png */,
+				14097FD474AE474EA4ADE5C7 /* Chile.png */,
+				A95F56D7FC364F2281593B9E /* China.png */,
+				FBDA69ED6C494A2EAD3CD6C3 /* Colombia.png */,
+				35F089E5F567425796CD32EB /* Comoros.png */,
+				2E96EE909E2747F58FCDE01C /* Congo-(Democratic).png */,
+				B67ACB41C5524C6E942C24EE /* Congo-(Republic).png */,
+				467CA37692664C6FAE6826A0 /* Costa-Rica.png */,
+				0065368470B54EE0A6B24D31 /* Cote-d'Ivoire.png */,
+				26AB9EA9CE974FA8B9CEBCAF /* Croatia.png */,
+				F7E3910D507B4759B66F6E22 /* Cuba.png */,
+				99FD746019574ACD9EBF3A3D /* Cyprus.png */,
+				AC67FC7A1EE44DB093483EB9 /* Czech-Republic.png */,
+				D03D955712C240A283867CDA /* Denmark.png */,
+				7A68AA121D464F0BB57DBDFD /* Djibouti.png */,
+				B1DA7EFFD26441C099541FD7 /* Dominica.png */,
+				37F56B198DEE41548B7314FF /* Dominican-Republic.png */,
+				C81954AE6AF1407A934D3419 /* East-Timor.png */,
+				21247DE36F2541E78B415338 /* Ecuador.png */,
+				6C0075FE93FC465D8A6E1394 /* Egypt.png */,
+				708C0B6E7695447D8DED3534 /* El-Salvador.png */,
+				1729209C56AA42AD807C4357 /* Equatorial-Guinea.png */,
+				F0B8DE617E394484877A9408 /* Eritrea.png */,
+				B34B51C95E8E4469A67DD5FF /* Estonia.png */,
+				FB801E19FB1C4C08BFA3B41A /* Ethiopia.png */,
+				99C229327E8641E5B7B5E08E /* Europe.png */,
+				02EB65ED9034452787429656 /* Fiji.png */,
+				11A09174F1624BC1BCB84234 /* Finland.png */,
+				5149DDE688A741F588869A8D /* France.png */,
+				82B77BA562264E0487A658A6 /* Gabon.png */,
+				1472A633B1C0406080D404C6 /* Gambia.png */,
+				D64CA12A12AA45F190BD3828 /* Georgia.png */,
+				1C70EAC1061547DB98C7A731 /* Germany.png */,
+				B702B8E44EC949D8A8EC093D /* Ghana.png */,
+				572D213AEB2246E2BB96780E /* Grecee.png */,
+				21025EA0C9CB4163BDB3920A /* Grenada.png */,
+				93BE3379C1114EBDA9D5C88D /* Guatemala.png */,
+				40D0AAA937CD41DE951614F8 /* Guinea-Bissau.png */,
+				37660218E40D49EC92C8F8C2 /* Guinea.png */,
+				28339053BBEF4C589B1025E8 /* Guyana.png */,
+				08692903A3024C418D81770F /* Haiti.png */,
+				CABEAE96EB614A1D9EF8B9FB /* Honduras.png */,
+				15BE0EAEC1634C30B782323C /* Hungary.png */,
+				9E5BB0655E594E1E9CAB049F /* Iceland.png */,
+				3306E9D0900B4E2DAC9ABE40 /* India.png */,
+				4D8EA69E60914156A8C62ED9 /* Indonesia.png */,
+				32CE7EE6A3E4420A901482C7 /* Iran.png */,
+				9BC23A1E0A6B4F0FA76D400E /* Iraq.png */,
+				FCA4597742574E2AA71441B7 /* Ireland.png */,
+				BC3843C4AA3249DE8600183B /* Israel.png */,
+				11F63B0FB6884A6795938AA9 /* Italy.png */,
+				3E1213395FFA4E20885942AA /* Jamaica.png */,
+				B05B77B2BF29426D8D665982 /* Japan.png */,
+				DA42FE81ECCA443296A8AB24 /* Jordan.png */,
+				93269E9CD297492AB20EC28F /* Kazakhstan.png */,
+				C63F950A0C7C4CE394D89371 /* Kenya.png */,
+				F46D579AD1DF41E58905468E /* Kiribati.png */,
+				2F78A7AB5F724357A85B74A3 /* Korea-North.png */,
+				62E96C0E43D34CDFA8A82970 /* Korea-South.png */,
+				1471D414253A477796BC4D36 /* Kosovo.png */,
+				B921E7E15CCA4A11BAFB47B2 /* Kuwait.png */,
+				08ECB763BF5240DF8DC1FC3C /* Kyrgyzstan.png */,
+				0E4A0D2C30D84192BDF342FE /* Laos.png */,
+				5F7283094DCB4E91A457D048 /* Latvia.png */,
+				4E769E28C3B74D91A689D7FC /* Lebanon.png */,
+				98CD6C7B8CF64E3DAE3B0D51 /* Lesotho.png */,
+				ACA402D3F9B04DEAB98BD779 /* Liberia.png */,
+				55C588E815AC407BABB93762 /* Libya.png */,
+				6D0D25F617D745D98A37B306 /* Liechtenstein.png */,
+				96422865A8E6420393278C86 /* Lithuania.png */,
+				461DF4CADEDF44C8A68BFF42 /* Luxembourg.png */,
+				8AD33C4812414A1C9A1BA3AA /* Macedonia.png */,
+				B975CCB289B24B0D97F110E7 /* Madagascar.png */,
+				DCFADAA634594855B30EA4BA /* Malawi.png */,
+				5612D0F4363B420A9D126683 /* Malaysia.png */,
+				8A7F9EEF01324E05B67649B3 /* Maldives.png */,
+				E09F9E854F6D4527BA0CB3D7 /* Mali.png */,
+				958D471903964BECAC78019B /* Malta.png */,
+				CD201BF56A374493AA4F3CC3 /* Marshall-Islands.png */,
+				72AAE8D7DA564FDD9EA2A679 /* Mauritania.png */,
+				439D519E6D00496492F1C4A4 /* Mauritius.png */,
+				A076F3DA0E02415F80F32929 /* Mexico.png */,
+				F379827376F04EECAB6F173F /* Micronesia-(Federated).png */,
+				11DCE20E0F5D4BDEBE9FDD8C /* Moldova.png */,
+				3301EE6952CA41E3835578B7 /* Monaco.png */,
+				BBD10B336452415C9DA493A4 /* Mongolia.png */,
+				A23F1BCDF11F46159880E4F1 /* Montenegro.png */,
+				E66C5011E608432899F71D52 /* Morocco.png */,
+				B273D1D05DCF4A08915AA3FF /* Mozambique.png */,
+				5E93118CF0094B6980B64DC2 /* Myanmar.png */,
+				53A59270ADAC4BAC9788A518 /* Namibia.png */,
+				BF88461200654E809749399D /* Nauru.png */,
+				149CAA85C90645B1912164A6 /* Nepal.png */,
+				C8D78B2BE9384BEC957C23D3 /* Netherlands.png */,
+				9F3B4EEF0BF645C0B12471E0 /* New-Zealand.png */,
+				E1AA486239D24C7885CBE1DA /* Nicaragua.png */,
+				D624D27121694724B9EEB276 /* Niger.png */,
+				53E46274476C459C804C41C9 /* Nigeria.png */,
+				F8C0CFCADAF64A4F89BFB903 /* Norway.png */,
+				191DC9B96FCA4657BA0690EE /* Oman.png */,
+				19E673472D4B4175B173E488 /* Pakistan.png */,
+				9937A4C2B5DC43028781A5CC /* Palau.png */,
+				E6634089924B48E4A3B31672 /* Panama.png */,
+				FBA0E041E80140E7AE35A569 /* Papua-New-Guinea.png */,
+				54CC39613053462E83A358FA /* Paraguay.png */,
+				032226A0C9A145208CE017E0 /* Peru.png */,
+				37AF9B94F5A3460DA5BCFA1D /* Philippines.png */,
+				504A758C394F4A7E9596154B /* Poland.png */,
+				9D17810673D347A2BF20EC39 /* Portugal.png */,
+				DB2AA4DEF89E406C93D74F7D /* Qatar.png */,
+				297B2BE1090D479698146F73 /* Romania.png */,
+				22BE0389B4FC41BE8B1A6FCB /* Russia.png */,
+				FAA3D18615324466BC7D7629 /* Rwanda.png */,
+				C0F812551F4E419EA35B145E /* Saint-Kitts-and-Nevis.png */,
+				B9DFBC5972334B82ABC28695 /* Saint-Lucia.png */,
+				EB0F04D874A1441DA3BEA1FA /* Saint-Vincent-and-the-Grenadines.png */,
+				21C1263E22854B568A235AEF /* Samoa.png */,
+				0456A0CFE5C9461497D5EBBE /* San-Marino.png */,
+				D06329284B2149D58781CFB8 /* Sao-Tome-and-Principe.png */,
+				8E707B858AFB49E88E65BBFF /* Saudi-Arabia.png */,
+				0728404BC36749A4ADEC9049 /* Senegal.png */,
+				3927491EE48E4AF283673916 /* Serbia.png */,
+				ADDCB62975D54739B0306E5B /* Seychelles.png */,
+				9B7EEC135B1E4990A238680B /* Sierra-Leone.png */,
+				EF6EBA57ADFC42D596A3B334 /* Singapore.png */,
+				233A7856BB9C4268816022BF /* Slovakia.png */,
+				F90D14BC68BC47B090267C1C /* Slovenia.png */,
+				A5BDBCAB03A24B15B86F41C3 /* Solomon-Islands.png */,
+				0D23DC7BD9AF4D0BAFE7B986 /* Somalia.png */,
+				9F418C17A5E54C25BF49B2FF /* South-Africa.png */,
+				CF4B671A66814EF68436B686 /* South-Sudan.png */,
+				02837081E6F6487D9AA45BE9 /* Spain.png */,
+				EF7131DAAE64478A9FD0E64B /* Sri-Lanka.png */,
+				17D6382F51064714A4BC244A /* Sudan.png */,
+				14FFA4941F544BC3B0AD7E19 /* Suriname.png */,
+				05FD6BB5437E49C1938D82A0 /* Swaziland.png */,
+				01C2C353FCED428893C824D8 /* Sweden.png */,
+				E333ED8C1ECF4529A3365876 /* Switzerland.png */,
+				6475D7CEB3CE4C44AC689323 /* Syria.png */,
+				8462E65A498C4F03B0FC493B /* Taiwan.png */,
+				C8B2637FF3B449858209B45C /* Tajikistan.png */,
+				D47FAD636A554B2F9971D093 /* Tanzania.png */,
+				CE7A35141F0A44BCB413817C /* Thailand.png */,
+				A07F8B82FB2B4913A6A1FF2F /* Togo.png */,
+				97B5635B04934A468B823ABA /* Tonga.png */,
+				E01BB75808F04557BA97FA80 /* Trinidad-and-Tobago.png */,
+				A5395386A90341E1A25C3F94 /* Tunisia.png */,
+				E1CE0E0D761E498DB76475F0 /* Turkey.png */,
+				41670C15A10F43ACA58B881C /* Turkmenistan.png */,
+				4D7FD91733D54675B9D6C75F /* Tuvalu.png */,
+				3FFF7EE8B2384B66B967E0ED /* Uganda.png */,
+				CD95DB775E514B7BBF2F1E52 /* Ukraine.png */,
+				5445CF9FB0D343B4A0DBA8C2 /* United-Arab-Emirates.png */,
+				942479BECA0643198D665E2C /* United-Kingdom.png */,
+				15C53F7EA5EC4BBFBE6897FC /* United-States-of-America.png */,
+				09EA6618233140C8964F89C1 /* Uruguay.png */,
+				E8648536F4674CEBA72AC10E /* Uzbekistan.png */,
+				36749B036F424997BF15F0F5 /* Vanuatu.png */,
+				7A09CFAC730A48DBB6AAE6B5 /* Vatican-City.png */,
+				E5FD40E574C3408CA03FFB91 /* Venezuela.png */,
+				1B8325E0AD204309A93DDEAD /* Vietnam.png */,
+				9AF7672F9857425FA46CC37E /* Yemen.png */,
+				773501E6B9C14010BA840956 /* Zambia.png */,
+				6DFF0A31A31B436BBD96677E /* Zimbabwe.png */,
+				ECBBD709184740BC9237F0B5 /* comment.png */,
+				D8AA50BCB2964433B6385A0C /* plus.png */,
+				C46FE09E30C1475ABDC62C30 /* profile.png */,
+				1C4E4872FAA6471488AEABA9 /* search.png */,
+				A56D6DE0E1934487954FEE34 /* approve.png */,
+				1A0A33B4687845AAA8FB477E /* decline.png */,
+				2E29B4AF23534DA08B2F3B5D /* plus.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* alphachangeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "alphachangeTests" */;
+			buildPhases = (
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = alphachangeTests;
+			productName = alphachangeTests;
+			productReference = 00E356EE1AD99517003FC87E /* alphachangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* alphachange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "alphachange" */;
+			buildPhases = (
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = alphachange;
+			productName = "Hello World";
+			productReference = 13B07F961A680F5B00A75B9A /* alphachange.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E47A1E0B4A5D006451C7 /* alphachange-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "alphachange-tvOS" */;
+			buildPhases = (
+				2D02E4771E0B4A5D006451C7 /* Sources */,
+				2D02E4781E0B4A5D006451C7 /* Frameworks */,
+				2D02E4791E0B4A5D006451C7 /* Resources */,
+				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "alphachange-tvOS";
+			productName = "alphachange-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* alphachange-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E48F1E0B4A5D006451C7 /* alphachange-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "alphachange-tvOSTests" */;
+			buildPhases = (
+				2D02E48C1E0B4A5D006451C7 /* Sources */,
+				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
+				2D02E48E1E0B4A5D006451C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
+			);
+			name = "alphachange-tvOSTests";
+			productName = "alphachange-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* alphachange-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 610;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					2D02E47A1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					2D02E48F1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "alphachange" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
+					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+				},
+				{
+					ProductGroup = 5E91572E1DD0AC6500FF2AA8 /* Products */;
+					ProjectRef = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+				},
+				{
+					ProductGroup = ADBDB9201DFEBF0600ED6528 /* Products */;
+					ProjectRef = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
+					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302BC1ABCB91800DB3ED1 /* Products */;
+					ProjectRef = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
+					ProjectRef = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
+					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
+					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+				},
+				{
+					ProductGroup = 832341B11AAA6A8300B99B32 /* Products */;
+					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
+					ProjectRef = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+				},
+				{
+					ProductGroup = 139FDEE71B06529A00C62182 /* Products */;
+					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+				},
+				{
+					ProductGroup = 146834001AC3E56700842450 /* Products */;
+					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* alphachange */,
+				00E356ED1AD99517003FC87E /* alphachangeTests */,
+				2D02E47A1E0B4A5D006451C7 /* alphachange-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* alphachange-tvOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTActionSheet.a;
+			remoteRef = 00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTGeolocation.a;
+			remoteRef = 00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302C01ABCB91800DB3ED1 /* libRCTImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTImage.a;
+			remoteRef = 00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTNetwork.a;
+			remoteRef = 00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTVibration.a;
+			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTSettings.a;
+			remoteRef = 139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139FDEF41B06529B00C62182 /* libRCTWebSocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTWebSocket.a;
+			remoteRef = 139FDEF31B06529B00C62182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		146834041AC3E56700842450 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTBlob-tvOS.a";
+			remoteRef = 2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D16E6841FA4F8DC00B85C8A /* libfishhook.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfishhook.a;
+			remoteRef = 2D16E6831FA4F8DC00B85C8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D16E6861FA4F8DC00B85C8A /* libfishhook-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libfishhook-tvOS.a";
+			remoteRef = 2D16E6851FA4F8DC00B85C8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFDF2056DD460020B375 /* libjsinspector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsinspector.a;
+			remoteRef = 2DF0FFDE2056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFE12056DD460020B375 /* libjsinspector-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsinspector-tvOS.a";
+			remoteRef = 2DF0FFE02056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFE32056DD460020B375 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 2DF0FFE22056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFE52056DD460020B375 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 2DF0FFE42056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFE72056DD460020B375 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 2DF0FFE62056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFE92056DD460020B375 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 2DF0FFE82056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFEB2056DD460020B375 /* libprivatedata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprivatedata.a;
+			remoteRef = 2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprivatedata-tvOS.a";
+			remoteRef = 2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTImage-tvOS.a";
+			remoteRef = 3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTLinking-tvOS.a";
+			remoteRef = 3DAD3E871DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTNetwork-tvOS.a";
+			remoteRef = 3DAD3E8B1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTSettings-tvOS.a";
+			remoteRef = 3DAD3E8F1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTText-tvOS.a";
+			remoteRef = 3DAD3E931DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTWebSocket-tvOS.a";
+			remoteRef = 3DAD3E981DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA31DF850E9000B6D8A /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 3DAD3EA21DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA51DF850E9000B6D8A /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 3DAD3EA41DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA71DF850E9000B6D8A /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 3DAD3EA61DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 3DAD3EA81DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTAnimation.a;
+			remoteRef = 5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTAnimation.a;
+			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTLinking.a;
+			remoteRef = 78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTText.a;
+			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTBlob.a;
+			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				F61189E7DD7A496CBCC53199 /* avatar.jpg in Resources */,
+				D951D0962F644B40826050E8 /* avatar1.jpg in Resources */,
+				218F3E8B6BB24CEFA52B1E41 /* avatar2.jpg in Resources */,
+				B14ACB085278406F9F4C084C /* avatar3.jpg in Resources */,
+				E7832DC6EC994AF9A930A3B4 /* flag1.png in Resources */,
+				E0139527B1A141689C0B9E6E /* flag2.png in Resources */,
+				D920B87C4B574845BC9574F3 /* flag3.png in Resources */,
+				DD30E180B8B84782B8EF486F /* Roboto-Bold.ttf in Resources */,
+				2EBBE6EDDBBA4D749325DF51 /* Roboto-Light.ttf in Resources */,
+				80A5A41BF8504488916B52F6 /* Roboto.ttf in Resources */,
+				DA64A77AF7514D2D9C7159EE /* Entypo.ttf in Resources */,
+				D1CA69CCA07A4B54BCDA2EF4 /* EvilIcons.ttf in Resources */,
+				B2DEEDE3334E4C20B4C3C6E3 /* FontAwesome.ttf in Resources */,
+				1B85173C040B4B198342ACB5 /* Foundation.ttf in Resources */,
+				B0D769FAC32A44F8AE71694C /* Ionicons.ttf in Resources */,
+				806C26FBF6C341878F4087E2 /* MaterialIcons.ttf in Resources */,
+				4B314F5C19F141049E037C64 /* Octicons.ttf in Resources */,
+				AA5A90BA8BAE43629933CCC9 /* Roboto_medium.ttf in Resources */,
+				4BF015A74A1D4EF7A695EE84 /* SimpleLineIcons.ttf in Resources */,
+				638DACB57B8A47AB84D71EFA /* Zocial.ttf in Resources */,
+				C75091E4274944E28D9D7BBB /* Feather.ttf in Resources */,
+				66E7430280A44F1CAC2E5F1F /* MaterialCommunityIcons.ttf in Resources */,
+				06D9B21872024BEA9B74D8EB /* logo.png in Resources */,
+				E0AF6C8F27CD4696AF3099DC /* write.png in Resources */,
+				BB4DCE4C93AC409F869162DC /* Afghanistan.png in Resources */,
+				ABC561C74F9A4583BB30C9BC /* Albania.png in Resources */,
+				A522A25997AD446DBE5D59ED /* Algeria.png in Resources */,
+				2F7F932AC1C2484D8F67C034 /* Andorra.png in Resources */,
+				044A7B11AEEF48E3A7D50D0B /* Angola.png in Resources */,
+				9F800DC3DE174B5096EA0FB7 /* Antigua-and-Barbuda.png in Resources */,
+				304520AA69BE470FB232C98B /* Argentina.png in Resources */,
+				4C7E4F4F1BDA4BB181007D18 /* Armenia.png in Resources */,
+				445BD0ACD37042748D438F2D /* Australia.png in Resources */,
+				6624F957BA60426FA0132F3D /* Austria.png in Resources */,
+				E0E2DEDA9ED04151BA3B1CBF /* Azerbaijan.png in Resources */,
+				BCF87C860D064B60AE6F87CA /* Bahamas.png in Resources */,
+				5A5BDEDF2F7744F3AC4AB9B4 /* Bahrain.png in Resources */,
+				E7C12E36B9E84CE4A01574DF /* Bangladesh.png in Resources */,
+				26C57BD88E5F4707BA67050E /* Barbados.png in Resources */,
+				7269A176A9994EC8A189FC94 /* Belarus.png in Resources */,
+				9EED83D43FFB4C46A92A0FA3 /* Belgium.png in Resources */,
+				290F4B45C65442EC804A6E51 /* Belize.png in Resources */,
+				34E35FB3904744A1B3803C68 /* Benin.png in Resources */,
+				E56E54B8920E4B958FC1B127 /* Bhutan.png in Resources */,
+				BB2D908E4CAC4EDCBFAD92F4 /* Bitcoin.png in Resources */,
+				D017F92D93544A3F83C57FE7 /* Bolivia.png in Resources */,
+				CD7A9ED7935A4A6F804D766D /* Bosnia-and-Herzegovina.png in Resources */,
+				EA50F4DE11944C8BB4AF8AFE /* Botswana.png in Resources */,
+				7156DCE6C7544856B8D0A8B0 /* Brazil.png in Resources */,
+				4CDD15A8E6954E199B172762 /* Brunei.png in Resources */,
+				4AB36A4081E548E39E24AD43 /* Bulgaria.png in Resources */,
+				76EA32D78F06411AB4EA9B9B /* Burkina-Faso.png in Resources */,
+				70A9BB52A38F491F858538CE /* Burundi.png in Resources */,
+				512A47FE137440EA8F090642 /* Cambodia.png in Resources */,
+				AA85AE51BA2B4F09B6582582 /* Cameroon.png in Resources */,
+				423D2B18F1DE441EB38D9C32 /* Canada.png in Resources */,
+				A20CFFD4E23D44F4A7A96063 /* Cape-Verde.png in Resources */,
+				173D6CD007C041A7B45099DD /* Central-African-Republic.png in Resources */,
+				B2110C00A5264436A7139A9B /* Chad.png in Resources */,
+				9CF7DE70C81142CC99385C0E /* Chile.png in Resources */,
+				07DCCBC9D0CE4ED4B19D5A65 /* China.png in Resources */,
+				2DA8CCC23389492991D6886E /* Colombia.png in Resources */,
+				3A901832363C4DC3B68B4C68 /* Comoros.png in Resources */,
+				442DBB6655334541BFCA9691 /* Congo-(Democratic).png in Resources */,
+				31BB6B75DC2347C39A42CF2F /* Congo-(Republic).png in Resources */,
+				BBEC6125732F42E389045242 /* Costa-Rica.png in Resources */,
+				D6F959D481BB4CCC8240B57E /* Cote-d'Ivoire.png in Resources */,
+				A79BD2F2C86F4730AAD2D9AF /* Croatia.png in Resources */,
+				98940952C71D44AAB3B701CC /* Cuba.png in Resources */,
+				23666A60F79E430AB5458823 /* Cyprus.png in Resources */,
+				2D22042FE0C9444BBE965866 /* Czech-Republic.png in Resources */,
+				829338E9DBB244B6B6840337 /* Denmark.png in Resources */,
+				BFFEB08556054F2996831BBA /* Djibouti.png in Resources */,
+				07E28C755F5B4C48B4FA7BFF /* Dominica.png in Resources */,
+				DA489F1D90B5470EBA3BBA31 /* Dominican-Republic.png in Resources */,
+				455AC3ED9FAC4FF69DB77B0D /* East-Timor.png in Resources */,
+				FA72B7D1586047CE8D447A8E /* Ecuador.png in Resources */,
+				3D7121F88C02420FB1425723 /* Egypt.png in Resources */,
+				A850D0771305429AAFBB1A9C /* El-Salvador.png in Resources */,
+				0D959139460148DB9F9C9F1F /* Equatorial-Guinea.png in Resources */,
+				ECADA6D3AA2D42BC8E8C6CCC /* Eritrea.png in Resources */,
+				71686FA5035A416C85111EF0 /* Estonia.png in Resources */,
+				DFC68F9519974726A6370A62 /* Ethiopia.png in Resources */,
+				E5955AC7BC294A818970095D /* Europe.png in Resources */,
+				BFF448CF6BA44ECAA7B1B7AB /* Fiji.png in Resources */,
+				534233B86FBA44A69C3809E2 /* Finland.png in Resources */,
+				3B3CDD36AC8B4F23988ECE8C /* France.png in Resources */,
+				FFA6FAC6B8254D63844A445C /* Gabon.png in Resources */,
+				BF3AD035672E457BAA95D424 /* Gambia.png in Resources */,
+				124AB5B74CA144F1B701CF08 /* Georgia.png in Resources */,
+				01F1D6058114446CADC15765 /* Germany.png in Resources */,
+				B10F932619F7450F8ACE8F22 /* Ghana.png in Resources */,
+				BF54910D3207441D8048E4DA /* Grecee.png in Resources */,
+				2AB007C090DE4824A70A6AC0 /* Grenada.png in Resources */,
+				E7A724F9770947B69EBD267E /* Guatemala.png in Resources */,
+				3FB2276AEB0C40ABA67935DC /* Guinea-Bissau.png in Resources */,
+				0449C0DC5C6047068DC44E22 /* Guinea.png in Resources */,
+				3CA9BA87B1544BE28686BA67 /* Guyana.png in Resources */,
+				13FBD5EAE8AF450EB3B46692 /* Haiti.png in Resources */,
+				AEFDAD64A3A94F9DBCDD2188 /* Honduras.png in Resources */,
+				5276F95E12E24F7AA1863D4D /* Hungary.png in Resources */,
+				2F6DFAFC9E3048D0BF57D45B /* Iceland.png in Resources */,
+				F19E2D8A3E794D1C9336ACDF /* India.png in Resources */,
+				C741E27C8D4D43D29536D8D0 /* Indonesia.png in Resources */,
+				BC4A74FB577C4C1DA63868BC /* Iran.png in Resources */,
+				99475546AEDF47C78914B8E4 /* Iraq.png in Resources */,
+				7ABB205EFD884426B27F5568 /* Ireland.png in Resources */,
+				655877ECA3074B2082AF9EA5 /* Israel.png in Resources */,
+				3B0E46366D7A40A29BEFE047 /* Italy.png in Resources */,
+				0B56609D23874A56BFB17CAD /* Jamaica.png in Resources */,
+				E7D956C062174A758E013DF1 /* Japan.png in Resources */,
+				287834A12C864A2EBA48E8BC /* Jordan.png in Resources */,
+				65FD256E774A437B8B9B207A /* Kazakhstan.png in Resources */,
+				D3DDEC0E12994F058767D516 /* Kenya.png in Resources */,
+				E02126860652465697933CB0 /* Kiribati.png in Resources */,
+				9969670CD59F458BBB350E0F /* Korea-North.png in Resources */,
+				4D6CE2AA541F4620BFDB12DB /* Korea-South.png in Resources */,
+				3ACE26ACE46E4536A0AAAB05 /* Kosovo.png in Resources */,
+				228B5229041D48F787DAA224 /* Kuwait.png in Resources */,
+				EF3C6516156344748B622EA3 /* Kyrgyzstan.png in Resources */,
+				3DDEA274E5844596B7A83EBB /* Laos.png in Resources */,
+				36E9D48F68614125AB41E518 /* Latvia.png in Resources */,
+				037C1AC5FDF1425C976FBCF8 /* Lebanon.png in Resources */,
+				302349F5BA4B42BA87A0AC77 /* Lesotho.png in Resources */,
+				7B11290B959842B28381409A /* Liberia.png in Resources */,
+				1C53C2DA7E5142ABB6B0A54C /* Libya.png in Resources */,
+				EB5A2916981242498B1AB212 /* Liechtenstein.png in Resources */,
+				34BF8E9D804E4CE2A2E883E5 /* Lithuania.png in Resources */,
+				CA3B9C4D4A7D424A9D1429DD /* Luxembourg.png in Resources */,
+				76FC97593A8045BEA98E9D7A /* Macedonia.png in Resources */,
+				ADF7EE2E16FD42FBA88E5926 /* Madagascar.png in Resources */,
+				E59A8A67D1FF45829D0D765B /* Malawi.png in Resources */,
+				37A3B9B01E25400985B5C6DA /* Malaysia.png in Resources */,
+				A4FFD1C6B3B64CBAB3AB53B6 /* Maldives.png in Resources */,
+				2BAC25FAB4274D14A731D468 /* Mali.png in Resources */,
+				DAC4EA8303A24D2396C54D95 /* Malta.png in Resources */,
+				640F79B20E6A491498D4DC35 /* Marshall-Islands.png in Resources */,
+				683F92FFF85A488B91F60610 /* Mauritania.png in Resources */,
+				2E31F8AADD404730AA7F7CFA /* Mauritius.png in Resources */,
+				E3AE0B3017FE47CC99C516A4 /* Mexico.png in Resources */,
+				EDF5042970FE462F8CDA9C83 /* Micronesia-(Federated).png in Resources */,
+				E997B19F621B4E0DB565B11B /* Moldova.png in Resources */,
+				1D7B3785FCD44620B5A08C44 /* Monaco.png in Resources */,
+				256C46AF520B4ED6A4811D90 /* Mongolia.png in Resources */,
+				966A464881FB47879E452603 /* Montenegro.png in Resources */,
+				7774F26AD031435499BE3F47 /* Morocco.png in Resources */,
+				2BF2FC925B4440BDB097D8EC /* Mozambique.png in Resources */,
+				6BE5D1E7907B44B58D3DC113 /* Myanmar.png in Resources */,
+				8BB08692BA284F62BB95F630 /* Namibia.png in Resources */,
+				886670704AF74A588AB1405A /* Nauru.png in Resources */,
+				730288E30EAC4741A963541F /* Nepal.png in Resources */,
+				603C017DE7D14C60961A2B38 /* Netherlands.png in Resources */,
+				295129D506084FC78C362A74 /* New-Zealand.png in Resources */,
+				7B6E6EA1B4204088882D90D8 /* Nicaragua.png in Resources */,
+				F8FD9185E8B74E6EB1492B90 /* Niger.png in Resources */,
+				6840D408A1E942C48DC9F287 /* Nigeria.png in Resources */,
+				79EFF107BB5544B48822CB2A /* Norway.png in Resources */,
+				F36A5B25F18D4824935D5AF8 /* Oman.png in Resources */,
+				06BB346200774BAE80D48841 /* Pakistan.png in Resources */,
+				14344805BD99490F9DC4E624 /* Palau.png in Resources */,
+				148FCD806D58485AA085478B /* Panama.png in Resources */,
+				74C9DD1EB9D74E5B9865E1A4 /* Papua-New-Guinea.png in Resources */,
+				44374791F4314752B0624240 /* Paraguay.png in Resources */,
+				6FB1A46384204823BFBB0A65 /* Peru.png in Resources */,
+				6602F4EEB5AC4AEC98D31461 /* Philippines.png in Resources */,
+				70D5771A24A94C699F8CA8FD /* Poland.png in Resources */,
+				1DC18BCA7119467EBA63BE72 /* Portugal.png in Resources */,
+				4217828471A94868A0B7BD07 /* Qatar.png in Resources */,
+				257A5C3D98C24A82866E59E9 /* Romania.png in Resources */,
+				83C4C11135524DE699DEC6A3 /* Russia.png in Resources */,
+				67523FE2608A400B8BE9F761 /* Rwanda.png in Resources */,
+				0C3A58A4AD204FFDBB5B9748 /* Saint-Kitts-and-Nevis.png in Resources */,
+				3FF4CF0A8FAB42A080301C97 /* Saint-Lucia.png in Resources */,
+				55604E659C2649028E60C77B /* Saint-Vincent-and-the-Grenadines.png in Resources */,
+				E8837FACA4C04B72A0BCFBAE /* Samoa.png in Resources */,
+				142C246197A749299B16012A /* San-Marino.png in Resources */,
+				62662B00ABEB4FF985BF0C7B /* Sao-Tome-and-Principe.png in Resources */,
+				9D0A4DF45BE049859C35B53D /* Saudi-Arabia.png in Resources */,
+				579C76DBFED549579778ED42 /* Senegal.png in Resources */,
+				DDDE5D27943949DE8DC841B1 /* Serbia.png in Resources */,
+				811030F4CF9B42A38D015D6B /* Seychelles.png in Resources */,
+				C78B4039208544F19D9F6960 /* Sierra-Leone.png in Resources */,
+				A719C53F5ADD41CD8DF365A2 /* Singapore.png in Resources */,
+				2EAFBD9B5A214194BC2C48D6 /* Slovakia.png in Resources */,
+				E8533D27B04542E6895C2370 /* Slovenia.png in Resources */,
+				C0D3596B51584FC789BC101C /* Solomon-Islands.png in Resources */,
+				3C5C789C379A414481676714 /* Somalia.png in Resources */,
+				F17E6D53E31C463B92AFBD74 /* South-Africa.png in Resources */,
+				DD847DC570014263B93AAA7C /* South-Sudan.png in Resources */,
+				D6DEA951560C4988BD35F568 /* Spain.png in Resources */,
+				8950861601674E7FA89C821D /* Sri-Lanka.png in Resources */,
+				F957E067637C450E8BE801A3 /* Sudan.png in Resources */,
+				B6A78897744648B5830B8DCC /* Suriname.png in Resources */,
+				6CD0E56886394115AB06AD8D /* Swaziland.png in Resources */,
+				B0C95A4287004EB9972EFA4B /* Sweden.png in Resources */,
+				6C2029D4B8F24D2CA9E8588C /* Switzerland.png in Resources */,
+				16B770F547BC4AD6B4F918E7 /* Syria.png in Resources */,
+				BEC5CCE8A8CA4A5F8C42AEFA /* Taiwan.png in Resources */,
+				9D33334881ED4148BB4F5D7A /* Tajikistan.png in Resources */,
+				5339EBCA9D1F42ADA1019FD8 /* Tanzania.png in Resources */,
+				C877CBB49D4547B795F1F2CD /* Thailand.png in Resources */,
+				E16953C32D0C46CEA071171D /* Togo.png in Resources */,
+				5BFCE3EBBF094C61BD6BAF59 /* Tonga.png in Resources */,
+				4147299B2B344DEE85E81323 /* Trinidad-and-Tobago.png in Resources */,
+				2F54092C23774A9180204C7F /* Tunisia.png in Resources */,
+				B107D61D7CE24FDDBEEC0175 /* Turkey.png in Resources */,
+				500DF68F217F45AABD26F86D /* Turkmenistan.png in Resources */,
+				C2C1267305E44A3986FF775A /* Tuvalu.png in Resources */,
+				CA74188896F1441CA370BBDE /* Uganda.png in Resources */,
+				F0936AC8E8C348E4A5096956 /* Ukraine.png in Resources */,
+				D1B3DD7F706F404CA0AA9542 /* United-Arab-Emirates.png in Resources */,
+				81E530BD526947AFB048C219 /* United-Kingdom.png in Resources */,
+				12088BAD3E8249BD9C42B63D /* United-States-of-America.png in Resources */,
+				3791C67987944221B20EA25B /* Uruguay.png in Resources */,
+				9C085B5A4F2B45B98017147A /* Uzbekistan.png in Resources */,
+				6772D09907244685B421450E /* Vanuatu.png in Resources */,
+				E8A91CF47B3F4F63A8B8B7AA /* Vatican-City.png in Resources */,
+				555887E490814FB09165588E /* Venezuela.png in Resources */,
+				F29D01C8663D4F9CBEAF2F04 /* Vietnam.png in Resources */,
+				9859124E753F41F88BD98E30 /* Yemen.png in Resources */,
+				4A51602B7E554E96AF8B7F1C /* Zambia.png in Resources */,
+				704E543022F8475CB89D9F6E /* Zimbabwe.png in Resources */,
+				F171DA5AFD7643E08683AF80 /* comment.png in Resources */,
+				36B0EDB0166B420E89F72413 /* plus.png in Resources */,
+				9D4AAFA676714FC181EFEE2B /* profile.png in Resources */,
+				7F0918B51CDC432C86A211CF /* search.png in Resources */,
+				0EDAC8C97B3E41B9B368945B /* approve.png in Resources */,
+				6C113FBFC195497EADC5C2AE /* decline.png in Resources */,
+				5853C8700ADD464F8EC3DA3F /* plus.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4791E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* alphachangeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4771E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
+				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48C1E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCD954D1E0B4F2C00145EB5 /* alphachangeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* alphachange */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D02E47A1E0B4A5D006451C7 /* alphachange-tvOS */;
+			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B07FB21A68108700A75B9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = alphachange;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = alphachangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alphachange.app/alphachange";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = alphachangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alphachange.app/alphachange";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				INFOPLIST_FILE = alphachange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = alphachange;
+				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = alphachange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = alphachange;
+				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Release;
+		};
+		2D02E4971E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "alphachange-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.alphachange-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Debug;
+		};
+		2D02E4981E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "alphachange-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.alphachange-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Release;
+		};
+		2D02E4991E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "alphachange-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.alphachange-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alphachange-tvOS.app/alphachange-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Debug;
+		};
+		2D02E49A1E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "alphachange-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.alphachange-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alphachange-tvOS.app/alphachange-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-text-input-mask\ios\RNTextInputMask\RNTextInputMask/**",
+					"$(SRCROOT)\..\node_modules\react-native-restart\ios\RCTRestart/**",
+					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-resizer\ios\RCTImageResizer",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
+				);
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "alphachangeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "alphachange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "alphachange-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4971E0B4A5E006451C7 /* Debug */,
+				2D02E4981E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "alphachange-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4991E0B4A5E006451C7 /* Debug */,
+				2D02E49A1E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "alphachange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

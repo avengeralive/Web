@@ -1,0 +1,85 @@
+/*!======Ion.Tabs===============================================================*/
+
+
+/*!------Системные стили--------------------------------------------------------*/
+.ionTabs {
+	position:relative;
+}
+.ionTabs__head {
+	display:block;
+	position:relative; z-index:2;
+	margin:0; padding:0;
+	list-style-type:none;
+}
+.ionTabs__head:before, .ionTabs__head:after{content:""; display:table;}
+.ionTabs__head:after{clear:both;}
+.ionTabs__head{zoom:1;}
+
+.ionTabs__tab{
+	display:block; 
+	position:relative; float:left;
+	margin:0; padding:0;
+	background:none; cursor:pointer;
+	list-style-type:none;
+}
+.ionTabs__tab.ionTabs__tab_state_active{
+    cursor:default;
+}
+
+.ionTabs__body{
+	position:relative; z-index:1;
+}
+
+.ionTabs__item{
+	position:relative;
+	display:none;
+}
+.ionTabs__item.ionTabs__item_state_active{
+	display:block;
+}
+
+.ionTabs__preloader{
+	position:relative;
+}
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*!------Оформление-------------------------------------------------------------*/
+.ionTabs {
+	margin:0 0 20px;
+}
+.ionTabs__head{
+	margin:0 !important;
+}
+
+.ionTabs__tab{
+	margin:0 3px 0 0 !important; padding:11px 17px 12px;
+	background:#bbdefb; border-radius:4px 4px 0 0;
+	line-height:1em !important; text-align:center; color:#375c79;
+}
+.ionTabs__tab:last-of-type{margin-right:0 !important;}
+.ionTabs__tab:hover{background:#e5e5e5;}
+
+.ionTabs__tab.ionTabs__tab_state_active{
+	background:#039be5;
+	color:#ffffff;
+}
+
+.ionTabs__body{
+	border-top:2px solid #039be5;
+}
+
+.ionTabs__item{
+	padding:20px 0 0;
+}
+
+.ionTabs__preloader{
+	height:50px;
+	background:url(../images/style/loading.gif) center center no-repeat;
+}
+/*------------------------------------------------------------------------------*/
+
+
+/*==============================================================================*/

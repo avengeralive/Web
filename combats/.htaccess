@@ -1,0 +1,124 @@
+php_value error_reporting E_ALL
+
+DefaultLanguage ru
+AddDefaultCharset windows-1251
+php_value default_charset "cp1251"
+
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_flag log_errors on
+php_flag ignore_repeated_errors on
+php_flag ignore_repeated_source on
+php_value error_log /home/admin/web/testcombats.ru/public_html/php-error.log
+php_value error_reporting 4
+php_value log_errors_max_len 0
+
+## USER IP BANNING
+
+<Limit GET POST>
+
+order allow,deny
+deny from 5.16.114.7
+deny from 178.62.113.166 
+deny from 83.149.21.211
+deny from 81.177.160.220
+allow from all
+
+</Limit>
+
+<Files .htpasswd>
+   deny from all
+</Files>
+
+<Files php-error.log>
+deny from all
+</Files>
+
+Options -Indexes
+ErrorDocument 404 /404.php
+RewriteEngine off
+RewriteBase /
+RewriteCond %{HTTPs_REFERER} !^$
+RewriteCond %{HTTPs_REFERER} !^https://(www\.)?testcombats.ru/.*$ [NC]
+
+RewriteCond %{HTTPS} off
+RewriteCond %{ENV:REDIRECT} !^yes$
+RewriteCond %{HTTP_HOST} ^(www\.)?ourcombats\.ru$
+RewriteRule ^(.*)$ https://testcombats.ru/$1 [L]
+
+RewriteCond %{HTTP_HOST} ^161.97.76.107$ [NC]
+RewriteRule (.*) https://testcombats.ru/$1 [L,R=301,QSA]
+
+RewriteRule ^r([0-9]+)/?$ /register.php?ref=$1 [L]
+
+
+RewriteRule ^adminion/([a-zA-Z0-9]+)/?$ /adminion/index.php?mod=$1 [L]
+RewriteRule ^adminion/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ /adminion/index.php?mod=$1 [L]
+RewriteRule ^adminion/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ /adminion/index.php?mod=$1 [L]
+
+#RewriteRule ^dn_editor_bots.php(.*) https://# [L]
+#RewriteRule ^settings/?$ /settings.php [L]
+
+RewriteRule ^info/(.*)/?$ /inf.php?$1 [L]
+
+RewriteRule ^rating_pers/?$ /reting_pers.php?$1 [L] 
+RewriteRule ^rating_pers/(.*)/?$ /reting_pers.php?$1 [L] 
+
+RewriteRule ^rating_clans/?$ /reting_clans.php [L] 
+RewriteRule ^rating_clans/(.*)/?$ /reting_clans.php?$1 [L] 
+
+RewriteRule ^clan/(.*)/?$ /clans_inf.php?$1 [L] 
+RewriteRule ^clan/?$ /clans_inf.php [L]
+
+RewriteRule ^ruins/(.*)/?$ /ruins.php?$1 [L] 
+RewriteRule ^ruins/?$ /ruins.php [L]
+
+RewriteRule ^exp/(.*)/?$ /exp.php?$1 [L] 
+RewriteRule ^exp/?$ /exp.php [L]
+
+RewriteRule ^news/([0-9]+)/?$ /news_script/index.php?paged=$1 [L]
+RewriteRule ^news/(.*)/?$ /news_script/index.php?$1 [L]
+RewriteRule ^news/?$ /news_script/index.php [L]
+
+RewriteRule ^forum/(.*)/?$ /forum_script/index.php?$1 [L]
+RewriteRule ^forum/?$ /forum_script/index.php [L] 
+
+RewriteRule ^shadow/(.*)/?$ /main.php?obraz&rnd=1 [L]
+#RewriteRule ^shadow/?$ /obraz.php [L]
+
+
+RewriteRule ^monitoring/(.*)/?$ /hmonitor.php?$1 [L]
+RewriteRule ^monitoring/?$ /hmonitor.php [L] 
+
+RewriteRule ^rating/(.*)/?$ /rating_script/index.php?$1 [L]
+RewriteRule ^rating/?$ /rating_script/index.php [L]
+
+RewriteRule ^item/(.*)/?$ /items_info.php?$1 [L]
+RewriteRule ^item/?$ /items_info.php [L]
+RewriteRule ^repass/?$ /repass.php [L]
+#
+#
+#
+#
+RewriteRule ^mail/(.*)/?$ /mailconf.php?$1 [L] 
+
+RewriteRule ^register/?$ /register.php [L]
+RewriteRule ^reg/?$ /register.php [L]
+
+RewriteRule ^enter/?$ /enter.php [L]
+
+RewriteRule ^battle/?$ /buttons.php [L]
+
+RewriteRule ^mobile/?$ /main_mobile.php [L]
+
+RewriteRule ^btl([0-9]+)/?$ /jx/battle/refresh$1.php [L]
+
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{HTTPs_REFERER} !^$
+RewriteCond %{HTTPs_REFERER} !^https://(www.)?testcombats.ru/ [nc]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]

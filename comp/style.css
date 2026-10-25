@@ -1,0 +1,192 @@
+/*	
+Theme Name: Comp
+Author: Ali S. Veliyev
+Author URI: http://aliveliyev.com
+Version: 1
+*/
+
+.services i {
+	font-size: 40px;
+	color: #ff2424;
+	padding: 30px;
+	border: 2px solid #ff2424;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.services a:hover i {
+	background-color: #ff2424;
+	color: #fff;
+}
+.services a {
+	color: #000;
+	font-weight: bold;
+}
+.service_item {
+	text-align: center;
+	padding: 10px;
+}
+.services h4 {
+	font-size: 16px;
+}
+h1 {
+	color: #000;
+	margin: 0 auto;
+	font-style: italic;
+	font-weight: bold;
+}
+.hh1 {
+	height: 282px;
+	border-radius: 15px;
+}
+
+.hh2 {
+	height: 138px;
+	border-radius: 15px;
+}
+
+.hh3 {
+	height: 90px;
+	border-radius: 15px;
+}
+
+.tc {
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+	width: 100%;
+	border: 2px solid #ff2424;
+	text-align: center;
+	padding: 10px;
+	justify-content: center;
+}
+
+.slide_block .col-12 { padding: 3px; }
+.slide_block { padding: 1px}
+.slider {
+	margin-bottom: 40px !important;
+}
+
+@media (min-width: 768px) {
+	.services .col-md-2 { max-width: calc(100%/8); }
+	.services .col-md-1 { max-width: calc(100%/16); }
+}
+@media (max-width: 767px) {
+	.services .col-md-1 { display: none; }
+	.hh1, .hh2, .hh3 { height: 100px; }
+	h1 {
+		text-align: center;
+	}
+	.zakaz, .phone {
+		text-align: center;
+	}
+	header .col-sm-6 { padding: 0px; }
+	header p { text-align: center; }
+	.services h4 {
+		font-size: 12px;
+	}
+	.services i {
+		font-size: 30px;
+		color: #ff2424;
+		padding: 20px;
+		border: 2px solid #ff2424;
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+	}
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #000;
+	font-style: italic;
+	font-size: 18px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+	font-style: italic;
+	font-size: 18px;
+	margin-left: 20px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+.phone {
+	color: #000 !important;
+	font-weight: bold;
+	font-size: 27px;
+	font-style: italic;
+}
+.bg-light {
+    background-color: #ff2424 !important;
+}
+
+.zakaz {
+	color: #ff2424 !important;
+	font-style: italic;
+	font-size: 18px;
+	display: inline-block;
+	padding: 10px;
+	border: 2px solid #ff2424;
+	border-radius: 15px;
+}
+
+.zakmast {
+	background: #ff2424 !important;
+}
+
+.zakmast a {
+	color: #000 !important;
+	font-size: 25px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.menu {
+	display: inline-block;
+	width: 100%;
+	background: #ff2424 !important;
+	height: 56px;
+}
+.menu li {
+	padding: 8px 20px;
+	display: inline-block;
+}
+.menu li a {
+	color: #000 !important;
+	font-style: italic;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.row {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+label, input, textarea {
+	width: 100%;
+}
+
+.wpcf7-submit {
+	background: #ff2424 !important;
+	color: #fff !important;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+.navbar-nav, .navbar {
+	border-radius: 15px;
+}
+.tc:not(.zakmast) {
+	font-size: 21px;
+}
+.page-title {
+	font-size: 30px;
+	margin-bottom: 35px;
+}

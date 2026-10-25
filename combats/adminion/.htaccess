@@ -1,0 +1,6 @@
+AddDefaultCharset windows-1251
+
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /home/admin/web/testcombats.ru/public_html/adminion/.htpasswd
+require valid-user

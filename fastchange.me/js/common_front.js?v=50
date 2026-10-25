@@ -1,0 +1,1540 @@
+var application_id = 0;
+var hash = 0;
+var comsa = 0;
+var fixator = 0;
+var intervalSet = 1;
+
+
+$('.close_modal').click(function () {
+    $.arcticmodal('close');
+});
+
+$('.this_close_modal').click(function () {
+    $("#error_modal_two").arcticmodal('close');
+});
+
+
+$(document).ready(function(){
+
+    select_payment($(".give_money_select li.active"));
+
+    // фиксируем курс
+
+    fixator_func($("#hidden_inp").val(), $("#hidden_inp_two").val());
+
+
+// Выпадашка иконок на главной
+    $(".ul_li_active").click(function () {
+        $(this).toggleClass("block_cl");
+        $('.overlay_icon').toggleClass("active");
+        $(this).closest('.selecting').toggleClass("active");
+    });
+
+    $(".give_money_select li").click(function () {
+        $("body").animate({"scrollTop":100},"slow");
+        $('.receive_sel .ul_li_active').toggleClass("block_cl");
+        $('.overlay_icon').toggleClass("active");
+        $('.receive_sel .ul_li_active').closest('.selecting').toggleClass("active");
+    });
+
+    $(".overlay_icon").click(function () {
+        $('.user_cards_list').css('display', 'none');
+        $('#application_param .inputs').removeClass('active');
+        $('.ul_li_active').removeClass("block_cl");
+        $('.overlay_icon').toggleClass("active");
+        $('.ul_li_active').closest('.selecting').removeClass("active");
+    });
+
+
+// Видео о нас
+    $("a.video_o_nas").click(function () {
+        $(".iframe_video").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/qJeGwT_bZbE" frameborder="0" allowfullscreen></iframe>');
+        $("#video_o_nas").arcticmodal({
+            afterClose:  function(data, el) {
+                $("#video_o_nas iframe").detach();
+            }
+        });
+    });
+
+// Иконки резерва
+    $("#rezervs li").hover(function () {
+        $(this).toggleClass('hover');
+        $(this).find('.bank_n').toggle();
+        $(this).find('.r_summ').toggle();
+        $(this).find('.rezerv_container_button').toggle();
+    });
+
+// Показать текст
+    $(".pokazat_text").click(function () {
+        $(this).hide();
+        $('.text_hide').show();
+    });
+
+// Форма обмена на мобилке на мобилке
+    $(".btn_sled_mob").click(function () {
+        $('#calculation_param').hide();
+        $('#application_param').show();
+    });
+    $(".btn_back_mob").click(function () {
+        $('#calculation_param').show();
+        $('#application_param').hide();
+    });
+
+
+// Мобильное меню
+var menu = $('.menu_palki-krestik');
+var menu_active = $('.menu_head');
+var nav_link = $('.menu_head a');
+
+menu.click(function() {
+    menu.toggleClass('menu_palki-krestik-active');
+    menu_active.toggleClass('menu_head-active');
+});
+
+nav_link.click(function() {
+    menu.toggleClass('menu_active');
+    menu_active.toggleClass('dropping_menu_active');
+});
+
+$(".mobile_menu_txt_close").click(function () {
+    $('.menu_head').hide();
+});
+
+
+// Мобильный слайдер
+    if ($(window).width() <= 768){
+        function second_passed() {
+            setTimeout(
+                function () {
+                    $(".main_slider_1 .col-md-4:nth-child(1)").hide();
+                    $(".main_slider_1 .col-md-4:nth-child(2)").show();
+                }, 3000);
+            setTimeout(
+                function () {
+                    $(".main_slider_1 .col-md-4:nth-child(2)").hide();
+                    $(".main_slider_1 .col-md-4:nth-child(3)").show();
+                }, 6000);
+            setTimeout(
+                function () {
+                    $(".main_slider_1 .col-md-4:nth-child(3)").hide();
+                    $(".main_slider_1 .col-md-4:nth-child(1)").show();
+                }, 9000);
+
+        }
+        setInterval(second_passed,9000);
+        second_passed();
+
+        function second_passed2() {
+            setTimeout(
+                function () {
+                    $(".main_slider_2 .col-md-4:nth-child(1)").hide();
+                    $(".main_slider_2 .col-md-4:nth-child(2)").show();
+                }, 3000);
+            setTimeout(
+                function () {
+                    $(".main_slider_2 .col-md-4:nth-child(2)").hide();
+                    $(".main_slider_2 .col-md-4:nth-child(3)").show();
+                }, 6000);
+            setTimeout(
+                function () {
+                    $(".main_slider_2 .col-md-4:nth-child(3)").hide();
+                    $(".main_slider_2 .col-md-4:nth-child(1)").show();
+                }, 9000);
+
+        }
+        setInterval(second_passed2,9000);
+        second_passed2();
+    }
+
+// Размеры видео о нас для мобилы
+
+    if ($(window).width() <= 768){
+        var news_img_width = $('.news_img').width()*0.61;
+        $('.news_img').height(news_img_width);
+    }
+    if ($(window).width() <= 768){
+        var iframe_height = $('#video_o_nas iframe').height();
+        $('#video_o_nas').height(iframe_height);
+    }
+
+// Скопировать в ДЛЯ ЗАВЕРШЕНИЯ ОПЕРАЦИЯ ОБМЕНА
+
+
+// Скопировать код баннера
+    function second_passed() {
+        $(".pop_ob_rek .copy_norm").css('opacity', 1);
+        $(".pop_ob_rek .copy_norm").animate({
+            opacity: 0,
+        }, 1500 );
+    }
+
+    $(".copy_txt_all1").click(function() {
+        copyToClipboard(document.getElementById("sum_span"));
+        second_passed();
+    });
+    $(".copy_txt_all2").click(function() {
+        copyToClipboard(document.getElementById("finish_fio"));
+        second_passed();
+    });
+    $(".copy_txt_all3").click(function() {
+        copyToClipboard(document.getElementById("finish_kard"));
+        second_passed();
+    });
+    $(".copy_txt_all4").click(function() {
+        copyToClipboard(document.getElementById("sum_span_cripto"));
+        second_passed();
+    });
+    $(".copy_txt_all5").click(function() {
+        copyToClipboard(document.getElementById("finish_kard_cripto"));
+        second_passed();
+    });
+
+    function copyToClipboard(elem) {
+        var target = elem;
+        var rng, sel;
+        if (document.createRange) {
+            rng = document.createRange();
+            rng.selectNode(target)
+            sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(rng);
+        } else {
+            var rng = document.body.createTextRange();
+            rng.moveToElementText(target);
+            rng.select();
+        }
+
+        try {
+            // Теперь, когда мы выбрали текст ссылки, выполним команду копирования
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Copy email command was ' + msg);
+        } catch(err) {
+            console.log('Oops, unable to copy');
+        }
+
+        // Снятие выделения - ВНИМАНИЕ: вы должны использовать
+        // removeRange(range) когда это возможно
+        window.getSelection().removeAllRanges();
+    }
+
+});
+
+
+
+$(document).ready(function () {
+
+    // $(".selecting li.active").next("input[type=radio]").attr('checked', 'checked');
+    var select_val1 = $(".give_money_select li.active").data("body");
+    var select_val2 = $(".receive_money_select li.active").data("body");
+    select_val1 = Number(select_val1);
+    select_val2 = Number(select_val2);
+    calc_kurs(select_val1, select_val2);
+
+    $(function () {
+        setInterval(function () {
+            if (fixator == 0) {
+                update_kurs();
+            }
+        }, 5000);
+    });
+
+    $(function () {
+        setTimeout(
+            function () {
+                location.reload();
+            }, 1800000
+        );
+    });
+});
+
+$(".selecting").click(function () {
+    if ($(this).hasClass("block_cl")) {
+        $(this).removeClass("block_cl");
+        $(this).addClass("none_cl");
+    } else {
+        $(".selecting").addClass("none_cl");
+        $(".selecting").removeClass("block_cl");
+        $(this).removeClass("none_cl");
+        $(this).addClass("block_cl");
+    }
+});
+
+$(".give_money_select li").click(function () {
+    /*selecting wallets*/
+    $("#wallet_one").attr('class', $(this).children('span').data('classbankname'));
+    /*selecting wallets*/
+    var text_control = $(this).data("body");
+    $("#hidden_inp").val(text_control);
+
+    update_kurs();
+});
+
+$(".receive_money_select li").click(function () {
+    /*selecting wallets*/
+    //$("#wallet_two").attr('data-class', $(this).children('span').data('classbankname'));
+    $("#wallet_two").attr('class', $(this).children('span').data('classbankname'));
+    /*selecting wallets*/
+    var text_control_2 = $(this).data("body");
+    $("#hidden_inp_two").val(text_control_2);
+
+    update_kurs();
+});
+
+function select_payment(this_select) {
+
+
+    var class_control = this_select.children("strong").attr("class");
+    var text_control = this_select.children("span").text();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').removeClass();
+    this_select.parents(".selecting").children(".ul_li_active").children('strong').addClass(class_control);
+    this_select.parents(".selecting").children(".ul_li_active").children('span').text(text_control);
+
+
+    this_select.parent().find('li').removeClass('active');
+    this_select.addClass('active');
+
+    var selected_id1 = $(".select_change li.active").eq(0).data("body");
+    var selected_id2 = $(".select_change li.active").eq(1).data("body");
+
+    var rate_1 = rate_permission[selected_id1];
+    var rate_2 = rate_permission[selected_id2];
+
+    if (this_select.parent().hasClass('give_money_select')) {
+
+        for (var i = 0; i < $('.receive_money_select > li').length; i++) {
+            var val_id = $('.receive_money_select > li').eq(i).data("body");
+            if (rate_1[val_id] == 0) {
+                $('.receive_money_select > li').eq(i).removeClass('active');
+                $('.receive_money_select > li').eq(i).css('display', 'none');
+            }
+            else {
+                $('.receive_money_select > li').eq(i).css('display', 'block');
+            }
+
+        }
+
+        if(rate_permission[this_select.data('body')][selected_id2] == 0){
+            for (var i = 0, j = 0; i < $('.receive_money_select > li').length; i++) {
+                var val_id = $('.receive_money_select > li').eq(i).data("body");
+                if (rate_1[val_id] != 0) {
+                    j++;
+                    selected_id1 = this_select.data("body");
+                    selected_id2 = $('.receive_money_select > li').eq(i).data('body');
+                    $('.receive_money_select > li').eq(i).addClass('active');
+                    $('.receive_sel .ul_li_active .bank_name').text($('.receive_money_select > li').eq(i).text());
+                    $('#ico_receive').attr('class', $('.receive_money_select > li').eq(i).children('strong').attr('class'));
+                    $('#hidden_inp_two').val($('.receive_money_select > li').eq(i).data('body'));
+                    break;
+                }
+            }
+            if(j == 0){
+                selected_id1 = this_select.data("body");
+                $('.receive_sel .ul_li_active .bank_name').text('Выключено');
+                $('#ico_receive').attr('class', '');
+                $('#hidden_inp_two').val(0);
+            }
+        };
+
+        // если не выбрано направление обмена для отдачи выдаем первое свободное
+        if($('#hidden_inp_two').val() == 0){
+            for (var i = 0; i < $('.receive_money_select > li').length; i++) {
+                var val_id = $('.receive_money_select > li').eq(i).data("body");
+                if (rate_1[val_id] == 1) {
+                    selected_id2 = $('.receive_money_select > li').eq(i).data('body');
+                    $('.receive_money_select > li').eq(i).addClass('active');
+                    $('.receive_sel .ul_li_active .bank_name').text($('.receive_money_select > li').eq(i).text());
+                    $('#ico_receive').attr('class', $('.receive_money_select > li').eq(i).children('strong').attr('class'));
+                    $('#hidden_inp_two').val($('.receive_money_select > li').eq(i).data('body'));
+                    break;
+                }
+            }
+        }
+
+        var val_now = Number($('.give_money').val());
+        if (val_now > 0) {
+            $('.receive_money').val(calculation(val_now, 0));
+        }
+        else {
+            $('.receive_money').val('');
+        }
+
+    }
+
+    if (this_select.parent().hasClass('receive_money_select')) {
+        var val_now = Number($('.receive_money').val());
+        if (val_now > 0) {
+            $('.give_money').val(calculation(val_now, 1));
+        }
+        else {
+            $('.give_money').val('');
+        }
+    }
+
+    var select_val1 = Number(selected_id1);
+    var select_val2 = Number(selected_id2);
+
+
+    var placeholder_one = placeholder[select_val1];
+    var placeholder_two = placeholder[select_val2];
+
+    var fio_stat_one = fio_status[select_val1];
+    var fio_stat_two = fio_status[select_val2];
+
+    var wallet_stat_one = wallet_status[select_val1];
+    var wallet_stat_two = wallet_status_two[select_val2];
+
+    var unk_stat_one = unk_status[select_val1];
+    var unk_stat_two = unk_status[select_val2];
+
+
+    var pay_name_one = pay_name[select_val1];
+    var pay_name_two = pay_name[select_val2];
+
+    var check_pm_one = check_pm[select_val1];
+
+    var check_visa_one = visa_bank_check[select_val1];
+    var check_visa_two = visa_bank_check[select_val2];
+
+    $("#wallet_one").attr('placeholder', placeholder_one);
+    $("#wallet_two").attr('placeholder', placeholder_two);
+
+    $("#pay_name_one").text(pay_name_one);
+    $("#pay_name_two").text(pay_name_two);
+
+
+    var val_inp1 = $('#hidden_inp').val();
+    var val_inp2 = $('#hidden_inp_two').val();
+
+    if (fio_stat_one == 0 || val_inp1 == 0 || fio_stat_one == "undefined") {
+        $('#fio_one').parents('.inputs_right').css('display', 'none');
+        $('#fio_one').val('');
+        $('#fio_one').removeAttr('required');
+    } else {
+        $('#fio_one').parents('.inputs_right').css('display', 'block');
+        $('#fio_one').attr('required', 'required');
+    }
+
+    if (check_visa_one == 0 || val_inp1 == 0 || check_visa_one == "undefined") {
+        $('#bank_one').parents('.inputs_right').css('display', 'none');
+        $('#bank_one').val('');
+        $('#bank_one').removeAttr('required');
+    } else {
+        $('#bank_one').parents('.inputs_right').css('display', 'block');
+        $('#bank_one').attr('required', 'required');
+    }
+
+    if (check_visa_two == 0 || val_inp2 == 0 || check_visa_two == "undefined") {
+        $('#bank_two').parents('.inputs_right').css('display', 'none');
+        $('#bank_two').val('');
+        $('#bank_two').removeAttr('required');
+    } else {
+        $('#bank_two').parents('.inputs_right').css('display', 'block');
+        $('#bank_two').attr('required', 'required');
+    }
+
+    if (wallet_stat_one == 0 || val_inp1 == 0 || wallet_stat_one == "undefined") {
+        $('#wallet_one').parents('.inputs_right').css('display', 'none');
+        $('#wallet_one').removeAttr('required');
+        $('#wallet_one').val('');
+    } else {
+        $('#wallet_one').parents('.inputs_right').css('display', 'block');
+        $('#wallet_one').attr('required', 'required');
+    }
+
+
+    if (unk_stat_one == 0 || val_inp1 == 0 || unk_stat_one == "undefined") {
+        $('#unk_one').parents('.inputs_right').css('display', 'none');
+        $('#unk_one').removeAttr('required');
+        $('#unk_one').val('');
+    } else {
+        $('#unk_one').parents('.inputs_right').css('display', 'block');
+        $('#unk_one').attr('required', 'required');
+    }
+
+    if (fio_stat_two == 0 || val_inp2 == 0 || fio_stat_two == "undefined") {
+        $('#fio_two').parents('.inputs_right').css('display', 'none');
+        $('#fio_two').removeAttr('required');
+        $('#fio_two').val('');
+    } else {
+        $('#fio_two').parents('.inputs_right').css('display', 'block');
+        $('#fio_two').attr('required', 'required');
+    }
+
+    if (wallet_stat_two == 0 || val_inp2 == 0 || wallet_stat_two == "undefined") {
+        $('#wallet_two').parents('.inputs_right').css('display', 'none');
+        $('#wallet_two').removeAttr('required');
+        $('#wallet_two').val('');
+    } else {
+        $('#wallet_two').parents('.inputs_right').css('display', 'block');
+        $('#wallet_two').attr('required', 'required');
+    }
+
+    if (unk_stat_two == 0 || val_inp2 == 0 || unk_stat_two == "undefined") {
+        $('#unk_two').parents('.inputs_right').css('display', 'none');
+        $('#unk_two').removeAttr('required');
+        $('#unk_two').val('');
+    } else {
+        $('#unk_two').parents('.inputs_right').css('display', 'block');
+        $('#unk_two').attr('required', 'required');
+    }
+
+    calc_kurs(select_val1, select_val2);
+};
+
+$(".select_change li").click(function () {
+    var this_select = $(this);
+    $('.ul_li_active').removeClass("block_cl");
+    $('.overlay_icon').toggleClass("active");
+    $('.ul_li_active').closest('.selecting').removeClass("active");
+    select_payment(this_select);
+});
+
+$(".give_money_select li").click(function () {
+    var selected_id1 = $(".give_money_select li.active").data("body");
+    messages(selected_id1);
+});
+
+$(document).ready(function(){
+    messages(cur_from)
+});
+
+function messages(cur_from){
+    if (cur_from == 13) {
+        $('#info_title_popup').html('Уважаемый пользователь!');
+        $('#info_text_popup').html('<p>В целях безопасности и получения платежа сервис Fastchange.me требует 2 - ух подтверждений транзакции отправителя от сети Bitcoin.</p><p>Процесс подтверждения транзакции может занять некоторое время.</p>');
+        $('#info_popup').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+    } else if (cur_from == 23) {
+        $('#info_title_popup').html('Уважаемый пользователь!');
+        $('#info_text_popup').html('<p>Обязательно ознакомьтесь со следующей информацией:</p><p>- Зачисление на карты – зависит от банка отправителя: от нескольких минут до 5 дней;</p><p>- Максимальная сумма онлайн-перевода 75 000 рублей;</p><p>- При переводе комиссия рассчитывается автоматически. Размер комиссии от 0% от 2%;</p><p>- Банки-эмитенты могут взимать дополнительные комиссии при переводе денег с карты на карту.</p><p>- С дебетовых и зарплатных карт дополнительные комиссии, как правило, не взимаются.</p>');
+        $('#info_popup').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+    }
+}
+
+$(".receive_money_select li").click(function () {
+    var selected_id2 = $(".receive_money_select li.active").data("body");
+    if (selected_id2 == 23) {
+        $('#info_title_popup').html('Уважаемый пользователь!');
+        $('#info_text_popup').html('<p>- Зачисление на карты – зависит от банка получателя: от нескольких минут до нескольких дней.</p>');
+        $('#info_popup').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+    }
+});
+
+function checkCurr(d) {
+    d.value = d.value.replace(/\,/g, '.');
+    d.value = d.value.replace(/[^0-9\.]/g, '');
+}
+
+$('.give_money').keyup(function () {
+    var val_now = Number($(this).val());
+    if (val_now > 0) {
+        $('.receive_money').val(calculation(val_now, 0));
+    }
+    else {
+        $('.receive_money').val('');
+    }
+});
+$('.receive_money').keyup(function () {
+    var val_now = Number($(this).val());
+    if (val_now > 0) {
+        $('.give_money').val(calculation(val_now, 1));
+    }
+    else {
+        $('.give_money').val('');
+    }
+});
+
+function calc_kurs(num_one, num_two) {
+    comsa = 0;
+    if (!num_one) {
+        return false;
+    }
+
+    if (!num_two) {
+        return false;
+    }
+
+    var kurs_value = Number(rate_cahange[num_one][num_two]);
+
+    var result_kurs1 = 0;
+    var result_kurs2 = 0;
+
+    var kurs_first_one = Number(valute_kurs[num_one][num_two]);
+    var kurs_first_two = Number(valute_kurs[num_two][num_one]);
+    var kurs_second_one = Number(valute_kurs_second[num_one][num_two]);
+    var kurs_second_two = Number(valute_kurs_second[num_two][num_one]);
+
+    var valuta_kurs_one = kurs_first_one > kurs_second_one ? kurs_first_one : kurs_second_one;
+    var valuta_kurs_two = kurs_first_two < kurs_second_two ? kurs_first_two : kurs_second_two;
+
+    var give_cahrcode = charcode[num_one];
+    var receive_cahrcode = charcode[num_two];
+
+    if (typeof commission[num_two] != "undefined") {
+        comsa = commission[num_two];
+    }
+
+    var result_kurs = "";
+
+    if (valuta_kurs_one > valuta_kurs_two) {
+        result_kurs1 = 1;
+        result_kurs2 = valuta_kurs_one + (valuta_kurs_one * (kurs_value + comsa) / 100);
+        if (result_kurs1 != result_kurs2) {
+            //result_kurs2 = Number(result_kurs2).toFixed(4);
+            if (give_cahrcode == "RUR") {
+                result_kurs2 = Number(result_kurs2).toFixed(2);
+            } else if (receive_cahrcode == "USD") {
+                result_kurs2 = Number(result_kurs2).toFixed(2);
+            }
+            else if (receive_cahrcode == "BTC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "LTC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "ETH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "DSH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "BCH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "XMR") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "ZEC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+        }
+        if (result_kurs1 >= result_kurs2) {
+            result_kurs = result_kurs1 + ' ' + receive_cahrcode + ' = ' + result_kurs2 + ' ' + give_cahrcode;
+        } else {
+            result_kurs = result_kurs2 + ' ' + give_cahrcode + ' = ' + result_kurs1 + ' ' + receive_cahrcode;
+        }
+    } else if (valuta_kurs_one < valuta_kurs_two) {
+        result_kurs1 = 1;
+        result_kurs2 = valuta_kurs_two - (valuta_kurs_two * (kurs_value + comsa) / 100);
+        if (result_kurs1 != result_kurs2) {
+            // result_kurs2 = Number(result_kurs2).toFixed(4);
+            if (receive_cahrcode == "RUR") {
+                result_kurs2 = Number(result_kurs2).toFixed(2);
+            } else if (receive_cahrcode == "USD") {
+                result_kurs2 = Number(result_kurs2).toFixed(2);
+            }
+            else if (receive_cahrcode == "BTC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "LTC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "ETH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "DSH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "BCH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "XMR") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "ZEC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+        }
+        if (result_kurs1 >= result_kurs2) {
+            result_kurs = result_kurs2 + ' ' + receive_cahrcode + ' = ' + result_kurs1 + ' ' + give_cahrcode;
+        } else {
+            result_kurs = result_kurs1 + ' ' + give_cahrcode + ' = ' + result_kurs2 + ' ' + receive_cahrcode;
+        }
+    } else if (valuta_kurs_one == valuta_kurs_two) {
+        result_kurs1 = 1;
+        result_kurs2 = valuta_kurs_two - (valuta_kurs_two * (kurs_value + comsa) / 100);
+        if (result_kurs1 != result_kurs2) {
+            // result_kurs2 = Number(result_kurs2).toFixed(4);
+
+            if (receive_cahrcode == "RUR") {
+                result_kurs2 = Number(result_kurs2).toFixed(2);
+            } else if (receive_cahrcode == "USD") {
+                result_kurs2 = Number(result_kurs2).toFixed(2);
+            }
+            else if (receive_cahrcode == "BTC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "LTC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "ETH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "DSH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "BCH") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "XMR") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+            else if (receive_cahrcode == "ZEC") {
+                result_kurs2 = Number(result_kurs2).toFixed(8);
+            }
+        }
+        if (result_kurs1 >= result_kurs2) {
+            result_kurs = result_kurs1 + ' ' + receive_cahrcode + ' = ' + result_kurs2 + ' ' + give_cahrcode;
+        } else {
+            result_kurs = result_kurs1 + ' ' + give_cahrcode + ' = ' + result_kurs2 + ' ' + receive_cahrcode;
+        }
+    }
+
+    $('#kurs_main').text('Курс обмена: ' + result_kurs);
+    $('#give_valute').text(give_cahrcode);
+    $('#recive_valute').text(receive_cahrcode);
+    return true;
+}
+
+function calculation(numeric, inp_val) {
+    comsa = 0;
+    var select_val1 = Number($('#hidden_inp').val());
+    var select_val2 = Number($('#hidden_inp_two').val());
+    var change_kurs = Number(rate_cahange[select_val1][select_val2]);
+    var kurs_first_one = Number(valute_kurs[select_val1][select_val2]);
+    var kurs_first_two = Number(valute_kurs[select_val2][select_val1]);
+    var kurs_second_one = Number(valute_kurs_second[select_val1][select_val2]);
+    var kurs_second_two = Number(valute_kurs_second[select_val2][select_val1]);
+    var give_cahrcode = charcode[select_val1];
+    var receive_cahrcode = charcode[select_val2];
+    var summ = 0;
+    var kurs = 0;
+    var valuta_kurs_one = kurs_first_one > kurs_second_one ? kurs_first_one : kurs_second_one;
+    var valuta_kurs_two = kurs_first_two < kurs_second_two ? kurs_first_two : kurs_second_two;
+
+    if (typeof commission[select_val2] != "undefined") {
+        comsa = commission[select_val2];
+    }
+
+    if (!inp_val) {
+        if (valuta_kurs_two >= 1) {
+            kurs = valuta_kurs_two - (valuta_kurs_two * (change_kurs + comsa) / 100);
+            summ = (numeric * kurs);
+        } else {
+            kurs = valuta_kurs_one + (valuta_kurs_one * (change_kurs + comsa) / 100);
+            summ = (numeric / kurs);
+        }
+
+        $("#give_money_hidden").val(numeric);
+        $("#receive_money_hidden").val(summ);
+
+        if (receive_cahrcode == "BTC" || receive_cahrcode == "LTC" || receive_cahrcode == "ETH" || receive_cahrcode == "DSH" || receive_cahrcode == "BCH" || receive_cahrcode == "XMR" || receive_cahrcode == "ZEC") {
+            summ = Number(summ).toFixed(8);
+        } else {
+            summ = Number(summ).toFixed(2);
+        }
+    }
+    else {
+        if (valuta_kurs_two >= 1) {
+            kurs = valuta_kurs_two - (valuta_kurs_two * (change_kurs + comsa) / 100);
+            summ = (numeric / kurs);
+        } else {
+            kurs = valuta_kurs_one + (valuta_kurs_one * (change_kurs + comsa) / 100);
+            summ = (numeric * kurs);
+        }
+
+        $("#give_money_hidden").val(summ);
+        $("#receive_money_hidden").val(numeric);
+
+        if (give_cahrcode == "BTC" || give_cahrcode == "LTC" || give_cahrcode == "ETH" || give_cahrcode == "DSH" || give_cahrcode == "BCH" || give_cahrcode == "XMR" || give_cahrcode == "ZEC") {
+            summ = Number(summ).toFixed(8);
+        } else {
+            summ = Number(summ).toFixed(2);
+        }
+    }
+    return (summ);
+}
+
+function fixator_func(select_val1, select_val2) {
+    if (select_val1 != 0 && select_val2 != 0) {
+        $.ajax({
+            type: 'POST',
+            url: '/front/fix_kurs',
+            data: {'csrf_fast' : csrfHash, 'give_radio': select_val1, 'receive_radio': select_val2},
+            resetForm: 'true',
+            success: function (successRes) {
+                csrfHash = successRes.csrf.csrfHash;
+                $("input[name='csrf_fast']").val(successRes.csrf.csrfHash);
+                $("#fix_kurs").val(successRes['id']);
+                $("#hash").val(successRes['hash']);
+            },
+            error: function (errResult) {
+                var error_text = '';
+                var errArr = errResult.responseJSON.fields;
+                csrfHash = errResult.responseJSON.csrf_hash;
+                $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+                $.each(errArr, function (index, value) {
+                    if (value != 0) {
+                        error_text += value;
+                        $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                    } else {
+                        $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                    }
+                });
+
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            },
+            dataType: "json"
+        });
+    }
+}
+
+function update_kurs() {
+    if (fixator == 0) {
+        fixator = 1;
+        setTimeout(
+            function () {
+                fixator = 0;
+            }, 600000
+        );
+    }
+
+    $.ajax({
+        type: 'post',
+        url: '/front/valute_check',
+        data: {'csrf_fast' : csrfHash},
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            var act = res;
+            var kurs_array_first = act[1];
+            var kurs_array_second = act[2];
+            var kurs_change_array = act[3];
+
+            var select_val1 = $('#hidden_inp').val();
+            var select_val2 = $('#hidden_inp_two').val();
+
+            fixator_func(select_val1, select_val2);
+
+            var valute_kurs_first_original = valute_kurs[select_val1][select_val2];
+            var valute_kurs_first_new = kurs_array_first[select_val1][select_val2];
+
+            var valute_kurs_second_original = valute_kurs_second[select_val1][select_val2];
+            var valute_kurs_second_new = kurs_array_second[select_val1][select_val2];
+
+            var change_kurs_first_original = rate_cahange[select_val1][select_val2];
+            var change_kurs_first_new = kurs_change_array[select_val1][select_val2];
+
+            if ((valute_kurs_first_original != valute_kurs_first_new) ||
+                (valute_kurs_second_original != valute_kurs_second_new) ||
+                (change_kurs_first_original != change_kurs_first_new)
+            ) {
+                valute_kurs = kurs_array_first;
+                valute_kurs_second = kurs_array_second;
+                rate_cahange = kurs_change_array;
+
+                calc_kurs(select_val1, select_val2);
+                $('.receive_money').val(calculation($('.give_money').val(), 0));
+                $('#kurs_main').css('color', '#fade43');
+                $('#kurs_main').animate({color: "#222"}, 15000);
+            }
+        },
+        dataType: 'json',
+        error: function (XMLHttpRequest) {
+            console.log("Не удалось обновить курсы");
+        }
+    });
+}
+
+/* --- стилизация input`а для загрузки файла --- */
+$('#file_select_button').add($("#file_select_verifi")).click(function() {
+    $('.upload_bar_container .upload_bar').css('width', '0%');
+    $('#progress_upload').css('display', 'none');
+    $('#fileupload').click().change(function() {
+        var lastIndexOfSep = this.value.lastIndexOf('\\'); // Windows
+        if (lastIndexOfSep == -1)
+            lastIndexOfSep = this.value.lastIndexOf('/'); // Linux
+        var fileName = this.value.substring(lastIndexOfSep + 1, this.length);
+        $("#file_select_verifi").text(fileName);
+    });
+});
+/* --- стилизация input`а для загрузки файла --- */
+
+$('#fileupload').fileupload({
+    dataType: 'json',
+    done: function (e, data) {
+        //console.log(data.result.success.upload_data.file_name);
+        console.log(data.result);
+        if (data.result.err == 1) {
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html('<p>Ошибка загрузки файла. Вероятно файл весит больше 5 Мб</p>');
+            $('#progress_upload').css('display', 'none');
+            $('.upload_bar_container .upload_bar').css('width', 0);
+            $('#file_success').text(0);
+        } else {
+            $('#progress_upload').css('display', 'block');
+            $('.upload_bar_container .upload_bar').text('Файл успешно загружен');
+            $('#verification_main_image').val(data.result.success.upload_data.file_name);
+        }
+        csrfHash = data.result.csrf.csrfHash;
+        $("input[name='csrf_fast']").val(data.result.csrf.csrfHash);
+    },
+    progressall: function (e, data) {
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        $('.upload_bar_container .upload_bar').css('display', 'block');
+        $('.upload_bar_container .upload_bar').text('Загрузка: ' + progress + '%');
+        $('.upload_bar_container .upload_bar').css('width', progress + '%');
+    }
+
+});
+
+
+/* ------------------------------------ Верификация ------------------------------------ */
+$(document).on("click", "#verification_main", function () {
+    var obj_verification_main = $(this);
+    var method_type_btc = obj_verification_main.attr('method');
+    var action_type_btc = obj_verification_main.attr('action');
+    var data_serial_btc = obj_verification_main.serialize();
+    $.ajax({
+        type: method_type_btc,
+        url: action_type_btc,
+        data: data_serial_btc + '&application_id=' + application_id/*{'csrf_fast' : csrfHash, 'image_name': filename, 'application_id': application_id}*/,
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            if (!result['error']) {
+                $('#verification_modal').arcticmodal('close');
+                $('#verification_wait').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+                loadresVerification = setInterval(function () {
+                    verification_wait(result['id']);
+                }, 5000);
+            }
+            else {
+                alert(result['error']);
+            }
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+
+});
+
+$(document).on("click", ".veryfication_next_qiwi", function (e) {
+    $.ajax({
+        type: 'post',
+        url: '/front/veryfication_qiwi',
+        resetForm: 'true',
+        data: {'csrf_fast' : csrfHash, 'application_id': application_id},
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            if (!result['error']) {
+                $('#verification_qiwi').arcticmodal('close');
+                $('#verification_wait').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+                loadresVerification = setInterval(function () {
+                    verification_wait(result['id']);
+                }, 5000);
+            }
+            else {
+                alert(result['error']);
+            }
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+
+    return false;
+});
+
+function verification_wait(id) {
+    $.ajax({
+        type: 'post',
+        url: '/front/wait_verification',
+        data: {'csrf_fast' : csrfHash, 'id_ver': id},
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            if (result['status'] == 1) {
+                finished_step();
+                $('#verification_wait').arcticmodal('close');
+                clearInterval(loadresVerification);
+            }
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+            $('#verification_wait').arcticmodal('close');
+            clearInterval(loadresVerification);
+        },
+        dataType: "json"
+    });
+    return false;
+}
+
+/* ------------------------------------ Верификация ------------------------------------ */
+
+function CopyToClipboard(containerid, message) {
+    window.getSelection().removeAllRanges();
+    if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select().createTextRange();
+        document.execCommand("Copy");
+
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
+        document.execCommand("Copy");
+        $(message).parent().children('.notification_copy').css('opacity', '1');
+
+        $(message).parent().children('.notification_copy').stop();
+        $(message).parent().children('.notification_copy').animate({'opacity': 0}, 2000);
+    }
+    window.getSelection().removeAllRanges();
+}
+
+function finished_step() {
+    var app_hash = $("#add_app_hash").val();
+    var data_serial = 'application_id=' + application_id + '&app_hash=' + app_hash + '&csrf_fast=' + csrfHash;
+    $.ajax({
+        type: 'post',
+        url: '/front/finish_step',
+        data: data_serial,
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+
+            $('.f_id_application').text(res['id_application']);
+            if (res['status'] == 4) {
+                $('#pm_check_summ').html(res['sum'] + ' ' + res['charcode']);
+                $('#vaucher_kod').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            }else if (res['status'] == 3) {
+                $('.first_tr_code').attr('placeholder', res['placeholder']);
+                $('.check_name').html('Чек ' + res['bank_name']);
+                $('.f_sum_check').html(res['sum'] + ' ' + res['charcode']);
+                $('#btc_e_form').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            } else if (res['status'] == 2) {
+                $('#f_id_application_2').text(res['id_application']);
+                $("#application_param li").removeClass('error_message');
+                $('#finish_step_3').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            }else if(res['status'] == 6) {
+
+                // $("#application_param li").removeClass('error_message');
+                $('#ps_name_cripto').text(res['bank_name']);
+                $('#finish_pay_method_cripto').text(res['pay_method']);
+                $('#finish_kard_cripto').text(res['wallet']);
+                if(res['wallet'] == 0){
+                    $("#finish_kard_container").css('display', 'none');
+                }else{
+                    $("#finish_kard_container").css('display', 'block');
+                }
+                $('#finish_sum_cripto').html('<i style="font-style: normal;" id="sum_span_cripto">' + res['sum'] + '</i> ' + res['charcode'] + '');
+                $('#finish_step2').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            } else {
+                if (res['fio_cardowner'] == 0) {
+                    $('#fio_span').parent().css('display', 'none');
+                }
+
+                /*if (res['link'] == 0) {
+                    $("#f_link").parent().css('display', 'none');
+                    $("#f_img_2").removeClass('sled_i_p_2');
+                    $("#f_img_2").addClass('sled_i_p_1');
+                    $("#f_img_3").removeClass('sled_i_p_3');
+                    $("#f_img_3").addClass('sled_i_p_2');
+                }*/
+
+                // $("#application_param li").removeClass('error_message');
+                if (res['bank_name'] == 'Киви RUR') {
+                    $('#finish_kard_container').show();
+                    $('#qiwi_payment_warning_message').show();
+                    $('#warning_payment_message').hide();
+                }
+
+                $('#finish_link').attr('href', res['link']);
+                $('#finish_link').text(res['bank_name']);
+                $('#ps_name').text(res['bank_name']);
+                $('#finish_pay_method').text(res['pay_method']);
+                $('#finish_kard').text(res['wallet']);
+                if(res['wallet'] == 0){
+                    $("#finish_kard_container").css('display', 'none');
+                }else{
+                    $("#finish_kard_container").css('display', 'block');
+                }
+                $('#finish_fio').text(res['fio_cardowner']);
+                if(res['fio_cardowner'] == 0){
+                    $("#finish_fio_container").css('display', 'none');
+                }else{
+                    $("#finish_fio_container").css('display', 'block');
+                }
+                $('#finish_sum').html('<i style="font-style: normal;" id="sum_span">' + res['sum'] + '</i> ' + res['charcode'] + '');
+                $('#finish_step').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            }
+
+            //$('.ticketsform .captcha_cli').click();
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+}
+
+/*function time_application(){
+    var time_res = 900,
+        res_minute = 0,
+        res_second = 0;
+
+    var interval_app = setInterval(function(){
+        time_res--;
+        res_minute = time_res % 3600 / 60 | 0;
+        res_second = time_res % 60 / 1 | 0;
+
+        var tsr_minute = res_minute + " мин.";
+        var tsr_second = res_second + " сек.";
+
+        var tick_text = time_res >= 0 ? tsr_minute + " : " +
+            tsr_second : "Время ожидания оплаты истекло, данная транзакция не может быть выполнена. Пожалуйста, создайте заявку заново.";
+
+        if(time_res < 0 || intervalSet == 0){clearInterval(interval_app);}
+        $('.timer_add_application').html(tick_text);
+    }, 1000);
+}*/
+
+/*$(document).on('click', '.arcticmodal-close', function () {
+    intervalSet = 0;
+    alert(123);
+});*/
+
+$(document).on('click', '.add_check', function () {
+    var count = $(this).parents('.code_list').children('.regist_ul').find('li').length;
+    if (count < 3) {
+        var num = count + 1;
+        var placeholder_txt = $('.first_tr_code').attr('placeholder');
+        $(this).parents('.code_list').children('.regist_ul').append("<li class='inputs btce_kod_li btce_kod_li_1 input_kod_div_btce'><div class='clearfix'><span class='span_txt'>КОД&nbsp;" + num + "</span><input class='first_tr_code' type='text' required='required' value='' name='code_" + num + "' placeholder='" + placeholder_txt + "'><div class='delet_inp_btce del_check'></div></div></li>");
+    }
+});
+$(document).on('click', '.del_check', function () {
+    $(this).parent().parent().remove();
+    $('.code_list ul li div input').each(function (i) {
+        i++;
+        var $name = 'code_' + i;
+        $(this).attr('name', $name)
+    });
+    $('.code_list ul li div .span_txt').each(function (i) {
+        i++;
+        var $text_code = 'КОД&nbsp;' + i;
+        $(this).html($text_code)
+    });
+});
+
+$(document).on('click', '.add_check_pm', function () {
+    var count = $(this).parents('.code_list_pm').children('.regist_ul').find('li').length;
+    if (count < 3) {
+        var num = count + 1;
+        $(this).parents('.code_list_pm').children('.regist_ul').append("<li class='inputs epay_kod_li'><div class='clearfix'><span class='span_txt'>Код " + num + "</span><input class='span_txt2 input_kod_1' type='text' required='required' name='code_" + num + "_1' value='' placeholder='1234567890'><input class='input_kod_2' type='text' required='required' value='' name='code_" + num + "_2' placeholder='1234567890123456'><div class='delet_inp_btce del_check_pm'></div></div> </li>");
+    }
+});
+
+$(document).on('click', '.del_check_pm', function () {
+    $(this).parent().parent().remove();
+    $('.code_list_pm ul li').each(function (i) {
+        i++;
+        $(this).find('input').each(function (j) {
+            j++;
+            var name = 'code_' + i + '_' + j;
+            $(this).attr('name', name);
+        });
+    });
+    $('.code_list_pm ul li .span_txt').each(function (i) {
+        i++;
+        var $text_code = 'КОД&nbsp;' + i;
+        $(this).html($text_code)
+    });
+});
+
+$(document).on("submit", ".change_form", function (e) {
+    var method_type = $('.change_form').attr('method');
+    var action_type = $('.change_form').attr('action');
+    var data_serial = $('.change_form').serialize();
+    var val_inp1 = $('#hidden_inp').val();
+    var val_inp2 = $('#hidden_inp_two').val();
+    if (val_inp1 == 0 || val_inp2 == 0) {
+        $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+        $('#error_modal_text').find('.text').html('Вы не выбрали направление обмена. Пожалуйста, выберите направление обмена и повторте попытку.');
+    } else {
+        $.ajax({
+            type: method_type,
+            url: action_type,
+            data: data_serial,
+            resetForm: 'true',
+            success: function (successRes) {
+                csrfHash = successRes.csrf.csrfHash;
+                $("input[name='csrf_fast']").val(successRes.csrf.csrfHash);
+                $('#cap_img').html(successRes.cap);
+                $('#add_app_hash').val(successRes.hash);
+
+                if (successRes['status'] == 1) {
+                    application_id = successRes['application_id'];
+                    if (val_inp1 == 1) {
+                        $('.link_numeric').attr('href', '/perfect/send/' + application_id);
+                    }
+                    if (val_inp1 == 16) {
+                        $('.link_numeric').attr('href', '/payeer/send/' + application_id);
+                    }
+                    if (val_inp1 == 17) {
+                        $('.link_numeric').attr('href', '/okpay/send/' + application_id);
+                    }
+                    if (val_inp1 == 21) {
+                        $('.link_numeric').attr('href', '/adv/send/' + application_id);
+                    }
+
+                   if (successRes['veryfication'] == 1) {
+                        $('#verification_modal').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                        return true;
+                    } else if (successRes['veryfication'] == 2) {
+                        $('#verification_qiwi').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                        return true;
+                    } else {
+                        finished_step();
+                    }
+                }
+            },
+            error: function (errResult) {
+                var error_text = '';
+                var errArr = errResult.responseJSON.fields;
+                csrfHash = errResult.responseJSON.csrf_hash;
+                $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+                $.each(errArr, function (index, value) {
+                    if (value != 0) {
+                        error_text += value;
+                        $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                    } else {
+                        $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                    }
+                });
+
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            },
+            dataType: "json"
+        });
+    }
+    e.preventDefault();
+    return false;
+});
+
+$(document).on("click", "#upd_capth", function (e) {
+    $('#cap_img').children("img").remove();
+    $.ajax({
+        type: 'post',
+        url: '/front/update_captha',
+        data: {'csrf_fast' : csrfHash},
+        resetForm: 'true',
+        success: function (arr) {
+            csrfHash = arr.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(arr.csrf.csrfHash);
+            $('#cap_img').html(arr.image);
+        },
+        dataType: "json"
+    });
+});
+
+$(document).on("click", "#upd_capth2", function (e) {
+    $('#cap_img').children("img").remove();
+    $.ajax({
+        type: 'post',
+        url: '/front/update_captha',
+        data: {'csrf_fast' : csrfHash},
+        resetForm: 'true',
+        success: function (arr) {
+            csrfHash = arr.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(arr.csrf.csrfHash);
+            $('#cap_img2').html(arr.image);
+        },
+        dataType: "json"
+    });
+});
+
+$(document).on("focus", "#application_param input", function (e) {
+    var select_val1 = $(".give_money_select li.active").data("body");
+    var select_val2 = $(".receive_money_select li.active").data("body");
+    var give_money_inp = $('input[name="give_money"]').val();
+    var receive_money_inp = $('input[name="receive_money"]').val();
+    $.ajax({
+        type: 'post',
+        url: '/front/focus',
+        data: 'select_val1=' + select_val1 + '&select_val2=' + select_val2 + '&give_money_inp=' + give_money_inp + '&receive_money_inp=' + receive_money_inp + '&csrf_fast=' + csrfHash,
+        resetForm: 'true',
+        success: function (res) {
+            csrfHash = res.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(res.csrf.csrfHash);
+            var counter_focus = 0;
+            if (res['status'] != 1) {
+                var error_text = '';
+                if (res['give_max'] != 0) {
+                    error_text += '<p><b>' + counter_focus+ '. ' + res['give_max'] + '</b></p>';
+                }
+                if (res['give_min'] != 0) {
+                    error_text += '<p><b>' + counter_focus+ '. ' + res['give_min'] + '</b></p>';
+                }
+                if (res['receive_max'] != 0) {
+                    error_text += '<p><b>' + counter_focus+ '. ' + res['receive_max'] + '</b></p>';
+                }
+                if (res['reserv'] != 0) {
+                    error_text += '<p><b>' + counter_focus+ '. ' + res['reserv'] + '</b></p>';
+                }
+                $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+                $('#error_modal_text').find('.text').html(error_text);
+            }
+        },
+        dataType: "json"
+    });
+});
+
+$(document).on("click", ".add_application", function () {
+    var add_app_hash = $("#add_app_hash").val();
+    var standart_check = $(this).parent().parent().serialize() + '&add_app_hash=' + add_app_hash + '&application_id=' + application_id + '&csrf_fast=' + csrfHash;
+    $.ajax({
+        type: 'post',
+        url: '/front/add_application',
+        data: standart_check,
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            $.arcticmodal('close');
+            $('#info_title_popup').text('Уведомление');
+            $('#info_text_popup').html(result['message']);
+            $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+
+            $("#fio_one").val('');
+            $("#bank_one").val('');
+            $("#wallet_one").val('');
+            $("#e_mail").val('');
+            $("#fio_two").val('');
+            $("#bank_two").val('');
+            $("#wallet_two").val('');
+            $("#unk_two").val('');
+            $(".input_kod_1").val('');
+            $(".input_kod_2").val('');
+            $(".first_tr_code").val('');
+        },
+        error: function (errResult) {
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_two').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+            $('#error_modal_two').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+});
+
+$(document).on("click", "#finish_step_3 a.link_numeric", function (e) {
+    $('#payment_wait').children().children('.loader').text('Ожидание оплаты');
+    $('#payment_wait').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+    $('#finish_step_3').arcticmodal('close');
+    loadresApp = setInterval(function () {
+        app_wait();
+    }, 5000);
+});
+
+function app_wait() {
+    var app_hash_wait = $("#add_app_hash").val();
+    $.ajax({
+        type: 'post',
+        url: '/front/auto_pay',
+        data: {'csrf_fast' : csrfHash, 'application_id': application_id, 'add_app_hash': app_hash_wait},
+        resetForm: 'true',
+        success: function (result) {
+            csrfHash = result.csrf.csrfHash;
+            $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+            if (result['status'] == 1) {
+                clearInterval(loadresApp);
+                $('#payment_wait').arcticmodal('close');
+                $('#info_title_popup').text('Уведомление');
+                $('#info_text_popup').html(result['message']);
+                $('#info_popup').arcticmodal({overlay: {css: {opacity: .85}}, closeOnOverlayClick: 0});
+            }
+        },
+        error: function (errResult) {
+            clearInterval(loadresApp);
+            $('#payment_wait').arcticmodal('close');
+            var error_text = '';
+            var errArr = errResult.responseJSON.fields;
+            csrfHash = errResult.responseJSON.csrf_hash;
+            $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+            $.each(errArr, function (index, value) {
+                if (value != 0) {
+                    error_text += value;
+                    $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                } else {
+                    $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                }
+            });
+
+            $('#error_modal_text').arcticmodal({overlay: {css: {opacity: .70}}, closeOnOverlayClick: 1, beforeOpen: function(){blur_enable();}, beforeClose:function(){blur_disable();}});
+            $('#error_modal_text').find('.text').html(error_text);
+        },
+        dataType: "json"
+    });
+    return false;
+}
+
+function blur_enable(){
+    $(".header").addClass('blur'); $(".gray_box2").addClass('blur'); $(".container").addClass('blur');
+}
+function blur_disable(){
+    $(".header").removeClass('blur'); $(".gray_box2").removeClass('blur'); $(".container").removeClass('blur');
+}
+
+$(document).on("click", ".user_cards_list li", function () {
+    $('.overlay_icon').toggleClass("active");
+    $(this).parent().css('display','none');
+    $('#application_param .inputs').removeClass('active');
+});
+
+$(document).on("click", ".user_cards", function () {
+    var obj_user_cards = $(this);
+    var bank_class_name = $(this).prev().attr('class');
+    var standart_check = '&csrf_fast=' + csrfHash + '&bank_class_name=' + bank_class_name;
+    $('.overlay_icon').toggleClass("active");
+    obj_user_cards.next().html('<div style="padding: 5px 10px;">Загрузка...</div>');
+
+    if(obj_user_cards.parent().hasClass('active')){
+        obj_user_cards.parent().removeClass('active')
+        obj_user_cards.next().css('display', 'none');
+    }else{
+        obj_user_cards.next().css('display', 'block');
+        obj_user_cards.parent().addClass('active');
+        $.ajax({
+            type: 'post',
+            url: '/front/wallets_select',
+            data: standart_check,
+            resetForm: 'true',
+            success: function (result) {
+                csrfHash = result.csrf.csrfHash;
+                var text = '';
+                $("input[name='csrf_fast']").val(result.csrf.csrfHash);
+                $.each(result.wallet_list, function( index, value ) {
+                    text += '<li>'+ value.wallet_number + '</li>';
+                });
+
+                if(text == ''){
+                    text +='<div style="padding: 5px 10px;">Список пуст</div>';
+                }
+
+                obj_user_cards.next().html(text);
+            },
+            error: function (errResult) {
+                var error_text = '';
+                var errArr = errResult.responseJSON.fields;
+                csrfHash = errResult.responseJSON.csrf_hash;
+                $("input[name='csrf_fast']").val(errResult.responseJSON.csrf_hash);
+
+                $.each(errArr, function (index, value) {
+                    if (value != 0) {
+                        error_text += value;
+                        $('#' + index + '').parents('.inputs_right').addClass('error_message');
+                    } else {
+                        $('#' + index + '').parents('.inputs_right').removeClass('error_message');
+                    }
+                });
+
+                console.log(error_text);
+            },
+            dataType: "json"
+        });
+        return false;
+    }
+});
+
+$(document).on('click', '.user_cards_list li', function(){
+    $(this).parents(".inputs_right").children('input').val($(this).text());
+});

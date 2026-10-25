@@ -1,0 +1,102 @@
+div.calc table,tr,th,td,img,div,ul,ol,li,p,h4,h3,h2,h1 { padding:0; margin:0; border:0; border-collapse:collapse; list-style:none; vertical-align:top; }
+div.calc { width:1000px; margin:20px auto 0 auto; overflow:hidden; font-family:"PT Sans Narrow",sans-serif; font-size:20px; color:#414141; }
+div.calc h1 { font-family:"Open Sans",sans-serif; font-size:44px; font-weight:100; text-align:center; padding:0 0 20px 0; }
+div.calc div.calc_in { height:auto; border:solid 1px #d8d8d8; padding:15px; overflow:hidden; }
+
+div.calc div.calc_in div.calc_left { float:left; width:60%; overflow:hidden; }
+    div.calc_left h2 { font-size:28px; font-weight:200; text-align:left; padding:0 0 20px 0; }
+    div.calc_left div.title {  }
+    div.calc_left div.local { width:100%; padding:10px 0 10px 0; clear:both; } 
+    div.calc_left div.local div.label { float:left; width:40%; font-size:20px; font-weight:200; text-align:left; padding:0 0 0 0; }
+    
+    div.calc_left div.local div.values { float:left; width:60%; font-size:20px; font-weight:200; text-align:left; padding:0 0 0 0; }
+    div.calc_left div.local div.values a { float:left; display:block; width:126px; background-color:#fff; border:1px #FEDB44 solid; text-align:center; color:#414141; line-height:20px; padding:4px 0 4px 0; margin:0 30px 0 0; text-decoration:none; }
+    div.calc_left div.local div.values a.on { background-color:#FEDB44; color:#fff; }
+    div.calc_left div.local div.values a:hover { background-color:#FEDB44; color:#fff; }
+
+    div.calc_left div.local div.switches { float:left; width:60%; font-size:20px; font-weight:200; text-align:left; padding:0 0 0 0; }
+    div.calc_left div.local div.switches div { padding:0 0 0 75px; }
+    
+    div.calc_left div.row { width:100%; padding:10px 0 10px 0; clear:both; } 
+    div.calc_left div.row div.label { float:left; width:40%; font-size:18px; font-weight:200; text-align:left; padding:0 0 0 0; }
+    
+    div.calc_left div.row div.value { float:left; width:60%; font-size:18px; font-weight:200; text-align:left; padding:0 0 0 0; }
+    div.calc_left div.row div.value div.input { float:left; width:148px; height:30px; margin:0 10px 0 0; }
+    div.calc_left div.row div.value div.tenge { display:none; }
+    div.calc_left div.row div.value div.input a.minus { float:left; display:block; width:26px; height:26px; background-color:#f5f5f5; border:1px solid #d7d7d7; border-right:0; }
+    div.calc_left div.row div.value div.input a.minus div { width:12px; height:12px; margin:7px 0 0 7px; background:url('images/minus.png') -3px -3px; }
+    div.calc_left div.row div.value div.input a.plus { float:left; display:block; width:26px; height:26px; background-color:#f5f5f5; border:1px solid #d7d7d7; border-left:0; }
+    div.calc_left div.row div.value div.input a.plus div { width:12px; height:12px; margin:7px 0 0 7px; background:url('images/plus.png') -3px -3px; }
+    div.calc_left div.row div.value div.input input { float:left; display:block; width:60px; height:20px; border:1px solid #d7d7d7; font-family:"PT Sans Narrow",sans-serif; font-size:16px; color:#414141; padding:3px 6px; margin:0; }
+    div.calc_left div.row div.value div.input input:focus {  border:1px solid #FEDB44; }
+    div.calc_left div.row div.value div.input span { float:left; display:block; padding:2px 0 0 5px; }
+    div.calc_left div.row div.value div.input span.fa { padding:5px 0 0 5px; }
+    
+div.calc div.calc_in div.calc_right { float:left; width:40%; }
+    div.calc_right h2 { font-size:28px; font-weight:200; text-align:left; padding:0 0 20px 0; }
+    div.calc_right div.money_box { float:left; width:50%; overflow:hidden; }
+    div.calc_right div.money_box div.money { width:100%; height:100px; position:relative; }
+    div.calc_right div.money_box div.money div.coins { position:absolute; width:80px; height:5px; bottom:0; left:27.5%; right:0; background:url('images/coin.png') repeat-y center bottom; background-size:80px 5px; }
+    
+    div.calc_right div.money_box div.result { font-size:18px; font-weight:200; text-align:center; padding:10px 0 10px 0; }
+    div.calc_right div.money_box div.result span { font-size:24px; font-weight:200; }
+    
+    div.calc_right div.result_out { padding:10px 0 0 0; clear:both; }
+    div.calc_right div.result_out div.result { font-size:18px; font-weight:200; text-align:left; padding:10px 0 0 0; }
+    div.calc_right div.result_out div.result span { font-size:20px; font-weight:200; }
+    
+table.results { width:100%; }
+table.results td { text-align:left; padding:5px; font-family:"PT Sans Narrow",sans-serif; font-size:18px; color:#414141; vertical-align:middle; border:solid 1px #d8d8d8; }
+table.results td.price { font-size:28px; }
+    
+/* switch checkbox */
+input[type="checkbox"] {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+input[type="checkbox"]:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+input[type="checkbox"]:not(checked) + label {
+  position: relative;  
+  box-sizing: border-box;
+  width: 100%;
+}
+input[type="checkbox"]:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 25px;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+input[type="checkbox"]:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 51px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s;
+}
+input[type="checkbox"]:checked + label:before {
+  background: #FEDB44;
+}
+input[type="checkbox"]:checked + label:after {
+  right:27px;
+}
+input[type="checkbox"]:focus + label:before {
+  
+}

@@ -1,0 +1,1293 @@
+<?php
+include_once('_incl_data/__config.php');
+define('GAME',time());
+include('_incl_data/class/__db_connect.php');
+
+if(!isset($_GET['id'])) {
+	$urla = explode('?',$_SERVER["REQUEST_URI"]);
+	$url = explode('/',$urla[0]);
+
+	$_GET['id'] = round((int)$url[2]);
+}
+
+/* разделы */
+$rz = array(
+	array('alls','Прочее'),
+	array('crutch','Костыли'), 					// 1
+	array('potion','Эликсиры'),					// 2
+	array('scrollattack','Магические свитки'),	// 3
+	array('armor','Броня'),						// 4
+	array('venok','Венки'),						// 5
+	array('naruchi','Наручи'),					// 6
+	array('shoes','Обувь'),						// 7
+	array('glove','Перчатки'),					// 8
+	array('Cloak','Плащи'),						// 9
+	array('leg','Поножи'),						// 10
+	array('belt','Пояса'),						// 11
+	array('shirt','Рубахи'),					// 12
+	array('helmet','Шлемы'),					// 13
+	array('el_sm','Елки'),						// 14
+	array('flail','Дубины и Булавы'),			// 15
+	array('knuckleduster','Ножи и Кастеты'),	// 16
+	array('sword','Мечи'),						// 17
+	array('staff','Посохи'),					// 18
+	array('pole-axe','Топоры и Секиры'),		// 19
+	array('flower','Цветы и Букеты'),			// 20
+	array('component','Компоненты'),			// 21
+	array('magicitem','Магические предметы'),	// 22
+	array('gift','Подарки'),					// 23
+	array('shield','Щиты'),						// 24
+	array('ring','Кольца'),						// 25
+	array('necklace','Ожерелья'),				// 26
+	array('earring','Серьги'),					// 27
+	array('other','Разное')					// 28
+);
+
+// Отображать 3Д изображение? True - отображать в любом случае, False - только если существует.
+$img3dShow = false;
+
+/* Типы предметов по разделам */
+$rt = array(
+	22	=> 0,
+	26	=> 1,
+	30	=> 2,
+	29	=> 3,
+	5	=> 4,
+	6	=> 4,
+	2	=> 5,
+	3	=> 6,
+	15	=> 7,
+	12	=> 8,
+	7	=> 9,
+	14	=> 10,
+	8	=> 11,
+	4	=> 12,
+	1	=> 13,
+		//28	=> 14,
+	20	=> 15,
+	18	=> 16,
+	21	=> 17,
+	22	=> 18,
+	19	=> 19,
+	28	=> 20,
+		//00	=> 21,
+		//00	=> 22,
+	38	=> 23,
+	39	=> 23,
+	37	=> 23,
+	13	=> 24,
+	11	=> 25,
+	10	=> 26,
+	9	=> 27,
+	62	=> 22,
+	67	=> 28,	// 67 разное
+	32	=> 22,	// 32 ингридиенты, маг.предметы
+	34	=> 28	// 34 ключи, разное
+);
+/* Предмет */
+$itm = mysql_fetch_array(mysql_query('SELECT * FROM `items_main` WHERE `id` = "'.mysql_real_escape_string($_GET['id']).'" LIMIT 1'));
+
+
+	function timeOut($ttm) {
+	    $out = '';
+		$time_still = $ttm;
+		$tmp = floor($time_still/2592000);
+		$id=0;
+		if ($tmp > 0)
+		{
+			$id++;
+			if ($id<3) {$out .= $tmp." мес. ";}
+			$time_still = $time_still-$tmp*2592000;
+		}
+		$tmp = floor($time_still/86400);
+		if ($tmp > 0)
+		{
+			$id++;
+			if ($id<3) {$out .= $tmp." дн. ";}
+			$time_still = $time_still-$tmp*86400;
+		}
+		$tmp = floor($time_still/3600);
+		if ($tmp > 0)
+		{
+			$id++;
+			if ($id<3) {$out .= $tmp." ч. ";}
+			$time_still = $time_still-$tmp*3600;
+		}
+		$tmp = floor($time_still/60);
+		if ($tmp > 0)
+		{
+			$id++;
+			if ($id<3) {$out .= $tmp." мин. ";}
+		}
+		if($out=='')
+		{
+			if($time_still<0)
+			{
+				$time_still = 0;
+			}
+			$out = $time_still.' сек.';
+		}
+		return $out;
+	}
+
+function lookStats($m) {
+	$ist = array();
+	$di = explode('|',$m);
+	$i = 0; $de = false;
+	while($i<count($di))
+	{
+		$de = explode('=',$di[$i]);
+		if(isset($de[0]))
+		{
+			$ist[$de[0]] = $de[1];
+		}
+		$i++;
+	}
+	return $ist;
+}
+
+if(!isset($itm['id'])) {
+	$itd = mysql_fetch_array(mysql_query('SELECT * FROM `items_main_data` WHERE `items_id` = "'.mysql_real_escape_string($_GET['id']).'" LIMIT 1'));
+	if(!isset($itd['id'])) {
+		$itd = array();
+	}else{
+		$itd = lookStats($itd['data']);
+	}
+    }else{
+	    $itd = mysql_fetch_array(mysql_query('SELECT * FROM `items_main_data` WHERE `items_id` = "'.mysql_real_escape_string($itm['id']).'" LIMIT 1'));
+     	$itd = lookStats($itd['data']);
+    }
+
+    $items = array('tr'  => array('lvl','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','a1','a2','a3','a4','a5','a6','a7','mg1','mg2','mg3','mg4','mg5','mg6','mg7','mall','m2all','aall'),
+					'add' => array('min_heal_proc','no_yv1','no_bl1','no_pr1','no_yv2','no_bl2','no_pr2','silver','pza','pza1','pza2','pza3','pza4','pzm','pzm1','pzm2','pzm3','pzm4','pzm5','pzm6','pzm7','yron_min','yron_max','notravma','min_zonb','min_zona','nokrit','pog','min_use_mp','za1proc','za2proc','za3proc','za4proc','zaproc','zmproc','zm1proc','zm2proc','zm3proc','zm4proc','shopSale','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','aall','a1','a2','a3','a4','a5','a6','a7','m2all','mall','mg1','mg2','mg3','mg4','mg5','mg6','mg7','hpAll','mpAll','m1','m2','m3','m4','m5','m6','m7','m8','m9','m14','m15','m16','m17','m18','m19','m20','pa1','pa2','pa3','pa4','pm1','pm2','pm3','pm4','pm5','pm6','pm7','za','za1','za2','za3','za4','zma','zm','zm1','zm2','zm3','zm4','zm5','zm6','zm7','mib1','mab1','mib2','mab2','mib3','mab3','mib4','mab4','speedhp','speedmp','m10','m11','zona','zonb','maxves','minAtack','maxAtack'),
+					'sv' => array('pza','pza1','pza2','pza3','pza4','pzm','pzm1','pzm2','pzm3','pzm4','pzm5','pzm6','pzm7','notravma','min_zonb','min_zona','nokrit','pog','min_use_mp','za1proc','za2proc','za3proc','za4proc','zaproc','zmproc','zm1proc','zm2proc','zm3proc','zm4proc','shopSale','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','aall','a1','a2','a3','a4','a5','a6','a7','m2all','mall','mg1','mg2','mg3','mg4','mg5','mg6','mg7','hpAll','mpAll','m1','m2','m3','m4','m5','m6','m7','m8','m9','m14','m15','m16','m17','m18','m19','m20','pa1','pa2','pa3','pa4','pm1','pm2','pm3','pm4','pm5','pm6','pm7','min_use_mp','za','za1','za2','za3','za4','zma','zm','zm1','zm2','zm3','zm4','zm5','zm6','zm7','mib1','mab1','mib2','mab2','mib3','mab3','mib4','mab4','speedhp','speedmp','m10','m11','zona','zonb','maxves','minAtack','maxAtack'));
+
+    $is = array('oza'=>'Защита от урона','oza1'=>'Защита от колющего урона','oza2'=>'Защита от рубящего урона','oza3'=>'Защита от дробящего урона','oza4'=>'Защита от режущего урона','hpAll'=>'Уровень жизни (HP)','mpAll'=>'Уровень маны','sex'=>'Пол','lvl'=>'Уровень','s1'=>'Сила','s2'=>'Ловкость','s3'=>'Интуиция','s4'=>'Выносливость','s5'=>'Интелект','s6'=>'Мудрость','s7'=>'Духовность','s8'=>'Воля','s9'=>'Свобода духа','s10'=>'Божественность','m1'=>'Мф. критического удара (%)','m2'=>'Мф. против критического удара (%)','m3'=>'Мф. мощности критического удара (%)','m4'=>'Мф. увертывания (%)','m5'=>'Мф. против увертывания (%)','m6'=>'Мф. контрудара (%)','m7'=>'Мф. парирования (%)','m8'=>'Мф. блока щитом (%)','m9'=>'Мф. пробоя брони (%)','m14'=>'Мф. абс. критического удара (%)','m15'=>'Мф. абс. увертывания (%)','m16'=>'Мф. абс. парирования (%)','m17'=>'Мф. абс. контрудара (%)','m18'=>'Мф. абс. блока щитом (%)','m19'=>'Мф. абс. магический промах (%)','m20'=>'Мф. удача (%)','a1'=>'Мастерство владения ножами, кинжалами','a2'=>'Мастерство владения топорами, секирами','a3'=>'Мастерство владения дубинами, булавами','a4'=>'Мастерство владения мечами','a5'=>'Мастерство владения магическими посохами','a6'=>'Мастерство владения луками','a7'=>'Мастерство владения арбалетами','aall'=>'Мастерство владения оружием','mall'=>'Мастерство владения магией стихий','m2all'=>'Мастерство владения магией','mg1'=>'Мастерство владения магией огня','mg2'=>'Мастерство владения магией воздуха','mg3'=>'Мастерство владения магией воды','mg4'=>'Мастерство владения магией земли','mg5'=>'Мастерство владения магией Света','mg6'=>'Мастерство владения магией Тьмы','mg7'=>'Мастерство владения серой магией','tj'=>'Тяжелая броня','lh'=>'Легкая броня','minAtack'=>'Минимальный урон','maxAtack'=>'Максимальный урон','m10'=>'Мф. мощности урона','m11'=>'Мф. мощности магии стихий','m11a'=>'Мф. мощности магии','pa1'=>'Мф. мощности колющего урона','pa2'=>'Мф. мощности рубящего урона','pa3'=>'Мф. мощности дробящего урона','pa4'=>'Мф. мощности режущиего урона','pm1'=>'Мф. мощности магии огня','pm2'=>'Мф. мощности магии воздуха','pm3'=>'Мф. мощности магии воды','pm4'=>'Мф. мощности магии земли','pm5'=>'Мф. мощности магии Света','pm6'=>'Мф. мощности магии Тьмы','pm7'=>'Мф. мощности серой магии','za'=>'Защита от урона','zm'=>'Защита от магии стихий','zma'=>'Защита от магии','za1'=>'Защита от колющего урона','za2'=>'Защита от рубящего урона','za3'=>'Защита от дробящий урона','za4'=>'Защита от режущий урона','zm1'=>'Защита от магии огня','zm2'=>'Защита от магии воздуха','zm3'=>'Защита от магии воды','zm4'=>'Защита от магии земли','zm5'=>'Защита от магии Света','zm6'=>'Защита от магии Тьмы','zm7'=>'Защита от серой магии','pza'=>'Понижение защиты от урона','pzm'=>'Понижение защиты от магии','pza1'=>'Понижение защиты от колющего урона','min_heal_proc'=>'Эффект лечения (%)','silver'=>'Премиум','notravma'=>'Защита от травм','yron_min'=>'Минимальный урон','yron_max'=>'Максимальный урон','pza2'=>'Понижение защиты от рубящего урона','pza3'=>'Понижение защиты от дробящего урона','pza4'=>'Понижение защиты от режущего урона','pzm1'=>'Понижение защиты от магии огня','pzm2'=>'Понижение защиты от магии воздуха','pzm3'=>'Понижение защиты от магии воды','pzm4'=>'Понижение защиты от магии земли','pzm5'=>'Понижение защиты от магии Света','pzm6'=>'Понижение защиты от магии Тьмы','pzm7'=>'Понижение защиты от серой магии','speedhp'=>'Регенерация здоровья (НР)','speedmp'=>'Регенерация маны (МР)','tya1'=>'Колющие атаки','tya2'=>'Рубящие атаки','tya3'=>'Дробящие атаки','tya4'=>'Режущие атаки','tym1'=>'Огненные атаки','tym2'=>'Электрические атаки','tym3'=>'Ледяные атаки','tym4'=>'Земляные атаки','tym5'=>'Атаки Света','tym6'=>'Атаки Тьмы','tym7'=>'Серые атаки','min_use_mp'=>'Уменьшает расход маны','pog'=>'Поглощение урона','maxves'=>'Увеличивает рюкзак');
+
+   /*  if(Exists('https://'.$c['host'].'/i/encicl/pict_'.$rz[$rt[$itm['type']]][0].'.jpg') == true )
+	{
+    	$rz[$rt[$itm['type']]][0] = 'subject';
+    } */
+
+    if( !isset($rz[$rt[$itm['type']]][1])) {
+    	$rz[$rt[$itm['type']]][1] = 'Прочие предметы';
+    }
+
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Библиотека - Наш Бойцовский клуб - www.ourcombtas.com <?php if(isset($itm['id'])) { ?>| <?=$rz[$rt[$itm['type']]][1]?> | <?=$itm['name']?><?php } ?></title>
+<link href="/main1.css" rel="stylesheet" type="text/css">
+<script LANGUAGE='JavaScript'>
+document.ondragstart = test;
+//запрет на перетаскивание
+document.onselectstart = test;
+//запрет на выделение элементов страницы
+document.oncontextmenu = test;
+//запрет на выведение контекстного меню
+function test() {
+return false
+}
+</SCRIPT>
+
+<style type="text/css">
+body {
+	width:100%;
+	height:100%;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 10pt; font-family: Verdana, Helvetica, Arial, Tahoma, sans-serif;
+	background-image: url(//img.testcombats.ru/admin/zmk_all.jpg);
+	background-position: center center;
+    background-color: #000;
+    background-size: cover;
+}
+.style6 {	color: #DFD3A3;
+	font-size: 9px;
+}
+.inup3 {
+	border: 1px dashed #D3CAA0;
+	font-size: 12px;
+
+}
+.inup3 {
+	border: 1px dashed #D3CAA0;
+	font-size: 12px;
+
+}
+A:link {
+	FONT-WEIGHT: bold; COLOR: #5B3E33; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: bold; COLOR: #633525; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: bold; COLOR: #77684d; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+img {
+	border:none;
+}
+.bleft {
+	background-image: url(//img.testcombats.ru/forumsimg/left.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+.btitle {
+    background-image: url(//img.testcombats.ru/forumsimg/top_line.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+	text-align: center;
+    color: white;
+    font-size: 8pt;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.bright {
+	background-image: url(//img.testcombats.ru/forumsimg/right.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}	
+
+.bmleft {
+	background-image: url(//img.testcombats.ru/forumsimg/leftl.png);
+}
+
+.bmright {
+	background-image: url(//img.testcombats.ru/forumsimg/rightl.png);
+}
+
+.bm1left {
+	background-image: url(//img.testcombats.ru/forumsimg/leftd.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+.bm1title {
+    background-image: url(//img.testcombats.ru/forumsimg/bottom_line.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+	text-align: center;
+    color: white;
+    font-size: 8pt;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.bm1right {
+	background-image: url(//img.testcombats.ru/forumsimg/rightd.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+.fade {
+  opacity: 1;
+}
+
+.fade:hover {
+  opacity: 0.6;
+}
+</style>
+</head>
+<body bgcolor="#000000" topmargin=0 leftmargin=0 marginheight=0 marginwidth=0>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign=top>
+    <td><table width="100%" height="0"  border="0" cellpadding="0" cellspacing="0">
+      </table></td>
+  </tr>
+</table>
+<?php if(isset($itm['id'])) { ?>
+<center><table width="85%" height="62" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="129" class="bleft">&nbsp;</td><td align="center" class="btitle">Наш Бойцовский Клуб - Быть, а не казаться.</td><td width="129" class="bright">&nbsp;</td></tr></tbody></table></center>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign=top>
+    <td></td>
+    <td align=center><SCRIPT>
+wsize=document.body.clientWidth;
+if (wsize >= 800 ) wsize=Math.floor(wsize*0.8);
+if (wsize < 700) wsize=700;
+document.write('<table cellspacing=0 cellpadding=0 border=0 width='+(wsize-20)+'>');
+    </SCRIPT>
+  <tr valign=top>
+      <td width="23" rowspan=2 class="bmleft"></td>
+      <td width="218" height="257" align="left" bgcolor="#f2e5b1"><img id="imleft2" src="//img.testcombats.ru/i/encicl/pictl_subject.jpg" width="118" height="257"><BR></td>
+    <td rowspan=2 align="left" bgcolor="#f2e5b1">
+      <p><b>»</b> <a href="//testcombats.ru/item/">Предметы</a> / <?=$rz[$rt[$itm['type']]][1]?> / <b><i><?=$itm['name']?></i></b>
+      <h2>Библиотека предметов</h2>
+    
+      <p align="center">&nbsp;</p>
+      <BR>
+      <table width="504" border="0" align=center cellpadding="0" cellspacing="0">
+        <tr>
+          <td align=left valign="top" bgcolor="#f2e5b1">
+
+<table width="95%"  border="0" align="center" cellpadding="3" cellspacing="0" class="inup3">
+<tr>
+<td width="100%">
+<A HREF="?id=<?=$itm['id']?>" target=_blank><?=$itm['name']?></A>
+<IMG SRC="//img.testcombats.ru/i/align/align0.gif" WIDTH=12 HEIGHT=15>
+<?php
+if($itm['massa']>0) {
+	echo '(Масса: '.$itm['massa'].') ';
+}
+if(isset($itd['art'])) {
+	echo '<IMG SRC=//img.testcombats.ru/i/artefact.gif WIDTH=18 HEIGHT=16 ALT="Артефактная вещь"> ';
+}
+if(isset($itd['tur'])) {
+	echo '<IMG SRC=//img.testcombats.ru/icn123.gif WIDTH=18 HEIGHT=16 ALT="Турнирная вещь"> ';
+}if(isset($itd['hram'])) {
+	echo '<IMG SRC=//img.testcombats.ru/hram.gif WIDTH=18 HEIGHT=16 ALT="Храмовая вещь"> ';
+}
+
+				if(isset($po['sudba']))
+				{
+					echo '<img title="Этот предмет будет связан общей судьбой с первым, кто наденет его. Никто другой не сможет его использовать." src="//img.testcombats.ru/i/destiny0.gif"> ';
+				}
+
+if($itm['price1'] > 0) {
+	echo '<br><b>Цена: '.$itm['price1'].' кр.</b>';
+}
+
+if($itm['price2'] > 0) {
+	echo '<br><b style="color:SaddleBrown ">Цена: '.$itm['price2'].' екр.</b>';
+}
+
+if($itm['iznosMAXi'] >= 999999999) {
+	echo '<br>Долговечность: <font color="brown">неразрушимо</font >';
+}elseif($itm['iznosMAXi'] > 0) {
+	echo '<br>Долговечность: 0/'.$itm['iznosMAXi'].'';
+}
+
+
+				//Срок годности предмета
+				if($itd['srok'] > 0)
+				{
+					$itm['srok'] = $itd['srok'];
+				}
+				if($itm['srok'] > 0)
+				{
+					echo '<br>Срок годности: '.timeOut($itm['srok']);
+				}
+
+				//Продолжительность действия магии:
+				if((int)$itm['magic_inci'] > 0)
+				{
+					$efi = mysql_fetch_array(mysql_query('SELECT * FROM `eff_main` WHERE `id2` = "'.((int)$itm['magic_inci']).'" LIMIT 1'));
+					if(isset($efi['id2']) && $efi['actionTime']>0)
+					{
+						echo '<br>Продолжительность действия: '.timeOut($efi['actionTime']);
+					}
+				}
+
+
+/* требования */
+$tr = '';
+
+$t = $items['tr'];
+$x = 0;
+while($x<count($t)) {
+	$n = $t[$x];
+	if(isset($itd['tr_'.$n])) {
+		$tr .= '<br>• ';
+		$tr .= $is[$n].': '.$itd['tr_'.$n];
+	}
+	$x++;
+}
+
+if($tr != '') {
+	echo '<br><B>Требуется минимальное:</B>'.$tr;
+}
+
+/* действует на */
+$tr = '';
+
+$t = $items['add'];
+$x = 0;
+while($x<count($t)) {
+	$n = $t[$x];
+	if(isset($itd['add_'.$n]) && isset($is[$n])) {
+		$z = '+';
+		if($itd['add_'.$n] < 1) {
+			$z = '';
+		}
+		$tr .= '<br>&bull; '.$is[$n].': '.$z.$itd['add_'.$n];
+	}
+	$x++;
+}
+
+				//действует на (броня)
+				$i = 1; $bn = array(1=>'головы',2=>'корпуса',3=>'пояса',4=>'ног');
+				while($i<=4)
+				{
+					if(isset($itd['add_mab'.$i]))
+					{
+						if($itd['add_mab'.$i]==$itd['add_mib'.$i] && $itm['geniration']==1)
+						{
+							$z = '+';
+							if($itd['add_mab'.$i]<0)
+							{
+								$z = '';
+							}
+							$tr .= '<br>&bull; Броня '.$bn[$i].': '.$z.''.$itd['add_mab'.$i];
+						}else{
+							$tr .= '<br>&bull; Броня '.$bn[$i].': '.$itd['add_mib'.$i].'-'.$itd['add_mab'.$i];
+						}
+					}
+					$i++;
+				}
+
+if($tr != '') {
+	echo '<br><B>Действует на:</B>'.$tr;
+}
+
+/* свойства предмета */
+$tr = '';
+
+				if(isset($itd['sv_yron_min'],$itd['sv_yron_max']))
+				{
+					$tr .= '<br>• Урон: '.$itd['sv_yron_min'].' - '.$itd['sv_yron_max'];
+				}
+				$x = 0;
+				while($x<count($t))
+				{
+					$n = $t[$x];
+					if(isset($itd['sv_'.$n]))
+					{
+						$z = '+';
+						if($itd['sv_'.$n]<0)
+						{
+							$z = '';
+						}
+						$tr .= '<br>• '.$is[$n].': '.$z.''.$itd['sv_'.$n];
+					}
+					$x++;
+				}
+				if($itm['2too']==1)
+				{
+					$tr .= '<br>• Второе оружие';
+				}
+				if($itm['2h']==1)
+				{
+					$tr .= '<br>• Двуручное оружие';
+				}
+				if(isset($itd['zonb']))
+				{
+					$tr .= '<br>• Зоны блокирования: ';
+					if($itd['zonb']>0)
+					{
+						$x = 1;
+						while($x<=$itd['zonb'])
+						{
+							$tr .= '+';
+							$x++;
+						}
+					}else{
+						$tr .= '—';
+					}
+				}
+
+if($tr != '') {
+	echo '<br><B>Свойства предмета:</B>'.$tr;
+}
+
+/* особенности */
+$tr = '';
+
+				$x = 1;
+    while($x<=4)
+				{
+					if($itd['tya'.$x]>0)
+					{
+						$tyc = 'Ничтожно редки';
+						if($itd['tya'.$x]>6)
+						{
+							$tyc = 'Редки';
+						}
+						if($itd['tya'.$x]>14)
+						{
+							$tyc = 'Малы';
+						}
+						if($itd['tya'.$x]>34)
+						{
+							$tyc = 'Временами';
+						}
+						if($itd['tya'.$x]>79)
+						{
+							$tyc = 'Регулярны';
+						}
+						if($itd['tya'.$x]>89)
+						{
+							$tyc = 'Часты';
+						}
+						if($itd['tya'.$x]>=100)
+						{
+							$tyc = 'Всегда';
+						}
+						$tr .= '<br>&bull; '.$is['tya'.$x].': '.$tyc;
+					}
+					$x++;
+				}
+				$x = 1;
+    while($x<=7)
+				{
+					if($itd['tym'.$x]>0)
+					{
+						$tyc = 'Ничтожно редки';
+						if($itd['tym'.$x]>6)
+						{
+							$tyc = 'Редки';
+						}
+						if($itd['tym'.$x]>14)
+						{
+							$tyc = 'Малы';
+						}
+						if($itd['tym'.$x]>34)
+						{
+							$tyc = 'Временами';
+						}
+						if($itd['tym'.$x]>79)
+						{
+							$tyc = 'Регулярны';
+						}
+						if($itd['tym'.$x]>89)
+						{
+							$tyc = 'Часты';
+						}
+						if($itd['tym'.$x]>=100)
+						{
+							$tyc = 'Всегда';
+						}
+						$tr .= '<br>&bull; '.$is['tym'.$x].': '.$tyc;
+					}
+					$x++;
+				}
+				$x = 1;
+    while($x <= 4)
+				{
+					if($itd['add_oza'.$x]>0)
+					{
+						$tyc = 'Слабая';
+						if($itd['add_oza'.$x] == 4)
+						{
+							$tyc = 'Посредственная';
+						}
+						if($itd['add_oza'.$x] == 2)
+						{
+							$tyc = 'Нормальная';
+						}
+						if($itd['add_oza'.$x] == 3)
+						{
+							$tyc = 'Хорошая';
+						}
+						if($itd['add_oza'.$x] == 5)
+						{
+							$tyc = 'Великолепная';
+						}
+						if($tyc != '') {
+							$tr .= '<br>&bull; '.$is['oza'.$x].': '.$tyc;
+						}
+					}
+					$x++;
+				}
+
+				if(isset($itd['free_stats']) && $itd['free_stats']>0)
+				{
+					echo '<br><b>Свободные распределения:</b><br>&bull; Возможных распределений: '.$itd['free_stats'];
+				}
+
+if($tr != '') {
+	echo '<br><B>Особенности:</B>'.$tr;
+}
+				$is2 = '';
+
+				if(isset($itd['complect']))
+				{
+					$is2 .= '<br><i>Дополнительная информация:</i>';
+				}
+				if(isset($itd['complect']))
+				{
+					//не отображается
+					$com1 = array('name'=>'Неизвестный Комплект','x'=>0,'text'=>'');
+					$spc = mysql_query('SELECT * FROM `complects` WHERE `com` = "'.$itd['complect'].'" ORDER BY  `x` ASC LIMIT 20');
+					while($itmc = mysql_fetch_array($spc))
+					{
+						$com1['name'] = $itmc['name'];
+						$com1['text'] .= '&nbsp; &nbsp; &bull; <font color="green">'.$itmc['x'].'</font>: ';
+						//действие комплекта
+						$i1c = 0; $i2c = 0;
+						$i1e = lookStats($itmc['data']);
+						while($i1c<count($items['add']))
+						{
+							if(isset($i1e[$items['add'][$i1c]]))
+							{
+								$i3c = $i1e[$items['add'][$i1c]];
+								if($i3c>0)
+								{
+									$i3c = '+'.$i3c;
+								}
+								if($i2c>0)
+								{
+									$com1['text'] .= '&nbsp; &nbsp; '.$is[$items['add'][$i1c]].': '.$i3c;
+								}else{
+									$com1['text'] .= $is[$items['add'][$i1c]].': '.$i3c;
+								}
+								$com1['text'] .= '<br>';
+								$i2c++;
+							}
+							$i1c++;
+						}
+						unset($i1c,$i2c,$i3c);
+						$com1['x']++;
+					}
+					$is2 .= '<br>&bull; Часть комплекта: <b>'.$com1['name'].'</b><br><small>';
+					$is2 .= $com1['text'];
+					$is2 .= '</small>';
+				}
+
+				$is2 .= '<small style="font-size:10px;">';
+
+				if($itm['info']!='')
+				{
+					$is2 .= '<div><b>Описание:</b></div><div>'.$itm['info'].'</div>';
+				}
+
+				if($itd['info']!='')
+				{
+					$is2 .= '<div>'.$itd['info'].'</div>';
+				}
+
+				if($itm['max_text']-$itm['use_text'] > 0) {
+					$is2 .= '<div>Количество символов: '.($itm['max_text']-$itm['use_text']).'</div>';
+				}
+
+				if(isset($itd['noremont']))
+				{
+					$is2 .= '<div style="color:brown;">Предмет не подлежит ремонту</div>';
+				}
+
+				if(isset($itd['frompisher']) && $itd['frompisher']>0)
+				{
+					$is2 .= '<div style="color:brown;">Предмет из подземелья</div>';
+				}
+
+				if($itm['dn_delete']>0)
+				{
+					$is2 .= '<div style="color:brown;">Предмет будет удален при выходе из подземелья</div>';
+				}
+
+				$is2 .= '</small>';
+
+echo $is2;
+
+?>
+<BR>
+</td>
+<td align="center" valign="top" style='padding: 0,2,0,5'>
+<a title="<?=$itm['name']?>" href="/item/<?=$itm['id']?>"><SPAN style='background-color: #E0E0E0'><img src="//img.testcombats.ru/i/items/<?=$itm['img']?>" alt="<?=$itm['name']?>" name="image" border="0"></SPAN></a></td>
+</tr>
+</table>
+
+	</tr>
+      </table>
+      <p>
+      <!-- End of text -->
+    <td style='padding-left: 3' align="right" bgcolor="#f2e5b1"><img id="imright" height=144 src="//testcombats.ru/i/encicl/pict_subject.jpg" width=139 border=0></td>
+    <td valign=top class="bmright"></td>
+  </tr>
+  <tr valign=top bgcolor="#f2e5b1">
+    <td></td>
+    <td valign=center style="padding-bottom:50" align="right" bgcolor="#f2e5b1"></td>
+    <td width="23" valign=top  class="bmright"></td>
+  </tr>
+</table>
+<?php }else{
+
+	$rv = explode('i',$url[2]);
+	$rv = (int)$rv[1];
+	//
+	$rname = 'Библиотека предметов';
+	$html = '';
+	//
+	if( $rv > 0 ) {
+
+		if($rv == 1) {
+			//Костыли
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 26');
+		}elseif($rv == 3) {
+			//Свитки
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 29 AND `name` NOT LIKE "%Кристаллизатор%"');
+		}elseif($rv == 2) {
+			//Эликсиры
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 30');
+		}elseif($rv == 6) {
+			//Броня тяжелая
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 6');
+		}elseif($rv == 32) {
+			//Броня легкая
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 5');
+		}elseif($rv == 7) {
+			//Венки на голову
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 2');
+		}elseif($rv == 8) {
+			//Наручи
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 3');
+		}elseif($rv == 9) {
+			//Ботинки
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 15');
+		}elseif($rv == 10) {
+			//Перчатки
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 12');
+		}elseif($rv == 11) {
+			//Плащи
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 7');
+		}elseif($rv == 12) {
+			//Поножи
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 14');
+		}elseif($rv == 13) {
+			//Пояса
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 8');
+		}elseif($rv == 14) {
+			//Рубахи
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 4');
+		}elseif($rv == 15) {
+			//Шлема
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 1');
+		}elseif($rv == 16) {
+			//Елки
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `name` LIKE "%Елка%"');
+		}elseif($rv == 17) {
+			//Дубины
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 20');
+		}elseif($rv == 18) {
+			//Кинжалы
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 18');
+		}elseif($rv == 19) {
+			//Мечи
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 21');
+		}elseif($rv == 20) {
+			//Топоры
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 19');
+		}elseif($rv == 21) {
+			//Посохи
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 22');
+		}elseif($rv == 22) {
+			//Цветы
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 28 AND `img` LIKE "f_%"');
+		}/*elseif($rv == 23) {
+			//Компоненты
+			//$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 2');
+		}*/elseif($rv == 24) {
+			//Маг.предметы
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 2');
+		}elseif($rv == 25) {
+			//Подарки
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 38 OR `type` = 63');
+		}elseif($rv == 26) {
+			//Руны
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 31');
+		}elseif($rv == 27) {
+			//Прочие
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 32');
+		}elseif($rv == 28) {
+			//Щиты
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 13');
+		}elseif($rv == 29) {
+			//Кольца
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 11');
+		}elseif($rv == 30) {
+			//Ожерелья
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 10');
+		}elseif($rv == 31) {
+			//Серьги
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 9');
+		}else {
+			//Костыли
+			$sp = mysql_query('SELECT * FROM `items_main` WHERE `type` = 26');
+		}
+	}
+
+
+
+?>
+<center><table width="85%" height="62" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="129" class="bleft">&nbsp;</td><td align="center" class="btitle">Наш Бойцовский Клуб - Быть, а не казаться.</td><td width="129" class="bright">&nbsp;</td></tr></tbody></table></center>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign=top>
+    <td></td>
+    <td align=center><SCRIPT>
+wsize=document.body.clientWidth;
+if (wsize >= 800 ) wsize=Math.floor(wsize*0.8);
+if (wsize < 700) wsize=700;
+document.write('<table cellspacing=0 cellpadding=0 border=0 width='+(wsize-20)+'>');
+    </SCRIPT>
+  <tr valign=top>
+      <td width="23" rowspan=2 class="bmleft"></td>
+      <td width="218" height="257" align="left" bgcolor="#f2e5b1"><img id="imleft2" src="//img.testcombats.ru/i/encicl/pictl_subject.jpg" width="118" height="257"><BR></td>
+    <td rowspan=2 align="left" bgcolor="#f2e5b1"><p><b>&raquo;</b> <a href="//testcombats.ru/item/">Предметы</a> /
+      <h2><?=$rname?></h2>
+        <img src="//img.testcombats.ru/i/encicl/ln3.jpg" width="400" height="1" oncontextmenu="return false;">
+        </p>
+	  <?php
+	  if( $rv == 0 ) {
+		 echo 'Выберите один из разделов слева, чтобы отобразить предметы<br>';
+	  }else{
+
+
+		while( $itm = mysql_fetch_array($sp) )
+		{
+
+		//if(!isset($itm['id'])) {
+			$itd = mysql_fetch_array(mysql_query('SELECT * FROM `items_main_data` WHERE `items_id` = "'.mysql_real_escape_string($itm['id']).'" LIMIT 1'));
+			$itd = lookStats($itd['data']);
+
+			?><br>
+	  <table width="100%" border="0" align=center cellpadding="0" cellspacing="0">
+	    <tr>
+	      <td align=left valign="top" ><table width="95%"  border="0" align="center" cellpadding="3" cellspacing="0" class="inup3">
+	        <tr>
+	          <td width="100%"><A HREF="/item/<?=$itm['id']?>" target=_blank>
+	            <?=$itm['name']?>
+	            </A> <IMG SRC="//img.testcombats.ru/i/align/align0.gif" WIDTH=12 HEIGHT=15>
+	            <?php
+				if($itm['massa']>0) {
+					echo '(Масса: '.$itm['massa'].') ';
+				}
+				if(isset($itd['art'])) {
+					echo '<IMG SRC=//img.testcombats.ru/i/artefact.gif WIDTH=18 HEIGHT=16 ALT="Артефактная вещь"> ';
+				}
+				if(isset($itd['tur'])) {
+					echo '<IMG SRC=//img.testcombats.ru/icn123.gif WIDTH=18 HEIGHT=16 ALT="Турнирная вещь"> ';
+				}
+				if(isset($itd['hram'])) {
+					echo '<IMG SRC=//img.testcombats.ru/hram.gif WIDTH=18 HEIGHT=16 ALT="Храмовая вещь"> ';
+				}
+				if(isset($po['sudba']))
+				{
+					echo '<img title="Этот предмет будет связан общей судьбой с первым, кто наденет его. Никто другой не сможет его использовать." src="//img.testcombats.ru/i/destiny0.gif"> ';
+				}
+
+				if($itm['price1'] > 0) {
+					echo '<br><b>Цена: '.$itm['price1'].' кр.</b>';
+				}
+
+				if($itm['price2'] > 0) {
+					echo '<br><b style="color:SaddleBrown ">Цена: '.$itm['price2'].' екр.</b>';
+				}
+
+				if($itm['iznosMAXi'] >= 999999999) {
+					echo '<br>Долговечность: <font color="brown">неразрушимо</font >';
+				}elseif($itm['iznosMAXi'] > 0) {
+					echo '<br>Долговечность: 0/'.$itm['iznosMAXi'].'';
+				}
+
+
+				//Срок годности предмета
+				if($itd['srok'] > 0)
+				{
+					$itm['srok'] = $itd['srok'];
+				}
+				if($itm['srok'] > 0)
+				{
+					echo '<br>Срок годности: '.timeOut($itm['srok']);
+				}
+
+				//Продолжительность действия магии:
+				if((int)$itm['magic_inci'] > 0)
+				{
+					$efi = mysql_fetch_array(mysql_query('SELECT * FROM `eff_main` WHERE `id2` = "'.((int)$itm['magic_inci']).'" LIMIT 1'));
+					if(isset($efi['id2']) && $efi['actionTime']>0)
+					{
+						echo '<br>Продолжительность действия: '.timeOut($efi['actionTime']);
+					}
+				}
+
+
+/* требования */
+$tr = '';
+
+$t = $items['tr'];
+$x = 0;
+while($x<count($t)) {
+	$n = $t[$x];
+	if(isset($itd['tr_'.$n])) {
+		$tr .= '<br>&bull; ';
+		$tr .= $is[$n].': '.$itd['tr_'.$n];
+	}
+	$x++;
+}
+
+if($tr != '') {
+	echo '<br><B>Требуется минимальное:</B>'.$tr;
+}
+
+/* действует на */
+$tr = '';
+
+$t = $items['add'];
+$x = 0;
+while($x<count($t)) {
+	$n = $t[$x];
+	if(isset($itd['add_'.$n]) && isset($is[$n])) {
+		$z = '+';
+		if($itd['add_'.$n] < 1) {
+			$z = '';
+		}
+		$tr .= '<br>&bull; '.$is[$n].': '.$z.$itd['add_'.$n];
+	}
+	$x++;
+}
+
+				//действует на (броня)
+				$i = 1; $bn = array(1=>'головы',2=>'корпуса',3=>'пояса',4=>'ног');
+				while($i<=4)
+				{
+					if(isset($itd['add_mab'.$i]))
+					{
+						if($itd['add_mab'.$i]==$itd['add_mib'.$i] && $itm['geniration']==1)
+						{
+							$z = '+';
+							if($itd['add_mab'.$i]<0)
+							{
+								$z = '';
+							}
+							$tr .= '<br>&bull; Броня '.$bn[$i].': '.$z.''.$itd['add_mab'.$i];
+						}else{
+							$tr .= '<br>&bull; Броня '.$bn[$i].': '.$itd['add_mib'.$i].'-'.$itd['add_mab'.$i];
+						}
+					}
+					$i++;
+				}
+
+if($tr != '') {
+	echo '<br><B>Действует на:</B>'.$tr;
+}
+
+/* свойства предмета */
+$tr = '';
+
+				if(isset($itd['sv_yron_min'],$itd['sv_yron_max']))
+				{
+					$tr .= '<br>&bull; Урон: '.$itd['sv_yron_min'].' - '.$itd['sv_yron_max'];
+				}
+				$x = 0;
+				while($x<count($t))
+				{
+					$n = $t[$x];
+					if(isset($itd['sv_'.$n]))
+					{
+						$z = '+';
+						if($itd['sv_'.$n]<0)
+						{
+							$z = '';
+						}
+						$tr .= '<br>&bull; '.$is[$n].': '.$z.''.$itd['sv_'.$n];
+					}
+					$x++;
+				}
+				if($itm['2too']==1)
+				{
+					$tr .= '<br>&bull; Второе оружие';
+				}
+				if($itm['2h']==1)
+				{
+					$tr .= '<br>&bull; Двуручное оружие';
+				}
+				if(isset($itd['zonb']))
+				{
+					$tr .= '<br>&bull; Зоны блокирования: ';
+					if($itd['zonb']>0)
+					{
+						$x = 1;
+						while($x<=$itd['zonb'])
+						{
+							$tr .= '+';
+							$x++;
+						}
+					}else{
+						$tr .= '&mdash;';
+					}
+				}
+
+if($tr != '') {
+	echo '<br><B>Свойства предмета:</B>'.$tr;
+}
+
+/* особенности */
+$tr = '';
+
+				$x = 1;
+				while($x<=4)
+				{
+					if($itd['tya'.$x]>0)
+					{
+						$tyc = 'Ничтожно редки';
+						if($itd['tya'.$x]>6)
+						{
+							$tyc = 'Редки';
+						}
+						if($itd['tya'.$x]>14)
+						{
+							$tyc = 'Малы';
+						}
+						if($itd['tya'.$x]>34)
+						{
+							$tyc = 'Временами';
+						}
+						if($itd['tya'.$x]>79)
+						{
+							$tyc = 'Регулярны';
+						}
+						if($itd['tya'.$x]>89)
+						{
+							$tyc = 'Часты';
+						}
+						if($itd['tya'.$x]>=100)
+						{
+							$tyc = 'Всегда';
+						}
+						$tr .= '<br>&bull; '.$is['tya'.$x].': '.$tyc;
+					}
+					$x++;
+				}
+				$x = 1;
+				while($x<=7)
+				{
+					if($itd['tym'.$x]>0)
+					{
+						$tyc = 'Ничтожно редки';
+						if($itd['tym'.$x]>6)
+						{
+							$tyc = 'Редки';
+						}
+						if($itd['tym'.$x]>14)
+						{
+							$tyc = 'Малы';
+						}
+						if($itd['tym'.$x]>34)
+						{
+							$tyc = 'Временами';
+						}
+						if($itd['tym'.$x]>79)
+						{
+							$tyc = 'Регулярны';
+						}
+						if($itd['tym'.$x]>89)
+						{
+							$tyc = 'Часты';
+						}
+						if($itd['tym'.$x]>=100)
+						{
+							$tyc = 'Всегда';
+						}
+						$tr .= '<br>&bull; '.$is['tym'.$x].': '.$tyc;
+					}
+					$x++;
+				}
+				$x = 1;
+				while($x <= 4)
+				{
+					if($itd['add_oza'.$x]>0)
+					{
+						$tyc = 'Слабая';
+						if($itd['add_oza'.$x] == 4)
+						{
+							$tyc = 'Посредственная';
+						}
+						if($itd['add_oza'.$x] == 2)
+						{
+							$tyc = 'Нормальная';
+						}
+						if($itd['add_oza'.$x] == 3)
+						{
+							$tyc = 'Хорошая';
+						}
+						if($itd['add_oza'.$x] == 5)
+						{
+							$tyc = 'Великолепная';
+						}
+						if($tyc != '') {
+							$tr .= '<br>&bull; '.$is['oza'.$x].': '.$tyc;
+						}
+					}
+					$x++;
+				}
+
+				if(isset($itd['free_stats']) && $itd['free_stats']>0)
+				{
+					echo '<br><b>Свободные распределения:</b><br>&bull; Возможных распределений: '.$itd['free_stats'];
+				}
+
+if($tr != '') {
+	echo '<br><B>Особенности:</B>'.$tr;
+}
+				$is2 = '';
+
+				if(isset($itd['complect']))
+				{
+					$is2 .= '<br><i>Дополнительная информация:</i>';
+				}
+				if(isset($itd['complect']))
+				{
+					//не отображается
+					$com1 = array('name'=>'Неизвестный Комплект','x'=>0,'text'=>'');
+					$spc = mysql_query('SELECT * FROM `complects` WHERE `com` = "'.$itd['complect'].'" ORDER BY  `x` ASC LIMIT 20');
+					while($itmc = mysql_fetch_array($spc))
+					{
+						$com1['name'] = $itmc['name'];
+						$com1['text'] .= '&nbsp; &nbsp; &bull; <font color="green">'.$itmc['x'].'</font>: ';
+						//действие комплекта
+						$i1c = 0; $i2c = 0;
+						$i1e = lookStats($itmc['data']);
+						while($i1c<count($items['add']))
+						{
+							if(isset($i1e[$items['add'][$i1c]]))
+							{
+								$i3c = $i1e[$items['add'][$i1c]];
+								if($i3c>0)
+								{
+									$i3c = '+'.$i3c;
+								}
+								if($i2c>0)
+								{
+									$com1['text'] .= '&nbsp; &nbsp; '.$is[$items['add'][$i1c]].': '.$i3c;
+								}else{
+									$com1['text'] .= $is[$items['add'][$i1c]].': '.$i3c;
+								}
+								$com1['text'] .= '<br>';
+								$i2c++;
+							}
+							$i1c++;
+						}
+						unset($i1c,$i2c,$i3c);
+						$com1['x']++;
+					}
+					$is2 .= '<br>&bull; Часть комплекта: <b>'.$com1['name'].'</b><br><small>';
+					$is2 .= $com1['text'];
+					$is2 .= '</small>';
+				}
+
+				$is2 .= '<small style="font-size:10px;">';
+
+				if($itm['info']!='')
+				{
+					$is2 .= '<div><b>Описание:</b></div><div>'.$itm['info'].'</div>';
+				}
+
+				if($itd['info']!='')
+				{
+					$is2 .= '<div>'.$itd['info'].'</div>';
+				}
+
+				if($itm['max_text']-$itm['use_text'] > 0) {
+					$is2 .= '<div>Количество символов: '.($itm['max_text']-$itm['use_text']).'</div>';
+				}
+
+				if(isset($itd['noremont']))
+				{
+					$is2 .= '<div style="color:brown;">Предмет не подлежит ремонту</div>';
+				}
+				if(isset($itd['nosale']))
+				{
+					$is2 .= '<div style="color:brown;">Предмет нельзя продать</div>';
+				}
+				if(isset($itd['frompisher']) && $itd['frompisher']>0)
+				{
+					$is2 .= '<div style="color:brown;">Предмет из подземелья</div>';
+				}
+
+				if($itm['dn_delete']>0)
+				{
+					$is2 .= '<div style="color:brown;">Предмет будет удален при выходе из подземелья</div>';
+				}
+
+				$is2 .= '</small>';
+
+echo $is2;
+
+?>
+	            <BR>
+</td>
+	          <td align="center" valign="top" style='padding: 0,2,0,5'><a title="<?=$itm['name']?>" href="/item/<?=$itm['id']?>"><SPAN style='background-color: #E0E0E0'><img src="//img.testcombats.ru/i/items/<?=$itm['img']?>" alt="<?=$itm['name']?>" name="image" border="0" oncontextmenu="return false;"></SPAN></a></td>
+	          </tr>
+	        </table>
+        </tr>
+      </table>
+	  <?php
+		}
+	  }
+	  ?>
+      <p align="center">&nbsp;</p>
+        <BR>
+        <p>
+          <!-- End of text -->
+    <td style='padding-left: 3' align=right></td>
+      <td valign=top class="bmright">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr valign=top>
+    <td valign="top" bgcolor="#f2e5b1" style="font-size: 10.04pt;padding-left:15px;">
+
+    <!-- -->
+
+    <b><span style="COLOR: #8f0000;">Предметы</span></b><br>
+    <br>
+    <b>Одежда</b><br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i6">Тяжелая броня</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i32">Легкая броня</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i8">Наручи</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i9">Обувь</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i10">Перчатки</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i12">Поножи</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i13">Пояса</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i14">Рубахи</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i15">Шлемы</a>&nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i7">Капюшоны</a>&nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i11">Плащи</a>&nbsp;<br>
+    <br><b>Ювелирные товары</b><br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i29">Кольца</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i30">Ожерелья</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i31">Серьги</a>&nbsp;<br>
+    <br>
+	<b>Оружие</b><br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i17">Дубины</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i18">Кинжалы</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i19">Мечи</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i20">Топоры</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i21">Посохи</a>&nbsp;<br>
+    <br><b>Щиты</b><br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i28">Щиты</a>&nbsp;<br>
+	<br><b>Эликсиры</b><br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i2">Эликсиры и еда</a>&nbsp;<br>
+    <br><b>Заклинания</b><br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i3">Заклинания</a>&nbsp;<br>
+    <br><b>Разное</b><br>
+	&nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i22">Цветы и Букеты</a>&nbsp;<br>
+	&nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i16">Ёлки</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i25">Подарки</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i26">Руны</a>&nbsp;<br>
+    &nbsp;&nbsp;&nbsp;&middot;&nbsp;<a href="/item/i27">Прочие предметы</a>&nbsp;<br><br><br><br><br>
+    
+    <!-- -->
+
+    </td>
+    <td valign="bottom" style="padding-bottom:50" align="right"></td>
+    <td width="23" valign=top class="bmright">&nbsp;</td>
+  </tr>
+</table>
+<?php } ?>
+</td>
+<td></td>
+</tr>
+</table>
+<center><table width="85%" height="62" border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+	<tr>
+	<td width="129" class="bm1left">&nbsp;</td>
+	<td class="bm1title"><? echo $c['counters'];//счетчики ?></td>
+	<td width="129" class="bm1right">&nbsp;</td>
+	</tr>
+	</tbody>
+</table></center>
+</body>
+</html>

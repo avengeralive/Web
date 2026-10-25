@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+var all_goods = {
+	"t1" : {
+	"name" : "Банан",
+	"grows" : "На дереве",
+	"cost" : "30",	
+	"img" : "open_banan-128.png",	
+	"sklad" : "да"
+	} ,
+	"t2" : {
+	"name" : "Помидор",
+	"grows" : "На кусте",
+	"cost" : "40",	
+	"img" : "fruits-and-veggies-icons_tomato-128.png",	
+	"sklad" : "нет"
+	} ,
+	"t3" : {
+	"name" : "Яблоко",
+	"grows" : "На дереве",	
+	"cost" : "30",	
+	"img" : "if_apple_95067.png",	
+	"sklad" : "да"
+	} ,
+	"t4" : {
+	"name" : "Груша",
+	"grows" : "На дереве",	
+	"cost" : "40",	
+	"img" : "if_misc-_fruit_pear_1276861.png",	
+	"sklad" : "нет"
+	} ,
+	"t5" : {
+	"name" : "Апельсин",
+	"grows" : "На дереве",	
+	"cost" : "30",	
+	"img" : "if_Fruits_Outline-09_3692817.png",	
+	"sklad" : "да"
+	} ,
+	"t6" : {
+	"name" : "Клубника",
+	"grows" : "На земле",	
+	"cost" : "40",	
+	"img" : "if_food-drink-15_809018.png",	
+	"sklad" : "нет"
+	} ,
+	"t7" : {
+	"name" : "Огурец",
+	"grows" : "На земле",	
+	"cost" : "30",	
+	"img" : "if_fruits-and-veggies-icons_cucumber_3244998.png",	
+	"sklad" : "да"
+	} ,
+	"t8" : {
+	"name" : "Лук",	
+	"grows" : "На земле",
+	"cost" : "40",	
+	"img" : "if_fruits-and-veggies-icons_onion_3244988.png",	
+	"sklad" : "нет"
+	}
+};
+var goods = Object.assign({}, all_goods);
+
+function filter(filtername) {
+	for (var key in goods) {
+		console.log($("#" + filtername).val() + " " + goods[key][filtername]);
+		if ($("#" + filtername).val() != '-') {
+			if ($("#" + filtername).val() != goods[key][filtername]) delete goods[key];
+		}
+	}
+}
+function show() {
+	var out = ' ';
+	for (var key in goods) {
+		out+='<div class="elem">Название: ' + goods[key].name + '<br>';
+		out+='Где растет: '+goods[key].grows + '<br>';
+		out+='Цена: '+goods[key].cost + '<br>';
+		out+='Наличие: '+goods[key].sklad + '<br>';
+		//out+='<img src=" '+goods[key].img + ' ">';
+		out+='<hr></div>';
+	}
+	$("#out").html(out);
+}
+function reset() {
+	goods = Object.assign({}, all_goods);
+	$(".filter").val('-');
+	show();
+	return false;
+}
+function filters() {
+	goods = Object.assign({}, all_goods);
+	filter('grows');
+	filter('cost');
+	filter('sklad');
+	show();
+}
+$(function(){
+	show();
+	$(".reset").on('click', reset);
+});
+
+		</script>
+	</head>
+	<body>
+		<form>
+			<select class="filter" id="grows" onchange="filters();">
+				<option value="-">-</option>
+				<option value="На дереве">На дереве</option>
+				<option value="На кусте">На кусте</option>
+				<option value="На земле">На земле</option>
+			</select>
+			<select class="filter" id="cost" onchange="filters();">
+				<option value="-">-</option>
+				<option value="30">30</option>
+				<option value="40">40</option>
+			</select>
+			<select class="filter" id="sklad" onchange="filters();">
+				<option value="-">-</option>
+				<option value="да">да</option>
+				<option value="нет">нет</option>
+			</select>
+			<button class="reset">Сброс</button>
+		</form>
+		<div id="out"></div>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+/*!======miniTip================================================================*/
+
+
+/*!Общий блок*/
+#miniTip{
+	display:none;
+	position:absolute; top:0; left:0; z-index:99999;
+	padding:18px;
+	background-color:rgba(22,53,72,1); border-radius:4px;
+	font-size:13px; color:#ffffff;
+	line-height:20px;
+}
+
+
+/*!Заголовок*/
+#miniTip_t{
+	padding:4px 6px;
+	background-color:#f5edc2;
+	font-weight:700;
+}
+
+
+/*!Контент*/
+#miniTip_c{}
+
+
+/*!Стрелки*/
+#miniTip_a{
+	position:absolute; top:0; left:-2px;
+	width:0; height:0;
+}
+
+#miniTip .n, #miniTip .s, #miniTip .e, #miniTip .w{
+	border:8px solid rgba(22,53,72,1);
+}
+
+/*!Стрелка вниз*/
+#miniTip .n{border-right-color:transparent; border-bottom:0; border-left-color:transparent;}
+/*!Стрелка вверх*/
+#miniTip .s{border-top:0;  border-right-color:transparent; border-left-color:transparent;}
+/*!Стрелка влево*/
+#miniTip .e{border-top-color:transparent; border-bottom-color:transparent; border-left:0;}
+/*!Стрелка вправо*/
+#miniTip .w{border-top-color:transparent; border-right:0; border-bottom-color:transparent;}
+
+
+/*!Абзац*/
+#miniTip p{
+	margin-bottom:1em;
+}
+
+
+/*==============================================================================*/

@@ -1,0 +1,108 @@
+.zv1 {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/warrior.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.zv1:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/warrior_a.png);
+	cursor:pointer;
+}
+.cp {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/center.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 38px;
+}
+.cp:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/center_a.png);
+	cursor:pointer;
+}
+.dark_zv {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/dark.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.dark_zv:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/dark_a.png);
+	cursor:pointer;
+}
+.neut_zv {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/neutral.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.neut_zv:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/neutral_a.png);
+	cursor:pointer;
+}
+.light_zv {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/light.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.light_zv:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/light_a.png);
+	cursor:pointer;
+}
+.zn {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/znahar.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.zn:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/znahar_a.png);
+	cursor:pointer;
+}
+.trade_zv {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/trade.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.trade_zv:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/trade_a.png);
+	cursor:pointer;
+}
+.ric_zv {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/knight.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.ric_zv:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/knight_a.png);
+	cursor:pointer;
+}
+.bk {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/bk.png);
+	cursor:pointer;
+	position:absolute;
+	display:inline-block;
+	width: 119px;
+	height: 34px;
+}
+.bk:hover {
+	background:url(https://img.testcombats.ru/i/images/loc_bk/bk_a.png);
+	cursor:pointer;
+}

@@ -1,0 +1,21 @@
+{% extends layout %}
+
+{% block main %}
+
+
+<style>.filter { margin-bottom: 0px; } .footer {
+    padding-top: 100px;
+}
+@media (max-width: 1023px) {
+  .celebrity {
+    padding: 0px !important;
+  }
+}
+.medium-up-3 { margin-left: 0px !important; margin-right: 0px !important; }
+.filter_product { max-width: 1300px; margin: 0 auto; }
+</style>
+
+	{% widget 'Section' with  { template: 'star_collections.twig', material_template: 'stars_material.twig', list_template: 'stars_list.twig'} %}
+
+
+{% endblock %}

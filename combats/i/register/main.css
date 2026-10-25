@@ -1,0 +1,111 @@
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma, sans-serif
+}
+TD {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma, sans-serif
+}
+OL {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma, sans-serif
+}
+UL {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma, sans-serif
+}
+LI {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma, sans-serif
+}
+P {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma, sans-serif
+}
+.text {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma, sans-serif
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #8f0000; FONT-FAMILY: Arial; TEXT-ALIGN: center
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; MARGIN-BOTTOM: 5px; COLOR: #8f0000; FONT-FAMILY: Arial
+}
+H5 {
+	MARGIN-TOP: 0px; FONT-WEIGHT: bold; FONT-SIZE: 11pt; MARGIN-BOTTOM: 0px; COLOR: #4f0000; FONT-FAMILY: Arial
+}
+H6 {
+ FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; COLOR: black; FONT-FAMILY: Verdana
+}
+H2 {
+ FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; COLOR: #8f0000; FONT-FAMILY: Verdana
+}
+A {
+	FONT-WEIGHT: bold; COLOR: #003388; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: bold; COLOR: #003388; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #6f0000
+}
+A:hover {
+	COLOR: #0066ff
+}
+.date {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #007000; FONT-FAMILY: Courier; TEXT-DECORATION: none
+}
+.date2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #007000; FONT-FAMILY: Courier; BACKGROUND-COLOR: #00ffaa; TEXT-DECORATION: none
+}
+.sysdate {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #b00000; FONT-FAMILY: Courier; TEXT-DECORATION: none
+}
+.private {
+	FONT-WEIGHT: bold; COLOR: red; BACKGROUND-COLOR: #fae0e0
+}
+A.private {
+	FONT-WEIGHT: bold; COLOR: red; BACKGROUND-COLOR: #fae0e0
+}
+A.private:hover {
+	FONT-WEIGHT: bold; COLOR: red; BACKGROUND-COLOR: #fae0e0
+}
+A.private:visited {
+	FONT-WEIGHT: bold; COLOR: red; BACKGROUND-COLOR: #fae0e0
+}
+A.private:active {
+	FONT-WEIGHT: bold; COLOR: red; BACKGROUND-COLOR: #fae0e0
+}
+.number {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #6f0000
+}
+.dsc {
+	FONT-WEIGHT: normal; COLOR: #606060
+}
+SELECT {
+	BORDER-RIGHT: #b0b0b0 1pt solid; BORDER-TOP: #b0b0b0 1pt solid; MARGIN-TOP: 1px; FONT-SIZE: 10px; MARGIN-BOTTOM: 2px; BORDER-LEFT: #b0b0b0 1pt solid; COLOR: #191970; BORDER-BOTTOM: #b0b0b0 1pt solid; FONT-FAMILY: MS Sans Serif
+}
+TEXTAREA {
+	BORDER-RIGHT: #b0b0b0 1pt solid; BORDER-TOP: #b0b0b0 1pt solid; MARGIN-TOP: 1px; FONT-SIZE: 10px; MARGIN-BOTTOM: 2px; BORDER-LEFT: #b0b0b0 1pt solid; COLOR: #191970; BORDER-BOTTOM: #b0b0b0 1pt solid; FONT-FAMILY: MS Sans Serif
+}
+INPUT {
+	BORDER-RIGHT: #b0b0b0 1pt solid; BORDER-TOP: #b0b0b0 1pt solid; MARGIN-TOP: 1px; FONT-SIZE: 10px; MARGIN-BOTTOM: 2px; BORDER-LEFT: #b0b0b0 1pt solid; COLOR: #191970; BORDER-BOTTOM: #b0b0b0 1pt solid; FONT-FAMILY: MS Sans Serif
+}
+.ahint {
+	FONT-SIZE: 8px; COLOR: #000080; FONT-FAMILY: MS Sans Serif; TEXT-DECORATION: none
+}
+#hint2 {
+	VISIBILITY: hidden; WIDTH: 140px; POSITION: absolute; BACKGROUND-COLOR: #fff6dd; layer-background-color: #FFF6DD
+}
+#hint3 {
+	VISIBILITY: hidden; WIDTH: 240px; POSITION: absolute; BACKGROUND-COLOR: #fff6dd; layer-background-color: #FFF6DD
+}
+.B1 {
+	FONT-WEIGHT: bold; COLOR: #6666cc
+}
+.B2 {
+	FONT-WEIGHT: bold; COLOR: #b06a00
+}
+.B {
+	FONT-WEIGHT: bold;
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+TABLE {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}

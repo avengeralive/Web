@@ -1,0 +1,266 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+  <title>Часы</title>
+  <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8" >
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+  <script src = "clockscript.js"></script>
+  </head> 
+  <body>
+     
+   <div id='clock'>Тут будет текущее время</div> <br>
+   <canvas height='480' width='480' id='myCanvas'></canvas>
+  </body>
+</html>
+
+<script>
+function displayCanvas(){
+    var canvasHTML = document.getElementById('myCanvas');
+    var contextHTML = canvasHTML.getContext('2d');
+    contextHTML.strokeRect(0,0,canvasHTML.width, canvasHTML.height);
+  
+    //Расчет координат центра и радиуса часов
+    var radiusClock = canvasHTML.width/2 - 10;
+    var xCenterClock = canvasHTML.width/2;
+    var yCenterClock = canvasHTML.height/2;
+  
+    //Очистка экрана. 
+    contextHTML.fillStyle = "#ffffff";
+    contextHTML.fillRect(0,0,canvasHTML.width,canvasHTML.height);
+  
+    //Рисуем контур часов
+    contextHTML.strokeStyle =  "#000000";
+    contextHTML.lineWidth = 1;
+    contextHTML.beginPath();
+    contextHTML.arc(xCenterClock, yCenterClock, radiusClock, 0, 2*Math.PI, true);
+    contextHTML.moveTo(xCenterClock, yCenterClock);
+    contextHTML.stroke();
+    contextHTML.closePath();
+  
+    //Рисуем рисочки часов
+    var radiusNum = radiusClock - 10; //Радиус расположения рисочек 
+    var radiusPoint;
+    for(var tm = 0; tm < 60; tm++){
+    contextHTML.beginPath();
+    if(tm % 5 == 0){radiusPoint = 5;}else{radiusPoint = 2;} //для выделения часовых рисочек
+    var xPointM = xCenterClock + radiusNum * Math.cos(-6*tm*(Math.PI/180) + Math.PI/2);
+    var yPointM = yCenterClock - radiusNum * Math.sin(-6*tm*(Math.PI/180) + Math.PI/2);
+    contextHTML.arc(xPointM, yPointM, radiusPoint, 0, 2*Math.PI, true);
+    contextHTML.stroke();
+    contextHTML.closePath();
+    } 
+  
+    //Оцифровка циферблата часов
+    for(var th = 1; th <= 12; th++){
+  contextHTML.beginPath();
+  contextHTML.font = 'bold 25px sans-serif';
+  var xText = xCenterClock + (radiusNum - 30) * Math.cos(-30*th*(Math.PI/180) + Math.PI/2);
+  var yText = yCenterClock - (radiusNum - 30) * Math.sin(-30*th*(Math.PI/180) + Math.PI/2);
+  if(th <= 9){
+    contextHTML.strokeText(th, xText - 5 , yText + 10);
+  }else{
+    contextHTML.strokeText(th, xText - 15 , yText + 10);
+  }
+      contextHTML.stroke();
+  contextHTML.closePath();  
+    }
+
+  
+    //Рисуем стрелки
+    var lengthSeconds = radiusNum - 10;
+    var lengthMinutes = radiusNum - 15;
+    var lengthHour = lengthMinutes / 1.5;
+    var d = new Date();                //Получаем экземпляр даты
+    var t_sec = 6*d.getSeconds();                           //Определяем угол для секунд
+    var t_min = 6*(d.getMinutes() + (1/60)*d.getSeconds()); //Определяем угол для минут
+    var t_hour = 30*(d.getHours() + (1/60)*d.getMinutes()); //Определяем угол для часов
+  
+    //Рисуем секунды
+    contextHTML.beginPath();
+    contextHTML.strokeStyle =  "#FF0000";
+    contextHTML.moveTo(xCenterClock, yCenterClock);
+    contextHTML.lineTo(xCenterClock + lengthSeconds*Math.cos(Math.PI/2 - t_sec*(Math.PI/180)),
+        yCenterClock - lengthSeconds*Math.sin(Math.PI/2 - t_sec*(Math.PI/180)));
+    contextHTML.stroke();
+    contextHTML.closePath();
+
+    //Рисуем минуты
+    contextHTML.beginPath();
+    contextHTML.strokeStyle =  "#000000";
+    contextHTML.lineWidth = 3;
+    contextHTML.moveTo(xCenterClock, yCenterClock);
+    contextHTML.lineTo(xCenterClock + lengthMinutes*Math.cos(Math.PI/2 - t_min*(Math.PI/180)),
+         yCenterClock - lengthMinutes*Math.sin(Math.PI/2 - t_min*(Math.PI/180)));
+    contextHTML.stroke();
+    contextHTML.closePath();
+
+    //Рисуем часы
+    contextHTML.beginPath();
+    contextHTML.lineWidth = 5;
+    contextHTML.moveTo(xCenterClock, yCenterClock);
+    contextHTML.lineTo(xCenterClock + lengthHour*Math.cos(Math.PI/2 - t_hour*(Math.PI/180)),
+         yCenterClock - lengthHour*Math.sin(Math.PI/2 - t_hour*(Math.PI/180)));
+    contextHTML.stroke();
+    contextHTML.closePath();  
+  
+    //Рисуем центр часов
+    contextHTML.beginPath();
+    contextHTML.strokeStyle =  "#000000";
+    contextHTML.fillStyle = "#ffffff";
+    contextHTML.lineWidth = 3;
+    contextHTML.arc(xCenterClock, yCenterClock, 5, 0, 2*Math.PI, true);
+    contextHTML.stroke();
+    contextHTML.fill();
+    contextHTML.closePath();
+    
+    return;
+}
+
+
+window.onload = function(){
+    window.setInterval(
+  function(){
+    var d = new Date();
+    document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+    displayCanvas();
+  }
+    , 1000);
+}
+</script>-->
+
+
+
+<div id="watch">
+  <div id="corpus">
+    <div id="hr"></div>
+    <div id="min"></div>
+    <div id="sec"></div>
+    <div id="date"></div>
+  </div>
+  <div id="corpus2">
+    <div id="hr2"></div>
+    <div id="min2"></div>
+    <div id="sec2"></div>
+  </div>
+</div>
+
+<style>
+  #corpus {
+    background: url('./watch/day.png');
+    position: relative;
+    background-size: cover;
+    width: 217px;
+    height: 323px;
+    transition: 1s ease background;
+  }
+  #corpus2 {
+    background: url('./watch/night.png');
+    display: none;
+  }
+  #hr2 {
+    background: url('./watch/night_hour.png');
+    display: none;
+  }
+  #min2 {
+    background: url('./watch/night_min.png');
+    display: none;
+  }
+  #sec2 {
+    background: url('./watch/night_day.png');
+    display: none;
+  }
+  #hr {
+    background: url('./watch/day_hour.png');
+    background-size: cover;
+    width: 15px;
+    height: 51px;
+    z-index: 1;
+    position: absolute;
+    top: 86px;
+    left: 99px;
+    transform-origin: 7px 10px;
+    transition: 0.5s ease background;
+  }
+  #min {
+    background: url('./watch/day_min.png');
+    background-size: cover;
+    width: 10px;
+    height: 66px;
+    z-index: 2;
+    position: absolute;
+    top: 87px;
+    left: 100px;
+    transform-origin: 5px 10px;
+    transition: 0.5s ease background;
+  }
+  #sec {
+    background: url('./watch/day_sec.png');
+    background-size: cover;
+    width: 9px;
+    height: 94px;
+    z-index: 3;
+    position: absolute;
+    top: 68px;
+    left: 101px;
+    transform-origin: 4.5px 30px;
+    transform: rotate(180deg);
+    transition: 0.5s ease background;
+  }
+  #date {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    text-align: right;
+    top: 90px;
+    left: 132px;
+    z-index: 1;
+    font-size: 10px;
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    jQuery.fn.rotate = function(degrees) {
+      $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+                 '-moz-transform' : 'rotate('+ degrees +'deg)',
+                 '-ms-transform' : 'rotate('+ degrees +'deg)',
+                 'transform' : 'rotate('+ degrees +'deg)'});
+      return $(this);
+    };
+    var d = new Date();
+    var sr = 180 + 6*d.getSeconds();
+    var mr = 180 + 6*d.getMinutes() + 6/60*d.getSeconds();
+    var hr = 180 + d.getHours()*30 + 30/60*d.getMinutes() + 30/60/60*d.getSeconds();
+    //if (d.getHours()<=11) changebg(1);
+    //else changebg(0);
+    var st = 0;
+    $("#date").html(d.getDate());
+    function start() {
+      sr += (360/60/4);
+      mr += (360/60/60/4);
+      hr += (30/60/60/4);
+      $("#hr").rotate(hr);
+      $("#min").rotate(mr);
+      $("#sec").rotate(sr);
+    };
+    function changebg() {
+      if (st % 2 == 1) {
+        $("#corpus").css('background-image', 'url(./watch/day.png)');
+        $("#hr").css('background-image', 'url(./watch/day_hour.png)');
+        $("#min").css('background-image', 'url(./watch/day_min.png)');
+        $("#sec").css('background-image', 'url(./watch/day_sec.png)');
+      }
+      else {
+        $("#corpus").css('background-image', 'url(./watch/night.png)');
+        $("#hr").css('background-image', 'url(./watch/night_hour.png)');
+        $("#min").css('background-image', 'url(./watch/night_min.png)');
+        $("#sec").css('background-image', 'url(./watch/night_sec.png)');
+      }
+      st++;
+    }
+    start();
+    setInterval(start, 250);
+    setInterval(changebg, 5000);
+  });
+</script>

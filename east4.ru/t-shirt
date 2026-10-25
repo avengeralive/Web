@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8"/> 
+        <title>Система хранения одежды</title> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=520, maximum-scale=1, user-scalable=no" >
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <!-- Template Basic Images Start -->
+        <meta property="og:image" content="path/to/image.jpg">
+        <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+        <!-- Template Basic Images End -->
+
+        <!-- Bootstrap (latest) Grid Styles Only -->
+        <style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background: #fff;}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table !important}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table !important}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table !important}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table !important}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table !important}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}
+		
+		</style>
+        <!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+        <style>.yel{color:#fffc00}.yel{color:#fffc00}::-webkit-input-placeholder{color:#afbbc6;opacity:1}:-moz-placeholder{color:#afbbc6;opacity:1}::-moz-placeholder{color:#afbbc6;opacity:1}:-ms-input-placeholder{color:#afbbc6;opacity:1}body input:focus:required:invalid,body textarea:focus:required:invalid{color:#afbbc6}body input:required:valid,body textarea:required:valid{color:#afbbc6}body{font-size:16px;min-width:320px;position:relative;line-height:1.4;font-family:GothamPro,sans-serif;color:#23262c;}*{margin:0;padding:0}.s-d{color:#fff}.s-d .p-round{color:#fff}.s-w{color:#000}.s-w h2{color:#23262c}.s-w p{color:#444}.text-center{text-align:center}.res-i{max-width:100%;border-radius: 15px;}.strong,strong{font-weight:700}.light{font-weight:300}.accent{color:#8bc24a}section{padding-top:50px;padding-bottom:30px}section h2{margin-top:0;padding-bottom:45px;text-transform:uppercase;font-size:2.3125em;font-weight:400}section p{font-size:1em;margin-bottom:10px;line-height:1.2}.s-gray{background-color:#eaeaea}.table{display:table}.tr{display:table-row}.td{display:table-cell}.wrap-item{padding-bottom:10px;text-align:center}.wrap-item .text-wrap{max-width:320px;display:inline-block}.wrap-item .img-wrap{position:relative;margin-bottom:20px}img.main{position:absolute;left:50%;width:1920px;margin-left:-960px;top:0;display:none}.container{max-width:480px;margin:auto;position:relative}.logo-wrap{padding-top:10px;}.logo-wrap img{/* margin-top:10px */}.top-line{padding:10px 0 10px}.top-line .landingMenu ul{padding-top:20px;text-align:right;margin-left:10px;margin-right:-20px}.top-line .landingMenu li{display:inline-block;margin:0}.top-line .landingMenu li a{padding:8px 15px;font-weight:500;color:#4f535a;font-size:.75em;display:block;opacity:1;text-transform:uppercase;-webkit-transition:all .2s ease;transition:all .2s ease;-webkit-border-radius:16px;border-radius:16px}.top-line .landingMenu li a.active,.top-line .landingMenu li a:focus,.top-line .landingMenu li a:hover{text-decoration:underline;background-color:#8bc24a;opacity:1;text-decoration:none;color:#fff}.toggle-mnu{display: inline-block;width: 40px;height:33px;margin-top: 25px;margin-right:20px;position:absolute;z-index:40;right:0;padding:5px;-webkit-border-radius:5px;border-radius:5px;top:0;vertical-align: bottom;}.toggle-mnu span:after,.toggle-mnu span:before{content:"";position:absolute;left:0;top:7px}.toggle-mnu span:after{top:14px}.toggle-mnu span{position:relative;display:block}.toggle-mnu span,.toggle-mnu span:after,.toggle-mnu span:before{width:35px;height:4px;background-image:-webkit-linear-gradient(30deg,#8ce037 0,#00d576 100%);background-image:linear-gradient(60deg,#8ce037 0,#00d576 100%);-webkit-transition:all .3s;transition:all .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-border-radius:2px;border-radius:2px}.toggle-mnu.on span{background-color:transparent;background-image:none}.toggle-mnu.on span:before{-webkit-transform:rotate(45deg) translate(-2px,-1px);-ms-transform:rotate(45deg) translate(-2px,-1px);transform:rotate(45deg) translate(-2px,-1px)}.toggle-mnu.on span:after{-webkit-transform:rotate(-45deg) translate(6px,-7px);-ms-transform:rotate(-45deg) translate(6px,-7px);transform:rotate(-45deg) translate(6px,-7px)}.hidden-mnu{background-color:#000;display:none;position:fixed;top:0;left:0;z-index:5;width:100%}.hidden-mnu ul{width:100%;text-align:center;display:inline-block;padding:0;padding-top:60px;min-height:100vh;overflow-y:scroll;height:150px;padding-bottom:20px}.hidden-mnu ul li{display:inline-block;width:100%}.hidden-mnu ul li a{font-size:1.375em;padding:20px 0;width:100%;display:inline-block;color:#fff;-webkit-transition:all .2s ease;transition:all .2s ease;text-transform:uppercase}.hidden-mnu>ul>li.active a,.hidden-mnu>ul>li:focus a,.hidden-mnu>ul>li:hover a{text-decoration:none;color:#fff;text-decoration:underline}header{padding-top:5px;background-color:#f3f3f3;padding-bottom:50px;}header .text-top-wrap h1{margin: 32px auto 15px;text-transform:uppercase;color:#000;}header .text-top-wrap h2{text-transform:uppercase;/* color:#4f535a; */font-size: 1.3em;font-weight: 500;line-height:1.5;}header .text-top-wrap h3{color:#4f535a;font-size:18px;font-weight:300;text-transform:uppercase;margin-top:10px}header .img-wrap-top{padding-top:0;padding-top:25px}header .img-wrap-top img{width: 450px;border-radius: 10px;}header .img-wrap-top p{font-size:.75em;text-transform:uppercase;padding-top:5px}.header-text-wrap{padding-top:35px;margin-right:0;margin-left:0}.header-text-wrap .skidka{display: inline-block;/* float:left; */background-color:#8bc24a;-webkit-border-radius:22px;border-radius:22px;color:#fffc00;width:142px;text-align:center;text-transform:uppercase;padding:7px 0;font-size:1.0625em;margin-bottom:30px;position:relative;z-index:2;}.header-text-wrap .skidka strong{font-weight:600}.header-text-wrap .gray{display: inline-block;/* float:left; */padding: 7px 50px 7px 120px;font-size:1.0625em;text-transform:uppercase;margin-left:10px;margin-left:-85px;color:#ee534f;background-color:#fff;-webkit-border-radius:18px;border-radius:18px;letter-spacing: 0.5px;font-weight: 600;}.header-text-wrap h3{font-size:1.9375em;color:#dea379;font-weight:400;text-transform:uppercase;line-height:1.1}.header-text-wrap h3 strong{font-weight:900}.header-text-wrap h5{padding-top:10px;font-weight:400;font-size:1.125em;line-height:1.2;padding-bottom:25px;color:#fff;text-transform:uppercase}.p-round{font-weight:400;margin-bottom:8px;text-transform:uppercase;color:#232a2a}.p-round img{padding-right:10px;margin-top:-5px}.black-div{background-color:#000;color:#fff;padding: 40px 0 0;text-transform:uppercase;}.black-div .item{position:relative;padding-left:70px;margin:auto;max-width:280px;margin-bottom:20px}.black-div .item img{position:absolute;left:0}.black-div .col-sm-4 .item{float:right}.s-forma .img-wrap-clock img{width:450px;border-radius:10px;}.btn-wrap{display:block;width:100%;background-color:transparent;border:none;position:relative;text-align:center;margin-top:5px;padding:0;}.btn-wrap>*{width: 100%;margin: 10px auto;text-align: center;font-weight:400;font-size:26px;line-height:1;display:block;height:70px;line-height:70px;}.btn-wrap strike{font-size:21px;display:block;-webkit-border-radius:35px;border-radius:35px;background-color:#fff;border:2px solid #fff;text-decoration:line-through;color:#5f5f5f;}.btn-wrap span{display:block;color:#fff;font-size:26px;-webkit-border-radius:35px;border-radius:35px;background-color:#000;}.btn-wrap a{-webkit-border-radius:35px;border-radius:35px;color:#fff;font-size:28px;padding:0;background-color:#8bc24a;-webkit-transition:all .2s ease;transition:all .2s ease;width: 100%;margin: 20px auto;text-decoration: none;}.btn-wrap:focus a,.btn-wrap:hover a{width:100%;text-decoration:none}.btn-wrap a:focus,.btn-wrap a:hover{/* position:absolute; *//* width:100%; *//* text-decoration:none; */}.btn-wrap .btn-yellow{text-transform:none;display:block;background-color:#fffc00;color:#373b3f;width:170px;padding:0;width: 100%;-webkit-border-radius:35px;border-radius:35px;font-size:30px;-webkit-transition:all .2s ease;transition:all .2s ease;text-decoration: none;margin: 20px auto;}.btn-wrap:focus .btn-yellow,.btn-wrap:hover .btn-yellow{/* position:absolute; *//* width:100%; *//* text-decoration:none; */}
+		
+		</style>
+        
+       
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/main.min.css">
+
+        <meta name="theme-color" content="#000">
+        <meta name="msapplication-navbutton-color" content="#000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+            </head>
+    <body>
+	
+	<style> 
+  .menu {
+    text-align: center;padding: 8px 0;background: #ececec;
+}
+
+.menu__icon {
+   display: none;
+   width: 45px;
+   height: 35px;
+   position: relative;
+   cursor: pointer;
+}
+
+.menu__icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #333333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.menu__icon span:nth-child(1) {
+  top: 0px;
+}
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+  top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+  top: 26px;
+ }
+
+.menu__links-item {
+    display: inline-block;
+    color: #333333;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__links-item:hover {
+    text-decoration: underline;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__links {
+  display: block;  
+}
+
+@media screen and (max-width: 999px) {
+  .menu {
+    text-align: right;
+padding-top: 10px;
+padding-right: 15px;
+}
+  .menu__icon{
+    display: inline-block;
+  }
+  
+  .menu__links {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+  </style> 
+  
+<!-- partial:index.partial.html -->
+<div class="menu">
+    <div class="menu__icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <div class="menu__links">
+        <a class="menu__links-item" href="../">Главная</a>
+        <a class="menu__links-item" href="../tovary_dlya_doma.php">Товары Для Дома</a>
+        <a class="menu__links-item" href="../detskie_tovary.php">Детские Товары</a>
+        <a class="menu__links-item" href="../odezhda_i_aksessuary.php">Одежда и Аксессуары</a>
+        <a class="menu__links-item" href="../podarki_i_razvlecheniya.php">Подарки и Развлечения</a>
+        <a class="menu__links-item" href="../elektronika_i_gadzhety.php">Электроника и Гаджеты</a>
+         
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script>(function($){
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu').toggleClass('menu_state_open');
+    });
+  });
+})(jQuery);</script>
+
+        <div class="wrapper">
+            <header id="">
+                <div class="top-line">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <div class="logo-wrap">
+                                    
+                                </div>
+                            </div>
+                            <div class=" col-xs-4">
+                                <a href="#" class="toggle-mnu"><span></span></a> 
+                            </div>
+                        </div>
+                        <div class="trop ">
+                            <nav class="main-mnu hidden-mnu   landingMenu2">
+                                <ul>
+                                    <li><a href="#land_1">Характеристики</a></li>
+                                    <li><a href="#forma">заказать</a></li>
+                                    <li><a href="#land_2">Преимущества</a></li>
+                                    <li><a href="#land_3">как мы работаем</a></li>
+                                    <li><a href="#land_4">АКЦИЯ!</a></li>
+                                </ul>
+                            </nav>   
+                        </div> 
+                    </div>
+                </div>
+                <div class="main s-w">
+                    <div class="container">
+                        <div class="text-top-wrap text-center">
+                            <h1>Система хранения <br> для одежды</h1>
+                            <h2>наведи порядок !</h2>
+                            <h3></h3> 
+                        </div>
+                        <div class="img-wrap-top text-center">
+                            <img src="img/head.jpg" alt="Система хранения одежды" class="res-i">
+                            <div class="text-wrap  text-center">
+                            </div>
+                        </div> 
+                        <div class="header-text-wrap">
+                            <p class="clearfix" style="text-align:center;"><span class="skidka"><strong>Скидка: 50% !</strong></span><span class="gray">Акция ограничена !</span></p>
+                            <p class="accent p-round"> <img src="img/i-round.png" alt="Система хранения одежды" class="res-i">Вещи не помнутся</p>
+                            <p class="accent p-round"> <img src="img/i-round.png" alt="Система хранения одежды" class="res-i">Экономит много места</p>
+                            <p class="accent p-round"> <img src="img/i-round.png" alt="Система хранения одежды" class="res-i">1 комплект - 10 листов</p>
+                            <p class="accent p-round"> <img src="img/i-round.png" alt="Система хранения одежды" class="res-i">Размер: 346 x 295 x 67 мм</p>
+                            <br>
+                            <div class="btn-wrap clearfix">
+                                <strike>2780 руб</strike>
+                                <span class="cena">1390 руб</span>
+                                <a href="#forma" class="btn-green">Купить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>   
+            <div class="black-div s-d">
+                <div class="container"> 
+                    <div class="item">
+                        <img src="img/head-1.png" alt="Система хранения одежды" class="res-i">
+                        <p>Доставка курьером на следующий день.</p>
+                    </div> 
+                    <div class="item">
+                        <img src="img/head-2.png" alt="Система хранения одежды" class="res-i">
+                        <p>Оплата при <br> получении</p>
+                    </div> 
+                    <div class="item">
+                        <img src="img/head-3.png" alt="Система хранения одежды" class="res-i">
+                        <p>100% гарантия<br> качества</p>
+                    </div> 
+                </div>
+            </div>
+            <section class="s-d s-khar" id="land_1">
+                <div class="container">
+                    <div class="row">
+                        <h3><span>Система хранения одежды<br><b>T-SHIRT ORGANIZING SYSTEM</b></span></h3>
+                        <div class="clearfix"></div>
+                        <div class="tabs">
+                            <div class="tabs__content tabs__content1  active clearfix">
+                                <p style="text-align:center;font-size:1.12em;margin:0 auto 35px;">Система хранения одежды T-SHIRT ORGANIZING SYSTEM незаменима для поддержания идеального порядка в шкафу или гардеробной. Ваши вещи сохранят презентабельный вид и не помнутся. </p>
+                                    <img src="img/img-top.jpg" alt="Система хранения одежды" class="res-i">
+                                    <div class="text-wrap">
+                                        <p>Также T-SHIRT ORGANIZING SYSTEM пригодится в дальних поездках и командировках, так как экономит достаточно большое пространство. Система хранения изготовлена из прочного пластика, имеет уникальный дизайн. Вам необходимо аккуратно сложить вещи и проложить каждую друг на друга между листами органайзера, в результате получится аккуратная стопка. Органайзер подходит для любой одежды из самого разнообразного материала.</p>
+                                        <ul style="margin:25px auto 55px;">
+                                            <li>1 комплект - 10 листов</li>
+                                            <li>Материал: пластик</li>
+                                            <li>Размер: 346 x 295 x 67 мм</li>
+                                        </ul>
+                                    </div>
+                                <div class=" tab-gal clearfix">
+                                    <a href="img/gal1.jpg" class="gal gal1 gal-small plitka"><img src="img/gal01.jpg" alt="Система хранения одежды"></a> 
+                                    <a href="img/gal2.jpg" class="gal gal1 gal-small plitka"><img src="img/gal02.jpg" alt="Система хранения одежды"></a> 
+                                    <a href="img/gal3.jpg" class="gal gal1 gal-small plitka"><img src="img/gal03.jpg" alt="Система хранения одежды"></a>
+                                    <a href="img/gal4.jpg" class="gal gal1 gal-small plitka"><img src="img/gal04.jpg" alt="Система хранения одежды"></a>
+                                    <a href="img/gal5.jpg" class="gal gal1 gal-small plitka"><img src="img/gal05.jpg" alt="Система хранения одежды"></a> 
+                                    <a href="img/gal6.jpg" class="gal gal1 gal-small plitka"><img src="img/gal06.jpg" alt="Система хранения одежды"></a>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+            </section>
+            <section class="s-vid  s-kopl s-dark s-d " style="padding: 0 0 40px;">
+                <div class="container">
+                    <h2 class="text-center" style="text-align: center;margin: 25px auto;">ВИДЕО</h2>
+                    <div class="row">
+                        <div class="col-xs-12 video-container" style="margin-bottom: 30px;">
+                            <div class="video">
+                                <img style="border-radius:7px;width:100%;" src="img/gif.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s-preim s-d text-center s-dark" id="land_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="text-center"><span>преимущества</span></h2>
+                        </div>
+                        <div class=" col-xs-6 ">
+                            <div class="wrap-item">
+                                <div class="img-wrap">
+                                    <img src="img/preim-1.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>100% гарантия качества. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-xs-6 ">
+                            <div class="wrap-item">
+                                <div class="img-wrap">
+                                    <img src="img/preim-2.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>Только подлинная продукция и более 1000 довольных клиентов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-xs-6 ">
+                            <div class="wrap-item wrap-item3">
+                                <div class="img-wrap">
+                                    <img src="img/preim-3.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>Работаем без предоплаты, оплата производится при получении</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-xs-6 ">
+                            <div class="wrap-item">
+                                <div class="img-wrap">
+                                    <img src="img/preim-4.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>Мы быстро и бережно доставим Ваш заказ </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s-work s-work-2 text-center" id="land_3" style="padding-bottom:70px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="text-center"><span>Как мы работаем</span></h2>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="wrap-item">
+                                <div class="img-wrap">
+                                    <img src="img/work-1.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>Оформляете заказ</p>
+                                    <div class="landingMenu2">
+                                        <a class="btn s-d accent" href="#forma">Оформить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="wrap-item">
+                                <div class="img-wrap">
+                                    <img src="img/work-2.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>С вами связывается<br>наш менеджер</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-6">
+                            <div class="wrap-item">
+                                <div class="img-wrap">
+                                    <img src="img/work-3.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>Отправляем товар</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="wrap-item last">
+                                <div class="img-wrap">
+                                    <img src="img/work-4.png" alt="Система хранения одежды" class="res-i">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>Платите при получении</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s-d s-dark text-center s-garant" id="land_4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="text-center"><span>АКЦИЯ!</span></h2>
+                            <div class="wrap-item">
+                                <div class="img-wrap">
+								<p style="margin: 0 auto;font-size: 24px;">При покупке 2 комплектов</p>
+                                    <img src="img/cos9lu4o2.jpg" alt="Система хранения одежды" class="res-i">
+                                </div>
+                               <div class="text-wrap">
+                                    
+                                    <p style="font-weight: bold;font-size: 23px;text-transform: uppercase;">доставка бесплатно</p>
+									<div class="landingMenu2">
+                                        <a class="btn s-d accent" href="#forma" style="background: #fffc00;padding: 10px 15px;border-radius: 6px;color: #000;font-weight: bold;font-size: 20px;text-decoration: none;">ЗАКАЗАТЬ</a>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="wrap-item" style="margin-top: 40px;">
+                                <div class="img-wrap">
+								 <p style="margin: 0 auto;font-size: 24px;">При покупке 3 комплектов</p>
+                                    <img src="img/cos9lu4o.jpg" alt="Система хранения одежды" class="res-i">
+                                </div>
+                               <div class="text-wrap">
+                                   
+                                    <p style="font-weight: bold;font-size: 23px;text-transform: uppercase;">4-й в подарок + бесплатная доставка</p>
+									<div class="landingMenu2">
+                                        <a class="btn s-d accent" href="#forma" style="background: #fffc00;padding: 10px 15px;border-radius: 6px;color: #000;font-weight: bold;font-size: 20px;text-decoration: none;">ЗАКАЗАТЬ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <section class="s-forma s-d">
+        <div class="container">
+            <h5 class="s-d">Система хранения <br> для одежды</h5>
+            <h2 style="text-transform:uppercase;color:#4f535a;font-size:1.4em;font-weight:500;line-height:1.5;text-align:center;margin:20px auto;padding: 0;">наведи порядок !</h2>
+            <div class="skidka">скидка 50%</div>
+            <div class="img-wrap-clock text-center">
+                <img src="img/head.jpg" alt="Система хранения одежды" class=" ">
+            </div>
+            <div class="w-right" id="forma">
+                <div class="timer-block s-w clearfix">
+                    <div ><p>До конца акции осталось:</p></div>
+                    <div class="div-timer " >
+                        <div id="timer"> 
+                            <div class="block">
+                                <div class="rect date">1</div>
+                                <div class="label">дней</div>
+                            </div>
+                            <div class="block">
+                                <div class="rect hours">23</div>
+                                <div class="label">часов</div>
+                            </div>
+                            <div class="block">
+                                <div class="rect mins">37</div>
+                                <div class="label">минут</div>
+                            </div>
+                            <div class="block">
+                                <div class="rect secs">08</div>
+                                <div class="label">секунд</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-content-box">
+                    <form name="form-1" action="" method="post" onsubmit="if(this.name.value==''){alert('Введите Ваше Имя!');return false} if(this.phone.value==''){alert('Введите Ваш номер телефона!');return false}if(this.phone.value.replace(/\D+/g,'').length<11){alert('Номер телефона некорректен!');return false;} return true;">
+					<input type="hidden" name="task" value="process" />
+<input type="hidden" name="country" value="ru" />
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="demo-icon icon-i-user"> </i></span>
+                            <input class="input-medium focused" name="name" type="text" required="" placeholder="Введите Ваше имя">
+                        </div>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="demo-icon icon-i-tel-2"> </i></span>
+                            <input class="input-medium focused phone" name="phone" required="" type="tel" placeholder="Введите Ваш телефон">
+                        </div>
+                        <button class="btn-wrap clearfix" type="submit">
+                            <strike>2780 руб</strike>
+                            <span class="cena">1390 руб</span>
+                            <span class="btn-yellow">Купить</span>
+                        </button>
+                            <input type="hidden" name="pay_mode" value="3"><input type="hidden" name="tovar_id" value="380306">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container text-center">
+               
+            </p>
+         
+        </div>
+    </footer><div style="text-align: center;margin: 10px auto;display: block;font-size: 14px;line-height: 26px;">
+MustHaveOffers - Интернет Магазин Популярных товаров.<br> 
+ИНН 330640485495 ОГРНИП 315332600000462<br> 
+"Официальный Дистрибьютор на территории РФ"<br> 
+Для связи - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0469706b7365766b72447d656a60617c2a7671">[email&#160;protected]</a><br> 
+<a href="polit.html" target="_blank" style="cursor: pointer;color: initial;">Политика конфиденциальности</a><br> 
+*На данном сайте действует <br> <a href="https://www.facebook.com/about/privacy/update"  target="_blank" style="cursor: pointer;color: initial;">'Политика использования данных Facebook'</a><br> 
+ВСЕ ПРАВА ЗАЩИЩЕНЫ © <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script>
+</div>
+    <!-- Custom HTML -->    
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" src="js/libs.min.js"></script>
+<script type="text/javascript" src="js/jquery.inputmask.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script> 
+<script type="text/javascript" src="js/common.js"></script>
+ <link rel="stylesheet" href="css/fonts.min.css">
+        <link rel="stylesheet" href="fonts/fontello/css/fontello.css">
+		
+		  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter54735790 = new Ya.Metrika({ id:54735790, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54735790" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- BEgin roistat -->
+<script>
+    (function(w, d, s, h, id) {
+        w.roistatProjectId = id; w.roistatHost = h;
+        var p = d.location.protocol == "https:" ? "https://" : "http://";
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+        var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+    })(window, document, 'script', 'cloud.roistat.com', '90bf639ac39c25be70323934c940ed7d');
+</script>
+<!-- End roistat --></body>
+</html>

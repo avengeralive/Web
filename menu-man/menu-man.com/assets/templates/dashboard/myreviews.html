@@ -1,0 +1,40 @@
+<div class="container content" ng-controller="myreviewsController as drCntr" ng-show="group === 'admin' || group === 'client'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<span class="username"></span> <a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a><br>
+			<hr>
+			<a href="/dashboard/my-loyality" class="mui-btn mui-btn--primary"> Мои карты лояльности <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a> 
+			<a href="/dashboard/my-promo" class="mui-btn mui-btn--primary"> Мои промокоды</a> 
+			<a href="/dashboard/my-books" class="mui-btn mui-btn--primary"> Мои брони <span ng-show="notify.booking > 0" class="badge badge-pill badge-danger">{{ notify.booking }}</span></a> 
+			<a href="/dashboard/my-promotions" class="mui-btn mui-btn--primary"> Мои акции <span ng-show="notify.promotions > 0" class="badge badge-pill badge-danger">{{ notify.promotions }}</span></a>
+			<a href="/dashboard/my-reviews" class="mui-btn mui-btn--primary"> Мои отзывы <span ng-show="notify.reviews > 0" class="badge badge-pill badge-danger">{{ notify.reviews }}</span></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h1>Отзывы</h1>
+			<nav class="nav nav-pills flex-column flex-sm-row col-12" style="margin-bottom: 20px;" id="futbok">
+			    <a ng-click="fpr = 0" class="nav-link active" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Все</a> <a ng-click="fpr = 1" class="nav-link" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Отвеченные</a> <a ng-click="fpr = 2" class="nav-link" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Неотвеченные</a>
+			</nav>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-if="reviews.length == 0">
+			<h2 class="text-center">На данный момент отзывов нет</h2>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-bottom: 30px; margin-top: 30px;">
+			<div class="reviewcard mdl-card mdl-shadow--2dp row col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-repeat="review in reviews track by $index" ng-class="{ 'notans': review.answer_date == null, 'ans': review.answer_date != null}" style="margin-bottom: 15px;" ng-show="(review.answer_date != null && (fpr == 0 || fpr == 1)) || (review.answer_date == null && (fpr == 0 || fpr == 2))">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mdl-card__title" ng-class="{ 'notanswered': review.answer_date == null, 'answered': review.answer_date != null}" style="color: #fff; width: 100%;">
+				    <h2 class="mdl-card__title-text">Вы оставили отзыв заведению <a href="{{ review.slug }}">{{ review.name }}</a></h2>
+				</div>
+			    <div class="mdl-card__supporting-text col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<p class="review">{{ review.review }}</p>
+					<p class="answer" ng-show="review.answer_date != null"><b>Ответ от заведения:</b> {{ review.answer }}</p>
+					<p>Дата: {{ review.create_date | date:'d MMMM yyyy, HH:mm' }}</p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+		    <a ng-click="getResult()" class="mui-btn mui-btn--primary" style="width:33%; margin-left: 33%;">Ещё отзывы</a>
+		</div>
+	</div>
+</div>

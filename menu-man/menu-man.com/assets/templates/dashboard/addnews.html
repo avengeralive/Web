@@ -1,0 +1,35 @@
+<div class="container content" ng-controller="addnewsController as newCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h2>Новая новость</h2>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<form ng-submit="save()">
+				<div class="row">
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="news.title">
+						<label>Название новости</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<textarea type="text" ng-model="news.content" rows="10"></textarea>
+						<label>Содержимое новости</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<div style="width: 200px; display: block; float: left; padding: 5px;" ng-repeat="image in news.images">
+							<img ng-src="/uploads/{{ image }}" style="width:100%;"><a class="main_img" ng-click="news.cover_image = image">Сделать главной</a><a class="delete_img" ng-click="deleteImage(image)">Удалить</a>
+						</div>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="object-photo" class="dropzone"></div>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 checkbox">
+						<label><input type="checkbox" ng-model="news.visibility"> Опубликовать</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<button class="mui-btn mui-btn--accent"><span class="fa fa-floppy-o"></span> Сохранить</button>
+					</div>
+				</div>
+			</form>
+		</div>	
+	</div>
+</div> 

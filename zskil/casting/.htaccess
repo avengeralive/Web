@@ -1,0 +1,16 @@
+
+php_value post_max_size 2000M
+php_value upload_max_filesize 2000M
+php_value max_file_uploads 100
+
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+Options -Indexes
+AddDefaultCharset UTF-8
+ErrorDocument 404 /error/404/
+ErrorDocument 403 /error/403/
+ErrorDocument 500 /error/500/

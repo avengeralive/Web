@@ -1,0 +1,185 @@
+/* COLORS */
+#calendarDiv, #calendarDiv div.confirmButton{border:1px solid #0073d2;}
+
+#calendarDiv, #calendarDiv .topBar, #calendarDiv .todaysDate, #calendarDiv .confirmDiv{
+	background-color: #d3f0ff;
+}
+#calendarDiv td{
+	border:1px solid #d3f0ff;
+}
+#calendarDiv div.confirmButton{
+	color:#0073d2;
+}
+
+#calendarDiv td, #calendarDiv .selectBoxOver, #calendarDiv .selectBoxTimeOver, #calendarDiv .monthYearPicker, #calendarDiv .timeBar{
+	color:#666;
+}
+
+#calendarDiv td, #calendarDiv .selectBoxOver, #calendarDiv .selectBoxTimeOver, #calendarDiv div.confirmDiv div.confirmButton{
+	background-color:#FFF;
+}
+
+#calendarDiv .selectBox, #calendarDiv .selectBoxTime, #calendarDiv .activeDay, #calendarDiv .todaysDate, #calendarDiv .monthYearActive, .selDay{
+	color:#FFF !important;
+}
+
+#calendarDiv .selectBox, #calendarDiv .selectBoxOver, #calendarDiv .selectBoxTime, #calendarDiv .selectBoxTimeOver{
+	border:1px solid #FFF;
+}
+
+#calendarDiv .selectBox, #calendarDiv .selectBoxTime, #calendarDiv .activeDay, .selDay, #calendarDiv .monthYearActive{
+	background-color: #0073d2 !important;
+}
+
+#calendarDiv .monthYearPicker{
+	background-color: #F5F5F5;
+}
+
+#calendarDiv .monthYearPicker{
+	border:1px solid #666;
+}
+
+#calendarDiv .selectBoxHighlightColor{
+	color:blue;
+}
+/* ------ */
+
+#calendarDiv{
+	position:absolute;
+	width:225px;
+	padding:1px;
+	font-family:arial;
+	font-size:10px;
+	padding-bottom:20px;
+	visibility:hidden;
+	height:198px;
+}
+#calendarDiv span,#calendarDiv img{
+	float:left;
+}
+#calendarDiv .selectBox,#calendarDiv .selectBoxOver{
+	line-height:12px;
+	padding:1px;
+	cursor:pointer;
+	padding-left:2px;
+}
+
+#calendarDiv .selectBoxTime, #calendarDiv .selectBoxTimeOver{	
+	line-height:12px;
+	padding:1px;
+	cursor:pointer;
+	padding-left:2px;
+}
+
+#calendarDiv table {
+	border-collapse:collapse;
+}
+#calendarDiv td{
+	padding:3px;
+	margin:0px;
+	font-size:10px;
+}
+
+#calendarDiv .selectBox{
+	position:relative;
+}
+#calendarDiv .selectBoxOver{
+	position:relative;
+}
+#calendarDiv .selectBoxTime{
+	position:relative;
+}
+#calendarDiv .selectBoxTimeOver{	
+	position:relative;
+}
+
+#calendarDiv .topBar{
+	height:18px;
+	padding:2px;
+}
+#calendarDiv .activeDay{	/* Active day in the calendar */
+	font-weight:bold;
+}
+#calendarDiv .todaysDate{
+	height:17px;
+	line-height:17px;
+	padding:2px;
+	text-align:center;
+	position:absolute;
+	bottom:30px;
+	width:221px;
+}
+#calendarDiv .todaysDate div{
+	float:left;
+}
+	
+#calendarDiv .timeBar{
+	height:17px;
+	line-height:17px;
+	width:150px;
+	position:absolute;
+	right:0;
+}
+
+#calendarDiv .timeBar div{
+	float:left;
+	margin-right:1px;
+}
+
+
+#calendarDiv .monthYearPicker{
+	position:absolute;
+	left:0;
+	top:15px;
+	z-index:1000;
+	display:none;
+}
+#calendarDiv #monthSelect{
+	width:70px;
+}
+#calendarDiv .monthYearPicker div{
+	float:none;
+	clear:both;	
+	padding:1px;
+	margin:1px;	
+	cursor:pointer;
+}
+#calendarDiv td{
+	text-align:right;
+	cursor:pointer;
+}
+
+#calendarDiv .topBar img{
+	cursor:pointer;
+}
+#calendarDiv .topBar div{
+	float:left;
+	margin-right:1px;
+}
+
+#calendarDiv .confirmDiv{
+	height:28px;
+	text-align:center;
+	position:absolute;
+	bottom:0;
+	width:221px;
+}
+#calendarDiv .confirmButton{
+	position:relative;
+	bottom:0;
+	cursor:pointer;
+	font-size:11px;
+ 	width:115px;
+	font-weight:bold;
+	line-height:20px;
+}
+
+.selbox{color:blue;}
+
+#calendarDiv #hourDropDown{left:77px; width:31px; top:200px;}
+
+#calendarDiv #minuteDropDown{left:113px; width:31px;}
+
+#calendarDiv #monthDropDown{left:38px; width:71px;}
+
+#calendarDiv #yearDropDown{left:114px; width:39px;}

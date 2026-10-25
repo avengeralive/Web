@@ -1,0 +1,83 @@
+<div class="container content" ng-controller="mypromoController as newCntr" ng-show="group === 'client'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<span class="username"></span> <a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a><br>
+			<hr>
+			<a href="/dashboard/my-loyality" class="mui-btn mui-btn--primary"> Мои карты лояльности <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a> 
+			<a href="/dashboard/my-promo" class="mui-btn mui-btn--primary"> Мои промокоды</a> 
+			<a href="/dashboard/my-books" class="mui-btn mui-btn--primary"> Мои брони <span ng-show="notify.booking > 0" class="badge badge-pill badge-danger">{{ notify.booking }}</span></a> 
+			<a href="/dashboard/my-promotions" class="mui-btn mui-btn--primary"> Мои акции <span ng-show="notify.promotions > 0" class="badge badge-pill badge-danger">{{ notify.promotions }}</span></a>
+			<a href="/dashboard/my-reviews" class="mui-btn mui-btn--primary"> Мои отзывы <span ng-show="notify.reviews > 0" class="badge badge-pill badge-danger">{{ notify.reviews }}</span></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-bottom: 30px;">
+			<div class="col col-6 nav-pills">
+				<a href="#" class="nav-link" ng-click="tab = 1;" ng-class="tab == 1 ? 'active' : ''" style="float: left;">Не использованные</a>
+				<a href="#" class="nav-link" ng-click="tab = 2;" ng-class="tab == 2 ? 'active' : ''" style="float: left;">Использованные или с истёкшим сроком действия</a>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-show="tab == 1">
+			<div class="col col-12 col-sm-6 col-md-3 col-lg-2 row" ng-repeat="promo in promos" style="padding-left: 0px;">
+				<div class="col col-12 loyalitycard">
+					<a href="/{{ promo.slug }}" style="margin-top: 0px; text-align: center; text-decoration: underline;display: inline-block;" class="text-success">{{ promo.name }}</a>
+					<p style="text-align: center; font-weight: bold; font-size: 20px; text-transform: uppercase;">{{ promo.code }}</p>
+					<hr>
+					<a class="text-success text-center" style="cursor: pointer; width: 100%;display: inline-block;" ng-click="showqr(promo.id)"><i class="fa fa-qrcode"></i>Показать QR-код</a>
+				</div>
+				<div class="modal fade qr{{ promo.id }}" tabindex="-1" role="dialog" aria-labelledby="loyalitylabel" aria-hidden="true">		
+					    <div class="modal-dialog" role="document">
+						<div class="modal-content">
+						    <div class="modal-header">
+								<h5 class="modal-title" id="layalitylabel">QR код</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								    <span aria-hidden="true">&times;</span>
+								</button>
+						    </div>							
+						    <div class="modal-body">
+								<div class="container-fluid">
+								    <div class="row">
+									<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+									    <div class="qrcode" data-code="{{ promo.code }}" make-qrcodes-promo></div>
+									</div>
+								    </div>
+								</div>
+						    </div>	
+						</div>
+					    </div>					
+					</div>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-show="tab == 2">
+			<div class="col col-12 col-sm-6 col-md-3 col-lg-2 row" ng-repeat="promo in usedpromos" style="padding-left: 0px;">
+				<div class="col col-12 loyalitycard">
+					<a href="/{{ promo.slug }}" style="margin-top: 0px; text-align: center; text-decoration: underline;display: inline-block;" class="text-success">{{ promo.name }}</a>
+					<p style="text-align: center; font-weight: bold; font-size: 20px; text-transform: uppercase;">{{ promo.code }}</p>
+					<hr>
+					<a class="text-success text-center" style="cursor: pointer; width: 100%;display: inline-block;" ng-click="showqr(promo.id)"><i class="fa fa-qrcode"></i>Показать QR-код</a>
+				</div>
+				<div class="modal fade qr{{ promo.id }}" tabindex="-1" role="dialog" aria-labelledby="loyalitylabel" aria-hidden="true">		
+					    <div class="modal-dialog" role="document">
+						<div class="modal-content">
+						    <div class="modal-header">
+								<h5 class="modal-title" id="layalitylabel">QR код</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								    <span aria-hidden="true">&times;</span>
+								</button>
+						    </div>							
+						    <div class="modal-body">
+								<div class="container-fluid">
+								    <div class="row">
+									<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+									    <div class="qrcode" data-code="{{ promo.code }}" make-qrcodes-promo></div>
+									</div>
+								    </div>
+								</div>
+						    </div>	
+						</div>
+					    </div>					
+					</div>
+			</div>
+		</div>	
+	</div>
+</div> 

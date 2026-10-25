@@ -1,0 +1,37 @@
+<div class="container" ng-controller="dashboardController as dbCtrl" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<a class="nav-link mui-btn mui-btn--primary active" ng-click="tab = 1" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Мои заведения</a>
+			<span style="float: right;">
+				<a href="/dashboard/add-place" class="mui-btn mui-btn--primary"><span class="fa fa-plus"></span> Добавить заведение</a> 
+				<a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a>
+			</span>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div class="row">
+				<div class="col col-12 col-sm-12" ng-show="tab == 1">
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3" style="padding-left: 0px; margin-bottom: 30px;" ng-repeat="place in places">
+							<div class="placecard col-12 col-sm-12 col-md-12 col-lg-12 mdl-card mdl-shadow--2dp">
+								<h2><a href="/{{ place.slug }}">{{ place.name }}</a></h2>
+								<p class="address">{{ place.address }}</p>
+								<p><span class="badge badge-success">Проверен</span></p>
+								<p class="views">{{ place.visitors }} просмотров страниц заведения</p>			
+								<a href="/dashboard/edit-place/{{ place.slug }}" class="editbtn"><span class="fa fa-pencil "></span> Редактировать</a>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container content" ng-show="group === 'client'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<span class="username"></span> <a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a><br>
+			<hr>
+			<a href="/dashboard/my-loyality" class="mui-btn mui-btn--primary"> Мои карты лояльности <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a> 
+		</div>
+	</div>
+</div>

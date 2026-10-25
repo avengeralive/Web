@@ -1,0 +1,14 @@
+<div ng-controller="profileController as plCntr" class="container" style="padding-top: 50px; padding-bottom: 50px;">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-9 row">
+			<div>
+			<img src="/uploads/{{ user.cover_image }}" class="img-fluid" style="width: 100%;">
+			</div>
+			<h1>{{ user.first_name }} {{ user.last_name }}</h1>
+			<p>Оставил {{ user.rev }}  отзывов к {{ user.vis }} заведениям</p>
+			<p>Зарегистрирован: {{ user.registration_date }}</p>
+		</div>
+		<div class="col-12 col-sm-12 col-md-3" style="border: 1px solid #ccc;">Рекламное место</div>
+	</div>
+</div>
+  

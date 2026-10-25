@@ -1,0 +1,58 @@
+<div class="container content" ng-controller="addpromotionsController as newCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h2>Новая акция</h2>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<form ng-submit="save()">
+				<div class="row">
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="promotions.title" maxlength='20'>
+						<label>Название акции</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<textarea type="text" ng-model="promotions.content" rows="10"></textarea>
+						<label>Содержимое акции</label>
+					</div>
+					<div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mui-textfield mui-textfield--float-label">
+						<input type="date" ng-model="promotions.starts" class="mui--is-touched mui--is-dirty mui--is-not-empty"/>
+						<label>Дата начала действия акции</label>
+					</div>
+					<div class="col col-12 col-sm-6 col-md-6 col-lg-6 mui-textfield mui-textfield--float-label">
+						<input type="date" ng-model="promotions.ends" class="mui--is-touched mui--is-dirty mui--is-not-empty"/>
+						<label>Дата окончания действия акции</label>
+					</div>
+					<div class="col col-12 col-sm-6 col-md-6 col-lg-6 mui-checkbox checkbox">
+						<label><input type="checkbox" ng-model="availability[0]"> Понедельник</label>
+						<label><input type="checkbox" ng-model="availability[1]"> Вторник</label>
+						<label><input type="checkbox" ng-model="availability[2]"> Среда</label>
+						<label><input type="checkbox" ng-model="availability[3]"> Четверг</label>
+						<label><input type="checkbox" ng-model="availability[4]"> Пятница</label>
+						<label><input type="checkbox" ng-model="availability[5]"> Суббота</label>
+						<label><input type="checkbox" ng-model="availability[6]"> Воскресенье</label>
+					</div>
+					<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 checkbox">
+						<label><input type="radio" name="only" ng-model="promotions.only_clients" ng-value="true"> Акция доступна только для посетителей</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 checkbox">
+						<label><input type="radio" name="only" ng-model="promotions.only_clients" ng-value="false"> Акция доступна для всех</label>
+					</div>-->
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<div style="width: 200px; display: block; float: left; padding: 5px;" ng-repeat="image in promotions.images">
+							<img ng-src="/uploads/{{ image }}" style="width:100%;"><a class="main_img" ng-click="promotions.cover_image = image" ng-class="promotions.cover_image == image ? 'bold' : ''">Сделать главной</a><a class="delete_img" ng-click="deleteImage(image)">Удалить</a>
+						</div>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="object-photo" class="dropzone"></div>
+					</div>
+					<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 checkbox">
+						<label><input type="checkbox" ng-model="promotions.visibility"> Опубликовать</label>
+					</div>-->
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<button class="mui-btn mui-btn--accent"><span class="fa fa-floppy-o"></span> Сохранить</button>
+					</div>
+				</div>
+			</form>
+		</div>	
+	</div>
+</div> 

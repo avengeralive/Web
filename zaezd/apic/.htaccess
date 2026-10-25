@@ -1,0 +1,44 @@
+SetEnv force-response-1.0 1
+SetEnv downgrade-1.0 1
+
+AddDefaultCharset Off
+
+AddType application/vnd.openxmlformats .docx .pptx .xlsx .xltx . xltm .dotx .potx .ppsx
+
+DirectoryIndex index.php
+
+php_value display_errors 0
+php_value register_globals 1
+php_flag magic_quotes_gpc Off
+php_flag magic_quotes_runtime Off
+php_flag magic_quotes_sybase Off
+
+<IfModule mod_charset.c>
+CharsetRecodeMultipartForms off
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+) - [PT,L]
+
+RewriteCond %{QUERY_STRING} firm=([0-9]+) 
+RewriteRule ^members/member\.php$ members/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/member1\.php$ members/action-%1-equipment/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/member2\.php$ members/action-%1-object/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/en/member\.php$ en/members_apic/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/en/member1\.php$ en/members_apic/action-%1-equipment/? [R=301,L]
+RewriteCond %{QUERY_STRING} id_o=([0-9]+)&id_so=([0-9]+)&id_f=([0-9]+)
+RewriteRule ^object/object\.php$ members/object/action-object-%1-%2-%3/? [R=301,L]
+RewriteCond %{QUERY_STRING} id_so=([0-9]+)
+RewriteRule ^object/$ members/object/action-%1/? [R=301,L]
+
+RewriteRule ^admin/(.*) admin/index.php [L]
+
+###RewriteRule ^yandex(.*) - [S=99,L]
+
+RewriteRule ^(.*) index.php [L] 

@@ -1,0 +1,37 @@
+<div class="container content" ng-controller="addloyalityController as newCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h2>Новая карта лояльности</h2>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<form ng-submit="save()">
+				<div class="row">
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="loyality.title"  maxlength='20'>
+						<label>Заголовок</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<textarea type="text" ng-model="loyality.content" rows="10"></textarea>
+						<label>Описание</label>
+					</div>
+					<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="loyality.phone">
+						<label>Мобильный телефон клиента или e-mail</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<a class="mui-btn mui-btn--primary" ng-click="checkusers();"><span class="fa fa-search"></span> Найти пользователя</a>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<p ng-repeat="userbyphone in usersbyphone"><input type="radio" ng-model="loyality.user_id" value="{{ userbyphone.id }}"> {{ userbyphone.first_name }} {{ userbyphone.last_name }} {{ userbyphone.email }} {{ userbyphone.phone }}</p>
+					</div>-->
+					<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 checkbox">
+						<label><input type="checkbox" ng-model="loyality.activity"> Опубликовать</label>
+					</div>-->
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<button class="mui-btn mui-btn--accent"><span class="fa fa-floppy-o"></span> Сохранить</button>
+					</div>
+				</div>
+			</form>
+		</div>	
+	</div>
+</div> 

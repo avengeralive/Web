@@ -1,0 +1,418 @@
+<div class="container content row" style="padding-top: 0px; padding-bottom: 50px; padding-left: 0px; padding-right: 0px; margin: 0 auto !important;" ng-controller="placeController as pCtrl">
+	<div class="col-12" style="padding: 0px; margin-bottom: 20px;">
+		<div style="height: 305px">
+			<div uib-carousel active="active" interval="2000" no-wrap="noWrapSlides">
+				<div class="text text-center">
+					<img src="/uploads/{{ place.cover_image }}" class="rounded-circle" style="width: 100px; height: 100px; border: 3px solid #fff;  box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+			        <h1 style="margin-top: 30px;">{{ place.name }}</h1>
+				</div>
+				<div uib-slide ng-repeat="(key,slide) in place.images track by $index" index="key" style="height: 305px; background: url(/uploads/{{slide}}); background-position: center center; background-size: cover; background-attachment: fixed;">
+					<div style="width: 100%; height: 305px; position: absolute; top: 0; left: 0; background: rgba(0,0,0,.4); z-index: 100;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col col-12 col-sm-12 col-md-12">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 0px;">
+			    <p ng-show="place.network_id != 0">Это заведение принадлежит сети заведений <a class="mui-btn mui-btn--primary" ng-click="netws = netws + 1">{{ place.current_network[0].name }}</a></p>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="desc" style="padding: 0px;" ng-show="netws % 2 == 1">
+			    <ul>
+				<li style="list-style: none;" ng-repeat="nplc in place.network_places">
+				    <a href="/{{ nplc.slug }}"><b><h3>{{ nplc.name }}</h3></b></a>
+				    <i><b>Адрес:</b> {{ nplc.address }}</i></p>
+				</li>
+			    </ul>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 0px;">
+				<nav class="nav nav-pills nonmobile-nav flex-column flex-sm-row col-12" style="margin-bottom: 20px;">
+					<a class="nav-link active" ng-click="tab = 1" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Информация</a>
+					<a class="nav-link" ng-click="tab = 3" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Акции</a>
+					<a class="nav-link" ng-click="tab = 5" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Фотографии</a>
+				</nav>
+				<nav class="mobile-nav">
+					<a class="nav-link active" ng-click="tab = 1" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');"><i class="fa fa-info-circle"></i></a>
+					<a class="nav-link" ng-click="tab = 3" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');"><i class="fa fa-percent"></i></a>
+					<a class="nav-link" ng-click="tab = 5" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');"><i class="fa fa-camera"></i></a>
+				</nav>
+			</div>
+		</div>
+		<div class="row col-12" ng-show="tab == 1">
+			<div class="col col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 row" id="placecard">
+				<div class="col col-12 col-sm-12">
+					<p><i class="fa fa-home"></i> Москва, {{ place.address }}</p>
+					<p><i class="fa fa-phone"></i> {{ place.phone }}</p>
+					<p><i class="fa fa-ruble"></i> {{ place.middle }}</p>
+					<p><i class="fa fa-globe"></i> <a href="{{ place.web }}">{{ place.web }}</a></p>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<p><b>Метро:</b> <span ng-repeat="station in place.subway_stations">{{ station }}{{$last ? '' : ', '}}</span> </p>
+					<p><b>Тип заведения:</b> <span ng-repeat="place_type in place.place_types">{{ place_type }}{{$last ? '' : ', '}}</span></p>
+					<p><b>Тип кухни:</b> <span ng-repeat="kitchen_type in place.kitchen_types">{{ kitchen_type }}{{$last ? '' : ', '}}</span></p>			
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 row">
+				
+			</div>
+			<div class="col col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 row">
+				<div class="col col-12 col-sm-12 col-md-6 row" style="padding-right: 0px;">
+					<p><b>ПН:</b> <span ng-if="place.planing[1].begin.hour == place.planing[1].end.hour && place.planing[1].begin.minutes == place.planing[1].end.minutes">круглосуточно</span><span ng-if="place.planing[1].begin.hour != place.planing[1].end.hour || place.planing[1].begin.minutes != place.planing[1].end.minutes">{{ place.planing[1].begin.hour }}:{{ place.planing[1].begin.minutes }} - {{ place.planing[1].end.hour }}:{{ place.planing[1].end.minutes }}</span></p>
+					<p><b>ВТ:</b> <span ng-if="place.planing[2].begin.hour == place.planing[2].end.hour && place.planing[2].begin.minutes == place.planing[2].end.minutes">круглосуточно</span><span ng-if="place.planing[2].begin.hour != place.planing[2].end.hour || place.planing[2].begin.minutes != place.planing[2].end.minutes">{{ place.planing[2].begin.hour }}:{{ place.planing[2].begin.minutes }} - {{ place.planing[2].end.hour }}:{{ place.planing[2].end.minutes }}</span></p>
+					<p><b>СР:</b> <span ng-if="place.planing[3].begin.hour == place.planing[3].end.hour && place.planing[3].begin.minutes == place.planing[3].end.minutes">круглосуточно</span><span ng-if="place.planing[3].begin.hour != place.planing[3].end.hour || place.planing[3].begin.minutes != place.planing[3].end.minutes">{{ place.planing[3].begin.hour }}:{{ place.planing[3].begin.minutes }} - {{ place.planing[3].end.hour }}:{{ place.planing[3].end.minutes }}</span></p>
+					<p><b>ЧТ:</b> <span ng-if="place.planing[4].begin.hour == place.planing[4].end.hour && place.planing[4].begin.minutes == place.planing[4].end.minutes">круглосуточно</span><span ng-if="place.planing[4].begin.hour != place.planing[4].end.hour || place.planing[4].begin.minutes != place.planing[4].end.minutes">{{ place.planing[4].begin.hour }}:{{ place.planing[4].begin.minutes }} - {{ place.planing[4].end.hour }}:{{ place.planing[4].end.minutes }}</span></p>
+					<p><b>ПТ:</b> <span ng-if="place.planing[5].begin.hour == place.planing[5].end.hour && place.planing[5].begin.minutes == place.planing[5].end.minutes">круглосуточно</span><span ng-if="place.planing[5].begin.hour != place.planing[5].end.hour || place.planing[5].begin.minutes != place.planing[5].end.minutes">{{ place.planing[5].begin.hour }}:{{ place.planing[5].begin.minutes }} - {{ place.planing[5].end.hour }}:{{ place.planing[5].end.minutes }}</span></p>
+					<p><b>СБ:</b> <span ng-if="place.planing[6].begin.hour == place.planing[6].end.hour && place.planing[6].begin.minutes == place.planing[6].end.minutes">круглосуточно</span><span ng-if="place.planing[6].begin.hour != place.planing[6].end.hour || place.planing[6].begin.minutes != place.planing[6].end.minutes">{{ place.planing[6].begin.hour }}:{{ place.planing[6].begin.minutes }} - {{ place.planing[6].end.hour }}:{{ place.planing[6].end.minutes }}</span></p>
+					<p><b>ВС:</b> <span ng-if="place.planing[7].begin.hour == place.planing[7].end.hour && place.planing[7].begin.minutes == place.planing[7].end.minutes">круглосуточно</span><span ng-if="place.planing[7].begin.hour != place.planing[7].end.hour || place.planing[7].begin.minutes != place.planing[7].end.minutes">{{ place.planing[7].begin.hour }}:{{ place.planing[7].begin.minutes }} - {{ place.planing[7].end.hour }}:{{ place.planing[7].end.minutes }}</span></p>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-6 row" style="padding-right: 0px;">
+										
+				</div>
+				
+			</div>
+			<div class="col col-12 col-sm-12 row" style="border-top: 1px solid rgba(0, 153, 0, 0.3);">
+				<div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="padding: 0px; margin-top: 20px;">
+					<h3>Информация</h3>
+					<p style="text-align: justify; font-size: 16px;">{{ place.about }}</p>
+					<h3>Дополнительная информация</h3>
+					<ul>
+						<li ng-repeat="additional in place.additional">{{ additional }}</li>
+					</ul>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" style="padding: 0px 10px; margin-top: 20px;">
+					<div id="map_show" style="width: 100%; height: 300px; position: relative; overflow: hidden;"></div>
+				</div>
+			</div>
+			
+			<div class="modal fade" id="review" tabindex="-1" role="dialog" aria-labelledby="reviewLabel" aria-hidden="true">		
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="reviewLabel">Оставить отзыв для заведения <i>{{ place.name }}</i></h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>							
+						<div class="modal-body">
+							<div class="container-fluid">
+								<form ng-submit="sendreview()" ng-show="authorized == true">
+									<div class="row">
+										<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+											<textarea ng-model="newreview.review"></textarea>
+											<label>Введите сюда Ваш отзыв</label>
+										</div>
+										<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+											<button class="mui-btn mui-btn--primary act">Отправить отзыв</button>
+										</div>
+									</div>
+								</form>
+								<!-- LOGIN FORM -->
+							</div>
+						</div>	
+					</div>
+				</div>					
+			</div>
+			<div class="modal fade" id="ratings" tabindex="-1" role="dialog" aria-labelledby="ratingsLabel" aria-hidden="true">		
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="ratingsLabel">Оценить заведение <i>{{ place.name }}</i></h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>							
+						<div class="modal-body">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+										<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 0px; margin-top: 20px; text-align: center;">
+											<p class="text-center" style="margin: 0px; font-weight: bold;">Кухня</p>
+											<fieldset class="rating">
+												<input type="radio" ng-checked="rating.kitchen == 10"/><label ng-click="rate('kitchen', 10);" class = "full" title="10"></label>
+												<input type="radio" ng-checked="rating.kitchen == 9"/><label ng-click="rate('kitchen', 9);" class = "full" title="9"></label>
+												<input type="radio" ng-checked="rating.kitchen == 8"/><label ng-click="rate('kitchen', 8);" class = "full" title="8"></label>
+												<input type="radio" ng-checked="rating.kitchen == 7"/><label ng-click="rate('kitchen', 7);" class = "full" title="7"></label>
+												<input type="radio" ng-checked="rating.kitchen == 6"/><label ng-click="rate('kitchen', 6);" class = "full" title="6"></label>
+												<input type="radio" ng-checked="rating.kitchen == 5"/><label ng-click="rate('kitchen', 5);" class = "full" title="5"></label>
+												<input type="radio" ng-checked="rating.kitchen == 4"/><label ng-click="rate('kitchen', 4);" class = "full" title="4"></label>
+												<input type="radio" ng-checked="rating.kitchen == 3"/><label ng-click="rate('kitchen', 3);" class = "full" title="3"></label>
+												<input type="radio" ng-checked="rating.kitchen == 2"/><label ng-click="rate('kitchen', 2);" class = "full" title="2"></label>
+												<input type="radio" ng-checked="rating.kitchen == 1"/><label ng-click="rate('kitchen', 1);" class = "full" title="1"></label>
+											</fieldset>
+										</div>
+										<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 0px; margin-top: 20px; text-align: center;">
+											<p class="text-center" style="margin: 0px; font-weight: bold;">Интерьер</p>
+											<fieldset class="rating">
+												<input type="radio" ng-checked="rating.place == 10"/><label ng-click="rate('place', 10);" class = "full" title="10"></label>
+												<input type="radio" ng-checked="rating.place == 9"/><label ng-click="rate('place', 9);" class = "full" title="9"></label>
+												<input type="radio" ng-checked="rating.place == 8"/><label ng-click="rate('place', 8);" class = "full" title="8"></label>
+												<input type="radio" ng-checked="rating.place == 7"/><label ng-click="rate('place', 7);" class = "full" title="7"></label>
+												<input type="radio" ng-checked="rating.place == 6"/><label ng-click="rate('place', 6);" class = "full" title="6"></label>
+												<input type="radio" ng-checked="rating.place == 5"/><label ng-click="rate('place', 5);" class = "full" title="5"></label>
+												<input type="radio" ng-checked="rating.place == 4"/><label ng-click="rate('place', 4);" class = "full" title="4"></label>
+												<input type="radio" ng-checked="rating.place == 3"/><label ng-click="rate('place', 3);" class = "full" title="3"></label>
+												<input type="radio" ng-checked="rating.place == 2"/><label ng-click="rate('place', 2);" class = "full" title="2"></label>
+												<input type="radio" ng-checked="rating.place == 1"/><label ng-click="rate('place', 1);" class = "full" title="1"></label>
+											</fieldset>
+										</div>
+										<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 0px; margin-top: 20px; text-align: center;">
+											<p class="text-center" style="margin: 0px; font-weight: bold;">Сервис</p>
+											<fieldset class="rating">
+												<input type="radio" ng-checked="rating.service == 10"/><label ng-click="rate('service', 10);" class = "full" title="10"></label>
+												<input type="radio" ng-checked="rating.service == 9"/><label ng-click="rate('service', 9);" class = "full" title="9"></label>
+												<input type="radio" ng-checked="rating.service == 8"/><label ng-click="rate('service', 8);" class = "full" title="8"></label>
+												<input type="radio" ng-checked="rating.service == 7"/><label ng-click="rate('service', 7);" class = "full" title="7"></label>
+												<input type="radio" ng-checked="rating.service == 6"/><label ng-click="rate('service', 6);" class = "full" title="6"></label>
+												<input type="radio" ng-checked="rating.service == 5"/><label ng-click="rate('service', 5);" class = "full" title="5"></label>
+												<input type="radio" ng-checked="rating.service == 4"/><label ng-click="rate('service', 4);" class = "full" title="4"></label>
+												<input type="radio" ng-checked="rating.service == 3"/><label ng-click="rate('service', 3);" class = "full" title="3"></label>
+												<input type="radio" ng-checked="rating.service == 2"/><label ng-click="rate('service', 2);" class = "full" title="2"></label>
+												<input type="radio" ng-checked="rating.service == 1"/><label ng-click="rate('service', 1);" class = "full" title="1"></label>
+											</fieldset>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>					
+			</div>
+			<div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="bookingLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document" style="max-width: 1000px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="bookingLabel">Забронировать столик</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body" style="padding: 20px 0;">
+							<form ng-submit="submitbooking()">
+								<div class="row">
+									<div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mui-textfield mui-textfield--float-label">
+										<input type="text" ng-model="booking.name">
+										<label>Ваше имя</label>
+									</div>
+									<div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mui-textfield mui-textfield--float-label">
+										<input type="text" ng-model="booking.phone">
+										<label>Ваш телефон</label>
+									</div>
+									<div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mui-textfield mui-textfield--float-label">
+										<input type="text" class="date">
+										<label>Выберите дату</label>
+									</div>
+									<div class="col col-12 col-sm-6 col-md-8 col-lg-9 col-xl-9">
+										<div style="float: left; display: block;">
+											<a class="mui-btn mui-btn--primary cnt" ng-click="minus()"><i class="fa fa-minus"></i></a>
+										</div>
+										<div style="float: left; display: block; padding-left: 10px; padding-right: 10px; width: 170px;" class="mui-textfield mui-textfield--float-label">
+											<input type="text" ng-model="booking.persons_number" class="cnt">
+											<label>Количество человек</label>
+										</div>
+										<div style="float: left; display: block;">
+											<a class="mui-btn mui-btn--primary cnt" ng-click="plus()"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+									<div class="col col-12 col-sm-12 row">
+										<p>Выберите время</p>
+									</div>
+									<div class="col col-12 col-sm-12 row times">
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('00:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '00:00' }">00:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('00:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '00:30' }">00:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('01:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '01:00' }">01:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('01:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '01:30' }">01:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('02:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '02:00' }">02:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('02:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '02:30' }">02:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('03:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '03:00' }">03:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('03:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '03:30' }">03:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('04:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '04:00' }">04:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('04:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '04:30' }">04:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('05:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '05:00' }">05:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('05:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '05:30' }">05:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('06:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '06:00' }">06:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('06:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '06:30' }">06:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('07:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '07:00' }">07:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('07:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '07:30' }">07:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('08:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '08:00' }">08:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('08:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '08:30' }">08:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('09:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '09:00' }">09:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('09:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '09:30' }">09:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('10:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '10:00' }">10:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('10:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '10:30' }">10:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('11:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '11:00' }">11:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('11:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '11:30' }">11:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('12:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '12:00' }">12:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('12:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '12:30' }">12:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('13:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '13:00' }">13:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('13:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '13:30' }">13:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('14:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '14:00' }">14:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('14:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '14:30' }">14:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('15:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '15:00' }">15:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('15:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '15:30' }">15:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('16:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '16:00' }">16:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('16:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '16:30' }">16:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('17:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '17:00' }">17:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('17:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '17:30' }">17:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('18:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '18:00' }">18:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('18:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '18:30' }">18:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('19:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '19:00' }">19:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('19:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '19:30' }">19:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('20:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '20:00' }">20:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('20:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '20:30' }">20:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('21:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '21:00' }">21:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('21:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '21:30' }">21:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('22:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '22:00' }">22:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('22:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '22:30' }">22:30</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('23:00');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '23:00' }">23:00</a></div>
+										<div class="col col-6 col-sm-3 col-md-1"><a ng-click="settime('23:30');" class="mui-btn time" onclick="$('.time').removeClass('active'); $(this).addClass('active');" ng-class="{ 'disabled' : now > '23:30' }">23:30</a></div>
+									</div>
+								    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+									    <textarea type="text" ng-model="booking.comment" rows="10"></textarea>
+									    <label>Комментарии к брони</label>
+								    </div>
+									<div class="col col-12 col-sm-12">
+										<button class="mui-btn mui-btn--primary" ng-disabled="booking.name == '' || booking.phone == '' || booking.time == ''">Забронировать</button>
+									</div>
+								</div>
+							</form>
+							<script type="text/javascript">
+									$(function(){
+										$('.date').attr('date', dateFormat(new Date(), 'yyyy-mm-dd'));
+										var now = new Date;
+										now.setHours(0,0,0,0);
+										pickmeup.defaults.locales['ru'] = {
+											days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+											daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+											daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+											months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+											monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+										};
+										pickmeup('.date', {
+											locale: 'ru',
+											format: 'A, B e, Y ',
+											position       : 'left',
+											hide_on_select : true,
+											render : function (date) {
+											    if (date < now) {
+												return {disabled : true, class_name : 'date-in-past'};
+											    }
+											} 
+										});
+										$('.date').on('pickmeup-change', function (e) {
+											date = new Date(e.detail.date);
+											$('.date').attr('date', dateFormat(date, 'yyyy-mm-dd'));
+											if (date > now) { $('.time').removeClass('disabled'); return {}; }
+											else {
+											    hr = new Date;
+											    hr = hr.getHours() + ":" + hr.getMinutes();
+											    if (hr >= '00:00' && !$('.times>div:nth-child(1) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(1) .time').addClass('disabled'); }
+											    if (hr >= '00:30' && !$('.times>div:nth-child(2) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(2) .time').addClass('disabled'); }
+											    if (hr >= '01:00' && !$('.times>div:nth-child(3) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(3) .time').addClass('disabled'); }
+											    if (hr >= '01:30' && !$('.times>div:nth-child(4) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(4) .time').addClass('disabled'); }
+											    if (hr >= '02:00' && !$('.times>div:nth-child(5) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(5) .time').addClass('disabled'); }
+											    if (hr >= '02:30' && !$('.times>div:nth-child(6) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(6) .time').addClass('disabled'); }
+											    if (hr >= '03:00' && !$('.times>div:nth-child(7) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(7) .time').addClass('disabled'); }
+											    if (hr >= '03:30' && !$('.times>div:nth-child(8) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(8) .time').addClass('disabled'); }
+											    if (hr >= '04:00' && !$('.times>div:nth-child(9) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(9) .time').addClass('disabled'); }
+											    if (hr >= '04:30' && !$('.times>div:nth-child(10) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(10) .time').addClass('disabled'); }
+											    if (hr >= '05:00' && !$('.times>div:nth-child(11) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(11) .time').addClass('disabled'); }
+											    if (hr >= '05:30' && !$('.times>div:nth-child(12) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(12) .time').addClass('disabled'); }
+											    if (hr >= '06:00' && !$('.times>div:nth-child(13) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(13) .time').addClass('disabled'); }
+											    if (hr >= '06:30' && !$('.times>div:nth-child(14) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(14) .time').addClass('disabled'); }
+											    if (hr >= '07:00' && !$('.times>div:nth-child(15) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(15) .time').addClass('disabled'); }
+											    if (hr >= '07:30' && !$('.times>div:nth-child(16) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(16) .time').addClass('disabled'); }
+											    if (hr >= '08:00' && !$('.times>div:nth-child(17) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(17) .time').addClass('disabled'); }
+											    if (hr >= '08:30' && !$('.times>div:nth-child(18) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(18) .time').addClass('disabled'); }
+											    if (hr >= '09:00' && !$('.times>div:nth-child(19) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(19) .time').addClass('disabled'); }
+											    if (hr >= '09:30' && !$('.times>div:nth-child(20) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(20) .time').addClass('disabled'); }
+											    if (hr >= '10:00' && !$('.times>div:nth-child(21) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(21) .time').addClass('disabled'); }
+											    if (hr >= '10:30' && !$('.times>div:nth-child(22) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(22) .time').addClass('disabled'); }
+											    if (hr >= '11:00' && !$('.times>div:nth-child(23) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(23) .time').addClass('disabled'); }
+											    if (hr >= '11:30' && !$('.times>div:nth-child(24) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(24) .time').addClass('disabled'); }
+											    if (hr >= '12:00' && !$('.times>div:nth-child(25) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(25) .time').addClass('disabled'); }
+											    if (hr >= '12:30' && !$('.times>div:nth-child(26) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(26) .time').addClass('disabled'); }
+											    if (hr >= '13:00' && !$('.times>div:nth-child(27) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(27) .time').addClass('disabled'); }
+											    if (hr >= '13:30' && !$('.times>div:nth-child(28) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(28) .time').addClass('disabled'); }
+											    if (hr >= '14:00' && !$('.times>div:nth-child(29) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(29) .time').addClass('disabled'); }
+											    if (hr >= '14:30' && !$('.times>div:nth-child(30) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(30) .time').addClass('disabled'); }
+											    if (hr >= '15:00' && !$('.times>div:nth-child(31) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(31) .time').addClass('disabled'); }
+											    if (hr >= '15:30' && !$('.times>div:nth-child(32) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(32) .time').addClass('disabled'); }
+											    if (hr >= '16:00' && !$('.times>div:nth-child(33) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(33) .time').addClass('disabled'); }
+											    if (hr >= '16:30' && !$('.times>div:nth-child(34) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(34) .time').addClass('disabled'); }
+											    if (hr >= '17:00' && !$('.times>div:nth-child(35) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(35) .time').addClass('disabled'); }
+											    if (hr >= '17:30' && !$('.times>div:nth-child(36) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(36) .time').addClass('disabled'); }
+											    if (hr >= '18:00' && !$('.times>div:nth-child(37) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(37) .time').addClass('disabled'); }
+											    if (hr >= '18:30' && !$('.times>div:nth-child(38) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(38) .time').addClass('disabled'); }
+											    if (hr >= '19:00' && !$('.times>div:nth-child(39) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(39) .time').addClass('disabled'); }
+											    if (hr >= '19:30' && !$('.times>div:nth-child(40) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(40) .time').addClass('disabled'); }
+											    if (hr >= '20:00' && !$('.times>div:nth-child(41) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(41) .time').addClass('disabled'); }
+											    if (hr >= '20:30' && !$('.times>div:nth-child(42) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(42) .time').addClass('disabled'); }
+											    if (hr >= '21:00' && !$('.times>div:nth-child(43) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(43) .time').addClass('disabled'); }
+											    if (hr >= '21:30' && !$('.times>div:nth-child(44) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(44) .time').addClass('disabled'); }
+											    if (hr >= '22:00' && !$('.times>div:nth-child(45) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(45) .time').addClass('disabled'); }
+											    if (hr >= '22:30' && !$('.times>div:nth-child(46) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(46) .time').addClass('disabled'); }
+											    if (hr >= '23:00' && !$('.times>div:nth-child(47) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(47) .time').addClass('disabled'); }
+											    if (hr >= '23:30' && !$('.times>div:nth-child(48) .time').hasClass('disabled')) { console.log($('.times>div:nth-child(1) .time')); $('.times>div:nth-child(48) .time').addClass('disabled'); }
+											    return {};
+											}
+										});
+									});
+							</script>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						</div>
+					</div>			
+				</div>
+			</div>
+		</div>
+		<div class="row col-12" ng-show="tab == 3">
+			<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" ng-repeat="promotion in promotions">
+				<div class="card" style="width: 100%; margin-bottom: 30px;">
+					<img src="/uploads/{{ promotion.cover_image }}" class="card-img-top">
+					<div class="card-body text-center">
+						<h4 class="card-title">{{ promotion.title }}</h4>
+						<p style="text-align:center; font-style: italic;">от заведения "<a href="/{{ place.slug }}">{{ place.name }}</a>"</p>
+						<p style="text-align:left;">{{ promotion.content.substring(0, 80) }}...</p>
+						<a href="/promotions/{{ promotion.id }}" class="mui-btn mui-btn--primary">Подробнее</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="row" ng-show="tab == 4">
+			<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" ng-repeat="promotion in news">
+				<div class="card" style="width: 100%; margin-bottom: 30px;">
+					<img src="/uploads/{{ promotion.cover_image }}" class="card-img-top">
+					<div class="card-body text-center">
+						<h4 class="card-title">{{ promotion.title }}</h4>
+						<p style="text-align:left;">{{ promotion.content }}...</p>
+						<a href="/news/{{ promotion.id }}" class="mui-btn mui-btn--primary">Подробнее</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="row" ng-show="tab == 5">
+			<div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-3 photoblock" ng-repeat="photo in place.images">
+			    <a rel="example_group"  href="/uploads/{{ photo }}" fancyboxable>
+					<img src="/uploads/{{ photo }}" class="img-fluid">
+			    </a> 
+			</div>														
+		</div>
+		<div class="row" ng-show="tab == 6">
+			<div class="col-12" ng-repeat="review in reviews">
+				<div class="card" style="width: 100%; margin-bottom: 30px;">
+					<div class="card-body">
+					    <h4><a href="/profile/{{ review.user_id }}">{{ review.first_name }} {{ review.last_name }}</a></h4>
+						<p><i>{{ review.create_date  | date : 'yyyy-MM-dd hh:mm' }}</i></p>
+						<p>{{ review.review }}</p>
+						<p ng-show="review.answer_date != null"><i><b>Ответ заведения: </b> {{ review.answer }}</i></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<a ng-click="getReviews()" class="mui-btn mui-btn--primary">Ещё отзывы</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

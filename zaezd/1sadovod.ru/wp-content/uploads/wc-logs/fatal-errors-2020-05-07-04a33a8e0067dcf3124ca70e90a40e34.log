@@ -1,0 +1,72 @@
+2020-05-07T23:05:45+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php:681
+Stack trace:
+#0 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(287): import_product_data('')
+#1 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/u1046718/data/www/1sadovod.ru/wp-admin/admin-ajax.php(190): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 681
+
+2020-05-07T23:07:51+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php:681
+Stack trace:
+#0 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(287): import_product_data('')
+#1 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/u1046718/data/www/1sadovod.ru/wp-admin/admin-ajax.php(190): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 681
+
+2020-05-07T23:08:01+00:00 CRITICAL Maximum execution time of 300 seconds exceeded в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 620
+
+2020-05-07T23:08:40+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php:681
+Stack trace:
+#0 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(287): import_product_data('')
+#1 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/u1046718/data/www/1sadovod.ru/wp-admin/admin-ajax.php(175): do_action('wp_ajax_import_...')
+#4 {main}
+  thrown в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 681
+
+2020-05-07T23:09:38+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php:681
+Stack trace:
+#0 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(287): import_product_data('')
+#1 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/u1046718/data/www/1sadovod.ru/wp-admin/admin-ajax.php(175): do_action('wp_ajax_import_...')
+#4 {main}
+  thrown в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 681
+
+2020-05-07T23:10:34+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php:682
+Stack trace:
+#0 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(287): import_product_data('')
+#1 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/u1046718/data/www/1sadovod.ru/wp-admin/admin-ajax.php(175): do_action('wp_ajax_import_...')
+#4 {main}
+  thrown в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 682
+
+2020-05-07T23:12:45+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php:683
+Stack trace:
+#0 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(287): import_product_data('')
+#1 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/u1046718/data/www/1sadovod.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/u1046718/data/www/1sadovod.ru/wp-admin/admin-ajax.php(175): do_action('wp_ajax_import_...')
+#4 {main}
+  thrown в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 683
+
+2020-05-07T23:24:57+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+
+2020-05-07T23:24:59+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+
+2020-05-07T23:26:09+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+
+2020-05-07T23:26:18+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+
+2020-05-07T23:29:04+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+
+2020-05-07T23:29:15+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+
+2020-05-07T23:29:16+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+
+2020-05-07T23:29:18+00:00 CRITICAL syntax error, unexpected ' ' (T_STRING) в /var/www/u1046718/data/www/1sadovod.ru/wp-content/themes/envo-ecommerce/functions.php на строке 647
+

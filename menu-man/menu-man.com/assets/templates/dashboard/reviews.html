@@ -1,0 +1,75 @@
+<div class="container content" ng-controller="dashboardReviewsController as drCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li><a href="/dashboard/menu/{{ place.slug }}">Меню</a></li>
+				<li><a href="/dashboard/goodicons/{{ place.slug }}">Фотографии блюд</a></li>
+				<li class="active"><a href="#">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/discount/{{ place.slug }}">Скидки</a></li>
+				<li><a href="/dashboard/booking/{{ place.slug }}">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li><a href="/dashboard/news/{{ place.slug }}">Новости</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h1>Отзывы</h1>
+			<a class="mui-btn mui-btn--primary publish" ng-click="all()">Все</a>
+			<a class="mui-btn mui-btn--primary publish" ng-click="answered()">Отвеченные</a>
+			<a class="mui-btn mui-btn--primary publish" ng-click="notanswered()">Неотвеченные</a>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-if="reviews.length == 0">
+			<h2 class="text-center">На данный момент отзывов нет</h2>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 30px; margin-top: 30px;" ng-show="filter == 1">
+			<div class="reviewcard mdl-card row col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-repeat="(key,review) in reviews track by $index" ng-class="{ 'notans': review.answer_date == null, 'ans': review.answer_date != null}" style="margin-bottom: 15px;">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mdl-card__title" ng-class="{ 'notanswered': review.answer_date == null, 'answered': review.answer_date != null}" style="color: #fff; width: 100%;">
+				    <h2 class="mdl-card__title-text">Пользователь <a href="/profile/{{ review.user_id }}">{{ review.first_name }} {{ review.last_name }} - {{ review.email }}</a> оставил отзыв</h2>
+				</div>
+				<div class="mdl-card__supporting-text col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<p class="review">{{ review.review }}</p>
+					<p class="answer" ng-show="review.answer_date != null"><b>Ответ от заведения</b> <small>Дата: {{ review.create_date | date:'d MMMM yyyy, HH:mm' }}</small><br>
+					{{ review.answer }}</p>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row textarea" ng-show="review.answer_date == null">
+						<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label textfield">
+							<textarea ng-model="review.answer" rows="5"></textarea>
+							<label>Ваш ответ на отзыв</label>
+						</div>
+					</div>
+					<!--<a style="margin:0px !important;" ng-show="review.published == false" class="mui-btn mui-btn--primary publish" ng-click="publish(review.id); review.published = true;">Опубликовать</a>-->
+					<a class="mui-btn mui-btn--primary" ng-show="review.answer_date == null" ng-click="saveanswer(review.id, review.answer); review.answer_date = 1;">Отправить ответ</a>
+					<a style="margin:0px !important;" ng-show="review.published == true" class="mui-btn mui-btn--danger unpublish" ng-click="unpublish(review.id, key);">Удалить отзыв</a>
+				</div>
+			</div>
+		</div>
+	<script>
+		$(function() {
+			$('.ans').on('click', function() {
+				$(this).hide();
+				$(this).parent().children('.textarea').html('<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label textfield"><textarea type="text" name="yourans" rows="5"></textarea><label>Ваш ответ на отзыв</label></div><div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><button class="mui-btn mui-btn--primary saveanswer">Отправить ответ</button></div>');
+			});
+			$(document).on('click', '.saveanswer', function() {
+				var bord = $(this).parent().parent();
+				var answer = $(this).parent().parent().children('.textfield').children('textarea').val();
+				$.ajax({
+					url: '/wp-admin/admin-post.php',
+					method: 'post',
+					data: {
+						action : 'saveReview',
+						answer : answer,
+						id : $(bord).parent().attr('data-id')
+					},
+					success: function() {
+						$(bord).parent().parent().children('.mdl-card__title').css('background', '#28a745');					
+						$(bord).parent().children('.answer').html('<b>Ответ от заведения:</b> ' + answer);
+						$(bord).remove();
+					}
+				});
+			});
+		});
+	</script>
+	</div>
+</div> 

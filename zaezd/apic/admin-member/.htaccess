@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+AuthUserFile /home/web/js/apic/home/www/.htpasswd
+AuthName "APIC Site"
+AuthType Basic
+<LIMIT GET POST>
+require user admin
+</LIMIT>
+php_value               include_path            .:/home/web/apic.ru/www/apic.ru/www/blocks
+php_value               display_errors           0
+
+RewriteEngine Off

@@ -1,0 +1,72 @@
+body{margin:0; font-family: Verdana, Helvetica, sans-serif; font-size:12px;}
+
+p{margin:16px 0;}
+
+a{color:#0096ff;}
+a:hover{text-decoration:none;}
+
+.mom{text-align: center; padding-top:60px;}
+
+.box{
+	border:1px solid #BBB; display:inline-block; padding:24px 32px 16px 32px; margin:0 auto 80px auto; background-color:#FFF; position:relative;
+	box-shadow:0 3px 15px #DDD; -moz-box-shadow:0 3px 15px #DDD; -webkit-box-shadow:0 3px 15px #DDD;
+}
+
+label{display:block; text-align: left; color:#0096ff;}
+
+form{text-align: left;}
+form p{margin-top:2px;}
+
+input{padding:8px 12px; font-size:14px; width:200px;}
+.submit{width:228px;}
+
+.formtable input.submit{font-size:15px; font-weight:bold; padding:5px 15px; color:#006bb6; cursor:pointer; width:auto;}
+
+.links{font-size:11px; margin:-6px 0 12px 0;}
+.links p{margin:6px 0;}
+
+#error{font-weight:bold; color:#FF0000}
+
+.break{clear:both;}
+
+.padL{float:left; width:400px; margin-right:40px;}
+.padR{float:right; width:400px;}
+
+.formtable input, .formtable textarea{padding:0; width:99%;}
+.formtable input[type=radio],.formtable input[type=checkbox] {width:10px;margin-right: 5px;}
+.formtable textarea{height:300px;}
+
+h1{font-size:22px;}
+h2{font-size:18px; margin:32px 0 16px 0;}
+
+.f{margin-top:0;}
+
+form.text{color:#333;}
+form.text input, form.text textarea, form.text select{border:none; font-size:12px; background:#FFF; color:#333;}
+
+#success{font-weight:bold; color:#009600;}
+
+#welcome{position:absolute; z-index:1; top:-35px; right:0; text-align:right; font-size:11px; color:#999;}
+#welcome p{margin:0;}
+#welcome p a{color:#999;}
+
+.formtable input.auto{width:auto;}
+
+table{width:100%; border-spacing:0; border-collapse:collapse;}
+table td, form table th{padding:5px; border:1px dashed #E5E5E5; vertical-align:middle;text-align: left;}
+table th{font-size:11px; background-color:#EEE; text-align:center; border:1px dashed #E5E5E5;}
+
+td{text-align:center;}
+
+td.left{text-align:left;}
+td.right{text-align:right;}
+td.value{width:70%;}
+td.name{width:30%;}
+td img {float: left;margin-left: 5px;}
+
+.box.data{width:90%;}
+
+td ins{display:inline-block; text-align:left; text-decoration:none; margin:0;}
+
+.menu a {margin-left: 10px;}
+.menu a.S {font-weight: bold;}

@@ -1,0 +1,30 @@
+<div class="container content" ng-controller="promotionsController as newCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li class="active"><a href="#">Акции</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h2>Акции</h2>
+			<a class="add" href="/dashboard/promotions/add/{{ slug }}"><span class="fa fa-plus"></span> Добавить акцию</a>
+		</div>
+		<div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 promotion_card" ng-repeat="promotion in promotions">
+			<div class="row">
+				<div class="col col-12 image" style="padding-left: 0px;">
+					<img src="/uploads/{{ promotion.cover_image }}" style="width: 100%;">
+				</div>
+				<div class="col col-12 desc" style="padding-right: 0px;">
+					<h2>{{ promotion.title }} <!--<span class="badge badge-success" ng-show="promotion.visibility == true">Опубликовано</span> <span class="badge badge-danger" ng-show="promotion.visibility == false">Не опубликовано</span>--> {{ promotion.visitors }} просмотров</h2>
+					<p>{{ promotion.content }}</p>
+					<a class="mui-btn mui-btn--primary" href="/dashboard/promotions/edit/{{ slug }}/{{ promotion.id }}">Изменить акцию</a>
+					<a class="mui-btn mui-btn--danger" href ng-click="delete(promotion.id)">Удалить акцию</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div> 

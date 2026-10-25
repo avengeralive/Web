@@ -1,0 +1,6 @@
+AuthUserFile /home/web/js/apic/home/www/.htpasswd
+AuthName "Authorization"
+AuthType Basic
+<LIMIT GET POST>
+require user admin
+</LIMIT>

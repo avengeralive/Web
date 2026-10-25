@@ -1,0 +1,31 @@
+.prodlist{display:table; width:100%; border-collapse:collapse; border-spacing:0; margin:12px 0;}
+.prodlist ul, .prodlist ol{display:table-row; list-style:none; margin:0; padding:0;}
+.prodlist ul:hover li, .prodlist ul.odd:hover li{background-color:#fffeb9;}
+.prodlist li{display:table-cell; margin:0; padding:5px; border:1px solid #DDD; vertical-align:top;}
+.prodlist li.btn{width:21px;vertical-align:middle;}
+.prodlist li.btn img{width:21px; height:21px; display:block; opacity:0.8; filter:alpha(opacity=80);}
+.prodlist li.btn img:hover{background-color:#baecff; opacity:1; filter:alpha(opacity=100);}
+
+.prodlist ul.odd li{background-color:#F5F5F5;}
+.prodlist ul.off li{color:#BBB;}
+.prodlist ul.off li a{color:#a6c8d9;}
+.prodlist ul.off li img{opacity:0.3; filter:alpha(opacity=30);}
+.prodlist ul.off li.btn.on img{opacity:0.8; filter:alpha(opacity=80);}
+
+.prodlist li.flt{vertical-align:middle;}
+.prodlist li.chb{width:13px;vertical-align:middle;}
+.prodlist li.chb input{margin:0; display:block;}
+
+.prodlist ol li{font-size:11px; background-color:#CCC; padding:1px 5px;}
+.prodlist ol li span, .prodlist ol li a{padding:0 5px;}
+.prodlist ol li span{font-weight:bold;}
+
+.prodlist.auto{width:auto;}
+.prodlist.auto li, .prodlist.auto ul:hover li{background-color:#F5F5F5;}
+.prodlist.auto li.btn img:hover{background-color:#FFFF00;}
+
+input.inpu{border:1px solid #1b3b4c; padding:2px 4px; font-size:12px; width:150px; color:#999;}
+input.sbmt{border:1px solid #1b3b4c; background-color:#1b6087; color:#FFF; padding:2px 8px; font-size:12px; font-weight:bold; width:auto; cursor:pointer;}
+input.sbmt:hover{color:#FFFF00;}
+
+.S {font-weight: bold;color: #000000;}

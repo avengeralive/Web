@@ -1,0 +1,167 @@
+<div class="menueditor container content" ng-controller="dashboardMenuController as menuCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li class="active"><a href="#">Меню</a></li>
+				<li><a href="/dashboard/goodicons/{{ place.slug }}">Фотографии блюд</a></li>
+				<li><a href="/dashboard/reviews/{{ place.slug }}">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/discount/{{ place.slug }}">Скидки</a></li>
+				<li><a href="/dashboard/booking/{{ place.slug }}">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li><a href="/dashboard/news/{{ place.slug }}">Новости</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mui-select">
+		    <p>Копировать меню из существующих</p>
+			<select id="readymenu" ng-model="menuforcopy">
+			    <option ng-repeat="place in places" value="{{ place.id }}">{{ place.name }}</option>
+			
+			</select>
+		</div>
+		<div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+			<button class="mui-btn mui-btn--primary" id="import" ng-click="getnewmenu()">Импортировать</button>
+		</div>
+	</div>
+	<form ng-submit="save()">
+		<div class="row" id="allMenu">
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-repeat="(key,value) in menu track by $index">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 menublock row" ng-hide="menu[key].place_id == -1">
+					<div class="col col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="menu[key].name">
+						<label>Название меню (например: Основное, Винная карта, Кальянная карта)</label>
+					</div>
+					<div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 mui-checkbox checkbox">
+						<label><input type="checkbox" ng-model="menu[key].visibility" ng-change="changeMenuVisibility(key)"> Опубликовать</label>
+					</div>
+					<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+						<a class="btn-link text-danger" ng-click="deleteMenu(key);"><span class="fa fa-trash"></span></a>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 group row" ng-repeat="(key2,value2) in menu[key].groups track by $index">					
+						<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 groupblock row" ng-hide="menu[key].groups[key2].menu_id == -1">
+							<div class="col col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 mui-textfield mui-textfield--float-label">
+								<input type="text" ng-model="menu[key].groups[key2].name">
+								<label>Например: завтраки, супы, вторые блюда, чайная карта или алкогольные напитки</label>
+							</div>
+							<div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 mui-checkbox checkbox">
+								<label><input type="checkbox" ng-model="menu[key].groups[key2].visibility" ng-change="changeGroupVisibility(key, key2)" ng-disabled="menu[key].visibility == false"> Опубликовать</label>
+							</div>
+							<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+								<a class="btn-link text-danger" ng-click="deleteGroup(key, key2);"><span class="fa fa-trash"></span></a>
+							</div>
+							<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 subgroup" ng-repeat="(key3,value3) in menu[key].groups[key2].subgroups track by $index">
+
+								<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 subgroupblock row" ng-hide="menu[key].groups[key2].subgroups[key3].group_id == -1">
+									<div class="col col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 mui-textfield mui-textfield--float-label">
+										<input type="text" ng-model="menu[key].groups[key2].subgroups[key3].name">
+										<label>Например: завтраки, супы, вторые блюда, чайная карта или алкогольные напитки</label>
+									</div>
+									<div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 mui-checkbox checkbox">
+										<label><input type="checkbox" ng-model="menu[key].groups[key2].subgroups[key3].visibility"  ng-change="changeSubGroupVisibility(key, key2, key3)" ng-disabled="menu[key].groups[key2].visibility == false"> Опубликовать</label>
+									</div>
+									<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+										<a class="btn-link text-danger" ng-click="deleteSubgroup(key, key2, key3);"><span class="fa fa-trash"></span></a>
+									</div>
+									<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 goods" ng-repeat="(key4,value4) in menu[key].groups[key2].subgroups[key3].goods track by $index">
+										<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 goodblock row" ng-hide="menu[key].groups[key2].subgroups[key3].goods[key4].group_id == -1">
+											<div class="col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mui-textfield mui-textfield--float-label">
+												<input type="text" ng-model="menu[key].groups[key2].subgroups[key3].goods[key4].name">
+												<label>Название блюда</label>
+											</div>
+											<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 mui-textfield mui-textfield--float-label">
+												<input type="text" ng-model="menu[key].groups[key2].subgroups[key3].goods[key4].price">
+												<label>Цена</label>
+											</div>
+											<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 mui-textfield mui-textfield--float-label">
+												<input type="text" ng-model="menu[key].groups[key2].subgroups[key3].goods[key4].portion.value">
+												<label>Порция</label>
+											</div>
+											<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 mui-select">
+												<select ng-model="menu[key].groups[key2].subgroups[key3].goods[key4].portion.measure">
+													<option value="гр">гр</option>
+													<option value="кг">кг</option>
+													<option value="л">л</option>
+													<option value="мл">мл</option>
+													<option value="шт">шт</option>
+												</select>
+											</div>
+											<div class="col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mui-textfield mui-textfield--float-label">
+												<input type="text" ng-model="menu[key].groups[key2].subgroups[key3].goods[key4].composition">
+												<label>Состав блюда</label>
+											</div>
+											<div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 mui-checkbox checkbox">
+												<label><input type="checkbox" ng-model="menu[key].groups[key2].subgroups[key3].goods[key4].visibility"  ng-disabled="menu[key].groups[key2].subgroups[key3].visibility == false"> Опубликовать</label>
+											</div>
+											<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+												<a class="btn-link text-danger" ng-click="deleteGood(key, key2, key3, key4);"><span class="fa fa-trash"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+										<a class="add" ng-click="addGoodToSub(key, key2, key3);"><span class="fa fa-plus"></span> Добавить блюдо</a>
+									</div>
+								</div>
+
+							</div>
+						    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+								<a class="add" ng-click="addSubgroup(key, key2);"><span class="fa fa-plus"></span> Добавить подгруппу</a>
+							</div>
+							<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 goods" ng-repeat="(key4,value4) in menu[key].groups[key2].goods track by $index">
+								<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 goodblock row" ng-hide="menu[key].groups[key2].goods[key4].group_id == -1">
+									<div class="col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mui-textfield mui-textfield--float-label">
+										<input type="text" ng-model="menu[key].groups[key2].goods[key4].name">
+										<label>Название блюда</label>
+									</div>
+									<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 mui-textfield mui-textfield--float-label">
+										<input type="text" ng-model="menu[key].groups[key2].goods[key4].price">
+										<label>Цена</label>
+									</div>
+									<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 mui-textfield mui-textfield--float-label">
+										<input type="text" ng-model="menu[key].groups[key2].goods[key4].portion.value">
+										<label>Порция</label>
+									</div>
+									<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 mui-select">
+										<select ng-model="menu[key].groups[key2].goods[key4].portion.measure">
+											<option value="гр">гр</option>
+											<option value="кг">кг</option>
+											<option value="л">л</option>
+											<option value="мл">мл</option>
+											<option value="шт">шт</option>
+										</select>
+									</div>
+									<div class="col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mui-textfield mui-textfield--float-label">
+										<input type="text" ng-model="menu[key].groups[key2].goods[key4].composition">
+										<label>Состав блюда</label>
+									</div>
+									<div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 mui-checkbox checkbox">
+										<label><input type="checkbox" ng-model="menu[key].groups[key2].goods[key4].visibility"  ng-disabled="menu[key].groups[key2].visibility == false"> Опубликовать</label>
+									</div>
+									<div class="col col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+										<a class="btn-link text-danger" ng-click="deleteGoodGr(key, key2, key4);"><span class="fa fa-trash"></span></a>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+								<a class="add" ng-click="addGood(key, key2);"><span class="fa fa-plus"></span> Добавить блюдо</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<a class="add" ng-click="addGroup(key);"><span class="fa fa-plus"></span> Добавить группу блюд</a>
+					</div>
+				</div>
+	
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<a class="add" ng-click="addMenu();"><span class="fa fa-plus"></span> Добавить меню</a>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<button class="mui-btn mui-btn--primary" id="saveAll">Сохранить</button>
+			</div>
+		</div>
+	</form>
+</div> 

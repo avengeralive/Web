@@ -1,0 +1,67 @@
+<div class="container content" ng-controller="loyalityController as newCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li class="active"><a href="#">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+    <div class="row">
+	<div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+
+			<a class="mui-btn" href="/dashboard/loyality/add/{{ slug }}"><i class="fa fa-plus"></i> Создать карту лояльности</a>
+	</div>
+	<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		<hr>
+		<h2>Карты лояльности</h2>
+	</div>
+	<div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 loyality_card" ng-repeat="(key,loyal) in loyality track by $index">
+		<div class="row">
+			<p><span class="beg">Карта:</span> <span class="code">{{ loyal.title }}</span></p>
+		    <p><span class="beg">Описание:</span><br>{{ loyal.content.substring(0, 50) }}...</p>
+		    <hr>
+		    <a class="text-success" href="/dashboard/loyality/edit/{{ slug }}/{{ loyal.id }}"><i class="fa fa-edit"></i> Изменить карту</a>
+			<a class="text-success" href="#" ng-click="loyalitydata.card_id = loyal.id; loyalitydata.title = loyal.title" data-toggle="modal" data-target="#giveloyality"><i class="fa fa-user"></i> Выдать карту пользователю</a>
+			<a class="text-danger" ng-click="delete(loyal.id, key)"><i class="fa fa-trash"></i> Удалить</a>
+		</div>
+	</div>
+	<div class="modal fade" id="giveloyality" tabindex="-1" role="dialog" aria-labelledby="loyalitylabel" aria-hidden="true">		
+	    <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		    <div class="modal-header">
+			<h5 class="modal-title" id="layalitylabel"></h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			</button>
+		    </div>							
+		    <div class="modal-body">
+			<div class="container-fluid">
+			    <div class="row">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+				    <form ng-submit="giveloyality()">
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="loyalitydata.phone">
+						<label>Мобильный телефон клиента или e-mail</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<a class="mui-btn mui-btn--primary" ng-click="checkusers();"><span class="fa fa-search"></span> Найти пользователя</a>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<p ng-repeat="userbyphone in usersbyphone" ng-show="userbyphone.exists == null"><input type="radio" ng-model="loyalitydata.user_id" value="{{ userbyphone.id }}"> {{ userbyphone.first_name }} {{ userbyphone.last_name }} {{ userbyphone.email }} {{ userbyphone.phone }}</p>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					    <button class="mui-btn mui-btn--primary">Выдать карту</button>
+					</div>
+				    </form>
+				</div>
+			    </div>
+			</div>
+		    </div>	
+		</div>
+	    </div>					
+	</div>
+    </div>
+</div> 

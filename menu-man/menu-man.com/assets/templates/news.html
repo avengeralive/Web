@@ -1,0 +1,19 @@
+<div ng-controller="newsController2 as plCntr" class="container" style="padding-top: 50px; padding-bottom: 50px;">
+	<div class="row">
+		<div class="col-12 col-sm-12 row">
+			<div class="col-12 col-sm-6 col-md-4" ng-repeat="promotion in news">
+				<div class="card" style="width: 100%; margin-bottom: 30px;">
+					<img src="/uploads/{{ promotion.cover_image }}" class="card-img-top">
+					<div class="card-body text-center">
+						<h4 class="card-title">{{ promotion.title }}</h4>
+						<p style="text-align:left;">{{ promotion.content }}...</p>
+						<a href="/news/{{ promotion.id }}" class="mui-btn mui-btn--primary">Подробнее</a>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+				<a ng-click="more();" class="mui-btn mui-btn--primary" style="width:33%; margin-left: 33%;">Ещё новости</a>
+			</div>
+		</div>
+	</div>
+</div>

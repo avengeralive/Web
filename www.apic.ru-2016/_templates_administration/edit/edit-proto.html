@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{CMS_ADMIN_NAME}} / Редактирование папки {{CMS_ADMIN_CURRENT_PAGE_NAME}}</title>
+
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+<script src="/bootstrap/js/jquery.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+<script src="/i/datepicker/date-picker.js"></script>
+
+
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+
+<ul class="breadcrumb">
+  <li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a> <span class="divider">/</span></li>
+  <li><a href="{{HTTPS_BASE_ADMIN}}edit.php">Редактирование страниц</a> <span class="divider">/</span></li>
+  <li>Редактирование <i>{{CMS_ADMIN_CURRENT_PAGE_NAME}}</i>
+</ul>
+
+<hr class="divider" />
+ 
+ 
+ 
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span2">
+	<img src="{{CMS_ADMIN_IMAGES_BASE}}{{document.type}}.gif" height="35" width="35" alt="{{document.type}}" />
+	</div>
+	<div class="span2">
+	{{document.id}}
+	</div>
+	<div class="span2">
+	{{document.type}}
+	</div>
+	<div class="span3">
+	<a href="{{myurl}}">Перейти на сайт</a>
+	</div>
+	<div class="span3">
+	<a href="{{myurl}}" target="_blank">Перейти на сайт (в новом окне)</a>
+	</div>
+  </div>
+</div>	
+
+<hr class="divider" />
+
+
+
+
+	</div>
+  </div>
+</div>	
+	
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+	
+
+
+
+
+
+
+
+
+<table width="100%" cellspacing="0" class="cmsnavigation">
+<tr><td>
+
+<h2>{{error}}</h2>
+
+</td>
+<td>
+
+</td>
+</tr>
+</table>
+
+
+<form action="{{CMS_ADMIN_URL_BASE}}edit.php" method="post" enctype="multipart/form-data" name="editf" id="editf" 
+onSubmit="return checkURLName() ">
+<input type="hidden" name="ID" value="edit">
+<input type="hidden" name="document_id" value="{{document.id}}">
+<table width="100%" id="document">
+
+<tr class="treeheader"><td>&nbsp;</td><td width="80%"><input type="submit"  class="btn btn-success btn-large" value=" Изменить &raquo; "></td></tr>
+
+<tr class="treeheader"><td>URL</td><td>&nbsp;</td></tr>
+
+<tr class="treeheader"><td>Полный адрес:</td><td>{{myurl}}</td></tr>
+
+
+<tr><td>URL. Только английские буквы и цифры. Желательно <strong>не менять!</strong></td>
+<td id="c8"><input type="text" name="url" value="{{url}}" size="80"  style="width:95%"  maxlength="255" onchange="colorize(this);" /></td></tr>
+
+<!--
+<tr class="treeheader"><td>SEO поля</td><td>&nbsp;</td></tr>
+-->
+
+<tr class="{{status}}"><td>Отключить документ:
+</td><td id="c7"><input type="checkbox" name="status" value="disabled" {{checked}} onchange="colorize(this);"></td></tr>
+<tr class="{{statushidden}}"><td>Статус спрятанности. Не показывать ссылку в меню
+</td><td id="c8"><input type="checkbox" name="statushidden" value="disabled" {{statushiddenchecked}} onchange="colorize(this);"></td></tr>
+
+
+<tr class="treeheader"><td>Основные поля</td><td>&nbsp;</td></tr>
+
+<tr><td>Дата публикации. Строго в формате 31.12.2011
+</td><td id="c0"><input type="text" name="visdate" value="{{visdate}}" size="12" maxlength="12" onchange="colorize(this);" style="width: 100px; display: inline;" />
+<a href="#" onclick="javascript:show_calendar_widget(this);" id="date_link" class="calendar-link">выбрать дату из календарика</a>
+
+</td></tr>
+
+<!--
+<span>
+<input id='date' onclick="javascript:void(0);" name="date" value="8.11.2003" class="calendar">
+<a href="#" onclick="javascript:show_calendar_widget(this);" id="date_link" class="calendar-link">...</a>
+</span>
+-->
+
+<tr><td>Название для меню и навигации.
+</td><td id="c1"><input type="text" name="name" value="{{name}}" size="80"  style="width:95%"  maxlength="255" onchange="colorize(this);" /></td></tr>
+<tr><td>Полное название страницы.
+</td><td id="c11"><input type="text" name="fullname" value="{{fullname}}" size="80"  style="width:95%"  maxlength="255" onchange="colorize(this);" /></td></tr>
+
+
+<tr><td>Анонс
+</td><td id="c2"><textarea name="anons" cols="90" rows="6"  style="width:95%" wrap="soft"  class="ckeditor" id="textarea_id2"  onchange="colorize(this);">{{anons}}</textarea>
+
+<!--
+<input type="hidden" name="anons" value="{{anons}}">
+-->
+
+</td></tr>
+<tr><td>Статья
+</td><td id="c3"><textarea name="document" cols="90" rows="30" style="width:95%" wrap="soft" class="ckeditor" id="textarea_id" onchange="colorize(this);">{{document}}</textarea>
+
+
+
+</td></tr>
+
+<tr ><td colspan=2>
+
+<hr class="divider" />
+
+
+SEO поля. Заполняются автоматически из основных полей если не заполнено.</td></tr>
+<tr><td>Заголовок документа (title).
+</td><td id="c13"><input type="text" name="seo_title"  style="width:95%"  value="{{seo_title}}" size="90" maxlength="255" onchange="colorize(this);" /></td></tr>
+<tr><td>Описание страницы для поисковых систем (description)</b>
+</td><td id="c5"><textarea name=seo_description   style="width:95%"  cols=90 rows=2 wrap="soft"  onchange="colorize(this);">{{seo_description}}</textarea></td></tr>
+<tr><td>Список ключевых слов для поисковых систем (keywords)
+</td><td id="c6"><textarea name=seo_keywords  style="width:95%"  cols=90 rows=2 wrap="soft" onchange="colorize(this);">{{seo_keywords}}</textarea></td></tr>
+
+
+<tr class="treeheader"><td colspan=2>
+
+<hr class="divider" />
+
+
+Параметры</td></tr>
+
+<!-- BEGIN BLOCK.PARAMS -->
+<tr>
+	<td>{{param.description}}</td>
+	<td>
+		<input type="hidden" name="oldparameter_{{param.name}}" value="{{param.id}}">
+		<!--
+		<input type="text"  style="width:95%"  name="parameter_{{param.name}}" value="{{param.value}}"  onchange="colorize(this);" size="90"  />
+		-->
+		<textarea type="text"  style="width:95%"  name="parameter_{{param.name}}" onchange="colorize(this);" rows="{{param.rows}}">{{param.value}}</textarea>
+	</td>
+</tr>
+<!-- END BLOCK.PARAMS -->
+
+<!-- BEGIN BLOCK.HAVERTPARAMS -->
+<tr>
+	<td>{{param.description}}</td>
+	<td style="align:left;">
+		<input type="hidden" name="oldparameter_{{param.name}}" value="{{param.old_id}}">
+	<!-- BEGIN BLOCK.RTPARAMS -->
+		<input type="radio" name="parameter_{{param.name}}" value="{{param.value}}" {{param.checked}} onchange="colorize(this);" size="90"  />{{param.help}}<br />
+	<!-- END BLOCK.RTPARAMS -->
+		<input type="radio" name="parameter_{{param.name}}" value="" {{param.checked}} onchange="colorize(this);" size="90"  />[удалить]<br />
+	</td>
+</tr>
+<!-- END BLOCK.HAVERTPARAMS -->
+
+
+<!-- BEGIN BLOCK.HAVEMULTIPARAMS -->
+<tr>
+	<td>{{param.description}}</td>
+	<td style="align:left;">
+		<table>
+	<!-- BEGIN BLOCK.MULTIPARAMS -->
+		<tr>
+		<td>
+				<p style="font-size: 15px;">{{param.help}}</p>
+		</td>
+		<td style="width: 5em;">
+		<p>
+				<input type="hidden" name="oldparameter_{{param.name}}" value="{{param.old_id}}">
+				<input type="text" name="parameter_{{param.name}}" value="{{param.value}}"  onchange="colorize(this);" size="90" maxlength="255" />
+		</p>
+		</td>
+		</tr>		
+	<!-- END BLOCK.MULTIPARAMS -->
+		</table>
+	</td>
+</tr>
+<!-- END BLOCK.HAVEMULTIPARAMS -->
+
+
+
+<!-- BEGIN BLOCK.HAVEMULTICHECKS -->
+<tr>
+	<td>{{param.description}}</td>
+	<td style="align:left;">
+		<table>
+	<!-- BEGIN BLOCK.MULTICHECKS -->
+		<tr>
+		<td>
+				<p style="font-size: 15px;">{{param.help}}</p>
+		</td>
+		<td style="width: 5em;">
+		<p>
+				<input type="hidden" name="oldparameter_{{param.name}}" value="{{param.old_id}}">
+				<input type="checkbox" name="parameter_{{param.name}}" value="1" {{param.checked}}  onchange="colorize(this);"  />
+		</p>
+		</td>
+		</tr>		
+	<!-- END BLOCK.MULTICHECKS -->
+		</table>
+	</td>
+</tr>
+<!-- END BLOCK.HAVEMULTICHECKS -->
+
+
+
+
+
+
+<!-- BEGIN BLOCK.IMGPARAMS -->
+<tr>
+	<td>{{param.description}}</td>
+	<td >
+		{{param.hint}}
+		<table>
+		<tr>
+		<td>
+		<input type="hidden" name="oldparameter_{{param.name}}" value="{{param.id}}">
+		<input type="text" name="parameter_{{param.name}}" value="{{param.value}}"   style="width:95%"  onchange="colorize(this);" size="90" maxlength="255" />
+		</td><td>
+		<input type="file" name="parameterfile_{{param.name}}"   onchange="colorize(this);" size="90" maxlength="255" />
+		</td></tr>
+		</table>
+
+	</td>
+
+</tr>
+<!-- END BLOCK.IMGPARAMS -->
+
+<tr class="treeheader"><td>&nbsp;</td><td><input type="submit"  class="btn btn-success btn-large" value=" Изменить &raquo; "></td></tr>
+
+
+<tr><td colspan=2>
+</form>
+
+
+
+<p><small>
+	created: {{created}}<br>
+	updated: {{updated}}
+</small></p>
+
+<!-- BEGIN BLOCK.VALIDATE -->
+<h3>Проверка HTML:</h3>
+
+<iframe src="{{CMS_ADMIN_VALIDATE_URL}}{{myurl}}"  height="300" width="100%"></iframe>
+<!-- END BLOCK.VALIDATE -->
+
+
+
+
+
+<!-- DATEPICKER -->
+<div class="calendar_widget" id="calendar_widget">
+<iframe id='calendar_widget_iframe' name='calendar_widget_iframe' style="border: none;" width=100% height=100% 
+ src="{{CMS_ADMIN_IMAGES_BASE}}/datepicker/calendar_widget.html"></iframe></div>
+<!-- /DATEPICKER -->
+
+
+
+<hr class="divider" />
+<h3>Особые вещи, которые можно сделать с этим документом.</h3>
+
+<div class="container-fluid">
+<div class="row-fluid" >
+    <div class="span4">
+
+<h4>Удалить!</h4>
+<p><small>Если этот документ (и все вложенные в него) <i>совсем</i> не нужны, то можно их удалить. 
+После удаления восстановить что-то можно будет только из резервной копии. </small></p>
+<form action="{{CMS_ADMIN_URL_BASE}}edit_delete.php" method="get"  onSubmit="return confirm('УДАЛИТЬ документ № {{document.id}} и все вложенные документы?') ">
+<input type="hidden" name="ID" value="delete">
+<input type="hidden" name="document_id" value="{{document.id}}">
+<input type="submit" value=" Удалить &raquo; " class="btn btn-warning btn-mini" >
+</form>
+
+	</div>
+    <div class="span4">
+<h4>Поменять тип!</h4>
+<p><small>Если этот документ должен выгледеть по другому &dash; можно ему сменить тип. 
+Значения всяких <i>параметров</i> скорей всего прийдется вводить заново. </small></p>
+<form action="{{CMS_ADMIN_URL_BASE}}edit.php" method="get"  onSubmit="return confirm('Вы уверены что хотите сменить тип у документа?') ">
+<input type="hidden" name="ID" value="change_type">
+<select name="type">
+<option value="{{document.type}}" ></option>
+<!-- BEGIN BLOCK.ALLTYPES -->
+<option value="{{ALLTYPES.id}}" >{{ALLTYPES.name}}</option>
+<!-- END BLOCK.ALLTYPES -->
+</select>
+<input type="hidden" name="document_id" value="{{document.id}}">
+<input type="submit" value=" Сменить тип страницы &raquo; " class="btn btn-warning btn-mini" >
+</form>
+	</div>
+
+	
+    <div class="span4">
+<h4>Переместить в другое место!</h4>
+<p><small>Люди, пришедшие на <i>старый</i> адрес страницы будут автоматически переброшены на новый, правильный адрес</small></p>
+
+<!-- Перемещалка -->
+<style type="text/css">
+@import "/i/tree.css";
+</style>
+<script src="/i/jquery.js"></script>
+<script src="/i/tree.js"></script>
+<script>
+documentid = {{document.id}};
+onload = function() { tree("tree", "/ajax.php") }
+</script>
+<ul class="Container" id="tree">
+  <li class="Node IsRoot IsLast ExpandClosed">
+    <div class="Expand"></div>
+    <div class="Content">Выберите куда переместить документ {{fullname}} и вложенные в него документы</div>
+    <ul class="Container">
+    </ul>
+  </li>
+</ul>
+<!-- /Перемещалка -->
+	</div>
+	
+	
+</div>
+</div>
+
+
+
+<!-- BEGIN BLOCK.CKEDITOR -->
+
+
+
+ <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+
+
+ <script type="text/javascript">
+CKEDITOR.replace( 'textarea_id',
+	{
+		// Load the Russian interface.
+		language: 'ru',
+		bodyClass : 'container',
+		baseHref: '{{HTTP_BASE}}',
+		baseUrl:  '{{HTTP_BASE}}',
+	//	contentsCss: '{{HTTP_BASE}}/s/screen.css'
+
+	});
+
+CKEDITOR.replace( 'textarea_id2',
+	{
+		// Load the Russian interface.
+ 		language: 'ru',
+                bodyClass : 'container',
+		baseHref: '{{HTTP_BASE}}',
+		baseUrl:  '{{HTTP_BASE}}',
+	//	contentsCss: '{{HTTP_BASE}}/s/screen.css'
+
+	});
+</script>
+
+
+<!-- END BLOCK.CKEDITOR -->
+
+
+<!-- BEGIN BLOCK.EDITOR -->
+<script language="javascript" type="text/javascript" src="/editarea/edit_area_full.js"></script>
+<script language="javascript" type="text/javascript">
+editAreaLoader.init({
+	id : "textarea_id"		
+	,syntax: "html"			
+	,cursor_position: "auto"
+	,start_highlight: true	
+	,word_wrap: true
+});
+editAreaLoader.init({
+	id : "textarea_id2"		
+	,syntax: "html"			
+	,cursor_position: "auto"
+	,start_highlight: true	
+	,word_wrap: true
+});
+
+</script>
+<!-- END BLOCK.EDITOR -->
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2013 &mdash; 2099</span> 
+<small><a href="{{HTTP_BASE}}">Перейти на сайт</a></small>
+</div> 
+</footer>
+
+</html>

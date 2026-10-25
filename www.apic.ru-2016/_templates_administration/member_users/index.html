@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Администрирование {{HTTPS_BASE_ADMIN}} / Пользователи и права доступа</title>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<SCRIPT language=JavaScript src="##PME_WWW##checker.js"></SCRIPT>
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+<ul class="breadcrumb">
+	<li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a><span class="divider">/</span></li>
+	<li><a href="{{HTTPS_BASE_ADMIN}}member_users.php">Аккаунты и карточки участников </a><span class="divider">/</span></li>
+	<li>Список компаний</li>
+</ul>
+<hr class="divider" />
+    </div>
+  </div>
+</div>	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<!--
+<ol class="unstyled">
+<li><a href="/edit.php?ID=add_base&parent_id=33610580&name=&url=&type=folder_company"><i class="icon-plus"></i>добавить участника выставки на русском</a>
+<li><a href="/edit.php?ID=add_base&parent_id=33622647&name=&url=&type=folder_eng_company"><i class="icon-plus"></i>добавить участника выставки на английском</a>
+</ol>
+-->
+
+  <div class="row-fluid" >
+    <div class="span12">	
+		<table class="table table-striped">
+		<tr>
+		<th>Участник</td>
+		<th>Логины </td>
+		<th>Карточка на сайте</td>
+		<th>FIRM_ID</td>
+		<th colspan=5>Изменить</td>
+		</tr>
+		<!-- BEGIN BLOCK.AMEMBER -->
+		<tr>
+		<td>{{AMEMBER.name}}<br />{{AMEMBER.eng.name}}</td>
+		<td>{{AMEMBER.logins}}</td>
+		<td>
+			{{AMEMBER.expo2017}}<br />
+			<a href="{{HTTP_BASE}}{{AMEMBER.url}}">{{AMEMBER.url}}</a><br />
+			<a href="{{HTTP_BASE}}{{AMEMBER.eng.url}}">{{AMEMBER.eng.url}}</a>
+			</td>
+		<td>{{AMEMBER.firm_id}}</td>		
+		<td><a href="/member_users.php?ID=view_user_card&firm_id={{AMEMBER.firm_id}}">@</a></td>
+		<td><a href="/edit.php?ID=show_edit&document_id={{AMEMBER.id}}">рус</a></td>
+<!--		<td><a href="/edit.php?ID=show_edit&document_id={{AMEMBER.eng.id}}">eng</a></td>  -->
+		</tr>
+		<!-- END BLOCK.AMEMBER -->
+		</table>
+    </div>
+    </div>
+
+
+	
+<hr class="divider" />
+
+
+<!--
+<h3>Новая карточка компании</h3>
+
+<form action="member_users.php" method="POST">
+<input type="hidden" name="ID" value="add_company">
+<input type="hidden" name="expo2017_rus" value="">
+<input type="hidden" name="expo2017_eng" value="">
+
+<table class="table table-striped">
+<tr><td></td><td>Русская карточка</td><td>Английская карточка</td></tr>
+
+<tr bgcolor="#f0f0f0"><td>URL <font color=red>*</font></td><td colspan=2><textarea  name="url" rows=3 style="width:100%"></textarea></td></tr>
+
+<tr bgcolor="#f0f0f0"><td>Название <font color=red>*</font></td><td><textarea  name="name_rus" rows=3 style="width:100%"></textarea></td><td><textarea name="name_eng" rows=3 style="width:100%"></textarea></td></tr>
+
+<tr bgcolor="#f0f0f0"><td>logo</td><td><textarea  name="logo_rus" rows=3 style="width:100%"></textarea></td><td><textarea name="logo_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Профиль</td><td><textarea  name="equipment_rus" rows=3 style="width:100%"></textarea></td><td><textarea name="equipment_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Услуги</td><td><textarea name="services_rus" rows=3 style="width:100%"></textarea></td><td><textarea name="services_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Дополнительная информация</td><td><textarea name="additional_info_rus" rows=3 style="width:100%"></textarea></td><td><textarea name="additional_info_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Дилеры</td><td><textarea name="dilers_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="dilers_eng"  rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Почтовый адрес
+</td><td><textarea name="postal_address_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="postal_address_eng"  rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон код 1</td><td><textarea name="pcode1_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="pcode1_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон 1</td><td><textarea name="phone1_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="phone1_eng"  rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон код 2</td><td><textarea name="pcode2_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="pcode2_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон 2</td><td><textarea name="phone2_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="phone2_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Факс код</td><td><textarea name="fcode_rus" rows=3 style="width:100%"></textarea></td><td><textarea name="fcode_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Факс</td><td><textarea name="fax_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="fax_eng"  rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>email</td><td><textarea name="email_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="email_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Сайт</td><td><textarea name="web_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="web_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Стенд</td><td><textarea name="stand_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="stand_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Страна</td><td><textarea name="country_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="country_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Город</td><td><textarea name="city_rus" rows=3 style="width:100%"></textarea></td><td><textarea  name="city_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Лет на выставке</td><td><textarea name="age_rus" rows=3 style="width:100%"></textarea></td><td><textarea name="age_eng" rows=3 style="width:100%"></textarea></td></tr>
+<tr><td colspan=2><button>Добавить новую компанию</button></td></tr>
+</table>
+
+--> 
+
+
+	
+	
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2013 &mdash; 2099</span> 
+</div> 
+</footer>
+</html>

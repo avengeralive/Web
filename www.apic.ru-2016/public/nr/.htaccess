@@ -1,0 +1,20 @@
+AddDefaultCharset Off
+
+php_value default_charset utf8
+
+
+php_value upload_max_filesize 16M
+
+DirectoryIndex index.php index.html
+
+<IfModule mod_charset.c>
+CharsetRecodeMultipartForms off
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+) - [PT,L]
+
+RewriteRule ^(.*) nr/index.php [L] 

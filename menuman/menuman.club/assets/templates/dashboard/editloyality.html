@@ -1,0 +1,31 @@
+<div class="container content" ng-controller="editloyalityController as newCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h2>Редактировать карту лояльности</h2>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<form ng-submit="save()">
+				<div class="row">
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="loyality.title" ng-change="enabled = true" maxlength="20" class="mui--is-touched mui--is-dirty mui--is-not-empty">
+						<label>Заголовок</label>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+						<textarea type="text" ng-model="loyality.content" ng-change="enabled = true" rows="10" class="mui--is-touched mui--is-dirty mui--is-not-empty"></textarea>
+						<label>Описание</label>
+					</div>
+					<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 checkbox">
+						<label><input type="checkbox" ng-change="enabled = true" ng-model="loyality.activity"> Опубликовать</label>
+					</div>-->
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<button class="mui-btn mui-btn--accent" ng-disabled="enabled == false"><span class="fa fa-floppy-o"></span> Сохранить</button>
+					</div>
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+					    <h2>Пользователи, которым выдана карта лояльности</h2>
+					    <p ng-repeat="(key,userbyphone) in loyality.card_users track by $index">{{ userbyphone.first_name }} {{ userbyphone.last_name }} {{ userbyphone.email }} {{ userbyphone.phone }} <a class="mui-btn mui-btn--danger" ng-click="delete(userbyphone.id, key)"><i class="fa fa-trash"></i></a></p>
+					</div>
+				</div>
+			</form>
+		</div>	
+	</div>
+</div> 

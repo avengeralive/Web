@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{CMS_ADMIN_NAME}} / {{CMS_ADMIN_CURRENT_PAGE_NAME}}</title>
+<link href="{{CMS_ADMIN_IMAGES_BASE}}css.css" rel="Stylesheet" type="text/css">
+</head>
+<body>
+<script src="{{CMS_ADMIN_IMAGES_BASE}}adm.js"></script>
+<img src="{{CMS_ADMIN_IMAGES_BASE}}logo.png" />
+
+<table width="100%" cellspacing="0" class="cmsnavigation">
+<tr><td><img src="{{CMS_ADMIN_IMAGES_BASE}}link_static.gif" height="35" width="35" /></td>
+<td>
+<a href="{{CMS_ADMIN_URL_BASE}}">Администрирование</a> / 
+<a href="{{CMS_ADMIN_URL_BASE}}edit.php">{{CMS_ADMIN_NAME}}</a> / 
+Добавление ссылки в <i>{{CMS_ADMIN_CURRENT_PAGE_NAME}}</i>
+</td></tr></table>
+
+<br />
+<form action="{{CMS_ADMIN_URL_BASE}}edit.php" method="post">
+<input type="hidden" name="ID" value="add">
+<input type="hidden" name="type" value="link_static">
+<input type="hidden" name="parent_id" value="{{parent.id}}">
+<table width="100%" id="document">
+<tr><td>Название для меню и навигации.
+</td><td id="c1"><input type="text" name="name" value="{{name}}" size="80" maxlength="255" onchange="colorize(this);" /></td></tr>
+<tr><td>Полное название.
+</td><td id="c11"><input type="text" name="fullname" value="{{fullname}}" size="80" maxlength="255" onchange="colorize(this);" /></td></tr>
+<tr class="{{status}}"><td>Полный адрес ссылки (для локальных адресов - от корня / ):
+</td><td id="c8"><input type="text" name="url" value="{{url}}" size="80" maxlength="255" onchange="colorize(this);" /></td></tr>
+
+<tr><td>Анонс
+</td><td id="c2"><textarea name="anons" cols="90" rows="6" wrap="soft" onchange="colorize(this);">{{anons}}</textarea>
+<input type="hidden" name="document" value="">
+<input type="hidden" name="seo_title" value="">
+<input type="hidden" name="seo_description" value="">
+<input type="hidden" name="seo_keywords" value="">
+</td></tr>
+
+
+<tr class="{{status}}"><td>Статус (временно отключить документ):
+</td><td id="c7"><input type="checkbox" name="status" value="disabled" {{checked}} onchange="colorize(this);"></td></tr>
+<tr class="{{statushidden}}"><td>Статус спрятанности (не показывать ссылку в меню и навигации):
+</td><td id="c8"><input type="checkbox" name="statushidden" value="disabled" {{statushiddenchecked}} onchange="colorize(this);"></td></tr>
+
+<tr class="treeheader"><td>&nbsp;</td>
+<td><input type="submit" value=" Завершить создание &raquo; "></td></tr>
+</table>
+</form>
+
+</body></html>
+

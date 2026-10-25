@@ -1,0 +1,35 @@
+<div class="container content" ng-controller="newsController as newCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li><a href="/dashboard/menu/{{ place.slug }}">Меню</a></li>
+				<li><a href="/dashboard/goodicons/{{ place.slug }}">Фотографии блюд</a></li>
+				<li><a href="/dashboard/reviews/{{ place.slug }}">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/discount/{{ place.slug }}">Скидки</a></li>
+				<li><a href="/dashboard/booking/{{ place.slug }}">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li class="active"><a href="#">Новости</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h2>Новости</h2>
+			<a class="add" href="/dashboard/news/add/{{ slug }}"><span class="fa fa-plus"></span> Добавить новость</a>
+		</div>
+		<div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 promotion_card" ng-repeat="new in news">
+			<div class="row">
+				<div class="col col-12 image" style="padding-left: 0px;">
+					<img src="/uploads/{{ new.cover_image }}" style="width: 100%;">
+				</div>
+				<div class="col col-12 desc" style="padding-right: 0px;">
+					<h2>{{ new.title }} <span class="badge badge-success" ng-show="new.visibility == true">Опубликовано</span> <span class="badge badge-danger" ng-show="new.visibility == false">Не опубликовано</span></h2>
+					<p>{{ new.content }}</p>
+					<a class="mui-btn mui-btn--primary" href="/dashboard/news/edit/{{ slug }}/{{ new.id }}">Изменить новость</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 

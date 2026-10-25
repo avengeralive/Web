@@ -1,0 +1,43 @@
+<style>
+	.image { width: 100%; padding: 20px; }
+	.image img { width: 100%; height: auto; }
+</style>
+<div class="container content" ng-controller="goodiconsController as giCtrl" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li><a href="/dashboard/menu/{{ place.slug }}">Меню</a></li>
+				<li class="active"><a href="#">Фотографии блюд</a></li>
+				<li><a href="/dashboard/reviews/{{ place.slug }}">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/discount/{{ place.slug }}">Скидки</a></li>
+				<li><a href="/dashboard/booking/{{ place.slug }}">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li><a href="/dashboard/news/{{ place.slug }}">Новости</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+	<form ng-submit="save();">
+		<div class="row">
+			<div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 photoblockdiv" ng-repeat="(key,value) in goods track by $index" dropzone-repeat-directive>
+				<div class="photoblock">
+					<div class="image" ng-show="goods[key].photo != ''">
+						<img ng-show="goods[key].photo != ''" ng-src="/uploads/{{ goods[key].photo }}">
+						<a class="delete" style="cursor: pointer;" ng-click="deleteimg(key);"><i class="fa fa-trash"></i></a>
+						<input type="hidden" ng-model="goods[key].photo">
+					</div>
+					<div class="imagedz" ng-show="goods[key].photo == ''">
+						<div class="dropzone" style="height: 150px; padding: 0px;" data-id="{{ key }}"></div>
+					</div>
+					<p style="font-size: 20px; text-align: center; margin-top: 20px;">{{ goods[key].name }}</p>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<a class="mui-btn mui-btn--primary"><span class="fa fa-floppy-o"></span> Сохранить</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

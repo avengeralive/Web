@@ -1,0 +1,25 @@
+
+@media (max-width: 420px) {
+    .logo img {
+        width: 200px;
+    }
+}
+
+.main-form .input-row input::placeholder {
+    color: hsl(191.4, 62.1%, 35%);
+}
+.header-menu {
+	padding: 10px 0px;
+}
+.dropdown-content__user span {
+	float: none !important;
+}
+g[aria-labelledby="id-1611-title"] {
+	display: none !important;
+}
+.color-info_container .color-info_block .color.dark-blue {
+    background-color: #66b7db !important;
+}
+.color-info_container .color-info_block .color.blue {
+    background-color: #6794dc !important;
+}

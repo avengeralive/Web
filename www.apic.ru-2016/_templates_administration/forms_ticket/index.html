@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Администрирование {{HTTPS_BASE_ADMIN}} / Список заявок на билет</title>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+<ul class="breadcrumb">
+	<li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a><span class="divider">/</span></li>
+	<li><a href="{{HTTPS_BASE_ADMIN}}forms_ticket.php">Список заявок на билет</a><span class="divider">/</span></li>
+</ul>
+<hr class="divider" />
+    </div>
+  </div>
+</div>	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+<!-- ---------------------------------- ------------------------------- -->
+ 
+<b><font color=red>{{ERROR}}</font></b>
+
+<br />
+<br />
+<br />
+
+<p>Всего оформлено билетов:   {{ticket_total}}</p>
+<p><b><a href="{{HTTPS_BASE_ADMIN}}forms_ticket.php?ID=get_download_csv"><img src="/i/xls.gif">Скачать все билеты в эксель (CSV)</a></b></p>
+<p><a href="{{HTTPS_BASE_ADMIN}}forms_ticket.php?ID=get_download_html"><img src="/i/edit.php.gif">Посмотреть все билеты в браузере</a></p>
+<p><small><a href="{{HTTPS_BASE_ADMIN}}forms_ticket.php?ID=get_download"><img src="/i/xls.gif">Скачать все билеты в эксель (XLS) &mdash; очень медленно!</a></small></p>
+
+
+<table border=0 cellpadding="5" cellspacing="1" width="100%" class="table table-striped">
+<tr bgcolor="#cccccc" >
+<th>Дата</th>
+<th>Количество оформленных билетов<br />в этот день</th>
+<th>%  от всех оформленных билетов</th>
+<th>Количество оформленных билетов<br />на этот день</th>
+<th>%  оформленных билетов<br />на этот день</th>
+</tr>
+<!-- BEGIN BLOCK.GLOBAL -->
+<tr>
+<td>{{created}}	</td>
+<td>{{ticket_count}}</td>
+<td>{{ticket_percent}}</td>
+<td>{{ticket_data}}</td>
+<td>{{ticket_data_percent}}</td>
+</tr>
+<!-- END BLOCK.GLOBAL -->
+</table>
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+</div>
+</div>
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+</div> 
+</footer>
+
+</html>

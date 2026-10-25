@@ -1,0 +1,385 @@
+.jcarousel-skin-tango  {
+	width:92%;
+
+}
+
+
+
+.mainkaruselbgdv .jcarousel-skin-tango  {
+	width:440px;
+	margin:0px auto;
+
+}
+
+.mainkaruselbgdvrazd .jcarousel-skin-tango  {
+	width:350px;
+	margin:0px auto;
+
+}
+
+
+.mainkaruselbgdvrazdruch .jcarousel-skin-tango  {
+	width:450px;
+	margin:0px auto;
+}
+
+
+
+
+.jcarousel-skin-tango .jcarousel-container {
+   /* -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+   border-radius: 10px;
+    background: #F0F6F9;
+    border: 1px solid #346F97;*/
+
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.mainkaruselbg .jcarousel-skin-tango .jcarousel-container-horizontal {
+
+
+    padding: 12px 0px;
+}
+
+
+.seckaruseldopoptsbg .jcarousel-skin-tango .jcarousel-container-horizontal {
+    /*width: 530px;*/
+    padding: 0px 60px;
+}
+
+
+
+
+
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow: hidden;
+}
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-clip-horizontal {
+    height: 163px;
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-clip-horizontal {
+		height: 510px;
+}
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-clip-horizontal {
+		height: 510px;
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-clip-horizontal {
+		height: 510px;
+}
+
+.seckaruseldopoptsbg   .jcarousel-skin-tango .jcarousel-clip-horizontal {
+    /*height: 150px;*/
+}
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-item {
+    width: 207px;
+    height: 163px;
+
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-item {
+		width: 240px;
+		height: 510px;
+margin-right:-20px;
+
+}
+
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-item {
+		width: 350px;
+		height: 510px;
+margin-right:0px;
+
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-item {
+		width: 450px;
+		height: 510px;
+margin-right:0px;
+
+}
+
+
+.seckaruseldopoptsbg  .jcarousel-skin-tango .jcarousel-item {
+    width: 120px;
+    /*height: 150px;*/
+	background:none;
+text-align:center;
+}
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-item img{
+
+}
+
+.seckaruseldopoptsbg  .mainkaruselbg  .jcarousel-skin-tango .jcarousel-item img{
+
+}
+
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 11px;
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+	/* margin-right: 11px;*/
+}
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+	/* margin-right: 11px;*/
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+	/* margin-right: 11px;*/
+}
+
+.seckaruseldopoptsbg  .jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0px;
+    margin-right: 0px;
+}
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 0px;
+    margin-right: 0;
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 0px;
+		margin-right: 0;
+}
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 0px;
+		margin-right: 0;
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 0px;
+		margin-right: 0;
+}
+
+
+
+.seckaruseldopoptsbg  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+
+
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-item-placeholder {
+
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 78px;
+    right: -35px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(next-horizontal_.png) no-repeat 0 0;
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-next-horizontal {
+		position: absolute;
+		top: 233px;
+		right: -28px;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		background: transparent url(./img/dvstr_right_act.png) no-repeat 0 0;
+}
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-next-horizontal {
+		position: absolute;
+		top: 233px;
+		right: -28px;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		background: transparent url(./img/dvstr_right_act.png) no-repeat 0 0;
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-next-horizontal {
+		position: absolute;
+		top: 233px;
+		right: -28px;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		background: transparent url(./img/dvstr_right_act.png) no-repeat 0 0;
+}
+
+.seckaruseldopoptsbg   .jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 15px;
+    right: 28px;
+    width: 24px;
+    height: 31px;
+    cursor: pointer;
+    background: transparent url(strdopoptsright.png) no-repeat 0 0;
+}
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.png);
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+		left: 5px;
+		right: auto;
+		background-image: url(./img/dvstr_left_act.png);
+}
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+		left: 5px;
+		right: auto;
+		background-image: url(./img/dvstr_left_act.png);
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+		left: 5px;
+		right: auto;
+		background-image: url(./img/dvstr_left_act.png);
+}
+
+.seckaruseldopoptsbg  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-horizontal:focus {
+   /* background-position: -32px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+   /* background-position: -64px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+	background-image: url(./img/dvstr_right.png) !important;
+   /* background-position: -96px 0;*/
+}
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 78px;
+    left: -32px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(prev-horizontal_.png) no-repeat 0 0;
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-prev-horizontal {
+		position: absolute;
+		top: 233px;
+		left: -38px;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		background: transparent url(./img/dvstr_left_act.png) no-repeat 0 0;
+}
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-prev-horizontal {
+		position: absolute;
+		top: 233px;
+		left: -38px;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		background: transparent url(./img/dvstr_left_act.png) no-repeat 0 0;
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-prev-horizontal {
+		position: absolute;
+		top: 233px;
+		left: -38px;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		background: transparent url(./img/dvstr_left_act.png) no-repeat 0 0;
+}
+
+.seckaruseldopoptsbg .jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 17px;
+    left: 28px;
+    width: 24px;
+    height: 31px;
+    cursor: pointer;
+    background: transparent url(strdopoptsleft.png) no-repeat 0 0;
+}
+
+
+
+.mainkaruselbg  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.png);
+}
+
+.mainkaruselbgdv  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+		left: auto;
+		right: 5px;
+		background-image: url(./img/dvstr_right_act.png);
+}
+
+.mainkaruselbgdvrazd  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+		left: auto;
+		right: 5px;
+		background-image: url(./img/dvstr_right_act.png);
+}
+
+.mainkaruselbgdvrazdruch  .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+		left: auto;
+		right: 5px;
+		background-image: url(./img/dvstr_right_act.png);
+}
+
+.seckaruseldopoptsbg .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-horizontal:focus {
+   /* background-position: -32px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+   /* background-position: -64px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+	background-image: url(./img/dvstr_left.png) !important;
+    /*background-position: -96px 0;*/
+}

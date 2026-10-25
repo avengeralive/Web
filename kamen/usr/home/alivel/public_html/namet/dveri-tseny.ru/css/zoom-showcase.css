@@ -1,0 +1,121 @@
+.thanky {
+	width: 980px;
+	height:400px;
+	margin:0 auto;
+	position:relative;
+}
+
+#thanky-left-button {
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -29px;
+	cursor: pointer;
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+	background: transparent url(./img/es16_left.png) no-repeat;
+	left: -50px;
+	width: 55px;
+	height: 55px;
+	z-index: 10;
+	}
+	
+#thanky-right-button {
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -29px;
+	cursor: pointer;
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+	background: transparent url(./img/es16_right.png) no-repeat;
+	right: -50px;
+	width: 55px;
+	height: 55px;
+	z-index: 10;
+	}
+
+/* Adjust the font-family for the text fields here */	
+.zoom-gallery {
+			
+	position: relative;
+	font-family: "YanoneKaffeesatzRegular", Geneva, sans-serif;
+	font-size: 24px;
+				
+}
+
+/* Just getting rid of the link outline */
+.zoom-gallery a {
+			
+	outline: none;
+				
+}
+
+/* resetting the unordered list margin and list-style */
+.zoom-gallery ul {
+			
+	margin: 0;
+	list-style: none;
+	display: none;
+				
+}
+	
+/* Adjust the box shadow and border here */		
+.zoom-gallery li {
+			
+	margin: 0;
+	overflow: hidden;
+	
+	border: 2px solid #EEE;
+	
+	-moz-box-shadow: 0px 5px 10px #888;
+	-webkit-box-shadow: 0px 5px 10px #888;
+	box-shadow: 0px 5px 10px #888;
+				
+}
+
+/* Hide the text until it's ready to be shown */		
+.zoom-gallery ul li ul {
+			
+	display: none;
+				
+}
+
+/* Hide the preloader until it's positioned correctly */
+.zoom-gallery img.preloader {
+			
+	display: none;
+	position: absolute;
+				
+}
+
+/* Adjust the text-field padding here */		
+.zoom-gallery-info-text {
+				
+	padding: 10px;
+	
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 9999;
+							
+}
+
+/* Position the noscript fallback image */
+.zoom-gallery #noscript {
+
+	width: 980px;
+	text-align: center;
+	
+}
+
+
+
+
+
+
+
+
+

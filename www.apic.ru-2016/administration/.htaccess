@@ -1,0 +1,20 @@
+
+
+
+Options +Includes
+Options +Indexes
+XBitHack on
+XBitHack Full
+php_value display_errors 1
+php_value magic_quotes_gpc 0
+php_value magic_quotes_runtime 0
+php_value magic_quotes_sybase 0
+php_value zlib.output_compression 0
+php_value zlib.output_compression_level 0
+DirectoryIndex index.html index.jsp index.htm index.php
+
+php_value default_charset windows-1251
+
+
+RewriteEngine on
+RewriteRule ^explorer$   /explorer/index.php  [L]

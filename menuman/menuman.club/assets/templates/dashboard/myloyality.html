@@ -1,0 +1,96 @@
+<div class="container content" ng-controller="myloyalityController as newCntr" ng-show="group === 'client'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<span class="username"></span> <a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a><br>
+			<hr>
+			<a href="/dashboard/my-loyality" class="mui-btn mui-btn--primary"> Мои карты лояльности <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a> 
+			<a href="/dashboard/my-promo" class="mui-btn mui-btn--primary"> Мои промокоды</a> 
+			<a href="/dashboard/my-books" class="mui-btn mui-btn--primary"> Мои брони <span ng-show="notify.booking > 0" class="badge badge-pill badge-danger">{{ notify.booking }}</span></a> 
+			<a href="/dashboard/my-promotions" class="mui-btn mui-btn--primary"> Мои акции <span ng-show="notify.promotions > 0" class="badge badge-pill badge-danger">{{ notify.promotions }}</span></a>
+			<a href="/dashboard/my-reviews" class="mui-btn mui-btn--primary"> Мои отзывы <span ng-show="notify.reviews > 0" class="badge badge-pill badge-danger">{{ notify.reviews }}</span></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		    <div class="col col-6 nav-pills">
+			    <a href="#" class="nav-link" ng-click="tab = 1; getcards();" ng-class="tab == 1 ? 'active' : ''" style="float: left;">Карты</a>
+			    <a href="#" class="nav-link" ng-click="tab = 2; clear();" ng-class="tab == 2 ? 'active' : ''" style="float: left;">Уведомления <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px; margin-top: 25px;" ng-show="tab == 1">
+			<div class="row">
+				<div class="col col-12 col-sm-6 col-md-4 row" ng-repeat="(key,loyality) in loyalities track by $index" style="padding-left: 0px;">
+				    <div class="col-12 row loyalitycard">
+						<div class="col-12">
+							<p>Карта: <span class="text-success">{{ loyality.id }}</span></p>
+						    <a href="/{{ loyality.slug }}"><h2 style="margin-top: 0px; font-size: 18px;text-decoration: underline;">{{ loyality.name }}</h2></a>
+						    <p>Описание:<br> {{ loyality.content }}</p>
+						    <p>Промокод:<br> {{ loyality.fingerprint }}</p>
+						</div>
+						<div class="col-12">
+						    <!--<h3 style="margin-top: 0px; font-size: 18px; ">{{ loyality.title }}</h3>-->
+						</div>
+						<div class="col-12">
+							<!--<div class="qrcode" data-fingerprint="{{ loyality.fingerprint }}" make-qrcodes></div>-->
+						</div>
+						<div class="col-12 links">
+						    <a class="text-success" ng-click="showmore(loyality.content, loyality.id, key)"><i class="fa fa-ellipsis-v"></i>Подробнее <span ng-show="loyality.notify.length > 0" class="badge badge-pill badge-danger ng-binding" style="">{{ loyality.notify.length }}</span></a>
+						    <a class="text-success" ng-click="showqr(loyality.id)"><i class="fa fa-qrcode"></i>Показать QR-код</a>
+						    <a class="text-danger" ng-click="delete(loyality.id, loyality.place_id, loyality.owner_id, key)"><i class="fa fa-trash"></i>Удалить карту</a>
+						</div>
+				    </div>
+				    <div class="modal fade qr{{ loyality.id }}" tabindex="-1" role="dialog" aria-labelledby="loyalitylabel" aria-hidden="true">		
+					    <div class="modal-dialog" role="document">
+						<div class="modal-content">
+						    <div class="modal-header">
+								<h5 class="modal-title" id="layalitylabel">QR код</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								    <span aria-hidden="true">&times;</span>
+								</button>
+						    </div>							
+						    <div class="modal-body">
+								<div class="container-fluid">
+								    <div class="row">
+									<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+									    <div class="qrcode" data-fingerprint="{{ loyality.fingerprint }}" make-qrcodes></div>
+									</div>
+								    </div>
+								</div>
+						    </div>	
+						</div>
+					    </div>					
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="loyalitylabel" aria-hidden="true">		
+			    <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				    <div class="modal-header">
+					<h5 class="modal-title" id="layalitylabel">Информация о карте лояльности</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					</button>
+				    </div>							
+				    <div class="modal-body">
+					<div class="container-fluid">
+					    <div class="row">
+						<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+						    {{ info }}
+						</div>
+					    </div>
+					</div>
+				    </div>	
+				</div>
+			    </div>					
+			</div>
+		</div>	
+	    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px; margin-top: 25px;" ng-show="tab == 2">
+		<div class="col col-12">
+			<a href class="text-danger" ng-click="deleteallnot()"><i class="fa fa-trash"></i> Удалить все уведолмления</a>
+		</div>
+		<div class="col col-12" ng-repeat="notification in $parent.allnotif" ng-show="notification.not_table == 'loyality'" style="padding: 15px; margin-bottom: 5px; background: #fff;">
+		    <p style="color: #000; margin: 0px;"><i class="fa fa-circle" style="color:#80b545;"></i> {{ notification.create_date }} - <span ng-bind-html="notification.notification"></span> <a class="text-danger" href ng-click="deletenot(notification.id)"><i class="fa fa-trash"></i></a></p>
+		</div>
+	    </div>
+	</div>
+</div> 

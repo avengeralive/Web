@@ -1,0 +1,246 @@
+.main {min-height: auto}
+.b-legalinfo__content {
+    padding: 20px;
+}
+
+.b-footer-menu_block {    display: block;
+    vertical-align: top;
+    text-align: center;}
+.b-footer-menu_slogan{
+	padding-right: 30px;margin-bottom: 15px;}
+.b-footer-menu_slogan:before {display: block; bottom: -15px;}
+.b-footer-menu_slogan:after {display: none;}
+
+@media only screen and (max-width: 992px){
+	.b-footer-menu_slogan {margin-bottom: 0px;}
+    .b-footer-menu_slogan:before { bottom: 3px;}
+}
+
+.prav-info {
+	font-size: 11px;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 1
+}
+
+.prav-info.top20 {
+	margin-top: 20px;
+}
+
+.prav-info.top10 {
+	margin-top: 10px;
+}
+
+.prav-info.center {
+	text-align: center;
+}
+
+.prav-info.grey {
+	color: #cccccc
+}
+
+.prav-info.grey a {
+	color: #cccccc
+}
+
+.prav-info.grey a:hover {
+	color: #cccccc
+}
+
+.prav-info.dark {
+	color: rgba(0, 0, 0, 0.5)
+}
+
+.prav-info.dark a {
+	color: rgba(0, 0, 0, 0.5)
+}
+
+.prav-info.dark a:hover {
+	color: rgba(0, 0, 0, 0.5)
+}
+
+.prav-info.white {
+	color: #fff
+}
+
+.prav-info.white a {
+	color: #fff
+}
+
+.prav-info.white a:hover {
+	color: #fff
+}
+
+.prav-info.w80 {
+	width: 80%;
+	margin: 20px auto;
+}
+
+.prav-info.mb30 {
+	margin-bottom: 30px;
+}
+
+.b-sms_bg .b-sms__undertext {
+	margin-bottom: 15px
+}
+
+.es1_otzivy__form_bg {
+	margin: 0 auto 10px auto;
+}
+
+.b-vid__form .prav-info {
+	padding-left: 0;
+	padding-right: 0
+}
+
+#gift .modal-dialog {
+	height: 625px
+}
+
+#gift .modal-content {
+	height: 625px
+}
+
+#want_zamer .modal-dialog .butzamer {
+	margin-bottom: 20px;
+}
+#happy .modal-dialog {height: 837px}
+#happy .modal-content {height: 800px}
+.es4_bg {
+	height: auto;
+	background: url(./img/es4_bg_3.jpg) no-repeat center center;
+	min-height: 360px;
+	margin: 20px auto;
+	background-size: cover;
+}
+
+.es4_bg .es4_bg__desctext {
+	margin: 10px auto 20px auto;
+}
+
+.b-marketitem .b-marketitem__blockform_bg .b_market_item_form_bg {
+	height: 466px;
+	background: url(.../img/b_market_item_form_bg.png) no-repeat center top;
+	background-size: cover;
+}
+
+@media only screen and (max-width: 992px) {
+	.es13_bg {
+		height: 590px;
+		background: url(./img/es13_bg.png) no-repeat center center;
+		background-size: cover;
+	}
+	
+	.es13_bg .prav-info {
+		margin-top: 20px;
+	}
+	
+	.b-sms_bg .prav-info.top10 {
+		margin-top: 0px;
+	}
+	
+	.es17_bg .prav-info.top20 {
+		margin-top: 0px;
+	}
+	
+	#pismo_directoru_send {
+		text-align: center
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.es8_bg .es8_form {
+		height: auto
+	}
+	
+	.es8_bg .prav-info {
+		margin-bottom: 10px
+	}
+	
+	.b_contact_ceo_bg .b_contact_ceo_form .b_contact_ceo_but {
+		padding-bottom: 10px;
+	}
+	
+	.b_contact_ceo_bg .prav-info {
+		padding-bottom: 10px;
+		margin-top: 0px
+	}
+	
+	.prav-info.w80 {
+		margin: 0px auto;
+		padding-bottom: 15px
+	}
+	
+	#gift .modal-dialog {
+		height: 610px
+	}
+	
+	#gift .modal-content {
+		height: 610px
+	}
+	#happy .modal-dialog {
+    height: auto;
+}
+#happy .modal-content {
+    height: auto;
+}
+	.b-marketitem .b-marketitem__blockform_bg .b_market_item_form_bg {
+		height: auto;
+	}
+	
+	.b-marketitem .b-marketitem__blockform_bg .b_market_item_form_bg .prav-info {
+		padding-bottom: 15px;
+		padding-top: 0
+	}
+	
+	.b_contact_ceo_bg {
+		padding-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.b-sms_bg .prav-info {
+		margin-top: 10px;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.es13_bg {
+		height: auto;
+		background: url(../img/es13_bg.png) no-repeat center center;
+		background-size: cover;
+		padding-bottom: 60px
+	}
+	
+	.es13_bg .prav-info.top10 {
+		margin-top: 0px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.es17_bg .es17_blockbg {
+		margin: 20px auto
+	}
+}
+
+.b-top {
+	margin: -1px 0 -85px 0
+}
+
+button.img-outer {
+	vertical-align: middle;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.b-footer-menu .container {    padding-left: 0px;  padding-right: px;} 
+
+.err {text-align: center; display: table;width: 100%;    margin: 50px auto;}
+.err .wrapper {display: table-cell;     height: 65%;  vertical-align: middle;}
+.err .wrapper p {font-size: 18px}
+
+@media only screen and (max-width: 480px) {
+	.err .wrapper p {font-size: 16px}
+}

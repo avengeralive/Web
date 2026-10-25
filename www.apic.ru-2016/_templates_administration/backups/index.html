@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Резервные копии</title>
+    
+	<link rel="Stylesheet" href="{{HTTPS_BASE_ADMIN_IMAGES}}css.css" type="text/css" />
+    <script type="text/javascript" src="{{HTTPS_BASE_ADMIN_IMAGES}}jquery.js"></script>
+    <script type="text/javascript" src="{{HTTPS_BASE_ADMIN_IMAGES}}script.js"></script>
+
+</head>
+
+<body bgcolor=#FFFFFF>
+<img src="{{HTTPS_BASE_ADMIN_IMAGES}}logo.png" /><br>
+<table width="100%">
+<tr bgcolor="f5f5f5">
+<td width=32><img src="{{HTTPS_BASE_ADMIN_IMAGES}}backups.php.gif"></td>
+<td height="20" width="99%">
+<a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a> / 
+<a href="{{HTTPS_BASE_ADMIN}}backups.php">Резервные копии </a> / 
+Резервные копии 
+</td></tr></table>
+<hr noshade size=1>
+
+
+<b><font color=red>{{ERROR}}</font></b>
+
+
+<div style="margin: 1em;  background-color: #ccccff; widdth: 20em; float: right;">
+<h3>Создать новую резервную копию</h3>
+<form action="{{HTTPS_BASE_ADMIN}}backups.php" method="post">
+<input type=hidden name=ID value="create">
+<input type="submit" value="Создать" style="width: 13em;" ></td>
+</form>
+</div>
+<br clear=all />
+
+<table border=0 cellpadding="5" cellspacing="1" width="100%">
+<tr bgcolor="#cccccc" >
+<th>тип</th>
+<th>файл</th>
+<th>скачать</th>
+<th>дата</th>
+<th>размер</th>
+<th>восстановить</th>
+</tr>
+<!-- BEGIN BLOCK.GLOBAL -->
+<tr bgcolor="{{bgcolor}}">
+<td>{{type}}</td>
+<td>{{file}}</td>
+<td><a href="{{HTTPS_BASE_ADMIN}}backups.php?ID=download&file={{file}}">скачать</a></td>
+<td>{{date}}</td>
+<td>{{size}}</td>
+<th>
+<form action="{{HTTPS_BASE_ADMIN}}backups.php" method="post"  onSubmit="return confirm('Вы уверены что хотите восстановить сайт из резервной копии? Все изменения сделанные после {{date}} будут перезаписаны.')">
+<input type=hidden name=ID value="restore">
+<input type=hidden name=file value="{{file}}">
+<input type="submit" value="Восстановить" style="width: 13em;" ></td>
+</form>
+
+</th>
+</tr>
+<!-- END BLOCK.GLOBAL -->
+
+<tr bgcolor="#cccccc" >
+<th>тип</th>
+<th>файл</th>
+<th>скачать</th>
+<th>дата</th>
+<th>размер</th>
+<th>восстановить</th>
+</tr>
+
+</table>
+
+
+<!-- <div style="margin: 1em;  background-color: #ccccff; widdth: 20em; float: right;">
+<h3>Восстановить из скачанной копии</h3>
+<form action="{{HTTPS_BASE_ADMIN}}backups.php" method="post" enctype="multipart/form-data">
+<input type=hidden name=ID value="import">
+<table>
+<tr>
+<td><input type="file"  name="file" ></td>
+<td><input type="submit" value="Восстановить" style="width: 13em;" ></td>
+</tr>
+</table>
+</form>
+</div> -->
+
+
+</body>
+</html>

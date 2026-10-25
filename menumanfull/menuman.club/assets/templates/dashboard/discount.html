@@ -1,0 +1,88 @@
+<div class="container content" ng-controller="dashboardDiscountController as ddCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li><a href="/dashboard/menu/{{ place.slug }}">Меню</a></li>
+				<li><a href="/dashboard/goodicons/{{ place.slug }}">Фотографии блюд</a></li>
+				<li><a href="/dashboard/reviews/{{ place.slug }}">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li class="active"><a href="#">Скидки</a></li>
+				<li><a href="/dashboard/booking/{{ place.slug }}">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li><a href="/dashboard/news/{{ place.slug }}">Новости</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+    <div class="row">
+	<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ml-md-auto ml-lg-auto mdl-card mdl-shadow--2dp row" id="discount">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<p>Установите скидку на общий счёт для посетителей Вашего заведения. При запросе скидки, посетителю будет выслан промокод. Промокод можно проверить на странице "Проверка промокода"</p>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+			<div class="range-slider">
+				<input class="range-slider__range" type="range" ng-model="place.discount" min="0" max="100">
+				<span class="range-slider__value">{{ place.discount }}</span>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 mui-textfield mui-textfield--float-label">
+			<input type="date" class="mui--is-touched mui--is-dirty mui--is-not-empty" ng-model="place.discount_begins"/>
+			<label>Дата начала действия скидки</label>
+		</div>
+		<div class="col col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 mui-textfield mui-textfield--float-label">
+			<input type="date" class="mui--is-touched mui--is-dirty mui--is-not-empty" ng-model="place.discount_ends"/>
+			<label>Дата окончания действия скидки</label>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<a class="mui-btn mui-btn--primary" ng-click="savediscount();">Сохранить</a>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-top: 20px;">
+			<p class="text-success"></p>
+		</div>
+	</div>
+	<style>
+		#discount{padding:20px;background:#fff;}body{background:#efefef;}
+	</style>
+	<script>
+		$(function(){
+			var rangeSlider = function(){
+				var slider = $('.range-slider'),
+				range = $('.range-slider__range'),
+				value = $('.range-slider__value');				
+				slider.each(function(){
+					value.each(function(){
+						var value = $(this).prev().attr('value');
+						$(this).html(value);
+					});
+					range.on('input', function(){
+						$(this).next(value).html(this.value);
+					});
+				});
+			};
+			rangeSlider();
+		});
+	</script>
+    </div>
+</div>
+<div class="container content" ng-controller="promocodesController as prmCntr" ng-show="group === 'admin' || group === 'company'" style="padding-top: 30px !important;">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+			<form ng-submit="checkPromo();">
+				<div class="row">
+					<div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 promocode_input">
+						<input type="text" ng-model="promo.code" placeholder="Введите промокод">
+					</div>
+					<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 promocode_input">
+						<a class="mui-btn mui-btn--primary" style="margin:0px;"><span class="fa fa-check"></span> Проверить</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="border-left: 1px solid rgba(0, 153, 0, 0.2); padding-left: 20px;">
+			<h2 class="mt0 dchead">Проверенные промокоды</h2>
+			<div class="row">
+				<p ng-repeat="ppromo in ppromos track by $index">#{{ ppromo.id }} {{ ppromo.first_name }} {{ ppromo.last_name}} - {{ ppromo.code }} - {{ ppromo.used_date }}</p>
+			</div>
+		</div>	
+	</div>
+</div> 

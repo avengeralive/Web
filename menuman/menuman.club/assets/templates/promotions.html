@@ -1,0 +1,37 @@
+<div ng-controller="promotionsController2 as plCntr" class="container" style="padding-top: 50px; padding-bottom: 50px;">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 row">
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+				<form ng-submit="getResult();">
+					<div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 checkfield row" style="padding: 0px;">
+						<div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 form-group" style="padding-left: 0px;">
+							<input type="text" class="form-control" ng-model="search" placeholder="Поиск по ключевым словам">
+						</div>
+						<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="padding-right: 0px;">
+							<button class="mui-btn mui-btn--primary" id="searchbutton"><i class="fa fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+			    <nav class="nav nav-pills flex-column flex-sm-row col-12 dned" style="margin-bottom: 20px;">
+			    <a ng-click="availability[0] = true; getResult()" class="nav-link" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Понедельник</a> <a ng-click="availability[1] = true; getResult()" class="nav-link" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Вторник</a> <a ng-click="availability[2] = true; getResult()" class="nav-link" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Среда</a> <a ng-click="availability[3] = true; getResult()" class="nav-link" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Четверг</a> <a ng-click="availability[4] = true; getResult()" class="nav-link" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Пятница</a> <a ng-click="availability[5] = true; getResult()" class="nav-link" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Суббота</a> <a ng-click="availability[6] = true; getResult()" class="nav-link" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Воскресенье</a>
+			    </nav>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4" ng-repeat="promotion in promotions" style='display:flex;'>
+				<div class="card" style="width: 100%; margin-bottom: 30px;">
+					<img src="/uploads/{{ promotion.cover_image }}" class="card-img-top">
+					<div class="card-body text-center">
+						<h4 class="card-title">{{ promotion.title }}</h4>
+						<p style="text-align:center; font-style: italic;">от заведения "<a href="/{{ promotion.slug }}">{{ promotion.place_name }}</a>"</p>
+						<p style="text-align:left;">{{ promotion.content.substring(0, 80) }}...</p>
+						<a href="/promotions/{{ promotion.id }}" class="mui-btn mui-btn--primary">Подробнее</a>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+				<a ng-click="more();" class="mui-btn mui-btn--primary" style="width:33%; margin-left: 33%;">Ещё акции</a>
+			</div>
+		</div>
+	</div>
+</div>

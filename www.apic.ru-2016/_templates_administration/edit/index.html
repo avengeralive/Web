@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{CMS_ADMIN_NAME}} / {{CMS_ADMIN_CURRENT_PAGE_NAME}}</title>
+
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<style>
+ol.unstyled li a i{margin:50x; opacity: 0.3;}
+.clickme:hover {background: #dff0d8;}
+</style>
+ 
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{CMS_ADMIN_IMAGES_BASE}}adm.js"></script>
+
+
+
+	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+
+
+<ul class="breadcrumb">
+  <li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a> <span class="divider">/</span></li>
+  <li><a href="{{HTTPS_BASE_ADMIN}}edit.php">Редактирование страниц</a> <span class="divider">/</span></li>
+  <li class="active">{{CMS_ADMIN_CURRENT_PAGE_NAME}}</li>
+</ul>
+
+<hr class="divider" />
+ 
+    </div>
+  </div>
+</div>	
+	
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+	
+	
+
+
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+    <div class="span3">
+<div class="navbar">
+
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li {{level1active}}><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_index&currentid={{levelid}}&currentlevel={{currentlevel}}&maxlevel=1">1</a></li>
+      <li {{level2active}}><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_index&currentid={{levelid}}&currentlevel={{currentlevel}}&maxlevel=2">2</a></li>
+      <li {{level3active}}><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_index&currentid={{levelid}}&currentlevel={{currentlevel}}&maxlevel=3">3</a></li>
+      <li {{level4active}}><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_index&currentid={{levelid}}&currentlevel={{currentlevel}}&maxlevel=4">4</a></li>
+      <li {{level5active}}><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_index&currentid={{levelid}}&currentlevel={{currentlevel}}&maxlevel=5">5</a></li>
+      <li {{level9000active}}><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_index&currentid={{levelid}}&currentlevel={{currentlevel}}&maxlevel=9000">&infin;</a></li>
+    </ul>
+  </div>
+</div>
+	</div>
+
+
+<div class="span3">
+<ol class="unstyled">
+<li><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_move"><i class="icon-random"></i>Перемещение страниц и разделов</a>
+</ol>
+
+	</div>
+<div class="span3">
+
+<ol class="unstyled">
+<!-- BEGIN BLOCK.FASTLINK -->
+<!-- END BLOCK.FASTLINK -->
+</ol>
+	</div>
+
+    <div class="span3">
+<form class="form-inline" action="/edit.php" method="get">
+  <input type="hidden" name="ID" value="show_search">
+  <input type="text" name="q" class="input-medium" placeholder="адрес страницы">
+  <button type="submit" class="btn">Найти страницу</button>
+</form>
+</div>
+
+</div>
+</div>
+
+
+
+<table class="table table-striped table-condensed" >
+<!-- BEGIN BLOCK.DOCUMENT -->
+<tr class="{{status}}">
+<td width="20"><p class="muted">{{document.id}}</td>
+<td style="padding-left: {{br}}px;"  class="{{status}}">
+<a href="{{full_url}}"><img src="{{CMS_ADMIN_IMAGES_BASE}}{{type}}.gif" alt="{{type}}" title="{{type}}" /></a></td>
+<td width="80%" style="padding-left: {{br}}px;" class="{{status}}">
+<a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_edit&document_id={{document.id}}" style="display: block; text-decoration:none;" class="clickme">
+<b>{{name}}</b><br />
+<u>{{url}}</u></a>
+</td>
+
+
+<td width="150">
+<div style="width:150px;">
+<ol class="unstyled" >
+<li><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_edit&document_id={{document.id}}"><i class="icon-edit"></i>Изменить</a></li>
+<!-- BEGIN BLOCK.DOCUMENTADDCHILD -->
+<li><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_add_base&parent_id={{document.id}}"><i class="icon-plus"></i>Добавить</a></li>
+<!-- END BLOCK.DOCUMENTADDCHILD -->
+</ol>
+</div>
+
+<td width="150">
+<div style="width:150px;">
+<ol class="unstyled" >
+<li><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_tree&currentid={{document.id}}&currentlevel=0&maxlevel=1"><i class="icon-list"></i>Дерево</a></li>
+<!-- BEGIN BLOCK.DOCUMENTSORT -->
+<li><a href="{{CMS_ADMIN_URL_BASE}}edit.php?ID=show_sort&document_id={{document.id}}"><i class="icon-indent-left"></i>Сортировать</a></li>
+<!-- END BLOCK.DOCUMENTSORT -->
+<!-- BEGIN BLOCK.DOCUMENTPRICES -->
+<!-- <li><a href="{{CMS_ADMIN_URL_BASE}}edit_prices.php?ID=show_edit_price&document_id={{document.id}}">Цены</a></li> -->
+<!-- END BLOCK.DOCUMENTPRICES -->
+</ol>
+</div>
+</td>
+</tr>
+<!-- END BLOCK.DOCUMENT -->
+</table>
+
+
+
+
+
+
+
+
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+<small><a href="{{HTTP_BASE}}">Перейти на сайт</a></small>
+</div> 
+</footer>
+
+</html>	

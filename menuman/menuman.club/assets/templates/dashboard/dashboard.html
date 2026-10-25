@@ -1,0 +1,80 @@
+<div class="container" ng-controller="dashboardController as dbCtrl" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<a class="nav-link mui-btn mui-btn--primary active" ng-click="tab = 1" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Мои заведения</a>
+			<a class="nav-link mui-btn mui-btn--primary" ng-click="tab = 2" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Мои сети заведений</a>
+			<span style="float: right;">
+				<a href="/dashboard/add-place" class="mui-btn mui-btn--primary"><span class="fa fa-plus"></span> Добавить заведение</a> 
+				<a href="/dashboard/add-network" class="mui-btn mui-btn--primary"><span class="fa fa-plus"></span> Добавить сеть заведений</a> 
+				<a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a>
+			</span>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div class="row" style="margin-bottom: 30px;">
+				<!--<a class="nav-link mui-btn mui-btn--primary active" ng-click="tab = 1" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Мои заведения</a>
+				<a class="nav-link mui-btn mui-btn--primary" ng-click="tab = 2" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Мои сети заведений</a>-->
+				<!--<a class="nav-link mui-btn mui-btn--primary" ng-click="tab = 3" onclick="$('.nav-link').removeClass('active'); $(this).addClass('active');">Заведения с открытым доступом</a>-->
+			</div>
+			<div class="row">
+				<div class="col col-12 col-sm-12" ng-show="tab == 1">
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3" style="padding-left: 0px;" ng-repeat="place in places">
+							<div class="placecard col-12 col-sm-12 col-md-12 col-lg-12 mdl-card mdl-shadow--2dp">
+								<h2><a href="/{{ place.slug }}">{{ place.name }}</a></h2>
+								<p class="address">{{ place.address }}</p>
+								<p><span class="badge badge-success">Проверен</span></p>
+								<p class="views">{{ place.visitors }} просмотров страниц заведения</p>			
+								<a href="/dashboard/edit-place/{{ place.slug }}" class="editbtn"><span class="fa fa-pencil "></span> Редактировать</a>
+								<!--<span>нижние после теста убрать</span>
+								<a href="/dashboard/menu/{{ place.slug }}" class="mui-btn mui-btn--primary">Меню заведения</a>
+								<a href="/dashboard/goodicons/{{ place.slug }}" class="mui-btn mui-btn--primary">Фотографии блюд</a>
+								<a href="/dashboard/reviews/{{ place.slug }}" class="mui-btn mui-btn--primary">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger">{{ notify[place.id].reviews }}</span></a>
+								<a href="/dashboard/discount/{{ place.slug }}" class="mui-btn mui-btn--primary">Скидки для посетителей</a>
+								<a href="/dashboard/booking/{{ place.slug }}" class="mui-btn mui-btn--primary">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger">{{ notify[place.id].booking }}</span></a>
+								<a href="/dashboard/promotions/{{ place.slug }}" class="mui-btn mui-btn--primary">Акции для посетителей</a>
+								<a href="/dashboard/news/{{ place.slug }}" class="mui-btn mui-btn--primary">Новости заведения</a>
+								<a href="/dashboard/loyality/{{ place.slug }}" class="mui-btn mui-btn--primary">Карты лояльности</a>-->
+								<!--<a href="/dashboard/visitors/{{ place.slug }}" class="mui-btn mui-btn--primary">Посетители</a>-->
+								<!--<a href="/dashboard/grants/{{ place.slug }}" class="mui-btn mui-btn--primary">Открыть доступ</a>-->
+								<!--<a href="/dashboard/promo/{{ place.slug }}" class="mui-btn mui-btn--danger">Проверка промокода</a>-->
+							</div>
+						</div>				
+					</div>
+				</div>
+				<div class="col col-12 col-sm-12" ng-show="tab == 2">
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3" style="padding-left: 0px;" ng-repeat="network in networks">
+							<div class="placecard col-12 col-sm-12 col-md-12 col-lg-12 mdl-card mdl-shadow--2dp">
+								<h2>{{ network.name }}</h2>
+								<h3>Включает в себя заведения</h3>
+								<p ng-repeat="npl in network.places" class="nplname"><a href="/dashboard/edit-place/{{ npl.slug }}">{{ npl.name }}</a></p>
+								<a href="/dashboard/edit-network/{{ network.id }}" class="editbtn"><span class="fa fa-pencil "></span> Редактировать</a>
+								<a href="#" ng-click="deleteNetwork(network.id)" class="deletebtn"><span class="fa fa-trash-o"></span> Удалить сеть заведений</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!--<div class="col col-12 col-sm-12" ng-show="tab == 3">
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" style="padding-left: 0px;">
+
+						</div>		
+					</div>
+				</div>-->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container content" ng-show="group === 'client'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<span class="username"></span> <a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a><br>
+			<hr>
+			<a href="/dashboard/my-loyality" class="mui-btn mui-btn--primary"> Мои карты лояльности <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a> 
+			<a href="/dashboard/my-promo" class="mui-btn mui-btn--primary"> Мои промокоды</a> 
+			<a href="/dashboard/my-books" class="mui-btn mui-btn--primary"> Мои брони <span ng-show="notify.booking > 0" class="badge badge-pill badge-danger">{{ notify.booking }}</span></a> 
+			<a href="/dashboard/my-promotions" class="mui-btn mui-btn--primary"> Мои акции <span ng-show="notify.promotions > 0" class="badge badge-pill badge-danger">{{ notify.promotions }}</span></a>
+			<a href="/dashboard/my-reviews" class="mui-btn mui-btn--primary"> Мои отзывы <span ng-show="notify.reviews > 0" class="badge badge-pill badge-danger">{{ notify.reviews }}</span></a>
+		</div>
+	</div>
+</div>

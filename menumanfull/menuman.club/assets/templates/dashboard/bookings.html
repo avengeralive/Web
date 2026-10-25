@@ -1,0 +1,106 @@
+<div class="container content" ng-controller="bookingsController as bkCntr" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li><a href="/dashboard/edit-place/{{ place.slug }}">Информация</a></li>
+				<li><a href="/dashboard/menu/{{ place.slug }}">Меню</a></li>
+				<li><a href="/dashboard/goodicons/{{ place.slug }}">Фотографии блюд</a></li>
+				<li><a href="/dashboard/reviews/{{ place.slug }}">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/discount/{{ place.slug }}">Скидки</a></li>
+				<li class="active"><a href="#">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li><a href="/dashboard/news/{{ place.slug }}">Новости</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+			<form ng-submit="checkPromo();">
+				<div class="row checkfield">
+					<div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="code" placeholder="Проверить код брони">
+					</div>
+					<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+						<button class="mui-btn mui-btn--primary">Проверить</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col col-12">
+			<div class="row">
+				<div class="col col-6 nav-pills" style="margin-bottom: 25px;">
+				    <a href="#" class="nav-link" ng-click="gtab = 1;" ng-class="gtab == 1 ? 'active' : ''" style="float: left;">Предстоящие</a>
+				</div>
+				<div class="col col-6 nav-pills" style="margin-bottom: 25px;">
+				    <a href="#" class="nav-link" ng-click="gtab = 2;" ng-class="gtab == 2 ? 'active' : ''" style="float: left;">Прошедшие</a>
+				</div>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12" ng-show="gtab == 1">
+			<nav class="nav nav-pills flex-column flex-sm-row col-12" style="margin-bottom: 20px;" id="futbok">
+			    <a ng-click="fpr = 0" class="nav-link active" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Все</a> <a ng-click="fpr = 1" class="nav-link" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Подтвержденные</a> <a ng-click="fpr = 2" class="nav-link" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Неподтверденные</a>
+			</nav>
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 row bookcard" ng-repeat="(key,fbook) in fbooks track by $index" ng-show="(fbook.approved == true && (fpr == 0 || fpr == 1)) || (fbook.approved == false && (fpr == 0 || fpr == 2))">
+					<div class="col-12" style="background: #FFFFFF; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 25px;">
+						<p ng-show="fbook.approved == true" class="text-center bg-success"><b>Подтверждена</b></p>
+						<p ng-show="fbook.approved == false" class="text-center bg-warning"><b>Не подтверждена</b></p>
+						<p ng-show="fbook.reject == true && fbook.user_id == fbook.reject_user" class="text-center bg-danger"><b>Отменена</b></p>
+						<p ng-show="fbook.reject == true && fbook.user_id != fbook.reject_user" class="text-center bg-danger"><b>Отклонена</b></p>
+						<a class="text-success btn-link" ng-show="fbook.approved == false && fbook.reject == false" ng-click="approve(fbook.id, key)" style="line-height: 10px;"><i class="fa fa-check"></i>Подтвердить</a>
+						<a class="text-danger btn-link" ng-show="fbook.reject == false && fbook.approved == false" ng-click="reject(fbook.id, key)" style="line-height: 10px;"><i class="fa fa-trash"></i>Отклонить</a>
+						<hr>
+						<p><b>Имя:</b> {{ fbook.name }}</p>
+						<p><b>Телефон:</b> {{ fbook.phone }}</p>
+						<p><b>Количество человек:</b> {{ fbook.persons_number }}</p>
+						<p><b>Дата брони:</b> {{ fbook.book_date }}</p>
+						<hr>
+						<div><button class="mui-btn mui-btn--primary" data-toggle="modal" data-target="#booking" ng-click="setbookinfo(fbook.name, fbook.comment)" style="line-height: 10px;">Подробнее</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12" ng-show="gtab == 2">
+			<nav class="nav nav-pills flex-column flex-sm-row col-12" style="margin-bottom: 20px;" id="pbok">
+			    <a ng-click="ppr = 0" class="nav-link active" onclick="$('#pbok .nav-link').removeClass('active'); $(this).addClass('active');">Все</a> <a ng-click="ppr = 1" class="nav-link" onclick="$('#pbok .nav-link').removeClass('active'); $(this).addClass('active');">Подтвержденные</a> <a ng-click="ppr = 2" class="nav-link" onclick="$('#pbok .nav-link').removeClass('active'); $(this).addClass('active');">Неподтверденные</a>
+			</nav>
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 row bookcard" ng-repeat="pbook in pbooks track by $index" ng-show="(pbook.approved == true && (ppr == 0 || ppr == 1)) || (pbook.approved == false && (ppr == 0 || ppr == 2))">
+					<div class="col-12" style="background: #FFFFFF; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 25px;">
+						<p ng-show="pbook.approved == true" class="text-center bg-success"><b>Подтверждена</b></p>
+						<p ng-show="pbook.approved == false" class="text-center bg-warning"><b>Не подтверждена</b></p>
+						<p ng-show="pbook.reject == true && pbook.user_id == pbook.reject_user" class="text-center bg-danger"><b>Отменена</b></p>
+						<p ng-show="pbook.reject == true && pbook.user_id != pbook.reject_user" class="text-center bg-danger"><b>Отклонена</b></p>
+						<hr>
+						<p><b>Имя:</b> {{ pbook.name }}</p>
+						<p><b>Телефон:</b> {{ pbook.phone }}</p>
+						<p><b>Количество человек:</b> {{ pbook.persons_number }}</p>
+						<p><b>Дата брони:</b> {{ pbook.book_date }}</p>
+						<hr>
+						<div><button class="mui-btn mui-btn--primary" data-toggle="modal" data-target="#booking" ng-click="setbookinfo(pbook.name, pbook.comment)" style="    line-height: 10px;">Подробнее</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="bookingLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" role="document" style="max-width: 1000px;">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<h5 class="modal-title" id="bookingLabel">Комментарии к брони {{ booknum }}</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				    <span aria-hidden="true">×</span>
+				</button>
+			    </div>
+			    <div class="modal-body" style="padding: 20px;">
+				{{ bookcomment }}
+			    </div>
+			    <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+			    </div>
+			</div>			
+		    </div>
+		</div>
+		
+	</div>
+</div> 

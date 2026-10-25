@@ -1,0 +1,51 @@
+<div class="container content" ng-controller="settingsController as setCtrl">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<h3>Ваши персональные данные</h3>
+			</div>
+			<form ng-submit="personalsave()" id="settingform">
+				<input type="hidden" name="action" value="saveSettings">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+					<input type="text" ng-model="user.first_name">
+					<label>Имя</label>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+					<input type="text" ng-model="user.last_name">
+					<label>Фамилия</label>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+					<input type="phone" ng-model="user.phone">
+					<label>Телефон</label>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-checkbox">
+					<label><input type="checkbox" value="true" ng-model="user.agree"><span ng-show="group === 'admin' || group === 'company'">Я согласен получать письма об изменениях и дополнениях на сайте menuman.ru на адрес электронной почты</span><span ng-show="group === 'client'">Я согласен получать рассылку об акциях и скидках на адрес электронной почты</span></label>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<button class="mui-btn mui-btn--primary" id="saveAll">Сохранить</button>
+				</div>
+			</form>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<h3>Изменение пароля</h3>
+			</div>
+			<form ng-submit="savepassword()" id="changeform">
+				<input type="hidden" name="action" value="savePassword">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+					<input type="password" ng-model="password.old">
+					<label>Старый пароль</label>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+					<input type="password" ng-model="password.new">
+					<label>Новый пароль</label>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+					<input type="password"  ng-model="password.confirm">
+					<label>Повторите новый пароль</label>
+				</div>
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<button class="mui-btn mui-btn--primary" id="changePass">Изменить пароль</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

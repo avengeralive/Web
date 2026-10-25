@@ -1,0 +1,140 @@
+<div class="container content" ng-controller="mybooksController as newCntr" ng-show="group === 'client'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<span class="username"></span> <a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a><br>
+			<hr>
+			<a href="/dashboard/my-loyality" class="mui-btn mui-btn--primary"> Мои карты лояльности <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a> 
+			<a href="/dashboard/my-promo" class="mui-btn mui-btn--primary"> Мои промокоды</a> 
+			<a href="/dashboard/my-books" class="mui-btn mui-btn--primary"> Мои брони <span ng-show="notify.booking > 0" class="badge badge-pill badge-danger">{{ notify.booking }}</span></a> 
+			<a href="/dashboard/my-promotions" class="mui-btn mui-btn--primary"> Мои акции <span ng-show="notify.promotions > 0" class="badge badge-pill badge-danger">{{ notify.promotions }}</span></a>
+			<a href="/dashboard/my-reviews" class="mui-btn mui-btn--primary"> Мои отзывы <span ng-show="notify.reviews > 0" class="badge badge-pill badge-danger">{{ notify.reviews }}</span></a>
+		</div>
+	</div>
+	<div class="row">
+		<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h3>Не использованные</h3>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div class="col col-12 col-sm-6 col-md-3 row" ng-repeat="(key,book) in books track by $index" style="padding-left: 0px;">
+				<div class="col col-12" style="border: 1px solid #81b545; padding: 15px; background: #81b54533;">
+					<h2 style="margin-top: 0px;">{{ book.name }}</h2>
+					<p>Бронь столика на {{ book.persons_number }} человек в {{ book.book_date }}</p>
+					<p style="font-weight: bold; font-size: 25px; text-transform: uppercase;">Код брони: {{ book.code }}</p>
+					<p ng-show="book.approved == true" class="text-center text-success"><b>БРОНЬ ПОДТВЕРЖДЕНА</b></p>
+					<p ng-show="book.approved == false" class="text-center text-warning"><b>БРОНЬ НЕ ПОДТВЕРЖДЕНА</b></p>
+					<p ng-show="book.reject == true && book.user_id == book.reject_user" class="text-center text-danger"><b>БРОНЬ ОТМЕНЕНА</b></p>
+					<p ng-show="book.reject == true && book.user_id != book.reject_user" class="text-center text-danger"><b>БРОНЬ ОТКЛОНЕНА</b></p>
+					<div><button class="mui-btn mui-btn--danger" ng-show="book.reject == false" ng-click="reject(book.id, key)" style="width: 100%;">Отменить бронь</button></div>
+					<div class="qrcode" data-code="{{ book.code }}" make-qrcodes-promo></div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h3>Использованные или с истёкшим сроком действия</h3>
+		</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div class="col col-12 col-sm-6 col-md-3 row" ng-repeat="book in pbooks" style="padding-left: 0px;">
+				<div class="col col-12" style="border: 1px solid #81b545; padding: 15px; background: #81b54533;">
+					<h2 style="margin-top: 0px;">{{ book.name }}</h2>
+					<p>Бронь столика на {{ book.persons_number }} человек в {{ book.book_date }}</p>
+					<p style="font-weight: bold; font-size: 25px; text-transform: uppercase;">Код брони: {{ book.code }}</p>
+					<p ng-show="book.approved == true" class="text-center text-success"><b>БРОНЬ ПОДТВЕРЖДЕНА</b></p>
+					<p ng-show="book.approved == false" class="text-center text-warning"><b>БРОНЬ НЕ ПОДТВЕРЖДЕНА</b></p>
+					<p ng-show="book.reject == true && book.user_id == book.reject_user" class="text-center text-danger"><b>БРОНЬ ОТМЕНЕНА</b></p>
+					<p ng-show="book.reject == true && book.user_id != book.reject_user" class="text-center text-danger"><b>БРОНЬ ОТКЛОНЕНА</b></p>
+					<div class="qrcode" data-code="{{ book.code }}" make-qrcodes-promo></div>
+				</div>
+			</div>
+		</div>-->
+		<div class="col col-6 nav-pills" style="margin-bottom: 25px;">
+		    <a href="#" class="nav-link" ng-click="gtab = 1;" ng-class="gtab == 1 ? 'active' : ''" style="float: left;">Предстоящие</a>
+		    <a href="#" class="nav-link" ng-click="gtab = 2;" ng-class="gtab == 2 ? 'active' : ''" style="float: left;">Прошедшие</a>
+		</div>
+		<div class="col col-12 col-sm-12" ng-show="gtab == 1">
+			<nav class="nav nav-pills flex-column flex-sm-row col-12" style="margin-bottom: 20px;" id="futbok">
+			    <a ng-click="fpr = 0" class="nav-link active" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Все</a> <a ng-click="fpr = 1" class="nav-link" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Подтвержденные</a> <a ng-click="fpr = 2" class="nav-link" onclick="$('#futbok .nav-link').removeClass('active'); $(this).addClass('active');">Неподтверденные</a>
+			</nav>
+			<div class="row">
+			    <div class="col col-12 col-sm-6 col-md-4 row bookcard" ng-repeat="(key,book) in books track by $index" style="padding-left: 0px;" ng-show="(book.approved == true && (fpr == 0 || fpr == 1)) || (book.approved == false && (fpr == 0 || fpr == 2))">
+					<div class="col col-12" style="background: #FFFFFF; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 25px;">
+						<p ng-show="book.approved == true" class="text-center bg-success"><b>Подтверждена</b></p>
+						<p ng-show="book.approved == false" class="text-center bg-warning"><b>Не подтверждена</b></p>
+						<p ng-show="book.reject == true && book.user_id == book.reject_user" class="text-center bg-danger"><b>Отменена</b></p>
+						<p ng-show="book.reject == true && book.user_id != book.reject_user" class="text-center bg-danger"><b>Отклонена</b></p>
+						<a class="text-danger btn-link" ng-show="book.reject == false" ng-click="reject(book.id, key)">Отменить</a>
+						<hr>
+						<p><b>Имя:</b> {{ book.name }}</p>
+						<p><b>Телефон:</b> {{ book.phone }}</p>
+						<p><b>Количество человек:</b> {{ book.persons_number }}</p>
+						<p><b>Дата брони:</b> {{ book.book_date }}</p>
+						<p><b>Код брони:</b> <span class="text-danger">{{ book.code }}</span></p>
+						<hr>
+						<a class="text-success" data-toggle="modal" data-target="#booking" ng-click="setbookinfo(book.name, book.comment)"><i class="fa fa-ellipsis-v"></i>Подробнее</a>
+						<a class="text-success" data-toggle="modal" data-target=".qr{{ book.id }}" ng-click="showqr(book.id)"><i class="fa fa-qrcode"></i>Показать QR-код</a>
+					</div>
+					<div class="modal fade qr{{ book.id }}" tabindex="-1" role="dialog" aria-labelledby="loyalitylabel" aria-hidden="true">		
+					    <div class="modal-dialog" role="document">
+						<div class="modal-content">
+						    <div class="modal-header">
+								<h5 class="modal-title" id="layalitylabel">QR код</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								    <span aria-hidden="true">&times;</span>
+								</button>
+						    </div>							
+						    <div class="modal-body">
+								<div class="container-fluid">
+								    <div class="row">
+									<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+									    <div class="qrcode" data-code="{{ book.code }}" make-qrcodes-promo></div>
+									</div>
+								    </div>
+								</div>
+						    </div>	
+						</div>
+					    </div>					
+					</div>
+			    </div>
+			</div>
+		</div>
+		<div class="col col-12 col-sm-12" ng-show="gtab == 2">
+			<nav class="nav nav-pills flex-column flex-sm-row col-12" style="margin-bottom: 20px;" id="pbok">
+			    <a ng-click="ppr = 0" class="nav-link active" onclick="$('#pbok .nav-link').removeClass('active'); $(this).addClass('active');">Все</a> <a ng-click="ppr = 1" class="nav-link" onclick="$('#pbok .nav-link').removeClass('active'); $(this).addClass('active');">Подтвержденные</a> <a ng-click="ppr = 2" class="nav-link" onclick="$('#pbok .nav-link').removeClass('active'); $(this).addClass('active');">Неподтверденные</a>
+			</nav>
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 row bookcard" ng-repeat="pbook in pbooks track by $index" ng-show="(pbook.approved == true && (ppr == 0 || ppr == 1)) || (pbook.approved == false && (ppr == 0 || ppr == 2))">
+					<div class="col-12" style="background: #FFFFFF; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 25px;">
+						<p ng-show="pbook.approved == true" class="text-center bg-success"><b>Подтверждена</b></p>
+						<p ng-show="pbook.approved == false" class="text-center bg-warning"><b>Не подтверждена</b></p>
+						<p ng-show="pbook.reject == true && pbook.user_id == pbook.reject_user" class="text-center bg-danger"><b>Отменена</b></p>
+						<p ng-show="pbook.reject == true && pbook.user_id != pbook.reject_user" class="text-center bg-danger"><b>Отклонена</b></p>
+						<hr>
+						<p><b>Имя:</b> {{ pbook.name }}</p>
+						<p><b>Телефон:</b> {{ pbook.phone }}</p>
+						<p><b>Количество человек:</b> {{ pbook.persons_number }}</p>
+						<p><b>Дата брони:</b> {{ pbook.book_date }}</p>
+						<hr>
+						<a class="text-success" data-toggle="modal" data-target="#booking" ng-click="setbookinfo(pbook.name, pbook.comment)"><i class="fa fa-ellipsis-v"></i>Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="bookingLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" role="document" style="max-width: 1000px;">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<h5 class="modal-title" id="bookingLabel">Комментарии к брони {{ booknum }}</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				    <span aria-hidden="true">×</span>
+				</button>
+			    </div>
+			    <div class="modal-body" style="padding: 20px;">
+				{{ bookcomment }}
+			    </div>
+			    <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+			    </div>
+			</div>			
+		    </div>
+		</div>
+	</div>
+</div> 

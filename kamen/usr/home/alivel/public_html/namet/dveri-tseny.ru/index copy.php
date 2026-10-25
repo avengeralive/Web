@@ -1,0 +1,2524 @@
+<?
+$send_to = 'office@aliveiyev.com';
+if ($_POST['WEB_FORM_ID'] == 8) {
+   $name = $_POST['form_text_38'];
+   $phone = $_POST['form_text_39'];
+   $msg = 'Имя:'.$name.'\nТелефон'.$phone;
+   mail($send_to, 'Обратный звонок', $msg);
+}
+
+if ($_POST['WEB_FORM_ID'] == 9) {
+   $phone = $_POST['form_text_40'];
+   $msg = 'Телефон'.$phone;
+   mail($send_to, 'Бесплатный выезд замерщика', $msg);
+}
+
+if ($_POST['WEB_FORM_ID'] == 3) {
+   $phone = $_POST['form_text_29'];
+   $msg = 'Телефон'.$phone;
+   mail($send_to, 'СМС купон', $msg);
+}
+
+if ($_POST['WEB_FORM_ID'] == 4) {
+   $name = $_POST['form_text_30'];
+   $phone = $_POST['form_text_32'];
+   $email = $_POST['form_text_31'];
+   $msg = 'Имя:'.$name.'\nТелефон'.$phone;
+   mail($send_to, 'Рассчет стоимости', $msg);
+}
+
+if ($_POST['WEB_FORM_ID'] == 5) {
+   $phone = $_POST['form_text_33'];
+   $msg = 'Телефон'.$phone;
+   mail($send_to, 'Фиксирование цены на 3 дня', $msg);
+}
+
+if ($_POST['WEB_FORM_ID'] == 7) {
+   $phone = $_POST['form_text_37'];
+   $msg = 'Телефон'.$phone;
+   mail($send_to, 'Заказ звонка', $msg);
+}
+?>
+<html>
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="index, follow" />
+      <meta name="keywords" content="&quot;СТОЛКИТ&quot; - ИЗДЕЛИЯ ИЗ ИСКУССТВЕННОГО КАМНЯ
+НИЗКИЕ ЦЕНЫ" />
+      <meta name="description" content="&quot;СТОЛКИТ&quot; - ИЗДЕЛИЯ ИЗ ИСКУССТВЕННОГО КАМНЯ
+НИЗКИЕ ЦЕНЫ" />
+      <link href="./bitrix/cache/css/s1/main/page_c1e46035696f68c6aea559b0ccbded7b/page_c1e46035696f68c6aea559b0ccbded7b.css?152690582326856" type="text/css"  rel="stylesheet" />
+      <link href="./bitrix/cache/css/s1/main/template_a86a690159fbdcd9ed9932ad032b7d55/template_a86a690159fbdcd9ed9932ad032b7d55.css?152492823711101" type="text/css"  data-template-style="true"  rel="stylesheet" />
+      <script type="text/javascript" src="./bitrix/cache/js/s1/main/template_1b70af71cb0dc1f1272298701a64d179/template_1b70af71cb0dc1f1272298701a64d179.js?152492823798247"></script>
+      <script type="text/javascript" src="./bitrix/cache/js/s1/main/page_3b97e6aa56af0ba93b9eb2dd5fa4f2ca/page_3b97e6aa56af0ba93b9eb2dd5fa4f2ca.js?1526905823100933"></script>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="./css/normalize.css"/>
+      <link rel="stylesheet" href="./css/style-old.css"/>
+      <!-- Bootstrap -->
+      <link href="./css/bootstrap.min.css" rel="stylesheet">
+      <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+      <!-- ProdesCode -->
+      <link href="./css/style.css" rel="stylesheet">
+      <link href="./css/media.css" rel="stylesheet">
+      <link href="./css/skin.css" rel="stylesheet">
+      <link href="./js/fancybox/source/jquery.fancybox.css" rel="stylesheet">
+      <link href="./css/custom.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.css'>
+      <style type="text/css">
+         html {
+         box-sizing: border-box;
+         }
+         *, *:before, *:after {
+         box-sizing: inherit;
+         }
+         .responsive img {
+         width: 100%;
+         height: auto;
+         padding: 20px;
+         }
+         .slick-slide {
+         height: auto !important;
+         padding-top: 85px;
+         }
+         h2 {
+         text-align: center;
+         padding-bottom: 1em;
+         }
+         .slick-dots {
+         text-align: center;
+         margin: 30px 0 10px 0;
+         padding: 0;
+         }
+         .slick-dots li {
+         display: inline-block;
+         margin-left: 4px;
+         margin-right: 4px;
+         }
+         .slick-dots li.slick-active button {
+         background-color: black;
+         }
+         .slick-dots li button {
+         font: 0/0 a;
+         text-shadow: none;
+         color: transparent;
+         background-color: #999;
+         border: none;
+         width: 15px;
+         height: 15px;
+         border-radius: 50%;
+         }
+         .slick-dots li :hover {
+         background-color: black;
+         }
+         /* Custom Arrow */
+         .prev {
+         color: #999;
+         position: absolute;
+         top: 38%;
+         left: -2em;
+         font-size: 1.5em;
+         cursor: pointer;
+         }
+         .prev :hover {
+         cursor: pointer;
+         color: black;
+         }
+         .next {
+         color: #999;
+         position: absolute;
+         top: 38%;
+         right: -2em;
+         font-size: 1.5em;
+         cursor: pointer;
+         }
+         .next :hover {
+         cursor: pointer;
+         color: black;
+         }
+         @media screen and (max-width: 800px) {
+         .next {
+         display: none !important;
+         }
+         }
+         /*.modal-backdrop:last-child { z-index: 1449; }*/
+         #tseny {
+            overflow-y: auto !important;
+         }
+      </style>
+      <!--<script type="text/javascript">
+         var __cs = __cs || [];
+         __cs.push(["setAccount", "2xlILYOiLK81MD2IgtnYavW4sKXcoROp"]);
+         __cs.push(["setHost", "//server.comagic.ru/comagic"]);
+         </script>
+         
+         <script type="text/javascript" async src="//app.comagic.ru/static/cs.min.js"></script>
+         
+         -->
+      <script type="text/javascript">
+         var __cs = __cs || [];
+         __cs.push(["setCsAccount", "DvLGeNa6IxWMXp3M4ogyefN0H78rZX8C"]);
+         __cs.push(["setCsHost", "//server.comagic.ru/comagic"]);
+      </script>
+      <script type="text/javascript" async src="//app.comagic.ru/static/cs.min.js"></script>
+      <!-- Comagic end -->
+      <!-- ???? -->
+      <!-- Yandex.Metrika counter -->
+      <script type="text/javascript">
+         (function (d, w, c) {
+             (w[c] = w[c] || []).push(function() {
+                 try {
+                     w.yaCounter40072360 = new Ya.Metrika({
+                         id:40072360,
+                         clickmap:true,
+                         trackLinks:true,
+                         accurateTrackBounce:true
+                     });
+                 } catch(e) { }
+             });
+         
+             var n = d.getElementsByTagName("script")[0],
+                 s = d.createElement("script"),
+                 f = function () { n.parentNode.insertBefore(s, n); };
+             s.type = "text/javascript";
+             s.async = true;
+             s.src = "https://mc.yandex.ru/metrika/watch.js";
+         
+             if (w.opera == "[object Opera]") {
+                 d.addEventListener("DOMContentLoaded", f, false);
+             } else { f(); }
+         })(document, window, "yandex_metrika_callbacks");
+      </script>
+      <noscript>
+         <div><img src="https://mc.yandex.ru/watch/40072360" style="position:absolute; left:-9999px;" alt="" /></div>
+      </noscript>
+      <!-- /Yandex.Metrika counter -->
+      <!-- ????-->
+      <!-- ????? -->
+      <meta name="yandex-verification" content="91fb15f3a46e8850" />
+      <!-- ?????-->
+      <script src="./js/compile.js"></script>
+      <title>&quot;СТОЛКИТ&quot; - ИЗДЕЛИЯ ИЗ ИСКУССТВЕННОГО КАМНЯ НИЗКИЕ ЦЕНЫ</title>
+   </head>
+   <body>
+      <div class="topclose5px"></div>
+      <div id="tzloadding">
+         <div id="loader-wrapper">
+            <div id="loader"></div>
+         </div>
+      </div>
+      <div id="panel"></div>
+      <div class='main'>
+         <!--work area-->
+         <div class="container top_block">
+            <div class="top_block__item">
+               <div class="top_block__logo">
+                  <img src="./img/logo.png" alt="Двери цены" />
+               </div>
+            </div>
+            <div class="top_block__item">
+               <div class="top_block__slogon top_block__slogon--1">Гарантия 10 лет</div>
+               <div class="top_block__slogon top_block__slogon--2">собственное производство.</div>
+            </div>
+            <div class="top_block__item">
+               <a style="text-decoration:none;" class="black" href="tel:+7 (495) 120-23-00">
+                  <div class="top_block__tel comagic_phone">+7 (495) 120-23-00</div>
+               </a>
+               <div class="top_block__vamperez" data-toggle="modal" data-target="#kupitDeshevle"><span>Вам перезвонить?</span></div>
+            </div>
+         </div>
+         <!--top_block -->
+         <nav class="top_menu navbar navbar-default">
+            <div class="container">
+               <div class="navbar-header"  data-toggle="collapse" data-target="#top_menu-navbar-collapse-1">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top_menu-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Меню</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <span class="navbar-brand hidden-lg hidden-md hidden-sm" data-toggle="collapse"  data-target="#top_menu-navbar-collapse-1">Меню сайта</span>
+               </div>
+               <div class="collapse navbar-collapse" id="top_menu-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle top1" data-toggle="dropdown" data-hover="dropdown" data-delay="200" data-close-others="false" aria-expanded="false">наши изделия</a>
+                        <ul class="dropdown-menu" style="margin-left: -37px">
+                           <li>
+                              <div class="menu_str hidden-xs"></div>
+                           </li>
+                           <li><a tabindex="-1" href="#">СТОЛЕШНИЦЫ НА КУХНЮ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <!--<li><a tabindex="-1" href="/">Установка межкомнатных дверей</a></li>
+                              <li class="divider hidden-xs"></li>-->
+                           <li><a tabindex="-1" href="#">СТОЛЕШНИЦЫ В САНУЗЕЛ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">ИНТЕГРИРОВАННЫЕ МОЙКИ / РАКОВИНЫ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">ПОДОКОННИКИ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">СТОЙКИ РЕСЕПШН</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">БАРНЫЕ СТОЙКИ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">СТОЛЫ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">ЭКСКЛЮЗИВ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">ДРУГИЕ ИЗДЕЛИЯ</a></li>
+                        </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle top2" data-toggle="dropdown" data-hover="dropdown" data-delay="200" data-close-others="false" aria-expanded="false">каталог камня</a>
+                        <ul class="dropdown-menu" style="margin-left: -50px">
+                           <li>
+                              <div class="menu_str hidden-xs"></div>
+                           </li>
+                           <li><a tabindex="-1" href="#">1</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">2</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">3</a></li>
+                        </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle top3" data-toggle="dropdown" data-hover="dropdown" data-delay="200" data-close-others="false" aria-expanded="false">наши работы</a>
+                        <ul class="dropdown-menu" style="margin-left: -38px">
+                           <li>
+                              <div class="menu_str hidden-xs"></div>
+                           </li>
+                           <li><a tabindex="-1" href="#">наши работы</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">1</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">2</a></li>
+                        </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle top4" data-toggle="dropdown" data-hover="dropdown" data-delay="200" data-close-others="false" aria-expanded="false">О нас</a>
+                        <ul class="dropdown-menu" style="margin-left: -33px">
+                           <li>
+                              <div class="menu_str hidden-xs"></div>
+                           </li>
+                           <li><a tabindex="-1" href="#">производство</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">услуги</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">FAQ</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">полезное</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">сертификаты</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">отзывы</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">рассрочка</a></li>
+                           <li class="divider hidden-xs"></li>
+                           <li><a tabindex="-1" href="#">сотрудничество</a></li>
+                        </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle top5" data-toggle="dropdown" data-hover="dropdown" data-delay="200" data-close-others="false" aria-expanded="false">Контакты</a>
+                     </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <li>
+                        <div class="menu_aksii"><a href="#"><img src="img/menu_aksii.png" alt=""></a></div>
+                     </li>
+                  </ul>
+               </div>
+               <!-- navbar-collapse -->
+            </div>
+            <!-- container -->
+         </nav>
+         <!-- top_menu -->
+         <div class="es1_main_bg">
+            <div class="container">
+               <div class="es1_main__left_name">
+                  <div class="es1_main__left_name__badg"></div>
+                  <div class="es1_main__left_name__zag90">ИЗДЕЛИЯ ИЗ ИСКУССТВЕННОГО КАМНЯ</div>
+                  <div class="es1_main__left_name__zag70">низкие цены</div>
+               </div>
+               <!-- es1_main__left_name -->
+               <div class="es1_main__left_menu">
+                  <div class="es1_main__left_menu__li1"><a href="#"><span>- СТОЛЕШНИЦЫ НА КУХНЮ</span></a></div>
+                  <div class="es1_main__left_menu__li2"><a href="#"><span>- СТОЛЕШНИЦЫ В САНУЗЕЛ</span></a></div>
+                  <div class="es1_main__left_menu__li3"><a href="#"><span>- ИНТЕГРИРОВАННЫЕ МОЙКИ / РАКОВИНЫ</span></a></div>
+                  <div class="es1_main__left_menu__li4"><a href="#"><span>- ПОДОКОННИКИ</span></a></div>
+                  <div class="es1_main__left_menu__li5"><a href="#"><span>- СТОЙКИ РЕСЕПШН</span></a></div>
+                  <div class="es1_main__left_menu__li6"><a href="#"><span>- БАРНЫЕ СТОЙКИ</span></a></div>
+                  <div class="es1_main__left_menu__li7"><a href="#"><span>- СТОЛЫ</span></a></div>
+                  <div class="es1_main__left_menu__li8"><a href="#"><span>- ЭКСКЛЮЗИВ</span></a></div>
+                  <div class="es1_main__left_menu__li9"><a href="#"><span>- ДРУГИЕ ИЗДЕЛИЯ</span></a></div>
+               </div>
+               <!-- es1_main__left_menu -->
+               <div class="es1_main__left_dayblock">
+                  <div class="es1_main__skidka">скидка</div>
+                  <div class="es1_main__day">только 7 дней!</div>
+                  <div class="es1_main_skidkaznach"><img src="./img/es1aktsii_63.png" alt=""></div>
+               </div>
+               <!-- /.es1_main__left_dayblock -->
+               <div class="es1_bg__right_col">
+                  <div class="b-top__zamer" data-toggle="modal" data-target="#want_zamer">
+                     <div class="b-top__zamer_ruler "></div>
+                     <div class="b-top__zamer_txt"><span>БЕСПЛАТНЫЙ</span><br>
+                        выезд замерщика
+                     </div>
+                  </div>
+               </div>
+               <!-- /.es1_bg__right_col -->
+            </div>
+            <!-- /.container -->
+         </div>
+         <!-- /.es1_main_bg -->
+         <div class="es13_bg" style="height: auto !important; padding-bottom: 50px; margin-top: 0px !important;">
+            <div class="es13_bg__text">
+               наши сроки от 1 до 7 дней под ключ<br>
+               <!--<img width="120px" height="120px" src="css/img/badg_op.png">-->
+               <br>
+               <small style="font-size: 50%;">замер&nbsp;&nbsp;&nbsp;&nbsp;<span>&bull;</span>&nbsp;&nbsp;&nbsp;&nbsp;производство&nbsp;&nbsp;&nbsp;&nbsp;<span>&bull;</span>&nbsp;&nbsp;&nbsp;&nbsp;монтаж</small>
+            </div>
+         </div>
+         <div class="es13_14">
+            <div class="container">
+               <h3>ИСКУССТВЕННЫЙ КАМЕНЬ - ЛУЧШЕЕ РЕШЕНИЕ!</h3>
+               <div class="row">
+               <div class="col-md-6" style="text-align: center;">
+                  <a class="yellow-button" href="#home1" aria-controls="home1" role="tab" data-toggle="tab" style="font-size: 16px;  width: 80%; margin: 10px 0px; font-family: ALSSchlangesans-Black !important;">Полезное видео</a>
+                  <a class="yellow-button" href="#profile" aria-controls="profile" role="tab" data-toggle="tab" style="font-size: 16px; width: 80%; margin: 10px 0px; font-family: ALSSchlangesans-Black !important;">Сравнение материалов</a>
+                  <a class="yellow-button" href="#messages" aria-controls="messages" role="tab" data-toggle="tab" style="font-size: 16px; width: 80%; margin: 10px 0px; font-family: ALSSchlangesans-Black !important;">Почему искусственный камень? </a>
+               </div>
+               <div class="col-md-6">
+                  <div class="tab-content">
+                     <div role="tabpanel" class="tab-pane active" id="home1">
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/RtXowVJPdQw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                     </div>
+                     <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                           <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="h1">
+                                 <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1"> Искусственный камень</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h1">
+                                 <div class="panel-body">
+                                    <ul>
+                                       <li>Мировая технология без швов!</li>
+                                       <li>Возможно бесшовно интегрировать мойку</li>
+                                       <li>Устойчив к кислотам и загрязнениям</li>
+                                       <li>Не впитывает запахи</li>
+                                       <li>1500 цветовых текстур на любой вкус</li>
+                                       <li>Единственный материал, который подлежит реставрации</li>
+                                       <li>Приятный на ощупь - комнатная температура</li>
+                                       <li>Экологичный, имеет сертификаты и используется в медицине</li>
+                                       <li>Герметичный бортик - отсутствие селиконовой прослойки</li>
+                                       <li>Возможно придать изогнутую форму</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="h2">
+                                 <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2"> Кварцевый агломерат</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h2">
+                                 <div class="panel-body">
+                                    <ul>
+                                       <li>Нет возможности бесшовного соединения</li>
+                                       <li>Износостойкий, но хрупкий</li>
+                                       <li>Не подлежит реставрации</li>
+                                       <li>Высокая стоимость</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="h3">
+                                 <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3"> ДСП/ЛДСП</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h3">
+                                 <div class="panel-body">
+                                    <ul>
+                                       <li>Не долговечный</li>
+                                       <li>Стыки подвержены разрушению при контакте с влагой</li>
+                                       <li>Покрытие - формальдегидная смола!</li>
+                                       <li>Впитывает запахи и влагу</li>
+                                       <li>Нет бесшовного соединения</li>
+                                       <li>Бортики с силиконовой прослойкой - сложно ухаживать</li>
+                                       <li>В стыки забивается грязь</li>
+                                       <li>Подвержен царапинам</li>
+                                       <li>Не термоустойчив</li>
+                                       <li>Нет возможности придать изогнутую форму</li>
+                                       <li>При скруглении угла -разрушается целостность, уменьшается срок службы</li>
+                                       <li>Ограниченный размерный ряд</li>
+                                       <li>Не ремонтопригоден</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="h4">
+                                 <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4"> Мрамор</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h4">
+                                 <div class="panel-body">
+                                    <ul>
+                                       <li>Не долговечный</li>
+                                       <li>Гигроскопичен - сложно выводить любые пятна</li>
+                                       <li>Подвержен образованию плесени</li>
+                                       <li>Холодный на ощупь</li>
+                                       <li>Имеет естественный радиоактивный фон!</li>
+                                       <li>Есть стыки</li>
+                                       <li>Нет возможности бесшовно интегрировать мойку</li>
+                                       <li>Подвержен царапинам</li>
+                                       <li>Не подлежит реставрации</li>
+                                       <li>Нет возможности придать изогнутую форму</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="h5">
+                                 <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5"> Гранит</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h5">
+                                 <div class="panel-body">
+                                    <ul>
+                                       <li>Холодный на ощупь</li>
+                                       <li>Нет возможности бесшовного соединения</li>
+                                       <li>Тяжелый - может провиснуть мебель</li>
+                                       <li>Изначально предназначен для экстерьера</li>
+                                       <li>Тупит ножи</li>
+                                       <li>Имеет радиоактивный фон (не проходит по стандартам)</li>
+                                       <li>Гигроскопичен - сложно выводить любые пятна</li>
+                                       <li>Холодный на ощупь</li>
+                                       <li>Нет возможности бесшовно интегрировать мойку</li>
+                                       <li>Не подлежит реставрации</li>
+                                       <li>Нет возможности придать изогнутую форму</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="h6">
+                                 <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapse6"> Литьевой жидкий гранит и мрамор </a>
+                                 </h4>
+                              </div>
+                              <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h6">
+                                 <div class="panel-body">
+                                    <ul>
+                                       <li>Содержит полиэфирные токсичные смолы&nbsp;</li>
+                                       <li>Нет сертификации в мире</li>
+                                       <li>Слой камня 3-6 мм.&nbsp;</li>
+                                       <li>Подложка ДСП - деформирует со временем камень</li>
+                                       <li>Источает неприятных запах (мастера работают в противогазах)</li>
+                                       <li>Тяжело выветривается полиэфирная смола</li>
+                                       <li>Нет возможности сделать герметичный и эстетичный бортик (только аналог борта ДСП)</li>
+                                       <li>Сильно царапается</li>
+                                       <li>Имеет вид пластика</li>
+                                       <li>Нет возможности придать изогнутую форму</li>
+                                       <li>Ограничен по текстурам и расцветкам</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="h7">
+                                 <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7"> Камень 35 мм</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="h7">
+                                 <div class="panel-body">
+                                    <p>Литьевой жидкий гранит или мрамор, залитый в форму в полную толщину. Имеет все те же недостатки.&nbsp;</p>
+                                    <p>Камень по мировому стандарту исключительно 12мм в толщину! Толщина изделия добирается путем использования подложки и бесшовного увеличения кромки! Стандарт кромки: 40мм.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div role="tabpanel" class="tab-pane" id="messages" style="height: 300px; overflow-y: scroll; border: 1px solid #000; padding: 15px; border-right: 4px solid #ffe710;">
+                        <h2>Идеально ровная поверхность</h2>
+                        <img src="./img/pik/i1.jpg" style="float: right; height: 120px; margin-left: 5px;">
+                        <p>На изделиях из искусственного камня нет швов и стыков. Если ваше изделие имеет например г-образную форму, шва вы никогда не заметите. А так же со столешницей можно бесшовно интегрировать мойку.</p>
+                        <h2>Прочность и долговечность</h2>
+                        <img src="./img/pik/i2.jpg" style="float: left; height: 120px; margin-right: 5px;">
+                        <p>На изделиях из искусственного камня нет швов и стыков. Если ваше изделие имеет например г-образную форму, шва вы никогда не заметите. А так же со столешницей можно бесшовно интегрировать мойку.</p>
+                        <h2>Отсутствие пор - легко ухаживать</h2>
+                        <img src="./img/pik/i3.jpg" style="float: right; height: 120px; margin-left: 5px;">
+                        <p>На изделиях из искусственного камня нет швов и стыков. Если ваше изделие имеет например г-образную форму, шва вы никогда не заметите. А так же со столешницей можно бесшовно интегрировать мойку.</p>
+                        <h2>Ремонтопригодность</h2>
+                        <img src="./img/pik/i4.jpg" style="float: left; height: 120px; margin-right: 5px;">
+                        <p>На изделиях из искусственного камня нет швов и стыков. Если ваше изделие имеет например г-образную форму, шва вы никогда не заметите. А так же со столешницей можно бесшовно интегрировать мойку.</p>
+                        <h2>СОТНИ ЦВЕТОВ И ТЕКСТУР</h2>
+                        <img src="./img/pik/i5.jpg" style="float: right; height: 120px; margin-left: 5px;">
+                        <p>Вам доступны более 1500 различных цветов. Текстуры под различные виды камня, такие как гранит и мрамор. А так же в искусственном камне есть цвета, многие из которых не возможно встретить в природе.</p>
+                        <h2>ЭКОЛОГИЧНОСТЬ</h2>
+                        <img src="./img/pik/i6.jpg" style="float: left; height: 130px; margin-right: 5px;">
+                        <p>Искусственный листовой камень препятствует размножению грибков, плесени и бактерий. Он не выделяет ни каких искусственных токсичных веществ в отличии от литьевого мрамора. Акриловая смола используется даже в стоматологии для производства пломб.</p>
+                        <h2>РАЗНООБРАЗИЕ ФОРМ</h2>
+                        <img src="./img/pik/i7.jpg" style="float: right; height: 170px; margin-left: 5px;">
+                        <p>Воплощайте ваши дизайнерские фантазии - ни каких ограничений по размеру или форме изделия. Искусственному камню можно придать любую форму и изгиб, а так же с легкостью можно интегрировать любые раковины и мойки путем бесшовного соединения.</p>
+                        <h2>КОМНАТНАЯ ТЕМПЕРАТУРА</h2>
+                        <img src="./img/pik/i8.jpg" style="float: left; height: 130px; margin-right: 5px;">
+                        <p>В отличии от натурального камня, искусственный никогда не бывает обжигающе холодным. Он создаст уют и комфорт в вашем доме, поэтому даже в районе окна столешница интегрированная в подоконник будет сохранять комнатную температуру.</p>
+                        <h2>ЭРГОНОМИЧНОСТЬ</h2>
+                        <img src="./img/pik/i9.jpg" style="float: right; height: 150px; margin-left: 5px;">
+                        <p>Искусственный камень превосходно сочетает красоту и влагостойкость, обеспечивая удобство использования в любом помещении. Столешницы из искусственного камня в ванную комнату удобно объединит пространство, а столешница на кухню интегрированная в подоконник создаст дополнительную полезную поверхность.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="es2">
+         <h2>
+            ТОЛЬКО ДО КОНЦА НЕДЕЛИ!
+            <br />
+            ЛУЧШИЕ ЦЕНЫ НА ИЗДЕЛИЯ ИЗ ИСКУССТВЕННОГО КАМНЯ В МОСКВЕ!
+         </h2>
+         <div class="es2_block">
+            <div class="es2_oknatseny">
+               <div class="es2_oknatseny__zag">Наша компания</div>
+               <div class="es2_oknatseny_tsena">
+                  <div class="es2_oknatseny_left">Цена </div>
+                  <div class="es2_oknatseny_right es2_red">от 5800<span> р.</span></div>
+               </div>
+               <div class="es2_oknatseny_row">
+                  <div class="es2_oknatseny_row_left">
+                     <table>
+                        <tr>
+                           <td>Материал</td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="es2_oknatseny_row_right es2_red">Оригинал</div>
+               </div>
+               <div class="es2_oknatseny_row">
+                  <div class="es2_oknatseny_row_left">
+                     <table>
+                        <tr>
+                           <td>Гарантия</td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="es2_oknatseny_row_right">
+                     <div class="b-day">
+                        <div class="b-day_item count"> 10&nbsp; </div>
+                        <div class="b-day_item day"> лет</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="es2_oknatseny_row">
+                  <div class="es2_oknatseny_row_left">
+                     <table>
+                        <tr>
+                           <td>Лицензия</td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="es2_oknatseny_row_right">
+                     <div class="b-day">
+                        <div class="b-day_item day"> есть</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="es2_oknatseny_row">
+                  <div class="es2_oknatseny_row_left">
+                     <table>
+                        <tr>
+                           <td>Установка</td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="es2_oknatseny_row_right">
+                     <div class="b-day">
+                        <div class="b-day_item day"> наша</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="es2_oknatseny_row">
+                  <div class="es2_oknatseny_row_left">
+                     <table>
+                        <tr>
+                           <td>Качество</td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="es2_oknatseny_row_right es2_oknatseny_row_right_stars">
+                     <img src="img/es11_star.png" alt="">
+                     <img src="img/es11_star.png" alt="">
+                     <img src="img/es11_star.png" alt="">
+                     <img src="img/es11_star.png" alt="">
+                     <img src="img/es11_star.png" alt="">
+                  </div>
+               </div>
+               <div class="es2_but" data-toggle="modal" data-target="#kupitDeshevle"></div>
+            </div>
+            <div class="es2_bgtransper"></div>
+            <div class = 'iosslider_2'>
+               <div class = 'slider'>
+                  <div class="es2_okna slide">
+                     <div class="es2_okna__zag">Дилеры</div>
+                     <div class="es2_okna_tsena">
+                        <div class="es2_okna_right">от 12400р.</div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="es2_okna_row_right">Оригинал</div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item count"> 10&nbsp; </div>
+                           <div class="b-day_item day"> лет</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> есть</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> наша</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="es2_okna_row_right">
+                           <img src="img/es11_star.png" alt="">
+                           <img src="img/es11_star.png" alt="">
+                           <img src="img/es11_star.png" alt="">
+                           <img src="img/es11_star.png" alt="">
+                           <img src="img/es11_star.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="es2_okna slide">
+                     <div class="es2_okna__zag">Перекупщики</div>
+                     <div class="es2_okna_tsena">
+                        <div class="es2_okna_right">от 10000р.</div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="es2_okna_row_right">Разный</div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> _ _ _ _ _</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> нет</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> своими силами</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="es2_okna_row_right">
+                           <img src="img/es11_star.png" alt="">
+                           <img src="img/es11_star.png" alt="">
+                           <img src="img/es11_star.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="es2_okna slide">
+                     <div class="es2_okna__zag">Частные мастера</div>
+                     <div class="es2_okna_tsena">
+                        <div class="es2_okna_right">от 7000р.</div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="es2_okna_row_right">Разный</div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> _ _ _ _ _</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> нет</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="b-day">
+                           <div class="b-day_item day"> своими силами</div>
+                        </div>
+                     </div>
+                     <div class="es2_okna_row">
+                        <div class="es2_okna_row_right">
+                           <img src="img/es11_star.png" alt="">
+                           <img src="img/es11_star.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.slider -->
+            </div>
+            <button class="yellow-button" id="template_zafixtsenu_but2" style="margin-top: 15px;" data-toggle="modal" data-target="#tseny">Смотреть цены</button>
+            <br><br>
+         </div>
+         <!-- /.es2_block -->
+      </div>
+      <!-- /.es2 -->
+      <br><br><br>
+      <div class="es13_14">
+         <div class="container">
+            <h3>КОМПАНИЯ “СТОЛКИТ”</h3>
+            <h2>100% качество по цене от производителя!</h2>
+            <div class="es13_14__desc">Компания “Столкит” производит и устанавливает изделия из искусственного камня по лучшей цене в Москве и области! Благодаря собственному производственному цеху, оснащенному по всем передовым технологиям уже более 10 лет компания является самой надежной и стабильной. Наши цены обусловлены тем, что мы имеем специальные условия среди поставщиков камня благодаря большим оборотам и отлаженные производственные и логистические процессы, которые позволяют экономить ресурсы.</div>
+         </div>
+      </div>
+      <!-- /.es13_14 -->
+      <div class="b-line"></div>
+      <div class="es3">
+         <h2 style="font-size:40px;">
+            наши изделия
+         </h2>
+         <div class="container">
+            <div class="es3__block">
+               <div class="col-md-12 heroSlider-fixed ">
+                  <div class="overlay">
+                  </div>
+                  <!-- Slider -->
+                  <div class="slider responsive">
+                     <div>
+                        <img src="./img/88.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em; display: block;">
+                           <img src="./img/li1.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left;">СТОЛЕШНИЦЫ/МОЙКИ НА КУХНЮ</strong>
+                        </p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/izdelya/stolishnica_v_sanuzel.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li2.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left;">СТОЛЕШНИЦЫ В САНУЗЕЛ</strong></p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/1345.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li3.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left;">ИНТЕГРИРОВАННЫЕ МОЙКИ / РАКОВИНЫ</strong></p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/izdelya/podokonniki.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li4.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left; line-height: 60px;">ПОДОКОННИКИ</strong></p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/izdelya/stoyki _resepshn.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li5.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left; line-height: 60px;">СТОЙКИ РЕСЕПШН</strong></p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/izdelya/barnie_stoyki.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li6.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left; line-height: 60px;">БАРНЫЕ СТОЙКИ</strong></p>
+                        <div class="es3_strzag"></div>
+                     
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/izdelya/stoli.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li7.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left; line-height: 60px;">СТОЛЫ</strong></p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/izdelya/ekskluziv.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li8.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left; line-height: 60px;">ЭКСКЛЮЗИВ</strong></p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                     <div>
+                        <img src="./img/izdelya/druqie_izdelie.jpg" alt="" />
+                        <p style="text-align: left; font-size: 2.4em;display: block;">
+                           <img src="./img/li9.svg" style="width: 60px; padding: 0px; float: left;">
+                           <strong style="width: calc(100% - 60px); float: left; line-height: 60px;">ДРУГИЕ ИЗДЕЛИЯ</strong></p>
+                        <div class="es3_strzag"></div>
+                        
+                        <a class="yellow-button" href="#">Подробнее</a>
+                     </div>
+                  </div>
+                  <!-- control arrows -->
+                  <div class="prev">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  </div>
+                  <div class="next">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  </div>
+               </div>
+               <!--<div class="zoom-gallery" id="zoom-instance-2" style="margin: 0px auto; width: 900px; height: 397px;">
+                  <img width="55" alt="preloader" src="./img/preloader.gif" height="18" class="preloader">
+                  
+                             <ul>
+                  
+                  
+                  
+                  
+                  
+                     
+                  
+                     <li title="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg">
+                  
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Стол    Цена: <span>3100 р.</span></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/803/60a4363a307cc71b2db17a6365b4a4f6.jpg">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Стул    Цена: <span>3100 р.</span></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/794/%D1%8F2.jpg">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Раковина    Цена: <span>3100 р.</span></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/66f/%D1%8F.jpg">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Кухня    Цена: <span>3100 р.</span></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/933/Razdvizhnyie-mezhkomnatnyi-derevyannyie-dveri-1-1024x768.jpg">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Шкаф    Цена: <span>3100 р.</span></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/94c/dvery_garmoshka.jpg">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Дверце    Цена: <span>3100 р.</span></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/733/dveri_steklo_vstavka.jpg">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Столешница    Цена: <span>3100 р.</span></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/d44/dveri_s_frezerovkoj.png">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;"></li>
+                         </ul>
+                     </li>
+                     
+                  
+                     <li title="./upload/iblock/3e7/2.jpg">
+                         <ul class="align-left">
+                             <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;"></li>
+                         </ul>
+                     </li>
+                  
+                  
+                             </ul>
+                             
+                         </div>-->
+            </div>
+         </div>
+         <!-- /.container -->
+         <div class="es3__podtext">
+            <span>Любое изделие по выгодной акции</span>
+            <span><img src="./img/es3_but.png" alt=""  data-toggle="modal" data-target="#kupitDeshevle"/></span>
+         </div>
+      </div>
+      <!-- /.es3 -->
+      <div class="b-sms_bg">
+         <div class="container">
+            <div class="col-md-5 b-sms_phone hidden-xs hidden-xs hidden-sm">
+               <img src="./img/b_sms_phone.png" alt="">
+            </div>
+            <div class="col-md-7">
+               <div class="b-sms__text">
+                  СМС ОТ СТОЛКИТ
+               </div>
+               <div class="b-sms__undertext">
+                  Впишите свой телефон и получите<br>
+                  смс-купон на лучшую цену от производителя Столкит:
+               </div>
+               <div class="b-sms__form">
+                  <form name="SIMPLE_FORM_1" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="3" /><input type="hidden" name="lang" value="ru" />
+                  <form>
+                     <div class="b-sms_input b-sms_input_tel form-group"><input type="text" class="phonemask input-phone" data-validation="required" placeholder="Ваш телефон" id="form_text_11" data-field="phone" name="form_text_29" value="" size="0" /><input type="hidden" data-field="comagic" name="form_hidden_70" value="" /></div>
+                     <div class="b-sms_but">
+                        <button class="red-button" id="template_smsskidka_but">
+                           отправить</span> <input name="web_form_apply" value="Y" type="hidden" /> 
+                     </div>
+                  </form>
+                  </form><div class="prav-info dark">Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+                  <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой информацией</a></div>
+               </div>
+            </div>
+         </div>
+         <!-- /.container -->
+      </div>
+      <!-- /.b-sms_bg --><div class="b_greyblock_bg">
+      <!-- <div class="container">
+         <div class="b_greyblock__block">
+           <div class="b_greyblock_ico b_greyblock_ico1"><a href="/mezhkomnatnye-dveri/">Межкомнатные двери</a></div>
+           <div class="b_greyblock_ico b_greyblock_ico2"><a href="/vkhodnye-dveri/">Входные двери</a></div>
+           <div class="b_greyblock_ico b_greyblock_ico3"><a href="/razdvizhnye-dveri/">Раздвижные двери</a></div>
+         </div>
+         </div>-->
+      </div>
+      <!--<div class="es2" style="padding-bottom: 30px;">
+      <style>
+      .s2, .s3, .s4, .s5, .s6, .s7, .s8 { display: none; }
+      .sh li { list-style: none; display: inline-block; }
+      .st { display: block;
+      color: #000;
+      cursor: pointer;
+      text-decoration: none;
+      /*background: #ffe710;*/
+      font-size: 20px;
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+      line-height: 30px;
+      border-radius: 20px; }
+      .st.active {
+      background: #ffe710;
+      }
+      .s1 li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      }
+      .s1 li:hover {
+      background: #f0f0f0;
+      }
+      .s1 li.active {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      }
+      .models { display: none; }
+      .edge li {
+         list-style: none;
+         display: inline-flex;
+         width: calc(20% - 20px);
+         justify-content: center;
+         align-items: center;
+         height: 100px;
+         margin: 10px;
+      }
+      .calculator__slider-box__slider-width__slider__list6 li {
+         list-style: none;
+         display: inline-flex;
+         width: calc(50% - 20px);
+         justify-content: center;
+         align-items: center;
+         height: 100px;
+         margin: 10px;
+      }
+      .edge li:hover {
+         background: #f0f0f0;
+      }
+      .edge li.active {
+         background: #f0f0f0;
+         border: 1px solid #ddd;
+      }
+      </style>
+      <script type="text/javascript">
+         var data = {};
+         //data.tip = 
+      </script>
+      <h3>Калькулятор</h3>
+      <div class="es2_block">
+      <div class="sh">
+         <ul class="calculator__list">
+            <li><a class="st st1 active" onclick="$('.ss').hide(); $('.s1').show(); $('.st').removeClass('active'); $(this).addClass('active');">1</a></li>
+            <li><a class="st st2" onclick="$('.ss').hide(); $('.s2').show(); $('.st').removeClass('active'); $(this).addClass('active');">2</a></li>
+            <li><a class="st st3" onclick="$('.ss').hide(); $('.s3').show(); $('.st').removeClass('active'); $(this).addClass('active');">3</a></li>
+            <li><a class="st st4" onclick="$('.ss').hide(); $('.s4').show(); $('.st').removeClass('active'); $(this).addClass('active');">4</a></li>
+            <li><a class="st st5" onclick="$('.ss').hide(); $('.s5').show(); $('.st').removeClass('active'); $(this).addClass('active');">5</a></li>
+            <li><a class="st st6" onclick="$('.ss').hide(); $('.s6').show(); $('.st').removeClass('active'); $(this).addClass('active');">6</a></li>
+            <li><a class="st st7" onclick="$('.ss').hide(); $('.s7').show(); $('.st').removeClass('active'); $(this).addClass('active');">7</a></li>
+            <li><a class="st st8" onclick="$('.ss').hide(); $('.s8').show(); $('.st').removeClass('active'); $(this).addClass('active');">8</a></li>
+         </ul>
+      </div>
+      <div class="s1 ss">
+      <h2>Выбор формы</h2>
+      <ul class="calculator">
+      <li onclick="$('.s1 li').removeClass('active'); $(this).addClass('active'); $('.models').hide(); $('.models-0').show();">
+      <img src="./img/calc/calc-form1.png" alt="Прямая" style="height: 100px;">
+      </li>
+      <li onclick="$('.s1 li').removeClass('active'); $(this).addClass('active'); $('.models').hide(); $('.models-1').show();">
+      <img src="./img/calc/calc-form2.png" alt="Г - образная" style="height: 100px;">
+      </li>
+      <li onclick="$('.s1 li').removeClass('active'); $(this).addClass('active'); $('.models').hide(); $('.models-2').show();">
+      <img src="./img/calc/calc-form3.png" alt="П - образная" style="height: 100px;">
+      </li>
+      <li onclick="$('.s1 li').removeClass('active'); $(this).addClass('active'); $('.models').hide(); $('.models-3').show();">
+      <img src="./img/calc/calc-form4.png" alt="Радуга" style="height: 100px;">
+      </li>
+      </ul>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s1').hide(); $('.s2').show(); $('.st').removeClass('active'); $('.st2').addClass('active');">Далее</a>
+      </div>
+      <div class="s2 ss">
+      <h2>Выбор размера</h2>
+      <ul class="calculator_models">
+      <li class="models-0 models active">
+      <input type="text" class="size size-top" alt="Размер Сверху" value="2 500">
+      <input type="text" class="size size-left" alt="Размер Слева" value="900">
+      <img src="./img/model/model11.png" alt="">
+      </li>
+      <li class="models-1 models">
+      <input type="text" class="size size-top" alt="Размер Сверху" value="2 500">
+      <input type="text" class="size size-left" alt="Размер Слева" value="1 200">
+      <input type="text" class="size size-right" alt="Размер Справа" value="1 200">
+      <input type="text" class="size size-bottom" alt="Размер Снизу" value="900">
+      <img src="./img/model/model44.png" alt="">
+      </li>
+      <li class="models-2 models">
+      <input type="text" class="size size-top" alt="Размер Сверху" value="2 500">
+      <input type="text" class="size size-left" alt="Размер Слева" value="1 200">
+      <input type="text" class="size size-right" alt="Размер Справа" value="1 200">
+      <input type="text" class="size size-left-bottom" alt="Размер Слева Снизу" value="900">
+      <input type="text" class="size size-right-bottom" alt="Размер Справа Снизу" value="900">
+      <input type="text" class="size size-center" alt="Размер По центру" value="900">
+      <img src="./img/model/model33.png" alt="">
+      </li>
+      <li class="models-3 models">
+      <input type="text" class="size size-top" alt="Размер Сверху" value="2 500">
+      <input type="text" class="size size-left" alt="Размер Слева" value="900">
+      <input type="text" class="size size-left-left" alt="Размер Слева Слева" value="1 200">
+      <img src="./img/model/model22.png" alt="">
+      </li>
+      </ul>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s2').hide(); $('.s1').show(); $('.st').removeClass('active'); $('.st1').addClass('active');">Назад</a>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s2').hide(); $('.s3').show(); $('.st').removeClass('active'); $('.st3').addClass('active');">Далее</a>
+      </div>
+      <div class="s3 ss">
+      <h2>Выбор текстуры</h2>
+      <div class="view active" id="grandex_1" style="box-sizing: border-box; height: 350px;">
+         <div class="topr" style="width: 100%; float: left; height: 80px; overflow-x: scroll;">
+            <div style="height: 80px;">
+               <a class="yellow-button" style="cursor: pointer; margin: 0 10px;">model 1</a>
+               <a class="yellow-button" style="cursor: pointer; margin: 0 10px;">model 2</a>
+               <a class="yellow-button" style="cursor: pointer; margin: 0 10px;">model 2</a>
+               <a class="yellow-button" style="cursor: pointer; margin: 0 10px;">model 2</a>
+               <a class="yellow-button" style="cursor: pointer; margin: 0 10px;">model 2</a>
+            </div>
+         </div>
+         <div class="leftr" style="width: 20%; float: left; overflow-y: scroll; height: 220px;">
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 1</a>
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 2</a>
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 1</a>
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 2</a>
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 1</a>
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 2</a>
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 1</a>
+            <a class="yellow-button" style="cursor: pointer; margin: 10px 0;">prod 2</a>
+         </div>
+         <div class="all" style="width: 80%; float: left;">
+            <div class="el" data-name="Dirty Sand" data-id="S-201" onclick="$('.el').removeClass('active');
+            $(this).addClass('active');">
+            <figure><img class="lazy" data-src="http://kamnelon.ru/assets/img/textures/grandex/s-201.jpg" alt="Dirty Sand" src="http://kamnelon.ru/assets/img/textures/grandex/s-201.jpg" style="opacity: 1;"></figure>
+            <span>Dirty Sand <small>S-201</small></span>
+            </div>
+            <div class="el" data-name="Peaceful Night" data-id="S-202" onclick="$('.el').removeClass('active');
+            $(this).addClass('active');">
+            <figure><img class="lazy" data-src="http://kamnelon.ru/assets/img/textures/grandex/s-202.jpg" alt="Peaceful Night" src="http://kamnelon.ru/assets/img/textures/grandex/s-202.jpg" style="opacity: 1;"></figure>
+            <span>Peaceful Night <small>S-202</small></span>
+            </div>
+            <div class="el" data-name="Sparkling Sand" data-id="S-203" onclick="$('.el').removeClass('active');
+            $(this).addClass('active');">
+            <figure><img class="lazy" data-src="http://kamnelon.ru/assets/img/textures/grandex/s-203.jpg" alt="Sparkling Sand" src="http://kamnelon.ru/assets/img/textures/grandex/s-203.jpg" style="opacity: 1;"></figure>
+            <span>Sparkling Sand <small>S-203</small></span>
+            </div>
+         </div>
+      </div>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s3').hide(); $('.s2').show(); $('.st').removeClass('active'); $('.st2').addClass('active');">Назад</a>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s3').hide(); $('.s4').show(); $('.st').removeClass('active'); $('.st4').addClass('active');">Далее</a>
+      </div>
+      <div class="s4 ss">
+      <h2>Наличие криволинейных участков</h2>
+      <div class="general-width">
+      <form action="action" class="for-form clearfix">
+      <p class="for-form__button  for-click--no" onclick="$('.for-click').removeClass('active'); $('.for-click--no').addClass('active');">Нет</p>
+      <div class="for-form__buttons">
+      <p class="for-click" onclick="$('.for-click').addClass('active'); $('.for-click--no').removeClass('active');">Есть</p><input class="figure" value="">
+      </div>
+      <div class="clear"></div>
+      <p class="for-form__question">Сколько</p>
+      </form>
+      </div>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s4').hide(); $('.s3').show(); $('.st').removeClass('active'); $('.st3').addClass('active');">Назад</a>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s4').hide(); $('.s5').show(); $('.st').removeClass('active'); $('.st5').addClass('active');">Далее</a>
+      </div>
+      <div class="s5 ss">
+      <h2>Выбор формы кромки</h2>
+      <ul class="calculator__slider-box__slider-width__slider__list edge">
+      <li>
+      <img src="./img/form-img1.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img2.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img3.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img4.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img5.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img6.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img7.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img8.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img9.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img10.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img11.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img12.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img13.png" alt="">
+      </li>
+      <li>
+      <img src="./img/form-img14.png" alt="">
+      </li>
+      </ul>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s5').hide(); $('.s4').show(); $('.st').removeClass('active'); $('.st4').addClass('active');">Назад</a>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s5').hide(); $('.s6').show(); $('.st').removeClass('active'); $('.st6').addClass('active');">Далее</a>
+      </div>
+      <div class="s6 ss">
+      <h2>Выбор формы бортиков</h2>
+      <ul class="calculator__slider-box__slider-width__slider__list6">
+      <li>
+      <div class="calculator__slider-box__slider-width__slider__list__block-form">
+      <img src="./img/form2-img1.png" alt="Прямолинейный">
+      </div>
+      <p class="calculator__slider-box__slider-width__slider__list__description">Прямолинейный</p>
+      </li>
+      <li>
+      <div class="calculator__slider-box__slider-width__slider__list__block-form">
+      <img src="./img/form2-img2.png" alt="Интегрированный">
+      </div>
+      <p class="calculator__slider-box__slider-width__slider__list__description">Интегрированный</p>
+      </li>
+      <li>
+      <div class="calculator__slider-box__slider-width__slider__list__block-form">
+      <img src="./img/form2-img3.png" alt="Интегрированный">
+      </div>
+      <p class="calculator__slider-box__slider-width__slider__list__description">BACK SPLASH</p>
+      </li>
+      </ul>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s6').hide(); $('.s5').show(); $('.st').removeClass('active'); $('.st5').addClass('active');">Назад</a>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s6').hide(); $('.s7').show(); $('.st').removeClass('active'); $('.st7').addClass('active');">Далее</a>
+      </div>
+      <div class="s7 ss">
+      <h2>Наличие вырезов под технику</h2>
+      <div class="general-width">
+      <form action="action" class="for-form clearfix">
+      
+      <div class="for-form__buttons for-form__buttons--radio">
+         <label>Нет</label>
+      <label>Под варочную панель</label>
+      <label>Под мойку</label>
+      </div>
+      </form>
+      </div>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s7').hide(); $('.s6').show(); $('.st').removeClass('active'); $('.st6').addClass('active');">Назад</a>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s7').hide(); $('.s8').show(); $('.st').removeClass('active'); $('.st8').addClass('active');">Далее</a>
+      </div>
+      <div class="s8 ss">
+      <h2>Дополнительные опции</h2>
+      <div class="general-width">
+      <form action="action" class="for-form clearfix">
+      <div class="for-form__buttons--checkbox">
+      <label onclick="$(this).toggleClass('active')">Замер</label>
+      <label onclick="$(this).toggleClass('active')">Монтаж</label>
+      <label onclick="$(this).toggleClass('active')">Доставка</label>
+      </div>
+      </form>
+      </div>
+      <a class="yellow-button" style="cursor: pointer;" onclick="$('.s8').hide(); $('.s7').show(); $('.st').removeClass('active'); $('.st7').addClass('active');">Назад</a>
+      <a class="yellow-button" style="cursor: pointer;">Рассчитать стоимость</a>
+      </div>
+      </div>
+      </div>-->
+      <div class="es8_bg">
+      <div class="container">
+      <div class="es8__text_1">
+      Рассчитаем любое изделие
+      </div>
+      <div class="es8__text_2">
+      за <img src="./img/es8_5minut.png" alt="">
+      </div>
+      <div class="es8_form">
+      <div class="es8_form_zag">
+      Заполните сейчас
+      </div>
+      <form name="SIMPLE_FORM_2" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_1" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="4" /><input type="hidden" name="lang" value="ru" /><form> 
+      <div class="es8_inp_name form-group"><input type="text" placeholder="Ваше имя" id="form_text_6" data-field="name" name="form_text_30" value="" size="0" /></div>
+      <div class="es8_inp_email form-group"><input type="text" placeholder="E-MAIL" data-field="email" name="form_text_31" value="" size="0" /></div>
+      <div class="es8_inp_tel form-group"><input type="text" class="phonemask" placeholder="Телефон" data-validation="required" id="form_text_7" data-field="phone" name="form_text_32" value="" size="0" /><input type="hidden" data-field="comagic" name="form_hidden_72" value="" /></div>
+      <div class="es8_but"><button class="red-button" id="template_za5min_but">рассчитать</button> <input name="web_form_apply" value="Y" type="hidden" /> </div>
+      </form></form><div class="prav-info dark top10 center">Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+      <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой&nbsp;информацией</a></div>
+      </div>
+      </div>
+      </div>
+   
+      <div class="es7">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="media">
+                     <div class="media-left">
+                        <img class="media-object" src="./img/es7_ico1.png" alt="">
+                     </div>
+                     <div class="media-body">
+                        <h4 class="media-heading">Бесплатный замер</h4>
+                        <div>Специалист "Cтолкит" бесплатно произведет замер в удобное для Вас время. Покажет образцы камня ( Более 1500 образцов) и посоветует оптимальное решение.</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="media">
+                     <div class="media-left">
+                        <img class="media-object" src="./img/es7_ico2.png" alt="">
+                     </div>
+                     <div class="media-body">
+                        <h4 class="media-heading">Рассрочка 0%</h4>
+                        <div>Разместите заказ уже сейчас! Воспользуйтесь беспроцентной рассрочкой сроком до 12 месяцев с минимальным первоначальным взносом.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /.container -->
+      </div>
+      <div class="es12_bg">
+         <h2>
+            НЕ НУЖНО ПЕРЕПЛАЧИВАТЬ
+         </h2>
+         <div class="container">
+            <div class="es12__block">
+               <div class="es12_item">
+                  <div class="es12_ico">
+                     <div class="es12_ico__img"><img src="./img/ii1.png" alt="" style="width: 90px; height: 90px;"/></div>
+                     <div class="es12_ico__lenta">
+                        <div>
+                           <span>0 р.</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="es12_ico_name">КРОМКИ, БОРТИКИ</div>
+               </div>
+               <div class="es12_item _top">
+                  <div class="es12_ico">
+                     <div class="es12_ico__img"><img src="./img/ii2.png" alt="" style="width: 90px; height: 90px;"/></div>
+                     <div class="es12_ico__lenta">
+                        <div>
+                           <span>0 р.</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="es12_ico_name">ЗАМЕР</div>
+               </div>
+               <div class="es12_item">
+                  <div class="es12_ico">
+                     <div class="es12_ico__img"><img src="./img/ii3.png" alt="" style="width: 90px; height: 90px;"/></div>
+                     <div class="es12_ico__lenta">
+                        <div>
+                           <span>0 р.</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="es12_ico_name">ДОСТАВКА</div>
+               </div>
+               <div class="es12_item">
+                  <div class="es12_ico">
+                     <div class="es12_ico__img"><img src="./img/ii4.png" alt="" style="width: 90px; height: 90px;"/></div>
+                     <div class="es12_ico__lenta">
+                        <div>
+                           <span>0 р.</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="es12_ico_name">ТЕХНОЛОГИЧЕСКИЕ ВЫРЕЗЫ</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- /.es12_bg -->
+      <div class="es13_bg">
+         <div class="es13_bg__text">
+            ЗАКАЖИТЕ ИЗДЕЛИЕ ПО НИЗКОЙ ЦЕНЕ
+         </div>
+         <div class="es13_bg__text2">
+            РАСЧЕТ ПРОИЗВОДИТСЯ ИНДИВИДУАЛЬНО
+         </div>
+         <script src = "./js/jquery.countdown.js"></script>
+         <script>
+            $(function(){
+                var note = $('#note'),
+                        ts = new Date(2016, 07, 18),
+                        newYear = true;
+                if((new Date()) > ts){
+                    // The new year is here! Count towards something else.
+                    // Notice the *1000 at the end - time must be in milliseconds
+                    ts = (new Date()).getTime() + 10*24*60*60*1000;
+                    newYear = false;
+                }
+                $('#countdown_es13').countdown({
+                    timestamp   : ts,
+                    callback    : function(days, hours, minutes, seconds){
+                    }
+                });
+            });
+         </script>
+         <div id="countdown_es13">
+         </div>
+         <div class="container">
+            <form name="SIMPLE_FORM_3" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_2" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="5" /><input type="hidden" name="lang" value="ru" />
+            <form>
+               <div class="es13_block">
+                  <div class="es13_item es13_input form-group"><input type="text" class="phonemask" placeholder="Телефон" data-validation="required" id="form_text_9" data-field="phone" name="form_text_33" value="" size="0" /><input type="hidden" data-field="comagic" name="form_hidden_73" value="" /> </div>
+                  <div class="es13_item es13_but_div"><button class="yellow-button" id="template_zafixtsenu_but">Зафиксировать цену на&nbsp;3&nbsp;дня</button> </div>
+               </div>
+               <input name="web_form_apply" value="Y" type="hidden" /> 
+            </form>
+            </form>
+            <div class="prav-info white center">Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+               <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой&nbsp;информацией</a>
+            </div>
+         </div>
+      </div>
+      <!-- /.es13_bg --><br/>
+      <section class="b-karusel2">
+         <div class="wrapper">
+            <h2 style="margin-bottom: 50px;">ПОПУЛЯРНЫЕ ТЕКСТУРЫ</h2>
+            <div class="container" style="position:relative;">
+               <div class="door_104">
+                  <div style="margin:0px 60px 0 70px;">
+                     <ul class="container1">
+                        <li class="door_0">
+                           <a href="#">
+                              <img class="roundabout_image" src="./img/sale/door_011.jpg" /> 
+                              <p>Простой</p>
+                           </a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#">
+                              <img class="roundabout_image" src="./img/sale/door_012.jpg" /> 
+                              <p>Кораллы</p>
+                           </a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#">
+                              <img class="roundabout_image" src="./img/sale/door_013.jpg" /> 
+                              <p>Мрамор</p>
+                           </a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_014.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_015.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_016.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_017.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_018.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_019.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_020.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_021.jpg" /></a>
+                        </li>
+                        <li class="door_0">
+                           <a href="#"><img class="roundabout_image" src="./img/sale/door_022.jpg" /></a>
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="door_101">
+                     <a href="#" id="previous11" style="float:left;"><img class="roundabout_image" src="./img/sale/slider_prev.png" /></a>
+                     <a href="#" id="next11" style="float:right;"><img class="roundabout_image" src="./img/sale/slider_next.png" /></a>
+                  </p>
+               </div>
+               <div style="margin: 20px auto 50px; text-align: center;">
+                  <button data-toggle="modal" data-target="#kupitDeshevle-katalog" class="red-button js-fancy door-call_want-cheaper-link">ПЕРЕЙТИ В КАТАЛОГ</button>
+               </div>
+            </div>
+            <script type="text/javascript">
+               jQuery(document).ready(function($) {
+               
+                   $('.container1').roundabout({
+                       minScale: 0.1,
+                       btnNext: '#next11',
+                       btnPrev: '#previous11',
+                   });
+               
+                   $('.container2').roundabout({
+                       minScale: 0.1,
+                       btnNext: '#next22',
+                       btnPrev: '#previous22',
+                   });
+               
+                   $('.container3').roundabout({
+                       minScale: 0.1,
+                       btnNext: '#next33',
+                       btnPrev: '#previous33',
+                   });
+               
+               });
+            </script>
+         </div>
+      </section>
+      <div class="wave_razd"></div>
+      <div class="es13_14">
+         <div class="container">
+            <h3>Компания Столкит</h3>
+            <div class="es13_14__desc">Компания «Столкит» уделяет огромное внимание и выделяет до 500 000 руб. в месяц на своих заказчиков! Скидки, подарки, розыгрыши и другие приятные сюрпризы - МЫ ЛЮБИМ ВАС!</div>
+         </div>
+      </div>
+      <!-- /.es13_14 -->
+      <div class="es14_bg">
+         <h2>
+            ОТЗЫВЫ ОТ СТОЛКИТ
+         </h2>
+         <div class="container">
+            <div class="es14_name_bg">
+            </div>
+            <div class="iosSlider4">
+               <div class="slider">
+                  <!--    <div class="item">-->
+                  <div class="item" id="bx_3485106786_58">
+                     <div class="es14_img"><img src="./upload/iblock/5ce/5.jpg"
+                        alt="Николай Петрович"/></div>
+                     <div class="es14_name">
+                        <div class="es14_imya">Николай Петрович</div>
+                        <div class="es14_city">г. Москва</div>
+                     </div>
+                     <div class="row">
+                        <div class="es15_left"></div>
+                        <div class="es14_otz">
+                           <div class="es14_otz_zag">Добротно</div>
+                           <div class="es14_otz_text">Для заказа дверей в квартиру обращался в фирму «ДВЕРИ Цены» по совету товарища. Он покупал у них двери раньше и остался очень доволен. Поехали с ним вместе. Мне очень понравилось, как нас встретили в офисе. Всё вежливо, культурно, ненавязчиво. В выборе не ошибся. Двери действительно великолепные. Выражаю благодарность всем, кто делал и устанавливал мои двери.</div>
+                        </div>
+                        <!-- es14_otz -->
+                        <div class="es15_right"></div>
+                     </div>
+                  </div>
+                  <!--    </div>-->
+                  <!--    <div class="item">-->
+                  <div class="item" id="bx_3485106786_58">
+                     <div class="es14_img"><img src="./upload/iblock/7c4/V1TdAkgdddY1.jpg"
+                        alt="Останина Лилия"/></div>
+                     <div class="es14_name">
+                        <div class="es14_imya">Останина Лилия</div>
+                        <div class="es14_city">г. Москва</div>
+                     </div>
+                     <div class="row">
+                        <div class="es15_left"></div>
+                        <div class="es14_otz">
+                           <div class="es14_otz_zag">Отличный производитель!</div>
+                           <div class="es14_otz_text">В загородном доме все двери из гостиной мы поставили раздвижные. Заказывали на предприятии «Двери Цены». Получилось просто замечательно. Мастера-установщики сработали, как положено, все двери функционируют как часы. Что касается стоимости, то она здесь адекватная. Понятно, сколько и за что ты платишь, без лишних переплат, страховок, комиссий и других платежей. Отличный производитель. Рекомендуем.</div>
+                        </div>
+                        <!-- es14_otz -->
+                        <div class="es15_right"></div>
+                     </div>
+                  </div>
+                  <!--    </div>-->
+                  <!--    <div class="item">-->
+                  <div class="item" id="bx_3485106786_58">
+                     <div class="es14_img"><img src="./upload/iblock/696/%D0%94%D0%AF%D0%94%D0%AF.jpg"
+                        alt="Максим"/></div>
+                     <div class="es14_name">
+                        <div class="es14_imya">Максим</div>
+                        <div class="es14_city">г. Москва</div>
+                     </div>
+                     <div class="row">
+                        <div class="es15_left"></div>
+                        <div class="es14_otz">
+                           <div class="es14_otz_zag">Классно сделано!</div>
+                           <div class="es14_otz_text">Классные, надежные, добротные входные двери я купил в компании ДВЕРИ ЦЕНЫ. Денег заплатил приемлемо. Срок изготовления – небольшой. Установка – буквально за пару часов. Замечаний к качеству – ноль. Гарантия – присутствует. С такими дверями понимаю, что мой дом – это моя крепость.  </div>
+                        </div>
+                        <!-- es14_otz -->
+                        <div class="es15_right"></div>
+                     </div>
+                  </div>
+                  <!--    </div>-->
+                  <!--    <div class="item">-->
+                  <div class="item" id="bx_3485106786_58">
+                     <div class="es14_img"><img src="./upload/iblock/76b/%D0%BC%D0%B0%D0%BB%D1%8C%D1%87%D0%B5%D0%B3%20%D0%BD%D0%B5%20%D1%80%D0%B5%D0%B7%D0%BA%D0%B8%D0%B9.jpg"
+                        alt="Владимир Молостов"/></div>
+                     <div class="es14_name">
+                        <div class="es14_imya">Владимир Молостов</div>
+                        <div class="es14_city">г. Москва</div>
+                     </div>
+                     <div class="row">
+                        <div class="es15_left"></div>
+                        <div class="es14_otz">
+                           <div class="es14_otz_zag">Большое спасибо!</div>
+                           <div class="es14_otz_text">Входные двери для загородного дома я приобретал в компании «Двери Цены». В офисе, пообщавшись с менеджером и посмотрев образцы, остановился на модели «06-2-СЕЙФ». Замерщик приехал на следующий день, всё осмотрел, снял необходимые размеры, посчитал и составил точную смету предстоящей работы. Всё выполнено в срок и с надлежащим качеством. Я доволен, благодарю.</div>
+                        </div>
+                        <!-- es14_otz -->
+                        <div class="es15_right"></div>
+                     </div>
+                  </div>
+                  <!--    </div>-->
+                  <!--    <div class="item">-->
+                  <div class="item" id="bx_3485106786_58">
+                     <div class="es14_img"><img src="./upload/iblock/d9b/%D1%82%D0%B5%D1%82%D1%8F%20%D0%BD%D0%B5%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0%D1%8F.jpg"
+                        alt="Анастасия Л."/></div>
+                     <div class="es14_name">
+                        <div class="es14_imya">Анастасия Л.</div>
+                        <div class="es14_city">г. Москва</div>
+                     </div>
+                     <div class="row">
+                        <div class="es15_left"></div>
+                        <div class="es14_otz">
+                           <div class="es14_otz_zag">Большое спасибо!</div>
+                           <div class="es14_otz_text">Когда делала ремонт в квартире, решила поменять и межкомнатные двери. Обратилась в организацию ДВЕРИ ЦЕНЫ. Здесь большой выбор моделей на любой кошелек. Что касается изделий, то они полностью отвечают заявленным требованиям и потраченным на них деньгам. Мастера сделали всё отлично. Двери легко открываются/закрываются, не скрипят. В общем, всё замечательно.</div>
+                        </div>
+                        <!-- es14_otz -->
+                        <div class="es15_right"></div>
+                     </div>
+                  </div>
+                  <!--    </div>-->
+                  <!--    <div class="item">-->
+                  <div class="item" id="bx_3485106786_58">
+                     <div class="es14_img"><img src="./upload/iblock/efe/5.jpg"
+                        alt="Тамара Трофимова"/></div>
+                     <div class="es14_name">
+                        <div class="es14_imya">Тамара Трофимова</div>
+                        <div class="es14_city">г. Москва</div>
+                     </div>
+                     <div class="row">
+                        <div class="es15_left"></div>
+                        <div class="es14_otz">
+                           <div class="es14_otz_zag">Двери на 5+</div>
+                           <div class="es14_otz_text">Благодарю организацию ДВЕРИ ЦЕНЫ за великолепные двери. Новенькие , выглядят просто потрясающе. Замечаний по установке не имею. Мне всё-всё очень понравилось. Большое спасибо за хорошую работу. </div>
+                        </div>
+                        <!-- es14_otz -->
+                        <div class="es15_right"></div>
+                     </div>
+                  </div>
+                  <!--    </div>-->
+               </div>
+            </div>
+            <div class="next4">
+            </div>
+            <div class="prev4 unselectable">
+            </div>
+         </div>
+         <!-- /.container -->
+      </div>
+      <!-- /.es14_bg -->
+      
+      <div class="es16_bg">
+         <div class="es16_zag">
+            ИЗДЕЛИЯ УСТАНОВЛЕННЫЕ В 2017 ГОДУ
+         </div>
+         <div class="thanky">
+            <!--<div class="col-md-12 heroSlider-fixed">
+               <div class="overlay">
+               </div>
+                
+               <div class="slider responsive">
+                   <div>
+                       <img src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg" alt="" />
+                   </div>
+                   <div>
+                       <img src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg" alt="" />
+                   </div>
+                   <div>
+                       <img src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg" alt="" />
+                   </div>
+                   <div>
+                       <img src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg" alt="" />
+                   </div>
+                   <div>
+                       <img src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg" alt="" />
+                   </div>
+                   <div>
+                       <img src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg" alt="" />
+                   </div>
+                           
+               </div>
+                        
+                       <div class="prev">
+                           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                       </div>
+                       <div class="next">
+                           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                       </div>
+                       
+               </div>
+               </div>-->
+            <!--<div class="row" style="margin: 20px auto;">
+               <div class="col-md-4">
+                   <img style="width: 100%;" src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg">
+               </div>
+               <div class="col-md-4">
+                   <img style="width: 100%;" src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg">
+               </div>
+               <div class="col-md-4">
+                   <img style="width: 100%;" src="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg">
+               </div>
+               </div>-->
+            <div class="zoom-gallery" id="zoom-instance-1" style="margin: 0px auto; width: 900px; height: 397px;">
+               <img width="55" alt="preloader" src="./img/preloader.gif" height="18" class="preloader">
+               <ul>
+                  <li title="./upload/iblock/079/aranzacja_agat-opal_plus-novum-xii2010.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Входные двери.                Цена: <span>3100 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/803/60a4363a307cc71b2db17a6365b4a4f6.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Стальная входная дверь.                Цена: <span>3400 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/794/%D1%8F2.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Остекленные межкомнатные двери.                Цена: <span>1500 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/66f/%D1%8F.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Распашные межкомнатные двери                Цена: <span>1650 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/933/Razdvizhnyie-mezhkomnatnyi-derevyannyie-dveri-1-1024x768.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Раздвижные межкомнатные двери.                Цена: <span>2700 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/94c/dvery_garmoshka.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Межкомнатные двери – гармошка.                Цена: <span>2 300 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/733/dveri_steklo_vstavka.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Межкомнатные двери со стеклянными вставками.                Цена: <span>2 100 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/d44/dveri_s_frezerovkoj.png">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Межкомнатные двери с фрезеровкой.                Цена: <span>1 750 р.</span></li>
+                     </ul>
+                  </li>
+                  <li title="./upload/iblock/3e7/2.jpg">
+                     <ul class="align-left">
+                        <li class="20x308" style="background-color: none; color: #464545; font-size:2.4em; line-height:30px; height:auto;">Раздвижные двери.                Цена: <span>2 500 р.</span></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <a id="thanky-left-button" href="#"></a> <a id="thanky-right-button" href="#"></a>
+         </div>
+         <div class="row" style="margin: 0 auto; margin-top: 50px;">
+            <div style="margin: 0px auto 50px; text-align: center;">
+               <button data-toggle="modal" data-target="#kupitDeshevle-katalog" class="red-button js-fancy door-call_want-cheaper-link">Смотреть все работы</button>
+            </div>
+         </div>
+         <!-- <div class="onmobile">
+            <img src="./upload/iblock/94c/dvery_garmoshka.jpg" alt="">
+                   <div class="onmobile-info-text">
+                        Межкомнатные двери – гармошка. Цена:&nbsp;<span>27&nbsp;300&nbsp;р.</span>
+                   </div>
+               </div>-->
+      </div>
+      <!-- /.es16_bg -->
+      <div class="es17_bg">
+         <div class="container">
+            <div class="es17_girl">
+            </div>
+            <div class="es17__bcons">
+               Бесплатная консультация?
+            </div>
+            <div class="es17__rasp">
+               Ежедневно с&nbsp;8:00&nbsp;до&nbsp;23:00
+            </div>
+            <div class="clearfix"></div>
+            <div class="es17__tel comagic_phone">
+               <a style="text-decoration:none;color: #1a1918" href="tel:+7 (495) 120-23-00">
+               +7 (495) 120-23-00</a>
+            </div>
+            <div class="es17_blockbg">
+               <div class="es17_blockbg__ttl">Оставьте свой номер телефона и мы перезвоним Вам через 5&nbsp;минут</div>
+               <form name="SIMPLE_FORM_4" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_3" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="7" /><input type="hidden" name="lang" value="ru" />
+               <form>
+                  <div class="es17_input form-group"><input type="text" placeholder="Телефон" class="phonemask" data-validation="required" id="form_text_10" data-field="phone" name="form_text_37" value="" size="0" /><input type="hidden" data-field="comagic" name="form_hidden_74" value="" /></div>
+                  <button class="red-button" id="template_perezv5min">Заказать звонок</button> <input name=" web_form_apply" =""="" value="Y" type="hidden" /> 
+               </form>
+               </form>        
+            </div>
+         </div>
+         <div class="prav-info grey top20 center" style="position: relative;">Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+            <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой&nbsp;информацией</a>
+         </div>
+      </div>
+      <div class="es13_14">
+         <div class="container">
+            <h3>Контакты</h3>
+            <div class="es13_14__desc">г. москва. Ул шоссейная дом 90</div>
+         </div>
+      </div>
+      <!-- /.es17_bg -->
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A52e2f4ad0d0099136a2bf5c0ccf855933dd90b0ef0972359ad279c39c63b8310&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+      <div class="es18_bg">
+         <div class="container">
+            <div class="col-md-2 es18_logo visible-lg visible-md"><img src="./img/es18_logo.png" alt=""></div>
+            <div class="col-md-10 es18_link">
+               <a class="btn btn-link es18_ico1" href="#">НАШИ ИЗДЕЛИЯ</a>
+               <a class="btn btn-link es18_ico2" href="#">КАТАЛОГ КАМНЯ</a>
+               <a class="btn btn-link es18_ico3" href="#">НАШИ РАБОТЫ</a>
+               <a class="btn btn-link es18_ico4" href="#">О НАС</a>
+               <a class="btn btn-link es18_ico5" href="#">КОНТАКТЫ</a>
+            </div>
+         </div>
+         <div class="b-footer-menu">
+            <div class="container">
+               <div class="b-footer-menu_block">
+                  <div class="b-footer-menu_slogan">Лучшие цены на изделия!</div>
+               </div>
+               <div class="b-footer-menu_block">
+                  <div class="b-footer-menu__main">
+                     <a href="#" class="white-link"  target="_blank">СТОЛЕШНИЦЫ НА КУХНЮ</a>
+                     <a href="#" class="white-link" target="_blank">СТОЛЕШНИЦЫ В САНУЗЕЛ</a>
+                     <a href="#" class="white-link" target="_blank">ИНТЕГРИРОВАННЫЕ МОЙКИ / РАКОВИНЫ</a>
+                     <a href="#" class="white-link" target="_blank">ПОДОКОННИКИ</a>
+                     <a href="#" class="white-link" target="_blank">СТОЙКИ РЕСЕПШН</a>
+                     <a href="#" class="white-link" target="_blank">БАРНЫЕ СТОЙКИ</a>
+                     <a href="#" class="white-link" target="_blank">СТОЛЫ</a>
+                     <a href="#" class="white-link" target="_blank">ЭКСКЛЮЗИВ</a>
+                     <a href="#" class="white-link" target="_blank">ДРУГИЕ ИЗДЕЛИЯ</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- /.es18_bg -->
+      <div class="es19_bg">
+         <div class="container">
+            <div class="es19_cont">
+               <div class="es19_time hidden-md hidden-sm hidden-xs">
+                  с 9:00 до 22:00                     
+               </div>
+               <div class="es19_telemail">
+                  <a style="text-decoration:none;" class="black" href="tel:+7 (495) 120-23-00">
+                     <div class="comagic_phone">+7 (495) 120-23-00</div>
+                  </a>
+                  <span>e-mail: <a href="mailto:info@stoneslon.ru">
+                  info@stoneslon.ru
+                  </a></span>
+               </div>
+            </div>
+            <div class="es19__copyr">
+               <!--<div style="line-height: 1.4"><span>Оплатить заказ картой:</span><br/>
+                  <a href="#">Оплата с сайта</a>
+               </div>-->
+            </div>
+            <div class="es19_soc">
+               <!--<select id="changeCity" data-city="">
+                  <option  selected="" value="http://dveri-tseny.ru/">Москва</option>
+                  <option value="http://krasnodar.dveri-tseny.ru">Краснодар</option>
+                  <option  value="http://spb.dveri-tseny.ru">Санкт-Петербург</option>
+                  <option  value="http://nnovgorod.dveri-tseny.ru">Нижний Новгород</option>
+                  <option  value="http://rostov.dveri-tseny.ru">Ростов-на-Дону</option>
+                  <option  value="http://kaluga.dveri-tseny.ru">Калуга</option>
+                  <option  value="http://chelyabinsk.dveri-tseny.ru">Челябинск</option>
+                  <option disabled="">------------------</option>
+                  <option  value="http://aprelevka.dveri-tseny.ru">Апрелевка</option>
+                  <option  value="http://arhangelskoe.dveri-tseny.ru">Архангельское</option>
+                  <option  value="http://astrahan.dveri-tseny.ru">Астрахань</option>
+                  <option  value="http://bakovka.dveri-tseny.ru">Баковка</option>
+                  <option  value="http://balashiha.dveri-tseny.ru">Балашиха</option>
+                  <option  value="http://barnaul.dveri-tseny.ru">Барнаул</option>
+                  <option  value="http://butovo.dveri-tseny.ru">Бутово</option>
+                  <option  value="http://vidnoe.dveri-tseny.ru">Видное</option>
+                  <option  value="http://vladivostok.dveri-tseny.ru">Владивосток</option>
+                  <option  value="http://volgograd.dveri-tseny.ru">Волгоград</option>
+                  <option  value="http://voronezh.dveri-tseny.ru">Воронеж</option>
+                  <option  value="http://voskresensk.dveri-tseny.ru">Воскресенск</option>
+                  <option  value="http://golicino.dveri-tseny.ru">Голицыно</option>
+                  <option  value="http://dedovsk.dveri-tseny.ru">Дедовск</option>
+                  <option  value="http://dmitrov.dveri-tseny.ru">Дмитров</option>
+                  <option  value="http://dolgoprudniy.dveri-tseny.ru">Долгопрудный</option>
+                  <option  value="http://domodedovo.dveri-tseny.ru">Домодедово</option>
+                  <option  value="http://dubna.dveri-tseny.ru">Дубна</option>
+                  <option  value="http://ekaterinburg.dveri-tseny.ru">Екатеринбург</option>
+                  <option  value="http://zheleznodorozhniy.dveri-tseny.ru">Железнодорожный</option>
+                  <option  value="http://zhukovskiy.dveri-tseny.ru">Жуковский</option>
+                  <option  value="http://zvenigorod.dveri-tseny.ru">Звенигород</option>
+                  <option  value="http://zelenograd.dveri-tseny.ru">Зеленоград</option>
+                  <option  value="http://ivanteevka.dveri-tseny.ru">Ивантеевка</option>
+                  <option  value="http://izhevsk.dveri-tseny.ru">Ижевск</option>
+                  <option  value="http://irkutsk.dveri-tseny.ru">Иркутск</option>
+                  <option  value="http://kazan.dveri-tseny.ru">Казань</option>
+                  <option  value="http://kemerovo.dveri-tseny.ru">Кемерово</option>
+                  <option  value="http://kiev.dveri-tseny.ru">Киев</option>
+                  <option  value="http://klimovsk.dveri-tseny.ru">Климовск</option>
+                  <option  value="http://kolomna.dveri-tseny.ru">Коломна</option>
+                  <option  value="http://korolev.dveri-tseny.ru">Королев</option>
+                  <option  value="http://krasnogorsk.dveri-tseny.ru">Красногорск</option>
+                  <option  value="http://krasnoznamensk.dveri-tseny.ru">Краснознаменск</option>
+                  <option  value="http://krasnoyarsk.dveri-tseny.ru">Красноярск</option>
+                  <option  value="http://lipetsk.dveri-tseny.ru">Липецк</option>
+                  <option  value="http://luberci.dveri-tseny.ru">Люберцы</option>
+                  <option  value="http://mahachkala.dveri-tseny.ru">Махачкала</option>
+                  <option  value="http://mozhaisk.dveri-tseny.ru">Можайск</option>
+                  <option  value="http://moskovskiy.dveri-tseny.ru">Московский</option>
+                  <option  value="http://mitishi.dveri-tseny.ru">Мытищи</option>
+                  <option  value="http://chelny.dveri-tseny.ru">Набережные Челны</option>
+                  <option  value="http://novokuznetsk.dveri-tseny.ru">Новокузнецк</option>
+                  <option  value="http://novosibirsk.dveri-tseny.ru">Новосибирск</option>
+                  <option  value="http://odincovo.dveri-tseny.ru">Одинцово</option>
+                  <option  value="http://omsk.dveri-tseny.ru">Омск</option>
+                  <option  value="http://orenburg.dveri-tseny.ru">Оренбург</option>
+                  <option  value="http://orehovo-zuevo.dveri-tseny.ru">Орехово-Зуево</option>
+                  <option  value="http://penza.dveri-tseny.ru">Пенза</option>
+                  <option  value="http://perm.dveri-tseny.ru">Пермь</option>
+                  <option  value="http://podolsk.dveri-tseny.ru">Подольск</option>
+                  <option  value="http://pushkino.dveri-tseny.ru">Пушкино</option>
+                  <option  value="http://pushino.dveri-tseny.ru">Пущино</option>
+                  <option  value="http://ramenskoe.dveri-tseny.ru">Раменское</option>
+                  <option  value="http://reutov.dveri-tseny.ru">Реутов</option>
+                  <option  value="http://rumyancevo.dveri-tseny.ru">Румянцево</option>
+                  <option  value="http://ryazan.dveri-tseny.ru">Рязань</option>
+                  <option  value="http://samara.dveri-tseny.ru">Самара</option>
+                  <option  value="http://saratov.dveri-tseny.ru">Саратов</option>
+                  <option  value="http://sergievposad.dveri-tseny.ru">Сергиев Посад</option>
+                  <option  value="http://serpuhov.dveri-tseny.ru">Серпухов</option>
+                  <option  value="http://skolkovo.dveri-tseny.ru">Сколково</option>
+                  <option  value="http://solncevo.dveri-tseny.ru">Солнцево</option>
+                  <option  value="http://tolyatty.dveri-tseny.ru">Тольятти</option>
+                  <option  value="http://tomsk.dveri-tseny.ru">Томск</option>
+                  <option  value="http://troick.dveri-tseny.ru">Троицк</option>
+                  <option  value="http://tula.dveri-tseny.ru">Тула</option>
+                  <option  value="http://tyumen.dveri-tseny.ru">Тюмень</option>
+                  <option  value="http://ulianovsk.dveri-tseny.ru">Ульяновск</option>
+                  <option  value="http://ufa.dveri-tseny.ru">Уфа</option>
+                  <option  value="http://fryazino.dveri-tseny.ru">Фрязино</option>
+                  <option  value="http://khabarovsk.dveri-tseny.ru">Хабаровск</option>
+                  <option  value="http://himki.dveri-tseny.ru">Химки</option>
+                  <option  value="http://chernogolovka.dveri-tseny.ru">Черноголовка</option>
+                  <option  value="http://shelkovo.dveri-tseny.ru">Щелково</option>
+                  <option  value="http://sherbinka.dveri-tseny.ru">Щербинка</option>
+                  <option  value="http://yubileiniy.dveri-tseny.ru">Юбилейный</option>
+                  <option  value="http://yaroslavl.dveri-tseny.ru">Ярославль</option>
+               </select>
+               <script>
+                  $(function(){
+                      // bind change event to select
+                      var $changeCity =$('#changeCity'),
+                      curCity = $changeCity.data('city');
+                      if(curCity){
+                          var curCityValue = 'http://'+ curCity +'.dveri-tseny.ru';
+                          $changeCity.find('option[value="'+curCityValue+'"]').prop('selected','selected');
+                      }
+                      $changeCity.on('change', function () {
+                          var url = $(this).val(); // get selected value
+                          if (url) { // require a URL
+                              window.location = url; // redirect
+                          }
+                          return false;
+                      });
+                  });
+               </script>-->
+               <!--p align="left">
+                  </p>
+                  
+                  <div class="yashare-auto-init" data-yasharel10n="ru" data-yasharetype="none" data-yasharequickservices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
+                  <p></p-->
+            </div>
+            <div class="b-prav">
+               <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовая информация</a>
+            </div>
+            <div class="b-im">
+               <a href="http://aliveliyev.com/" target="_blank"  alt="разработка сайта и привлечение заказчиков"><img src="./img/IM.png" alt="разработка сайта и привлечение заказчиков"/></a>
+            </div>
+         </div>
+      </div>
+      <!-- /.es19_bg -->
+      <!--end work area-->
+      </div>
+      <div class="modal fade" id="happy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <div class="close" data-dismiss="modal" aria-label="Close">
+                     <img src="./img/crest.png" alt="">
+                  </div>
+               </div>
+               <div class="modal-body">
+                  <div id="clock_wrapper">
+                     <canvas id="clock" width="1300" height="300"></canvas>
+                     <div id="timer">
+                     </div>
+                     <div class="clocksec">
+                        секунд
+                     </div>
+                  </div>
+                  <div class="modal_zag">
+                     <img src="./img/pazdr.png" alt="">
+                  </div>
+                  <div class="madal_t1">
+                     Вы стали 100 посетителем сайта!
+                  </div>
+                  <div class="madal_t2">
+                     Ваш уникальный<br>
+                     код: 9503
+                  </div>
+                  <div class="madal_t3">
+                     Для получения подарка заполните форму
+                  </div>
+                  <div class="modal_form_happy">
+                     <form name="SIMPLE_FORM_7" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_4" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="10" /><input type="hidden" name="lang" value="ru" />
+                     <form>
+                        <div class="modal_input_name"> <input type="text" placeholder="Ваше имя" id="form_text_21" data-field="name" name="form_text_41" value="" size="0" />                 </div>
+                        <div class="modal_input_tel"> <input type="text" placeholder="Телефон" class="phonemask" data-validation="required" id="form_text_22" data-field="phone" name="form_text_42" value="" size="0" /><input type="hidden" data-field="comagic" name="form_hidden_76" value="" />                      </div>
+                        <div class="happy_but"><button class="red-button" id="happy_but">Хочу подарок</button></div>
+                        <input name=" web_form_apply" =""="" value="Y" type="hidden" /> 
+                     </form>
+                     </form>             
+                  </div>
+               </div>
+               <div class="prav-info dark top20 center w80">Оставляя свои контактные данные, вы подтверждаете свое
+                  совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+                  <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой&nbsp;информацией</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="gift" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <div class="close" data-dismiss="modal" aria-label="Close">
+                     <img src="./img/crest2.png" alt="">
+                  </div>
+               </div>
+               <div class="modal-body">
+                  <div class="modal_zag">
+                     Не уходите<br>
+                     без подарка
+                  </div>
+                  <div class="madal_t1">
+                     Впишите свой телефон и мы вышлем
+                  </div>
+                  <div class="madal_t2">
+                     Вам список подарков на выбор!
+                  </div>
+                  <div class="modal_form_gift">
+                     <form name="SIMPLE_FORM_8" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_5" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="11" /><input type="hidden" name="lang" value="ru" />
+                     <form>
+                        <div class="modal_input_ema"> <input type="text" placeholder="Телефон" class="phonemask" data-validation="required" id="form_text_23" data-field="phone" name="form_text_43" value="" size="0" /><input type="hidden" data-field="comagic" name="form_hidden_77" value="" />                      </div>
+                        <div class="gift_but"> <button class="red-button" id="gift_but">Получить подарок</button>                 </div>
+                        <input name="web_form_apply" value="Y" type="hidden" />                    
+                     </form>
+                     </form>              
+                  </div>
+                  <div class="prav-info dark top10 center">Оставляя свои контактные данные, вы подтверждаете свое
+                     совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+                     <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой&nbsp;информацией</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="want_zamer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="./img/crest.png" alt=""></span></button>
+               </div>
+               <div class="modal-body">
+                  <div class="modal_zag">
+                     ЗАПИСЬ НА БЕСПЛАТНЫЙ&nbsp;ЗАМЕР
+                  </div>
+                  <div class="yesterdaytodaytomorrow">
+                     <div class="t1">
+                        <!--                         <span class="t1_1">Вчера</span> --> <span class="t1_2 act">СЕГОДНЯ</span>
+                        <!--                          <span class="t1_3">Завтра</span> -->
+                     </div>
+                     <div class="t2 row t2_today">
+                        <div class="t2_1 col-md-4 col-sm-4">
+                           <span>35</span>записались<br>
+                           на замер
+                        </div>
+                        <div class="t2_2 col-md-4 col-sm-4">
+                           <span>15</span>Свободных<br>
+                           мест
+                        </div>
+                        <div class="t2_3 col-md-4 col-sm-4">
+                           <span>23</span>договоров<br>
+                           заключилось
+                        </div>
+                     </div>
+                  </div>
+                  <div class="butzamer">
+                     <form name="SIMPLE_FORM_6" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_6" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="9" /><input type="hidden" name="lang" value="ru" /> 
+                     <form>
+                        <div class="butzamer_inp form-group"><input type="text" placeholder="Телефон" class="phonemask" data-validation="required" id="form_text_25" data-field="phone" name="form_text_40" value="" size="0" /><input type="hidden" data-field="comagic" name="form_hidden_75" value="" /> </div>
+                        <button class="red-button _zamer" id="template_zamer_but">Записаться на замер</button> <input name="web_form_apply" value="Y" type="hidden" /> 
+                     </form>
+                     </form>
+                     <div class="prav-info grey center">Оставляя свои контактные данные, вы подтверждаете свое
+                        совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+                        <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой
+                        информацией</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- want_zamer -->
+      <div class="fly_girl animated boxHidded bounceOutRight" data-toggle="modal" data-target="#want_zamer">
+         <div>
+            15 мест
+         </div>
+      </div>
+      <div class="toptop animated boxHidded fadeOut">
+         <img src="./img/but_top.png" alt="">
+      </div>
+      <br>
+      <div class="modal fade" id="kupitDeshevle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                     aria-hidden="true"><img src="./img/modal_close.png" alt=""></span></button>
+               </div>
+               <div class="modal-body">
+                  <div class="modal_zag">
+                     Купить изделия дешевле?
+                  </div>
+                  <div class="modal_man">
+                     <div class="modal_man_form">
+                        Впишите своё имя и телефон<br>
+                        для получения лучшей цены от производителя Столкит <br>
+                        <br>
+                        <span class="modal_red">ОБЯЗАТЕЛЬНО!<br>
+                        Зафиксируйте свою скидку!</span> <br>
+                        <br>
+                        <form name="SIMPLE_FORM_5" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_7" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="8" /><input type="hidden" name="lang" value="ru" />
+                        <form>
+                           <div class="modal_input_name form-group"><input type="text" placeholder="Ваше имя" id="form_text_1" data-field="name" name="form_text_38" value="" size="0" /></div>
+                           <div class="modal_input_tel form-group"><input type="text" placeholder="Телефон" class="phonemask" data-validation="required" id="form_text_2" data-field="phone" name="form_text_39" value="" size="0" /> </div>
+                           <input type="hidden" data-field="comagic" name="form_hidden_71" value="" /> 
+                           <br />
+                           <div class="modal_hochu_but"> <button class="red-button" id="modal_hochu_but">Хочу скидку</button> </div>
+                           <input name="web_form_apply" value="Y" type="hidden" /> 
+                        </form>
+                        </form>                     
+                        <div class="prav-info grey top20">Оставляя свои контактные данные, вы подтверждаете свое
+                           совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+                           <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой
+                           информацией</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="kupitDeshevle-katalog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                     aria-hidden="true"><img src="./img/modal_close.png" alt=""></span></button>
+               </div>
+               <div class="modal-body">
+                  <div class="modal_zag">
+                     Хотите купить дешевле?
+                  </div>
+                  <div class="modal_man">
+                     <div class="modal_man_form">
+                        Впишите своё имя и телефон<br>
+                        для получения лучшей цены от производителя Столкит <br>
+                        <br>
+                        <span class="modal_red">ОБЯЗАТЕЛЬНО!<br>
+                        Зафиксируйте свою скидку!</span> <br>
+                        <br>
+                        <form name="FORM_CATALOG" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid_8" value="44cc1521ce37df86fa4cce6775bef15e" /><input type="hidden" name="WEB_FORM_ID" value="17" /><input type="hidden" name="lang" value="ru" />
+                        <form>
+                           <div class="modal_input_name form-group"><input type="text" placeholder="Ваше имя" id="form_text_202" data-field="name" name="form_text_63" value="" size="0" /></div>
+                           <div class="modal_input_tel form-group"><input type="text" placeholder="Телефон" class="phonemask" data-validation="required" id="form_text_201" data-field="phone" name="form_text_64" value="" size="0" /> </div>
+                           <input type="hidden" class="b-catalog__inp-model"  data-field="text" name="form_hidden_65" value="" /><input type="hidden" class="b-catalog__inp-color" data-field="text" name="form_hidden_66" value="" /><input type="hidden" class="b-catalog__inp-size" data-field="text" name="form_hidden_67" value="" /> 
+                           <div class="modal_hochu_but"> <button class="red-button" id="modal_hochu_but2">Хочу скидку</button></div>
+                           <input name="web_form_apply" value="Y" type="hidden" /> 
+                        </form>
+                        </form>                     
+                        <div class="prav-info grey top20">Оставляя свои контактные данные, вы подтверждаете свое
+                           совершеннолетие, соглашаетесь на обработку персональных данных в&nbsp;соответствии с
+                           <a href="#legal-info" data-toggle="modal" class="b-link" data-target="#legal-info">Правовой
+                           информацией</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade ModalOK" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                     aria-hidden="true"><img src="./img/modal_close.png" alt=""></span></button>
+               </div>
+               <div class="modal_zag">
+                  Спасибо!
+               </div>
+               <div class="modal-desc">
+                  Ваша заявка принята!
+               </div>
+               <br>
+               <br>
+            </div>
+         </div>
+      </div>
+      <!-- modal -->
+      <noindex>
+         <div class="modal fade" tabindex="-1" id="legal-info" role="dialog" aria-labelledby="mySmallModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true"><img src="./img/modal_close.png" alt=""></span></button>
+                  </div>
+                  <div class="modal-body">
+                     <div class="modal_zag">
+                        Правовая информация
+                     </div>
+                     <div class="b-legalinfo__content">
+                        <p>
+                           <span style="font-weight: bold;">Данный сайт является независимым агрегатором клиентов (заявок/обращений), носит информационный характер и не является публичной 
+                           офертой.</span>
+                        </p>
+                        
+                        <p>                     Продолжая использовать данный сайт, оставляя свои контактные данные или звоня по контактному номеру, указанному на сайте,
+                           Вы соглашаетесь на передачу своих контактных данных и перевода звонка компаниям, занимающимся данным видом деятельности.
+                           Заключая договор или начав любое другое сотрудничество с компанией, полученной с данного сайта, Вы действуете согласно
+                           Ваших договоренностей и юридических отношений согласно договора с конкретным юридическим лицом и законодательством РФ.
+                        </p>
+                        <p> Продолжая использовать данный сайт, Вы признаете, что прочли все условия использования и понимаете описанные в них права и обязательства.
+                           Использование Вами Сайта означает Ваше согласие со всеми  описанными Условиями. Информация, опубликованная на Сайте, носит общий характер и служит для
+                           ознакомительных целей.
+                        </p>
+                        <p> Скидки и цены указанные на сайте являются элементами маркетинга и могут иметь различия при заказе в выбранной Вами компании.
+                           Мы не можем гарантировать, что представленная информация на сайте не содержит неточностей или не окажется устаревшей.
+                           Поэтому, если Вы обнаружили ошибки на Сайте, просим сообщить нам об этом.
+                        </p>
+                        <div class="b-legalinfo__subheader">1. Общие положения</div>
+                        <p>Материалы, размещенные на данном Сайте предоставляются исключительно в информативных целях.
+                           Все данные на Сайте представлены «Как есть» с возможными ошибками, без каких-либо явных и подразумеваемых гарантий.
+                           Информация, размещенная на Сайте, является полностью верной только при наличии письменного подтверждения.
+                        </p>
+                        <p> 1.2. Правообладатели Сайта оставляют за собой право провести усовершенствование и/или внести изменения в скидки, цены, продукцию, услуги или другие данные на Сайте без предварительного уведомления.</p>
+                        <p> 1.3. Правообладатели Сайта, Компании и их поставщики не несут ответственности за любые убытки, возникшие в результате использования или невозможности использования информации, размещенной на Сайте.</p>
+                        <p> 1.4. Сайт будет работать только на указанных в его документации аппаратных и программных платформах.</p>
+                        <p> 1.5. Правообладатели Сайта вправе прервать проводимые на нем промо акции (далее Акция), прекратить предоставление посредством Сайта каких-либо услуг, а также оставляет за собой право, в любое время и без предварительного уведомления, прекратить поддержку любой аппаратной или программной платформы.</p>
+                        <p> 1.6. Если Вы не согласны с любым из указанных в настоящем документе условий, Вы можете отказаться от использования данного Сайта.</p>
+                        <div class="b-legalinfo__subheader">2. Права на интеллектуальную собственность</div>
+                        <p> 2.1. Материалы, размещенные на Сайте охраняются авторским правом и защищены законодательством РФ об авторском и смежном праве. Любое использование данных материалов (копирование, воспроизведение, изменение, публикация в любом виде, пересылка и другие возможные варианты) вне Сайта возможно только при наличии письменного разрешения Правообладателей Сайта.</p>
+                        <p> 2.2. Сайт содержит информацию, тексты, фотографии, дизайнерские работы, графику, изображения, звуко- и видеозаписи, а также другие материалы и произведения, включающие интеллектуальную собственность, права на которую принадлежат Правообладателям Сайта. Все товарные знаки (логотипы, доменные имена, материалы, описывающие услуги, являются собственностью Правообладателей Сайта.</p>
+                        <p> 2.3. Любое видоизменение и использование в коммерческих целях товарных знаков принадлежащих Правообладателям Сайта или их производных, строго запрещено. Исключения возможны только с письменного разрешения Правообладателей Сайта.</p>
+                        <p> 2.4. Все прочие названия продукции и компаний, приведенные на Сайте, могут являться товарными знаками своих владельцев и не могут быть использованы без их согласия.</p>
+                        <p> 2.5. Содержание Сайта может быть использовано только в некоммерческих целях.</p>
+                        <p> 2.6. Сайт также содержит материалы, полученные из открытых источников или предоставленные ему третьими лицами, в том числе материалы и произведения, защищённые авторским правом, зарегистрированные товарные знаки и знаки обслуживания, а также иные объекты интеллектуальной собственности, правообладателем которых являются соответствующие владельцы. Материалы, включая любую информацию, размещенную на Сайте, предназначены для просмотра в личных или внутренних деловых целях. Любое иное использование Материалов или Сайта строго запрещено, включая: републикацию, распространение, перевод, внесение несанкционированных изменений, удаление, передачу по каналам для всеобщего сведения, публичное исполнение, ответственное хранение, переписывание, направление по почте, воспроизведение, повторное распространение или какое-либо размножение без предварительного письменного разрешения Правообладателей Сайта. Третьим лицам запрещается использовать Материалы Сайта в любых коммерческих целях, в том числе: в целях маркетинга, коммерческой рассылки по факсу, по почте, по электронной почте, либо через коммерческих агентов/представителей или электронных посредников.</p>
+                        <p> 2.7. Любое санкционированное использование Сайта не включает использование Сайта и материалов в каких бы то ни было незаконных целях. Запрещается также транслировать на Сайт или через Сайт какие-либо материалы без разрешения Правообладателей Сайта. Запрещается наносить ущерб, препятствовать или каким-либо иным образом нарушать права третьих лиц посредством использования настоящего Сайта или материалов, размещенных на нем.</p>
+                        <p> 2.8. Если Вам известно о действительном или потенциальном нарушении прав на интеллектуальную собственность, пожалуйста, проинформируйте нас об этом.</p>
+                        <p> 2.9. В соответствии с данными Условиями, Правообладатели Сайта настоящим предоставляют Вам ограниченную, личную, некоммерческую, неисключительную, несублицензируемую, непередаваемую и бесплатную лицензию на доступ к Сайту и его сервисам. Вы признаете, что все не указанные в данном документе права остаются за Правообладателями Сайта. Все права на Сайт принадлежат Правообладателям Сайта. Данные Условия не передают Вам такие права.</p>
+                        <p> 2.10. Вы обязуетесь не удалять, не скрывать, не изменять и не делать незаметными отметки о правах собственности, принадлежащих Правообладателям Сайта.</p>
+                        <p> 2.11. Загружая информацию на Сайт, Вы предоставляете Правообладателям Сайта всемирное, неисключительное, неотменяемое, безвозмездное, передаваемое, сублицензируемое право использовать и распространять информацию целиком или частично, в любых форматах и любым способом, например, изменять, воспроизводить, транслировать, адаптировать, публиковать и т.д. Если Вы не уполномочены предоставлять вышеуказанное право, воздержитесь от предоставления информации на Сайт.</p>
+                        <p> 2.12. Настоящим Вы даете свое согласие на получение информации о проводимых Акциях и предложениях Правообладателей Сайта путем получения SMS и/или E-mail сообщений на оставленные Вами контактные данные.</p>
+                        <div class="b-legalinfo__subheader">3. Правила поведения</div>
+                        <p>3.1. Вы обязуетесь следовать общепринятым правилам поведения в Интернете. Запрещены следующие действия: загружать, публиковать, передавать, иным образом доводить до всеобщего сведения любую информацию, которая содержит угрозы, дискредитирует или оскорбляет других пользователей или третьих лиц (физических и юридических), является вульгарной, непристойной, носит мошеннический характер, нарушает неприкосновенность частной жизни, включая, но не ограничиваясь предоставлением и/или распространением персональных данных третьих лиц, а также нарушением тайны переписки (связи); нарушает права несовершеннолетних лиц и/или пропагандирует причинение им вреда в любой форме; содержит ссылки на порнографические фотографии, аудио- и видеоролики сексуального характера, в том числе, с участием несовершеннолетних и/или рекламирует их приобретение или распространение; является вульгарной или непристойной, содержит нецензурную лексику; содержит угрозы, дискредитирует, оскорбляет, порочит честь и достоинство или деловую репутацию граждан, должностных лиц и организаций; содержит ссылки на сцены насилия или бесчеловечного обращения с животными и/или описание таких сцен; содержит описание средств и способов суицида, любое подстрекательство к его совершению; содержит ссылки на результаты интеллектуальной деятельности и средства индивидуализации третьих лиц при условии отсутствия соответствующего согласия их правообладателей на их использование или нарушения норм свободного использования произведений или иных объектов, установленных действующим законодательством; пропагандирует и/или способствует разжиганию расовой, религиозной, этнической ненависти, розни, вражды и/или дискриминации по расовому, этническому, половому, религиозному, социальному признакам, пропагандирует фашизм или идеологию расового или национального превосходства, пропагандирует и/или способствует ущемлению прав меньшинств; содержит экстремистские материалы; пропагандирует преступную деятельность и/или содержит рекомендации, инструкции или руководства по совершению преступных действий; содержит информацию ограниченного доступа, включая, но не ограничиваясь, государственной, банковской и коммерческой тайной; содержит ненадлежащую коммерческую рекламу и/или незаконную политическую рекламу, привлекает к участию в ее распространении; содержит рекламу или описывает привлекательность употребления наркотических веществ, информацию о распространении наркотиков, рецепты их изготовления и советы по употреблению; носит мошеннический характер, стимулирует или рекламирует использование спама и соответствующих технических средств и сервисов массовой рассылки сообщений, продажу или предоставление доступа к базам данных электронных адресов и контактов, осуществление многоуровневого (сетевого) маркетинга и привлечение к участию в схемах интернет-заработков и e-mail-бизнесов; содержит ссылки на вирусы, трояны и другое вредоносное программное обеспечение и, сведения и руководства по их использованию, а также инструкции по осуществлению действий, предназначенные для сбора информации о пользователях, нарушения их прав и интересов и/или нарушения нормального функционирования проектов, сервисов и информационных систем третьих лиц; содержит серийные (регистрационные) номера к программному обеспечению и базам данных и программы для их генерации, логины, пароли и иные средства для получения несанкционированного доступа к Интернет-ресурсам, доступ к которым ограничен; запрещено также регистрировать более чем один пользовательский аккаунт, регистрировать пользовательский аккаунт от имени лица, которым Вы не являетесь (фальшивый аккаунт), или регистрировать аккаунт группы лиц или организации; вводить пользователей в заблуждение относительно своей личности, используя аккаунт другого человека, умышленно искажать представление о самом себе, своем возрасте или своих отношениях с другими лицами или организациями; размещать любую коммерческую рекламу, коммерческие предложения, агитационные материалы, сообщения-цепочки (сообщения, требующие их передачи одному или нескольким пользователям), схемы финансовых пирамид или призывы в них участвовать, любую другую навязчивую информацию; размещать домашние адреса, номера телефонов, адреса электронной почты, паспортные данные и прочую личную информацию других пользователей или любых третьих лиц без их личного согласия на такие действия; описывать или пропагандировать преступную деятельность, размещать инструкции или руководства по совершению преступных действий; любым способом, в том числе путем взлома, пытаться получить доступ к чужому аккаунту вопреки воле лица, которому он принадлежит; размещать любую информацию, нарушающую исключительные права пользователей или третьих лиц на объекты интеллектуальной собственности; запрещено дублировать сообщения, «смайлы», а также развивать в ветке комментирования темы, не относящиеся к обсуждаемой тематике; злоупотреблять сленгом, игнорировать правила современного русского языка; злоупотреблять использованием заглавных букв, размещать любую другую информацию которая нарушает иные права и интересы граждан и юридических лиц или требования законодательства Российской Федерации, и которая, по мнению Правообладателей Сайта, является нежелательной, не соответствует целям создания Сайта, ущемляет интересы пользователей или по другим причинам является нежелательной для размещения на Сайте.</p>
+                        <p>3.2. Вы признаете, что несете личную ответственность за любой комментарий, сообщение или иную информацию, которые Вы загружаете или иным образом доводите до всеобщего сведения (публикуете) на Сайте или с его помощью.</p>
+                        <p>3.3. Размещая свой комментарий, сообщение или любую другую информацию в любой части Сайта, Вы не вправе загружать или иным образом доводить до всеобщего сведения (публиковать на Сайте) контент других сайтов, баз данных и прочих объектов исключительных прав при отсутствии явным образом выраженного согласия правообладателя на такие действия.</p>
+                        <p>3.4. Правообладатели Сайта вправе удалить или отредактировать неприемлемые сообщения. Правообладатели Сайта настоящим уведомляют, что комментарии и/или сообщения на Сайте отражают точку зрения их авторов, а не Правообладателей Сайта (кроме сообщений, размещенных ее представителями). Содержание комментариев и/или высказываний на Сайте является мнением лиц, их написавших, и может не совпадать с мнением Правообладателей Сайта.</p>
+                        <p>3.5. Сайт является открытым для всеобщего доступа информационным ресурсом. Пользуясь сайтом, Вы соглашаетесь не размещать информацию, которая нарушает общепринятые нормы поведения и законодательство РФ. При попытке размещения таких сообщений Правообладатели Сайта вправе отключить Вас от Сайта.</p>
+                        <div class="b-legalinfo__subheader">4. Освобождение от ответственности</div>
+                        <p>4.1. Правообладатели Сайта гарантируют соответствие компьютерной системы, используемой для работы Сайта, общепринятым стандартам безопасности.</p>
+                        <p>4.2. Сайт предоставляется по принципу «как есть». Все риски, связанные с качеством и работой Сайта, ложатся на Вас. Правообладатели Сайта заявляют об отсутствии каких-либо гарантий, явных или подразумеваемых, в отношении Сайта, а также любой иной информации и документации, предоставляемой для данного Сайта. Кроме того, Правообладатели Сайта не дают никаких гарантий относительно результатов, которые могут быть получены с помощью Сайта.</p>
+                        <p>4.3. Весь риск, связанный с использованием и работой Сайта, ложится на Вас. Правообладатели Сайта, их коммерческие партнеры, сотрудники, агенты и пр. ни в коем случае не будут нести ответственность за побочный, особый или косвенный ущерб (включая, в частности, ущерб из-за потери коммерческих прибылей, простоя производства, потери коммерческой информации или иных денежных убытков), связанный с использованием или невозможностью использования Сайта.</p>
+                        <p>4.4. Правообладатели Сайта не будут нести ответственность за неточную или неверную информацию, полученную от пользователей, за оборудование и программное обеспечение, используемое в рамках Сайта, а также за технические неполадки, которые могут случиться, в том числе из-за поломки вашего компьютера в результате использования Сайта.</p>
+                        <p>4.5. Ссылка на любой другой сайт, продукт, услугу, акцию, любую информацию коммерческого или некоммерческого характера, размещенную на Сайте, не является одобрением или рекомендацией данных продуктов (услуг) со стороны Правообладателей Сайта.</p>
+                        <p>4.6. Правообладатели Сайта не отвечают за любое поведение Пользователей или третьих лиц, использующих или просматривающих Сайт.</p>
+                        <p>4.7. Если в рамках Акции выдаются призы, то вы признаете следующее: Правообладатели Сайта не несут ответственности за налоговые выплаты, связанные с принятием Вами приза. Ответственность за финансовые консультации по данному вопросу ложится на Вас самих.</p>
+                        <p>4.8. Правообладатели Сайта не несут ответственность за любые ошибки, упущения, прерывания, удаление, дефекты, задержку в обработке или передаче данных, сбое линий связи, кражу, уничтожение или неправомерный доступ к материалам пользователей, размещенным на Сайте или в любом другом месте.</p>
+                        <p>4.9. Правообладатели Сайта не отвечают за любые технические сбои или иные проблемы любых телефонных сетей или служб, компьютерных систем, серверов или провайдеров, компьютерного или телефонного оборудования, программного обеспечения, сбои сервисов электронной почты или скриптов по техническим причинам.</p>
+                        <p>4.10. Правообладатели Сайта оставляют за собой право по собственному усмотрению и без какого-либо обязательства корректировать или исправлять любую ошибку или неточность в любом тексте. Правообладатели Сайта по необходимости обновляют информацию, представленную на Сайте, но не будет нести ответственность за какую-либо неточность в связи с этим.</p>
+                        <div class="b-legalinfo__subheader">5. Политика конфиденциальности</div>
+                        <p>5.1. Правообладатели Сайта уважают конфиденциальность личной информации пользователей и защищает ее так, как это предписано законодательством РФ.
+                        <p>    5.2. Правообладатели Сайта настоящим запрещают использование информации, содержащейся в размещенных на Сайте информации о третьих лицах, в целях маркетинга, коммерческой рассылки по факсу, по почте, по электронной почте или иным доступным способом, либо через коммерческих агентов/представителей или электронных посредников, полную или частичную перепечатку материалов Сайта (даже со ссылкой и с указанием авторства).</p>
+                        <p>    5.3. При подписке будут приходить рекламные предложения от Правообладателей Сайта или привлекаемых компанией третьих лиц.</p>
+                        <p>    5.4. Персональные данные пользователя будут передаваться для обработки таким третьим лицам.</p>
+                        <div class="b-legalinfo__subheader">6. Перерывы в работе Сайта</div>
+                        <p>6.1. Если по какой-либо причине данный Веб-сайт не может функционировать так, как планировалось, например, ввиду форс-мажорных обстоятельств, технических неполадок, неавторизованного вмешательства, мошенничества или иной неконтролируемой Правообладателями Сайта причины, которая нарушает работу или затрагивает администрирование, безопасность, целостность Сайта, то Правообладатели Сайта оставляют за собой право, завершить работу Сайта, изменить или приостановить его работу.</p>
+                        <p>6.2. Сайт или его сервисы могут быть частично или полностью недоступны по причине проведения профилактических или иных работ.</p>
+                        <div class="b-legalinfo__subheader">7. Заключительные положения</div>
+                        <p> 7.1. Настоящие Условия регулируются и толкуются в соответствии с законодательством Российской Федерации.</p>
+                        <p> 7.2. Если по тем или иным причинам одна или несколько норм настоящих Условий является недействительной или не имеющей юридической силы, это не оказывает влияния на действительность или применимость остальных норм.</p>
+                        <p> 7.3. Вы обязуетесь защищать Правообладателей Сайта, Компании, поставщиков, лицензиаров, руководителей и сотрудников от любых убытков, ответственности и расходов (в том числе судебных расходов), связанных с претензиями в отношении Вашего нарушения данных Условий, законодательства или прав третьих лиц.</p>
+                        <p> 7.4. Для получения ответов на интересующие Вас вопросы Вы можете обратиться к Правообладателям Сайта.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </noindex>
+      <!-- modal -->
+      <link href="./css/animate.css" rel="stylesheet">
+      <!-- ProdesCode -->
+      <!--
+         <link href="./css/style.css" rel="stylesheet">
+          <link href="./css/media.css" rel="stylesheet">
+         -->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <script src="./js/jquery.fancybox.pack.js"></script>
+      <script src="./js/jquery-migrate-1.2.1.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./js/jquery.easing-1.3.js"></script>
+      <script src="./js/bootstrap-hover-dropdown.min.js"></script>
+      <script src="./js/jquery.iosslider.js"></script>
+      <link rel="stylesheet" href="./css/zoom-showcase.css" type="text/css"/>
+      <script src="./js/zoom-showcase.js" type="text/javascript"></script>
+      <script src="./js/jquery.maskedinput.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="./js/jquery.jcarousel.min_.js"></script>
+      <script type="text/javascript" src="./js/jquery.cookie.min.js"></script>
+      <script type="text/javascript" src="./js/waypoints.min.js"></script>
+      <script type="text/javascript" src="./js/jquery.roundabout.min.js"></script>
+      <script type="text/javascript" src="./js/jquery.roundabout-shapes.min.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js'></script>
+      <script type="text/javascript">
+         $('.responsive').slick({
+         dots: true,
+         prevArrow: $('.prev'),
+         nextArrow: $('.next'),
+         infinite: true,
+         autoplay: true,
+         autoplaySpeed: 3000,
+         speed: 300,
+         slidesToShow: 3,
+         slidesToScroll: 3,
+         responsive: [
+         {
+           breakpoint: 1024,
+           settings: {
+             slidesToShow: 3,
+             slidesToScroll: 3,
+             infinite: true,
+             dots: true
+           }
+         },
+         {
+           breakpoint: 600,
+           settings: {
+             slidesToShow: 2,
+             slidesToScroll: 2
+           }
+         },
+         {
+           breakpoint: 480,
+           settings: {
+             slidesToShow: 1,
+             slidesToScroll: 1
+           }
+         }
+         // You can unslick at a given breakpoint now by adding:
+         // settings: "unslick"
+         // instead of a settings object
+         ]
+         });
+      </script>
+      <!-- ProdesCode -->
+      <script src="./js/prodes.js?up=6"></script>
+      <script type="text/javascript">
+         var comagicYesOrNo = "yes";
+      </script>
+      <!--<script src="./js/for_comagic.js"></script>-->
+      <script src="./js/otherscripts.js"></script>
+      <script>
+         function newMyWindow(e) {
+           var h = 500,
+               w = 500;
+           window.open(e, '', 'scrollbars=1,height='+Math.min(h, screen.availHeight)+',width='+Math.min(w, screen.availWidth)+',left='+Math.max(0, (screen.availWidth - w)/2)+',top='+Math.max(0, (screen.availHeight - h)/2));
+         }
+      </script>
+
+
+      <div class="modal fade" id="tseny" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 1048;">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="text-center">Произведем расчет вашего изделия с экономией 40%</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: -27px;"><span aria-hidden="true"><img src="./img/modal_close.png" alt=""></span></button>
+               </div>
+               <div class="modal-body">
+                  <form name="SIMPLE_FORM_5" action="/?WEB_FORM_ID=4&amp;RESULT_ID=16164&amp;formresult=addok" method="POST" enctype="multipart/form-data" style="margin-top: 50px; font-size: 25px;"><input type="hidden" name="sessid" id="sessid_7" value="7fff89023ede2dba9a5caf7edee829f5"><input type="hidden" name="WEB_FORM_ID" value="8"><input type="hidden" name="lang" value="ru">                         
+  <div class="modal_input_name form-group" style="margin: 0 auto;"><input type="text" placeholder="Ваше имя" id="form_text_1" data-field="name" name="form_text_38" value="" size="0"></div>
+                                                 
+  <div class="modal_input_tel form-group" style="margin: 0 auto;"><input type="text" placeholder="Телефон" class="phonemask" data-validation="required" id="form_text_2" data-field="phone" name="form_text_39" value="" size="0"> </div>
+ <input type="hidden" data-field="comagic" name="form_hidden_71" value="{&quot;site_key&quot;:&quot;DvLGeNa6IxWMXp3M4ogyefN0H78rZX8C&quot;,&quot;visitor_id&quot;:1484620075,&quot;hit_id&quot;:7010034714,&quot;session_id&quot;:2324160116,&quot;consultant_server_url&quot;:&quot;https://server.comagic.ru/&quot;,&quot;comagic_id&quot;:&quot;1484620075.2324160116.1532328499&quot;}"> 
+  <br>
+ 
+  <div class="modal_hochu_but" style="margin-left: 0px; text-align: center;"> <button class="red-button" id="modal_hochu_but" style="width: 350px;">Получить расчет за 5 минут</button> </div>
+ <input name="web_form_apply" value="Y" type="hidden"> </form>
+                  <h2 class="font-header spans xs-force-center textable"><span style="text-align: center;" class="p"><span style="font-size: 32px;">ПРИМЕР СТОИМОСТИ ИЗДЕЛИЙ</span></span></h2>
+                  <p style="text-align: center; font-size: 16px;">Лучшее соотношение цена/качество. Официальный производитель!</p><p style="text-align: center; font-size: 16px;">В наличии более 1500 текстур!</p>
+
+                  <div class="row" style="margin: 0px;">
+                     <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/s/1l6b7f051/1517adc38f7ce4402907c7f5e4382631/8424b817be01c5d2faed75f6bd6b0dfd.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ GRANDEX E-612<br>Цена от 9520Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                     <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/93a70d4fcb5302f11a3cf948ec83fff1.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ TRISTONE A-104<br>Цена от 5800Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                     <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/f4e4e982cc6239d94fefbaf16abbe890.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ TRISTONE F-109<br>Цена от 8120Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                     <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/6b756727d7c955a2c078a8d2bab7b736.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ GRANDEX M-703<br>Цена от 11080Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                  </div>
+                  <div class="row" style="margin: 0px;">
+                     <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/b5040eb9c53e34578ceab3fe7067662c.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ TRISTONE S-207<br>Цена от 6760Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/ef9f8fa93bcdf9c30ff8b3927178babd.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ PL SAMSUNG STARON PL 848<br>Цена от 6800Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/6f368addcc3b9a243aaecf964df8e623.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ SAMSUNG TEMPEST FR 118<br>Цена от 9560Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/176f980b516bb0f4555b79222b0545a0.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ GRANDEX A412<br>Цена от 7160Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                  </div>
+                  <div class="row" style="margin: 0px;">
+                     <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/f6950197b637251f05adf3459e53a944.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ GRANDEX S202<br>Цена от 6680Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/7d3a1260cc302ff016995a49cecf43e5.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ GRANDEX S205<br>Цена от 6680Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/685d0396f464732588444e816ba5dc74.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ HANEX BL-003<br>Цена от 9160Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/7e9b15620c937be7d0d2275926965804.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ LG HI MACS G-004<br>Цена от 8320Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                  </div>
+                  <div class="row" style="margin: 0px;">
+                     <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/176f980b516bb0f4555b79222b0545a0.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ HANEX C-007<br>Цена от 7920Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/cc79223e3960edf4a41ee39396b7dac1.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ NEOMARM NM-108<br>Цена от 8880Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                      <div class="col-md-3 stitem">
+                        <img src="http://u8.filesonload.ru/1517adc38f7ce4402907c7f5e4382631/7eadc3c84364603d44715caced9cc967.jpg" style="width: 100%;">
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#kupitDeshevle"><span>СТОЛЕШНИЦА ИЗ CORIAN FOSSIL (4 КАТ)<br>Цена от 12280Р. ЗА 1 П/М.</span><span>Рассчитать</span></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </body>
+</html>

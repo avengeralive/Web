@@ -1,0 +1,52 @@
+<div class="container content" ng-controller="mypromotionsController as newCntr" ng-show="group === 'client'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 infobar">
+			<span class="username"></span> <a href="/dashboard/settings" class="text-danger"><span class="fa fa-cog"></span> Настройки пользователя</a><br>
+			<hr>
+			<a href="/dashboard/my-loyality" class="mui-btn mui-btn--primary"> Мои карты лояльности <span ng-show="notify.loyality > 0" class="badge badge-pill badge-danger">{{ notify.loyality }}</span></a> 
+			<a href="/dashboard/my-promo" class="mui-btn mui-btn--primary"> Мои промокоды</a> 
+			<a href="/dashboard/my-books" class="mui-btn mui-btn--primary"> Мои брони <span ng-show="notify.booking > 0" class="badge badge-pill badge-danger">{{ notify.booking }}</span></a> 
+			<a href="/dashboard/my-promotions" class="mui-btn mui-btn--primary"> Мои акции <span ng-show="notify.promotions > 0" class="badge badge-pill badge-danger">{{ notify.promotions }}</span></a>
+			<a href="/dashboard/my-reviews" class="mui-btn mui-btn--primary"> Мои отзывы <span ng-show="notify.reviews > 0" class="badge badge-pill badge-danger">{{ notify.reviews }}</span></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-12 nav-pills">
+		    <a href="#" class="nav-link" ng-click="tab = 1; getpromos();" ng-class="tab == 1 ? 'active' : ''" style="float: left;">Мои акции</a>
+		    <a href="#" class="nav-link" ng-click="tab = 2; clear();" ng-class="tab == 2 ? 'active' : ''" style="float: left;">Уведомления <span ng-show="notify.promotions > 0" class="badge badge-pill badge-danger">{{ notify.promotions }}</span></a>
+		</div>
+	    <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding:0px; margin-bottom: 25px; margin-top: 25px;" ng-show="tab == 1">
+				<form ng-submit="getResult();">
+					<div class="row checkfield">
+						<div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 mui-textfield mui-textfield--float-label">
+							<input type="text" ng-model="search" placeholder="Поиск по ключевым словам">
+						</div>
+						<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+							<button class="mui-btn mui-btn--primary" id="searchbutton">Поиск</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row" style="padding:0px; margin-bottom: 25px;" ng-show="tab == 1">
+			<div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" ng-repeat="promotion in promotions">
+			    <div class="card" style="width: 100%; margin-bottom: 30px;">
+					<img src="/uploads/{{ promotion.cover_image }}" class="card-img-top">
+					<div class="card-body text-center">
+						<h4 class="card-title">{{ promotion.title }}</h4>
+						<p style="text-align:center; font-style: italic;">от заведения "<a href="/{{ promotion.slug }}">{{ promotion.place_name }}</a>"</p>
+						<p style="text-align:left;">{{ promotion.content.substring(0, 80) }}...</p>
+						<a href="/promotions/{{ promotion.id }}" class="mui-btn mui-btn--primary">Подробнее <span ng-show="promotion.notify.length > 0" class="badge badge-pill badge-danger ng-binding" style=""> {{ promotion.notify.length }}</span></a>
+					</div>
+				</div>
+			</div>	
+		</div>
+	    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px; margin-top: 25px;"  ng-show="tab == 2">
+	    	<div class="col col-12">
+				<a href style="color: #80b545;" ng-click="deleteallnot()">Удалить все уведолмления</a>
+			</div>
+			<div class="col col-12" ng-repeat="(key, notification) in $parent.allnotif" ng-show="notification.not_table == 'promotions'" style="padding: 15px; margin-bottom: 5px; background: #fff;">
+			    <p style="color: #000; margin: 0px;"><i class="fa fa-circle" style="color:#80b545;"></i> {{ notification.create_date }} - <span ng-bind-html="notification.notification"></span> <a class="text-danger" ng-click="deletenot(notification.id, key)"><i class="fa fa-trash"></i></a></p>
+			</div>
+	    </div>
+	</div>
+</div> 

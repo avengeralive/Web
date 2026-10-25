@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>explorer:: ##directory##</title>
+
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<SCRIPT language=JavaScript src="##PME_WWW##checker.js"></SCRIPT>
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+<ul class="breadcrumb">
+	<li><a href="/">Администрирование</a><span class="divider">/</span></li>
+	<li><a href="##PME_WWW##">Управление файлами</a><span class="divider">/</span></li>
+	##navigation##
+</ul>
+<hr class="divider" />
+    </div>
+  </div>
+</div>	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+
+<form action="##SCRIPT_NAME##" method="post" enctype="application/x-www-form-urlencoded" name=files onSubmit="return checkForm()">
+<input type=hidden name=dir value="##directory##">
+
+<table border=0 cellpadding=5 cellspacing=0 width="100%">
+<tr>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Детальный режим
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=tree&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_tree.gif" width="35" height="35" alt="" border="0" align="absmiddle">Дерево папок
+</a>
+</td>
+
+<td align=center bgcolor=#CCCCCC>
+<a href="##PME_WWW##?ID=search&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_search.gif" width="35" height="35" alt="" border="0" align="absmiddle">Поиск
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=massupload&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Закачать файлы
+</a>
+</td>
+
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##check.php" class=black>
+<img src="##PME_WWW##i/_setting.gif" width="35" height="35" alt="" border="0" align="absmiddle">Настройки
+</a>
+</td>
+</tr>
+</table>
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<table border=0 width=100%>
+
+
+<!--
+
+<html>
+<head>
+<title>explorer:: search in ##directory##</title>
+<link rel="StyleSheet" href="##PME_WWW##css.css" type="text/css">
+<SCRIPT language=JavaScript src="##PME_WWW##checker.js"></SCRIPT>
+</head>
+<body bgcolor=#ffffff>
+<a href="/"><img src="/i/logo.png">
+</a><table width="100%">
+<tr bgcolor="f5f5f5"><td height="20">
+<a href="/">Администрирование</a> / <a href="##PME_WWW##">Управление файлами</a> / 
+</td></tr></table>
+<hr noshade size=1>
+
+
+
+<table border=0 cellpadding=5 cellspacing=0 width="100%">
+<tr>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Детальный режим
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=tree&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_tree.gif" width="35" height="35" alt="" border="0" align="absmiddle">Дерево папок
+</a>
+</td>
+
+<td align=center bgcolor=#CCCCCC>
+<a href="##PME_WWW##?ID=search&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_search.gif" width="35" height="35" alt="" border="0" align="absmiddle">Поиск
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=massupload&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Закачать файлы
+</a>
+</td>
+
+<td align="center" valign="middle" bgcolor=#DDDDDD>
+<a href="##PME_WWW##" class=black>
+<img src="##PME_WWW##i/_home.gif" width="35" height="35" alt="" border="0" align="absmiddle">Домой
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##check.php" class=black>
+<img src="##PME_WWW##i/_setting.gif" width="35" height="35" alt="" border="0" align="absmiddle">Настройки
+</a>
+</td>
+</tr>
+<tr>
+<td align=center bgcolor=#CCCCCC colspan=6>
+
+<table border=0 width=100%>
+<tr>
+<td>Адрес&nbsp;</td>
+<td bgcolor="#ffffff"  width=100%>##navigation##</td>
+</tr>
+-->
+<tr>
+<td>&nbsp;</td>
+<td bgcolor="#ffffff">
+<form name="search" method="get" action="##PME_WWW##">
+<input type=hidden name=ID value="search">
+<input type=hidden name=dir value="##directory##">
+<select name="qq" onchange="fillEmptySearch()">
+<option value="">Введите  регексп
+<option value="^(.*)\.backup$">Бэкапы:   ^(.*)\.backup$
+<option value="^(.*)\.(gif|jpe?g)$">Картинки:  ^(.*)\.(gif|jpe?g)$
+<option value="^(.*)\.html?$">Html:  ^(.*)\.html?$
+</select>
+<input type=text name="q" size=60 value="##q##" onchange="typed=0; document.search.qq.value=''">
+<input type=submit value="Искать">
+</form>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<script><!--
+typed = 1;
+//-->
+</script>
+<form action="##SCRIPT_NAME##" method="post" enctype="application/x-www-form-urlencoded" name=files onSubmit="return checkForm()">
+<input type=hidden name=dir value="##directory##">
+<table border=0 cellpadding=5 cellspacing=0 width=100%>
+<tr bgcolor="#dddddd">
+<td>&nbsp;</td>
+<td width=80%>Название</td>
+<td width=10%>Размер</td>
+<!-- <td width=10%>Изменен</td>
+<td width=1%>Атрибуты</td>
+ --><td width=10%><input onclick="ToggleAll(checked)" type="checkbox"></td>
+<td>&nbsp;</td>
+</tr>
+
+##html##
+
+<tr bgcolor="#dddddd">
+<td>&nbsp;</td>
+<td>Обьектов: ##count##</td>
+<td DDDcolspan=2>##summ_size## Кб</td>
+<!-- <td>&nbsp;</td> -->
+<td colspan=2>
+<SELECT name="ID">
+<option value="get_zip">PHPZIP+загрузить
+<option value="delete">Удалить
+##plugins##
+</select>
+<input type=submit value="&raquo;&raquo;&raquo;">
+</td>
+</tr>
+</table>
+</form>
+
+</div>
+</div>
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+</div> 
+</footer>
+
+</html>	

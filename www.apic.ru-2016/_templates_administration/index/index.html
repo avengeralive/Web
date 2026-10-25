@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Администрирование {{HTTPS_BASE_ADMIN}}</title>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<style>
+ol.unstyled li a i{margin:50x; opacity: 0.3;}
+</style>
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+<img src="{{HTTPS_BASE_ADMIN_IMAGES}}logo.png" />
+
+
+<h4>Привет,<br />{{NAME}}!</h4>
+<p class="muted">Справа возможности админки сайта, а ниже &mdash; ссылки в другие места.</p>
+
+<ol class="unstyled">
+</ol>
+
+<ol  class="unstyled">
+</ol>
+
+<ol  class="unstyled">
+</ol>
+
+<ol  class="unstyled">
+</ol>
+
+
+<hr class="divider" />
+
+<!--
+<form class="form-inline" action="https://basecamp.com/1797977/search" method="get">
+  <input type="text" name="q" class="input-small" placeholder="">
+  <button type="submit" class="btn">Искать в бейзкампе</button>
+</form>
+ -->
+		<!--Sidebar content-->
+
+	</div>
+    <div class="span9">
+
+	<!--Body content-->
+
+
+<ul class="breadcrumb">
+  <li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a> <span class="divider">/</span></li>
+  <li class="active">Первая страница</li>
+</ul>
+
+<hr class="divider" />
+ 
+<h2>Сделать что-нибудь:</h2>
+<ul class="thumbnails">
+<!-- BEGIN BLOCK.RIGHTS -->
+<li class="span3" style="margin:1em;"><a href="{{HTTPS_BASE_ADMIN}}{{file}}"><img src="{{HTTPS_BASE_ADMIN_IMAGES}}{{file}}.gif" alt="" 
+ style="margin-right: 10px;">{{name}}</a></li>
+<!-- END BLOCK.RIGHTS -->
+</ul>
+
+<hr class="divider" />
+
+<form class="form-inline" action="/edit.php" method="get">
+  <input type="hidden" name="ID" value="show_search">
+  <input type="text" name="q" class="input-xxlarge" placeholder="адрес страницы">
+  <button type="submit" class="btn">Найти страницу в CMS и поменять</button>
+</form>
+
+<hr class="divider" />
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span6">
+		<h3>Часто добавляется:</h3>
+		<ol class="unstyled">
+		<!-- BEGIN BLOCK.FASTLINK -->
+		<li><a href="/edit.php?ID=add_base&parent_id={{FASTLINK.parent_id}}&name=&url=&type={{FASTLINK.type}}"><i class="icon-plus"></i>Добавить {{FASTLINK.name}}</a></li>
+		<!-- END BLOCK.FASTLINK -->
+		</ol>
+
+		</div>
+    <div class="span6">	
+		<h3>Часто редактируется:</h3>
+		<ol class="unstyled">
+		<!-- BEGIN BLOCK.FASTEDITLINK -->
+		<li><a href="/edit.php?ID=show_edit&document_id={{FASTEDITLINK.id}}"><i class="icon-plus"></i>Редактировать {{FASTEDITLINK.name}}</a></li>
+		<!-- END BLOCK.FASTEDITLINK -->
+		</ol>
+	</div>
+    </div>
+	
+<hr class="divider" />
+
+  <div class="row-fluid" >
+    <div class="span12">	
+	<h3>Участники выставки:</h3>
+		<table class="table table-striped">
+		<tr>
+		<th>Участник</td>
+		<th>ID&nbsp;БД&nbsp;Апик</td>
+		<th>На сайт</td>
+		<th>изменить</td>
+		<th>новость</a></td>
+		<th>новинка</td>
+		</tr>
+		<!-- BEGIN BLOCK.MEMBER -->
+		<tr>
+		<td>{{MEMBER.name}} </td>
+		<td>{{MEMBER.firm_id}} </td>
+		<td><a href="{{HTTP_BASE}}{{MEMBER.url}}">{{MEMBER.url}}</a></td>
+		<td><a href="/edit.php?ID=show_edit&document_id={{MEMBER.id}}">изменить</a></td>
+		<td><a href="/edit.php?ID=add_base&parent_id={{MEMBER.news_id}}&name=&url=&type=folder">{{MEMBER.news_name}}</a></td>
+		<td><a href="/edit.php?ID=add_base&parent_id={{MEMBER.novelty_id}}&name=&url=&type=folder">{{MEMBER.novelty_name}}</a></td>
+		</tr>
+		<!-- END BLOCK.MEMBER -->
+		</table>
+    </div>
+    </div>
+	
+ 	
+
+
+
+<hr class="divider" />
+
+  <div class="row-fluid" >
+    <div class="span12">	
+	<h3>Английские участники выставки:</h3>
+		<table class="table table-striped">
+		<tr>
+		<th>Участник</td>
+		<th>ID&nbsp;БД&nbsp;Апик</td>
+		<th>На сайт</td>
+		<th>изменить</td>
+		<th>новость</a></td>
+		<th>новинка</td>
+		</tr>
+		<!-- BEGIN BLOCK.EMEMBER -->
+		<tr>
+		<td>{{EMEMBER.name}} </td>
+		<td>{{EMEMBER.firm_id}} </td>
+		<td><a href="{{HTTP_BASE}}{{EMEMBER.url}}">{{EMEMBER.url}}</a></td>
+		<td><a href="/edit.php?ID=show_edit&document_id={{EMEMBER.id}}">изменить</a></td>
+		<td><a href="/edit.php?ID=add_base&parent_id={{EMEMBER.news_id}}&name=&url=&type=folder">{{EMEMBER.news_name}}</a></td>
+		<td><a href="/edit.php?ID=add_base&parent_id={{EMEMBER.novelty_id}}&name=&url=&type=folder">{{EMEMBER.novelty_name}}</a></td>
+		</tr>
+		<!-- END BLOCK.EMEMBER -->
+		</table>
+    </div>
+    </div>
+
+
+
+
+
+	
+  </div>
+</div>
+</div>
+</div>	
+	
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+<small><a href="{{HTTP_BASE}}">Перейти на сайт</a></small>
+</div> 
+</footer>
+
+</html>

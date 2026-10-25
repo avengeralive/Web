@@ -1,0 +1,173 @@
+errordocument 404 /cms.php
+errordocument 403 /cms.php
+
+#errordocument 404 /404.html
+#errordocument 404 /cms.php
+
+#=============================
+
+Options +Includes
+Options -Indexes
+XBitHack on
+XBitHack Full
+php_value display_errors 2047
+php_value display_startup_errors 1
+php_value error_reporting  2047
+php_value default_charset windows-1251
+
+
+php_flag register_globals 1
+
+
+php_value display_errors 0
+
+
+php_value session.gc_maxlifetime 3600  
+php_value session.cookie_lifetime 3600
+
+
+php_value magic_quotes_gpc 0
+php_value magic_quotes_runtime 0
+php_value magic_quotes_sybase 0
+## zlib compression ON for php 
+php_value zlib.output_compression 0
+php_value zlib.output_compression_level 0
+DirectoryIndex index.html  index.plx index.jsp index.htm index.php
+
+RewriteEngine on
+RewriteRule (jpg|gif|png|js|favicon|css)$     - [L]
+
+#	RewriteRule ^main/about/special/geogr_2013/    /cms.php?ID=/topics/ventilation/grilles/cfera_2013/  [L]
+#	RewriteRule ^main/about/special/celi_2013/       /cms.php?ID=/topics/ventilation/grilles/celi_2013/ [L]
+#	RewriteRule ^main/about/special/vystavka_2013/    /cms.php?ID=/topics/ventilation/grilles/vystavka_2013/ [L]
+#	RewriteRule ^main/about/special/dolgnot_2013/    /cms.php?ID=/topics/ventilation/grilles/dolgnot_2013/ [L]
+#	RewriteRule ^main/about/special/cfera_2013/    /cms.php?ID=/topics/ventilation/grilles/cfera_2013/ [L]
+
+
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^about$ /cms.php?ID=/about/ [L]
+RewriteRule ^about/$ /cms.php?ID=/about/ [L]
+
+
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+) - [PT,L]
+
+RewriteCond %{QUERY_STRING} firm=([0-9]+) 
+RewriteRule ^members/member\.php$ members/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/member1\.php$ members/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/member2\.php$ members/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/en/member\.php$ en/members_apic/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} firm=([0-9]+)
+RewriteRule ^members/en/member1\.php$ en/members_apic/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} id_o=([0-9]+)&id_so=([0-9]+)&id_f=([0-9]+)
+RewriteRule ^object/object\.php$ members/action-%1/? [R=301,L]
+RewriteCond %{QUERY_STRING} id_so=([0-9]+)
+RewriteRule ^object/$ members/action-%1/? [R=301,L]
+
+
+RewriteRule ^robots.txt$ /cms.php?ID=/robotstxt/ [L]
+
+
+
+
+##	RewriteRule ^main/match/$ /index_old.php?part_sid=main&sect_sid=match&g_mode=login [L]
+##	RewriteRule ^main/match$ /index_old.php?part_sid=main&sect_sid=match&g_mode=login [L]
+##	RewriteRule ^main/match/(.*)/$ /index_old.php?part_sid=main&sect_sid=match&g_mode=$1 [L]
+
+
+
+##	RewriteRule ^eng/member/$ /eng_member.html [L]        
+##	RewriteRule ^eng/member$ /eng_member.html [L]        
+
+
+#RewriteRule ^main/(.*)/article/(.*)/$ /$1/$2/ [L,R=302]        
+#RewriteRule ^main/(.*)/sub/(.*)/$ /$1/$2/ [L,R=302]        
+#RewriteRule ^main/(.*)/$ /$1/ [L,R=302]        
+#RewriteRule ^members/$ /cms.php?ID=/member/ [L]        
+
+
+###########################
+#DONT COMMENT!!!
+###########################
+
+
+
+
+
+
+
+
+
+##	RewriteRule ^ticket/(.*)/$ /2013/ticket.php?hash=$1 [L]
+##	RewriteRule ^ticket-topclimat/(.*)/$ /2013/ticket-topclimat.php?hash=$1 [L]
+
+##	RewriteRule ^eng/ticket/(.*)/$ /2013/ticket.php?hash=$1 [L]
+
+
+
+RewriteRule ^robots.txt$ /cms.php?ID=/robotstxt/ [L]
+RewriteRule ^$ /cms.php?ID=/ [L]
+
+
+##	RewriteRule ^eng/brand/$ /cms.php?ID=/brand/&subID=eng [L]
+##	RewriteRule ^eng/brand/(.*)/$ /cms.php?ID=/brand/$1/&subID=eng [L]
+
+
+RewriteCond %{QUERY_STRING} subID=([a-zA-Z0-9]*)
+RewriteRule ^account\/(.*)\/.*$      /cms.php?ID=/account/&action=$1&subID=%1 [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^account\/(.*)\/.*$      /cms.php?ID=/account/&action=$1&subID= [L]
+
+
+
+RewriteCond %{QUERY_STRING} action=([-_a-zA-Z0-9]*)([^s]*)subID=([a-zA-Z0-9]*)([^q]*)offset=([a-zA-Z0-9]*)
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/&action=%1&subID=%3&offset=%5 [L]
+
+
+
+RewriteCond %{QUERY_STRING} action=([-_a-zA-Z0-9]*)([^s]*)subID=([a-zA-Z0-9]*)([^q]*)q=([a-zA-Z0-9]*)
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/&action=%1&subID=%3&q=%5 [L]
+
+
+RewriteCond %{QUERY_STRING} action=([-_a-zA-Z0-9]*)([^s]*)subID=([a-zA-Z0-9]*)
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/&action=%1&subID=%3 [L]
+
+
+
+
+RewriteCond %{QUERY_STRING} action=([-_a-zA-Z0-9]*)([^s]*)subID=([a-zA-Z0-9]*)
+RewriteRule ^(.*)\/.*$       /cms.php?ID=/$1/&action=%1&subID=%3 [L]
+
+
+RewriteCond %{QUERY_STRING} action=([-_a-zA-Z0-9]*)
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/&action=%1 [L]
+
+
+RewriteCond %{QUERY_STRING} q=([^&]*)([^p]*)page=([0-9]*)
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/&q=%1&page=%3 [L]
+
+
+RewriteCond %{QUERY_STRING} q=([^&]*)([^s]*)showall
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/&q=%1&showall=1 [L]
+
+
+RewriteCond %{QUERY_STRING} q=([^&]*)
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/&q=%1 [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\/$       /cms.php?ID=/$1/ [L]
+
+

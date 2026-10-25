@@ -1,0 +1,96 @@
+<section id="jumbtron">
+	<div class="row">
+		<div class="col col-sm-3">
+		</div>
+		<div class="col col-sm-6">
+			<div class="col">
+				<div class="search_form">
+					<div class="search_form_header">
+						<ul>
+							<li ng-click="search_tab=1" ng-class="search_tab == 1 ? 'active' : ''">Популярные заведения</li>
+							<li ng-click="search_tab=2" ng-class="search_tab == 2 ? 'active' : ''">Популярные блюда</li>
+							<li ng-click="search_tab=3" ng-class="search_tab == 3 ? 'active' : ''">Популярные акции</li>
+						</ul>
+					</div>
+					<div class="search_form_body">
+						<div class="place_tab" ng-show="search_tab == 1" ng-controller="homeController as home">
+							<form ng-submit="page = 0; places = []; getResult();">
+								<input type="text" class="form-control name_search" ng-model="search" placeholder="Название заведения">
+								<button class="mui-btn mui-btn--primary search_btn"><i class="fa fa-search"></i></button>
+							</form>
+							<form ng-submit="page = 0; places = []; getResultByLocation();" style="margin-bottom: 0px;">
+							    <input type="text" class="form-control map_addr" ng-model="addr" placeholder="Поиск по месту">
+							    <select ng-model="radius" style="border-radius: 0px !important;">
+							    	<option value="50">В радиусе 50 метров</option>
+							    	<option value="100">В радиусе 100 метров</option>
+							    	<option value="250">В радиусе 250 метров</option>
+							    	<option value="500">В радиусе 500 метров</option>
+							    	<option value="1000">В радиусе 1 км</option>
+							    </select>
+							    <button class="mui-btn mui-btn--primary search_btn"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						<div class="goods_tab" ng-show="search_tab == 2">
+							<form ng-submit="page = 0; places = []; getResult();">
+								<input type="text" class="form-control name_search" ng-model="search" placeholder="Название блюда">
+								<button class="mui-btn mui-btn--primary search_btn"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						<div class="promotions_tab" ng-show="search_tab == 3">
+							<form ng-submit="page = 0; places = []; getResult();">
+								<input type="text" class="form-control name_search" ng-model="search" placeholder="Название акции">
+								<button class="mui-btn mui-btn--primary search_btn"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-sm-3">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="main">
+	<div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+		<div class="row">
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+				<h2>Популярные заведения</h2>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<slick infinite="true" slides-to-show="4" slides-to-scroll="4">
+					<div class="place_item" ng-repeat="place in mainplaces">
+						<a href="/{{ place.slug }}">
+							<img src="/uploads/{{ place.cover_image }}" style="width: 100%;">
+							<div class="discount" ng-show="place.discount > 0">Скидка<br>{{ place.discount }}%</div>
+							<div class="come">Посетители<br>{{ place.rating }}</div>
+							<div class="rating">Рейтинг<br>{{ place.rating }}</div>
+							<h4><b style="color:#81b545; font-size: 18px;">{{ place.name }}</b></h4>
+						</a>
+					</div>
+				</slick>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+				<a href="/places" class="mui-btn mui-btn--primary" style="width:33%; margin-left: 33%;">Все заведения</a>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+				<h2>Популярные блюда</h2>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<slick infinite="true" slides-to-show="4" slides-to-scroll="4">
+					<div class="good_item" ng-repeat="good in maingoods">
+						<a href="/{{ good.slug }}">
+							<h4><b style="color:#81b545; font-size: 18px;">{{ good.place_name }}</b></h4>
+							<img src="/uploads/{{ good.photo }}" style="width: 100%;">
+							<h4>{{ good.name }} <small>({{ good.portion.value }} {{ good.portion.measure }})</small></h4>
+							<p style="font-style: italic;">({{ good.composition }})</p>
+						    <p><span style="font-size: 20px; font-weight: bold; color: #f44336;">{{ good.price }}</span> <i class="fa fa-ruble"></i></p>
+						</a>
+					</div>
+				</slick>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0px; margin-bottom: 25px;">
+				<a href="/goods" class="mui-btn mui-btn--primary" style="width:33%; margin-left: 33%;">Все блюда</a>
+			</div>
+		</div>
+	</div>
+</section>

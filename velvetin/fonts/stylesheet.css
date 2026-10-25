@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Core Sans G Rounded';
+    src: url('hinted-CoreSansGRounded-MediumItalic.woff2') format('woff2'),
+        url('hinted-CoreSansGRounded-MediumItalic.woff') format('woff'),
+        url('hinted-CoreSansGRounded-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Cube.woff2') format('woff2'),
+        url('hinted-CoreSansG-Cube.woff') format('woff'),
+        url('hinted-CoreSansG-Cube.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Black.woff2') format('woff2'),
+        url('hinted-CoreSansG-Black.woff') format('woff'),
+        url('hinted-CoreSansG-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G Rounded';
+    src: url('hinted-CoreSansGRounded-Bold.woff2') format('woff2'),
+        url('hinted-CoreSansGRounded-Bold.woff') format('woff'),
+        url('hinted-CoreSansGRounded-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-MediumItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-MediumItalic.woff') format('woff'),
+        url('hinted-CoreSansG-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-ExtraBoldItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-ExtraBoldItalic.woff') format('woff'),
+        url('hinted-CoreSansG-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-BlackItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-BlackItalic.woff') format('woff'),
+        url('hinted-CoreSansG-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-ThinItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-ThinItalic.woff') format('woff'),
+        url('hinted-CoreSansG-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-LightItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-LightItalic.woff') format('woff'),
+        url('hinted-CoreSansG-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-ExtraLightItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-ExtraLightItalic.woff') format('woff'),
+        url('hinted-CoreSansG-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Outline.woff2') format('woff2'),
+        url('hinted-CoreSansG-Outline.woff') format('woff'),
+        url('hinted-CoreSansG-Outline.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-ExtraLight.woff2') format('woff2'),
+        url('hinted-CoreSansG-ExtraLight.woff') format('woff'),
+        url('hinted-CoreSansG-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G Rounded';
+    src: url('hinted-CoreSansGRounded-BoldItalic.woff2') format('woff2'),
+        url('hinted-CoreSansGRounded-BoldItalic.woff') format('woff'),
+        url('hinted-CoreSansGRounded-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G Rounded';
+    src: url('hinted-CoreSansGRounded-ExtraBold.woff2') format('woff2'),
+        url('hinted-CoreSansGRounded-ExtraBold.woff') format('woff'),
+        url('hinted-CoreSansGRounded-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Regular.woff2') format('woff2'),
+        url('hinted-CoreSansG-Regular.woff') format('woff'),
+        url('hinted-CoreSansG-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Thin.woff2') format('woff2'),
+        url('hinted-CoreSansG-Thin.woff') format('woff'),
+        url('hinted-CoreSansG-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-HeavyItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-HeavyItalic.woff') format('woff'),
+        url('hinted-CoreSansG-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G Rounded';
+    src: url('hinted-CoreSansGRounded-ExtraBoldItali.woff2') format('woff2'),
+        url('hinted-CoreSansGRounded-ExtraBoldItali.woff') format('woff'),
+        url('hinted-CoreSansGRounded-ExtraBoldItali.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Neon.woff2') format('woff2'),
+        url('hinted-CoreSansG-Neon.woff') format('woff'),
+        url('hinted-CoreSansG-Neon.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G Rounded';
+    src: url('hinted-CoreSansGRounded-Medium.woff2') format('woff2'),
+        url('hinted-CoreSansGRounded-Medium.woff') format('woff'),
+        url('hinted-CoreSansGRounded-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Light.woff2') format('woff2'),
+        url('hinted-CoreSansG-Light.woff') format('woff'),
+        url('hinted-CoreSansG-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Bold.woff2') format('woff2'),
+        url('hinted-CoreSansG-Bold.woff') format('woff'),
+        url('hinted-CoreSansG-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Shadow.woff2') format('woff2'),
+        url('hinted-CoreSansG-Shadow.woff') format('woff'),
+        url('hinted-CoreSansG-Shadow.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Heavy.woff2') format('woff2'),
+        url('hinted-CoreSansG-Heavy.woff') format('woff'),
+        url('hinted-CoreSansG-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-ExtraBold.woff2') format('woff2'),
+        url('hinted-CoreSansG-ExtraBold.woff') format('woff'),
+        url('hinted-CoreSansG-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Medium.woff2') format('woff2'),
+        url('hinted-CoreSansG-Medium.woff') format('woff'),
+        url('hinted-CoreSansG-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-Italic.woff2') format('woff2'),
+        url('hinted-CoreSansG-Italic.woff') format('woff'),
+        url('hinted-CoreSansG-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Core Sans G';
+    src: url('hinted-CoreSansG-BoldItalic.woff2') format('woff2'),
+        url('hinted-CoreSansG-BoldItalic.woff') format('woff'),
+        url('hinted-CoreSansG-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+

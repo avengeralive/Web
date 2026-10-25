@@ -1,0 +1,209 @@
+
+
+/* Start:/js/countdown/flipclock.css?15249009533968*/
+.countdownHolder{
+    /* 	width:850px; */
+    margin:0 auto 25px auto;
+    font-size: 9.4em;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    letter-spacing:-20px;
+}
+
+.position{
+    display: inline-block;
+    height: 1.5em;
+    overflow: hidden;
+    position: relative;
+    width: 1em;
+}
+
+.digit{
+    position:absolute;
+    display:block;
+    width:1em;
+    background-color:#444;
+    border-radius:0.1em;
+    text-align:center;
+    color:#fff;
+    letter-spacing:-1px;
+}
+
+.digit.static{
+    box-shadow:1px 1px 3px rgba(4, 4, 4, 0.35);
+
+    background-image: linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -o-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -moz-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -webkit-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -ms-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.5, #3A3A3A),
+        color-stop(0.5, #444444)
+    );
+}
+
+/**
+ * You can use these classes to hide parts
+ * of the countdown that you don't need.
+ */
+
+.countDays{ display:none !important; }
+.countDiv0{ display:none !important; }
+.countHours{ background: url(/img/es13_countHours_bg.png) no-repeat 49% bottom;}
+.countDiv1{}
+.countMinutes{ background: url(/img/es13_countMinutes_bg.png) no-repeat 49% bottom;}
+.countDiv2{}
+.countSeconds{ background: url(/img/es13_countSeconds_bg.png) no-repeat 49% bottom;}
+
+
+.countDiv{
+    display:inline-block;
+    width:46px;
+    height:1.6em;
+    position:relative;
+}
+
+.countDiv:before,
+.countDiv:after{
+    position:absolute;
+    width:5px;
+    height:5px;
+    /* background-color:#444; */
+    border-radius:50%;
+    left:50%;
+    margin-left:-3px;
+    top:0.5em;
+    /*
+
+box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
+    content:'';
+*/
+
+}
+
+.countDiv:after{
+    top:0.9em;
+}
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+    .countdownHolder{
+        /* 	width:850px; */
+        margin:0 auto 20px auto;
+        font-size: 6.8em;
+        font-family: 'Roboto', sans-serif;
+        text-align:center;
+        letter-spacing:-10px;
+    }
+
+    .position{
+        display: inline-block;
+        height: 1.7em;
+        overflow: hidden;
+        position: relative;
+        width: 1em;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+    .countdownHolder{
+        /* 	width:850px; */
+        margin:0 auto 20px auto;
+        font-size: 4.8em;
+        font-family: 'Roboto', sans-serif;
+        text-align:center;
+        letter-spacing:-6px;
+    }
+
+    .position{
+        display: inline-block;
+        height: 1.7em;
+        overflow: hidden;
+        position: relative;
+        width: 1em;
+    }
+
+    .countDiv{
+        display:inline-block;
+        width:26px;
+        height:1.6em;
+        position:relative;
+    }
+
+
+    .countHours{background-size: 60%;}
+    .countMinutes{background-size: 60%;}
+    .countSeconds{background-size: 60%;}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+    .countdownHolder{
+        /* 	width:850px; */
+        margin:0 auto 20px auto;
+        font-size: 3.8em;
+        font-family: 'Roboto', sans-serif;
+        text-align:center;
+        letter-spacing:-6px;
+    }
+
+    .position{
+        display: inline-block;
+        height: 1.7em;
+        overflow: hidden;
+        position: relative;
+        width: 1em;
+    }
+
+    .countDiv{
+        display:inline-block;
+        width:16px;
+        height:1.6em;
+        position:relative;
+    }
+
+
+    .countHours{background-size: 60%;}
+    .countMinutes{background-size: 60%;}
+    .countSeconds{background-size: 60%;}
+
+}
+/* End */
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/news/otzivi-mezhkomnatnie-dveri/bitrix/news.list/.default/style.min.css?1524901025129*/
+div.news-list{word-wrap:break-word}div.news-list img.preview_picture{float:left;margin:0 4px 6px 0}.news-date-time{color:#486daa}
+/* End */
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/news/primeri-glavnaya/bitrix/news.list/.default/style.css?1524901025150*/
+div.news-list
+{
+	word-wrap: break-word;
+}
+div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}
+
+/* End */
+/* /js/countdown/flipclock.css?15249009533968 */
+/* /bitrix/templates/.default/components/bitrix/news/otzivi-mezhkomnatnie-dveri/bitrix/news.list/.default/style.min.css?1524901025129 */
+/* /bitrix/templates/.default/components/bitrix/news/primeri-glavnaya/bitrix/news.list/.default/style.css?1524901025150 */

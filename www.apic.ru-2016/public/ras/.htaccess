@@ -1,0 +1,9 @@
+AddDefaultCharset Off
+
+
+php_value display_errors 0
+
+#php_value display_errors 2047
+php_value display_startup_errors 1
+php_value error_reporting  2047
+

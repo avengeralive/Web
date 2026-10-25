@@ -1,0 +1,191 @@
+<div ng-controller="placesController as plCntr" class="container" style="padding-top: 50px; padding-bottom: 50px;">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 row">
+			<div class="col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" style="padding:0px; margin-bottom: 10px;">
+				<form ng-submit="page = 0; places = []; getResult();">
+					<div class="row checkfield">
+						<div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 form-group" style="padding-left: 0px;">
+							<input type="text" class="form-control" ng-model="search" id="search" placeholder="Название заведения">
+						</div>
+						<div class="col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="padding-right: 0px;">
+							<button class="mui-btn mui-btn--primary search_btn" id="searchbutton"><i class="fa fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row" style="padding: 0px; padding-bottom: 15px; text-align: right;">
+				<form ng-submit="page = 0; places = []; getResultByLocation();">
+					<div class="checkfield">
+					    <input type="text" id="map_addr" class="form-control" ng-model="addr" placeholder="Поиск по месту" style="width: 300px; float: left; margin-top: 0px;">
+					    <select ng-model="radius" style="float: left; height: 44px; border-radius: 0px !important; margin-top: 0px;">
+					    	<option value="50">В радиусе 50 метров</option>
+					    	<option value="100">В радиусе 100 метров</option>
+					    	<option value="250">В радиусе 250 метров</option>
+					    	<option value="500">В радиусе 500 метров</option>
+					    	<option value="1000">В радиусе 1 км</option>
+					    </select>
+					    <button class="mui-btn mui-btn--primary search_btn" id="searchbutton2"><i class="fa fa-search"></i></button>
+					</div>
+				</form>
+				<!--<a class="mui-btn mui-btn--primary" title="Плиткой" ng-click="tab = 1; deleteMap();"><i class="fa fa-th"></i></a>-->
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row" style="padding:0px;">
+				<div class="col col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9 btnsfltr" style="padding:0px;">
+					<button class="mui-btn mui-btn--primary" data-toggle="modal" data-target="#filter_metro">Станции метро</button>
+					<button class="mui-btn mui-btn--primary" data-toggle="modal" data-target="#filter_places">Тип заведения</button>
+					<button class="mui-btn mui-btn--primary" data-toggle="modal" data-target="#filter_kitchen">Тип кухни</button>		
+					<div class="mui-select" tabindex="0" style="width: 320px;">
+						<select id="sort" tabindex="-1" ng-model="order" ng-change="page = 0; places = []; getResult();">
+							<option value="rating">Рейтингу</option>
+							<option value="visitors">Числу посетителей</option>
+							<option value="discount">Скидке</option>
+							<option value="middle">Среднему счёту</option>
+						</select>
+						<label>Сортировать по:</label>
+						<div class="mui-event-trigger"></div>
+					</div>
+					<a class="mui-btn mui-btn--primary" title="Списком" ng-click="tab = 1;"><i class="fa fa-list"></i></a>	
+					<a class="mui-btn mui-btn--primary" title="На карте" ng-click="tab = 3;"><i class="fa fa-map-marker"></i></a>
+				</div>	
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 filters_metro" style="padding-left:0px;">
+				<div class="filter_elem" ng-repeat="subway_station in subway_stations"><a ng-click="push_subway_station(subway_station)"><i class="fa fa-remove"></i></a> {{ subwayStationList[subway_station] }}</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 filters_place" style="padding-left:0px;">
+				<div class="filter_elem" ng-repeat="place_type in place_types"><a ng-click="push_place_type(place_type)"><i class="fa fa-remove"></i></a> {{ placeTypesList[place_type] }}</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 filters_kitchen" style="padding-left:0px;">
+				<div class="filter_elem" ng-repeat="kitchen_type in kitchen_types"><a ng-click="push_kitchen_type(kitchen_type)"><i class="fa fa-remove"></i></a> {{ kitchenTypesList[kitchen_type] }}</div>
+			</div>
+			<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row items" style="padding: 0px; padding-top: 15px;" ng-show="tab == 1">
+				<div style="padding-left: 0px !important;" class="col col-12 col-sm-6 col-md-4 place_item" ng-repeat="place in places">
+					<div class="col-12" style="padding:0px;">
+						<img src="/uploads/{{ place.cover_image }}" style="width: 100%;">
+						<div class="discount" ng-show="place.discount > 0">-{{ place.discount }}%</div>
+					</div>
+					<div class="col-12" style="padding:0px;">
+						<table style="width:100%;">
+							<tr>
+								<td style="width: 80%;"><h4><b style="color:#81b545; font-size: 18px;">{{ place.name }}</b></h4></td>
+								<td style="width: 20%; text-align: center;">{{ place.rating }}</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-12" style="padding:0px;">
+						<p style="margin:0px;"><b style="font-size: 13px;">Метро:</b> <span style="font-size: 13px;" ng-repeat="station in place.subway_stations">{{ station }}{{$last ? '' : ', '}}</span></p>
+						<p style="margin:0px;"><b style="font-size: 13px;">Тип заведения:</b> <span style="font-size: 13px;" ng-repeat="station in place.place_types">{{ station }}{{$last ? '' : ', '}}</span></p>
+						<p style="margin:0px;"><b style="font-size: 13px;">Тип кухни:</b> <span style="font-size: 13px;" ng-repeat="station in place.kitchen_types">{{ station }}{{$last ? '' : ', '}}</span></p>
+					</div>
+					<div class="more col-12" style="padding:0px;">
+						<a href="/{{ place.slug }}" class="mui-btn mui-btn--primary" style="width:100%;">Подробнее</a>
+					</div>
+				</div>
+			</div>-->
+			
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row items" style="padding: 0px; padding-top: 15px;" ng-show="tab == 1">
+				<div style="padding: 0 15px; padding-top: 36px;" class="col col-12 col-sm-12 col-md-6 place_item" ng-repeat="place in places">
+					<div class="row" style="border-bottom: 1px solid #81b545;padding-bottom: 20px;">
+						<div class="col col-12 col-sm-6 col-md-5" style="padding:0px;">
+							<img src="/uploads/{{ place.cover_image }}" style="width: 100%;">
+							<div class="discount" ng-show="place.discount > 0">Скидка<br>{{ place.discount }}%</div>
+							<div class="come">Посетители<br>{{ place.rating }}</div>
+							<div class="rating">Рейтинг<br>{{ place.rating }}</div>
+						</div>
+						<div class="col col-12 col-sm-6 col-md-7">
+							<div class="row">
+								<div class="col-12" style="padding:0px;">
+									<h4 style="margin-top: 0px;"><b style="color:#81b545; font-size: 18px;">{{ place.name }}</b></h4>
+									<p style="margin:0px;"><b style="font-size: 13px;">Метро:</b> <span style="font-size: 13px;" ng-repeat="station in place.subway_stations">{{ station }}{{$last ? '' : ', '}}</span></p>
+									<p style="margin:0px;"><b style="font-size: 13px;">Тип заведения:</b> <span style="font-size: 13px;" ng-repeat="station in place.place_types">{{ station }}{{$last ? '' : ', '}}</span></p>
+									<p style="margin:0px;"><b style="font-size: 13px;">Тип кухни:</b> <span style="font-size: 13px;" ng-repeat="station in place.kitchen_types">{{ station }}{{$last ? '' : ', '}}</span></p>
+								</div>
+								<div class="more col-12" style="padding:0px;">
+									<a href="/{{ place.slug }}" class="mui-btn mui-btn--primary">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row items" style="padding: 0px; padding-top: 15px; height:500px;" ng-show="tab == 3">
+				<div id="map"></div>
+				<style>
+					#map {
+						height: 100%;
+						display: block;
+					}
+				</style>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="filter_metro" tabindex="-1" role="dialog" aria-labelledby="filter_metroLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document" style="max-width: 1000px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="filter_metroLabel">Выбор станций метро</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body" style="padding: 0px;">
+					<div class="row">
+						<div class="col col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 checkbox" ng-repeat="station in subwayStations">
+							<label><input type="checkbox" ng-click="push_subway_station(station.id)" ng-model="subwayStationChecks[station.id]"> {{ station.station_name }}</label>
+						</div>	
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="modal fade" id="filter_places" tabindex="-1" role="dialog" aria-labelledby="filter_placesLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="filter_placesLabel">Выбор типа заведения</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 checkbox"ng-repeat="placetype in placeTypes">
+								<label><input type="checkbox" ng-click="push_place_type(placetype.id);" ng-model="placeTypesChecks[placetype.id]"> {{ placetype.slug }}</label>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="filter_kitchen" tabindex="-1" role="dialog" aria-labelledby="filter_kitchenLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="filter_kitchenLabel">Выбор типа кухни</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 checkbox"ng-repeat="kitchentype in kitchenTypes">
+								<label><input type="checkbox" ng-click="push_kitchen_type(kitchentype.id);" ng-model="kitchenTypesChecks[kitchentype.id]"> {{ kitchentype.slug }}</label>
+							</div>					
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

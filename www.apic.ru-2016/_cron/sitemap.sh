@@ -1,0 +1,1 @@
+/usr/local/bin/mysql -uroot -e "select CONCAT('https://www.apic.ru',url) as  uu from apic2016.tree  where status='active' and url not like '/banners%' and url not like '/robots%'  and url not like '/search%' order by uu ASC  limit 0,50000" | grep -v ^uu > /www/www.apic.ru-2016/public/export/sp0.txt

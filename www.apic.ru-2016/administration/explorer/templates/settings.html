@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>explorer:: ##directory##</title>
+
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<SCRIPT language=JavaScript src="##PME_WWW##checker.js"></SCRIPT>
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+<ul class="breadcrumb">
+	<li><a href="/">Администрирование</a><span class="divider">/</span></li>
+	<li><a href="##PME_WWW##">Управление файлами</a><span class="divider">/</span></li>
+	##navigation##
+</ul>
+<hr class="divider" />
+    </div>
+  </div>
+</div>	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+
+<form action="##SCRIPT_NAME##" method="post" enctype="application/x-www-form-urlencoded" name=files onSubmit="return checkForm()">
+<input type=hidden name=dir value="##directory##">
+
+<table border=0 cellpadding=5 cellspacing=0 width="100%">
+<tr>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Детальный режим
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=tree&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_tree.gif" width="35" height="35" alt="" border="0" align="absmiddle">Дерево папок
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=search&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_search.gif" width="35" height="35" alt="" border="0" align="absmiddle">Поиск
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=massupload&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Закачать файлы
+</a>
+</td>
+
+
+<td align=center bgcolor=#CCCCCC>
+<a href="##PME_WWW##check.php" class=black>
+<img src="##PME_WWW##i/_setting.gif" width="35" height="35" alt="" border="0" align="absmiddle">Настройки
+</a>
+</td>
+</tr>
+</table>
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+
+<table class="table">
+<tr><td>Тип</td><td>Название</td><td>Значение</td><td>Комментарий</td></tr>
+##html##
+
+<noscript>
+<tr><td colspan=4 bgcolor=#ff99ff>В браузере отключен javascript :) Лучше бы включить.</td></tr>
+</noscript>
+</table>
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+</div>
+</div>
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+</div> 
+</footer>
+
+</html>	

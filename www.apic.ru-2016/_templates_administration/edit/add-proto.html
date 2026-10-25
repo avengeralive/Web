@@ -1,0 +1,127 @@
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{CMS_ADMIN_NAME}} / {{CMS_ADMIN_CURRENT_PAGE_NAME}}</title>
+<link href="{{CMS_ADMIN_IMAGES_BASE}}css.css" rel="Stylesheet" type="text/css">
+</head>
+<body>
+<script src="{{CMS_ADMIN_IMAGES_BASE}}adm.js"></script>
+<img src="{{CMS_ADMIN_IMAGES_BASE}}logo.png" />
+
+<table width="100%" cellspacing="0" class="cmsnavigation">
+<tr><td><img src="{{CMS_ADMIN_IMAGES_BASE}}{{type}}.gif" height="35" width="35" /></td>
+<td>
+<a href="{{CMS_ADMIN_URL_BASE}}">Администрирование</a> / 
+<a href="{{CMS_ADMIN_URL_BASE}}edit.php">{{CMS_ADMIN_NAME}}</a> / 
+Добавление папки в <i>{{CMS_ADMIN_CURRENT_PAGE_NAME}}</i>
+</td></tr></table>
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{CMS_ADMIN_NAME}} / Добавление папки в  {{CMS_ADMIN_CURRENT_PAGE_NAME}}</title>
+
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+<script src="/bootstrap/js/jquery.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+<script src="/i/datepicker/date-picker.js"></script>
+
+
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+
+<ul class="breadcrumb">
+  <li><a href="{{CMS_ADMIN_URL_BASE}}">Администрирование</a> <span class="divider">/</span></li>
+  <li><a href="{{CMS_ADMIN_URL_BASE}}edit.php">Редактирование страниц</a> <span class="divider">/</span></li>
+  <li>Добавление в <i>{{CMS_ADMIN_CURRENT_PAGE_NAME}}</i>
+</ul>
+
+<hr class="divider" />
+ 
+ 
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+  <br >
+  <br >
+  <br >
+  <br >
+</div>
+</div>
+  
+</div>
+</div>
+
+
+  
+<form action="{{CMS_ADMIN_URL_BASE}}edit.php" method="post">
+<input type="hidden" name="ID" value="add">
+<input type="hidden" name="type" value="{{type}}">
+<input type="hidden" name="parent_id" value="{{parent.id}}">
+<table width="100%" id="document">
+
+<tr class="treeheader"><td>&nbsp;</td>
+<td><input type="submit" class="btn btn-success btn-large" value=" Завершить создание &raquo; "></td></tr>
+
+<tr class="{{status}}"><td>URL
+</td><td id="c8"><input type="text" style="width:95%" name="url" value="{{url}}" size="80" maxlength="255" onchange="colorize(this);" /></td></tr>
+
+
+<tr><td>Название страницы
+</td><td id="c1"><input type="text" style="width:95%" name="name" value="{{name}}" size="80" maxlength="255" onchange="colorize(this);" /></td></tr>
+
+
+<tr><td colspan="2"><hr class="divider" />
+</td></tr>
+
+
+<tr><td>Полное название (показается на странице)
+</td><td id="c11"><input type="text" style="width:95%" name="fullname" value="{{fullname}}" size="80" maxlength="255" onchange="colorize(this);" /></td></tr>
+
+
+<tr><td>Анонс
+</td><td id="c2"><textarea name="anons" style="width:95%" cols="90" rows="6" wrap="soft" onchange="colorize(this);">{{anons}}</textarea></td></tr>
+<tr><td>Статья
+</td><td id="c3"><textarea name="document" style="width:95%" cols="90" rows="30" wrap="soft" onchange="colorize(this);">{{document}}</textarea></td></tr>
+
+
+<tr><td>Заголовок документа (title).
+</td><td id="c13"><input type="text" style="width:95%" name="seo_title" value="" size="80" maxlength="255" onchange="colorize(this);" /></td></tr>
+<tr><td>Описание страницы для поисковых систем (description)</b>
+</td><td id="c5"><textarea style="width:95%" name=seo_description cols=90 rows=2 wrap="soft"  onchange="colorize(this);">{{description}}</textarea></td></tr>
+<tr><td>Список ключевых слов для поисковых систем (keywords)
+</td><td id="c6"><textarea style="width:95%" name=seo_keywords cols=90 rows=2 wrap="soft" onchange="colorize(this);">{{keywords}}</textarea></td></tr>
+
+<tr class="{{status}}"><td>Статус (временно отключить документ):
+</td><td id="c7"><input type="checkbox" name="status" value="disabled" {{checked}} onchange="colorize(this);"></td></tr>
+<tr class="{{statushidden}}"><td>Статус спрятанности (не показывать ссылку в меню и навигации):
+</td><td id="c8"><input type="checkbox" name="statushidden" value="disabled" {{statushiddenchecked}} onchange="colorize(this);"></td></tr>
+
+<tr class="treeheader"><td>&nbsp;</td>
+<td><input type="submit" class="btn btn-success btn-large" value=" Завершить создание &raquo; "></td></tr>
+</table>
+</form>
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2013 &mdash; 2099</span> 
+<small><a href="{{HTTP_BASE}}">Перейти на сайт</a></small>
+</div> 
+</footer>
+
+</html>

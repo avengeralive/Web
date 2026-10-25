@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Администрирование {{HTTPS_BASE_ADMIN}} / Список заявок на участие</title>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+<ul class="breadcrumb">
+	<li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a><span class="divider">/</span></li>
+	<li><a href="{{HTTPS_BASE_ADMIN}}forms_participant.php">Список заявок на участие</a><span class="divider">/</span></li>
+</ul>
+<hr class="divider" />
+    </div>
+  </div>
+</div>	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+<!-- ---------------------------------- ------------------------------- -->
+ 
+<b><font color=red>{{ERROR}}</font></b>
+
+<table border=0 cellpadding="5" cellspacing="1" width="100%" class="table table-striped">
+<tr bgcolor="#cccccc" >
+<th>ID</th>
+<th>Дата</th>
+<th>Название компании	</th>
+<th>Персона	</th>
+<th>Телефон</th>
+<th>Почта</th>
+<th>Площадь</th>
+<th>Комментарий</th>
+</tr>
+<!-- BEGIN BLOCK.GLOBAL -->
+<tr>
+<td>{{id}}</td>
+<td>{{created}}</td>
+<td>{{company}}</td>
+<td>{{contact}}</td>
+<td>{{phone}}</td>
+<td>{{email}}</td>
+<td>{{square}}</td>
+<td>{{comments}}</td>
+
+
+</tr>
+<!-- END BLOCK.GLOBAL -->
+</table>
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+</div>
+</div>
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+</div> 
+</footer>
+
+</html>

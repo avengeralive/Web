@@ -1,0 +1,23 @@
+<div ng-controller="promotionController as plCntr" class="container" style="padding-top: 50px; padding-bottom: 50px;">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 row">
+			<div>
+			<img src="/uploads/{{ promotion.cover_image }}" class="img-fluid" style="width: 100%;">
+			</div>
+			<h1>{{ promotion.title }}</h1>
+			<p style="text-align:left; font-style: italic;">от заведения "<a href="/{{ promotion.slug }}">{{ promotion.place_name }}</a>"</p>
+			<p>Дата начала акции: {{ promotion.starts }}</p>
+			<p>Дата окончания акции: {{ promotion.ends }}</p>
+			<p>Акция доступна: {{ promotion.availability }} </p>
+			<p>{{ promotion.content }}</p>
+			<div class="row">
+			    <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-3" ng-repeat="photo in promotion.images">
+				<a rel="example_group"  href="/uploads/{{ photo }}" fancyboxable>
+				    <img src="/uploads/{{ photo }}" class="img-fluid">
+				</a> 
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+ 

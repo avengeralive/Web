@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Администрирование {{HTTPS_BASE_ADMIN}} / {{rus.name}}</title>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<SCRIPT language=JavaScript src="##PME_WWW##checker.js"></SCRIPT>
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+<ul class="breadcrumb">
+	<li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a><span class="divider">/</span></li>
+	<li><a href="{{HTTPS_BASE_ADMIN}}member_users.php">Аккаунты и карточки участников</a><span class="divider">/</span></li>
+	<li>Карточка {{rus.name}}</li>
+</ul>
+<h1>{{rus.name}}</h1>
+    </div>
+  </div>
+</div>	
+	
+	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+  
+<font color="red">{{PAGE.error}}</font>
+
+<!--
+<hr class="divider" />
+
+<table>
+<td>
+Текущий статус: {{firm.status}}<br />
+</td>
+<td>
+<form action="{{HTTPS_BASE_ADMIN}}member_users.php" method="POST">
+<input type="hidden" name="ID" value="set_company_active">
+<input type="hidden" name="firm_id" value="{{rus.firm_id}}">
+<input type="hidden" name="rus_id" value="{{rus.id}}">
+<input type="hidden" name="eng_id" value="{{eng.id}}">
+<button>Сделать активной в выставке</button><br />будет вида в списке участников<br /><br />
+</form>
+</td>
+<td>
+<form action="{{HTTPS_BASE_ADMIN}}member_users.php" method="POST">
+<input type="hidden" name="ID" value="set_company_hidden">
+<input type="hidden" name="firm_id" value="{{rus.firm_id}}">
+<input type="hidden" name="rus_id" value="{{rus.id}}">
+<input type="hidden" name="eng_id" value="{{eng.id}}">
+<button>Сделать неактивной в выставке</button><br />и спрятать из списков участников,<br>оставить карточку и страницы<br />
+</form>
+</td>
+<td>
+<form action="{{HTTPS_BASE_ADMIN}}member_users.php" method="POST">
+<input type="hidden" name="ID" value="set_company_disabled">
+<input type="hidden" name="firm_id" value="{{rus.firm_id}}">
+<input type="hidden" name="rus_id" value="{{rus.id}}">
+<input type="hidden" name="eng_id" value="{{eng.id}}">
+<button>Отключить полностью </button><br>из поиска страницы компании тоже пропадут!<br /><br />
+</form>
+</td>
+</tr>
+</table>
+-->
+
+<hr class="divider" />
+  
+<h3>Добавить логин в админку {{rus.name}}</h3>
+<p>Пароль на почту не отправляется. Чтобы отправить письмо пользователю нужно сначала добавить аккаунт а потом поставить галочку "отправить".</p>
+<form action="{{HTTPS_BASE_ADMIN}}member_users.php" method="POST">
+<input type="hidden" name="ID" value="add_new_login">
+<input type="hidden" name="firm_id" value="{{rus.firm_id}}">
+<table class="table table-striped">
+<tr>
+<td>Емайл<font color=red>*</font></td><td><input type="text" name="email" value="" size="60" maxlength="255">
+<td>Логин<font color=red>*</font></td><td><input type="text" name="login" value="" size="60" maxlength="255">
+<td>Пароль<font color=red>*</font></td><td><input type="text" name="password" value="{{new.password}}" size="60" maxlength="255">
+</td>
+<td><input type="submit" value="Добавить новый логин в админку {{rus.name}}"></td></tr>
+</table>
+</form>
+
+
+<hr class="divider" />
+
+
+<h3>Пользователи у которых есть логин в админку {{rus.name}}</h3>
+<form action="{{HTTPS_BASE_ADMIN}}member_users.php" method="POST">
+<input type="hidden" name="ID" value="update_logins">
+<input type="hidden" name="firm_id" value="{{rus.firm_id}}">
+<table class="table table-striped">
+<tr><td>ID</td>
+<!--<td>Статус</td>-->
+<td>Емайл (используется для писем)</td><td>Логин (используется для входа)</td><td>Пароль (используется для входа)</td><td>Отправить пароль по почте повторно?</td></tr>
+<!-- BEGIN BLOCK.AMEMBER -->
+<tr bgcolor="#f0f0f0">
+<td>{{login.id}}</td>
+<!--<td><input type=checkbox name="send_{{login.id}}" value="1">{{login.status}}</td>-->
+<td><input type="text" name="email_{{login.id}}" value="{{login.email}}" size="60" maxlength="255"></td>
+<td><input type="text" name="login_{{login.id}}" value="{{login.login}}" size="60" maxlength="255"></td>
+<td><input type="text" name="password_{{login.id}}" value="{{login.password}}" size="60" maxlength="255"></td>
+<td><input type=checkbox name="send_{{login.id}}" value="1">отправить</td>
+</tr>
+<!-- END BLOCK.AMEMBER -->
+<tr><td colspan=6><button>Изменить поля логинов</button></td></tr>
+</table>
+</form>
+
+<hr class="divider" />
+
+
+<!--
+<h3>Карточка компании {{rus.name}}</h3>
+
+<form action="{{HTTPS_BASE_ADMIN}}member_users.php" method="POST">
+<input type="hidden" name="ID" value="update_company">
+<input type="hidden" name="firm_id" value="{{rus.firm_id}}">
+<input type="hidden" name="rus_id" value="{{rus.id}}">
+<input type="hidden" name="eng_id" value="{{eng.id}}">
+
+<table class="table table-striped">
+<tr><td></td><td>Русская карточка</td><td>Английская карточка</td></tr>
+<tr><td>Карточка</td><td><a href="{{HTTP_BASE}}{{rus.url}}">{{rus.url}}</a></td><td><a href="{{HTTP_BASE}}{{eng.url}}">{{eng.url}}</a></td></tr>
+<tr bgcolor="#f0f0f0"><td>FIRM_ID:</td><td>{{rus.firm_id}}</td><td>{{eng.firm_id}}</td></tr>
+<tr bgcolor="#f0f0f0"><td>Название</td><td><textarea  name="name_{{rus.id}}" rows=3 style="width:100%">{{rus.name}}</textarea></td><td><textarea name="name_{{eng.id}}" rows=3 style="width:100%">{{eng.name}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>logo</td><td><textarea  name="logo_{{rus.id}}" rows=3 style="width:100%">{{rus.logo}}</textarea></td><td><textarea name="logo_{{eng.id}}" rows=3 style="width:100%">{{eng.logo}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Профиль</td><td><textarea  name="equipment_{{rus.id}}" rows=3 style="width:100%">{{rus.equipment}}</textarea></td><td><textarea name="equipment_{{eng.id}}" rows=3 style="width:100%">{{eng.equipment}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Услуги</td><td><textarea name="services_{{rus.id}}" rows=3 style="width:100%">{{rus.services}}</textarea></td><td><textarea name="services_{{eng.id}}" rows=3 style="width:100%">{{eng.services}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Дополнительная информация</td><td><textarea name="additional_info_{{rus.id}}" rows=3 style="width:100%">{{rus.additional_info}}</textarea></td><td><textarea name="additional_info_{{eng.id}}" rows=3 style="width:100%">{{eng.additional_info}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Дилеры</td><td><textarea name="dilers_{{rus.id}}" rows=3 style="width:100%">{{rus.dilers}}</textarea></td><td><textarea  name="dilers_{{eng.id}}"  rows=3 style="width:100%">{{eng.dilers}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Почтовый адрес
+</td><td><textarea name="postal_address_{{rus.id}}" rows=3 style="width:100%">{{rus.postal_address}}</textarea></td><td><textarea  name="postal_address_{{eng.id}}"  rows=3 style="width:100%">{{eng.postal_address}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон код 1</td><td><textarea name="pcode1_{{rus.id}}" rows=3 style="width:100%">{{rus.pcode1}}</textarea></td><td><textarea  name="pcode1_{{eng.id}}" rows=3 style="width:100%">{{eng.pcode1}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон 1</td><td><textarea name="phone1_{{rus.id}}" rows=3 style="width:100%">{{rus.phone1}}</textarea></td><td><textarea  name="phone1_{{eng.id}}"  rows=3 style="width:100%">{{eng.phone1}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон код 2</td><td><textarea name="pcode2_{{rus.id}}" rows=3 style="width:100%">{{rus.pcode2}}</textarea></td><td><textarea  name="pcode2_{{eng.id}}" rows=3 style="width:100%">{{eng.pcode2}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Телефон 2</td><td><textarea name="phone2_{{rus.id}}" rows=3 style="width:100%">{{rus.phone2}}</textarea></td><td><textarea  name="phone2_{{eng.id}}" rows=3 style="width:100%">{{eng.phone2}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Факс код</td><td><textarea name="fcode_{{rus.id}}" rows=3 style="width:100%">{{rus.fcode}}</textarea></td><td><textarea name="fcode_{{eng.id}}" rows=3 style="width:100%">{{eng.fcode}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Факс</td><td><textarea name="fax_{{rus.id}}" rows=3 style="width:100%">{{rus.fax}}</textarea></td><td><textarea  name="fax_{{eng.id}}"  rows=3 style="width:100%">{{eng.fax}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>email</td><td><textarea name="email_{{rus.id}}" rows=3 style="width:100%">{{rus.email}}</textarea></td><td><textarea  name="email_{{eng.id}}" rows=3 style="width:100%">{{eng.email}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Сайт</td><td><textarea name="web_{{rus.id}}" rows=3 style="width:100%">{{rus.web}}</textarea></td><td><textarea  name="web_{{eng.id}}" rows=3 style="width:100%">{{eng.web}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Стенд</td><td><textarea name="stand_{{rus.id}}" rows=3 style="width:100%">{{rus.stand}}</textarea></td><td><textarea  name="stand_{{eng.id}}" rows=3 style="width:100%">{{eng.stand}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Страна</td><td><textarea name="country_{{rus.id}}" rows=3 style="width:100%">{{rus.country}}</textarea></td><td><textarea  name="country_{{eng.id}}" rows=3 style="width:100%">{{eng.country}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Город</td><td><textarea name="city_{{rus.id}}" rows=3 style="width:100%">{{rus.city}}</textarea></td><td><textarea  name="city_{{eng.id}}" rows=3 style="width:100%">{{eng.city}}</textarea></td></tr>
+<tr bgcolor="#f0f0f0"><td>Лет на выставке</td><td><textarea name="age_{{rus.id}}" rows=3 style="width:100%">{{rus.age}}</textarea></td><td><textarea name="age_{{eng.id}}" rows=3 style="width:100%">{{eng.age}}</textarea></td></tr>
+<tr><td colspan=2><button>Изменить поля карточки компании</button></td></tr>
+</table>
+--> 
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2013 &mdash; 2099</span> 
+</div> 
+</footer>
+</html>

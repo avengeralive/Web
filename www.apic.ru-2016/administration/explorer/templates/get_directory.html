@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>explorer:: ##directory##</title>
+
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<SCRIPT language=JavaScript src="##PME_WWW##checker.js"></SCRIPT>
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/i/adm.js"></script>
+
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+<ul class="breadcrumb">
+	<li><a href="/">Администрирование</a><span class="divider">/</span></li>
+	<li><a href="##PME_WWW##">Управление файлами</a><span class="divider">/</span></li>
+	##navigation##
+</ul>
+<hr class="divider" />
+    </div>
+  </div>
+</div>	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+
+<form action="##SCRIPT_NAME##" method="post" enctype="application/x-www-form-urlencoded" name=files onSubmit="return checkForm()">
+<input type=hidden name=dir value="##directory##">
+
+<table border=0 cellpadding=5 cellspacing=0 width="100%">
+<tr>
+
+<td align=center bgcolor=#CCCCCC>
+<a href="##PME_WWW##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Детальный режим
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=tree&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_tree.gif" width="35" height="35" alt="" border="0" align="absmiddle">Дерево папок
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=search&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_search.gif" width="35" height="35" alt="" border="0" align="absmiddle">Поиск
+</a>
+</td>
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##?ID=massupload&dir=##directory##" class=black>
+<img src="##PME_WWW##i/_get.gif" width="35" height="35" alt="" border="0" align="absmiddle">Закачать файлы
+</a>
+</td>
+
+
+<td align=center bgcolor=#DDDDDD>
+<a href="##PME_WWW##check.php" class=black>
+<img src="##PME_WWW##i/_setting.gif" width="35" height="35" alt="" border="0" align="absmiddle">Настройки
+</a>
+</td>
+</tr>
+</table>
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<table  class="table table-striped">
+<tr bgcolor="#dddddd">
+<td >&nbsp;</td>
+<td>
+<a href="##SCRIPT_NAME##/##urlname##?ID=get&order=name&reverse=1&dir=##directory##"><img src="##PME_WWW##i/_down##name1##.gif" width="12" height="12" alt="" border="0"></a>
+<a href="##SCRIPT_NAME##/##urlname##?ID=get&order=name&reverse=-1&dir=##directory##"><img src="##PME_WWW##i/_up##name-1##.gif" width="12" height="12" alt="" border="0"></a>
+</td>
+<td>
+<a href="##SCRIPT_NAME##/##urlname##?ID=get&order=size&reverse=1&dir=##directory##"><img src="##PME_WWW##i/_up##size1##.gif" width="12" height="12" alt="" border="0"></a>
+<a href="##SCRIPT_NAME##/##urlname##?ID=get&order=size&reverse=-1&dir=##directory##"><img src="##PME_WWW##i/_down##size-1##.gif" width="12" height="12" alt="" border="0"></a>
+</td>
+<td>
+<a href="##SCRIPT_NAME##/##urlname##?ID=get&order=modified&reverse=1&dir=##directory##"><img src="##PME_WWW##i/_down##modified1##.gif" width="12" height="12" alt="" border="0"></a>
+<a href="##SCRIPT_NAME##/##urlname##?ID=get&order=modified&reverse=-1&dir=##directory##"><img src="##PME_WWW##i/_up##modified-1##.gif" width="12" height="12" alt="" border="0"></a>
+</td>
+<td>&nbsp;</td>
+<td width=30%><input onclick="ToggleAll(checked)" type="checkbox"></td>
+<td>&nbsp;</td>
+</tr>
+
+##html##
+
+<tr bgcolor="#dddddd">
+<td>&nbsp;</td>
+<td>Обьектов: ##count##</td>
+<td colspan=2>##summ_size## Кб</td>
+<td>&nbsp;</td>
+<td>
+<SELECT name="ID">
+<option value="get_zip">PHPZIP+загрузить
+<option value="delete">Удалить
+##plugins##
+</select>
+<input type=submit value="&raquo;&raquo;&raquo;">
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</form>
+
+<hr noshade size="1">
+
+<table width=100%>
+<tr>
+<td class="##write_color##" valign=top>
+Закачать файл: 
+<form action="##SCRIPT_NAME##" method="post" enctype="multipart/form-data">
+<input type=hidden name=ID value="upload">
+<input type=hidden name=dir value="##directory##">
+<input type=file  name=file ##write_disabled##>
+<input type=submit value="&raquo;&raquo;&raquo;" ##write_disabled##>
+</form>
+
+<small>Закачать <a href="##PME_WWW##?ID=massupload&dir=##directory##">много файлов</a></small>
+
+</td>
+<td class="##write_color##" valign=top>
+
+Создать директорию
+
+<form action="##SCRIPT_NAME##" method="post" enctype="application/x-www-form-urlencoded" name="createfolder" onSubmit="return checkCreateForm()">
+<input type=hidden name=ID value="create_folder">
+<input type=hidden name="dir" value="##directory##">
+<input type=text name=folder value="" size=20  ##write_disabled##>
+<input type=submit value="&raquo;&raquo;&raquo;"  ##write_disabled##>
+</form>
+</td>
+
+<td>
+
+Статистика
+
+<br><a href="##PME_WWW##?ID=plugin::folder_usage&dir=/">folder_usage</a>
+
+</td>
+</tr>
+
+</table>
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+</div>
+</div>
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+</div> 
+</footer>
+
+</html>	

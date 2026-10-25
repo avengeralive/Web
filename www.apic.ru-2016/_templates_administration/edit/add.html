@@ -1,0 +1,101 @@
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{CMS_ADMIN_NAME}} / {{CMS_ADMIN_CURRENT_PAGE_NAME}}</title>
+<link href="{{CMS_ADMIN_IMAGES_BASE}}css.css" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+<script src="{{CMS_ADMIN_IMAGES_BASE}}adm.js"></script>
+<img src="{{CMS_ADMIN_IMAGES_BASE}}logo.png" />
+
+<table width="100%" cellspacing="0" class="cmsnavigation">
+<tr><td><img src="{{CMS_ADMIN_IMAGES_BASE}}easycms.gif" height="35" width="35" /></td>
+<td>
+<a href="{{CMS_ADMIN_URL_BASE}}">Администрирование</a> / 
+<a href="{{CMS_ADMIN_URL_BASE}}edit.php">{{CMS_ADMIN_NAME}}</a> / 
+Добавление в <i>{{CMS_ADMIN_CURRENT_PAGE_NAME}}</i>
+</td></tr></table>
+
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{CMS_ADMIN_NAME}} / {{CMS_ADMIN_CURRENT_PAGE_NAME}}</title>
+
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<style>
+ol.unstyled li a i{margin:50x; opacity: 0.3;}
+.clickme:hover {background: #dff0d8;}
+</style>
+ 
+
+</head>
+<body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{CMS_ADMIN_IMAGES_BASE}}adm.js"></script>
+
+
+
+	
+	
+<div class="container-fluid">
+  <div class="row-fluid" >
+    <div class="span3">
+      <!--Sidebar content-->
+		<a href="/"><img src="/i/logo.png" /></a>
+	</div>
+    <div class="span9">
+
+
+<ul class="breadcrumb">
+  <li><a href="{{HTTPS_BASE_ADMIN}}">Администрирование</a> <span class="divider">/</span></li>
+  <li><a href="{{HTTPS_BASE_ADMIN}}edit.php">Редактирование страниц</a> <span class="divider">/</span></li>
+	<li>Добавление в <i>{{CMS_ADMIN_CURRENT_PAGE_NAME}}</i></li>
+  
+</ul>
+
+<hr class="divider" />
+ 
+    </div>
+  </div>
+</div>	
+	
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+
+
+<div style="padding-left:200px">
+<!-- BEGIN BLOCK.DOCTYPE -->
+<form action="{{CMS_ADMIN_URL_BASE}}edit.php" method="get" name="editf" id="editf" >
+<input type="hidden" name="ID" value="add_base">
+<input type="hidden" name="parent_id" value="{{parent.id}}">
+<input type="hidden" name="name" value=""  />
+<input type="hidden" name="url" value="" />
+<input type="hidden" name="type" value="{{type}}" />
+<button type="submit" style="margin: 5px;"><img src="{{CMS_ADMIN_IMAGES_BASE}}{{type}}.gif" /> Создать документ с типом &laquo;{{name}}&raquo;</button>
+
+</form>
+<!-- END BLOCK.DOCTYPE -->
+</div>
+
+
+
+
+
+
+<!-- ---------------------------------- ------------------------------- --> 	
+
+<footer class="modal-footer">
+<div class="span2">
+<span class="label label-success">&copy; 2012 &mdash; 2099</span> 
+<small><a href="{{HTTP_BASE}}">Перейти на сайт</a></small>
+</div> 
+</footer>
+
+</html>	

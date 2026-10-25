@@ -1,0 +1,24 @@
+<div class="container content" ng-controller="editnetworkController as nwCntr" ng-show="group === 'admin' || group === 'company'">
+	<form ng-submit="save()">
+		<div class="row">
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+				<input type="text" ng-model="network.name" class="mui--is-not-empty">
+				<label>Название сети заведения</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><h3>Выберите заведения</h3></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group" ng-show="places.length >= 2">
+				<div class="row">
+					<div class="col col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 mui-checkbox checkbox" ng-repeat="place in places">
+						<label><input type="checkbox" ng-click="addplaceinnet(place.id)" ng-checked="network.places.indexOf(place.id) != -1"> {{ place.name }} <p><i>{{ place.address }}</i></p></label>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group" ng-show="places.length < 2">
+				<p>Для создания сети заведений у Вас должно быть больше 1 заведения.</p>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<button class="mui-btn mui-btn--accent"><span class="fa fa-floppy-o"></span> Сохранить</button>
+			</div>
+		</div>
+	</form>
+</div>

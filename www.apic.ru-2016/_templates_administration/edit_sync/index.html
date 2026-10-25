@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>–едактирование синхронизаций</title>
+    
+	<link rel="Stylesheet" href="{{HTTPS_BASE_ADMIN_IMAGES}}css.css" type="text/css" />
+    <script type="text/javascript" src="{{HTTPS_BASE_ADMIN_IMAGES}}jquery.js"></script>
+    <script type="text/javascript" src="{{HTTPS_BASE_ADMIN_IMAGES}}script.js"></script>
+
+</head>
+
+<body bgcolor=#FFFFFF>
+<img src="{{HTTPS_BASE_ADMIN_IMAGES}}logo.png" /><br>
+<table width="100%">
+<tr bgcolor="#f5f5f5">
+<td width=32><img src="{{HTTPS_BASE_ADMIN_IMAGES}}edit_sync.php.gif"></td>
+<td height="20" width="99%">
+<a href="{{HTTPS_BASE_ADMIN}}">јдминистрирование</a> / 
+<a href="{{HTTPS_BASE_ADMIN}}edit.php">–едактирование страниц сайта</a> / 
+<a href="{{HTTPS_BASE_ADMIN}}edit_sync.php">–едактирование синхронизаций</a> / 
+</td></tr></table>
+
+
+<h1><font color=red>{{ERROR}}</font></h1>
+
+<h1>Ќеприв€занные категории и товары</h1>
+<p>ѕодключить новые неприв€занные обькты в базу сайта</p>
+<table border=0 cellpadding="5" cellspacing="1" width="100%" id="tree">
+<tr bgcolor="#ccccff"><td colspan="10"></td></tr>
+<tr bgcolor="#cccccc" >
+<th>категори€-источник</th>
+<th>категори€-источник</th>
+<th>к чему подключен родитель источника </th>
+<th>количество обьектов</td>
+<th>импортировать и добавить</td>
+</tr>
+<!-- BEGIN BLOCK.IMPORTNEW -->
+<tr class="rowcolor{{rowcolor}} ">
+<td class="{{IMPORTNEW.status}}"><small>{{IMPORTNEW.url}}</small></td>
+<td class="{{IMPORTNEW.status}}">{{IMPORTNEW.name}}</td>
+<td class="{{IMPORTNEW.status}}">{{IMPORTNEW.name2}}</td>
+<td class="{{IMPORTNEW.status}}">{{IMPORTNEW.count}}</td>
+<td class="{{IMPORTNEW.status}}">
+<form action="edit_sync.php" method="get">
+<input type="hidden" name="ID" value="doaddnewitems">
+<input type="hidden" name="src_id" value="{{IMPORTNEW.id}}">
+<input type=submit value="ƒобавить"  onclick="return confirm('¬ы уверены? ¬ базу сайта будут добавлены новые обьекты!')">
+</form>
+</td>
+</tr>
+<!-- END BLOCK.IMPORTNEW -->
+</table>
+
+<h1>ќбновить подключенные категории и товары</h1>
+
+<div style="padding: 2em; background: #f5f5f5;">
+<p>” всех подключенных обьектов с установленным типом обновлений "описани€", "описани€+цены", "цены" 
+будут обновлены соответствующие пол€</p>
+<form action="edit_sync.php" method="get">
+<input type="hidden" name="ID" value="dosyncdatabases">
+<input type=submit value="ќбновить подключенную базу даных"  onclick="return confirm('¬ы уверены? ¬се обьекты с установленным типом обновлени€ будут обновлены!')">
+</form>
+</div>
+
+<h1>»зменение обновлений подключенных категорий</h1>
+
+<form action="edit_sync.php" method="post">
+<input type="hidden" name="ID" value="updatemultiple">
+
+<table border=0 cellpadding="5" cellspacing="1" width="100%">
+
+<tr bgcolor="#ccccff"><td colspan="10"></td></tr>
+<tr ><td colspan="10"><input type=submit value="изменить тип прив€зок в отмеченных категори€х"></td></tr>
+
+<tr bgcolor="#cccccc" >
+<th>категори€</th>
+<th colspan=4>распределение типов прив€зок</td>
+<th colspan=5>установить тип обовлений</td>
+<th>на сайт</td>
+</tr>
+<tr bgcolor="#dddddd" >
+<th>&nbsp;</th>
+<th>не обновл€ть</td>
+<th>описани€</td>
+<th>описани€+цены</td>
+<th>цены</td>
+
+<th>не измен€ть</td>
+<th>не обновл€ть</td>
+<th>описани€</td>
+<th>описани€+цены</td>
+<th>цены</td>
+<th>&nbsp;</th>
+</tr>
+<!-- BEGIN BLOCK.GLOBAL -->
+<tr bgcolor="{{bgcolor}}">
+<td><a href="{{HTTPS_BASE_ADMIN}}edit_sync.php?ID=show_edit_value&document_id={{id}}">{{name}}</a></td>
+<td>{{statnosync}}</td>
+<td>{{statdescr}}</td>
+<td>{{statdescr_price}}</td>
+<td>{{statprice}}</td>
+<td><label for="ym_{{id}}_old"><input type="radio"  name="ym_{{id}}" id="ym_{{id}}_old"  accesskey="" value="old" checked >не измен€ть</label>
+
+<td><label for="ym_{{id}}_nosync"><input type="radio"  name="ym_{{id}}" id="ym_{{id}}_nosync"  accesskey="" value="nosync"  >не обновл€ть</label>
+<td><label for="ym_{{id}}_descr"><input type="radio"  name="ym_{{id}}" id="ym_{{id}}_'descr"  accesskey="" value="descr" >описани€</label>
+<td><label for="ym_{{id}}_descr_price"><input type="radio"  name="ym_{{id}}" id="ym_{{id}}_descr_price"  accesskey="" value="descr_price" >описани€+цены</label>
+<td><label for="ym_{{id}}_price"><input type="radio"  name="ym_{{id}}" id="ym_{{id}}_price"  accesskey="" value="price" >цены</label>
+<td><a href="{{url}}">=></a></td>
+</tr>
+<!-- END BLOCK.GLOBAL -->
+
+<tr bgcolor="#dddddd" >
+<th>&nbsp;</th>
+<th>не обновл€ть</td>
+<th>описани€</td>
+<th>описани€+цены</td>
+<th>цены</td>
+
+<th>не измен€ть</td>
+<th>не обновл€ть</td>
+<th>описани€</td>
+<th>описани€+цены</td>
+<th>цены</td>
+<th>&nbsp;</th>
+</tr>
+
+<tr bgcolor="#ccccff"><td colspan="10"></td></tr>
+<tr ><td colspan="10"><input type=submit value="изменить тип прив€зок в отмеченных категори€х"></td></tr>
+<tr bgcolor="#ccccff"><td colspan="10"></td></tr>
+</table>
+</form>
+
+</body>
+</html>

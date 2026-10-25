@@ -1,0 +1,142 @@
+<div class="container content" ng-controller="dashboardEditPlaceController as dbCtrl" ng-show="group === 'admin' || group === 'company'">
+	<div class="row">
+		<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<ul class="dashboardmenu">
+				<li class="active"><a href="#">Информация</a></li>
+				<li><a href="/dashboard/menu/{{ place.slug }}">Меню</a></li>
+				<li><a href="/dashboard/goodicons/{{ place.slug }}">Фотографии блюд</a></li>
+				<li><a href="/dashboard/reviews/{{ place.slug }}">Отзывы <span ng-show="notify[place.id].reviews > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/discount/{{ place.slug }}">Скидки</a></li>
+				<li><a href="/dashboard/booking/{{ place.slug }}">Бронирование столиков <span ng-show="notify[place.id].booking > 0" class="badge badge-pill badge-danger ng-binding ng-hide"></span></a></li>
+				<li><a href="/dashboard/promotions/{{ place.slug }}">Акции</a></li>
+				<li><a href="/dashboard/news/{{ place.slug }}">Новости</a></li>
+				<li><a href="/dashboard/loyality/{{ place.slug }}">Карты лояльности</a></li>
+			</ul>
+		</div>
+	</div>
+	<form ng-submit="save()">
+		<div class="row">
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+				<input type="text" ng-model="place.name">
+				<label>Название заведения</label>
+			</div>
+			<div class="col col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mui-select">
+				<select ng-model="place.city" ng-options="city.id as city.slug for city in cities">
+				</select>
+				<label>Город</label>
+			</div>
+			<div class="col col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9 mui-textfield mui-textfield--float-label">
+				<input type="text" ng-model="place.address">
+				<label>Адрес</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><p>Кликните на карту чтобы добавить маркер. Затем кликните на маркер чтобы сохранить данное местоположение. Можете перетащить маркер для изменения положения.</p></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map_admin" style="height: 300px;"></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><p id="gmap_msg" style="margin: 5px;"></p></div>
+			<div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mui-textfield mui-textfield--float-label">
+				<input type="text" ng-model="place.phone">
+				<label>Телефон</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mui-textfield mui-textfield--float-label">
+				<input type="text" ng-model="place.web">
+				<label>Веб-сайт</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+				<textarea type="text" ng-model="place.about" rows="10"></textarea>
+				<label>Описание заведения</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+				<input type="text" ng-model="place.middle">
+				<label>Средний счёт заведения</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><h3>Часы работы заведения</h3></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 schedule">
+				<p>
+					Понедельник c <span class="mui-select"><select ng-model="place.planing[1].begin.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[1].begin.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span> по <span class="mui-select"><select ng-model="place.planing[1].end.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[1].end.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span>
+				</p>
+				<p>
+					Вторник c <span class="mui-select"><select ng-model="place.planing[2].begin.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[2].begin.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span> по <span class="mui-select"><select ng-model="place.planing[2].end.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[2].end.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span>
+				</p>
+				<p>
+					Среда c <span class="mui-select"><select ng-model="place.planing[3].begin.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[3].begin.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span> по <span class="mui-select"><select ng-model="place.planing[3].end.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[3].end.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span>
+				</p>
+				<p>
+					Четверг c <span class="mui-select"><select ng-model="place.planing[4].begin.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[4].begin.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span> по <span class="mui-select"><select ng-model="place.planing[4].end.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[4].end.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span>
+				</p>
+				<p>
+					Пятница c <span class="mui-select"><select ng-model="place.planing[5].begin.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[5].begin.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span> по <span class="mui-select"><select ng-model="place.planing[5].end.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[5].end.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span>
+				</p>
+				<p>
+					Суббота c <span class="mui-select"><select ng-model="place.planing[6].begin.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[6].begin.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span> по <span class="mui-select"><select ng-model="place.planing[6].end.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[6].end.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span>
+				</p>
+				<p>
+					Воскресенье c <span class="mui-select"><select ng-model="place.planing[7].begin.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[7].begin.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span> по <span class="mui-select"><select ng-model="place.planing[7].end.hour" ng-options="n for n in ['00','01','02','03','04','05','06','07','08','09',10,11,12,13,14,15,16,17,18,19,20,21,22,23]"></select></span> <span class="mui-select"><select ng-model="place.planing[7].end.minutes" ng-options="n for n in ['00','05',10,15,20,25,30,35,40,45,50,55]"></select></span>
+				</p>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><h3>Выберите ближайшие станции метро</h3></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+				<div class="row">
+					<div class="col col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 checkbox" ng-repeat="station in subwayStations">
+						<label><input type="checkbox" ng-click="push_subway_station(station.id)" ng-model="subwayStationChecks[station.id]"> {{ station.station_name }}</label>
+					</div>	
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><h3>Выберите тип заведения</h3></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+				<div class="row">
+					<div class="col col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 checkbox"ng-repeat="placetype in placeTypes">
+						<label><input type="checkbox" ng-click="push_place_type(placetype.id);" ng-model="placeTypesChecks[placetype.id]"> {{ placetype.slug }}</label>
+					</div>		
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><h3>Выберите тип кухни</h3></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+				<div class="row">
+					<div class="col col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 checkbox"ng-repeat="kitchentype in kitchenTypes">
+						<label><input type="checkbox" ng-click="push_kitchen_type(kitchentype.id);" ng-model="kitchenTypesChecks[kitchentype.id]"> {{ kitchentype.slug }}</label>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group"><h3>Дополнительная информация (например наличие wi-fi, парковки, караоке)</h3></div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group row">
+				<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row" ng-repeat="(key,value) in place.additional track by $index">
+					<div class="col col-10 col-sm-10 col-md-11 col-lg-11 col-xl-11 mui-textfield mui-textfield--float-label">
+						<input type="text" ng-model="place.additional[key]" class="mui--is-empty mui--is-untouched mui--is-pristine">
+						<label>Дополнительная информация</label>
+					</div>
+					<div class="col col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1"><a class="mui-btn mui-btn--danger" ng-click="deleteAdditional(key);"><span class="fa fa-trash"></span></a></div>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+				<a class="mui-btn mui-btn--primary" ng-click="addAditional()"><span class="fa fa-plus"></span> Добавить дополнительную информацию</a>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<div style="width: 200px; display: block; float: left; padding: 5px;" ng-repeat="image in place.images">
+					<img ng-src="/uploads/{{ image }}" style="width:100%;"><a class="main_img" ng-click="place.cover_image = image">Сделать главной</a><a class="delete_img" ng-click="deleteImage(image)">Удалить</a>
+				</div>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+				<div id="object-photo" class="dropzone"></div>
+			</div>
+			<!--<div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+				<h3>SEO</h3>
+				<p>Для продвижения Вашего ресторана в поисковых системах Google, Yandex, Bing и др. необходимо заполнить следующие поля:</p>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+				<input type="text" name="seo_title">
+				<label>Заголовок (обычно это название ресторана и некий краткий лозунг, рекомендованная длина от 50 до 70 символов)</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+				<textarea type="text" name="seo_description" rows="4"></textarea>
+				<label>Описание (краткое описание Вашего заведения, рекомендуемая длина от 110 до 140 символов)</label>
+			</div>
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mui-textfield mui-textfield--float-label">
+				<textarea type="text" name="seo_keywords" rows="4"></textarea>
+				<label>Ключевые слова (ключевые запросы в поисковике, по которым удобно будет находить страницу Вашего заведения, через запятую, без дублей)</label>
+			</div>-->
+			<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<button class="mui-btn mui-btn--primary" id="saveAll">Сохранить</button>
+			</div>
+		</div>
+
+	</form>
+</div>
